@@ -21,26 +21,20 @@
   a:hover{text-decoration:underline}
   button,input,select{font:inherit;color:inherit}
   :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-
-  main{max-width:960px;margin:0 auto;padding:10px;}
-
+  main{max-width:960px;margin:0 auto;padding:10px}
   header h1{font-size:1.9rem;font-weight:700;letter-spacing:-.01em}
   header p{color:var(--muted);max-width:60ch}
   .durum{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:20px;font-size:.88rem;color:var(--muted)}
   .durum b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
-
   .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--wait);margin-right:6px;vertical-align:1px}
   .dot.ok{background:var(--ok)} .dot.bad{background:var(--bad)}
-
   section{margin-top:44px}
   h2{font-size:1.02rem;font-weight:650;margin-bottom:12px}
   h2 small{font-weight:400;color:var(--muted);margin-left:8px}
-
-  /* sorgu */
   .sorgu{display:flex;flex-wrap:wrap;gap:8px}
   .sorgu select,.sorgu input{height:38px;padding:0 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+  .sorgu select{min-width:220px}
   .sorgu input{flex:1;min-width:160px}
-  .sorgu label{display:flex;align-items:center;gap:6px;font-size:.85rem;color:var(--muted)}
   .btn{height:38px;padding:0 16px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer;font-weight:600}
   @media (prefers-color-scheme:dark){ .btn{color:#0b1220} }
   .btn.ikincil{background:transparent;color:var(--accent)}
@@ -48,8 +42,6 @@
   .sonuc{margin-top:14px}
   .sonuc .ozet{font-size:.84rem;color:var(--muted);margin-bottom:8px}
   pre{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px;overflow:auto;max-height:380px;white-space:pre-wrap;word-break:break-word}
-
-  /* tablo */
   table{width:100%;border-collapse:collapse}
   th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
   th{font-weight:600;font-size:.82rem;color:var(--muted)}
@@ -59,25 +51,19 @@
   tr.detay>td{background:var(--panel);padding:14px}
   .kaydir{overflow-x:auto}
   .kaydir table th,.kaydir table td{padding:6px 10px;font-size:.82rem;white-space:nowrap;max-width:260px;overflow:hidden;text-overflow:ellipsis}
-
   .dallar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
   .dal{padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:var(--bg);cursor:pointer;font-size:.8rem}
   .dal:hover,.dal.secili{border-color:var(--accent);color:var(--accent)}
+  .rozet{display:inline-block;padding:1px 8px;border:1px solid var(--line);border-radius:999px;font-size:.72rem;color:var(--muted);margin-left:6px}
   .not{color:var(--muted);font-size:.84rem}
   .not.hata{color:var(--bad)}
-
-  /* katalog */
   .bak{border-bottom:1px solid var(--line);padding:10px 0}
   .bak summary{cursor:pointer;display:flex;gap:10px;align-items:baseline}
   .bak summary b{font-weight:600}
   .bak ul{margin:8px 0 0 18px;color:var(--muted);font-size:.86rem}
-
   footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.88rem}
   footer .sag{margin-left:auto;color:var(--muted)}
-
-  @media (max-width:640px){
-    .gizle-kucuk{display:none}
-  }
+  @media (max-width:640px){ .gizle-kucuk{display:none} }
 </style>
 </head>
 <body>
@@ -85,48 +71,46 @@
 
   <header>
     <h1>PDaaS-Parametrik Veri Servisi</h1>
-    <p>Türkiye kamu kurumlarının referans verilerini (kod listeleri, oranlar, parametreler) tek API üzerinden sunan servis.</p>
+    <p>Türkiye kamu kurumlarının referans verilerini tek API üzerinden sunan servis. Tüm servisler <code>ham/</code> altındaki JSON dosyalarından otomatik keşfedilir.</p>
     <div class="durum" id="durum">
       <span><span class="dot" id="saglik-nokta"></span><span id="saglik-metin">Kontrol ediliyor…</span></span>
       <span>Ortalama süre <b id="st-ort">–</b></span>
       <span>İstek <b id="st-istek">–</b></span>
+      <span>Servis <b id="st-servis">–</b></span>
       <span>Bakanlık <b id="st-bak">–</b></span>
-      <span>Veri dosyası <b id="st-dosya">–</b></span>
     </div>
   </header>
 
   <section>
-    <h2>Kod sorgula</h2>
+    <h2>Kod sorgula <small>katalogdan dinamik</small></h2>
     <form class="sorgu" id="sorgu-form">
-      <select id="sorgu-tur" aria-label="Sorgu türü">
-        <option value="product" data-ornek="2702.10">Ürün (GTİP)</option>
-        <option value="service" data-ornek="883">Hizmet (CPC)</option>
-        <option value="occupation" data-ornek="8111">Meslek (ISCO)</option>
-        <option value="nace" data-ornek="B">NACE bölümü</option>
-      </select>
-      <input id="sorgu-kod" value="2702.10" aria-label="Kod" autocomplete="off">
-      <label><input type="checkbox" id="sorgu-iliski" style="height:auto;min-width:0;flex:none"> İlişkileri dahil et</label>
+      <select id="sorgu-servis" aria-label="Servis"></select>
+      <input id="sorgu-kod" placeholder="Kod (boş bırakılırsa servis özeti)" autocomplete="off">
       <button class="btn" type="submit">Sorgula</button>
     </form>
     <div class="sonuc" id="sorgu-sonuc"></div>
   </section>
 
   <section>
-    <h2>Veri servisleri <small>kod hiyerarşileri &amp; vergi parametreleri</small></h2>
+    <h2>Otomatik keşfedilen servisler <small>/api/v1/katalog</small></h2>
     <table>
       <thead>
         <tr>
           <th>Servis</th>
           <th class="gizle-kucuk">Uç nokta</th>
+          <th>Bakanlık</th>
           <th class="sayi">Dal</th>
           <th class="sayi">Kayıt</th>
-          <th class="gizle-kucuk">Sürüm</th>
           <th class="sayi gizle-kucuk">ms</th>
           <th></th>
         </tr>
       </thead>
       <tbody id="tb-servis"></tbody>
     </table>
+    <p style="margin-top:10px">
+      <button class="btn ikincil kucuk" id="yenile-btn">Kataloğu yenile</button>
+      <span class="not" style="margin-left:10px">Yeni bir JSON eklendiyse <code>POST /api/v1/katalog/yenile</code> ile anında görünür.</span>
+    </p>
   </section>
 
   <section>
@@ -154,21 +138,7 @@
 </main>
 
 <script>
-
 const API_BASE = '';
-
-const VARLIKLAR = [
-  {id:'gtip', ad:'Ürün (GTİP)'},
-  {id:'cpc',  ad:'Hizmet (CPC)'},
-  {id:'isco', ad:'Meslek (ISCO)'},
-  {id:'nace', ad:'Faaliyet (NACE)'},
-];
-const VERGILER = [
-  {ad:'Damga vergisi',            yol:'/api/v1/tax/stamp-duty'},
-  {ad:'Gelir vergisi dilimleri',  yol:'/api/v1/tax/income-brackets'},
-  {ad:'ÖTV (araç)',               yol:'/api/v1/tax/sct-vehicle'},
-  {ad:'KDV oranları',             yol:'/api/v1/tax/vat-rates'},
-];
 
 /* ───────── yardımcılar ───────── */
 const $ = id => document.getElementById(id);
@@ -182,10 +152,10 @@ function el(tag, attrs, ...cocuk){
   for (const c of cocuk) if (c != null) e.append(c.nodeType ? c : document.createTextNode(c));
   return e;
 }
-async function getir(yol){
+async function getir(yol, opts){
   const t0 = performance.now();
   try{
-    const r = await fetch(API_BASE + yol);
+    const r = await fetch(API_BASE + yol, opts);
     const body = await r.json().catch(() => null);
     return {ok:r.ok, status:r.status, ms:Math.round(performance.now() - t0), body};
   }catch(_){
@@ -200,7 +170,6 @@ function hataMetni(s){
 }
 function nokta(durum){ return el('span', {class:'dot ' + (durum || '')}); }
 
-/* Kayıt listesini tabloya çevirir (iç içe nesneler kısaltılır) */
 function tabloYap(kayitlar, limit = 50){
   if (!Array.isArray(kayitlar) || !kayitlar.length) return el('p', {class:'not'}, 'Kayıt yok.');
   const ornek = kayitlar.slice(0, 20);
@@ -227,7 +196,6 @@ function tabloYap(kayitlar, limit = 50){
   return el('div', {}, kap, ek);
 }
 
-/* Satırın altına açılır detay satırı ekler */
 function detayAc(tr, kolonSayisi, icerikUret){
   if (tr._detay){ tr._detay.remove(); tr._detay = null; tr._btn.textContent = 'Aç'; return; }
   const td = el('td', {colspan:kolonSayisi});
@@ -242,55 +210,93 @@ function detayAc(tr, kolonSayisi, icerikUret){
 async function durumYukle(){
   const [h, s, v] = await Promise.all([getir('/health'), getir('/stats'), getir('/version-check')]);
   $('saglik-nokta').className = 'dot ' + (h.ok ? 'ok' : 'bad');
-  $('saglik-metin').textContent = h.ok
-    ? `Çalışıyor · v${h.body.version}`
-    : 'Ulaşılamıyor';
+  $('saglik-metin').textContent = h.ok ? `Çalışıyor · v${h.body.version}` : 'Ulaşılamıyor';
   if (s.ok){
     $('st-ort').textContent = s.body.avg_processing_ms + ' ms';
     $('st-istek').textContent = sayi(s.body.request_count);
-    const k = s.body.katalog || {};
-    $('st-bak').textContent = sayi(k.toplam_bakanlik);
-    $('st-dosya').textContent = sayi(k.toplam_dosya);
+    $('st-bak').textContent = sayi((s.body.katalog || {}).toplam_bakanlik);
   }
-  if (v.ok) $('yapi').textContent = v.body.build;
+  if (v.ok){
+    $('yapi').textContent = v.body.build;
+    $('st-servis').textContent = sayi(v.body.servis_sayisi);
+  }
 }
 
-/* ───────── kod hiyerarşileri (7 sütun) ───────── */
-function varlikSatiri(v){
-  const yol = `/api/v1/${v.id}/agac`;
-  const cDal   = el('td', {class:'sayi'}, '…');
-  const cKayit = el('td', {class:'sayi'}, '…');
-  const cSurum = el('td', {class:'gizle-kucuk'}, '');   // vergiye özel → boş
+/* ───────── katalog ───────── */
+let KATALOG = [];
+
+async function katalogYukle(){
+  const tb = $('tb-servis');
+  tb.replaceChildren(el('tr', {},
+    el('td', {colspan:7, class:'not'}, 'Servis kataloğu taranıyor…')));
+
+  const s = await getir('/api/v1/katalog');
+  if (!s.ok || !s.body || !Array.isArray(s.body.servisler)){
+    tb.replaceChildren(el('tr', {},
+      el('td', {colspan:7, class:'not hata'}, 'Katalog alınamadı. ' + hataMetni(s))));
+    return;
+  }
+  KATALOG = s.body.servisler;
+
+  if (!KATALOG.length){
+    tb.replaceChildren(el('tr', {},
+      el('td', {colspan:7, class:'not'},
+        'ham/ altında tanınan JSON bulunamadı. Her dosyanın meta bloğunda "bakanlik" ve "servis_kodu" olmalı.')));
+    return;
+  }
+
+  tb.replaceChildren(...KATALOG.map(servisSatiri));
+
+  // Sorgu dropdown'unu doldur
+  const sel = $('sorgu-servis');
+  sel.replaceChildren(...KATALOG.map(sv =>
+    el('option', {value:`${sv.bakanlik}/${sv.servis_kodu}`},
+      `${sv.bakanlik_adi} — ${sv.servis_adi}`)
+  ));
+}
+
+function servisSatiri(sv){
+  const agacMi = sv.tip === 'agac';
+  const cAd    = el('td', {class:'ad'}, nokta(), sv.servis_adi,
+                     el('span', {class:'rozet'}, sv.tip));
+  const cYol   = el('td', {class:'yol mono gizle-kucuk'}, sv.endpoint);
+  const cBak   = el('td', {}, sv.bakanlik_adi);
+  const cDal   = el('td', {class:'sayi'}, agacMi ? sayi(sv.dal_sayisi) : '');
+  const cKayit = el('td', {class:'sayi'}, sayi(sv.kayit_sayisi));
   const cMs    = el('td', {class:'sayi gizle-kucuk'}, '');
-  const cAd    = el('td', {class:'ad'}, nokta(), v.ad);
-  const btn    = el('button', {class:'btn ikincil kucuk', disabled:'disabled'}, 'Aç');
-  const tr = el('tr', {},
-    cAd, el('td', {class:'yol mono gizle-kucuk'}, yol),
-    cDal, cKayit, cSurum, cMs, el('td', {}, btn));
+  const btn    = el('button', {class:'btn ikincil kucuk'}, 'Aç');
+  const tr = el('tr', {}, cAd, cYol, cBak, cDal, cKayit, cMs, el('td', {}, btn));
   tr._btn = btn;
 
-  getir(yol).then(s => {
+  getir(sv.endpoint).then(s => {
     cAd.firstChild.className = 'dot ' + (s.ok ? 'ok' : 'bad');
     cMs.textContent = s.ms;
     if (!s.ok){
-      cDal.textContent = '–'; cKayit.textContent = '–';
-      btn.disabled = false;
       btn.addEventListener('click', () =>
         detayAc(tr, 7, td => td.append(el('p', {class:'not hata'}, hataMetni(s)))));
       return;
     }
-    const dallar = s.body.dallar || [];
-    cDal.textContent   = sayi(s.body.toplam_dal);
-    cKayit.textContent = sayi(dallar.reduce((t, d) => t + (d.kayit_sayisi || 0), 0));
-    btn.disabled = false;
-    btn.addEventListener('click', () =>
-      detayAc(tr, 7, td => dallarGoster(td, v, dallar)));
+    if (agacMi){
+      const dallar = s.body.dallar || [];
+      btn.addEventListener('click', () => detayAc(tr, 7, td => dallarGoster(td, sv, dallar)));
+    } else {
+      const veri = s.body.data || [];
+      btn.addEventListener('click', () => detayAc(tr, 7, td => {
+        td.append(
+          el('p', {class:'not', style:'margin-bottom:8px'},
+            [s.body.yayinci, s.body.kaynak,
+             s.body.gecerlilik_baslangic && `Yürürlük: ${s.body.gecerlilik_baslangic}`]
+              .filter(Boolean).join(' · ') + ' · ',
+            el('a', {href:API_BASE + sv.endpoint, target:'_blank', rel:'noopener'}, 'JSON olarak aç')),
+          tabloYap(veri));
+      }));
+    }
   });
   return tr;
 }
 
-function dallarGoster(td, v, dallar){
-  const kutu = el('div', {});
+function dallarGoster(td, sv, dallar){
+  const kutu  = el('div', {});
   const chips = el('div', {class:'dallar'});
   const sonuc = el('div', {}, el('p', {class:'not'}, 'Bir dal seçin.'));
   dallar.forEach(d => {
@@ -299,7 +305,7 @@ function dallarGoster(td, v, dallar){
       chips.querySelectorAll('.dal').forEach(x => x.classList.remove('secili'));
       c.classList.add('secili');
       sonuc.replaceChildren(el('p', {class:'not'}, 'Yükleniyor…'));
-      const yol = `/api/v1/${v.id}/dal/${encodeURIComponent(d.dal)}`;
+      const yol = `${sv.endpoint}/${encodeURIComponent(d.dal)}`;
       const s = await getir(yol);
       if (!s.ok){ sonuc.replaceChildren(el('p', {class:'not hata'}, hataMetni(s))); return; }
       sonuc.replaceChildren(
@@ -314,44 +320,14 @@ function dallarGoster(td, v, dallar){
   td.append(kutu);
 }
 
-/* ───────── vergi servisleri (7 sütun) ───────── */
-function vergiSatiri(v){
-  const cAd    = el('td', {class:'ad'}, nokta(), v.ad);
-  const cDal   = el('td', {class:'sayi'}, '');          // hiyerarşiye özel → boş
-  const cKayit = el('td', {class:'sayi'}, '…');
-  const cSurum = el('td', {class:'gizle-kucuk'}, '');
-  const cMs    = el('td', {class:'sayi gizle-kucuk'}, '');
-  const btn    = el('button', {class:'btn ikincil kucuk', disabled:'disabled'}, 'Aç');
-  const tr = el('tr', {},
-    cAd, el('td', {class:'yol mono gizle-kucuk'}, v.yol),
-    cDal, cKayit, cSurum, cMs, el('td', {}, btn));
-  tr._btn = btn;
-
-  getir(v.yol).then(s => {
-    cAd.firstChild.className = 'dot ' + (s.ok ? 'ok' : 'bad');
-    cMs.textContent = s.ms;
-    if (!s.ok){
-      cKayit.textContent = '–';
-      btn.disabled = false;
-      btn.addEventListener('click', () =>
-        detayAc(tr, 7, td => td.append(el('p', {class:'not hata'}, hataMetni(s)))));
-      return;
-    }
-    cKayit.textContent = sayi(s.body.toplam);
-    cSurum.textContent = s.body.version_id || '';
-    btn.disabled = false;
-    btn.addEventListener('click', () => detayAc(tr, 7, td => {
-      td.append(
-        el('p', {class:'not', style:'margin-bottom:8px'},
-          [s.body.publisher, s.body.legal_basis_doc,
-           s.body.valid_from && `Yürürlük: ${s.body.valid_from}`]
-            .filter(Boolean).join(' · ') + ' · ',
-          el('a', {href:API_BASE + v.yol, target:'_blank', rel:'noopener'}, 'JSON olarak aç')),
-        tabloYap(s.body.data));
-    }));
-  });
-  return tr;
-}
+$('yenile-btn').addEventListener('click', async () => {
+  const btn = $('yenile-btn');
+  btn.disabled = true; btn.textContent = 'Yenileniyor…';
+  await getir('/api/v1/katalog/yenile', {method:'POST'});
+  await katalogYukle();
+  durumYukle();
+  btn.disabled = false; btn.textContent = 'Kataloğu yenile';
+});
 
 /* ───────── birleşik işlem ───────── */
 function birlesikSatiri(){
@@ -382,7 +358,7 @@ async function manifestYukle(){
   const s = await getir('/manifest.json');
   if (!s.ok || !s.body || !s.body.bakanliklar){
     kap.replaceChildren(el('p', {class:'not'},
-      'manifest.json sunucudan okunamadı. main.py içine /manifest.json yolunu eklediğinizde katalog burada listelenir.'));
+      'manifest.json okunamadı.'));
     return;
   }
   kap.replaceChildren(...Object.entries(s.body.bakanliklar).map(([anahtar, b]) =>
@@ -392,45 +368,42 @@ async function manifestYukle(){
     )));
 }
 
-/* ───────── kod sorgula ───────── */
-const SORGU_YOL = {
-  product:    k => `/api/v1/product/${encodeURIComponent(k)}`,
-  service:    k => `/api/v1/service/${encodeURIComponent(k)}`,
-  occupation: k => `/api/v1/occupation/${encodeURIComponent(k)}`,
-  nace:       k => `/api/v1/nace/${encodeURIComponent(k)}`,
-};
+/* ───────── sorgu ───────── */
 async function sorgula(){
-  const tur = $('sorgu-tur').value;
+  const secili = $('sorgu-servis').value;
   const kod = $('sorgu-kod').value.trim();
   const kap = $('sorgu-sonuc');
-  if (!kod){ kap.replaceChildren(el('p', {class:'not hata'}, 'Bir kod girin.')); return; }
-  let yol = SORGU_YOL[tur](kod);
-  if ($('sorgu-iliski').checked && tur !== 'nace') yol += '?katman=iliski';
+  if (!secili){ kap.replaceChildren(el('p', {class:'not hata'}, 'Servis seçin.')); return; }
+  let yol = `/api/v1/${secili}`;
+  if (kod) yol += `/${encodeURIComponent(kod)}`;
   kap.replaceChildren(el('p', {class:'not'}, 'Sorgulanıyor…'));
   const s = await getir(yol);
   if (!s.ok){ kap.replaceChildren(el('p', {class:'not hata'}, hataMetni(s))); return; }
   const b = s.body;
-  const ozet = [b.publisher, b.legal_basis_doc, b.version_id && `Sürüm ${b.version_id}`, `${s.ms} ms`]
+  const ozet = [b.bakanlik_adi, b.servis_adi, b.surum && `Sürüm ${b.surum}`,
+                b.dal && `Dal ${b.dal}`, `${s.ms} ms`]
     .filter(Boolean).join(' · ');
-  kap.replaceChildren(
-    el('div', {class:'ozet'}, ozet),
-    el('pre', {}, JSON.stringify(b.data, null, 2)));
+
+  let icerik;
+  if (b.tip === 'agac' && Array.isArray(b.dallar)){
+    icerik = el('pre', {}, JSON.stringify({toplam_dal:b.toplam_dal, dallar:b.dallar}, null, 2));
+  } else if (b.tip === 'agac' && Array.isArray(b.kayitlar)){
+    icerik = tabloYap(b.kayitlar);
+  } else if (Array.isArray(b.data)){
+    icerik = tabloYap(b.data);
+  } else {
+    icerik = el('pre', {}, JSON.stringify(b.data, null, 2));
+  }
+  kap.replaceChildren(el('div', {class:'ozet'}, ozet), icerik);
 }
 
 $('sorgu-form').addEventListener('submit', e => { e.preventDefault(); sorgula(); });
-$('sorgu-tur').addEventListener('change', e => {
-  $('sorgu-kod').value = e.target.selectedOptions[0].dataset.ornek;
-});
 
 /* ───────── başlat ───────── */
 durumYukle();
-$('tb-servis').replaceChildren(
-  ...VARLIKLAR.map(varlikSatiri),
-  ...VERGILER.map(vergiSatiri)
-);
+katalogYukle();
 $('tb-birlesik').replaceChildren(birlesikSatiri());
 manifestYukle();
-sorgula();
 </script>
 </body>
 </html>
