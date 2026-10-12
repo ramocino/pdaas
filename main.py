@@ -147,7 +147,14 @@ def ana_sayfa():
         return {"service": "PDaaS API", "version": "2.1.0", "docs": "/docs"}
     return FileResponse(index_yolu, media_type="text/html")
 
+@app.get("/manifest.json", include_in_schema=False)
+def manifest_dosyasi():
+    return FileResponse(KOK / "manifest.json", media_type="application/json")
 
+@app.get("/schema.json", include_in_schema=False)
+def schema_dosyasi():
+    return FileResponse(KOK / "schema.json", media_type="application/json")
+  
 @app.get("/kurator", include_in_schema=False)
 def kurator_sayfa():
     yol = KOK / "kurator.html"
