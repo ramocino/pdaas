@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDaaS Kurator — Jenerik Eşleştirme Arayüzü</title>
+<style>
+  :root{
+    --bg:#0b1220; --panel:#121b2e; --panel2:#1a2540; --panel3:#0f1729;
+    --line:#243255; --txt:#e6ecff; --muted:#8b9ac4;
+    --accent:#4da3ff; --accent2:#22d3a6; --warn:#ffb454; --danger:#ff6b6b;
+    --gtip:#4da3ff; --cpc:#a78bfa; --isco:#22d3a6; --nace:#ffb454;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:.88rem;line-height:1.5;height:100vh;overflow:hidden}
+  button{font-family:inherit;cursor:pointer;border:none;border-radius:7px;font-weight:600;transition:.15s}
+  input,select,textarea{font-family:inherit;background:var(--panel3);border:1px solid var(--line);color:var(--txt);padding:8px 12px;border-radius:7px;font-size:.85rem;width:100%}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+  pre{font-family:"JetBrains Mono",Consolas,monospace;font-size:.75rem;color:#c9d5f5}
+
+  /* TOPBAR */
+  .topbar{background:var(--panel2);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .topbar .brand{font-weight:800;font-size:.95rem;display:flex;align-items:center;gap:10px}
+  .topbar .brand .logo{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,var(--gtip),var(--cpc),var(--isco),var(--nace));display:grid;place-items:center;color:#04122a;font-weight:800;font-size:.75rem}
+  .topbar .brand small{color:var(--muted);font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:.65rem;margin-left:4px}
+  .topbar .spacer{flex:1}
+  .role-picker{display:flex;align-items:center;gap:8px;font-size:.78rem}
+  .role-picker label{color:var(--muted);font-weight:600}
+  .role-picker select{width:auto;padding:6px 10px;font-size:.78rem}
+  .btn{padding:7px 14px;font-size:.78rem;background:var(--accent);color:#04122a}
+  .btn:hover{filter:brightness(1.1)}
+  .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--muted)}
+  .btn.ghost:hover{color:var(--txt);border-color:var(--accent)}
+  .btn.danger{background:var(--danger);color:#fff}
+  .btn.save{background:var(--accent2)}
+
+  /* VARLIK TÜRÜ SEÇİCİ */
+  .entity-bar{background:var(--panel3);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .entity-bar .eb-label{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+  .entity-tabs{display:flex;gap:6px;flex-wrap:wrap}
+  .entity-tab{padding:8px 16px;font-size:.82rem;font-weight:700;background:var(--panel);border:2px solid transparent;color:var(--muted);border-radius:9px;transition:.2s}
+  .entity-tab:hover{color:var(--txt)}
+  .entity-tab.active{color:#04122a}
+  .entity-tab[data-e="gtip"].active{background:var(--gtip);border-color:var(--gtip);box-shadow:0 4px 16px -6px var(--gtip)}
+  .entity-tab[data-e="cpc"].active{background:var(--cpc);border-color:var(--cpc);box-shadow:0 4px 16px -6px var(--cpc)}
+  .entity-tab[data-e="isco"].active{background:var(--isco);border-color:var(--isco);box-shadow:0 4px 16px -6px var(--isco)}
+  .entity-tab[data-e="nace"].active{background:var(--nace);border-color:var(--nace);box-shadow:0 4px 16px -6px var(--nace)}
+
+  /* LAYOUT */
+  .curator-layout{display:grid;grid-template-columns:280px 1fr;height:calc(100vh - 105px)}
+  @media(max-width:900px){ .curator-layout{grid-template-columns:1fr;height:auto} }
+
+  /* SOL LİSTE */
+  .code-list{background:var(--panel);border-right:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
+  .code-list-header{padding:12px;border-bottom:1px solid var(--line)}
+  .code-list-header h3{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;font-weight:700}
+  .code-list-body{flex:1;overflow-y:auto;padding:6px}
+  .code-list-body::-webkit-scrollbar{width:6px}
+  .code-list-body::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+
+  .code-item{padding:8px 10px;border-radius:7px;cursor:pointer;margin-bottom:3px;transition:.15s;border:1px solid transparent}
+  .code-item:hover{background:var(--panel2)}
+  .code-item.active{background:rgba(77,163,255,.15);border-color:var(--accent)}
+  .code-item .kod{font-family:"JetBrains Mono",Consolas,monospace;font-size:.75rem;font-weight:700;display:block}
+  .code-item .ad{font-size:.75rem;color:var(--txt);display:block;margin-top:2px;line-height:1.3}
+  .code-item .durum{font-size:.62rem;color:var(--muted);margin-top:3px;display:flex;gap:6px;flex-wrap:wrap}
+  .code-item .durum span{background:rgba(0,0,0,.3);padding:1px 6px;border-radius:4px}
+  .code-item .durum span.ok{color:var(--accent2)}
+  .code-item .durum span.bos{color:var(--warn)}
+
+  /* Renk kodlu kod */
+  .code-item[data-e="gtip"] .kod{color:var(--gtip)}
+  .code-item[data-e="cpc"]  .kod{color:var(--cpc)}
+  .code-item[data-e="isco"] .kod{color:var(--isco)}
+  .code-item[data-e="nace"] .kod{color:var(--nace)}
+
+  /* SAĞ */
+  .curator-main{display:grid;grid-template-rows:auto auto 1fr auto;overflow:hidden;background:var(--panel3)}
+  .detail-header{padding:14px 20px;background:var(--panel2);border-bottom:1px solid var(--line)}
+  .detail-header.empty{color:var(--muted);text-align:center;font-style:italic;padding:24px}
+  .detail-header .kod-buyuk{font-family:"JetBrains Mono",Consolas,monospace;font-size:1.05rem;font-weight:800;letter-spacing:.02em}
+  .detail-header[data-e="gtip"] .kod-buyuk{color:var(--gtip)}
+  .detail-header[data-e="cpc"]  .kod-buyuk{color:var(--cpc)}
+  .detail-header[data-e="isco"] .kod-buyuk{color:var(--isco)}
+  .detail-header[data-e="nace"] .kod-buyuk{color:var(--nace)}
+  .detail-header .ad-buyuk{font-size:.95rem;color:var(--txt);margin-top:4px}
+  .detail-header .meta-satir{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;font-size:.72rem;color:var(--muted)}
+  .detail-header .meta-satir b{color:var(--txt);font-weight:600}
+
+  .tabs{display:flex;gap:2px;background:var(--panel2);border-bottom:1px solid var(--line);padding:0 12px;overflow-x:auto}
+  .tab{padding:10px 16px;font-size:.8rem;font-weight:600;color:var(--muted);background:transparent;border-radius:0;border-bottom:2px solid transparent;white-space:nowrap}
+  .tab:hover{color:var(--txt)}
+  .tab.active{color:var(--accent);border-bottom-color:var(--accent);background:rgba(77,163,255,.06)}
+  .tab .badge{background:rgba(0,0,0,.4);padding:1px 6px;border-radius:4px;font-size:.65rem;margin-left:6px;color:var(--accent2)}
+  .tab .badge.bos{color:var(--warn)}
+  .tab[data-tab="nace"].nace-zorunlu::after{content:"★";color:var(--nace);margin-left:4px;font-size:.7rem}
+
+  .panels{overflow-y:auto;padding:20px}
+  .panels::-webkit-scrollbar{width:8px}
+  .panels::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+  .panel{display:none}
+  .panel.active{display:block}
+
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+  .field .help{font-size:.72rem;color:var(--muted);margin-top:4px;font-style:italic}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:600px){ .field-row{grid-template-columns:1fr} }
+
+  .multi-list{background:var(--panel);border:1px solid var(--line);border-radius:8px;max-height:280px;overflow-y:auto;padding:6px}
+  .multi-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:6px;cursor:pointer;transition:.12s}
+  .multi-item:hover{background:var(--panel2)}
+  .multi-item input[type="checkbox"]{width:16px;height:16px;accent-color:var(--accent);cursor:pointer}
+  .multi-item .kod{font-family:"JetBrains Mono",Consolas,monospace;font-size:.78rem;font-weight:700;min-width:72px}
+  .multi-item .ad{font-size:.78rem;color:var(--muted);flex:1}
+  .multi-item.checked{background:rgba(77,163,255,.1)}
+  .multi-item.checked .ad{color:var(--txt)}
+  .multi-item[data-e="gtip"] .kod{color:var(--gtip)}
+  .multi-item[data-e="cpc"]  .kod{color:var(--cpc)}
+  .multi-item[data-e="isco"] .kod{color:var(--isco)}
+  .multi-item[data-e="nace"] .kod{color:var(--nace)}
+
+  .urun-listesi{display:flex;flex-direction:column;gap:8px}
+  .urun-satir{display:grid;grid-template-columns:2fr 2fr 80px 30px;gap:8px;align-items:center}
+  .urun-satir input{padding:6px 10px;font-size:.78rem}
+  .urun-satir .sil{background:var(--danger);color:#fff;width:26px;height:26px;border-radius:6px;font-size:.9rem;line-height:1;padding:0;display:grid;place-items:center}
+  .ekle-btn{background:transparent;border:1px dashed var(--line);color:var(--muted);padding:8px;border-radius:7px;font-size:.78rem;width:100%;margin-top:8px}
+  .ekle-btn:hover{border-color:var(--accent);color:var(--accent)}
+
+  .json-bar{background:var(--panel2);border-top:1px solid var(--line);padding:12px 20px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;max-height:240px}
+  .json-bar pre{background:#0a0f1c;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;max-height:200px;margin:0}
+  .json-bar .actions{display:flex;flex-direction:column;gap:6px;min-width:130px}
+
+  .toast{position:fixed;bottom:24px;right:24px;background:var(--accent2);color:#04122a;padding:12px 20px;border-radius:9px;font-weight:700;font-size:.82rem;opacity:0;transform:translateY(10px);transition:.3s;pointer-events:none;box-shadow:0 10px 30px -10px rgba(34,211,166,.5);z-index:100}
+  .toast.show{opacity:1;transform:translateY(0)}
+  .toast.err{background:var(--danger);color:#fff;box-shadow:0 10px 30px -10px rgba(255,107,107,.5)}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">K</div>
+    PDaaS Kurator
+    <small>Jenerik Eşleştirme Arayüzü · v0.2</small>
+  </div>
+  <div class="spacer"></div>
+  <div class="role-picker">
+    <label>Aktif Rol:</label>
+    <select id="role">
+      <option value="ticaret">T.C. Ticaret Bakanlığı</option>
+      <option value="hazine">T.C. Hazine ve Maliye Bakanlığı</option>
+      <option value="tuik">TÜİK</option>
+      <option value="cbdd">CBDDO (Koordinatör)</option>
+    </select>
+  </div>
+  <button class="btn ghost" onclick="yukleJson()">Yükle</button>
+  <button class="btn save" onclick="kaydetJson()">Kaydet</button>
+  <input type="file" id="file-input" accept=".json" style="display:none">
+</header>
+
+<!-- VARLIK TÜRÜ SEÇİCİ -->
+<div class="entity-bar">
+  <span class="eb-label">Varlık Türü</span>
+  <div class="entity-tabs">
+    <button class="entity-tab active" data-e="gtip" onclick="varlikSec('gtip')">GTİP · Ürün</button>
+    <button class="entity-tab" data-e="cpc"  onclick="varlikSec('cpc')">CPC · Hizmet</button>
+    <button class="entity-tab" data-e="isco" onclick="varlikSec('isco')">ISCO · Meslek</button>
+    <button class="entity-tab" data-e="nace" onclick="varlikSec('nace')">NACE · Faaliyet</button>
+  </div>
+  <span style="margin-left:auto;font-size:.72rem;color:var(--muted)">
+    Aktif liste: <b id="aktif-kaynak" style="color:var(--txt)">ham/ticaret/gtip/27.json</b>
+  </span>
+</div>
+
+<!-- LAYOUT -->
+<div class="curator-layout">
+
+  <!-- SOL: KOD LİSTESİ -->
+  <aside class="code-list">
+    <div class="code-list-header">
+      <h3 id="liste-baslik">GTİP Kodları</h3>
+      <input type="text" id="ara" placeholder="Kod veya açıklama ara…" oninput="filtrele()">
+    </div>
+    <div class="code-list-body" id="kod-listesi"></div>
+  </aside>
+
+  <!-- SAĞ: KURATOR -->
+  <main class="curator-main">
+
+    <div class="detail-header empty" id="detail-header">
+      Soldaki listeden bir kod seçin
+    </div>
+
+    <div>
+      <div class="tabs" id="tabs"></div>
+      <div class="panels" id="panels"></div>
+    </div>
+
+    <div class="json-bar">
+      <pre id="json-preview">// Bir kod seçin…</pre>
+      <div class="actions">
+        <button class="btn" onclick="kopyalaJson()">Panoya Kopyala</button>
+        <button class="btn ghost" onclick="indirJson()">JSON İndir</button>
+        <button class="btn danger" onclick="temizle()">Temizle</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   VARLIK TANIMLARI
+   ═══════════════════════════════════════════════════════════ */
+const VARLIKLAR = {
+  gtip: {
+    ad: "GTİP",       etiket: "Ürün",
+    kod_alan: "gtip", dosya: "ham/ticaret/gtip/27.json",
+    liste_baslik: "GTİP Kodları",
+    // Bu varlık seçildiğinde hangi sekmeler gösterilir:
+    hedefler: ["cpc", "isco", "nace", "randiman", "vergi", "etiket"]
+  },
+  cpc: {
+    ad: "CPC",        etiket: "Hizmet",
+    kod_alan: "cpc",  dosya: "ham/ticaret/cpc/*.json",
+    liste_baslik: "CPC Kodları",
+    hedefler: ["gtip", "isco", "nace", "adamsaat", "vergi", "etiket"]
+  },
+  isco: {
+    ad: "ISCO-08",    etiket: "Meslek",
+    kod_alan: "isco", dosya: "ham/ticaret/isco/*.json",
+    liste_baslik: "ISCO-08 Kodları",
+    hedefler: ["gtip", "cpc", "nace", "prim", "etiket"]
+  },
+  nace: {
+    ad: "NACE",       etiket: "Faaliyet",
+    kod_alan: "nace", dosya: "ham/tuik/nace/*.json",
+    liste_baslik: "NACE Kodları",
+    hedefler: ["gtip", "cpc", "isco", "tehlike", "vergi", "etiket"]
+  }
+};
+
+/* Sekme meta bilgisi */
+const SEKME_META = {
+  gtip:     { ad: "GTİP",      renk: "var(--gtip)",  tip: "varlik" },
+  cpc:      { ad: "CPC",       renk: "var(--cpc)",   tip: "varlik" },
+  isco:     { ad: "ISCO-08",   renk: "var(--isco)",  tip: "varlik" },
+  nace:     { ad: "NACE ★",    renk: "var(--nace)",  tip: "varlik" },
+  randiman: { ad: "Randıman",  renk: "var(--warn)",  tip: "zenginlestirme" },
+  adamsaat: { ad: "Adam-Saat", renk: "var(--warn)",  tip: "zenginlestirme" },
+  prim:     { ad: "SGK Prim",  renk: "var(--warn)",  tip: "zenginlestirme" },
+  tehlike:  { ad: "Tehlike/ÇED",renk:"var(--warn)",  tip: "zenginlestirme" },
+  vergi:    { ad: "Vergi",     renk: "var(--accent2)",tip:"kural" },
+  etiket:   { ad: "Etiket",    renk: "var(--muted)", tip: "meta" }
+};
+
+/* ═══════════════════════════════════════════════════════════
+   HAM VERİ — her varlık türü için örnek liste
+   (Gerçekte /api/v1/... endpoint'lerinden gelir)
+   ═══════════════════════════════════════════════════════════ */
+const HAM = {
+  gtip: [
+    { kod:"2701.11.00.00.00", ad:"Antrasit" },
+    { kod:"2701.12.10.00.00", ad:"Kokluk taşkömürü" },
+    { kod:"2701.19.00.00.00", ad:"Diğer taşkömürleri" },
+    { kod:"2701.20.00.00.11", ad:"Briketler (Taşkömüründen)" },
+    { kod:"2702.10.00.00.00", ad:"Linyit" },
+    { kod:"2702.20.00.00.00", ad:"Aglomere linyit" },
+    { kod:"2703.00.00.00.11", ad:"Tarımda kullanılan turba" },
+    { kod:"2704.00.10.00.00", ad:"Taşkömüründen kok ve semikok" },
+    { kod:"2704.00.30.00.00", ad:"Linyitten kok ve semikok" },
+    { kod:"2705.00.00.00.00", ad:"Kömür gazı, su gazı" },
+    { kod:"2706.00.00.00.11", ad:"Kömür katranı" },
+    { kod:"2716.00.00.00.00", ad:"Elektrik enerjisi" }
+  ],
+  cpc: [
+    { kod:"244",  ad:"Alkolsüz içecekler" },
+    { kod:"412",  ad:"Demir-çelik üretim hizmetleri" },
+    { kod:"4121", ad:"Ham demir-çelik üretimi" },
+    { kod:"4124", ad:"Haddeleme ve çekme" },
+    { kod:"434",  ad:"Makine kiralama" },
+    { kod:"831",  ad:"BT danışmanlık hizmetleri" },
+    { kod:"8314", ad:"Yazılım geliştirme" },
+    { kod:"861",  ad:"Hayvancılık hizmetleri" },
+    { kod:"883",  ad:"Madencilik hizmetleri" },
+    { kod:"8831", ad:"Madencilik sondaj" },
+    { kod:"8832", ad:"Maden sahası hazırlama" },
+    { kod:"8833", ad:"Diğer madencilik destek" }
+  ],
+  isco: [
+    { kod:"2512", ad:"Yazılım geliştiricisi" },
+    { kod:"2513", ad:"Web geliştiricisi" },
+    { kod:"2523", ad:"Bilgisayar ağı uzmanı" },
+    { kod:"3512", ad:"BİT kullanıcı destek teknisyeni" },
+    { kod:"7233", ad:"Endüstriyel makine tamircisi" },
+    { kod:"8111", ad:"Yeraltı madencilik işçisi" },
+    { kod:"8112", ad:"Yüzey madencilik işçisi" },
+    { kod:"8113", ad:"Kuyu açma işçisi" },
+    { kod:"8114", ad:"Mineral işleme operatörü" },
+    { kod:"8121", ad:"Metal eritme fırını operatörü" }
+  ],
+  nace: [
+    { kod:"01.41.01", ad:"Süt sığırcılığı" },
+    { kod:"05.10.01", ad:"Taş kömürü madenciliği" },
+    { kod:"05.20.01", ad:"Linyit madenciliği" },
+    { kod:"07.10.01", ad:"Demir cevheri madenciliği" },
+    { kod:"11.07.01", ad:"Alkolsüz içecek imalatı" },
+    { kod:"19.10.01", ad:"Kok fırını ürünleri imalatı" },
+    { kod:"24.10.01", ad:"Ham çelik üretimi" },
+    { kod:"27.51.01", ad:"Beyaz eşya imalatı" },
+    { kod:"28.13.01", ad:"Pompa ve kompresör imalatı" },
+    { kod:"35.11.01", ad:"Elektrik üretimi" },
+    { kod:"62.01.01", ad:"Bilgisayar programlama" }
+  ]
+};
+
+/* ═══════════════════════════════════════════════════════════
+   DURUM
+   ═══════════════════════════════════════════════════════════ */
+let AKTIF_VARLIK = "gtip";        // gtip | cpc | isco | nace
+let SECILI_KOD   = null;          // seçili varlığın kodu
+let AKTIF_SEKME  = null;
+
+/* Kayıt deposu: { "gtip:2702.10.00.00.00": { hedef_alanlar... } } */
+const KAYITLAR = {};
+
+function kayitAnahtari(varlik, kod){ return `${varlik}:${kod}`; }
+
+function bosKayit(varlik){
+  const k = {};
+  // Varlık sekmeleri (karşılıklı)
+  ["gtip","cpc","isco","nace"].forEach(v=>{
+    if (v !== varlik) k[v] = { kodlar: [], guven: "yuksek", not: "" };
+  });
+  // Zenginleştirme / kural sekmeleri (varlık tipine göre)
+  k.randiman = { islem:"", cikti:"", asgari:"", fire:"", ikincil:[] };
+  k.adamsaat = { sure_dk:"", birim:"saat", not:"" };
+  k.prim     = { isci:"", isveren:"", issizlik_isci:"", issizlik_isveren:"" };
+  k.tehlike  = { sinif:"", ced_gerekli:false, kukurt_max:"", nem_max:"" };
+  k.vergi    = { kdv:"", otv_durum:"muaf", otv_oran:"", tevkifat_kod:"", tevkifat_oran:"" };
+  k.etiket   = { liste: [] };
+  return k;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   VARLIK DEĞİŞTİR
+   ═══════════════════════════════════════════════════════════ */
+function varlikSec(v){
+  AKTIF_VARLIK = v;
+  SECILI_KOD = null;
+  AKTIF_SEKME = null;
+
+  // Üst sekmeler
+  document.querySelectorAll('.entity-tab').forEach(t=>{
+    t.classList.toggle('active', t.dataset.e === v);
+  });
+  // Başlık
+  document.getElementById('liste-baslik').textContent = VARLIKLAR[v].liste_baslik;
+  document.getElementById('aktif-kaynak').textContent = VARLIKLAR[v].dosya;
+  // Arama kutusunu temizle
+  document.getElementById('ara').value = "";
+  // Detay sıfırla
+  document.getElementById('detail-header').classList.add('empty');
+  document.getElementById('detail-header').innerHTML = 'Soldaki listeden bir kod seçin';
+  document.getElementById('detail-header').removeAttribute('data-e');
+  // Sekmeleri temizle
+  document.getElementById('tabs').innerHTML = '';
+  document.getElementById('panels').innerHTML = '';
+  // JSON sıfırla
+  document.getElementById('json-preview').textContent = '// Bir kod seçin…';
+  // Liste
+  renderKodListesi();
+}
+
+/* ═══════════════════════════════════════════════════════════
+   KOD LİSTESİ
+   ═══════════════════════════════════════════════════════════ */
+function renderKodListesi(filtre=""){
+  const el = document.getElementById('kod-listesi');
+  const v = AKTIF_VARLIK;
+  const f = filtre.toLowerCase().trim();
+  const list = HAM[v].filter(x =>
+    !f || x.kod.toLowerCase().includes(f) || x.ad.toLowerCase().includes(f)
+  );
+
+  if (list.length === 0){
+    el.innerHTML = `<div style="padding:20px;text-align:center;color:var(--muted);font-size:.78rem">Sonuç bulunamadı</div>`;
+    return;
+  }
+
+  el.innerHTML = list.map(x=>{
+    const k = KAYITLAR[kayitAnahtari(v, x.kod)];
+    let durumlar = '<span class="bos">eşleştirme yok</span>';
+    if (k){
+      const d = [];
+      if (k.cpc?.kodlar.length)  d.push(`<span class="ok">CPC×${k.cpc.kodlar.length}</span>`);
+      if (k.isco?.kodlar.length) d.push(`<span class="ok">ISCO×${k.isco.kodlar.length}</span>`);
+      if (k.nace?.kodlar.length) d.push(`<span class="ok">NACE×${k.nace.kodlar.length}</span>`);
+      if (k.gtip?.kodlar.length) d.push(`<span class="ok">GTİP×${k.gtip.kodlar.length}</span>`);
+      if (k.randiman?.islem)     d.push(`<span class="ok">Randıman</span>`);
+      if (k.vergi?.kdv)          d.push(`<span class="ok">Vergi</span>`);
+      if (k.etiket?.liste?.length) d.push(`<span class="ok">Etiket</span>`);
+      if (d.length) durumlar = d.join('');
+    }
+    return `
+      <div class="code-item ${SECILI_KOD===x.kod?'active':''}" data-e="${v}" onclick="kodSec('${x.kod}')">
+        <span class="kod">${x.kod}</span>
+        <span class="ad">${x.ad}</span>
+        <div class="durum">${durumlar}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+function filtrele(){
+  renderKodListesi(document.getElementById('ara').value);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   KOD SEÇ
+   ═══════════════════════════════════════════════════════════ */
+function kodSec(kod){
+  SECILI_KOD = kod;
+  const v = AKTIF_VARLIK;
+  const ham = HAM[v].find(x=>x.kod===kod);
+  if (!ham) return;
+
+  // Detay başlık
+  const dh = document.getElementById('detail-header');
+  dh.classList.remove('empty');
+  dh.dataset.e = v;
+  dh.innerHTML = `
+    <div class="kod-buyuk">${ham.kod}</div>
+    <div class="ad-buyuk">${ham.ad}</div>
+    <div class="meta-satir">
+      <span>Varlık: <b>${VARLIKLAR[v].ad} · ${VARLIKLAR[v].etiket}</b></span>
+      <span>Kaynak: <b>${VARLIKLAR[v].dosya}</b></span>
+      <span>Katman: <b>1 — Ham</b></span>
+    </div>
+  `;
+
+  // Kayıt yükle/oluştur
+  const anahtar = kayitAnahtari(v, kod);
+  if (!KAYITLAR[anahtar]) KAYITLAR[anahtar] = bosKayit(v);
+
+  // Sekmeleri oluştur
+  renderSekmeler(v);
+  // İlk sekmeyi aç
+  ilkSekmeAc();
+
+  renderKodListesi(document.getElementById('ara').value);
+  updateJson();
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SEKMELER — varlık tipine göre dinamik
+   ═══════════════════════════════════════════════════════════ */
+function renderSekmeler(v){
+  const hedefler = VARLIKLAR[v].hedefler;
+  const tabsEl = document.getElementById('tabs');
+  const panelsEl = document.getElementById('panels');
+
+  tabsEl.innerHTML = hedefler.map(h=>{
+    const meta = SEKME_META[h];
+    const naceClass = h === 'nace' ? 'nace-zorunlu' : '';
+    return `<button class="tab ${naceClass}" data-tab="${h}">${meta.ad} <span class="badge bos" id="b-${h}">—</span></button>`;
+  }).join('');
+
+  panelsEl.innerHTML = hedefler.map(h => renderPanel(h, v)).join('');
+
+  // Sekme tıklamaları
+  tabsEl.querySelectorAll('.tab').forEach(t=>{
+    t.addEventListener('click', ()=>{
+      tabsEl.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+      panelsEl.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      panelsEl.querySelector(`.panel[data-panel="${t.dataset.tab}"]`).classList.add('active');
+      AKTIF_SEKME = t.dataset.tab;
+    });
+  });
+
+  // Panel input dinleyicileri
+  panelsEl.querySelectorAll('input, select, textarea').forEach(el=>{
+    el.addEventListener('input', ()=>{
+      formGuncelle(el);
+    });
+  });
+
+  // Badge'leri güncelle
+  updateBadges(v);
+}
+
+function ilkSekmeAc(){
+  const first = document.querySelector('.tab');
+  if (first) first.click();
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PANEL HTML — her hedef tipine göre
+   ═══════════════════════════════════════════════════════════ */
+function renderPanel(h, v){
+  const k = KAYITLAR[kayitAnahtari(v, SECILI_KOD)];
+
+  // ── Varlık sekmeleri (GTİP, CPC, ISCO, NACE) ──
+  if (["gtip","cpc","isco","nace"].includes(h) && h !== v){
+    const hedefListe = HAM[h];
+    const seciliKodlar = (k[h]?.kodlar) || [];
+    const guven = k[h]?.guven || "yuksek";
+    const not   = k[h]?.not || "";
+
+    return `
+      <div class="panel" data-panel="${h}">
+        <div class="field">
+          <label>Eşleşen ${SEKME_META[h].ad} Kodları</label>
+          <div class="multi-list">
+            ${hedefListe.map(r=>`
+              <label class="multi-item ${seciliKodlar.includes(r.kod)?'checked':''}" data-e="${h}">
+                <input type="checkbox" value="${r.kod}" ${seciliKodlar.includes(r.kod)?'checked':''}
+                       onchange="toggleMulti(this, '${h}')">
+                <span class="kod">${r.kod}</span>
+                <span class="ad">${r.ad}</span>
+              </label>
+            `).join('')}
+          </div>
+          <div class="help">Birden fazla ${SEKME_META[h].ad} kodu seçilebilir.</div>
+        </div>
+        <div class="field">
+          <label>Güven Seviyesi</label>
+          <select data-alan="${h}.guven">
+            <option value="yuksek" ${guven==='yuksek'?'selected':''}>Yüksek — doğrudan eşleşme</option>
+            <option value="orta"   ${guven==='orta'?'selected':''}>Orta — kısmi eşleşme</option>
+            <option value="dusuk"  ${guven==='dusuk'?'selected':''}>Düşük — varsayımsal / türetilmiş</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Not</label>
+          <textarea data-alan="${h}.not" rows="2" placeholder="Gerekçe, kaynak, uyarı…">${not}</textarea>
+        </div>
+      </div>
+    `;
+  }
+
+  // ── Randıman ──
+  if (h === "randiman"){
+    const r = k.randiman || {};
+    return `
+      <div class="panel" data-panel="randiman">
+        <div class="field">
+          <label>İşlem Adı</label>
+          <input type="text" data-alan="randiman.islem" value="${r.islem||''}" placeholder="örn. Koklaştırma (Taşkömürü → Kok)">
+        </div>
+        <div class="field">
+          <label>Çıktı GTİP Kodu</label>
+          <input type="text" data-alan="randiman.cikti" value="${r.cikti||''}" placeholder="örn. 2704.00.10.00.00">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Asgari Randıman (%)</label>
+            <input type="number" step="0.1" data-alan="randiman.asgari" value="${r.asgari||''}" placeholder="70.0">
+          </div>
+          <div class="field">
+            <label>Azami Fire (%)</label>
+            <input type="number" step="0.1" data-alan="randiman.fire" value="${r.fire||''}" placeholder="12.0">
+          </div>
+        </div>
+        <div class="field">
+          <label>İkincil Ürünler</label>
+          <div class="urun-listesi" id="ikincil-urunler">
+            ${(r.ikincil||[]).map((u,i)=>`
+              <div class="urun-satir">
+                <input type="text" value="${u.ad||''}" placeholder="Ürün adı" oninput="ikincilGuncelle(${i},'ad',this.value)">
+                <input type="text" value="${u.gtip||''}" placeholder="GTİP" oninput="ikincilGuncelle(${i},'gtip',this.value)">
+                <input type="number" value="${u.oran||''}" placeholder="%" step="0.1" oninput="ikincilGuncelle(${i},'oran',this.value)">
+                <button class="sil" onclick="ikincilSil(${i})">×</button>
+              </div>
+            `).join('')}
+          </div>
+          <button class="ekle-btn" onclick="ikincilEkle()">+ İkincil ürün ekle</button>
+        </div>
+      </div>
+    `;
+  }
+
+  // ── Adam-Saat ──
+  if (h === "adamsaat"){
+    const a = k.adamsaat || {};
+    return `
+      <div class="panel" data-panel="adamsaat">
+        <div class="field">
+          <label>Norm Süre (dakika/adam)</label>
+          <input type="number" step="0.1" data-alan="adamsaat.sure_dk" value="${a.sure_dk||''}" placeholder="örn. 45">
+        </div>
+        <div class="field">
+          <label>Birim</label>
+          <select data-alan="adamsaat.birim">
+            <option value="saat" ${a.birim==='saat'?'selected':''}>Saat</option>
+            <option value="gun"  ${a.birim==='gun'?'selected':''}>Gün</option>
+            <option value="adam-gun" ${a.birim==='adam-gun'?'selected':''}>Adam-gün</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Not</label>
+          <textarea data-alan="adamsaat.not" rows="2" placeholder="Kaynak, ölçüm yöntemi…">${a.not||''}</textarea>
+        </div>
+      </div>
+    `;
+  }
+
+  // ── SGK Prim ──
+  if (h === "prim"){
+    const p = k.prim || {};
+    return `
+      <div class="panel" data-panel="prim">
+        <div class="field-row">
+          <div class="field">
+            <label>İşçi Prim (%)</label>
+            <input type="number" step="0.01" data-alan="prim.isci" value="${p.isci||''}" placeholder="14.00">
+          </div>
+          <div class="field">
+            <label>İşveren Prim (%)</label>
+            <input type="number" step="0.01" data-alan="prim.isveren" value="${p.isveren||''}" placeholder="20.50">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>İşsizlik İşçi (%)</label>
+            <input type="number" step="0.01" data-alan="prim.issizlik_isci" value="${p.issizlik_isci||''}" placeholder="1.00">
+          </div>
+          <div class="field">
+            <label>İşsizlik İşveren (%)</label>
+            <input type="number" step="0.01" data-alan="prim.issizlik_isveren" value="${p.issizlik_isveren||''}" placeholder="2.00">
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // ── Tehlike / ÇED ──
+  if (h === "tehlike"){
+    const t = k.tehlike || {};
+    return `
+      <div class="panel" data-panel="tehlike">
+        <div class="field">
+          <label>Tehlike Sınıfı</label>
+          <select data-alan="tehlike.sinif">
+            <option value="">— Seçin —</option>
+            <option value="Az Tehlikeli" ${t.sinif==='Az Tehlikeli'?'selected':''}>Az Tehlikeli</option>
+            <option value="Tehlikeli"     ${t.sinif==='Tehlikeli'?'selected':''}>Tehlikeli</option>
+            <option value="Çok Tehlikeli" ${t.sinif==='Çok Tehlikeli'?'selected':''}>Çok Tehlikeli</option>
+          </select>
+        </div>
+        <div class="field">
+          <label><input type="checkbox" data-alan="tehlike.ced_gerekli" ${t.ced_gerekli?'checked':''} style="width:auto;margin-right:8px">ÇED Raporu Gerekli</label>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Kükürt Maks. (%)</label>
+            <input type="number" step="0.1" data-alan="tehlike.kukurt_max" value="${t.kukurt_max||''}" placeholder="0.8">
+          </div>
+          <div class="field">
+            <label>Nem Maks. (%)</label>
+            <input type="number" step="0.1" data-alan="tehlike.nem_max" value="${t.nem_max||''}" placeholder="5.0">
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // ── Vergi ──
+  if (h === "vergi"){
+    const vg = k.vergi || {};
+    return `
+      <div class="panel" data-panel="vergi">
+        <div class="field-row">
+          <div class="field">
+            <label>KDV Oranı (%)</label>
+            <input type="number" step="0.1" data-alan="vergi.kdv" value="${vg.kdv||''}" placeholder="20">
+          </div>
+          <div class="field">
+            <label>ÖTV Durumu</label>
+            <select data-alan="vergi.otv_durum">
+              <option value="muaf" ${vg.otv_durum==='muaf'?'selected':''}>Muaf</option>
+              <option value="tabi" ${vg.otv_durum==='tabi'?'selected':''}>ÖTV'ye Tabi</option>
+              <option value="kismi" ${vg.otv_durum==='kismi'?'selected':''}>Kısmi</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>ÖTV Oranı (%)</label>
+            <input type="number" step="0.1" data-alan="vergi.otv_oran" value="${vg.otv_oran||''}" placeholder="0">
+          </div>
+          <div class="field">
+            <label>Tevkifat Kodu</label>
+            <input type="text" data-alan="vergi.tevkifat_kod" value="${vg.tevkifat_kod||''}" placeholder="608">
+          </div>
+        </div>
+        <div class="field">
+          <label>Tevkifat Oranı</label>
+          <input type="text" data-alan="vergi.tevkifat_oran" value="${vg.tevkifat_oran||''}" placeholder="5/10">
+        </div>
+      </div>
+    `;
+  }
+
+  // ── Etiket ──
+  if (h === "etiket"){
+    const e = k.etiket || {};
+    return `
+      <div class="panel" data-panel="etiket">
+        <div class="field">
+          <label>Etiketler</label>
+          <input type="text" data-alan="etiket.liste" value="${(e.liste||[]).join(', ')}" placeholder="kömür, linyit, katı-yakıt">
+          <div class="help">Virgülle ayırın. Serbest metin etiketler.</div>
+        </div>
+      </div>
+    `;
+  }
+
+  return '';
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FORM GÜNCELLE
+   ═══════════════════════════════════════════════════════════ */
+function formGuncelle(el){
+  const v = AKTIF_VARLIK;
+  const anahtar = kayitAnahtari(v, SECILI_KOD);
+  const k = KAYITLAR[anahtar];
+  const alan = el.dataset.alan;
+  if (!alan) return;
+
+  const [grup, alt] = alan.split('.');
+  let deger = el.type === 'checkbox' ? el.checked : el.value;
+
+  // Etiket özel işlem
+  if (grup === 'etiket') {
+    k.etiket.liste = String(deger).split(',').map(s=>s.trim()).filter(Boolean);
+    deger = k.etiket.liste;
+  } else {
+    if (!k[grup]) k[grup] = {};
+    k[grup][alt] = deger;
+  }
+
+  updateBadges(v);
+  updateJson();
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ÇOK SEÇİMLİ (multi-checkbox)
+   ═══════════════════════════════════════════════════════════ */
+function toggleMulti(cb, hedef){
+  const v = AKTIF_VARLIK;
+  const k = KAYITLAR[kayitAnahtari(v, SECILI_KOD)];
+  if (!k[hedef]) k[hedef] = { kodlar: [], guven: "yuksek", not: "" };
+
+  const checked = [...document.querySelectorAll(`.panel[data-panel="${hedef}"] input[type="checkbox"]:checked`)].map(x=>x.value);
+  k[hedef].kodlar = checked;
+  cb.closest('.multi-item').classList.toggle('checked', cb.checked);
+
+  updateBadges(v); updateJson();
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RANDIMAN İKİNCİL ÜRÜN
+   ═══════════════════════════════════════════════════════════ */
+function ikincilEkle(){
+  const v = AKTIF_VARLIK;
+  const k = KAYITLAR[kayitAnahtari(v, SECILI_KOD)];
+  if (!k.randiman.ikincil) k.randiman.ikincil = [];
+  k.randiman.ikincil.push({ ad:"", gtip:"", oran:"" });
+  yenilePanel("randiman");
+  updateBadges(v); updateJson();
+}
+function ikincilSil(i){
+  const v = AKTIF_VARLIK;
+  const k = KAYITLAR[kayitAnahtari(v, SECILI_KOD)];
+  k.randiman.ikincil.splice(i,1);
+  yenilePanel("randiman");
+  updateBadges(v); updateJson();
+}
+function ikincilGuncelle(i, alan, deger){
+  const v = AKTIF_VARLIK;
+  const k = KAYITLAR[kayitAnahtari(v, SECILI_KOD)];
+  k.randiman.ikincil[i][alan] = deger;
+  updateJson();
+}
+
+/* Paneli yeniden çiz (dinamik alanlar için) */
+function yenilePanel(panelAdi){
+  const v = AKTIF_VARLIK;
+  const panelsEl = document.getElementById('panels');
+  const panelEl = panelsEl.querySelector(`.panel[data-panel="${panelAdi}"]`);
+  if (!panelEl) return;
+  const yeni = document.createElement('div');
+  yeni.innerHTML = renderPanel(panelAdi, v);
+  panelEl.replaceWith(yeni.firstElementChild);
+
+  // Yeni panel input dinleyicileri
+  panelsEl.querySelectorAll(`.panel[data-panel="${panelAdi}"] input, .panel[data-panel="${panelAdi}"] select, .panel[data-panel="${panelAdi}"] textarea`).forEach(el=>{
+    el.addEventListener('input', ()=>formGuncelle(el));
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BADGE GÜNCELLE
+   ═══════════════════════════════════════════════════════════ */
+function updateBadges(v){
+  const k = KAYITLAR[kayitAnahtari(v, SECILI_KOD)];
+  if (!k) return;
+
+  const set = (id, val, ok)=>{
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = val;
+    el.classList.toggle('bos', !ok);
+  };
+
+  ["gtip","cpc","isco","nace"].forEach(h=>{
+    if (h === v) return;
+    const sayi = k[h]?.kodlar?.length || 0;
+    set('b-'+h, sayi || '—', sayi > 0);
+  });
+  if (v !== 'gtip') set('b-gtip', k.gtip?.kodlar?.length || '—', k.gtip?.kodlar?.length > 0);
+
+  set('b-randiman', k.randiman?.islem ? '✓' : '—', !!k.randiman?.islem);
+  set('b-adamsaat', k.adamsaat?.sure_dk ? '✓' : '—', !!k.adamsaat?.sure_dk);
+  set('b-prim',     (k.prim?.isci && k.prim?.isveren) ? '✓' : '—', !!(k.prim?.isci && k.prim?.isveren));
+  set('b-tehlike',  k.tehlike?.sinif ? '✓' : '—', !!k.tehlike?.sinif);
+  set('b-vergi',    k.vergi?.kdv ? k.vergi.kdv+'%' : '—', !!k.vergi?.kdv);
+  set('b-etiket',   k.etiket?.liste?.length || '—', k.etiket?.liste?.length > 0);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   JSON ÇIKTISI
+   ═══════════════════════════════════════════════════════════ */
+function buildJson(){
+  const v = AKTIF_VARLIK;
+  if (!SECILI_KOD) return null;
+  const k = KAYITLAR[kayitAnahtari(v, SECILI_KOD)];
+  const ham = HAM[v].find(x=>x.kod===SECILI_KOD);
+
+  const cikti = {
+    _meta: {
+      surum: new Date().toISOString().slice(0,10),
+      rol: document.getElementById('role').value,
+      katman: "iliski",
+      kaynak_varlik: v,
+      kaynak_kod: SECILI_KOD,
+      kaynak_ham: VARLIKLAR[v].dosya
+    },
+    kod: SECILI_KOD,
+    aciklama: ham?.ad || "",
+    eslestirmeler: {}
+  };
+
+  // Karşılıklı varlıklar
+  ["gtip","cpc","isco","nace"].forEach(h=>{
+    if (h === v) return;
+    const e = k[h];
+    if (e && e.kodlar.length){
+      cikti.eslestirmeler[h] = {
+        kodlar: e.kodlar,
+        guven: e.guven,
+        not: e.not || undefined
+      };
+    }
+  });
+
+  // Zenginleştirmeler
+  if (k.randiman?.islem){
+    cikti.eslestirmeler.randiman = {
+      islem_adi: k.randiman.islem,
+      cikti_gtip: k.randiman.cikti || undefined,
+      asgari_randiman: parseFloat(k.randiman.asgari) || undefined,
+      azami_fire: parseFloat(k.randiman.fire) || undefined,
+      ikincil_urunler: (k.randiman.ikincil||[]).filter(u=>u.ad)
+    };
+  }
+  if (k.adamsaat?.sure_dk){
+    cikti.eslestirmeler.adamsaat = {
+      sure_dk: parseFloat(k.adamsaat.sure_dk),
+      birim: k.adamsaat.birim || undefined,
+      not: k.adamsaat.not || undefined
+    };
+  }
+  if (k.prim?.isci || k.prim?.isveren){
+    cikti.eslestirmeler.prim = {
+      isci: parseFloat(k.prim.isci) || undefined,
+      isveren: parseFloat(k.prim.isveren) || undefined,
+      issizlik_isci: parseFloat(k.prim.issizlik_isci) || undefined,
+      issizlik_isveren: parseFloat(k.prim.issizlik_isveren) || undefined
+    };
+  }
+  if (k.tehlike?.sinif){
+    cikti.eslestirmeler.tehlike = {
+      sinif: k.tehlike.sinif,
+      ced_gerekli: k.tehlike.ced_gerekli,
+      kukurt_max: parseFloat(k.tehlike.kukurt_max) || undefined,
+      nem_max: parseFloat(k.tehlike.nem_max) || undefined
+    };
+  }
+  if (k.vergi?.kdv){
+    cikti.eslestirmeler.vergi = {
+      kdv_orani: parseFloat(k.vergi.kdv) || undefined,
+      otv_durum: k.vergi.otv_durum,
+      otv_orani: parseFloat(k.vergi.otv_oran) || undefined,
+      tevkifat_kodu: k.vergi.tevkifat_kod || undefined,
+      tevkifat_orani: k.vergi.tevkifat_oran || undefined
+    };
+  }
+  if (k.etiket?.liste?.length){
+    cikti.eslestirmeler.etiketler = k.etiket.liste;
+  }
+
+  return cikti;
+}
+
+function updateJson(){
+  const el = document.getElementById('json-preview');
+  const j = buildJson();
+  if (!j){ el.textContent = '// Bir kod seçin…'; return; }
+  el.textContent = JSON.stringify(j, null, 2);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   AKSİYONLAR
+   ═══════════════════════════════════════════════════════════ */
+function kopyalaJson(){
+  const t = document.getElementById('json-preview').textContent;
+  if (!t) return;
+  navigator.clipboard.writeText(t).then(()=>toast('Panoya kopyalandı'));
+}
+function indirJson(){
+  const j = buildJson();
+  if (!j) return toast('Önce bir kod seçin', true);
+  const blob = new Blob([JSON.stringify(j, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `iliski-${AKTIF_VARLIK}-${SECILI_KOD.replace(/[^a-zA-Z0-9]/g,'')}.json`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+  toast('JSON indirildi');
+}
+function kaydetJson(){
+  const toplam = Object.keys(KAYITLAR).length;
+  if (toplam === 0) return toast('Kaydedilecek eşleştirme yok', true);
+  localStorage.setItem('pdaas-iliski-v2', JSON.stringify(KAYITLAR));
+  toast(`${toplam} kayıt tarayıcıya kaydedildi`);
+}
+function yukleJson(){
+  const local = localStorage.getItem('pdaas-iliski-v2');
+  if (local){
+    try{
+      Object.assign(KAYITLAR, JSON.parse(local));
+      toast('Yerel kayıtlar yüklendi');
+      renderKodListesi(); if (SECILI_KOD) kodSec(SECILI_KOD);
+      return;
+    }catch(e){}
+  }
+  document.getElementById('file-input').click();
+}
+document.getElementById('file-input').addEventListener('change', e=>{
+  const file = e.target.files[0]; if (!file) return;
+  const r = new FileReader();
+  r.onload = ev=>{
+    try{
+      const j = JSON.parse(ev.target.result);
+      toast('Dosya yüklendi (PoC: yalnızca görüntüleme)');
+      document.getElementById('json-preview').textContent = JSON.stringify(j, null, 2);
+    }catch(err){ toast('Geçersiz JSON', true); }
+  };
+  r.readAsText(file);
+});
+function temizle(){
+  if (!SECILI_KOD) return;
+  if (!confirm('Bu kodun tüm eşleştirmelerini silmek istediğinize emin misiniz?')) return;
+  KAYITLAR[kayitAnahtari(AKTIF_VARLIK, SECILI_KOD)] = bosKayit(AKTIF_VARLIK);
+  kodSec(SECILI_KOD);
+  toast('Temizlendi');
+}
+function toast(msg, hata=false){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.toggle('err', hata);
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2200);
+}
+
+/* İlk yükleme */
+varlikSec('gtip');
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+{
+  "surum": "2025.12.01",
+  "surum_onceki": "2025.01.01",
+  "guncelleme": "2025-12-01",
+  "kurum": "T.C. Ticaret Bakanlığı",
+  "birim": "İhracat Genel Müdürlüğü",
+  "veri_kaynak": "İhracatçı Birlikleri (TİM) + Sanayi/Ticaret Odaları (TOBB)",
+  "kaynak": "Dahilde İşleme Rejimi (DİR) / Hariçte İşleme Rejimi (HİR) Kararları",
+  "aciklama": "GTİP → GTİP dönüşüm ilişkileri (randıman, fire, yan ürün)",
+  "join_anahtari": ["gtip_ham_girdi", "gtip_ham_cikti"],
+  "gecerlilik_baslangic": "2025-12-01",
+  "gecerlilik_bitis": "2026-12-31",
+  "toplam_iliski": 4,
+
+  "alanlar": {
+    "gtip_ham_girdi": "İşleme girecek ham madde GTİP (12 hane)",
+    "gtip_ham_cikti": "İşlem sonucu elde edilecek mamul GTİP (12 hane)",
+    "islem_adi": "Dönüşüm işleminin kısa adı",
+    "asgari_randiman": "Hammaddeden elde edilen mamulün asgari oranı (%)",
+    "azami_fire": "İşlem sırasında kaybolan maddenin azami oranı (%)",
+    "ikincil_urunler": "Yan ürünler listesi",
+    "toplam_oran_kontrolu": "asgari_randiman + azami_fire + yan_urun_oranlari = 100"
+  },
+
+  "kayitlar": [
+    {
+      "gtip_ham_girdi": "270112100000",
+      "gtip_ham_cikti": "270400100000",
+      "islem_adi": "Koklaştırma (Taşkömürü → Kok)",
+      "asgari_randiman": 70.0,
+      "azami_fire": 12.0,
+      "ikincil_urunler": [
+        { "ad": "Kok gazı", "gtip_ham": "270500000000", "oran": 10.0 },
+        { "ad": "Katran", "gtip_ham": "270600000011", "oran": 5.0 },
+        { "ad": "Amonyak", "gtip_ham": null, "oran": 3.0 }
+      ],
+      "toplam_oran_kontrolu": 100.0,
+      "kaynak_belge": "DİR Kararı 2024/1",
+      "odalar_onayi": true,
+      "bakanlik_onayi": true,
+      "gecerlilik": "2026-01-01 / 2026-12-31"
+    },
+    {
+      "gtip_ham_girdi": "270210000000",
+      "gtip_ham_cikti": "270400300000",
+      "islem_adi": "Linyit Koklaştırma",
+      "asgari_randiman": 60.0,
+      "azami_fire": 15.0,
+      "ikincil_urunler": [
+        { "ad": "Linyit katranı", "gtip_ham": null, "oran": 15.0 },
+        { "ad": "Gaz", "gtip_ham": null, "oran": 10.0 }
+      ],
+      "toplam_oran_kontrolu": 100.0,
+      "kaynak_belge": "DİR Kararı 2024/1",
+      "odalar_onayi": true,
+      "bakanlik_onayi": true,
+      "gecerlilik": "2026-01-01 / 2026-12-31"
+    },
+    {
+      "gtip_ham_girdi": "270112100000",
+      "gtip_ham_cikti": "270120000011",
+      "islem_adi": "Briketleme (Taşkömürü → Briket)",
+      "asgari_randiman": 90.0,
+      "azami_fire": 5.0,
+      "ikincil_urunler": [
+        { "ad": "Kömür tozu", "gtip_ham": null, "oran": 3.0 }
+      ],
+      "toplam_oran_kontrolu": 98.0,
+      "kaynak_belge": "DİR Kararı 2024/1",
+      "odalar_onayi": true,
+      "bakanlik_onayi": true,
+      "gecerlilik": "2026-01-01 / 2026-12-31"
+    },
+    {
+      "gtip_ham_girdi": "270400100000",
+      "gtip_ham_cikti": "270400901000",
+      "islem_adi": "Karni Kömürü Üretimi (Kok → Karni)",
+      "asgari_randiman": 85.0,
+      "azami_fire": 8.0,
+      "ikincil_urunler": [],
+      "toplam_oran_kontrolu": 93.0,
+      "kaynak_belge": "DİR Kararı 2024/1",
+      "odalar_onayi": true,
+      "bakanlik_onayi": true,
+      "gecerlilik": "2026-01-01 / 2026-12-31"
+    }
+  ],
+
+  "ozet": {
+    "toplam_iliski": 4,
+    "kok_uretimi": 2,
+    "briket_uretimi": 1,
+    "karni_uretimi": 1
+  },
+
+  "meta": {
+    "giris_tarihi": "2025-12-01",
+    "guncelleme_tarihi": "2025-12-01",
+    "giren_kurum": "Ticaret Bakanlığı",
+    "giren_birim": "İhracat Genel Müdürlüğü",
+    "onay_durumu": "onaylandi",
+    "veri_kaynak": "İMMİB + TOBB Maden Odası"
+  }
+}
