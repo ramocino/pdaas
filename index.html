@@ -66,7 +66,7 @@
   .not{color:var(--muted);font-size:.84rem}
   .not.hata{color:var(--bad)}
 
-  /* bakanlıklar */
+  /* katalog */
   .bak{border-bottom:1px solid var(--line);padding:10px 0}
   .bak summary{cursor:pointer;display:flex;gap:10px;align-items:baseline}
   .bak summary b{font-weight:600}
@@ -112,19 +112,20 @@
   </section>
 
   <section>
-    <h2>Referans Veriler ve Parametreler <small>/api/v1/…</small></h2>
+    <h2>Veri servisleri <small>kod hiyerarşileri &amp; vergi parametreleri</small></h2>
     <table>
       <thead>
         <tr>
           <th>Servis</th>
           <th class="gizle-kucuk">Uç nokta</th>
-          <th class="sayi">Kayıt / Dal</th>
+          <th class="sayi">Dal</th>
+          <th class="sayi">Kayıt</th>
           <th class="gizle-kucuk">Sürüm</th>
           <th class="sayi gizle-kucuk">ms</th>
           <th></th>
         </tr>
       </thead>
-      <tbody id="tb-referans"></tbody>
+      <tbody id="tb-servis"></tbody>
     </table>
   </section>
 
@@ -156,17 +157,17 @@
 
 const API_BASE = '';
 
-const REFERANSLAR = [
-  /* Hiyerarşik Varlıklar */
-  {tip: 'agac', id:'gtip', ad:'Ürün (GTİP)', yol:'/api/v1/gtip/agac'},
-  {tip: 'agac', id:'cpc',  ad:'Hizmet (CPC)', yol:'/api/v1/cpc/agac'},
-  {tip: 'agac', id:'isco', ad:'Meslek (ISCO)', yol:'/api/v1/isco/agac'},
-  {tip: 'agac', id:'nace', ad:'Faaliyet (NACE)', yol:'/api/v1/nace/agac'},
-  /* Vergi Parametreleri */
-  {tip: 'vergi', ad:'Damga vergisi', yol:'/api/v1/tax/stamp-duty'},
-  {tip: 'vergi', ad:'Gelir vergisi dilimleri', yol:'/api/v1/tax/income-brackets'},
-  {tip: 'vergi', ad:'ÖTV (araç)', yol:'/api/v1/tax/sct-vehicle'},
-  {tip: 'vergi', ad:'KDV oranları', yol:'/api/v1/tax/vat-rates'},
+const VARLIKLAR = [
+  {id:'gtip', ad:'Ürün (GTİP)'},
+  {id:'cpc',  ad:'Hizmet (CPC)'},
+  {id:'isco', ad:'Meslek (ISCO)'},
+  {id:'nace', ad:'Faaliyet (NACE)'},
+];
+const VERGILER = [
+  {ad:'Damga vergisi',            yol:'/api/v1/tax/stamp-duty'},
+  {ad:'Gelir vergisi dilimleri',  yol:'/api/v1/tax/income-brackets'},
+  {ad:'ÖTV (araç)',               yol:'/api/v1/tax/sct-vehicle'},
+  {ad:'KDV oranları',             yol:'/api/v1/tax/vat-rates'},
 ];
 
 /* ───────── yardımcılar ───────── */
@@ -199,6 +200,7 @@ function hataMetni(s){
 }
 function nokta(durum){ return el('span', {class:'dot ' + (durum || '')}); }
 
+/* Kayıt listesini tabloya çevirir (iç içe nesneler kısaltılır) */
 function tabloYap(kayitlar, limit = 50){
   if (!Array.isArray(kayitlar) || !kayitlar.length) return el('p', {class:'not'}, 'Kayıt yok.');
   const ornek = kayitlar.slice(0, 20);
@@ -225,6 +227,7 @@ function tabloYap(kayitlar, limit = 50){
   return el('div', {}, kap, ek);
 }
 
+/* Satırın altına açılır detay satırı ekler */
 function detayAc(tr, kolonSayisi, icerikUret){
   if (tr._detay){ tr._detay.remove(); tr._detay = null; tr._btn.textContent = 'Aç'; return; }
   const td = el('td', {colspan:kolonSayisi});
@@ -243,52 +246,45 @@ async function durumYukle(){
     ? `Çalışıyor · v${h.body.version}`
     : 'Ulaşılamıyor';
   if (s.ok){
-    $('st-ort').textContent = s.body.avg_processing_ms + ' ms';$('st-istek').textContent = sayi(s.body.request_count);
+    $('st-ort').textContent = s.body.avg_processing_ms + ' ms';
+    $('st-istek').textContent = sayi(s.body.request_count);
     const k = s.body.katalog || {};
-    $('st-bak').textContent = sayi(k.toplam_bakanlik);$('st-dosya').textContent = sayi(k.toplam_dosya);
+    $('st-bak').textContent = sayi(k.toplam_bakanlik);
+    $('st-dosya').textContent = sayi(k.toplam_dosya);
   }
   if (v.ok) $('yapi').textContent = v.body.build;
 }
 
-/* ───────── birleştirilmiş referans satırı (hiyerarşi + vergi) ───────── */
-function referansSatiri(ref){
-  const cAd = el('td', {class:'ad'}, nokta(), ref.ad);
-  const cSayi = el('td', {class:'sayi'}, '…');
-  const cSurum = el('td', {class:'gizle-kucuk'}, '');
-  const cMs = el('td', {class:'sayi gizle-kucuk'}, '');
-  const btn = el('button', {class:'btn ikincil kucuk', disabled:'disabled'}, 'Aç');
-  const tr = el('tr', {}, cAd, el('td', {class:'yol mono gizle-kucuk'}, ref.yol), cSayi, cSurum, cMs, el('td', {}, btn));
+/* ───────── kod hiyerarşileri (7 sütun) ───────── */
+function varlikSatiri(v){
+  const yol = `/api/v1/${v.id}/agac`;
+  const cDal   = el('td', {class:'sayi'}, '…');
+  const cKayit = el('td', {class:'sayi'}, '…');
+  const cSurum = el('td', {class:'gizle-kucuk'}, '');   // vergiye özel → boş
+  const cMs    = el('td', {class:'sayi gizle-kucuk'}, '');
+  const cAd    = el('td', {class:'ad'}, nokta(), v.ad);
+  const btn    = el('button', {class:'btn ikincil kucuk', disabled:'disabled'}, 'Aç');
+  const tr = el('tr', {},
+    cAd, el('td', {class:'yol mono gizle-kucuk'}, yol),
+    cDal, cKayit, cSurum, cMs, el('td', {}, btn));
   tr._btn = btn;
 
-  getir(ref.yol).then(s => {
+  getir(yol).then(s => {
     cAd.firstChild.className = 'dot ' + (s.ok ? 'ok' : 'bad');
     cMs.textContent = s.ms;
     if (!s.ok){
-      cSayi.textContent = '–';
+      cDal.textContent = '–'; cKayit.textContent = '–';
       btn.disabled = false;
-      btn.addEventListener('click', () => detayAc(tr, 6, td => td.append(el('p', {class:'not hata'}, hataMetni(s)))));
+      btn.addEventListener('click', () =>
+        detayAc(tr, 7, td => td.append(el('p', {class:'not hata'}, hataMetni(s)))));
       return;
     }
-
-    if (ref.tip === 'agac'){
-      const dallar = s.body.dallar || [];
-      const toplamKayit = dallar.reduce((t, d) => t + (d.kayit_sayisi || 0), 0);
-      cSayi.textContent = sayi(s.body.toplam_dal) + ' dal / ' + sayi(toplamKayit) + ' kayıt';
-      btn.disabled = false;
-      btn.addEventListener('click', () => detayAc(tr, 6, td => dallarGoster(td, ref, dallar)));
-    } else {
-      cSayi.textContent = sayi(s.body.toplam);
-      cSurum.textContent = s.body.version_id || '';
-      btn.disabled = false;
-      btn.addEventListener('click', () => detayAc(tr, 6, td => {
-        td.append(
-          el('p', {class:'not', style:'margin-bottom:8px'},
-            [s.body.publisher, s.body.legal_basis_doc, s.body.valid_from && `Yürürlük: ${s.body.valid_from}`]
-              .filter(Boolean).join(' · ') + ' · ',
-            el('a', {href:API_BASE + ref.yol, target:'_blank', rel:'noopener'}, 'JSON olarak aç')),
-          tabloYap(s.body.data));
-      }));
-    }
+    const dallar = s.body.dallar || [];
+    cDal.textContent   = sayi(s.body.toplam_dal);
+    cKayit.textContent = sayi(dallar.reduce((t, d) => t + (d.kayit_sayisi || 0), 0));
+    btn.disabled = false;
+    btn.addEventListener('click', () =>
+      detayAc(tr, 7, td => dallarGoster(td, v, dallar)));
   });
   return tr;
 }
@@ -316,6 +312,45 @@ function dallarGoster(td, v, dallar){
   });
   kutu.append(chips, sonuc);
   td.append(kutu);
+}
+
+/* ───────── vergi servisleri (7 sütun) ───────── */
+function vergiSatiri(v){
+  const cAd    = el('td', {class:'ad'}, nokta(), v.ad);
+  const cDal   = el('td', {class:'sayi'}, '');          // hiyerarşiye özel → boş
+  const cKayit = el('td', {class:'sayi'}, '…');
+  const cSurum = el('td', {class:'gizle-kucuk'}, '');
+  const cMs    = el('td', {class:'sayi gizle-kucuk'}, '');
+  const btn    = el('button', {class:'btn ikincil kucuk', disabled:'disabled'}, 'Aç');
+  const tr = el('tr', {},
+    cAd, el('td', {class:'yol mono gizle-kucuk'}, v.yol),
+    cDal, cKayit, cSurum, cMs, el('td', {}, btn));
+  tr._btn = btn;
+
+  getir(v.yol).then(s => {
+    cAd.firstChild.className = 'dot ' + (s.ok ? 'ok' : 'bad');
+    cMs.textContent = s.ms;
+    if (!s.ok){
+      cKayit.textContent = '–';
+      btn.disabled = false;
+      btn.addEventListener('click', () =>
+        detayAc(tr, 7, td => td.append(el('p', {class:'not hata'}, hataMetni(s)))));
+      return;
+    }
+    cKayit.textContent = sayi(s.body.toplam);
+    cSurum.textContent = s.body.version_id || '';
+    btn.disabled = false;
+    btn.addEventListener('click', () => detayAc(tr, 7, td => {
+      td.append(
+        el('p', {class:'not', style:'margin-bottom:8px'},
+          [s.body.publisher, s.body.legal_basis_doc,
+           s.body.valid_from && `Yürürlük: ${s.body.valid_from}`]
+            .filter(Boolean).join(' · ') + ' · ',
+          el('a', {href:API_BASE + v.yol, target:'_blank', rel:'noopener'}, 'JSON olarak aç')),
+        tabloYap(s.body.data));
+    }));
+  });
+  return tr;
 }
 
 /* ───────── birleşik işlem ───────── */
@@ -383,12 +418,17 @@ async function sorgula(){
 }
 
 $('sorgu-form').addEventListener('submit', e => { e.preventDefault(); sorgula(); });
-$('sorgu-tur').addEventListener('change', e => {$('sorgu-kod').value = e.target.selectedOptions[0].dataset.ornek;
+$('sorgu-tur').addEventListener('change', e => {
+  $('sorgu-kod').value = e.target.selectedOptions[0].dataset.ornek;
 });
 
 /* ───────── başlat ───────── */
 durumYukle();
-$('tb-referans').replaceChildren(...REFERANSLAR.map(referansSatiri));$('tb-birlesik').replaceChildren(birlesikSatiri());
+$('tb-servis').replaceChildren(
+  ...VARLIKLAR.map(varlikSatiri),
+  ...VERGILER.map(vergiSatiri)
+);
+$('tb-birlesik').replaceChildren(birlesikSatiri());
 manifestYukle();
 sorgula();
 </script>
