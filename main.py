@@ -62,13 +62,13 @@ _METRICS = {"requests": 0, "total_ms": 0.0, "max_ms": 0.0}
 
 # ── Varlık → klasör yolu (eski + yeni uyumlu) ──
 _YOL_HARITASI = {
-    "gtip":  ["ham/ticaret/gtip",   "ticaret/gtip"],
-    "cpc":   ["ham/ticaret/cpc",    "ticaret/cpc"],
-    "isco":  ["ham/ticaret/isco",   "ticaret/isco"],
-    "nace":  ["ham/tuik/nace",      "tuik/nace", "nace"],
-    "damga": ["ham/hazine",         "hvmb"],
-    "gelir": ["ham/hazine",         "hvmb"],
-    "otv":   ["ham/hazine",         "hvmb"],
+    "gtip":  ["ham/ticaret/gtip", "ticaret/gtip"],
+    "cpc":   ["ham/ticaret/cpc",  "ticaret/cpc"],
+    "isco":  ["ham/ticaret/isco", "ticaret/isco"],
+    "nace":  ["ham/nace", "ham/tuik/nace", "tuik/nace", "nace"],
+    "damga": ["ham/hvmb", "ham/hazine", "hvmb"],
+    "gelir": ["ham/hvmb", "ham/hazine", "hvmb"],
+    "otv":   ["ham/hvmb", "ham/hazine", "hvmb"],
 }
 
 
