@@ -519,11 +519,20 @@ def nace_getir(bolum: str, katman: str = "ham"):
 # ═══════════════════════════════════════════════════════════════
 def _vergi_dosyasi(anahtar: str) -> Path:
     """Vergi dosyasını (damga, gelir, otv) farklı olası adlarla arar."""
-    adaylar = {
-        "damga": ["damgavergisi.json", "damga-vergisi.json"],
-        "gelir": ["gelir-vergisi.json", "gelirvergisi.json"],
-        "otv":   ["otv-arac.json", "otv.json"],
-    }
+adaylar = {
+    "damga": ["damgavergisi.json", "damga-vergisi.json"],
+    "gelir": [
+        "gelirvergisidilimleri.json",
+        "gelir-vergisi-dilimleri.json",
+        "gelir-vergisi.json",
+        "gelirvergisi.json",
+    ],
+    "otv": [
+        "otvarac.json",
+        "otv-arac.json",
+        "otv.json",
+    ],
+}
     klasor = _ilk_var_olan(_YOL_HARITASI[anahtar])
     if not klasor:
         raise HTTPException(404, f"Vergi klasörü bulunamadı: {anahtar}")
