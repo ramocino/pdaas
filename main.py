@@ -309,3 +309,13 @@ def birlestirilmis():
             "system_note": "This data object was automatically generated from PDaaS API v1.0 services. No human intervention.",
         },
     }
+    # ═══════════════════════════════════════════════════════════════
+# VERSİYON TEST — deploy doğrulaması için
+# ═══════════════════════════════════════════════════════════════
+@app.get("/__deploy_test__")
+def deploy_test():
+    return {
+        "marker": "RENDER_DEPLOY_2026_10_12_v2",
+        "message": "Bu satırı görüyorsan yeni kod çalışıyor demektir.",
+        "has_file_response": "FileResponse" in globals() or "import edildi",
+    }
