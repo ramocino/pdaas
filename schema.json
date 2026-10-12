@@ -1,199 +1,308 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://pdaas.com.tr/schema.json",
-  "title": "PDAAS Referans Veri Şeması",
-  "description": "PDAAS kataloğundaki tüm referans veri dosyalarının uyacağı ortak JSON şeması.",
+  "title": "PDaaS Referans Veri Şeması",
+  "description": "PDaaS kataloğundaki tüm referans veri dosyalarının uyacağı ortak JSON şeması. Farklı parametre tiplerini (GTİP, CPC, ISCO, prim, vergi vb.) kapsayacak şekilde esnektir.",
   "type": "object",
 
-  "required": [
-    "surum",
-    "kurum",
-    "birim",
-    "kategori",
-    "parametre_adi",
-    "aciklama",
-    "sorumlu_kurum",
-    "kaynak",
-    "join_anahtari",
-    "zaman_bazli",
-    "kayitlar",
-    "meta",
-    "notlar"
-  ],
+  "required": ["meta", "kayitlar"],
 
   "properties": {
 
-    "surum": {
-      "type": "string",
-      "pattern": "^[0-9]{4}\\.[0-9]{2}\\.[0-9]{2}$",
-      "description": "Veri sürümü (YYYY.MM.DD formatı)",
-      "examples": ["2026.01.01"]
-    },
+    "meta": {
+      "type": "object",
+      "required": ["surum", "yayinci", "kaynak"],
+      "properties": {
 
-    "kurum": {
-      "type": "string",
-      "description": "Resmi kurum adı (tam)",
-      "examples": ["Sosyal Güvenlik Kurumu (SGK)"]
-    },
+        "dosya_surumu": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "description": "Dosyanın kendi sürümü (semver)",
+          "examples": ["1.0.0"]
+        },
 
-    "birim": {
-      "type": "string",
-      "description": "Veriyi yayımlayan alt birim",
-      "examples": ["Sigorta Primleri Genel Müdürlüğü"]
-    },
+        "schema_surumu": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "description": "Uyulan şema sürümü",
+          "examples": ["1.0.0"]
+        },
 
-    "kategori": {
-      "type": "string",
-      "description": "Veri kategorisi (snake_case)",
-      "examples": ["sosyal", "belge_turu", "işkolu", "vergi"]
-    },
+        "surum": {
+          "type": "string",
+          "pattern": "^[0-9]{4}\\.[0-9]{2}\\.[0-9]{2}$",
+          "description": "Veri sürümü (YYYY.MM.DD)",
+          "examples": ["2026.10.08"]
+        },
 
-    "parametre_adi": {
-      "type": "string",
-      "pattern": "^[a-z0-9_]+$",
-      "description": "Makine adı (snake_case)",
-      "examples": ["asgari_ucret", "prim_oranlari"]
-    },
+        "surum_onceki": {
+          "type": ["string", "null"],
+          "description": "Önceki veri sürümü",
+          "examples": ["2026.01.15", null]
+        },
 
-    "aciklama": {
-      "type": "string",
-      "description": "İnsan okunur kısa açıklama"
-    },
+        "guncelleme": {
+          "type": "string",
+          "format": "date",
+          "description": "Son güncelleme tarihi"
+        },
 
-    "sorumlu_kurum": {
-      "type": "string",
-      "description": "Vereden sorumlu resmi kurum"
-    },
+        "yayinci": {
+          "type": "string",
+          "description": "Resmi yayıncı kurum",
+          "examples": ["T.C. Ticaret Bakanlığı"]
+        },
 
-    "kaynak": {
-      "type": "string",
-      "description": "Resmi dayanak — Resmî Gazete tarihi/sayısı, Kanun maddesi, Genelge no vb."
-    },
+        "birim": {
+          "type": "string",
+          "description": "Yayıncı alt birim",
+          "examples": ["Gümrükler Genel Müdürlüğü"]
+        },
 
-    "join_anahtari": {
-      "type": "string",
-      "description": "Bu dosyanın diğer dosyalarla birleştirilmesinde kullanılacak anahtar alan adı",
-      "examples": ["kod", "isco_kodu", "belge_tur_kodu"]
-    },
+        "kaynak": {
+          "type": "string",
+          "description": "Resmi dayanak (Resmî Gazete, Kanun, Genelge)",
+          "examples": ["Resmi Gazete 2025/12"]
+        },
 
-    "zaman_bazli": {
-      "type": "boolean",
-      "description": "Verinin geçerlilik tarihine bağlı olup olmadığı"
-    },
+        "gecerlilik_baslangic": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "Yürürlük başlangıcı"
+        },
 
-    "yururluk_baslangic": {
-      "type": "string",
-      "format": "date",
-      "description": "Yürürlük başlangıç tarihi (sadece zaman_bazli=true ise zorunlu)"
-    },
+        "gecerlilik_bitis": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "Yürürlük bitişi"
+        },
 
-    "yururluk_bitis": {
-      "type": "string",
-      "format": "date",
-      "description": "Yürürlük bitiş tarihi (sadece zaman_bazli=true ise zorunlu)"
+        "fasil_no": {
+          "type": ["string", "null"],
+          "description": "GTİP fasıl numarası (varsa)"
+        },
+
+        "fasil_adi": {
+          "type": ["string", "null"],
+          "description": "Fasıl resmi adı (varsa)"
+        },
+
+        "toplam_kayit": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "Kayıt sayısı"
+        },
+
+        "toplam_yaprak": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "Yaprak düğüm sayısı (hiyerarşik yapılar için)"
+        },
+
+        "yayin_durumu": {
+          "type": ["string", "null"],
+          "enum": ["yayinda", "taslak", "arsivde", "iptal", null],
+          "description": "Yayın durumu"
+        }
+      }
     },
 
     "kayitlar": {
       "type": "array",
-      "description": "Veri kayıtları",
+      "description": "Referans veri kayıtları",
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["kod", "ad"],
+        "required": ["kod"],
+
         "properties": {
+
           "kod": {
             "type": "string",
-            "description": "Kod değeri (string)"
+            "description": "Ana kod (GTİP, CPC, ISCO, prim kodu vb.)",
+            "examples": ["2702.10.00.00.00"]
           },
+
           "ad": {
-            "type": "string",
-            "description": "İnsan okunur ad/açıklama"
-          },
-          "deger": {
-            "type": ["number", "string", "null"],
-            "description": "Sayısal/metinsel değer (opsiyonel — oran, tutar, süre vb.)"
-          },
-          "oran": {
-            "type": ["number", "null"],
-            "description": "Oran değeri (opsiyonel — %)"
-          },
-          "birim": {
             "type": ["string", "null"],
-            "description": "Ölçü birimi (%, TL, gün, ay)"
+            "description": "Kodun insan okunur adı (bazı dosyalarda 'aciklama' yerine kullanılır)"
           },
-          "periyot": {
-            "type": ["string", "null"],
-            "description": "Periyot (aylik, gunluk, 6_aylik, yillik)",
-            "enum": ["gunluk", "haftalik", "aylik", "3_aylik", "6_aylik", "yillik", "sabit", null]
-          },
-          "ust_kod": {
-            "type": ["string", "null"],
-            "description": "Üst kod (hiyerarşik yapılar için)"
-          },
-          "gecerlilik_baslangic": {
-            "type": ["string", "null"],
-            "format": "date",
-            "description": "Kayıt bazlı geçerlilik başlangıcı"
-          },
-          "gecerlilik_bitis": {
-            "type": ["string", "null"],
-            "format": "date",
-            "description": "Kayıt bazlı geçerlilik bitişi"
-          },
+
           "aciklama": {
             "type": ["string", "null"],
-            "description": "Kayıt bazlı uzun açıklama"
+            "description": "Kayıt açıklaması"
           },
-          "bilesenler": {
-            "type": ["object", "null"],
-            "description": "Alt bileşenler (ör. MYÖ, GSS, KVSK)"
+
+          "gtip_ham": {
+            "type": ["string", "null"],
+            "description": "GTİP ham kodu (noktasız, 12 hane)"
           },
-          "notlar": {
+
+          "olcu_birimi": {
+            "type": ["string", "null"],
+            "description": "Ölçü birimi",
+            "examples": ["KG", "LT", "ADET", "%"]
+          },
+
+          "fasil_no": {
+            "type": ["string", "null"]
+          },
+
+          "pozisyon_no": {
+            "type": ["string", "null"]
+          },
+
+          "alt_pozisyon_no": {
+            "type": ["string", "null"]
+          },
+
+          "cn_kodu": {
+            "type": ["string", "null"]
+          },
+
+          "milli_alt_acilim_kodu": {
+            "type": ["string", "null"]
+          },
+
+          "istatistik_acilim_kodu": {
+            "type": ["string", "null"]
+          },
+
+          "seviye": {
+            "type": ["integer", "null"],
+            "minimum": 1,
+            "maximum": 20
+          },
+
+          "yaprak_mi": {
+            "type": ["boolean", "null"],
+            "description": "Hiyerarşide yaprak düğüm mü?"
+          },
+
+          "parent_alt_pozisyon_no": {
+            "type": ["string", "null"]
+          },
+
+          "parent_cn_kodu": {
+            "type": ["string", "null"]
+          },
+
+          "tam_yol": {
+            "type": ["string", "null"],
+            "description": "Hiyerarşik yol (ör. '27 > 2701 > 2701.11 > ...')"
+          },
+
+          "etiketler": {
             "type": ["array", "null"],
             "items": { "type": "string" }
           },
+
+          "deger": {
+            "type": ["number", "string", "null"],
+            "description": "Sayısal/metinsel değer (oran, tutar, süre vb.)"
+          },
+
+          "oran": {
+            "type": ["number", "null"],
+            "description": "Oran değeri (0-100 arası yüzde)"
+          },
+
+          "periyot": {
+            "type": ["string", "null"],
+            "enum": ["gunluk", "haftalik", "aylik", "3_aylik", "6_aylik", "yillik", "sabit", null]
+          },
+
+          "gecerlilik_baslangic": {
+            "type": ["string", "null"],
+            "format": "date"
+          },
+
+          "gecerlilik_bitis": {
+            "type": ["string", "null"],
+            "format": "date"
+          },
+
+          "kurumlar": {
+            "type": ["object", "null"],
+            "description": "Bu kayda ilişkin kurum bazlı parametreler",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "kdv_orani": { "type": ["number", "null"] },
+                "otv_orani": { "type": ["number", "null"] },
+                "otv_durumu": { "type": ["string", "null"] },
+                "tevkifat_kodu": { "type": ["string", "null"] },
+                "tevkifat_orani": { "type": ["string", "null"] },
+                "nace_kodu": { "type": ["string", "null"] },
+                "vergi_levhasi_faaliyet_kodu": { "type": ["string", "null"] },
+                "kalori_min_kcal_kg": { "type": ["number", "null"] },
+                "maden_ruhsati_gerekli": { "type": ["boolean", "null"] },
+                "ruhsat_turu": { "type": ["string", "null"] },
+                "maden_grubu": { "type": ["string", "null"] },
+                "ithalat_rejimi": { "type": ["string", "null"] },
+                "ihracat_rejimi": { "type": ["string", "null"] },
+                "gozetim_gerekli": { "type": ["boolean", "null"] },
+                "kota_kapsaminda": { "type": ["boolean", "null"] },
+                "gumruk_vergisi": { "type": ["number", "null"] },
+                "tareks_kapsaminda": { "type": ["boolean", "null"] },
+                "tehlikeli_mi": { "type": ["boolean", "null"] },
+                "ihracatci_birligi": { "type": ["string", "null"] },
+                "borsa_tescil_zorunlu": { "type": ["boolean", "null"] },
+                "kukurt_max_yuzde": { "type": ["number", "null"] },
+                "nem_max_yuzde": { "type": ["number", "null"] },
+                "ced_gerekli": { "type": ["boolean", "null"] },
+                "ced_turu": { "type": ["string", "null"] },
+                "ced_esik_deger": { "type": ["string", "null"] },
+                "zorunlu_standart": { "type": ["string", "null"] },
+                "standart_adi": { "type": ["string", "null"] },
+                "tse_belgesi_gerekli": { "type": ["boolean", "null"] },
+                "ilgili_standartlar": {
+                  "type": ["array", "null"],
+                  "items": { "type": "string" }
+                },
+                "not": { "type": ["string", "null"] },
+                "randiman_iliskileri": {
+                  "type": ["array", "null"],
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "yon": { "type": ["string", "null"], "enum": ["girdi", "cikti", null] },
+                      "gtip_ham_karsi": { "type": ["string", "null"] },
+                      "islem_adi": { "type": ["string", "null"] },
+                      "asgari_randiman": { "type": ["number", "null"] },
+                      "azami_fire": { "type": ["number", "null"] },
+                      "toplam_oran_kontrolu": { "type": ["number", "null"] },
+                      "ikincil_urunler": { "type": ["array", "null"] }
+                    }
+                  }
+                },
+                "meta": { "type": ["object", "null"] }
+              }
+            }
+          },
+
           "meta": {
             "type": ["object", "null"],
-            "description": "Kayıt bazlı meta (opsiyonel)"
+            "properties": {
+              "olusturma_tarihi": { "type": ["string", "null"], "format": "date" },
+              "guncelleme_tarihi": { "type": ["string", "null"], "format": "date" },
+              "kaynak": { "type": ["string", "null"] },
+              "resmi_mi": { "type": ["boolean", "null"] },
+              "yayinci": { "type": ["string", "null"] }
+            }
+          },
+
+          "notlar": {
+            "type": ["array", "null"],
+            "items": { "type": "string" }
           }
         }
       }
     },
 
-    "meta": {
-      "type": "object",
-      "required": ["giris_tarihi", "giren_kurum", "onay_durumu"],
-      "properties": {
-        "giris_tarihi": {
-          "type": "string",
-          "format": "date",
-          "description": "Verinin sisteme giriş tarihi"
-        },
-        "giren_kurum": {
-          "type": "string",
-          "description": "Veriyi giren kurum kısa adı"
-        },
-        "onay_durumu": {
-          "type": "string",
-          "enum": ["onaylandi", "beklemede", "reddedildi"],
-          "description": "Onay durumu"
-        }
-      }
-    },
-
     "notlar": {
-      "type": "array",
-      "description": "Dosya ile ilgili serbest açıklama notları",
+      "type": ["array", "null"],
       "items": { "type": "string" }
     }
-  },
-
-  "allOf": [
-    {
-      "if": { "properties": { "zaman_bazli": { "const": true } } },
-      "then": {
-        "required": ["yururluk_baslangic", "yururluk_bitis"]
-      }
-    }
-  ]
+  }
 }
