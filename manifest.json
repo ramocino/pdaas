@@ -1,6 +1,6 @@
 {
-  "ad": "PDAAS Referans Veri Kataloğu",
-  "kisa_ad": "PDAAS",
+  "ad": "PDaaS Referans Veri Kataloğu",
+  "kisa_ad": "PDaaS",
   "rol": "referans_katalogu",
   "surum": "2026.01.01",
   "guncelleme": "2026-01-01T00:00:00Z",
@@ -10,7 +10,7 @@
 
   "join_anahtari": "kod",
   "zaman_bazli_destekli": true,
-  "schema": "/pdaas/schema.json",
+  "schema": "/schema.json",
 
   "bakanliklar": {
 
@@ -22,7 +22,7 @@
       "dosyalar": [
         { "ad": "Asgari Ücret", "dosya": "asgariucret.json", "kategori": "sosyal", "join": "kod", "zaman_bazli": true },
         { "ad": "SGK Belge Tür Kodları", "dosya": "belgeturleri.json", "kategori": "belge_turu", "join": "belge_tur_kodu", "zaman_bazli": false },
-        { "ad": "İşkolu Kodları", "dosya": "csgbiskolukodlari.json", "kategori": "işkolu", "join": "iskolu_kodu", "zaman_bazli": false },
+        { "ad": "İşkolu Kodları", "dosya": "csgbiskolukodlari.json", "kategori": "iskolu", "join": "iskolu_kodu", "zaman_bazli": false },
         { "ad": "Eksik Gün Nedenleri", "dosya": "eksikgunnedenleri.json", "kategori": "eksik_gun", "join": "eksik_gun_kodu", "zaman_bazli": false },
         { "ad": "İŞKUR Meslek Kodları", "dosya": "iskurmeslekkod.json", "kategori": "meslek", "join": "isco_kodu", "zaman_bazli": false },
         { "ad": "İşten Ayrılış Nedenleri", "dosya": "istenayrilisneden.json", "kategori": "isten_ayrilis", "join": "isten_ayrilis_kodu", "zaman_bazli": false },
@@ -97,14 +97,18 @@
 
   "istatistik": {
     "toplam_bakanlik": 5,
-    "toplam_dosya": 34
+    "toplam_dosya": 34,
+    "toplam_kayit": null
   },
 
   "api_endpointleri": {
-    "tum_dosyalar":   "/api/v1/pdaas/dosyalar",
-    "bakanlik":       "/api/v1/pdaas/{bakanlik}",
-    "dosya":          "/api/v1/pdaas/{bakanlik}/{dosya}",
-    "kod_sorgu":      "/api/v1/pdaas/kod/{kod}"
+    "saglik":        "/health",
+    "istatistik":    "/stats",
+    "urun":          "/api/v1/product/{gtip_code}",
+    "hizmet":        "/api/v1/service/{cpc_code}",
+    "meslek":        "/api/v1/occupation/{isco_code}",
+    "birlesik":      "/api/v1/consolidated",
+    "dokumantasyon": "/docs"
   },
 
   "lisans": "Kamu Malı — T.C. Hazine ve Maliye Bakanlığı"
