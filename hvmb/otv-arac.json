@@ -1,0 +1,39 @@
+{
+  "surum": "2026.01.01",
+  "kurum": "T.C. Hazine ve Maliye Bakanlığı",
+  "birim": "GİB",
+  "kategori": "vergi",
+  "parametre_adi": "otv_arac_motor_hacmi",
+  "aciklama": "Motor Hacmi ve Matraha Göre ÖTV Oranları",
+  "sorumlu_kurum": "GİB",
+  "kaynak": "4760 Sayılı ÖTV Kanunu (II) Sayılı Liste",
+  "zaman_bazli": true,
+  "yapisal_not": "İki boyutlu parametre: motor_hacmi × matrah",
+
+  "kayitlar": [
+    {
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null,
+      "motor_hacmi_kategorileri": [
+        {
+          "kategori": "0-1600",
+          "alt_sinir_cc": 0,
+          "ust_sinir_cc": 1600,
+          "matrah_dilimleri": [
+            { "alt_sinir": 0,       "ust_sinir": 1700000, "oran": 45 },
+            { "alt_sinir": 1700001, "ust_sinir": null,    "oran": 50 }
+          ]
+        },
+        {
+          "kategori": "1601-2000",
+          "alt_sinir_cc": 1601,
+          "ust_sinir_cc": 2000,
+          "matrah_dilimleri": [
+            { "alt_sinir": 0,       "ust_sinir": 1700000, "oran": 70 },
+            { "alt_sinir": 1700001, "ust_sinir": null,    "oran": 80 }
+          ]
+        }
+      ]
+    }
+  ]
+}

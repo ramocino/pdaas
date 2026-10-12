@@ -1,0 +1,150 @@
+{
+  "surum": "2026.01.01",
+  "kurum": "Sosyal Güvenlik Kurumu (SGK)",
+  "birim": "Sigorta Primleri Genel Müdürlüğü",
+  "kategori": "sosyal",
+  "parametre_adi": "prim_oranlari",
+  "aciklama": "SGK Prim Oranları (İşçi + İşveren) - 2026 Yılı",
+  "sorumlu_kurum": "Sosyal Güvenlik Kurumu (SGK)",
+  "kaynak": "5510 Sayılı Kanun Madde 81 (7566 Sayılı Kanun ile değişik), 19 Aralık 2025 tarihli ve 33112 sayılı Resmî Gazete'de yayımlanmıştır.",
+  "join_anahtari": "prim_kodu",
+  "zaman_bazli": true,
+  "yururluk_baslangic": "2026-01-01",
+  "yururluk_bitis": "2026-12-31",
+
+  "kayitlar": [
+    {
+      "kod": "sgk_isci_primi",
+      "ad": "SGK İşçi Payı (MYÖ + GSS)",
+      "oran": 14.00,
+      "birim": "%",
+      "aciklama": "Malullük, Yaşlılık ve Ölüm Sigortası (%9) + Genel Sağlık Sigortası (%5)",
+      "bilesenler": {
+        "myo_isci_pay": 9.00,
+        "gss_isci_pay": 5.00
+      },
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null,
+      "periyot": "sabit"
+    },
+    {
+      "kod": "issizlik_isci_primi",
+      "ad": "İşsizlik Sigortası İşçi Payı",
+      "oran": 1.00,
+      "birim": "%",
+      "aciklama": "4447 Sayılı Kanun gereği işçi payı",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null,
+      "periyot": "sabit"
+    },
+    {
+      "kod": "toplam_isci_primi",
+      "ad": "Toplam İşçi Payı",
+      "oran": 15.00,
+      "birim": "%",
+      "aciklama": "SGK İşçi Payı (%14) + İşsizlik İşçi Payı (%1)",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    },
+    {
+      "kod": "sgk_isveren_primi_myo",
+      "ad": "MYÖ İşveren Payı (Malullük-Yaşlılık-Ölüm)",
+      "oran": 12.00,
+      "birim": "%",
+      "aciklama": "2026 itibarıyla %11'den %12'ye yükseltilmiştir (7566 Sayılı Kanun)",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null,
+      "notlar": "Önceki yıl %11 idi. 1 puan artış yapılmıştır."
+    },
+    {
+      "kod": "sgk_isveren_primi_gss",
+      "ad": "GSS İşveren Payı (Genel Sağlık Sigortası)",
+      "oran": 7.50,
+      "birim": "%",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    },
+    {
+      "kod": "sgk_isveren_primi_kvsk",
+      "ad": "KVSK İşveren Payı (Kısa Vadeli Sigorta Kolları)",
+      "oran": 2.25,
+      "birim": "%",
+      "aciklama": "İş kazası, meslek hastalığı, hastalık ve analık sigortası",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    },
+    {
+      "kod": "issizlik_isveren_primi",
+      "ad": "İşsizlik Sigortası İşveren Payı",
+      "oran": 2.00,
+      "birim": "%",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    },
+    {
+      "kod": "toplam_isveren_primi_tesviksiz",
+      "ad": "Toplam İşveren Payı (Teşviksiz)",
+      "oran": 23.75,
+      "birim": "%",
+      "aciklama": "MYÖ (%12) + GSS (%7,5) + KVSK (%2,25) + İşsizlik (%2)",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    },
+    {
+      "kod": "toplam_isveren_primi_imalat_5puan",
+      "ad": "Toplam İşveren Payı (İmalat - 5 Puan İndirimli)",
+      "oran": 18.75,
+      "birim": "%",
+      "aciklama": "İmalat sektöründe 5 puanlık Hazine indirimi uygulanmış hali",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null,
+      "notlar": "Teşviksiz %23,75 - 5 puan = %18,75"
+    },
+    {
+      "kod": "toplam_isveren_primi_diger_2puan",
+      "ad": "Toplam İşveren Payı (İmalat Dışı - 2 Puan İndirimli)",
+      "oran": 21.75,
+      "birim": "%",
+      "aciklama": "İmalat dışı sektörlerde 2 puanlık Hazine indirimi uygulanmış hali",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null,
+      "notlar": "2025'te 4 puan olan indirim, 2026'da 2 puana düşürülmüştür."
+    },
+    {
+      "kod": "toplam_isveren_primi_5puanli_imalat",
+      "ad": "Toplam İşveren Payı (5 Puanlık İndirimli - İmalat)",
+      "oran": 18.75,
+      "birim": "%",
+      "aciklama": "5510/81-i kapsamında 5 puanlık indirim (imalat sektörü)",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    },
+    {
+      "kod": "toplam_prim_orani",
+      "ad": "Toplam Prim Oranı (İşçi + İşveren, Teşviksiz)",
+      "oran": 38.75,
+      "birim": "%",
+      "aciklama": "İşçi %15 + İşveren %23,75",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    }
+  ],
+
+"meta": {
+    "giris_tarihi": "2026-01-01",
+    "giren_kurum": "SGK",
+    "onay_durumu": "onaylandi"
+  },
+  
+  "notlar": [
+    "7566 Sayılı Kanun ile 5510 Sayılı Kanun'un 81. maddesinde değişiklik yapılmıştır.",
+    "MYÖ (Malullük-Yaşlılık-Ölüm) işveren payı 01.01.2026'dan itibaren %11'den %12'ye yükseltilmiştir.",
+    "İmalat dışı sektörlerde uygulanan 4 puanlık prim indirimi 2 puana düşürülmüştür.",
+    "İmalat sektöründe 5 puanlık indirim devam etmektedir.",
+    "GSS işveren payı %7,50, KVSK işveren payı %2,25 olarak sabit kalmıştır.",
+    "İşsizlik sigortası oranlarında (işçi %1, işveren %2) değişiklik yoktur.",
+    "Teşviksiz toplam oran 2025'te %37,75 iken 2026'da %38,75'e yükselmiştir.",
+    "5 puanlık indirim (5510/81-i) tüm işverenler için geçerlidir.",
+    "Bu veriler 1 Ocak 2026 - 31 Aralık 2026 dönemi için geçerlidir."
+  ]
+}
