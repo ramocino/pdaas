@@ -1,33 +1,34 @@
-# Geçici dosyalar
-yapi.txt
-*.log
-*.tmp
-*.bak
-
-# Sistem
+# İşletim sistemi
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# IDE
+# Editör
 .vscode/
 .idea/
 *.swp
+*.swo
 
-# Ortam
-.env
-.env.local
-*.key
-*.pem
-
-# Node
+# Node.js (kullanılırsa)
 node_modules/
-package-lock.json
+npm-debug.log*
 
-# Nextcloud
-*.sync-conflict-*
-
-# Python
+# Python (kullanılırsa)
 __pycache__/
 *.pyc
+.venv/
 venv/
+
+# Geçici dosyalar
+*.log
+*.tmp
+*.bak
+
+# Özel / gizli veriler
+.env
+.env.local
+secrets.json
+
+# Şema doğrulama çıktıları
+validasyon/
+rapor/
