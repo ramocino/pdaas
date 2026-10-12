@@ -112,6 +112,9 @@ def _meta_ozet(meta: dict) -> dict:
 # ═══════════════════════════════════════════════════════════════
 # KÖK — index.html sunulur
 # ═══════════════════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════════
+# KÖK — index.html sunulur
+# ═══════════════════════════════════════════════════════════════
 @app.get("/", include_in_schema=False)
 def ana_sayfa():
     index_yolu = KOK / "index.html"
@@ -123,7 +126,6 @@ def ana_sayfa():
             "docs": "/docs",
         }
     return FileResponse(index_yolu, media_type="text/html")
-
 
 # ═══════════════════════════════════════════════════════════════
 # DEPLOY DOĞRULAMA
