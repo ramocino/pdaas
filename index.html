@@ -269,7 +269,12 @@ function varlikSatiri(v){
   getir(yol).then(s => {
     cAd.firstChild.className = 'dot ' + (s.ok ? 'ok' : 'bad');
     cMs.textContent = s.ms;
-    if (!s.ok){ cDal.textContent = '–'; cKayit.textContent = '–'; cDal.title = hataMetni(s); return; }
+    if (!s.ok){
+      cDal.textContent = '–'; cKayit.textContent = '–';
+      btn.disabled = false;
+      btn.addEventListener('click', () => detayAc(tr, 6, td => td.append(el('p', {class:'not hata'}, hataMetni(s)))));
+      return;
+    }
     const dallar = s.body.dallar || [];
     cDal.textContent = sayi(s.body.toplam_dal);
     cKayit.textContent = sayi(dallar.reduce((t, d) => t + (d.kayit_sayisi || 0), 0));
@@ -317,7 +322,12 @@ function vergiSatiri(v){
   getir(v.yol).then(s => {
     cAd.firstChild.className = 'dot ' + (s.ok ? 'ok' : 'bad');
     cMs.textContent = s.ms;
-    if (!s.ok){ cKayit.textContent = '–'; cKayit.title = hataMetni(s); return; }
+    if (!s.ok){
+      cKayit.textContent = '–';
+      btn.disabled = false;
+      btn.addEventListener('click', () => detayAc(tr, 6, td => td.append(el('p', {class:'not hata'}, hataMetni(s)))));
+      return;
+    }
     cKayit.textContent = sayi(s.body.toplam);
     cSurum.textContent = s.body.version_id || '';
     btn.disabled = false;
@@ -344,7 +354,11 @@ function birlesikSatiri(){
   getir(yol).then(s => {
     cAd.firstChild.className = 'dot ' + (s.ok ? 'ok' : 'bad');
     cMs.textContent = s.ok ? ((s.body.execution_time_ms ?? s.ms) + ' ms') : '–';
-    if (!s.ok) return;
+    if (!s.ok){
+      btn.disabled = false;
+      btn.addEventListener('click', () => detayAc(tr, 4, td => td.append(el('p', {class:'not hata'}, hataMetni(s)))));
+      return;
+    }
     btn.disabled = false;
     btn.addEventListener('click', () => detayAc(tr, 4, td =>
       td.append(el('pre', {}, JSON.stringify(s.body.data, null, 2)))));
