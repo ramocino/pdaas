@@ -5,64 +5,1016 @@
     "surum": "2026.10.08",
     "guncelleme": "2026-10-08",
     "yayinci": "Türkiye İstatistik Kurumu (TÜİK)",
-    "kaynak": "NACE Rev.2 — Avrupa Topluluğunda Ekonomik Faaliyetlerin İstatistiki Sınıflaması",
-    "siniflandirma": "NACE Rev.2",
+    "kaynak": "NACE Rev.2.1 — Avrupa Topluluğunda Ekonomik Faaliyetlerin İstatistiki Sınıflaması",
+    "siniflandirma": "NACE Rev.2.1",
     "bolum": "A",
-    "bolum_adi": "Tarım, ormancılık ve balıkçılık",
-    "toplam_kayit": 5,
+    "bolum_adi_tr": "Tarım, Ormancılık ve Balıkçılık",
+    "bolum_adi_en": "Agriculture, Forestry and Fishing",
+    "toplam_kayit": 144,
     "yayin_durumu": "yayinda",
     "katman": "ham"
   },
   "kayitlar": [
     {
-      "kod": "01.41.01",
-      "aciklama": "Süt sığırı yetiştiriciliği ve ineklerden veya mandalardan işlenmemiş süt üretilmesi",
-      "bolum": "A",
-      "bolum_adi": "Tarım, ormancılık ve balıkçılık",
-      "kisim_no": "01",
-      "kisim_adi": "Bitkisel ve hayvansal üretim ile avcılık ve ilgili hizmet faaliyetleri",
-      "grup_no": "01.41",
-      "grup_adi": "Sütü sağılan büyükbaş hayvan yetiştiriciliği"
+      "kod": "A",
+      "ust_kod": "",
+      "seviye": "bolum",
+      "aciklama_tr": "TARIM, ORMANCILIK VE BALIKÇILIK",
+      "aciklama_en": "AGRICULTURE, FORESTRY AND FISHING"
     },
     {
-      "kod": "01.42.01",
-      "aciklama": "Diğer sığır ve manda yetiştiriciliği (sütü sağılanlar hariç)",
-      "bolum": "A",
-      "bolum_adi": "Tarım, ormancılık ve balıkçılık",
-      "kisim_no": "01",
-      "kisim_adi": "Bitkisel ve hayvansal üretim ile avcılık ve ilgili hizmet faaliyetleri",
-      "grup_no": "01.42",
-      "grup_adi": "Diğer sığır ve manda yetiştiriciliği"
+      "kod": "01",
+      "ust_kod": "A",
+      "seviye": "kisim",
+      "aciklama_tr": "Bitkisel ve hayvansal üretim ile avcılık ve ilgili hizmet faaliyetleri",
+      "aciklama_en": "Crop and animal production, hunting and related service activities"
+    },
+    {
+      "kod": "01.1",
+      "ust_kod": "01",
+      "seviye": "grup",
+      "aciklama_tr": "Tek yıllık (uzun ömürlü olmayan) bitkisel ürünlerin yetiştirilmesi",
+      "aciklama_en": "Growing of non-perennial crops"
+    },
+    {
+      "kod": "01.11",
+      "ust_kod": "01.1",
+      "seviye": "grup",
+      "aciklama_tr": "Tahılların (pirinç hariç), baklagillerin ve yağlı tohumların yetiştirilmesi",
+      "aciklama_en": "Growing of cereals, other than rice, leguminous crops and oil seeds"
+    },
+    {
+      "kod": "01.11.07",
+      "ust_kod": "01.11",
+      "seviye": "sinif",
+      "aciklama_tr": "Baklagillerin yetiştirilmesi",
+      "aciklama_en": "Growing of leguminous crops"
+    },
+    {
+      "kod": "01.11.12",
+      "ust_kod": "01.11",
+      "seviye": "sinif",
+      "aciklama_tr": "Tahıl yetiştiriciliği",
+      "aciklama_en": "Growing of cereals"
+    },
+    {
+      "kod": "01.11.14",
+      "ust_kod": "01.11",
+      "seviye": "sinif",
+      "aciklama_tr": "Yağlı tohum yetiştiriciliği",
+      "aciklama_en": "Growing of oil seeds"
+    },
+    {
+      "kod": "01.12",
+      "ust_kod": "01.1",
+      "seviye": "grup",
+      "aciklama_tr": "Çeltik (kabuklu pirinç) yetiştirilmesi",
+      "aciklama_en": "Growing of rice"
+    },
+    {
+      "kod": "01.12.14",
+      "ust_kod": "01.12",
+      "seviye": "sinif",
+      "aciklama_tr": "Çeltik (kabuklu pirinç) yetiştirilmesi",
+      "aciklama_en": "Growing of rice"
+    },
+    {
+      "kod": "01.13",
+      "ust_kod": "01.1",
+      "seviye": "grup",
+      "aciklama_tr": "Sebze, kavun-karpuz, kök ve yumru sebzelerin yetiştirilmesi",
+      "aciklama_en": "Growing of vegetables and melons, roots and tubers"
+    },
+    {
+      "kod": "01.13.17",
+      "ust_kod": "01.13",
+      "seviye": "sinif",
+      "aciklama_tr": "Şeker pancarı yetiştirilmesi",
+      "aciklama_en": "Growing of sugar beet"
+    },
+    {
+      "kod": "01.13.18",
+      "ust_kod": "01.13",
+      "seviye": "sinif",
+      "aciklama_tr": "Yenilebilir kök ve yumruların yetiştiriciliği",
+      "aciklama_en": "Growing of edible roots and tubers"
+    },
+    {
+      "kod": "01.13.19",
+      "ust_kod": "01.13",
+      "seviye": "sinif",
+      "aciklama_tr": "Diğer sebze tohumlarının yetiştiriciliği (şeker pancarı tohumu dahil, diğer pancar tohumları hariç)",
+      "aciklama_en": "Growing of vegetable seeds (including sugar beet seeds, excluding other beet seeds)"
+    },
+    {
+      "kod": "01.13.20",
+      "ust_kod": "01.13",
+      "seviye": "sinif",
+      "aciklama_tr": "Meyvesi yenen sebzelerin yetiştirilmesi",
+      "aciklama_en": "Growing of vegetables with edible fruits"
+    },
+    {
+      "kod": "01.13.21",
+      "ust_kod": "01.13",
+      "seviye": "sinif",
+      "aciklama_tr": "Mantar ve yer mantarları (domalan) yetiştirilmesi",
+      "aciklama_en": "Growing of mushrooms and truffles"
+    },
+    {
+      "kod": "01.13.22",
+      "ust_kod": "01.13",
+      "seviye": "sinif",
+      "aciklama_tr": "Kökleri, soğanları, yumruları tüketilen sebzelerin ve diğer benzer sebzelerin yetiştirilmesi",
+      "aciklama_en": "Growing of vegetables consumed for their roots, bulbs, tubers and other similar vegetables"
+    },
+    {
+      "kod": "01.13.23",
+      "ust_kod": "01.13",
+      "seviye": "sinif",
+      "aciklama_tr": "Yapraklı veya saplı sebzelerin yetiştirilmesi",
+      "aciklama_en": "Growing of leafy or stem vegetables"
+    },
+    {
+      "kod": "01.14",
+      "ust_kod": "01.1",
+      "seviye": "grup",
+      "aciklama_tr": "Şeker kamışı yetiştirilmesi",
+      "aciklama_en": "Growing of sugar cane"
+    },
+    {
+      "kod": "01.14.01",
+      "ust_kod": "01.14",
+      "seviye": "sinif",
+      "aciklama_tr": "Şeker kamışı yetiştirilmesi",
+      "aciklama_en": "Growing of sugar cane"
+    },
+    {
+      "kod": "01.15",
+      "ust_kod": "01.1",
+      "seviye": "grup",
+      "aciklama_tr": "Tütün yetiştirilmesi",
+      "aciklama_en": "Growing of tobacco"
+    },
+    {
+      "kod": "01.15.01",
+      "ust_kod": "01.15",
+      "seviye": "sinif",
+      "aciklama_tr": "Tütün yetiştirilmesi",
+      "aciklama_en": "Growing of tobacco"
+    },
+    {
+      "kod": "01.16",
+      "ust_kod": "01.1",
+      "seviye": "grup",
+      "aciklama_tr": "Lifli bitkilerin yetiştirilmesi",
+      "aciklama_en": "Growing of fibre crops"
+    },
+    {
+      "kod": "01.16.02",
+      "ust_kod": "01.16",
+      "seviye": "sinif",
+      "aciklama_tr": "Pamuk yetiştiriciliği",
+      "aciklama_en": "Growing of cotton"
+    },
+    {
+      "kod": "01.16.90",
+      "ust_kod": "01.16",
+      "seviye": "sinif",
+      "aciklama_tr": "Diğer lifli bitkilerin yetiştirilmesi",
+      "aciklama_en": "Growing of fibre crops"
+    },
+    {
+      "kod": "01.19",
+      "ust_kod": "01.1",
+      "seviye": "grup",
+      "aciklama_tr": "Tek yıllık (uzun ömürlü olmayan) diğer bitkisel ürünlerin yetiştirilmesi",
+      "aciklama_en": "Growing of other non-perennial crops"
+    },
+    {
+      "kod": "01.19.01",
+      "ust_kod": "01.19",
+      "seviye": "sinif",
+      "aciklama_tr": "Hayvan yemi bitkilerinin yetiştirilmesi (şeker pancarı tohumları hariç)",
+      "aciklama_en": "Growing of animal forage crops (excluding sugar beet seeds)"
+    },
+    {
+      "kod": "01.19.02",
+      "ust_kod": "01.19",
+      "seviye": "sinif",
+      "aciklama_tr": "Çiçek yetiştirilmesi (lale, kasımpatı, zambak, gül vb. ile bunların tohumları)",
+      "aciklama_en": "Growing of flower (tulips, chrysanthemums, lilies, roses, etc., and their seeds)"
+    },
+    {
+      "kod": "01.19.99",
+      "ust_kod": "01.19",
+      "seviye": "sinif",
+      "aciklama_tr": "Başka yerde sınıflandırılmamış tek yıllık diğer bitkisel ürünlerin yetiştirilmesi",
+      "aciklama_en": "Growing of other non-perennial crops n.e.c."
+    },
+    {
+      "kod": "01.2",
+      "ust_kod": "01",
+      "seviye": "grup",
+      "aciklama_tr": "Çok yıllık (uzun ömürlü) bitkisel ürünlerin yetiştirilmesi",
+      "aciklama_en": "Growing of perennial crops"
+    },
+    {
+      "kod": "01.21",
+      "ust_kod": "01.2",
+      "seviye": "grup",
+      "aciklama_tr": "Üzüm yetiştirilmesi",
+      "aciklama_en": "Growing of grapes"
+    },
+    {
+      "kod": "01.21.05",
+      "ust_kod": "01.21",
+      "seviye": "sinif",
+      "aciklama_tr": "Üzüm yetiştirilmesi",
+      "aciklama_en": "Growing of grapes"
+    },
+    {
+      "kod": "01.22",
+      "ust_kod": "01.2",
+      "seviye": "grup",
+      "aciklama_tr": "Tropikal ve subtropikal meyvelerin yetiştirilmesi",
+      "aciklama_en": "Growing of tropical and subtropical fruits"
+    },
+    {
+      "kod": "01.22.05",
+      "ust_kod": "01.22",
+      "seviye": "sinif",
+      "aciklama_tr": "Tropikal ve subtropikal meyvelerin yetiştirilmesi",
+      "aciklama_en": "Growing of tropical and subtropical fruits"
+    },
+    {
+      "kod": "01.23",
+      "ust_kod": "01.2",
+      "seviye": "grup",
+      "aciklama_tr": "Turunçgillerin yetiştirilmesi",
+      "aciklama_en": "Growing of citrus fruits"
+    },
+    {
+      "kod": "01.23.02",
+      "ust_kod": "01.23",
+      "seviye": "sinif",
+      "aciklama_tr": "Turunçgillerin yetiştirilmesi",
+      "aciklama_en": "Growing of citrus fruits"
+    },
+    {
+      "kod": "01.24",
+      "ust_kod": "01.2",
+      "seviye": "grup",
+      "aciklama_tr": "Yumuşak çekirdekli meyvelerin ve sert çekirdekli meyvelerin yetiştirilmesi",
+      "aciklama_en": "Growing of pome fruits and stone fruits"
+    },
+    {
+      "kod": "01.24.04",
+      "ust_kod": "01.24",
+      "seviye": "sinif",
+      "aciklama_tr": "Yumuşak çekirdekli meyvelerin ve sert çekirdekli meyvelerin yetiştirilmesi",
+      "aciklama_en": "Growing of pome fruits and stone fruits"
+    },
+    {
+      "kod": "01.25",
+      "ust_kod": "01.2",
+      "seviye": "grup",
+      "aciklama_tr": "Diğer ağaç ve çalı meyvelerinin ve sert kabuklu meyvelerin yetiştirilmesi",
+      "aciklama_en": "Growing of other tree and bush fruits and nuts"
+    },
+    {
+      "kod": "01.25.09",
+      "ust_kod": "01.25",
+      "seviye": "sinif",
+      "aciklama_tr": "Fındık yetiştiriciliği",
+      "aciklama_en": "Growing of hazelnut"
+    },
+    {
+      "kod": "01.25.90",
+      "ust_kod": "01.25",
+      "seviye": "sinif",
+      "aciklama_tr": "Diğer ağaç ve çalı (çok yıllık bitkilerin) meyvelerinin ve sert kabuklu meyvelerin yetiştirilmesi",
+      "aciklama_en": "Growing of other tree and bush fruits (perennial crops) and nuts"
+    },
+    {
+      "kod": "01.26",
+      "ust_kod": "01.2",
+      "seviye": "grup",
+      "aciklama_tr": "Yağlı meyvelerin yetiştirilmesi",
+      "aciklama_en": "Growing of oleaginous fruits"
+    },
+    {
+      "kod": "01.26.02",
+      "ust_kod": "01.26",
+      "seviye": "sinif",
+      "aciklama_tr": "Zeytin yetiştiriciliği",
+      "aciklama_en": "Growing of olives"
+    },
+    {
+      "kod": "01.26.90",
+      "ust_kod": "01.26",
+      "seviye": "sinif",
+      "aciklama_tr": "Diğer yağlı meyvelerin yetiştiriciliği",
+      "aciklama_en": "Growing of other oleaginous fruits"
+    },
+    {
+      "kod": "01.27",
+      "ust_kod": "01.2",
+      "seviye": "grup",
+      "aciklama_tr": "İçecek üretiminde kullanılan bitkisel ürünlerin yetiştirilmesi",
+      "aciklama_en": "Growing of beverage crops"
+    },
+    {
+      "kod": "01.27.02",
+      "ust_kod": "01.27",
+      "seviye": "sinif",
+      "aciklama_tr": "Çay yetiştiriciliği",
+      "aciklama_en": "Growing of tea"
+    },
+    {
+      "kod": "01.27.90",
+      "ust_kod": "01.27",
+      "seviye": "sinif",
+      "aciklama_tr": "İçecek üretiminde kullanılan diğer bitkisel ürünlerin yetiştiriciliği",
+      "aciklama_en": "Growing of other beverage crops"
+    },
+    {
+      "kod": "01.28",
+      "ust_kod": "01.2",
+      "seviye": "grup",
+      "aciklama_tr": "Baharatlık, aromatik (ıtırlı), uyuşturucu nitelikte ve farmasötik (eczacılıkla ilgili) bitkisel ürünlerin yetiştirilmesi",
+      "aciklama_en": "Growing of spices, aromatic, drug and pharmaceutical crops"
+    },
+    {
+      "kod": "01.28.01",
+      "ust_kod": "01.28",
+      "seviye": "sinif",
+      "aciklama_tr": "Baharatlık, aromatik (ıtırlı), uyuşturucu nitelikte ve farmasötik (eczacılıkla ilgili) bitkisel ürünlerin yetiştirilmesi",
+      "aciklama_en": "Growing of spices, aromatic, drug and pharmaceutical crops"
+    },
+    {
+      "kod": "01.29",
+      "ust_kod": "01.2",
+      "seviye": "grup",
+      "aciklama_tr": "Diğer çok yıllık (uzun ömürlü) bitkisel ürünlerin yetiştirilmesi",
+      "aciklama_en": "Growing of other perennial crops"
+    },
+    {
+      "kod": "01.29.01",
+      "ust_kod": "01.29",
+      "seviye": "sinif",
+      "aciklama_tr": "Diğer çok yıllık (uzun ömürlü) bitkisel ürünlerin yetiştirilmesi (Kauçuk ağacı, yılbaşı ağacı, örgü, dolgu ve tabaklama yapmak için kullanılan bitkisel ürünler vb. uzun ömürlü bitkisel ürünlerin yetiştirilmesi)",
+      "aciklama_en": "Growing of other perennial crops (rubber trees, Christmas trees, trees for extraction of sap, vegetable materials of a kind used primarily for plaiting)"
+    },
+    {
+      "kod": "01.3",
+      "ust_kod": "01",
+      "seviye": "grup",
+      "aciklama_tr": "Dikim için bitki yetiştirilmesi",
+      "aciklama_en": "Plant propagation"
+    },
+    {
+      "kod": "01.30",
+      "ust_kod": "01.3",
+      "seviye": "grup",
+      "aciklama_tr": "Dikim için bitki yetiştirilmesi",
+      "aciklama_en": "Plant propagation"
+    },
+    {
+      "kod": "01.30.03",
+      "ust_kod": "01.30",
+      "seviye": "sinif",
+      "aciklama_tr": "Dikim için sebze fidesi, meyve fidanı vb. yetiştirilmesi",
+      "aciklama_en": "Growing vegetable seedlings, fruit nurseries, etc. for planting"
+    },
+    {
+      "kod": "01.30.90",
+      "ust_kod": "01.30",
+      "seviye": "sinif",
+      "aciklama_tr": "Dikim için çiçek ve diğer bitkilerin yetiştirilmesi (dekoratif amaçlarla bitki ve çim yetiştirilmesi dahil, sebze fidesi, meyve fidanı hariç)",
+      "aciklama_en": "Growing flowers and other plants for planting (including growing plants and grass for decorative purposes, excluding vegetable seedlings and fruit nurseries)"
+    },
+    {
+      "kod": "01.4",
+      "ust_kod": "01",
+      "seviye": "grup",
+      "aciklama_tr": "Hayvansal üretim",
+      "aciklama_en": "Animal production"
+    },
+    {
+      "kod": "01.41",
+      "ust_kod": "01.4",
+      "seviye": "grup",
+      "aciklama_tr": "Sütü sağılan büyükbaş hayvan yetiştiriciliği",
+      "aciklama_en": "Raising of dairy cattle"
+    },
+    {
+      "kod": "01.41.31",
+      "ust_kod": "01.41",
+      "seviye": "sinif",
+      "aciklama_tr": "Sütü sağılan büyükbaş hayvan yetiştiriciliği (sütü için inek ve manda yetiştiriciliği)",
+      "aciklama_en": "Raising of dairy cattle (raising and breeding of dairy cattle and/or buffaloes)"
+    },
+    {
+      "kod": "01.42",
+      "ust_kod": "01.4",
+      "seviye": "grup",
+      "aciklama_tr": "Diğer sığır ve manda yetiştiriciliği",
+      "aciklama_en": "Raising of other cattle and buffaloes"
+    },
+    {
+      "kod": "01.42.09",
+      "ust_kod": "01.42",
+      "seviye": "sinif",
+      "aciklama_tr": "Diğer sığır ve manda yetiştiriciliği (sütü için yetiştirilenler hariç)",
+      "aciklama_en": "Raising of other cattle and buffaloes (excluding those raised for dairy)"
+    },
+    {
+      "kod": "01.43",
+      "ust_kod": "01.4",
+      "seviye": "grup",
+      "aciklama_tr": "At ve at benzeri diğer hayvan yetiştiriciliği",
+      "aciklama_en": "Raising of horses and other equines"
+    },
+    {
+      "kod": "01.43.01",
+      "ust_kod": "01.43",
+      "seviye": "sinif",
+      "aciklama_tr": "At ve at benzeri diğer hayvan yetiştiriciliği (eşek, katır veya bardo vb.)",
+      "aciklama_en": "Raising of horses and other equines (donkeys, mules, or hinnies, etc.)"
+    },
+    {
+      "kod": "01.44",
+      "ust_kod": "01.4",
+      "seviye": "grup",
+      "aciklama_tr": "Deve ve devegillerin yetiştiriciliği",
+      "aciklama_en": "Raising of camels and camelids"
+    },
+    {
+      "kod": "01.44.01",
+      "ust_kod": "01.44",
+      "seviye": "sinif",
+      "aciklama_tr": "Deve ve devegillerin yetiştiriciliği",
+      "aciklama_en": "Raising of camels and camelids"
+    },
+    {
+      "kod": "01.45",
+      "ust_kod": "01.4",
+      "seviye": "grup",
+      "aciklama_tr": "Koyun ve keçi yetiştiriciliği",
+      "aciklama_en": "Raising of sheep and goats"
+    },
+    {
+      "kod": "01.45.01",
+      "ust_kod": "01.45",
+      "seviye": "sinif",
+      "aciklama_tr": "Koyun ve keçi (davar) yetiştiriciliği (işlenmemiş süt, kıl, tiftik, yapağı, yün vb. üretimi dahil)",
+      "aciklama_en": "Raising of sheep and goats (including the production of raw milk, raw wool, etc.)"
+    },
+    {
+      "kod": "01.46",
+      "ust_kod": "01.4",
+      "seviye": "grup",
+      "aciklama_tr": "Domuz yetiştiriciliği",
+      "aciklama_en": "Raising of swine and pigs"
     },
     {
       "kod": "01.46.01",
-      "aciklama": "Domuz yetiştiriciliği",
-      "bolum": "A",
-      "bolum_adi": "Tarım, ormancılık ve balıkçılık",
-      "kisim_no": "01",
-      "kisim_adi": "Bitkisel ve hayvansal üretim ile avcılık ve ilgili hizmet faaliyetleri",
-      "grup_no": "01.46",
-      "grup_adi": "Domuz yetiştiriciliği"
+      "ust_kod": "01.46",
+      "seviye": "sinif",
+      "aciklama_tr": "Domuz yetiştiriciliği",
+      "aciklama_en": "Raising of swine and pigs"
+    },
+    {
+      "kod": "01.47",
+      "ust_kod": "01.4",
+      "seviye": "grup",
+      "aciklama_tr": "Kümes hayvanları yetiştiriciliği",
+      "aciklama_en": "Raising of poultry"
     },
     {
       "kod": "01.47.01",
-      "aciklama": "Kümes hayvanları yetiştiriciliği",
-      "bolum": "A",
-      "bolum_adi": "Tarım, ormancılık ve balıkçılık",
-      "kisim_no": "01",
-      "kisim_adi": "Bitkisel ve hayvansal üretim ile avcılık ve ilgili hizmet faaliyetleri",
-      "grup_no": "01.47",
-      "grup_adi": "Kümes hayvanları yetiştiriciliği"
+      "ust_kod": "01.47",
+      "seviye": "sinif",
+      "aciklama_tr": "Kümes hayvanlarının yetiştirilmesi (tavuk, hindi, ördek, kaz ve beç tavuğu vb.)",
+      "aciklama_en": "Raising poultry (chickens, turkeys, ducks, geese, guineafowl, etc.)"
     },
     {
-      "kod": "01.49.01",
-      "aciklama": "Diğer hayvanların yetiştiriciliği (arıcılık, ipek böcekçiliği, evcil hayvan yetiştiriciliği vb.)",
-      "bolum": "A",
-      "bolum_adi": "Tarım, ormancılık ve balıkçılık",
-      "kisim_no": "01",
-      "kisim_adi": "Bitkisel ve hayvansal üretim ile avcılık ve ilgili hizmet faaliyetleri",
-      "grup_no": "01.49",
-      "grup_adi": "Diğer hayvan yetiştiriciliği"
+      "kod": "01.47.02",
+      "ust_kod": "01.47",
+      "seviye": "sinif",
+      "aciklama_tr": "Kuluçkahanelerin faaliyetleri",
+      "aciklama_en": "Operation of poultry hatcheries"
+    },
+    {
+      "kod": "01.47.03",
+      "ust_kod": "01.47",
+      "seviye": "sinif",
+      "aciklama_tr": "Kümes hayvanlarından yumurta üretilmesi",
+      "aciklama_en": "Production of eggs from poultry"
+    },
+    {
+      "kod": "01.48",
+      "ust_kod": "01.4",
+      "seviye": "grup",
+      "aciklama_tr": "Diğer hayvan yetiştiriciliği",
+      "aciklama_en": "Raising of other animals"
+    },
+    {
+      "kod": "01.48.01",
+      "ust_kod": "01.48",
+      "seviye": "sinif",
+      "aciklama_tr": "Arıcılık, bal ve bal mumu üretilmesi (arı sütü dahil)",
+      "aciklama_en": "Beekeeping, production of honey and beeswax (including royal jelly)"
+    },
+    {
+      "kod": "01.48.02",
+      "ust_kod": "01.48",
+      "seviye": "sinif",
+      "aciklama_tr": "İpekböceği yetiştiriciliği ve koza üretimi",
+      "aciklama_en": "Raising of silkworms, production of silkworm cocoons"
+    },
+    {
+      "kod": "01.48.03",
+      "ust_kod": "01.48",
+      "seviye": "sinif",
+      "aciklama_tr": "Evcil hayvanların yetiştirilmesi ve üretilmesi (balık hariç) (kedi, köpek, kuşlar, hamsterler vb.)",
+      "aciklama_en": "Raising and breeding of pet animals (except fish) (cats, dogs, birds, hamsters, etc.)"
+    },
+    {
+      "kod": "01.48.99",
+      "ust_kod": "01.48",
+      "seviye": "sinif",
+      "aciklama_tr": "Başka yerde sınıflandırılmamış diğer hayvan yetiştiriciliği",
+      "aciklama_en": "Raising of other animals n.e.c."
+    },
+    {
+      "kod": "01.5",
+      "ust_kod": "01",
+      "seviye": "grup",
+      "aciklama_tr": "Karma çiftçilik",
+      "aciklama_en": "Mixed farming"
+    },
+    {
+      "kod": "01.50",
+      "ust_kod": "01.5",
+      "seviye": "grup",
+      "aciklama_tr": "Karma çiftçilik",
+      "aciklama_en": "Mixed farming"
+    },
+    {
+      "kod": "01.50.06",
+      "ust_kod": "01.50",
+      "seviye": "sinif",
+      "aciklama_tr": "Karma çiftçilik",
+      "aciklama_en": "Mixed farming"
+    },
+    {
+      "kod": "01.6",
+      "ust_kod": "01",
+      "seviye": "grup",
+      "aciklama_tr": "Tarımı destekleyici faaliyetler ve hasat sonrası bitkisel ürünler ile ilgili faaliyetler",
+      "aciklama_en": "Support activities to agriculture and post-harvest crop activities"
+    },
+    {
+      "kod": "01.61",
+      "ust_kod": "01.6",
+      "seviye": "grup",
+      "aciklama_tr": "Bitkisel üretimi destekleyici faaliyetler",
+      "aciklama_en": "Support activities for crop production"
+    },
+    {
+      "kod": "01.61.01",
+      "ust_kod": "01.61",
+      "seviye": "sinif",
+      "aciklama_tr": "Bitkisel üretimi destekleyici gübreleme, tarlanın sürülmesi, ekilmesi, çapalama ile meyvecilikle ilgili budama vb. faaliyetler (çiçek yetiştiriciliğini destekleyici faaliyetler ile hava yoluyla yapılan gübreleme hariç)",
+      "aciklama_en": "Supporting activities for production of crops through ploughing, sowing, hoeing, pruning related to fruit growing, etc (excluding activities to support growing flower and fertilisation by air)"
+    },
+    {
+      "kod": "01.61.02",
+      "ust_kod": "01.61",
+      "seviye": "sinif",
+      "aciklama_tr": "Bitkisel üretimi destekleyici mahsulün hasat ve harmanlanması, biçilmesi, balyalanması, biçerdöver işletilmesi vb. faaliyetler",
+      "aciklama_en": "Supporting activities for production of crops through harvesting and threshing, mowing, baling, combine harvester operation, etc."
+    },
+    {
+      "kod": "01.61.03",
+      "ust_kod": "01.61",
+      "seviye": "sinif",
+      "aciklama_tr": "Bitkisel üretimi destekleyici tarımsal amaçlı sulama faaliyetleri",
+      "aciklama_en": "Supporting activities for production of crops through agricultural irrigation"
+    },
+    {
+      "kod": "01.61.04",
+      "ust_kod": "01.61",
+      "seviye": "sinif",
+      "aciklama_tr": "Bitkisel üretimi destekleyici ilaçlama ve zirai mücadele faaliyetleri (zararlı otların imhası dahil, hava yoluyla yapılanlar hariç)",
+      "aciklama_en": "Supporting activities for production of crops through spraying and agricultural pest control activities (including weed control, excluding aerial spraying)"
+    },
+    {
+      "kod": "01.61.05",
+      "ust_kod": "01.61",
+      "seviye": "sinif",
+      "aciklama_tr": "Çiçek yetiştiriciliğini destekleyici gübreleme, tarlanın sürülmesi, ekilmesi, bakımı, toplama vb. ile ilgili faaliyetler (hava yoluyla yapılan gübreleme hariç)",
+      "aciklama_en": "Supporting activities for growing flower through fertilisation, ploughing, sowing, maintenance, harvesting, etc.(excluding fertilisation by air)"
+    },
+    {
+      "kod": "01.61.06",
+      "ust_kod": "01.61",
+      "seviye": "sinif",
+      "aciklama_tr": "Hava yoluyla yapılan bitkisel üretimi destekleyici gübreleme, ilaçlama ve zirai mücadele faaliyetleri (zararlı otların imhası dahil)",
+      "aciklama_en": "Supporting activities for production of crops through air, fertilising, spraying and pest control activities (including the destruction of weeds)"
+    },
+    {
+      "kod": "01.62",
+      "ust_kod": "01.6",
+      "seviye": "grup",
+      "aciklama_tr": "Hayvan üretimini destekleyici faaliyetler",
+      "aciklama_en": "Support activities for animal production"
+    },
+    {
+      "kod": "01.62.01",
+      "ust_kod": "01.62",
+      "seviye": "sinif",
+      "aciklama_tr": "Hayvan üretimini destekleyici olarak sürülerin güdülmesi, başkalarına ait hayvanların beslenmesi, kümeslerin temizlenmesi, kırkma, sağma, barınak sağlama, nalbantlık vb. faaliyetler",
+      "aciklama_en": "Support activities for animal production through herding livestock, feeding animals belonging to others, cleaning poultry houses, shearing, milking, providing shelter, farriery, etc."
+    },
+    {
+      "kod": "01.62.02",
+      "ust_kod": "01.62",
+      "seviye": "sinif",
+      "aciklama_tr": "Hayvan üretimini destekleyici olarak sürü testi, kümes hayvanlarının kısırlaştırılması, yapay dölleme, vb. faaliyetler",
+      "aciklama_en": "Support activities for animal production through animal production, such as herd testing, poultry sterilisation, artificial insemination, etc."
+    },
+    {
+      "kod": "01.63",
+      "ust_kod": "01.6",
+      "seviye": "grup",
+      "aciklama_tr": "Hasat sonrası bitkisel ürünler ile ilgili faaliyetler ve çoğaltma için tohumun işlenmesi",
+      "aciklama_en": "Post-harvest crop activities and seed processing for propagation"
+    },
+    {
+      "kod": "01.63.01",
+      "ust_kod": "01.63",
+      "seviye": "sinif",
+      "aciklama_tr": "Hasat sonrası diğer ürünlerin ayıklanması ve temizlenmesi ile ilgili faaliyetler (pamuğun çırçırlanması ve nişastalı kök ürünleri hariç)",
+      "aciklama_en": "Post-harvest crop activities related to the sorting and cleaning of other products (excluding ginning of cotton and starchy root crops)"
+    },
+    {
+      "kod": "01.63.02",
+      "ust_kod": "01.63",
+      "seviye": "sinif",
+      "aciklama_tr": "Sert kabuklu ürünlerin kabuklarının kırılması ve temizlenmesi ile ilgili faaliyetler",
+      "aciklama_en": "Activities related to cracking and cleaning the shells of nuts"
+    },
+    {
+      "kod": "01.63.03",
+      "ust_kod": "01.63",
+      "seviye": "sinif",
+      "aciklama_tr": "Haşhaş vb. ürünlerin sürtme, ezme ve temizlenmesi ile ilgili faaliyetler",
+      "aciklama_en": "Activities related to grinding, crushing and cleaning poppy seeds and similar products"
+    },
+    {
+      "kod": "01.63.04",
+      "ust_kod": "01.63",
+      "seviye": "sinif",
+      "aciklama_tr": "Mısır vb. ürünlerin tanelenmesi ve temizlenmesi ile ilgili faaliyetler",
+      "aciklama_en": "Activities related to the threshing and cleaning of corn and other products"
+    },
+    {
+      "kod": "01.63.05",
+      "ust_kod": "01.63",
+      "seviye": "sinif",
+      "aciklama_tr": "Tütünün sınıflandırılması, balyalanması vb. hizmetler",
+      "aciklama_en": "Services of classification, balling, etc of tobacco"
+    },
+    {
+      "kod": "01.63.06",
+      "ust_kod": "01.63",
+      "seviye": "sinif",
+      "aciklama_tr": "Nişastalı kök ürünlerinin ayıklanması ve temizlenmesi (patates vb.)",
+      "aciklama_en": "Sorting and cleaning of starchy root crops (potatoes, etc.)"
+    },
+    {
+      "kod": "01.63.07",
+      "ust_kod": "01.63",
+      "seviye": "sinif",
+      "aciklama_tr": "Çırçırlama faaliyeti",
+      "aciklama_en": "Cotton ginning"
+    },
+    {
+      "kod": "01.63.08",
+      "ust_kod": "01.63",
+      "seviye": "sinif",
+      "aciklama_tr": "Üretim amaçlı tohum işleme hizmetleri (vernelizasyon işlemleri dahil)",
+      "aciklama_en": "Seed processing services for production purposes (including vernalisation processes)"
+    },
+    {
+      "kod": "01.63.90",
+      "ust_kod": "01.63",
+      "seviye": "sinif",
+      "aciklama_tr": "Hasat sonrası bitkisel ürünler ile ilgili diğer faaliyetler",
+      "aciklama_en": "Other post-harvest crop activities"
+    },
+    {
+      "kod": "01.7",
+      "ust_kod": "01",
+      "seviye": "grup",
+      "aciklama_tr": "Avcılık, tuzakla avlanma ve ilgili hizmet faaliyetleri",
+      "aciklama_en": "Hunting, trapping and related service activities"
+    },
+    {
+      "kod": "01.70",
+      "ust_kod": "01.7",
+      "seviye": "grup",
+      "aciklama_tr": "Avcılık, tuzakla avlanma ve ilgili hizmet faaliyetleri",
+      "aciklama_en": "Hunting, trapping and related service activities"
+    },
+    {
+      "kod": "01.70.01",
+      "ust_kod": "01.70",
+      "seviye": "sinif",
+      "aciklama_tr": "Ticari olmayan av hayvanı ve yabani hayvan avlama ve yakalama faaliyetleri (yenilmesi, kürkleri, derileri, araştırmalarda kullanılmaları vb. amaçlar için) (balıkçılık hariç)",
+      "aciklama_en": "Non-commercial hunting and trapping of game and wild animals for food, fur or skin and use in research (except fishing)"
+    },
+    {
+      "kod": "01.70.02",
+      "ust_kod": "01.70",
+      "seviye": "sinif",
+      "aciklama_tr": "Ticari olan av hayvanı ve yabani hayvan avlama ve yakalama faaliyetleri (yenilmesi, kürkleri, derileri, araştırmalarda kullanılmaları vb. amaçlar için) (balıkçılık hariç)",
+      "aciklama_en": "Commercial hunting and trapping of game and wild animals for food, fur or skin and use in research (except fishing)"
+    },
+    {
+      "kod": "02",
+      "ust_kod": "A",
+      "seviye": "kisim",
+      "aciklama_tr": "Ormancılık ile endüstriyel ve yakacak odun üretimi",
+      "aciklama_en": "Forestry and logging"
+    },
+    {
+      "kod": "02.1",
+      "ust_kod": "02",
+      "seviye": "grup",
+      "aciklama_tr": "Orman yetiştirme (silvikültür) ve diğer ormancılık faaliyetleri",
+      "aciklama_en": "Silviculture and other forestry activities"
+    },
+    {
+      "kod": "02.10",
+      "ust_kod": "02.1",
+      "seviye": "grup",
+      "aciklama_tr": "Orman yetiştirme (silvikültür) ve diğer ormancılık faaliyetleri",
+      "aciklama_en": "Silviculture and other forestry activities"
+    },
+    {
+      "kod": "02.10.01",
+      "ust_kod": "02.10",
+      "seviye": "sinif",
+      "aciklama_tr": "Baltalık olarak işletilen ormanların yetiştirilmesi (kağıtlık ve yakacak odun üretimine yönelik olanlar dahil)",
+      "aciklama_en": "Growing of forests operated as coppice forests (including those for paper and fuel wood production)"
+    },
+    {
+      "kod": "02.10.02",
+      "ust_kod": "02.10",
+      "seviye": "sinif",
+      "aciklama_tr": "Orman yetiştirmek için fidan ve tohum üretimi",
+      "aciklama_en": "Growing of seedlings and seeds for forests"
+    },
+    {
+      "kod": "02.10.03",
+      "ust_kod": "02.10",
+      "seviye": "sinif",
+      "aciklama_tr": "Orman ağaçlarının yetiştirilmesi (baltalık ormanların yetiştirilmesi hariç)",
+      "aciklama_en": "Growing of forest trees (excluding the growing of coppice forests)"
+    },
+    {
+      "kod": "02.2",
+      "ust_kod": "02",
+      "seviye": "grup",
+      "aciklama_tr": "Endüstriyel ve yakacak odun üretimi",
+      "aciklama_en": "Logging"
+    },
+    {
+      "kod": "02.20",
+      "ust_kod": "02.2",
+      "seviye": "grup",
+      "aciklama_tr": "Endüstriyel ve yakacak odun üretimi",
+      "aciklama_en": "Logging"
+    },
+    {
+      "kod": "02.20.01",
+      "ust_kod": "02.20",
+      "seviye": "sinif",
+      "aciklama_tr": "Endüstriyel ve yakacak odun üretimi (geleneksel yöntemlerle odun kömürü üretimi dahil)",
+      "aciklama_en": "Logging (including production of charcoal using traditional methods)"
+    },
+    {
+      "kod": "02.3",
+      "ust_kod": "02",
+      "seviye": "grup",
+      "aciklama_tr": "Tabii olarak yetişen odun dışı orman ürünlerinin toplanması",
+      "aciklama_en": "Gathering of wild growing non-wood products"
+    },
+    {
+      "kod": "02.30",
+      "ust_kod": "02.3",
+      "seviye": "grup",
+      "aciklama_tr": "Tabii olarak yetişen odun dışı orman ürünlerinin toplanması",
+      "aciklama_en": "Gathering of wild growing non-wood products"
+    },
+    {
+      "kod": "02.30.01",
+      "ust_kod": "02.30",
+      "seviye": "sinif",
+      "aciklama_tr": "Tabii olarak yetişen odun dışı orman ürünlerinin toplanması",
+      "aciklama_en": "Gathering of wild growing non-wood products"
+    },
+    {
+      "kod": "02.4",
+      "ust_kod": "02",
+      "seviye": "grup",
+      "aciklama_tr": "Ormancılık için destekleyici faaliyetler",
+      "aciklama_en": "Support services to forestry"
+    },
+    {
+      "kod": "02.40",
+      "ust_kod": "02.4",
+      "seviye": "grup",
+      "aciklama_tr": "Ormancılık için destekleyici faaliyetler",
+      "aciklama_en": "Support services to forestry"
+    },
+    {
+      "kod": "02.40.01",
+      "ust_kod": "02.40",
+      "seviye": "sinif",
+      "aciklama_tr": "Ormanda ağaçların kesilmesi, dallarından temizlenmesi, soyulması vb. destekleyici faaliyetler",
+      "aciklama_en": "Support services to forestry through cutting down trees in the forest, clearing branches, peeling bark, etc."
+    },
+    {
+      "kod": "02.40.02",
+      "ust_kod": "02.40",
+      "seviye": "sinif",
+      "aciklama_tr": "Ormanda kesilmiş ve temizlenmiş ağaçların taşınması, istiflenmesi ve yüklenmesi faaliyetleri",
+      "aciklama_en": "Activities of transportation, stacking and loading of felled and cleaned trees in the forest"
+    },
+    {
+      "kod": "02.40.03",
+      "ust_kod": "02.40",
+      "seviye": "sinif",
+      "aciklama_tr": "Ormanda silvikültürel hizmet faaliyetleri (seyreltilmesi, budanması, repikaj vb.)",
+      "aciklama_en": "Silvicultural services in forests (thinning, pruning, replanting, etc.)"
+    },
+    {
+      "kod": "02.40.04",
+      "ust_kod": "02.40",
+      "seviye": "sinif",
+      "aciklama_tr": "Ormanı zararlılara (böcek ve hastalıklar) karşı koruma faaliyetleri",
+      "aciklama_en": "Activities to protect the forest against pests (insects and diseases)"
+    },
+    {
+      "kod": "02.40.05",
+      "ust_kod": "02.40",
+      "seviye": "sinif",
+      "aciklama_tr": "Ormanı yangın ve kaçak kesime (izinsiz kesim) karşı koruma faaliyetleri",
+      "aciklama_en": "Forest protection activities against fire and illegal logging (unauthorised logging)"
+    },
+    {
+      "kod": "02.40.06",
+      "ust_kod": "02.40",
+      "seviye": "sinif",
+      "aciklama_tr": "Ormanı koruma ve bakım amaçlı orman yolu yapımı ve bakımı faaliyetleri",
+      "aciklama_en": "Activities of construction and maintenance of forest roads for the purpose of protecting and maintaining forests"
+    },
+    {
+      "kod": "02.40.90",
+      "ust_kod": "02.40",
+      "seviye": "sinif",
+      "aciklama_tr": "Diğer ormancılık hizmet faaliyetleri",
+      "aciklama_en": "Other forestry service activities"
+    },
+    {
+      "kod": "03",
+      "ust_kod": "A",
+      "seviye": "kisim",
+      "aciklama_tr": "Balıkçılık ve su ürünleri yetiştiriciliği",
+      "aciklama_en": "Fishing and aquaculture"
+    },
+    {
+      "kod": "03.1",
+      "ust_kod": "03",
+      "seviye": "grup",
+      "aciklama_tr": "Balıkçılık",
+      "aciklama_en": "Fishing"
+    },
+    {
+      "kod": "03.11",
+      "ust_kod": "03.1",
+      "seviye": "grup",
+      "aciklama_tr": "Deniz balıkçılığı",
+      "aciklama_en": "Marine fishing"
+    },
+    {
+      "kod": "03.11.01",
+      "ust_kod": "03.11",
+      "seviye": "sinif",
+      "aciklama_tr": "Deniz ve kıyı sularında yapılan balıkçılık (gırgır balıkçılığı, dalyancılık dahil)",
+      "aciklama_en": "Fishing in marine and coastal waters (including seine-haul and fishery)"
+    },
+    {
+      "kod": "03.11.02",
+      "ust_kod": "03.11",
+      "seviye": "sinif",
+      "aciklama_tr": "Deniz kabuklularının (midye, ıstakoz vb.), yumuşakçaların, diğer deniz canlıları ve ürünlerinin toplanması (sedef, doğal inci, sünger, mercan, deniz yosunu, vb.)",
+      "aciklama_en": "Taking and gathering of marine crustaceans and molluscs, other marine organisms and materials (e.g. natural pearls, sponges, coral, seaweed, algae)"
+    },
+    {
+      "kod": "03.12",
+      "ust_kod": "03.1",
+      "seviye": "grup",
+      "aciklama_tr": "Tatlı su balıkçılığı",
+      "aciklama_en": "Freshwater fishing"
+    },
+    {
+      "kod": "03.12.01",
+      "ust_kod": "03.12",
+      "seviye": "sinif",
+      "aciklama_tr": "Tatlı su balıkçılığı",
+      "aciklama_en": "Freshwater fishing"
+    },
+    {
+      "kod": "03.2",
+      "ust_kod": "03",
+      "seviye": "grup",
+      "aciklama_tr": "Su ürünleri yetiştiriciliği",
+      "aciklama_en": "Aquaculture"
+    },
+    {
+      "kod": "03.21",
+      "ust_kod": "03.2",
+      "seviye": "grup",
+      "aciklama_tr": "Deniz ürünleri yetiştiriciliği",
+      "aciklama_en": "Marine aquaculture"
+    },
+    {
+      "kod": "03.21.01",
+      "ust_kod": "03.21",
+      "seviye": "sinif",
+      "aciklama_tr": "Denizde yapılan balık yetiştiriciliği",
+      "aciklama_en": "Fish farming in sea water"
+    },
+    {
+      "kod": "03.21.02",
+      "ust_kod": "03.21",
+      "seviye": "sinif",
+      "aciklama_tr": "Denizde yapılan diğer su ürünleri yetiştiriciliği",
+      "aciklama_en": "Other aquaculture activities in sea water"
+    },
+    {
+      "kod": "03.22",
+      "ust_kod": "03.2",
+      "seviye": "grup",
+      "aciklama_tr": "Tatlı su ürünleri yetiştiriciliği",
+      "aciklama_en": "Freshwater aquaculture"
+    },
+    {
+      "kod": "03.22.01",
+      "ust_kod": "03.22",
+      "seviye": "sinif",
+      "aciklama_tr": "Tatlı sularda yapılan balık yetiştiriciliği",
+      "aciklama_en": "Fish farming in freshwater"
+    },
+    {
+      "kod": "03.22.02",
+      "ust_kod": "03.22",
+      "seviye": "sinif",
+      "aciklama_tr": "Tatlısu ürünleri yetiştiriciliği (balık hariç)",
+      "aciklama_en": "Freshwater product farming (excluding fish)"
+    },
+    {
+      "kod": "03.3",
+      "ust_kod": "03",
+      "seviye": "grup",
+      "aciklama_tr": "Balıkçılık ve su ürünleri yetiştiriciliği için destekleyici faaliyetler",
+      "aciklama_en": "Support activities for fishing and aquaculture"
+    },
+    {
+      "kod": "03.30",
+      "ust_kod": "03.3",
+      "seviye": "grup",
+      "aciklama_tr": "Balıkçılık ve su ürünleri yetiştiriciliği için destekleyici faaliyetler",
+      "aciklama_en": "Support activities for fishing and aquaculture"
+    },
+    {
+      "kod": "03.30.01",
+      "ust_kod": "03.30",
+      "seviye": "sinif",
+      "aciklama_tr": "Balıkçılık ve su ürünleri yetiştiriciliği için destekleyici faaliyetler",
+      "aciklama_en": "Support activities for fishing and aquaculture"
+    },
+    {
+      "kod": "03.30.02",
+      "ust_kod": "03.30",
+      "seviye": "sinif",
+      "aciklama_tr": "Balık kafeslerinin onarım ve bakım hizmeti faaliyetleri",
+      "aciklama_en": "Repair and maintenance services for fish cages"
     }
   ]
 }
