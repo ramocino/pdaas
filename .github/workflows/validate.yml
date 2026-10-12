@@ -1,0 +1,48 @@
+name: PDAAS Şema Doğrulama
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node.js kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: ajv-cli kur
+        run: npm install -g ajv-cli ajv-formats
+
+      - name: JSON geçerliliğini kontrol et
+        run: |
+          echo "Geçersiz JSON dosyaları aranıyor..."
+          hata=0
+          for dosya in $(find . -name "*.json" -not -path "./node_modules/*" -not -path "./.github/*"); do
+            if ! jq empty "$dosya" 2>/dev/null; then
+              echo "❌ GEÇERSİZ JSON: $dosya"
+              hata=1
+            fi
+          done
+          if [ $hata -eq 1 ]; then exit 1; fi
+          echo "✅ Tüm JSON dosyaları geçerli"
+
+      - name: Şemaya uygunluğu kontrol et
+        run: |
+          ajv validate \
+            -s schema.json \
+            -d "csgb/*.json" \
+            -d "csidb/*.json" \
+            -d "etkb/*.json" \
+            -d "hvmb/*.json" \
+            -d "ticaret/*.json" \
+            -d "ticaret/*/*.json" \
+            --strict=false
