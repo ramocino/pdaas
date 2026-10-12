@@ -43,7 +43,7 @@ _YOL_HARITASI = {
     "gtip":  ["ham/ticaret/gtip", "ticaret/gtip", "ham/gtip"],
     "cpc":   ["ham/ticaret/cpc",  "ticaret/cpc",  "ham/cpc"],
     "isco":  ["ham/ticaret/isco", "ticaret/isco", "ham/isco"],
-    "nace":  ["ham/nace", "ham/tuik/nace", "tuik/nace", "nace"],
+    "nace":  ["ham/hvmb/nace", "hvmb/nace", "ham/nace", "ham/tuik/nace", "tuik/nace", "nace"],
     "damga": ["ham/hvmb", "ham/hazine", "hvmb", "hazine"],
     "gelir": ["ham/hvmb", "ham/hazine", "hvmb", "hazine"],
     "otv":   ["ham/hvmb", "ham/hazine", "hvmb", "hazine"],
@@ -154,7 +154,7 @@ def manifest_dosyasi():
 @app.get("/schema.json", include_in_schema=False)
 def schema_dosyasi():
     return FileResponse(KOK / "schema.json", media_type="application/json")
-  
+
 @app.get("/kurator", include_in_schema=False)
 def kurator_sayfa():
     yol = KOK / "kurator.html"
@@ -471,35 +471,62 @@ def _vergi_dosyasi(anahtar: str) -> Path:
         p = klasor / ad
         if p.exists():
             return p
-    raise HTTPException(404, f"Vergi dosyası bulunamadı: {anahtar}")
+    # Yedek: dosya adında anahtar geçen ilk JSON (büyük/küçük harf fark etmez)
+    for f in sorted(klasor.glob("*.json")):
+        if anahtar in f.stem.lower():
+            return f
+    raise HTTPException(404, f"Vergi dosyası bulunamadı: {anahtar} (klasör: {klasor.name})")
+
+
+def _vergi_oku(anahtar: str):
+    """Dosyayı okur; (veri, kayit_listesi) döner. Bozuk JSON'u açık hata olarak bildirir."""
+    yol = _vergi_dosyasi(anahtar)
+    try:
+        veri = json.loads(yol.read_text(encoding="utf-8-sig"))
+    except json.JSONDecodeError as e:
+        raise HTTPException(500, f"{yol.name} geçerli JSON değil: satır {e.lineno}, sütun {e.colno} — {e.msg}")
+    return veri, _kayitlari_al(veri)
+
+
+def _kayitlari_al(veri) -> list:
+    """'kayitlar' yoksa kökteki ilk liste alanını (veya kök listeyi) kullanır."""
+    if isinstance(veri, list):
+        return veri
+    if isinstance(veri, dict):
+        if isinstance(veri.get("kayitlar"), list):
+            return veri["kayitlar"]
+        for v in veri.values():
+            if isinstance(v, list) and v and isinstance(v[0], dict):
+                return v
+    return []
 
 
 def _vergi_listesi(anahtar: str, servis_adi: str):
     t0 = time.perf_counter()
-    yol = _vergi_dosyasi(anahtar)
-    veri = json.loads(yol.read_text(encoding="utf-8"))
+    veri, kayitlar = _vergi_oku(anahtar)
     _metrik_kaydet((time.perf_counter() - t0) * 1000)
+    meta = veri.get("meta", {}) if isinstance(veri, dict) else {}
     return {
         "service": servis_adi,
         "timestamp": _zaman_damgasi(),
-        **_meta_ozet(veri.get("meta", {})),
-        "toplam": len(veri.get("kayitlar", [])),
-        "data": veri.get("kayitlar", []),
+        **_meta_ozet(meta),
+        "toplam": len(kayitlar),
+        "data": kayitlar,
     }
 
 
 def _vergi_kayit(anahtar: str, kod: str, servis_adi: str):
     t0 = time.perf_counter()
-    yol = _vergi_dosyasi(anahtar)
-    veri = json.loads(yol.read_text(encoding="utf-8"))
-    kayit = _kayit_bul(veri.get("kayitlar", []), ["kod"], kod)
+    veri, kayitlar = _vergi_oku(anahtar)
+    kayit = _kayit_bul(kayitlar, ["kod"], kod)
     if not kayit:
         raise HTTPException(404, f"Kod bulunamadı: {kod}")
     _metrik_kaydet((time.perf_counter() - t0) * 1000)
+    meta = veri.get("meta", {}) if isinstance(veri, dict) else {}
     return {
         "service": servis_adi,
         "timestamp": _zaman_damgasi(),
-        **_meta_ozet(veri.get("meta", {})),
+        **_meta_ozet(meta),
         "data": kayit,
     }
 
