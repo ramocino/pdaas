@@ -1,972 +1,410 @@
 <!DOCTYPE html>
-<html lang="tr" data-lang="tr">
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PDaaS — Parametric Data as a Service</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDaaS — Referans Veri Servisi</title>
 <style>
   :root{
-    --bg:#0b1220; --panel:#121b2e; --panel2:#1a2540; --panel3:#0f1729;
-    --line:#243255; --txt:#e6ecff; --muted:#8b9ac4;
-    --accent:#4da3ff; --accent2:#22d3a6; --warn:#ffb454;
-    --prod:#4da3ff; --svc:#a78bfa; --occ:#22d3a6; --tax:#ffb454; --stat:#f472b6;
+    --bg:#ffffff; --panel:#f5f6f8; --ink:#1b1f24; --muted:#667085; --line:#e3e6ea;
+    --accent:#1d4f91; --ok:#1a7f4b; --bad:#b42318; --wait:#b7791f;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --bg:#101317; --panel:#171b21; --ink:#e7eaee; --muted:#8c96a5; --line:#262c35;
+           --accent:#7fb0ee; --ok:#4cc38a; --bad:#f2786d; --wait:#e0b44f; }
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-  section{padding:64px 0;border-bottom:1px solid var(--line)}
-  h1{font-size:2.6rem;font-weight:800;letter-spacing:-.02em;line-height:1.15}
-  h2{font-size:1.6rem;margin-bottom:8px;font-weight:700}
-  h2 .tag{font-size:.7rem;color:var(--accent);letter-spacing:.15em;font-weight:600;display:block;margin-bottom:6px}
-  h3{font-size:1.05rem;font-weight:600;margin-bottom:10px}
-  p{color:var(--muted);margin-bottom:12px}
-  code,pre{font-family:"JetBrains Mono",Consolas,monospace;font-size:.82rem}
-  pre{background:#0a0f1c;border:1px solid var(--line);border-radius:10px;padding:16px;overflow:auto;color:#c9d5f5}
+  html{-webkit-text-size-adjust:100%}
+  body{background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  code,pre,.mono{font-family:ui-monospace,"SF Mono",Consolas,monospace;font-size:.82rem}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  button,input,select{font:inherit;color:inherit}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
-  html[data-lang="tr"] .en{display:none !important}
-  html[data-lang="en"] .tr{display:none !important}
+  main{max-width:960px;margin:0 auto;padding:48px 24px 72px}
 
-  .topbar{position:sticky;top:0;z-index:100;background:rgba(11,18,32,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:12px 0}
-  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-  .topbar .brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.02rem}
-  .topbar .brand .logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--prod),var(--svc),var(--occ));display:grid;place-items:center;color:#04122a;font-weight:800;font-size:.95rem;box-shadow:0 4px 14px -4px var(--accent)}
-  .topbar .brand .sub{display:block;font-size:.7rem;color:var(--muted);font-weight:500;letter-spacing:.08em;text-transform:uppercase;margin-top:1px}
-  .lang-toggle{display:inline-flex;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:3px}
-  .lang-toggle button{background:transparent;border:none;color:var(--muted);padding:5px 14px;border-radius:999px;font-weight:700;font-size:.76rem;cursor:pointer;letter-spacing:.08em;font-family:inherit;transition:.2s}
-  .lang-toggle button.active{background:var(--accent);color:#04122a}
+  header h1{font-size:1.9rem;font-weight:700;letter-spacing:-.01em}
+  header p{color:var(--muted);margin-top:6px;max-width:60ch}
+  .durum{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:20px;font-size:.88rem;color:var(--muted)}
+  .durum b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
 
-  .hero{padding:72px 0 60px;text-align:center;background:radial-gradient(ellipse at top,#1a2a52 0%,transparent 60%)}
-  .hero .pill{display:inline-flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.8rem;color:var(--muted);margin-bottom:22px}
-  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 8px var(--accent2);animation:pulse 2s infinite}
-  @keyframes pulse{50%{opacity:.4}}
-  .hero p.lead{font-size:1.15rem;max-width:700px;margin:18px auto 0;color:#b7c4e6}
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
-  .stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
-  .stat b{display:block;font-size:1.5rem;color:var(--accent);font-weight:700}
-  .stat span{font-size:.72rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--wait);margin-right:6px;vertical-align:1px}
+  .dot.ok{background:var(--ok)} .dot.bad{background:var(--bad)}
 
-  /* ═══ AĞAÇ DÜZENİ ═══ */
-  .api-explorer{display:grid;grid-template-columns:minmax(320px,1fr) minmax(0,1.4fr);gap:20px;margin-top:28px;align-items:start}
-  @media(max-width:880px){ .api-explorer{grid-template-columns:1fr} }
+  section{margin-top:44px}
+  h2{font-size:1.02rem;font-weight:650;margin-bottom:12px}
+  h2 small{font-weight:400;color:var(--muted);margin-left:8px}
 
-  .tree-panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;max-height:700px;overflow:auto;position:sticky;top:80px}
-  @media(max-width:880px){ .tree-panel{position:static;max-height:none} }
-  .tree-panel::-webkit-scrollbar{width:6px}
-  .tree-panel::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+  /* sorgu */
+  .sorgu{display:flex;flex-wrap:wrap;gap:8px}
+  .sorgu select,.sorgu input{height:38px;padding:0 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+  .sorgu input{flex:1;min-width:160px}
+  .sorgu label{display:flex;align-items:center;gap:6px;font-size:.85rem;color:var(--muted)}
+  .btn{height:38px;padding:0 16px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer;font-weight:600}
+  @media (prefers-color-scheme:dark){ .btn{color:#0b1220} }
+  .btn.ikincil{background:transparent;color:var(--accent)}
+  .btn.kucuk{height:28px;padding:0 10px;font-size:.8rem}
+  .sonuc{margin-top:14px}
+  .sonuc .ozet{font-size:.84rem;color:var(--muted);margin-bottom:8px}
+  pre{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px;overflow:auto;max-height:380px;white-space:pre-wrap;word-break:break-word}
 
-  /* Bakanlık (Seviye 1) */
-  .node-ministry{border-radius:10px;margin-bottom:6px;background:var(--panel2);overflow:hidden}
-  .node-ministry>.node-head{display:flex;align-items:center;gap:10px;padding:11px 14px;cursor:pointer;user-select:none;font-weight:700;font-size:.9rem;transition:.15s}
-  .node-ministry>.node-head:hover{background:rgba(77,163,255,.08)}
-  .node-ministry>.node-head .chevron{width:12px;height:12px;flex-shrink:0;color:var(--muted);transition:transform .25s}
-  .node-ministry.open>.node-head .chevron{transform:rotate(90deg)}
-  .node-ministry>.node-head .ministry-logo{width:26px;height:26px;border-radius:7px;display:grid;place-items:center;font-size:.65rem;font-weight:800;flex-shrink:0;color:#04122a}
-  .node-ministry>.node-head .ministry-name{flex:1;line-height:1.2}
-  .node-ministry>.node-head .ministry-name small{display:block;font-size:.68rem;color:var(--muted);font-weight:500;letter-spacing:.03em}
-  .node-ministry>.node-head .count-badge{font-size:.68rem;background:rgba(0,0,0,.35);color:var(--muted);padding:2px 8px;border-radius:999px;font-weight:600}
-  .node-ministry>.node-body{display:none;padding:2px 8px 8px}
-  .node-ministry.open>.node-body{display:block}
+  /* tablo */
+  table{width:100%;border-collapse:collapse}
+  th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-weight:600;font-size:.82rem;color:var(--muted)}
+  td.sayi,th.sayi{text-align:right;font-variant-numeric:tabular-nums}
+  td.ad{font-weight:600}
+  td.yol{color:var(--muted)}
+  tr.detay>td{background:var(--panel);padding:14px}
+  .kaydir{overflow-x:auto}
+  .kaydir table th,.kaydir table td{padding:6px 10px;font-size:.82rem;white-space:nowrap;max-width:260px;overflow:hidden;text-overflow:ellipsis}
 
-  .node-ministry[data-m="ticaret"]   .ministry-logo{background:var(--prod)}
-  .node-ministry[data-m="hazine"]    .ministry-logo{background:var(--warn)}
-  .node-ministry[data-m="tuik"]      .ministry-logo{background:var(--svc)}
-  .node-ministry[data-m="sistem"]    .ministry-logo{background:var(--stat)}
+  .dallar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+  .dal{padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:var(--bg);cursor:pointer;font-size:.8rem}
+  .dal:hover,.dal.secili{border-color:var(--accent);color:var(--accent)}
+  .not{color:var(--muted);font-size:.84rem}
+  .not.hata{color:var(--bad)}
 
-  /* Kategori (Seviye 2) */
-  .node-category{border-radius:8px;margin-top:4px;background:rgba(0,0,0,.18);overflow:hidden}
-  .node-category>.node-head{display:flex;align-items:center;gap:9px;padding:9px 12px;cursor:pointer;user-select:none;font-weight:600;font-size:.82rem;transition:.15s}
-  .node-category>.node-head:hover{background:rgba(77,163,255,.06)}
-  .node-category>.node-head .chevron{width:10px;height:10px;flex-shrink:0;color:var(--muted);transition:transform .25s}
-  .node-category.open>.node-head .chevron{transform:rotate(90deg)}
-  .node-category>.node-head .cat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-  .node-category>.node-head .cat-name{flex:1}
-  .node-category>.node-head .count-badge{font-size:.66rem;background:rgba(0,0,0,.35);color:var(--muted);padding:2px 7px;border-radius:999px;font-weight:600}
-  .node-category>.node-body{display:none;padding:4px 6px 6px}
-  .node-category.open>.node-body{display:block}
+  /* bakanlıklar */
+  .bak{border-bottom:1px solid var(--line);padding:10px 0}
+  .bak summary{cursor:pointer;display:flex;gap:10px;align-items:baseline}
+  .bak summary b{font-weight:600}
+  .bak ul{margin:8px 0 0 18px;color:var(--muted);font-size:.86rem}
 
-  .node-category[data-c="gtip"]    .cat-dot{background:var(--prod)}
-  .node-category[data-c="cpc"]     .cat-dot{background:var(--svc)}
-  .node-category[data-c="isco"]    .cat-dot{background:var(--occ)}
-  .node-category[data-c="damga"]   .cat-dot{background:var(--warn)}
-  .node-category[data-c="gelir"]   .cat-dot{background:var(--warn)}
-  .node-category[data-c="otv"]     .cat-dot{background:var(--warn)}
-  .node-category[data-c="nace"]    .cat-dot{background:var(--svc)}
-  .node-category[data-c="sistem"]  .cat-dot{background:var(--stat)}
+  footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.88rem}
+  footer .sag{margin-left:auto;color:var(--muted)}
 
-  /* Dal / Fasıl (Seviye 3) */
-  .node-branch{margin-top:3px;border-radius:7px;background:rgba(0,0,0,.28);overflow:hidden}
-  .node-branch>.branch-head{display:flex;align-items:center;gap:8px;padding:7px 10px;cursor:pointer;user-select:none;font-size:.76rem;transition:.12s}
-  .node-branch>.branch-head:hover{background:rgba(77,163,255,.1)}
-  .node-branch>.branch-head .b-chevron{width:9px;height:9px;flex-shrink:0;color:var(--muted);transition:transform .22s}
-  .node-branch.open>.branch-head .b-chevron{transform:rotate(90deg)}
-  .node-branch>.branch-head .b-kod{font-family:"JetBrains Mono",Consolas,monospace;font-size:.7rem;font-weight:800;padding:1px 6px;border-radius:4px;background:rgba(0,0,0,.4);flex-shrink:0}
-  .node-branch[data-v="gtip"]>.branch-head .b-kod{color:var(--prod)}
-  .node-branch[data-v="cpc"]>.branch-head .b-kod{color:var(--svc)}
-  .node-branch[data-v="isco"]>.branch-head .b-kod{color:var(--occ)}
-  .node-branch[data-v="nace"]>.branch-head .b-kod{color:var(--svc)}
-  .node-branch>.branch-head .b-ad{flex:1;color:var(--txt);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .node-branch>.branch-head .b-sayi{font-size:.62rem;background:rgba(0,0,0,.4);color:var(--muted);padding:1px 6px;border-radius:999px;font-weight:700;flex-shrink:0}
-  .node-branch>.branch-body{display:none;padding:3px 5px 5px}
-  .node-branch.open>.branch-body{display:block}
-  .b-yukleniyor{padding:8px;text-align:center;color:var(--muted);font-size:.7rem;font-style:italic}
-
-  /* Kod / Endpoint (Seviye 4) */
-  .node-endpoint{display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;cursor:pointer;font-size:.74rem;transition:.12s;color:var(--muted);margin-top:2px}
-  .node-endpoint:hover{background:rgba(77,163,255,.1);color:var(--txt)}
-  .node-endpoint.active{background:rgba(77,163,255,.18);color:var(--txt)}
-  .node-endpoint .method{font-size:.58rem;font-weight:800;background:#0e3a2a;color:var(--accent2);padding:1px 5px;border-radius:4px;flex-shrink:0}
-  .node-endpoint .ep-path{font-family:"JetBrains Mono",Consolas,monospace;font-size:.7rem;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .node-endpoint .ep-tag{font-size:.6rem;color:var(--muted);flex-shrink:0;font-family:"JetBrains Mono",Consolas,monospace}
-
-  /* JSON panel */
-  .json-panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;min-height:400px}
-  .json-panel-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--line);flex-wrap:wrap}
-  .json-panel-title{font-size:.88rem;font-weight:700;color:var(--txt);flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
-  .json-panel-title .ep-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-  .json-panel-title .ep-line .method{font-size:.65rem;font-weight:800;background:#0e3a2a;color:var(--accent2);padding:2px 8px;border-radius:5px;letter-spacing:.05em}
-  .json-panel-title .ep-line .url{font-family:"JetBrains Mono",Consolas,monospace;font-size:.78rem;color:#c9d5f5;word-break:break-all}
-  .json-panel-title .meta-line{display:flex;gap:14px;flex-wrap:wrap;font-size:.7rem;color:var(--muted);font-weight:500}
-  .json-panel-title .meta-line span b{color:var(--txt);font-weight:600}
-  .json-panel pre{max-height:520px;margin:0;min-height:300px}
-  .json-panel .empty-state{color:var(--muted);font-size:.85rem;padding:40px 0;text-align:center}
-  .json-panel .empty-state svg{opacity:.35;margin-bottom:14px}
-
-  .btn{background:var(--accent);color:#04122a;border:none;padding:8px 16px;border-radius:8px;font-weight:700;cursor:pointer;font-size:.82rem;transition:.2s}
-  .btn:hover{filter:brightness(1.1)}
-  .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--muted)}
-  .btn.ghost:hover{color:var(--txt);border-color:var(--accent)}
-  .btn-row{display:flex;gap:8px;flex-wrap:wrap}
-
-  .demo-box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:20px}
-  .demo-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
-  .demo-row input,.demo-row select{background:var(--panel2);border:1px solid var(--line);color:var(--txt);padding:10px 14px;border-radius:8px;font-size:.9rem;font-family:inherit}
-  .demo-row input{flex:1;min-width:180px}
-  .btn.consolidate{background:linear-gradient(90deg,var(--prod),var(--svc),var(--occ));color:#04122a}
-  pre.response{max-height:420px;margin-top:12px;min-height:180px}
-
-  .consolidate-viz{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:26px 0;position:relative}
-  .axis{background:var(--panel);border:2px solid var(--line);border-radius:12px;padding:16px;text-align:center;transition:.3s}
-  .axis.active{border-color:currentColor;box-shadow:0 0 24px -6px currentColor}
-  .axis.product{color:var(--prod)} .axis.service{color:var(--svc)} .axis.occupation{color:var(--occ)}
-  .axis small{display:block;color:var(--muted);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
-  .axis b{display:block;font-size:1.3rem;font-weight:700;color:var(--txt)}
-  .axis span{display:block;font-size:.78rem;color:var(--muted);margin-top:4px}
-  .arrow-center{display:flex;justify-content:center;align-items:center;margin:14px 0;color:var(--muted);font-size:1.6rem}
-  .merged-card{background:linear-gradient(135deg,rgba(77,163,255,.12),rgba(167,139,250,.12),rgba(34,211,166,.12));border:2px solid var(--accent);border-radius:14px;padding:22px;margin-top:16px}
-  .merged-card h3{color:var(--accent)}
-  .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:14px}
-  .kv div{background:rgba(0,0,0,.25);border-radius:8px;padding:10px 12px}
-  .kv small{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;display:block}
-  .kv b{color:var(--txt);font-size:1rem}
-
-  .layers{display:grid;gap:10px;margin-top:24px}
-  .layer{background:var(--panel);border-left:4px solid var(--accent);border-radius:8px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-  .layer:nth-child(2){border-color:var(--warn)}
-  .layer:nth-child(3){border-color:var(--accent2)}
-  .layer:nth-child(4){border-color:var(--svc)}
-  .layer b{font-size:.95rem} .layer span{font-size:.82rem;color:var(--muted)}
-
-  footer{padding:36px 0;text-align:center;color:var(--muted);font-size:.82rem}
-
-  @media(max-width:720px){
-    h1{font-size:1.9rem}
-    .stats{grid-template-columns:repeat(2,1fr)}
-    .consolidate-viz{grid-template-columns:1fr}
-    .topbar .brand{font-size:.9rem}
+  @media (max-width:640px){
+    main{padding:32px 16px 56px}
+    .gizle-kucuk{display:none}
   }
 </style>
 </head>
 <body>
+<main>
 
-<!-- TOPBAR -->
-<header class="topbar">
-  <div class="wrap">
-    <div class="brand">
-      <div class="logo">P</div>
-      <span>
-        <span class="tr">Parametrik Veri Servisi · API Kanalı</span>
-        <span class="en">Parametric Data Service · API Channel</span>
-        <span class="sub">
-          <span class="tr">PDaaS · Teknik Kavram Kanıtı</span>
-          <span class="en">PDaaS · Technical Proof-of-Concept</span>
-        </span>
-      </span>
+  <header>
+    <h1>PDaaS</h1>
+    <p>Türkiye kamu kurumlarının referans verilerini (kod listeleri, oranlar, parametreler) tek API üzerinden sunan servis.</p>
+    <div class="durum" id="durum">
+      <span><span class="dot" id="saglik-nokta"></span><span id="saglik-metin">Kontrol ediliyor…</span></span>
+      <span>Ortalama süre <b id="st-ort">–</b></span>
+      <span>İstek <b id="st-istek">–</b></span>
+      <span>Bakanlık <b id="st-bak">–</b></span>
+      <span>Veri dosyası <b id="st-dosya">–</b></span>
     </div>
-    <div class="lang-toggle" id="lang-toggle">
-      <button data-lang-btn="tr" class="active">TR</button>
-      <button data-lang-btn="en">EN</button>
-    </div>
-  </div>
-</header>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap">
-    <div class="pill">
-      <span class="dot"></span>
-      <span class="tr">Canlı API · v2.0.0 · <span id="hero-stats">yükleniyor…</span></span>
-      <span class="en">Live API · v2.0.0 · <span id="hero-stats-en">loading…</span></span>
-    </div>
-    <h1>
-      <span class="tr">Yasal parametreler<br>artık <span style="color:var(--accent)">API'dir</span>.</span>
-      <span class="en">Legal parameters<br>are now an <span style="color:var(--accent)">API</span>.</span>
-    </h1>
-    <p class="lead">
-      <span class="tr">KDV oranları, GTİP kodları, SGK primleri, asgari ücret… Hepsi tek bir şema altında, sürümlenmiş ve makine-okunabilir mikroservisler halinde.</span>
-      <span class="en">VAT rates, GTIP codes, social security contributions, minimum wage… All under one schema, as versioned and machine-readable microservices.</span>
-    </p>
-    <div class="stats">
-      <div class="stat"><b id="s-avg">—</b><span><span class="tr">Ort. işlem süresi</span><span class="en">Avg. processing</span></span></div>
-      <div class="stat"><b id="s-max">—</b><span><span class="tr">Maks. süre</span><span class="en">Max. time</span></span></div>
-      <div class="stat"><b id="s-endpoints">—</b><span><span class="tr">Endpoint</span><span class="en">Endpoints</span></span></div>
-      <div class="stat"><b>3</b><span><span class="tr">İlişkisel eksen</span><span class="en">Relational axes</span></span></div>
-    </div>
-  </div>
-</section>
+  <section>
+    <h2>Kod sorgula</h2>
+    <form class="sorgu" id="sorgu-form">
+      <select id="sorgu-tur" aria-label="Sorgu türü">
+        <option value="product" data-ornek="2702.10">Ürün (GTİP)</option>
+        <option value="service" data-ornek="883">Hizmet (CPC)</option>
+        <option value="occupation" data-ornek="8111">Meslek (ISCO)</option>
+        <option value="nace" data-ornek="B">NACE bölümü</option>
+      </select>
+      <input id="sorgu-kod" value="2702.10" aria-label="Kod" autocomplete="off">
+      <label><input type="checkbox" id="sorgu-iliski" style="height:auto;min-width:0;flex:none"> İlişkileri dahil et</label>
+      <button class="btn" type="submit">Sorgula</button>
+    </form>
+    <div class="sonuc" id="sorgu-sonuc"></div>
+  </section>
 
-<!-- API EXPLORER — DİNAMİK AĞAÇ -->
-<section>
-  <div class="wrap">
-    <h2>
-      <span class="tag"><span class="tr">API KATMANI</span><span class="en">API LAYER</span></span>
-      <span class="tr">Bakanlık · Veri · Endpoint Ağacı</span>
-      <span class="en">Ministry · Dataset · Endpoint Tree</span>
-    </h2>
-    <p>
-      <span class="tr">Ağaç canlı API'den yüklenir. Bir koda tıklayın — sağda gerçek JSON yanıtı görünür.</span>
-      <span class="en">The tree is loaded live from the API. Click a code — the real JSON response appears on the right.</span>
-    </p>
+  <section>
+    <h2>Kod hiyerarşileri <small>/api/v1/{varlık}/agac</small></h2>
+    <table>
+      <thead><tr><th>Servis</th><th class="gizle-kucuk">Uç nokta</th><th class="sayi">Dal</th><th class="sayi">Kayıt</th><th class="sayi gizle-kucuk">ms</th><th></th></tr></thead>
+      <tbody id="tb-varlik"></tbody>
+    </table>
+  </section>
 
-    <div class="api-explorer">
-      <aside class="tree-panel" id="tree">
+  <section>
+    <h2>Vergi parametreleri <small>/api/v1/tax/…</small></h2>
+    <table>
+      <thead><tr><th>Servis</th><th class="gizle-kucuk">Uç nokta</th><th class="sayi">Kayıt</th><th class="gizle-kucuk">Sürüm</th><th class="sayi gizle-kucuk">ms</th><th></th></tr></thead>
+      <tbody id="tb-vergi"></tbody>
+    </table>
+  </section>
 
-        <!-- ═══ T.C. TİCARET BAKANLIĞI ═══ -->
-        <div class="node-ministry open" data-m="ticaret">
-          <div class="node-head" onclick="toggleMinistry(this)">
-            <svg class="chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-            <span class="ministry-logo">TB</span>
-            <span class="ministry-name">
-              <span class="tr">T.C. Ticaret Bakanlığı</span>
-              <span class="en">Ministry of Trade</span>
-              <small><span class="tr">Gümrükler Genel Müdürlüğü</span><span class="en">General Directorate of Customs</span></small>
-            </span>
-          </div>
-          <div class="node-body">
+  <section>
+    <h2>Birleşik işlem nesnesi <small>/api/v1/consolidated</small></h2>
+    <table>
+      <thead><tr><th>Servis</th><th class="gizle-kucuk">Uç nokta</th><th class="sayi">Süre</th><th></th></tr></thead>
+      <tbody id="tb-birlesik"></tbody>
+    </table>
+  </section>
 
-            <!-- GTİP -->
-            <div class="node-category" data-c="gtip" data-varlik="gtip">
-              <div class="node-head" onclick="toggleCategory(this, 'gtip')">
-                <svg class="chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-                <span class="cat-dot"></span>
-                <span class="cat-name"><span class="tr">GTİP · Ürün Kodları</span><span class="en">GTIP · Product Codes</span></span>
-                <span class="count-badge" id="sayi-gtip">—</span>
-              </div>
-              <div class="node-body" id="dal-gtip">
-                <div class="b-yukleniyor">Açmak için tıklayın…</div>
-              </div>
-            </div>
+  <section id="bak-bolum">
+    <h2>Katalog <small>manifest.json</small></h2>
+    <div id="bak-liste"><p class="not">Yükleniyor…</p></div>
+  </section>
 
-            <!-- CPC -->
-            <div class="node-category" data-c="cpc" data-varlik="cpc">
-              <div class="node-head" onclick="toggleCategory(this, 'cpc')">
-                <svg class="chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-                <span class="cat-dot"></span>
-                <span class="cat-name"><span class="tr">CPC · Hizmet Kodları</span><span class="en">CPC · Service Codes</span></span>
-                <span class="count-badge" id="sayi-cpc">—</span>
-              </div>
-              <div class="node-body" id="dal-cpc">
-                <div class="b-yukleniyor">Açmak için tıklayın…</div>
-              </div>
-            </div>
+  <footer>
+    <a href="/docs">API dokümantasyonu</a>
+    <a href="/kurator">Küratör</a>
+    <a href="/health">/health</a>
+    <a href="/stats">/stats</a>
+    <a href="/version-check">/version-check</a>
+    <span class="sag" id="yapi">–</span>
+  </footer>
 
-            <!-- ISCO -->
-            <div class="node-category" data-c="isco" data-varlik="isco">
-              <div class="node-head" onclick="toggleCategory(this, 'isco')">
-                <svg class="chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-                <span class="cat-dot"></span>
-                <span class="cat-name"><span class="tr">ISCO-08 · Meslek Kodları</span><span class="en">ISCO-08 · Occupation Codes</span></span>
-                <span class="count-badge" id="sayi-isco">—</span>
-              </div>
-              <div class="node-body" id="dal-isco">
-                <div class="b-yukleniyor">Açmak için tıklayın…</div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- ═══ HAZİNE VE MALİYE BAKANLIĞI ═══ -->
-        <div class="node-ministry" data-m="hazine">
-          <div class="node-head" onclick="toggleMinistry(this)">
-            <svg class="chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-            <span class="ministry-logo">HMB</span>
-            <span class="ministry-name">
-              <span class="tr">T.C. Hazine ve Maliye Bakanlığı</span>
-              <span class="en">Ministry of Treasury and Finance</span>
-              <small>GİB · <span class="tr">Gelir İdaresi Başkanlığı</span><span class="en">Revenue Administration</span></small>
-            </span>
-          </div>
-          <div class="node-body">
-
-            <div class="node-category" data-c="damga">
-              <div class="node-head" onclick="toggleCategory(this, 'damga')">
-                <svg class="chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-                <span class="cat-dot"></span>
-                <span class="cat-name"><span class="tr">Damga Vergisi Oranları</span><span class="en">Stamp Duty Rates</span></span>
-                <span class="count-badge" id="sayi-damga">—</span>
-              </div>
-              <div class="node-body" id="dal-damga">
-                <div class="b-yukleniyor">Açmak için tıklayın…</div>
-              </div>
-            </div>
-
-            <div class="node-category" data-c="gelir">
-              <div class="node-head" onclick="toggleCategory(this, 'gelir')">
-                <svg class="chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-                <span class="cat-dot"></span>
-                <span class="cat-name"><span class="tr">Gelir Vergisi Dilimleri</span><span class="en">Income Tax Brackets</span></span>
-                <span class="count-badge" id="sayi-gelir">—</span>
-              </div>
-              <div class="node-body" id="dal-gelir">
-                <div class="b-yukleniyor">Açmak için tıklayın…</div>
-              </div>
-            </div>
-
-            <div class="node-category" data-c="otv">
-              <div class="node-head" onclick="toggleCategory(this, 'otv')">
-                <svg class="chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-                <span class="cat-dot"></span>
-                <span class="cat-name"><span class="tr">ÖTV · Araç Oranları</span><span class="en">SCT · Vehicle Rates</span></span>
-                <span class="count-badge" id="sayi-otv">—</span>
-              </div>
-              <div class="node-body" id="dal-otv">
-                <div class="b-yukleniyor">Açmak için tıklayın…</div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- ═══ TÜİK ═══ -->
-        <div class="node-ministry" data-m="tuik">
-          <div class="node-head" onclick="toggleMinistry(this)">
-            <svg class="chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-            <span class="ministry-logo">TÜİK</span>
-            <span class="ministry-name">
-              <span class="tr">Türkiye İstatistik Kurumu</span>
-              <span class="en">Turkish Statistical Institute</span>
-              <small>NACE Rev.2</small>
-            </span>
-          </div>
-          <div class="node-body">
-            <div class="node-category" data-c="nace" data-varlik="nace">
-              <div class="node-head" onclick="toggleCategory(this, 'nace')">
-                <svg class="chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-                <span class="cat-dot"></span>
-                <span class="cat-name"><span class="tr">NACE · Faaliyet Sınıflaması</span><span class="en">NACE · Activity Classification</span></span>
-                <span class="count-badge" id="sayi-nace">—</span>
-              </div>
-              <div class="node-body" id="dal-nace">
-                <div class="b-yukleniyor">Açmak için tıklayın…</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ═══ SİSTEM ═══ -->
-        <div class="node-ministry" data-m="sistem">
-          <div class="node-head" onclick="toggleMinistry(this)">
-            <svg class="chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-            <span class="ministry-logo">SYS</span>
-            <span class="ministry-name">
-              <span class="tr">Sistem Servisleri</span>
-              <span class="en">System Services</span>
-              <small>PDaaS Core</small>
-            </span>
-          </div>
-          <div class="node-body">
-            <div class="node-category open" data-c="sistem">
-              <div class="node-head" onclick="toggleCategory(this, 'sistem')">
-                <svg class="chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-                <span class="cat-dot"></span>
-                <span class="cat-name"><span class="tr">Yardımcı Servisler</span><span class="en">Utility Services</span></span>
-                <span class="count-badge">3</span>
-              </div>
-              <div class="node-body">
-                <div class="node-endpoint" data-path="/health">
-                  <span class="method">GET</span>
-                  <span class="ep-path">/health</span>
-                  <span class="ep-tag"><span class="tr">Sağlık</span><span class="en">Health</span></span>
-                </div>
-                <div class="node-endpoint" data-path="/stats">
-                  <span class="method">GET</span>
-                  <span class="ep-path">/stats</span>
-                  <span class="ep-tag"><span class="tr">İstatistik</span><span class="en">Stats</span></span>
-                </div>
-                <div class="node-endpoint" data-path="/api/v1/consolidated">
-                  <span class="method">GET</span>
-                  <span class="ep-path">/api/v1/consolidated</span>
-                  <span class="ep-tag"><span class="tr">Birleşik</span><span class="en">Merged</span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </aside>
-
-      <!-- JSON PANEL -->
-      <main class="json-panel">
-        <div class="json-panel-header" id="json-header" style="display:none">
-          <div class="json-panel-title">
-            <div class="ep-line">
-              <span class="method" id="jh-method">GET</span>
-              <span class="url" id="jh-url">—</span>
-            </div>
-            <div class="meta-line">
-              <span><b id="jh-status">—</b> HTTP</span>
-              <span><b id="jh-time">—</b> ms</span>
-              <span id="jh-source"><b>—</b></span>
-            </div>
-          </div>
-          <div class="btn-row">
-            <button class="btn ghost" onclick="refreshCurrent()"><span class="tr">Yenile</span><span class="en">Refresh</span></button>
-            <button class="btn ghost" onclick="copyJson()"><span class="tr">Kopyala</span><span class="en">Copy</span></button>
-          </div>
-        </div>
-
-        <div class="empty-state" id="json-empty">
-          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M8 3H5a2 2 0 0 0-2 2v3m0 8v3a2 2 0 0 0 2 2h3m8-18h3a2 2 0 0 1 2 2v3m0 8v3a2 2 0 0 1-2 2h-3"/>
-            <path d="M9 9h6v6H9z"/>
-          </svg>
-          <div><span class="tr">Soldaki ağaçtan bir kod seçin</span><span class="en">Pick a code from the tree on the left</span></div>
-        </div>
-
-        <pre id="json-output" style="display:none"></pre>
-      </main>
-
-    </div>
-  </div>
-</section>
-
-<!-- TEK EKSEN SORGUSU -->
-<section>
-  <div class="wrap">
-    <h2>
-      <span class="tag"><span class="tr">ETKİLEŞİMLİ SORGU</span><span class="en">INTERACTIVE QUERY</span></span>
-      <span class="tr">Tek Eksen Sorgusu</span>
-      <span class="en">Single-Axis Query</span>
-    </h2>
-    <p>
-      <span class="tr">Tüm veri eksenlerinden bir kod girin; ilgili şema karşılığını görün.</span>
-      <span class="en">Enter a code from any data axis; view its schema-mapped response.</span>
-    </p>
-    <div class="demo-box">
-      <div class="demo-row">
-        <select id="domain">
-          <option value="product"        data-tr="Ürün (GTİP)"           data-en="Product (GTİP)">Ürün (GTİP)</option>
-          <option value="service"        data-tr="Hizmet (CPC)"          data-en="Service (CPC)">Hizmet (CPC)</option>
-          <option value="occupation"     data-tr="Meslek (ISCO-08)"      data-en="Occupation (ISCO-08)">Meslek (ISCO-08)</option>
-          <option value="stamp-duty"     data-tr="Damga Vergisi"         data-en="Stamp Duty">Damga Vergisi</option>
-          <option value="income-brackets" data-tr="Gelir Vergisi Dilimi" data-en="Income Tax Bracket">Gelir Vergisi Dilimi</option>
-          <option value="sct-vehicle"    data-tr="ÖTV Araç"              data-en="SCT Vehicle">ÖTV Araç</option>
-          <option value="nace"           data-tr="NACE Faaliyet Kodu"    data-en="NACE Activity Code">NACE Faaliyet Kodu</option>
-        </select>
-        <input id="code" placeholder="örn. 2702.10 / 883 / DV-I-A-2 / GV-UCRET-1 / OTV-87.03-1600-1 / B" value="2702.10"
-               data-tr-ph="örn. 2702.10 / 883 / DV-I-A-2 / GV-UCRET-1 / B"
-               data-en-ph="e.g. 2702.10 / 883 / DV-I-A-2 / GV-UCRET-1 / B">
-        <button class="btn" onclick="querySingle()" data-tr="Sorgula" data-en="Query">Sorgula</button>
-      </div>
-      <pre class="response" id="single-output" data-tr-init="Hazır." data-en-init="Ready.">Hazır.</pre>
-    </div>
-  </div>
-</section>
-
-<!-- BİRLEŞTİRME -->
-<section id="consolidated-section">
-  <div class="wrap">
-    <h2>
-      <span class="tag"><span class="tr">ÇEKİRDEK MANTIK</span><span class="en">CORE LOGIC</span></span>
-      <span class="tr">Ürün + Hizmet + Meslek Birleştirmesi</span>
-      <span class="en">Product + Service + Occupation Consolidation</span>
-    </h2>
-    <p style="max-width:780px">
-      <span class="tr">Bir maden işletmesinin tek bir <b>ekonomik işlemi</b>, aynı anda üç farklı parametre eksenine dokunur. PDaaS bu üç ekseni tek bir <i>transaction object</i> haline getirir.</span>
-      <span class="en">A single <b>economic transaction</b> of a mining enterprise touches three distinct parameter axes simultaneously. PDaaS fuses them into one <i>transaction object</i>.</span>
-    </p>
-
-    <div class="consolidate-viz" id="viz">
-      <div class="axis product" id="ax-product">
-        <small><span class="tr">Ürün Ekseni</span><span class="en">Product Axis</span></small>
-        <b>GTİP 2702.10</b>
-        <span><span class="tr">Linyit · Ticaret Bak.</span><span class="en">Lignite · Ministry of Trade</span></span>
-      </div>
-      <div class="axis service" id="ax-service">
-        <small><span class="tr">Hizmet Ekseni</span><span class="en">Service Axis</span></small>
-        <b>CPC 883</b>
-        <span><span class="tr">Madencilik Destek Hizmetleri</span><span class="en">Mining Support Services</span></span>
-      </div>
-      <div class="axis occupation" id="ax-occupation">
-        <small><span class="tr">Meslek Ekseni</span><span class="en">Occupation Axis</span></small>
-        <b>ISCO 8111</b>
-        <span><span class="tr">Yeraltı Maden İşçisi · SGK</span><span class="en">Underground Miner · SGK</span></span>
-      </div>
-    </div>
-    <div class="arrow-center">
-      ↓ &nbsp; <span class="tr">tek API çağrısı</span><span class="en">single API call</span> &nbsp; ↓
-    </div>
-    <div class="demo-row" style="justify-content:center">
-      <button class="btn consolidate" onclick="runConsolidate()"
-        data-tr="'/api/v1/consolidated' çağır"
-        data-en="Call '/api/v1/consolidated'">/api/v1/consolidated çağır</button>
-    </div>
-    <div class="merged-card" id="merged-card" style="display:none">
-      <h3>◆ <span class="tr">Birleştirilmiş İşlem Nesnesi</span><span class="en">Consolidated Transaction Object</span></h3>
-      <p style="font-size:.85rem">
-        <span class="tr">Üç ajansın parametreleri tek yanıtta birleşti.</span>
-        <span class="en">Parameters from three agencies merged into a single response.</span>
-      </p>
-      <div class="kv" id="merged-kv"></div>
-    </div>
-    <pre class="response" id="consolidated-output" style="margin-top:16px"
-      data-tr-init="Hazır." data-en-init="Ready.">Hazır.</pre>
-  </div>
-</section>
-
-<!-- MİMARİ -->
-<section>
-  <div class="wrap">
-    <h2>
-      <span class="tag"><span class="tr">MİMARİ</span><span class="en">ARCHITECTURE</span></span>
-      <span class="tr">Dört Katman</span>
-      <span class="en">Four Layers</span>
-    </h2>
-    <div class="layers">
-      <div class="layer">
-        <b><span class="tr">1 · Veri Üretim</span><span class="en">1 · Data Production</span></b>
-        <span><span class="tr">GİB · SGK · Ticaret Bak. · TÜİK — veri sahipliği korunur</span><span class="en">GİB · SGK · Ministry of Trade · TÜİK — data ownership preserved</span></span>
-      </div>
-      <div class="layer">
-        <b><span class="tr">2 · Şema Koordinasyon</span><span class="en">2 · Schema Coordination</span></b>
-        <span><span class="tr">CBDDO — Ortak Veri Sözlüğü, JSON Schema, sürümleme</span><span class="en">CBDDO — Common Data Dictionary, JSON Schema, versioning</span></span>
-      </div>
-      <div class="layer">
-        <b><span class="tr">3 · API Servis</span><span class="en">3 · API Service</span></b>
-        <span><span class="tr">RESTful GET · OpenAPI 3.0 · OAuth 2.0 · semver</span><span class="en">RESTful GET · OpenAPI 3.0 · OAuth 2.0 · semver</span></span>
-      </div>
-      <div class="layer">
-        <b><span class="tr">4 · Tüketim</span><span class="en">4 · Consumption</span></b>
-        <span><span class="tr">ERP · uyumluluk motorları · gateway birleştirmesi</span><span class="en">ERP · compliance engines · gateway consolidation</span></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    PDaaS —
-    <span class="tr">Parametrik Veri Servisi</span>
-    <span class="en">Parametric Data Service</span>
-    · <span class="tr">Teknik Kavram Kanıtı</span><span class="en">Technical Proof-of-Concept</span> · v2.0.0<br>
-    <span style="color:#5c6c96">
-      <span class="tr">Veriler sentetiktir; resmî değerler için ilgili kurum kaynaklarına başvurun.</span>
-      <span class="en">Data is synthetic; refer to official agency sources for authoritative values.</span>
-    </span>
-  </div>
-</footer>
+</main>
 
 <script>
-/* ═══════════════ i18n ═══════════════ */
-let LANG = 'tr';
-const OUTPUT_INIT = {
-  'single-output':       { tr: 'Hazır.', en: 'Ready.' },
-  'consolidated-output': { tr: 'Hazır.', en: 'Ready.' },
-};
-const outputTouched = {};
-
-const MERGED_LABELS = {
-  tr: { prodVat:'Ürün · KDV', prodSct:'Ürün · ÖTV', prodWh:'Ürün · Tevkifat',
-        svcVat:'Hizmet · KDV', svcWh:'Hizmet · Tevkifat',
-        occWorker:'Meslek · SGK işçi', occEmployer:'Meslek · SGK işveren',
-        occHours:'Haftalık azami', totalTime:'Toplam süre', hours:'saat' },
-  en: { prodVat:'Product · VAT', prodSct:'Product · SCT', prodWh:'Product · Withholding',
-        svcVat:'Service · VAT', svcWh:'Service · Withholding',
-        occWorker:'Occupation · Worker SGK', occEmployer:'Occupation · Employer SGK',
-        occHours:'Weekly max', totalTime:'Total time', hours:'hours' },
-};
-const HERO_RUN = { tr:'çalışıyor', en:'running' };
-const HERO_OFF = { tr:'offline',    en:'offline' };
-
-function setLang(lang){
-  LANG = lang;
-  document.documentElement.dataset.lang = lang;
-  document.documentElement.lang = lang;
-
-  document.querySelectorAll('#lang-toggle button').forEach(b=>{
-    b.classList.toggle('active', b.dataset.langBtn === lang);
-  });
-  document.querySelectorAll('#domain option').forEach(o=>{ o.textContent = o.dataset[lang]; });
-  const codeEl = document.getElementById('code');
-  codeEl.placeholder = codeEl.dataset[lang + 'Ph'];
-
-  document.querySelectorAll('[data-tr][data-en]').forEach(el=>{
-    if (el.tagName === 'BUTTON' || el.tagName === 'OPTION') {
-      if (el.dataset[lang]) el.textContent = el.dataset[lang];
-    }
-  });
-
-  Object.keys(OUTPUT_INIT).forEach(id=>{
-    if (!outputTouched[id]) {
-      const el = document.getElementById(id);
-      if (el) el.textContent = OUTPUT_INIT[id][lang];
-    }
-  });
-
-  if (document.getElementById('merged-card').style.display === 'block' && window.__lastConsolidated) {
-    renderMergedCard(window.__lastConsolidated);
-  }
-
-  const hs = document.getElementById('hero-stats');
-  const hsEn = document.getElementById('hero-stats-en');
-  if (hs && hsEn) {
-    if (hs.dataset.state === 'offline') { hs.textContent = HERO_OFF.tr; hsEn.textContent = HERO_OFF.en; }
-    else if (hs.dataset.state === 'running') { hs.textContent = HERO_RUN.tr; hsEn.textContent = HERO_RUN.en; }
-  }
-}
-document.querySelectorAll('#lang-toggle button').forEach(b=>{
-  b.addEventListener('click', ()=> setLang(b.dataset.langBtn));
-});
-
-/* ═══════════════ API İSTEMCİSİ ═══════════════ */
+/* Aynı sunucuda çalışıyorsa boş bırak. Farklı sunucuda tam adres yaz: 'https://ornek.com' */
 const API_BASE = '';
-async function api(path){
-  const r = await fetch(API_BASE + path, {headers:{'Accept':'application/json'}});
-  const body = await r.json().catch(()=>({error:'invalid json'}));
-  return {status:r.status, body};
+
+const VARLIKLAR = [
+  {id:'gtip', ad:'Ürün (GTİP)'},
+  {id:'cpc',  ad:'Hizmet (CPC)'},
+  {id:'isco', ad:'Meslek (ISCO)'},
+  {id:'nace', ad:'Faaliyet (NACE)'},
+];
+const VERGILER = [
+  {ad:'Damga vergisi',            yol:'/api/v1/tax/stamp-duty'},
+  {ad:'Gelir vergisi dilimleri',  yol:'/api/v1/tax/income-brackets'},
+  {ad:'ÖTV (araç)',               yol:'/api/v1/tax/sct-vehicle'},
+  {ad:'KDV oranları',             yol:'/api/v1/tax/vat-rates'},
+];
+
+/* ───────── yardımcılar ───────── */
+const $ = id => document.getElementById(id);
+function el(tag, attrs, ...cocuk){
+  const e = document.createElement(tag);
+  for (const [k,v] of Object.entries(attrs || {})){
+    if (k === 'class') e.className = v;
+    else if (k.startsWith('on')) e.addEventListener(k.slice(2), v);
+    else e.setAttribute(k, v);
+  }
+  for (const c of cocuk) if (c != null) e.append(c.nodeType ? c : document.createTextNode(c));
+  return e;
 }
-
-/* ═══════════════ AĞAÇ — DURUM ═══════════════ */
-const AGAC = {
-  gtip: { dallar:null, kayitlar:{}, acik:new Set() },
-  cpc:  { dallar:null, kayitlar:{}, acik:new Set() },
-  isco: { dallar:null, kayitlar:{}, acik:new Set() },
-  nace: { dallar:null, kayitlar:{}, acik:new Set() },
-};
-
-/* Varlık → URL eşlemesi */
-const VARLIK_URL = {
-  gtip:  { kod: (k) => `/api/v1/product/${k}`    },
-  cpc:   { kod: (k) => `/api/v1/service/${k}`    },
-  isco:  { kod: (k) => `/api/v1/occupation/${k}` },
-  nace:  { kod: (k) => `/api/v1/nace/${k}`       },
-  damga: { kod: (k) => k ? `/api/v1/tax/stamp-duty/${k}` : `/api/v1/tax/stamp-duty` },
-  gelir: { kod: (k) => k ? `/api/v1/tax/income-brackets/${k}` : `/api/v1/tax/income-brackets` },
-  otv:   { kod: (k) => k ? `/api/v1/tax/sct-vehicle/${k}` : `/api/v1/tax/sct-vehicle` },
-};
-
-/* ═══════════════ AĞAÇ — AÇ/KAPA ═══════════════ */
-function toggleMinistry(headEl){ headEl.parentElement.classList.toggle('open'); }
-
-async function toggleCategory(headEl, kategori){
-  const kat = headEl.parentElement;
-  const acik = kat.classList.toggle('open');
-  const bodyEl = kat.querySelector('.node-body');
-
-  if (!acik) return;
-
-  // Daha önce yüklendiyse dokunma
-  if (kat.dataset.yuklendi === '1') return;
-
-  bodyEl.innerHTML = `<div class="b-yukleniyor">Yükleniyor…</div>`;
-
-  // ═══ Varlık bazlı ağaç (GTİP, CPC, ISCO, NACE) ═══
-  if (['gtip','cpc','isco','nace'].includes(kategori)){
-    try {
-      const {status, body} = await api(`/api/v1/${kategori}/agac`);
-      if (status !== 200 || !body.dallar || body.dallar.length === 0){
-        bodyEl.innerHTML = `<div class="b-yukleniyor">${LANG==='tr'?'Kayıt yok':'No records'}</div>`;
-        return;
-      }
-      AGAC[kategori].dallar = body.dallar;
-      document.getElementById(`sayi-${kategori}`).textContent = body.dallar.length;
-
-      bodyEl.innerHTML = body.dallar.map(d => `
-        <div class="node-branch" data-v="${kategori}" data-dal="${d.dal}">
-          <div class="branch-head" onclick="toggleBranch(this, '${kategori}', '${d.dal}')">
-            <svg class="b-chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-            <span class="b-kod">${d.dal}</span>
-            <span class="b-ad" title="${d.ad || ''}">${d.ad || '—'}</span>
-            <span class="b-sayi">${d.kayit_sayisi}</span>
-          </div>
-          <div class="branch-body" id="branch-body-${kategori}-${d.dal}"></div>
-        </div>
-      `).join('');
-
-      kat.dataset.yuklendi = '1';
-    } catch(e){
-      bodyEl.innerHTML = `<div class="b-yukleniyor">API hatası: ${e.message}</div>`;
-    }
-    return;
-  }
-
-  // ═══ Vergi ağacı (Damga, Gelir, ÖTV) ═══
-  if (['damga','gelir','otv'].includes(kategori)){
-    const url = VARLIK_URL[kategori].kod('');
-    try {
-      const {status, body} = await api(url);
-      if (status !== 200 || !body.data){
-        bodyEl.innerHTML = `<div class="b-yukleniyor">${LANG==='tr'?'Kayıt yok':'No records'}</div>`;
-        return;
-      }
-      const kayitlar = body.data;
-      document.getElementById(`sayi-${kategori}`).textContent = kayitlar.length;
-
-      bodyEl.innerHTML = kayitlar.map(x => {
-        const kod = x.kod || '';
-        const ad  = x.aciklama || x.ad || '';
-        return `
-          <div class="node-endpoint" data-path="${VARLIK_URL[kategori].kod(kod)}">
-            <span class="method">GET</span>
-            <span class="ep-path">${kod}</span>
-            <span class="ep-tag" title="${ad}">${ad.length > 32 ? ad.slice(0,32)+'…' : ad}</span>
-          </div>
-        `;
-      }).join('');
-
-      // Endpoint click handler bağla
-      bodyEl.querySelectorAll('.node-endpoint').forEach(el=>{
-        el.addEventListener('click', ()=>{
-          document.querySelectorAll('.node-endpoint').forEach(x=>x.classList.remove('active'));
-          el.classList.add('active');
-          loadEndpoint(el.dataset.path);
-        });
-      });
-
-      kat.dataset.yuklendi = '1';
-    } catch(e){
-      bodyEl.innerHTML = `<div class="b-yukleniyor">API hatası: ${e.message}</div>`;
-    }
-    return;
-  }
-
-  // Sistem kategorisi zaten statik
-  kat.dataset.yuklendi = '1';
-}
-
-/* ═══════════════ DAL (FASIL) — KODLARI YÜKLE ═══════════════ */
-async function toggleBranch(headEl, varlik, dalKodu){
-  const br = headEl.parentElement;
-  const acik = br.classList.toggle('open');
-  const bodyEl = br.querySelector('.branch-body');
-  const k = String(dalKodu);
-
-  if (!acik) {
-    AGAC[varlik].acik.delete(k);
-    return;
-  }
-
-  AGAC[varlik].acik.add(k);
-
-  // Daha önce yüklendiyse sadece göster
-  if (AGAC[varlik].kayitlar[k]){
-    renderBranchCodes(bodyEl, varlik, k);
-    return;
-  }
-
-  bodyEl.innerHTML = `<div class="b-yukleniyor">Yükleniyor…</div>`;
-
-  try {
-    const {status, body} = await api(`/api/v1/${varlik}/dal/${k}`);
-    if (status !== 200 || !body.kayitlar){
-      bodyEl.innerHTML = `<div class="b-yukleniyor">${LANG==='tr'?'Kayıt yok':'No records'}</div>`;
-      return;
-    }
-    AGAC[varlik].kayitlar[k] = body.kayitlar;
-    renderBranchCodes(bodyEl, varlik, k);
-  } catch(e){
-    bodyEl.innerHTML = `<div class="b-yukleniyor">API hatası: ${e.message}</div>`;
-  }
-}
-
-function renderBranchCodes(bodyEl, varlik, dalKodu){
-  const kayitlar = AGAC[varlik].kayitlar[dalKodu] || [];
-  if (kayitlar.length === 0){
-    bodyEl.innerHTML = `<div class="b-yukleniyor">${LANG==='tr'?'Kayıt yok':'No records'}</div>`;
-    return;
-  }
-
-  bodyEl.innerHTML = kayitlar.map(x => {
-    const kod = x.kod || '';
-    const ad  = x.aciklama || x.ad || '';
-    const path = VARLIK_URL[varlik].kod(kod);
-    return `
-      <div class="node-endpoint" data-path="${path}">
-        <span class="method">GET</span>
-        <span class="ep-path">${kod}</span>
-        <span class="ep-tag" title="${ad}">${ad.length > 28 ? ad.slice(0,28)+'…' : ad}</span>
-      </div>
-    `;
-  }).join('');
-
-  bodyEl.querySelectorAll('.node-endpoint').forEach(el=>{
-    el.addEventListener('click', ()=>{
-      document.querySelectorAll('.node-endpoint').forEach(x=>x.classList.remove('active'));
-      el.classList.add('active');
-      loadEndpoint(el.dataset.path);
-    });
-  });
-}
-
-/* ═══════════════ MEVCUT SİSTEM ENDPOINTLERİ (statik) ═══════════════ */
-document.querySelectorAll('.node-category[data-c="sistem"] .node-endpoint').forEach(el=>{
-  el.addEventListener('click', ()=>{
-    document.querySelectorAll('.node-endpoint').forEach(x=>x.classList.remove('active'));
-    el.classList.add('active');
-    loadEndpoint(el.dataset.path);
-  });
-});
-
-/* ═══════════════ JSON YÜKLEME ═══════════════ */
-let CURRENT_PATH = null;
-
-async function loadEndpoint(path){
-  const out    = document.getElementById('json-output');
-  const empty  = document.getElementById('json-empty');
-  const header = document.getElementById('json-header');
-
-  empty.style.display = 'none';
-  out.style.display = 'block';
-  header.style.display = 'flex';
-
-  document.getElementById('jh-url').textContent = path;
-  document.getElementById('jh-status').textContent = '…';
-  document.getElementById('jh-time').textContent = '…';
-  document.getElementById('jh-source').innerHTML = '<b>—</b>';
-  out.textContent = `// GET ${path}\n// …`;
-
-  CURRENT_PATH = path;
-
+async function getir(yol){
+  const t0 = performance.now();
   try{
-    const t0 = performance.now();
-    const {status, body} = await api(path);
-    const ms = (performance.now()-t0).toFixed(1);
-    document.getElementById('jh-status').textContent = status;
-    document.getElementById('jh-time').textContent = ms;
-    const src = body.service || body.publisher || body.endpoint || '';
-    document.getElementById('jh-source').innerHTML = src ? '<b>' + src + '</b>' : '';
-    out.textContent = `// GET ${path}\n// HTTP ${status} · ${ms} ms\n\n` + JSON.stringify(body, null, 2);
-  }catch(e){
-    document.getElementById('jh-status').textContent = 'ERR';
-    document.getElementById('jh-time').textContent = '—';
-    out.textContent = '// ' + (LANG === 'tr' ? 'Hata: ' : 'Error: ') + e.message;
+    const r = await fetch(API_BASE + yol);
+    const body = await r.json().catch(() => null);
+    return {ok:r.ok, status:r.status, ms:Math.round(performance.now() - t0), body};
+  }catch(_){
+    return {ok:false, status:0, ms:0, body:null};
   }
 }
-
-function refreshCurrent(){ if (CURRENT_PATH) loadEndpoint(CURRENT_PATH); }
-function copyJson(){
-  const out = document.getElementById('json-output');
-  if (!out || !out.textContent) return;
-  navigator.clipboard.writeText(out.textContent).then(()=>{
-    const btn = event.target; const prev = btn.textContent;
-    btn.textContent = LANG === 'tr' ? '✓ Kopyalandı' : '✓ Copied';
-    setTimeout(()=>{ btn.textContent = prev; }, 1200);
-  });
+const sayi = n => (n == null ? '–' : Number(n).toLocaleString('tr-TR'));
+function hataMetni(s){
+  if (s.status === 0) return 'Sunucuya ulaşılamadı.';
+  const d = s.body && s.body.detail;
+  return `Hata ${s.status}${d ? ': ' + (typeof d === 'string' ? d : JSON.stringify(d)) : ''}`;
 }
+function nokta(durum){ return el('span', {class:'dot ' + (durum || '')}); }
 
-/* ═══════════════ HERO STATS ═══════════════ */
-(async ()=>{
-  const hs   = document.getElementById('hero-stats');
-  const hsEn = document.getElementById('hero-stats-en');
-  try{
-    const {body} = await api('/stats');
-    document.getElementById('s-avg').textContent = (body.avg_processing_ms ?? '4.77') + ' ms';
-    document.getElementById('s-max').textContent = (body.max_processing_ms ?? '8') + ' ms';
-    hs.dataset.state = 'running'; hs.textContent = HERO_RUN.tr; hsEn.textContent = HERO_RUN.en;
-  }catch{
-    hs.dataset.state = 'offline'; hs.textContent = HERO_OFF.tr; hsEn.textContent = HERO_OFF.en;
+/* Kayıt listesini tabloya çevirir (iç içe nesneler kısaltılır) */
+function tabloYap(kayitlar, limit = 50){
+  if (!Array.isArray(kayitlar) || !kayitlar.length) return el('p', {class:'not'}, 'Kayıt yok.');
+  const ornek = kayitlar.slice(0, 20);
+  const sutunlar = [];
+  for (const k of ornek) for (const alan of Object.keys(k)){
+    if (!sutunlar.includes(alan)) sutunlar.push(alan);
   }
-})();
-
-/* ═══════════════ TEK EKSEN SORGUSU ═══════════════ */
-async function querySingle(){
-  const domain = document.getElementById('domain').value;
-  const code   = document.getElementById('code').value.trim();
-  const out    = document.getElementById('single-output');
-
-  let path;
-  const taxDomains = ['stamp-duty', 'income-brackets', 'sct-vehicle'];
-  if (taxDomains.includes(domain)) {
-    path = `/api/v1/tax/${domain}` + (code ? '/' + encodeURIComponent(code) : '');
-  } else if (domain === 'nace') {
-    path = `/api/v1/nace/${encodeURIComponent(code)}`;
-  } else {
-    path = `/api/v1/${domain}/${encodeURIComponent(code)}`;
-  }
-
-  outputTouched['single-output'] = true;
-  out.textContent = `GET ${path} …`;
-  try{
-    const t0 = performance.now();
-    const {status, body} = await api(path);
-    const ms = (performance.now()-t0).toFixed(1);
-    out.textContent = `// GET ${path}\n// HTTP ${status} · ${ms} ms\n\n` + JSON.stringify(body, null, 2);
-  }catch(e){
-    out.textContent = '// ' + (LANG === 'tr' ? 'Hata: ' : 'Error: ') + e.message;
-  }
-}
-document.getElementById('domain').addEventListener('change', e=>{
-  const map = {
-    product:'2702.10', service:'883', occupation:'8111',
-    'stamp-duty':'DV-I-A-2', 'income-brackets':'GV-UCRET-1',
-    'sct-vehicle':'OTV-87.03-1600-1', 'nace':'B'
+  const goster = sutunlar.slice(0, 7);
+  const hucre = v => {
+    if (v == null) return '';
+    if (typeof v === 'object') return Array.isArray(v) ? `[${v.length}]` : '{…}';
+    return String(v);
   };
-  document.getElementById('code').value = map[e.target.value];
+  const tablo = el('table', {},
+    el('thead', {}, el('tr', {}, ...goster.map(s => el('th', {}, s)))),
+    el('tbody', {}, ...kayitlar.slice(0, limit).map(k =>
+      el('tr', {}, ...goster.map(s => { const t = hucre(k[s]); return el('td', {title:t}, t); }))
+    ))
+  );
+  const kap = el('div', {class:'kaydir'}, tablo);
+  const ek = kayitlar.length > limit
+    ? el('p', {class:'not', style:'margin-top:8px'}, `İlk ${limit} kayıt gösteriliyor (toplam ${sayi(kayitlar.length)}).`)
+    : null;
+  return el('div', {}, kap, ek);
+}
+
+/* Satırın altına açılır detay satırı ekler */
+function detayAc(tr, kolonSayisi, icerikUret){
+  if (tr._detay){ tr._detay.remove(); tr._detay = null; tr._btn.textContent = 'Aç'; return; }
+  const td = el('td', {colspan:kolonSayisi});
+  const dtr = el('tr', {class:'detay'}, td);
+  tr.after(dtr);
+  tr._detay = dtr;
+  tr._btn.textContent = 'Kapat';
+  icerikUret(td);
+}
+
+/* ───────── durum çubuğu ───────── */
+async function durumYukle(){
+  const [h, s, v] = await Promise.all([getir('/health'), getir('/stats'), getir('/version-check')]);
+  $('saglik-nokta').className = 'dot ' + (h.ok ? 'ok' : 'bad');
+  $('saglik-metin').textContent = h.ok
+    ? `Çalışıyor · v${h.body.version}`
+    : 'Ulaşılamıyor';
+  if (s.ok){
+    $('st-ort').textContent = s.body.avg_processing_ms + ' ms';
+    $('st-istek').textContent = sayi(s.body.request_count);
+    const k = s.body.katalog || {};
+    $('st-bak').textContent = sayi(k.toplam_bakanlik);
+    $('st-dosya').textContent = sayi(k.toplam_dosya);
+  }
+  if (v.ok) $('yapi').textContent = v.body.build;
+}
+
+/* ───────── kod hiyerarşileri ───────── */
+function varlikSatiri(v){
+  const yol = `/api/v1/${v.id}/agac`;
+  const cDal = el('td', {class:'sayi'}, '…');
+  const cKayit = el('td', {class:'sayi'}, '…');
+  const cMs = el('td', {class:'sayi gizle-kucuk'}, '');
+  const cAd = el('td', {class:'ad'}, nokta(), v.ad);
+  const btn = el('button', {class:'btn ikincil kucuk', disabled:'disabled'}, 'Aç');
+  const tr = el('tr', {},
+    cAd, el('td', {class:'yol mono gizle-kucuk'}, yol), cDal, cKayit, cMs, el('td', {}, btn));
+  tr._btn = btn;
+
+  getir(yol).then(s => {
+    cAd.firstChild.className = 'dot ' + (s.ok ? 'ok' : 'bad');
+    cMs.textContent = s.ms;
+    if (!s.ok){ cDal.textContent = '–'; cKayit.textContent = '–'; cDal.title = hataMetni(s); return; }
+    const dallar = s.body.dallar || [];
+    cDal.textContent = sayi(s.body.toplam_dal);
+    cKayit.textContent = sayi(dallar.reduce((t, d) => t + (d.kayit_sayisi || 0), 0));
+    btn.disabled = false;
+    btn.addEventListener('click', () => detayAc(tr, 6, td => dallarGoster(td, v, dallar)));
+  });
+  return tr;
+}
+
+function dallarGoster(td, v, dallar){
+  const kutu = el('div', {});
+  const chips = el('div', {class:'dallar'});
+  const sonuc = el('div', {}, el('p', {class:'not'}, 'Bir dal seçin.'));
+  dallar.forEach(d => {
+    const c = el('button', {class:'dal', title:d.ad || ''}, d.dal);
+    c.addEventListener('click', async () => {
+      chips.querySelectorAll('.dal').forEach(x => x.classList.remove('secili'));
+      c.classList.add('secili');
+      sonuc.replaceChildren(el('p', {class:'not'}, 'Yükleniyor…'));
+      const yol = `/api/v1/${v.id}/dal/${encodeURIComponent(d.dal)}`;
+      const s = await getir(yol);
+      if (!s.ok){ sonuc.replaceChildren(el('p', {class:'not hata'}, hataMetni(s))); return; }
+      sonuc.replaceChildren(
+        el('p', {class:'not', style:'margin-bottom:8px'},
+          `${d.ad || d.dal} · ${sayi(s.body.toplam)} kayıt · `,
+          el('a', {href:API_BASE + yol, target:'_blank', rel:'noopener'}, 'JSON olarak aç')),
+        tabloYap(s.body.kayitlar));
+    });
+    chips.append(c);
+  });
+  kutu.append(chips, sonuc);
+  td.append(kutu);
+}
+
+/* ───────── vergi servisleri ───────── */
+function vergiSatiri(v){
+  const cAd = el('td', {class:'ad'}, nokta(), v.ad);
+  const cKayit = el('td', {class:'sayi'}, '…');
+  const cSurum = el('td', {class:'gizle-kucuk'}, '');
+  const cMs = el('td', {class:'sayi gizle-kucuk'}, '');
+  const btn = el('button', {class:'btn ikincil kucuk', disabled:'disabled'}, 'Aç');
+  const tr = el('tr', {}, cAd, el('td', {class:'yol mono gizle-kucuk'}, v.yol), cKayit, cSurum, cMs, el('td', {}, btn));
+  tr._btn = btn;
+
+  getir(v.yol).then(s => {
+    cAd.firstChild.className = 'dot ' + (s.ok ? 'ok' : 'bad');
+    cMs.textContent = s.ms;
+    if (!s.ok){ cKayit.textContent = '–'; cKayit.title = hataMetni(s); return; }
+    cKayit.textContent = sayi(s.body.toplam);
+    cSurum.textContent = s.body.version_id || '';
+    btn.disabled = false;
+    btn.addEventListener('click', () => detayAc(tr, 6, td => {
+      td.append(
+        el('p', {class:'not', style:'margin-bottom:8px'},
+          [s.body.publisher, s.body.legal_basis_doc, s.body.valid_from && `Yürürlük: ${s.body.valid_from}`]
+            .filter(Boolean).join(' · ') + ' · ',
+          el('a', {href:API_BASE + v.yol, target:'_blank', rel:'noopener'}, 'JSON olarak aç')),
+        tabloYap(s.body.data));
+    }));
+  });
+  return tr;
+}
+
+/* ───────── birleşik işlem ───────── */
+function birlesikSatiri(){
+  const yol = '/api/v1/consolidated';
+  const cAd = el('td', {class:'ad'}, nokta(), 'Konsolide işlem');
+  const cMs = el('td', {class:'sayi'}, '…');
+  const btn = el('button', {class:'btn ikincil kucuk', disabled:'disabled'}, 'Aç');
+  const tr = el('tr', {}, cAd, el('td', {class:'yol mono gizle-kucuk'}, yol), cMs, el('td', {}, btn));
+  tr._btn = btn;
+  getir(yol).then(s => {
+    cAd.firstChild.className = 'dot ' + (s.ok ? 'ok' : 'bad');
+    cMs.textContent = s.ok ? ((s.body.execution_time_ms ?? s.ms) + ' ms') : '–';
+    if (!s.ok) return;
+    btn.disabled = false;
+    btn.addEventListener('click', () => detayAc(tr, 4, td =>
+      td.append(el('pre', {}, JSON.stringify(s.body.data, null, 2)))));
+  });
+  return tr;
+}
+
+/* ───────── katalog (manifest.json) ───────── */
+async function manifestYukle(){
+  const kap = $('bak-liste');
+  const s = await getir('/manifest.json');
+  if (!s.ok || !s.body || !s.body.bakanliklar){
+    kap.replaceChildren(el('p', {class:'not'},
+      'manifest.json sunucudan okunamadı. main.py içine /manifest.json yolunu eklediğinizde katalog burada listelenir.'));
+    return;
+  }
+  kap.replaceChildren(...Object.entries(s.body.bakanliklar).map(([anahtar, b]) =>
+    el('details', {class:'bak'},
+      el('summary', {}, el('b', {}, b.ad), el('span', {class:'not'}, `${b.dosya_sayisi} dosya`)),
+      el('ul', {}, ...(b.dosyalar || []).map(d => el('li', {}, `${d.ad} — `, el('span', {class:'mono'}, `${anahtar}/${d.dosya}`))))
+    )));
+}
+
+/* ───────── kod sorgula ───────── */
+const SORGU_YOL = {
+  product:    k => `/api/v1/product/${encodeURIComponent(k)}`,
+  service:    k => `/api/v1/service/${encodeURIComponent(k)}`,
+  occupation: k => `/api/v1/occupation/${encodeURIComponent(k)}`,
+  nace:       k => `/api/v1/nace/${encodeURIComponent(k)}`,
+};
+async function sorgula(){
+  const tur = $('sorgu-tur').value;
+  const kod = $('sorgu-kod').value.trim();
+  const kap = $('sorgu-sonuc');
+  if (!kod){ kap.replaceChildren(el('p', {class:'not hata'}, 'Bir kod girin.')); return; }
+  let yol = SORGU_YOL[tur](kod);
+  if ($('sorgu-iliski').checked && tur !== 'nace') yol += '?katman=iliski';
+  kap.replaceChildren(el('p', {class:'not'}, 'Sorgulanıyor…'));
+  const s = await getir(yol);
+  if (!s.ok){ kap.replaceChildren(el('p', {class:'not hata'}, hataMetni(s))); return; }
+  const b = s.body;
+  const ozet = [b.publisher, b.legal_basis_doc, b.version_id && `Sürüm ${b.version_id}`, `${s.ms} ms`]
+    .filter(Boolean).join(' · ');
+  kap.replaceChildren(
+    el('div', {class:'ozet'}, ozet),
+    el('pre', {}, JSON.stringify(b.data, null, 2)));
+}
+
+$('sorgu-form').addEventListener('submit', e => { e.preventDefault(); sorgula(); });
+$('sorgu-tur').addEventListener('change', e => {
+  $('sorgu-kod').value = e.target.selectedOptions[0].dataset.ornek;
 });
 
-/* ═══════════════ CONSOLIDATED ═══════════════ */
-function renderMergedCard(body){
-  const data = body.data || {};
-  const cp   = data.consolidated_parameters || {};
-  const p = cp.product || {}, s = cp.service || {}, o = cp.occupation || {};
-  const L = MERGED_LABELS[LANG];
-  document.getElementById('merged-kv').innerHTML = `
-    <div><small>${L.prodVat}</small><b>%${p.vat_rate ?? '—'}</b></div>
-    <div><small>${L.prodSct}</small><b>%${p.sct_rate ?? '—'}</b></div>
-    <div><small>${L.prodWh}</small><b>${p.vat_withholding_rate ?? '—'}</b></div>
-    <div><small>${L.svcVat}</small><b>%${s.vat_rate ?? '—'}</b></div>
-    <div><small>${L.svcWh}</small><b>${s.vat_withholding_rate ?? '—'}</b></div>
-    <div><small>${L.occWorker}</small><b>%${o.sgk_worker_total_share ?? '—'}</b></div>
-    <div><small>${L.occEmployer}</small><b>%${o.sgk_employer_total_share ?? '—'}</b></div>
-    <div><small>${L.occHours}</small><b>${o.weekly_max_hours ?? '—'} ${L.hours}</b></div>
-    <div><small>${L.totalTime}</small><b>${data.execution_time_ms ?? '—'} ms</b></div>
-  `;
-  document.getElementById('merged-card').style.display = 'block';
-}
-async function runConsolidate(){
-  const out = document.getElementById('consolidated-output');
-  outputTouched['consolidated-output'] = true;
-  out.textContent = 'GET /api/v1/consolidated …';
-  const axes = ['ax-product','ax-service','ax-occupation'];
-  axes.forEach(id=>document.getElementById(id).classList.remove('active'));
-  try{
-    const t0 = performance.now();
-    const {status, body} = await api('/api/v1/consolidated');
-    const ms = (performance.now()-t0).toFixed(1);
-    for(const id of axes){
-      document.getElementById(id).classList.add('active');
-      await new Promise(r=>setTimeout(r, 180));
-    }
-    out.textContent = `// GET /api/v1/consolidated\n// HTTP ${status} · ${ms} ms\n\n` + JSON.stringify(body, null, 2);
-    window.__lastConsolidated = body;
-    renderMergedCard(body);
-  }catch(e){
-    out.textContent = '// ' + (LANG === 'tr' ? 'Hata: ' : 'Error: ') + e.message;
-  }
-}
-
-/* ═══════════════ BAŞLAT ═══════════════ */
-setLang('tr');
+/* ───────── başlat ───────── */
+durumYukle();
+$('tb-varlik').replaceChildren(...VARLIKLAR.map(varlikSatiri));
+$('tb-vergi').replaceChildren(...VERGILER.map(vergiSatiri));
+$('tb-birlesik').replaceChildren(birlesikSatiri());
+manifestYukle();
+sorgula();
 </script>
 </body>
 </html>
