@@ -1170,7 +1170,7 @@ document.getElementById('file-input').addEventListener('change', e=>{
   const mod = e.target.dataset.mod || 'tek';
   if (!file) return;
   const r = new FileReader();
-  r.onload = ev=>{
+    r.onload = async ev=>{
     try{
       const j = JSON.parse(ev.target.result);
       if (mod === 'tek'){
