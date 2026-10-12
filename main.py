@@ -147,9 +147,110 @@ def ana_sayfa():
         return {"service": "PDaaS API", "version": "2.1.0", "docs": "/docs"}
     return FileResponse(index_yolu, media_type="text/html")
 
+# ═══════════════════════════════════════════════════════════════
+# KATALOG MANİFESTİ — diskten canlı üretilir
+# ═══════════════════════════════════════════════════════════════
+# Elle bakılan tek yer: klasör anahtarı → (ad, kısa ad, açıklama)
+_BAKANLIK_META = {
+    "csgb":    ("T.C. Çalışma ve Sosyal Güvenlik Bakanlığı", "ÇSGB",
+                "Asgari ücret, prim oranları, SGK belge türleri, işkolu kodları, İŞKUR meslek kodları vb."),
+    "csidb":   ("T.C. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı", "ÇŞİDB",
+                "Çevre ve Şehircilik ile ilgili referans veriler, kalite parametreleri."),
+    "etkb":    ("T.C. Enerji ve Tabii Kaynaklar Bakanlığı", "ETKB",
+                "Maden ruhsatları ve enerji sektörü kalite parametreleri."),
+    "hvmb":    ("T.C. Hazine ve Maliye Bakanlığı", "HMB",
+                "Vergi oranları, damga vergisi, gelir vergisi dilimleri, ÖTV, KDV, faiz oranları."),
+    "ticaret": ("T.C. Ticaret Bakanlığı", "TİCARET",
+                "İthalat/ihracat rejimleri, gözetim, kota, ürün güvenliği, GTİP, CPC ve ISCO kodları."),
+}
+_MANIFEST_ATLA = {"manifest.json", "schema.json"}
+
+
+def _ad_anahtari(s: str) -> str:
+    """'gelir-vergisi-dilimleri' ve 'gelirvergisidilimleri' aynı anahtara iner."""
+    return s.lower().replace("-", "").replace("_", "").replace(" ", "")
+
+
+def _bakanlik_klasoru(anahtar: str) -> Optional[Path]:
+    for y in (f"ham/{anahtar}", anahtar):
+        p = KOK / y
+        if p.is_dir():
+            return p
+    return None
+
+
+def manifest_uret() -> dict:
+    """Klasörleri tarayıp manifesti üretir. manifest.json yalnızca üst veri şablonudur;
+    dosya adları (görünen ad, kategori, join) varsa şablondan alınır, yoksa diskten türetilir."""
+    sablon: dict = {}
+    sp = KOK / "manifest.json"
+    if sp.exists():
+        try:
+            sablon = json.loads(sp.read_text(encoding="utf-8-sig"))
+        except json.JSONDecodeError:
+            sablon = {}
+
+    bakanliklar: Dict[str, Any] = {}
+    toplam_dosya = toplam_kayit = 0
+
+    for anahtar, (ad, kisa, aciklama) in _BAKANLIK_META.items():
+        klasor = _bakanlik_klasoru(anahtar)
+        if not klasor:
+            continue
+
+        # Şablondaki girişleri normalize ad ile eşle (tire/altçizgi farkı sorun olmasın)
+        sablon_dosyalari = {}
+        for d in (sablon.get("bakanliklar", {}).get(anahtar, {}).get("dosyalar") or []):
+            if d.get("dosya"):
+                sablon_dosyalari[_ad_anahtari(Path(d["dosya"]).with_suffix("").as_posix())] = d
+
+        dosyalar = []
+        for f in sorted(klasor.rglob("*.json")):
+            if f.name in _MANIFEST_ATLA:
+                continue
+            try:
+                v = json.loads(f.read_text(encoding="utf-8-sig"))
+            except Exception:
+                continue
+            rel = f.relative_to(klasor)
+            meta = v.get("meta", {}) if isinstance(v, dict) else {}
+            kayit_sayisi = len(_kayitlari_al(v))
+            toplam_kayit += kayit_sayisi
+            s = sablon_dosyalari.get(_ad_anahtari(rel.with_suffix("").as_posix()), {})
+            giris = {
+                "ad": s.get("ad") or meta.get("ad") or meta.get("baslik")
+                      or f.stem.replace("_", " ").replace("-", " ").title(),
+                "dosya": rel.as_posix(),
+                "kayit_sayisi": kayit_sayisi,
+                "zaman_bazli": bool(meta.get("gecerlilik_baslangic")) if meta else s.get("zaman_bazli", False),
+            }
+            for opsiyonel in ("kategori", "join"):
+                if s.get(opsiyonel):
+                    giris[opsiyonel] = s[opsiyonel]
+            if meta.get("surum"):
+                giris["surum"] = meta["surum"]
+            dosyalar.append(giris)
+
+        toplam_dosya += len(dosyalar)
+        bakanliklar[anahtar] = {
+            "ad": ad, "kisa_ad": kisa, "aciklama": aciklama,
+            "dosya_sayisi": len(dosyalar), "dosyalar": dosyalar,
+        }
+
+    cikti = {k: v for k, v in sablon.items() if k not in ("bakanliklar", "istatistik", "guncelleme")}
+    cikti["guncelleme"] = _zaman_damgasi()
+    cikti["bakanliklar"] = bakanliklar
+    cikti["istatistik"] = {
+        "toplam_bakanlik": len(bakanliklar),
+        "toplam_dosya": toplam_dosya,
+        "toplam_kayit": toplam_kayit,
+    }
+    return cikti
+
+
 @app.get("/manifest.json", include_in_schema=False)
 def manifest_dosyasi():
-    return FileResponse(KOK / "manifest.json", media_type="application/json")
+    return manifest_uret()
 
 @app.get("/schema.json", include_in_schema=False)
 def schema_dosyasi():
@@ -184,9 +285,8 @@ def health():
 @app.get("/stats")
 def stats():
     try:
-        manifest = dosya_oku("manifest.json")
-        katalog = manifest.get("istatistik", {})
-    except HTTPException:
+        katalog = manifest_uret().get("istatistik", {})
+    except Exception:
         katalog = {}
     r = _METRICS["requests"]
     avg = (_METRICS["total_ms"] / r) if r > 0 else 4.77
