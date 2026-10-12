@@ -4,6 +4,7 @@ FastAPI uygulaması: main.py
 """
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from pathlib import Path
 import json
 import time
@@ -20,12 +21,12 @@ app = FastAPI(
 )
 
 # ═══════════════════════════════════════════════════════════════
-# CORS — GitHub Pages'ten gelen isteklere izin ver
+# CORS
 # ═══════════════════════════════════════════════════════════════
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],        # Test aşaması; üretimde daraltılmalı
-    allow_credentials=False,    # allow_origins=["*"] ile True kullanılamaz
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["GET"],
     allow_headers=["*"],
 )
@@ -34,13 +35,10 @@ app.add_middleware(
 # YARDIMCILAR
 # ═══════════════════════════════════════════════════════════════
 KOK = Path(__file__).parent
-
-# Basit in-memory metrikler (process yeniden başlarsa sıfırlanır)
 _METRICS = {"requests": 0, "total_ms": 0.0, "max_ms": 0.0}
 
 
 def dosya_oku(rel_yol: str) -> dict:
-    """JSON dosyasını okur; yoksa 404 döndürür."""
     yol = KOK / rel_yol
     if not yol.exists():
         raise HTTPException(404, f"Veri dosyası bulunamadı: {rel_yol}")
@@ -48,16 +46,11 @@ def dosya_oku(rel_yol: str) -> dict:
 
 
 def _kayit_bul(kayitlar: list, alan_adlari: list, deger: str):
-    """
-    Kayıt listesi içinde verilen değeri, birden fazla olası alan adında arar.
-    Örn: alan_adlari = ["gtip_kodu", "kod"]
-    """
     hedef = str(deger).strip()
     for alan in alan_adlari:
         for k in kayitlar:
             if str(k.get(alan, "")).strip() == hedef:
                 return k
-    # Kısmi eşleşme (örn. "2702" → "2702.10")
     for alan in alan_adlari:
         for k in kayitlar:
             if str(k.get(alan, "")).strip().startswith(hedef):
@@ -77,25 +70,24 @@ def _metrik_kaydet(sure_ms: float):
 
 
 # ═══════════════════════════════════════════════════════════════
-# KÖK & SAĞLIK
+# KÖK — index.html sunulur (pdaas.com.tr → site)
 # ═══════════════════════════════════════════════════════════════
-@app.get("/")
-def kok():
-    return {
-        "service": "PDaaS API",
-        "version": "1.0.0",
-        "docs": "/docs",
-        "endpoints": [
-            "/health",
-            "/stats",
-            "/api/v1/product/{gtip_code}",
-            "/api/v1/service/{cpc_code}",
-            "/api/v1/occupation/{isco_code}",
-            "/api/v1/consolidated",
-        ],
-    }
+@app.get("/", include_in_schema=False)
+def ana_sayfa():
+    index_yolu = KOK / "index.html"
+    if not index_yolu.exists():
+        return {
+            "service": "PDaaS API",
+            "version": "1.0.0",
+            "message": "index.html bulunamadı; sadece API çalışıyor.",
+            "docs": "/docs",
+        }
+    return FileResponse(index_yolu, media_type="text/html")
 
 
+# ═══════════════════════════════════════════════════════════════
+# SAĞLIK & İSTATİSTİK
+# ═══════════════════════════════════════════════════════════════
 @app.get("/health")
 def health():
     return {
@@ -117,7 +109,7 @@ def stats():
         "avg_ms": round(avg, 2),
         "max_ms": round(_METRICS["max_ms"] or 8.0, 2),
         "request_count": r,
-        "katalog": katalog,          # ← manifest'ten gelen katalog bilgisi
+        "katalog": katalog,
         "source": "live" if r > 0 else "paper_poc_reference",
     }
 
@@ -127,13 +119,7 @@ def stats():
 # ═══════════════════════════════════════════════════════════════
 @app.get("/api/v1/product/{gtip_code}")
 def urun_getir(gtip_code: str):
-    """
-    GTİP koduna göre ürün parametrelerini döndürür.
-    Örnek: /api/v1/product/2702.10
-    Dosya: ticaret/gtip/{fasil}.json  (fasil = "27")
-    """
     t0 = time.perf_counter()
-
     temiz = gtip_code.replace(".", "").strip()
     if len(temiz) < 2:
         raise HTTPException(400, "Geçersiz GTİP kodu")
@@ -168,13 +154,7 @@ def urun_getir(gtip_code: str):
 # ═══════════════════════════════════════════════════════════════
 @app.get("/api/v1/service/{cpc_code}")
 def hizmet_getir(cpc_code: str):
-    """
-    CPC koduna göre hizmet parametrelerini döndürür.
-    Örnek: /api/v1/service/883
-    Dosya: ticaret/cpc/cpc-kodlari.json
-    """
     t0 = time.perf_counter()
-
     veri = dosya_oku("ticaret/cpc/cpc-kodlari.json")
 
     kayit = _kayit_bul(
@@ -204,21 +184,14 @@ def hizmet_getir(cpc_code: str):
 # ═══════════════════════════════════════════════════════════════
 @app.get("/api/v1/occupation/{isco_code}")
 def meslek_getir(isco_code: str):
-    """
-    ISCO-08 koduna göre meslek parametrelerini döndürür.
-    Örnek: /api/v1/occupation/8111
-    Dosya: ticaret/isco/8111.01.json
-    """
     t0 = time.perf_counter()
 
     isco_dir = KOK / "ticaret" / "isco"
     if not isco_dir.exists():
         raise HTTPException(404, "ISCO klasörü bulunamadı")
 
-    # Doğrudan dosya adı eşleşmesi veya prefix araması
     adaylar = sorted(isco_dir.glob(f"{isco_code}*.json"))
     if not adaylar:
-        # İçerikten ara: her dosyayı açıp isco_kodu alanına bak
         for f in isco_dir.glob("*.json"):
             try:
                 v = json.loads(f.read_text(encoding="utf-8"))
@@ -243,7 +216,7 @@ def meslek_getir(isco_code: str):
         isco_code,
     )
     if not kayit and veri.get("kayitlar"):
-        kayit = veri["kayitlar"][0]  # ilk kaydı ver
+        kayit = veri["kayitlar"][0]
 
     _metrik_kaydet((time.perf_counter() - t0) * 1000)
 
@@ -260,17 +233,12 @@ def meslek_getir(isco_code: str):
 
 
 # ═══════════════════════════════════════════════════════════════
-# ⭐ BİRLEŞTİRME (Consolidated Transaction Object)
+# BİRLEŞTİRME (Consolidated Transaction Object)
 # ═══════════════════════════════════════════════════════════════
 @app.get("/api/v1/consolidated")
 def birlestirilmis():
-    """
-    Üç ekseni (ürün + hizmet + meslek) tek çağrıda birleştirir.
-    PoC senaryosu: Maden işletmesi (GTİP 2702.10 / CPC 883 / ISCO 8111)
-    """
     t0 = time.perf_counter()
 
-    # Her ekseni ayrı ayrı çek
     try:
         urun = urun_getir("2702.10")["data"]
     except HTTPException:
@@ -284,7 +252,6 @@ def birlestirilmis():
     except HTTPException:
         meslek = {}
 
-    # Basit alan seçimi (JSON S4 formatına yakın)
     def _sec(kaynak: dict, *alanlar, default=None):
         for a in alanlar:
             if a in kaynak and kaynak[a] is not None:
