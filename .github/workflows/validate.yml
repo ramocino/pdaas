@@ -1,50 +1,52 @@
-name: PDAAS Şema Doğrulama
+name: PDaaS Şema Doğrulama
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    paths:
+      - '**.json'
+      - 'schema.json'
 
 jobs:
   validate:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Node.js kur
-        uses: actions/setup-node@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          node-version: '20'
+          python-version: '3.11'
 
-      - name: ajv-cli kur
-        run: npm install -g ajv-cli ajv-formats
+      - name: Install jsonschema
+        run: pip install jsonschema
 
-      - name: JSON geçerliliğini kontrol et
+      - name: Validate all JSON files
         run: |
-          echo "Geçersiz JSON dosyaları aranıyor..."
-          hata=0
-          for dosya in $(find . -name "*.json" -not -path "./node_modules/*" -not -path "./.github/*"); do
-            if ! jq empty "$dosya" 2>/dev/null; then
-              echo "❌ GEÇERSİZ JSON: $dosya"
-              hata=1
-            fi
-          done
-          if [ $hata -eq 1 ]; then exit 1; fi
-          echo "✅ Tüm JSON dosyaları geçerli"
+          python - <<'EOF'
+          import json, glob, sys
+          from jsonschema import Draft202012Validator
 
-      - name: Şemaya uygunluğu kontrol et
-        run: |
-          ajv validate \
-            -s schema.json \
-            -d "csgb/*.json" \
-            -d "csidb/*.json" \
-            -d "etkb/*.json" \
-            -d "hvmb/*.json" \
-            -d "ticaret/*.json" \
-            -d "ticaret/cpc/*.json" \
-            -d "ticaret/gtip/*.json" \
-            -d "ticaret/isco/*.json" \
-            --strict=false
+          with open("schema.json") as f:
+              schema = json.load(f)
+          validator = Draft202012Validator(schema)
+
+          errors = 0
+          for path in glob.glob("**/*.json", recursive=True):
+              if "node_modules" in path or ".git" in path:
+                  continue
+              if path in ("schema.json", "manifest.json"):
+                  continue  # bunlar kendine özel
+              try:
+                  with open(path, encoding="utf-8") as f:
+                      data = json.load(f)
+                  for err in validator.iter_errors(data):
+                      print(f"❌ {path}: {err.message}")
+                      errors += 1
+              except json.JSONDecodeError as e:
+                  print(f"❌ {path}: JSON parse hatası — {e}")
+                  errors += 1
+
+          if errors:
+              sys.exit(1)
+          print("✅ Tüm dosyalar şemaya uygun")
+          EOF
