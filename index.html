@@ -63,7 +63,7 @@
   a:hover{text-decoration:underline}
   :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
 
-  /* ---------- ÜST BAR ---------- */
+  /* ÜST BAR */
   .ust{
     height:60px;background:var(--sidebar);border-bottom:1px solid var(--line);
     display:flex;align-items:center;padding:0 20px;gap:14px;
@@ -84,10 +84,10 @@
   .sağlık.ok .nokta{background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 20%, transparent)}
   .sağlık.bad .nokta{background:var(--bad);box-shadow:0 0 0 3px color-mix(in srgb,var(--bad) 20%, transparent)}
 
-  /* ---------- ANA YERLEŞİM ---------- */
+  /* ANA YERLEŞİM */
   .uygulama{display:grid;grid-template-columns:340px 1fr;height:calc(100vh - 60px)}
 
-  /* ---------- SOL AĞAÇ ---------- */
+  /* SOL AĞAÇ */
   .agac{background:var(--sidebar);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
   .agac-ust{padding:20px 20px 12px}
   .agac-ust h2{font-size:1.05rem;font-weight:700;letter-spacing:-.01em;margin-bottom:2px}
@@ -125,10 +125,7 @@
   .bak-metin b{display:block;font-weight:650;line-height:1.2;font-size:.89rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .bak-metin small{display:block;font-size:.74rem;color:var(--muted);font-weight:500;margin-top:1px}
   .bak.acik .bak-metin small{color:color-mix(in srgb,var(--accent) 75%, var(--muted))}
-  .bak-ok{
-    flex:none;color:var(--soft);font-size:.7rem;
-    transition:transform .22s cubic-bezier(.4,0,.2,1);
-  }
+  .bak-ok{flex:none;color:var(--soft);font-size:.7rem;transition:transform .22s cubic-bezier(.4,0,.2,1)}
   .bak.acik .bak-ok{transform:rotate(90deg);color:var(--accent)}
 
   .bak-icerik{
@@ -169,7 +166,7 @@
   }
   .srv.aktif .srv-sayi{background:rgba(255,255,255,.2);color:#fff}
 
-  /* ---------- SAĞ DETAY ---------- */
+  /* SAĞ DETAY */
   .detay{overflow-y:auto;background:var(--bg);display:flex;flex-direction:column}
   .detay::-webkit-scrollbar{width:10px}
   .detay::-webkit-scrollbar-thumb{background:var(--line);border-radius:5px}
@@ -252,7 +249,7 @@
   .sekme-panel.aktif{display:block}
   @keyframes belir{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 
-  /* ---------- KOD KUTUSU ---------- */
+  /* KOD KUTUSU */
   .kod{background:#0d1117;border-radius:var(--r);overflow:hidden;box-shadow:var(--gölge);border:1px solid #1f2937}
   .kod-ust{
     display:flex;align-items:center;justify-content:space-between;
@@ -270,12 +267,9 @@
   }
   .kod-kopya:hover{background:rgba(255,255,255,.18);color:#fff}
   .kod-kopya.tamam{background:rgba(52,211,153,.2);color:#6ee7b7;border-color:transparent}
-  .kod pre{
-    margin:0;padding:18px 20px;overflow-x:auto;
-    color:#c9d1d9;line-height:1.7;font-size:.85rem;
-  }
+  .kod pre{margin:0;padding:18px 20px;overflow-x:auto;color:#c9d1d9;line-height:1.7;font-size:.85rem}
 
-  /* ---------- TABLO (zebra yok) ---------- */
+  /* TABLO */
   .veri-kart{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--gölge)}
   .veri-kaydir{overflow-x:auto}
   table.veri{width:100%;border-collapse:collapse}
@@ -290,32 +284,26 @@
     padding:14px 18px;font-size:.88rem;color:var(--ink);
     border-bottom:1px solid var(--line-2);
     vertical-align:top;line-height:1.5;
-    transition:background .12s;
   }
   table.veri tbody tr:hover td{background:var(--accent-soft)}
   table.veri tbody tr:last-child td{border-bottom:none}
   table.veri td .hucre-deger{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:320px}
   table.veri td .hucre-deger.uzun{white-space:normal;word-break:break-word}
-
   .tablo-alt{
     padding:12px 18px;border-top:1px solid var(--line);
     font-size:.82rem;color:var(--muted);background:var(--line-2);
     display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
   }
 
-  /* ---------- TERMINAL TARZI JSON GÖRÜNÜMÜ ---------- */
+  /* TERMINAL JSON */
   .terminal{
-    background:#0d1117;
-    border-radius:var(--r);
-    overflow:hidden;
+    background:#0d1117;border-radius:var(--r);overflow:hidden;
     box-shadow:0 12px 32px -12px rgba(0,0,0,.35), 0 1px 2px rgba(0,0,0,.2);
-    border:1px solid #1f2937;
-    font-family:var(--mono);
+    border:1px solid #1f2937;font-family:var(--mono);
   }
   .terminal-ust{
     background:linear-gradient(180deg,#161b22,#0f141b);
-    padding:10px 14px;
-    display:flex;align-items:center;gap:8px;
+    padding:10px 14px;display:flex;align-items:center;gap:8px;
     border-bottom:1px solid #1f2937;
   }
   .terminal-noktalar{display:flex;gap:7px;flex:none}
@@ -325,33 +313,19 @@
   .tk-y{background:#27c93f}
   .terminal-baslik{
     flex:1;text-align:center;font-size:.78rem;color:#8b949e;
-    font-family:var(--mono);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
-    padding:0 12px;
+    font-family:var(--mono);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 12px;
   }
   .terminal-kopya{
     flex:none;color:#c9d1d9;font-size:.75rem;font-weight:600;
-    padding:4px 11px;border-radius:6px;
-    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);
-    transition:.15s;font-family:var(--mono);
+    padding:4px 11px;border-radius:6px;background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);transition:.15s;font-family:var(--mono);
   }
   .terminal-kopya:hover{background:rgba(255,255,255,.18);color:#fff}
-  .terminal-kopya.tamam{background:rgba(52,211,153,.2);color:#6ee7b7;border-color:transparent}
   .terminal-icerik{
-    padding:18px 20px;
-    max-height:600px;
-    overflow:auto;
-    font-family:var(--mono);
-    font-size:.83rem;
-    line-height:1.7;
-    color:#c9d1d9;
-    background:#0d1117;
-    white-space:pre;
+    padding:18px 20px;max-height:600px;overflow:auto;
+    font-family:var(--mono);font-size:.83rem;line-height:1.7;
+    color:#c9d1d9;background:#0d1117;white-space:pre;
   }
-  .terminal-icerik::-webkit-scrollbar{width:10px;height:10px}
-  .terminal-icerik::-webkit-scrollbar-thumb{background:#21262d;border-radius:5px}
-  .terminal-icerik::-webkit-scrollbar-thumb:hover{background:#30363d}
-  .terminal-icerik code{font-family:inherit;font-size:inherit;color:inherit}
-
   .j-key{color:#79c0ff}
   .j-str{color:#a5d6ff}
   .j-num{color:#f0883e}
@@ -359,15 +333,8 @@
   .j-punct{color:#8b949e}
   .j-bos{color:#8b949e;font-style:italic}
 
-  .yukleniyor{
-    display:flex;align-items:center;justify-content:center;gap:10px;
-    padding:60px 20px;color:var(--muted);font-size:.9rem;
-  }
-  .cember{
-    width:18px;height:18px;border-radius:50%;
-    border:2.5px solid var(--line);border-top-color:var(--accent);
-    animation:don .7s linear infinite;
-  }
+  .yukleniyor{display:flex;align-items:center;justify-content:center;gap:10px;padding:60px 20px;color:var(--muted);font-size:.9rem}
+  .cember{width:18px;height:18px;border-radius:50%;border:2.5px solid var(--line);border-top-color:var(--accent);animation:don .7s linear infinite}
   @keyframes don{to{transform:rotate(360deg)}}
 
   .hata-kutu{
@@ -380,11 +347,8 @@
 
   #bildirim{
     position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);
-    background:var(--ink);color:var(--bg);
-    padding:11px 22px;border-radius:999px;
-    font-size:.86rem;font-weight:600;
-    opacity:0;pointer-events:none;transition:.22s;z-index:999;
-    box-shadow:0 12px 30px -8px rgba(0,0,0,.35);
+    background:var(--ink);color:var(--bg);padding:11px 22px;border-radius:999px;
+    font-size:.86rem;font-weight:600;opacity:0;pointer-events:none;transition:.22s;z-index:999;
   }
   #bildirim.gorunur{opacity:1;transform:translate(-50%,0)}
 
@@ -392,28 +356,15 @@
     .uygulama{grid-template-columns:1fr;position:relative}
     .agac{
       position:absolute;inset:0 auto 0 0;width:100%;max-width:340px;
-      z-index:40;transform:translateX(-105%);
-      transition:transform .25s cubic-bezier(.4,0,.2,1);
-      box-shadow:12px 0 30px -12px rgba(0,0,0,.15);
+      z-index:40;transform:translateX(-105%);transition:transform .25s cubic-bezier(.4,0,.2,1);
     }
     .agac.acik{transform:none}
     .menu-btn{display:grid}
-    .detay-ic{padding:20px 18px 40px}
-    .detay-baslik h1{font-size:1.35rem}
-    table.veri td .hucre-deger{max-width:200px}
-    .terminal-icerik{font-size:.76rem;padding:14px 16px}
   }
   @media (min-width:861px){.menu-btn{display:none}}
-  .menu-btn{
-    width:36px;height:36px;border-radius:9px;
-    place-items:center;color:var(--ink);
-    background:var(--line-2);font-size:1.1rem;flex:none;
-  }
-  .menu-btn:hover{background:var(--line)}
-
+  .menu-btn{width:36px;height:36px;border-radius:9px;place-items:center;color:var(--ink);background:var(--line-2);font-size:1.1rem;flex:none}
   .karartma{display:none;position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:35;backdrop-filter:blur(2px)}
   .karartma.acik{display:block}
-  @media (min-width:861px){.karartma{display:none !important}}
 </style>
 </head>
 <body>
@@ -464,14 +415,10 @@
 <div id="bildirim"></div>
 
 <script>
-/* =========================================================
-   SABİTLER VE KATALOG YÜKLEME (Dinamik Meta Okuma)
-   ========================================================= */
 const YEDEK_BASE = 'https://pdaas.com.tr';
 let yedekAktif = false;
 let KATALOG = [];
 let KODLAR = {};
-let VERI_HAVUZU = {}; // Yüklenen birleştirilmiş verileri saklamak için
 
 const $ = id => document.getElementById(id);
 const sayi = n => (n == null ? '–' : Number(n).toLocaleString('tr-TR'));
@@ -527,6 +474,31 @@ async function kopyala(metin, btn){
   }
 }
 
+async function getir(yol){
+  const t0 = performance.now();
+  const dene = async (base) => {
+    const ctrl = new AbortController();
+    const zaman = setTimeout(() => ctrl.abort(), 15000);
+    try{
+      const r = await fetch(base + yol, {
+        signal: ctrl.signal,
+        headers: { 'Accept':'application/json' }
+      });
+      clearTimeout(zaman);
+      if (!r.ok) return null;
+      let body = null;
+      try { body = await r.json(); } catch(_){}
+      return { ok:true, status:r.status, ms:Math.round(performance.now()-t0), body };
+    }catch(_){ clearTimeout(zaman); return null; }
+  };
+  const hedefler = yedekAktif ? [YEDEK_BASE] : ['', YEDEK_BASE];
+  for (const base of hedefler){
+    const s = await dene(base);
+    if (s){ if (base === YEDEK_BASE) yedekAktif = true; return s; }
+  }
+  return { ok:false, status:0, ms:Math.round(performance.now()-t0), body:null };
+}
+
 function kayitlariCikar(b){
   if (!b) return null;
   if (Array.isArray(b)) return b;
@@ -574,11 +546,11 @@ function jsonRenklendir(obj, indent = 0, derinlik = 0){
 }
 
 /* =========================================================
-   HAM KLASÖRÜNDEKİ DOSYALARDAN DİNAMİK KATALOG OLUŞTURMA
+   KATALOG YÜKLE (Canlı API /api/v1/katalog üzerinden)
    ========================================================= */
 async function katalogYukle(){
-  const rozet = $('saglik-rozet');
   const h = await getir('/health');
+  const rozet = $('saglik-rozet');
   if (h.ok){
     rozet.classList.add('ok');
     $('saglik-metin').textContent = 'pdaas.com.tr';
@@ -587,10 +559,9 @@ async function katalogYukle(){
     $('saglik-metin').textContent = 'Bağlantı yok';
   }
 
-  // Doğrudan backend kataloğunu çağırıyoruz
   const s = await getir('/api/v1/katalog');
   if (!s.ok || !s.body || !Array.isArray(s.body.servisler)){
-    $('agac-liste').innerHTML = `<div class="hata-kutu"><b>Katalog alınamadı</b><span>API yanıt vermedi.</span></div>`;
+    $('agac-liste').innerHTML = `<div class="hata-kutu"><b>Katalog alınamadı</b><span>Lütfen sayfayı yenileyin.</span></div>`;
     $('agac-ozet').textContent = 'Yüklenemedi';
     return;
   }
@@ -598,14 +569,14 @@ async function katalogYukle(){
   KATALOG = s.body.servisler;
 
   if (!KATALOG.length){
-    $('agac-liste').innerHTML = `<div class="hata-kutu"><b>Henüz veri seti yok</b><span>JSON dosyaları eklenmeli.</span></div>`;
+    $('agac-liste').innerHTML = `<div class="hata-kutu"><b>Henüz veri seti yok</b><span>JSON dosyası eklendiğinde burada görünecek.</span></div>`;
     $('agac-ozet').textContent = '0 veri seti';
     return;
   }
 
   const gruplar = {};
   for (const sv of KATALOG){
-    const k = sv.bakanlik_adi || 'Diğer Kurumlar';
+    const k = sv.bakanlik_adi || 'Diğer';
     if (!gruplar[k]) gruplar[k] = [];
     gruplar[k].push(sv);
   }
@@ -633,8 +604,7 @@ async function katalogYukle(){
                 data-sayi="${sv.kayit_sayisi ?? 0}"
                 data-tip="${kacis(sv.tip || '')}">
                 <span class="srv-metin">
-                  <b>${kacis(sv.servis_adi)}</b>
-                  <span class="srv-tip">${kacis(sv.tip)}</span>
+                  <b>${kacis(sv.servis_adi)}</b>${sv.tip ? `<span class="srv-tip">${kacis(sv.tip)}</span>` : ''}
                 </span>
                 <span class="srv-sayi">${sayi(sv.kayit_sayisi)}</span>
               </button>
@@ -648,23 +618,44 @@ async function katalogYukle(){
   $('agac-liste').innerHTML = html;
 }
 
-  /* =========================================================
-   SERVİS DETAY GÖSTERİMİ
+$('agac-liste').addEventListener('click', (e) => {
+  const bakBtn = e.target.closest('.bak-baslik');
+  if (bakBtn){ bakBtn.closest('.bak').classList.toggle('acik'); return; }
+
+  const srvBtn = e.target.closest('.srv');
+  if (srvBtn){
+    document.querySelectorAll('.srv.aktif').forEach(b => b.classList.remove('aktif'));
+    srvBtn.classList.add('aktif');
+    $('agac').classList.remove('acik');$('karartma').classList.remove('acik');
+    servisSec({
+      kurum: srvBtn.dataset.kurum,
+      endpoint: srvBtn.dataset.endpoint,
+      ad: srvBtn.dataset.ad,
+      sayi: parseInt(srvBtn.dataset.sayi, 10) || 0,
+      tip: srvBtn.dataset.tip
+    });
+  }
+});
+
+/* =========================================================
+   SERVİS DETAY
    ========================================================= */
-function servisGoster(sv){
+async function servisSec(sv){
   $('bos-durum').style.display = 'none';
   const ic = $('detay-ic');
   ic.style.display = 'block';
   ic.scrollIntoView({ block: 'start' });
 
-  const tamYol = window.location.origin + `/ham/${sv.kod}.json`;
-  const kayitlar = kayitlariCikar(sv.veri);
-  const jsonHam = JSON.stringify(sv.veri, null, 2);
+  let yol = sv.endpoint;
+  yol = yol.replace(/^\/api\/v1\/[^/]+\/(.+)$/, '/api/v1/$1');
+
+  const tam = YEDEK_BASE + yol;
+  const dosyaAdi = yol.split('/').pop();
 
   KODLAR = {
-    curl: `curl -X GET "${tamYol}" \\\n  -H "Accept: application/json"`,
-    python: `import requests\n\nurl = "${tamYol}"\nyanit = requests.get(url, headers={"Accept": "application/json"})\nveri = yanit.json()\n\nprint(veri)`,
-    js: `fetch("${tamYol}", {\n  headers: { "Accept": "application/json" }\n})\n  .then(res => res.json())\n  .then(veri => console.log(veri))\n  .catch(hata => console.error(hata));`
+    curl: `curl -X GET "${tam}" \\\n  -H "Accept: application/json"`,
+    python: `import requests\n\nurl = "${tam}"\nyanit = requests.get(url, headers={"Accept": "application/json"})\nveri = yanit.json()\n\nprint(veri)`,
+    js: `fetch("${tam}", {\n  headers: { "Accept": "application/json" }\n})\n  .then(res => res.json())\n  .then(veri => console.log(veri))\n  .catch(hata => console.error(hata));`
   };
 
   ic.innerHTML = `
@@ -680,38 +671,79 @@ function servisGoster(sv){
       <span class="ust-etiket">${bakanlikIkon(sv.kurum)} ${kacis(sv.kurum)}</span>
       <h1>${kacis(sv.ad)}</h1>
       <div class="kurum">
-        <span class="rozet"><b>${sayi(sv.sayi)}</b> Kayıt</span>
+        <span class="rozet">${sayi(sv.sayi)} kayıt</span>
       </div>
     </div>
 
     <div class="uc-nokta">
       <div class="uc-nokta-etiket">
         <span class="yontem">GET</span>
-        <span>Dosya / API Uç Noktası</span>
+        <span>API Uç Noktası</span>
       </div>
       <div class="uc-nokta-satir">
-        <code class="uc-nokta-url">${kacis(tamYol)}</code>
+        <code class="uc-nokta-url">${kacis(tam)}</code>
         <button class="kopya-btn" type="button" data-kopya-url>📋 Kopyala</button>
       </div>
     </div>
 
+    <div id="veri-alani">
+      <div class="yukleniyor"><span class="cember"></span> Veriler getiriliyor…</div>
+    </div>
+  `;
+
+  ic.querySelectorAll('[data-git]').forEach(b => {
+    b.addEventListener('click', () => {
+      if (b.dataset.git === 'anasayfa'){
+        $('bos-durum').style.display = 'flex';
+        ic.style.display = 'none';
+        document.querySelectorAll('.srv.aktif').forEach(x => x.classList.remove('aktif'));
+      } else if (b.dataset.git === 'kurum'){
+        const bak = document.querySelector(`.bak[data-kurum="${CSS.escape(sv.kurum)}"]`);
+        if (bak && !bak.classList.contains('acik')) bak.classList.add('acik');
+        $('agac-liste').scrollTop = 0;
+      }
+    });
+  });
+
+  const kpBtn = ic.querySelector('[data-kopya-url]');
+  kpBtn.addEventListener('click', () => kopyala(tam, kpBtn));
+
+  const s = await getir(yol);
+  const alan = $('veri-alani');
+
+  if (!s.ok){
+    alan.innerHTML = `<div class="hata-kutu"><b>Veri alınamadı</b><span>Sunucu yanıt vermedi veya uç nokta geçersiz.</span></div>`;
+    return;
+  }
+
+  const kayitlar = kayitlariCikar(s.body);
+  const adet = kayitlar ? kayitlar.length : 1;
+  const jsonHam = JSON.stringify(s.body, null, 2);
+
+  const sekmeler = [];
+  if (kayitlar) sekmeler.push({ id:'tablo', ad:'Veri Tablosu', ikon:'📊', sayi:adet });
+  sekmeler.push({ id:'kod', ad:'Bağlantı Kodları', ikon:'⚡' });
+  sekmeler.push({ id:'json', ad:'Konsol', ikon:'▶' });
+
+  const baslik = dosyaAdi.length > 40 ? dosyaAdi.slice(0, 37) + '…' : dosyaAdi;
+
+  alan.innerHTML = `
     <div class="sekmeler" role="tablist">
-      <button class="sekme aktif" type="button" role="tab" data-sekme="tablo">
-        <span>📊</span><span>Veri Tablosu</span><span class="sayi-etiket">${sayi(sv.sayi)}</span>
-      </button>
-      <button class="sekme" type="button" role="tab" data-sekme="kod">
-        <span>⚡</span><span>Bağlantı Kodları</span>
-      </button>
-      <button class="sekme" type="button" role="tab" data-sekme="json">
-        <span>▶</span><span>Konsol (JSON)</span>
-      </button>
+      ${sekmeler.map((sk, i) => `
+        <button class="sekme ${i === 0 ? 'aktif' : ''}" type="button" role="tab" data-sekme="${sk.id}">
+          <span>${sk.ikon}</span>
+          <span>${sk.ad}</span>${sk.sayi != null ? `<span class="sayi-etiket">${sayi(sk.sayi)}</span>` : ''}
+        </button>
+      `).join('')}
     </div>
 
-    <div class="sekme-panel aktif" data-panel="tablo">
-      ${tabloUret(kayitlar, 100)}
-    </div>
+    ${kayitlar ? `
+      <div class="sekme-panel aktif" data-panel="tablo">
+        ${tabloUret(kayitlar, 100)}
+      </div>
+    ` : ''}
 
-    <div class="sekme-panel" data-panel="kod">
+    <div class="sekme-panel ${!kayitlar ? 'aktif' : ''}" data-panel="kod">
       <div class="kod">
         <div class="kod-ust">
           <div class="kod-diller">
@@ -729,44 +761,51 @@ function servisGoster(sv){
       <div class="terminal">
         <div class="terminal-ust">
           <div class="terminal-noktalar">
-            <span class="tk tk-k"></span><span class="tk tk-s"></span><span class="tk tk-y"></span>
+            <span class="tk tk-k"></span>
+            <span class="tk tk-s"></span>
+            <span class="tk tk-y"></span>
           </div>
-          <span class="terminal-baslik">ham/${kacis(sv.kod)}.json</span>
+          <span class="terminal-baslik">~/ham/${kacis(baslik)}</span>
           <button class="terminal-kopya" type="button" data-kopya-terminal>Kopyala</button>
         </div>
-        <pre class="terminal-icerik"><code>${jsonRenklendir(sv.veri)}</code></pre>
+        <pre class="terminal-icerik"><code>${jsonRenklendir(s.body)}</code></pre>
       </div>
+    </div>
+
+    <div style="margin-top:20px;padding:14px 18px;background:var(--accent-soft);border-radius:var(--r);font-size:.85rem;color:var(--accent);display:flex;align-items:center;gap:10px;">
+      <span style="font-size:1.1rem;">ℹ️</span>
+      <span><b>Yanıt:</b> ${s.status} · ${s.ms} ms · ${sayi(adet)} kayıt</span>
     </div>
   `;
 
-  ic.querySelectorAll('.sekme').forEach(btn => {
+  alan.querySelectorAll('.sekme').forEach(btn => {
     btn.addEventListener('click', () => {
-      ic.querySelectorAll('.sekme').forEach(x => x.classList.remove('aktif'));
-      ic.querySelectorAll('.sekme-panel').forEach(x => x.classList.remove('aktif'));
+      alan.querySelectorAll('.sekme').forEach(x => x.classList.remove('aktif'));
+      alan.querySelectorAll('.sekme-panel').forEach(x => x.classList.remove('aktif'));
       btn.classList.add('aktif');
-      ic.querySelector(`[data-panel="${btn.dataset.sekme}"]`).classList.add('aktif');
+      const panel = alan.querySelector(`[data-panel="${btn.dataset.sekme}"]`);
+      if (panel) panel.classList.add('aktif');
     });
   });
 
-  ic.querySelectorAll('.kod-dil').forEach(btn => {
+  alan.querySelectorAll('.kod-dil').forEach(btn => {
     btn.addEventListener('click', () => {
-      ic.querySelectorAll('.kod-dil').forEach(x => x.classList.remove('aktif'));
+      alan.querySelectorAll('.kod-dil').forEach(x => x.classList.remove('aktif'));
       btn.classList.add('aktif');
       $('kod-metin').textContent = KODLAR[btn.dataset.dil] || '';
     });
   });
 
-  ic.querySelector('[data-kopya-url]').addEventListener('click', (e) => kopyala(tamYol, e.currentTarget));
-  ic.querySelector('[data-kopya-kod]').addEventListener('click', (e) => kopyala($('kod-metin').textContent, e.currentTarget));
-  ic.querySelector('[data-kopya-terminal]').addEventListener('click', (e) => kopyala(jsonHam, e.currentTarget));
+  const kkBtn = alan.querySelector('[data-kopya-kod]');
+  if (kkBtn) kkBtn.addEventListener('click', () => kopyala($('kod-metin').textContent, kkBtn));
 
-  ic.querySelector('[data-git="anasayfa"]').addEventListener('click', () => {
-    $('bos-durum').style.display = 'flex';
-    ic.style.display = 'none';
-    document.querySelectorAll('.srv.aktif').forEach(x => x.classList.remove('aktif'));
-  });
+  const ktBtn = alan.querySelector('[data-kopya-terminal]');
+  if (ktBtn) ktBtn.addEventListener('click', () => kopyala(jsonHam, ktBtn));
 }
 
+/* =========================================================
+   TABLO ÜRET
+   ========================================================= */
 function tabloUret(kayitlar, limit = 100){
   if (!Array.isArray(kayitlar) || !kayitlar.length){
     return `<div class="hata-kutu"><b>Kayıt bulunamadı</b><span>Bu serviste gösterilecek veri yok.</span></div>`;
@@ -781,8 +820,12 @@ function tabloUret(kayitlar, limit = 100){
     }
   }
   const goster = sutunlar.slice(0, 9);
+
+  if (!goster.length){
+    return `<div class="hata-kutu"><b>Alan yok</b><span>Yanıt beklenen formatta değil.</span></div>`;
+  }
+
   const bas = goster.map(a => `<th>${kacis(etiket(a))}</th>`).join('');
-  
   const sat = kayitlar.slice(0, limit).map(k => {
     const h = goster.map(a => {
       const v = hucreDegeri(k ? k[a] : null);
@@ -792,6 +835,10 @@ function tabloUret(kayitlar, limit = 100){
     return `<tr>${h}</tr>`;
   }).join('');
 
+  const alt = kayitlar.length > limit
+    ? `İlk <b>${limit}</b> kayıt gösteriliyor · Toplam <b>${sayi(kayitlar.length)}</b>`
+    : `Toplam <b>${sayi(kayitlar.length)}</b> kayıt`;
+
   return `
     <div class="veri-kart">
       <div class="veri-kaydir">
@@ -800,7 +847,7 @@ function tabloUret(kayitlar, limit = 100){
           <tbody>${sat}</tbody>
         </table>
       </div>
-      <div class="tablo-alt"><span>İlk <b>${limit}</b> kayıt gösteriliyor · Toplam <b>${sayi(kayitlar.length)}</b> kayıt</span></div>
+      <div class="tablo-alt"><span>${alt}</span></div>
     </div>
   `;
 }
@@ -812,7 +859,8 @@ $('agac-arama').addEventListener('input', (e) => {
     let eslesmeVar = false;
     bak.querySelectorAll('.srv').forEach(srv => {
       const ad = srv.dataset.ad.toLocaleLowerCase('tr-TR');
-      const ok = !q || ad.includes(q) || kurum.includes(q);
+      const ep = srv.dataset.endpoint.toLocaleLowerCase('tr-TR');
+      const ok = !q || ad.includes(q) || ep.includes(q) || kurum.includes(q);
       srv.style.display = ok ? '' : 'none';
       if (ok) eslesmeVar = true;
     });
