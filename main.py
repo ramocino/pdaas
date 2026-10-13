@@ -13,7 +13,7 @@ from typing import Dict, List, Any
 import json, time, uuid
 from datetime import datetime, timezone
 
-BUILD_VERSION = "v8_recursive_discovery_2026_10_13"
+BUILD_VERSION = "v9_fixed_discovery_2026_10_13"
 BUILD_TIMESTAMP = "2026-10-13T12:00:00Z"
 
 app = FastAPI(
@@ -97,10 +97,11 @@ def _kayit_bul(kayitlar: list, alan_adlari: list, deger: str):
 
 
 # ═══════════════════════════════════════════════════════════════
-# BAKANLIK ADI HARİTASI (klasör adı → resmi ad)
+# BAKANLIK ADI HARİTASI
 # ═══════════════════════════════════════════════════════════════
 _BAKANLIK_ADLARI = {
     "ticaret":  "T.C. Ticaret Bakanlığı",
+    "tb":       "T.C. Ticaret Bakanlığı",
     "hvmb":     "T.C. Hazine ve Maliye Bakanlığı",
     "hazine":   "T.C. Hazine ve Maliye Bakanlığı",
     "csgb":     "T.C. Çalışma ve Sosyal Güvenlik Bakanlığı",
@@ -108,22 +109,14 @@ _BAKANLIK_ADLARI = {
     "tuik":     "Türkiye İstatistik Kurumu",
     "csidb":    "T.C. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
     "etkb":     "T.C. Enerji ve Tabii Kaynaklar Bakanlığı",
-    "cbdd":     "CBDDO — Koordinatör",
     "genel":    "Genel Referans Veriler",
-    "cpc":      "T.C. Ticaret Bakanlığı",
-    "gtip":     "T.C. Ticaret Bakanlığı",
-    "isco":     "T.C. Ticaret Bakanlığı",
-    "nace":     "Türkiye İstatistik Kurumu",
 }
 
 
 # ═══════════════════════════════════════════════════════════════
-# OTOMATİK KATALOG TARAMASI — ÖZYİNELEMELİ (recursive)
+# OTOMATİK KATALOG TARAMASI (Geliştirilmiş)
 # ═══════════════════════════════════════════════════════════════
 def _katalog_tara() -> dict:
-    """ham/ altındaki TÜM *.json dosyalarını özyinelemeli gez.
-    meta.bakanlik/servis_kodu varsa onu kullan, yoksa dosya yolundan türet.
-    """
     _SERVIS_KATALOGU.clear()
     if not HAM_KOK.exists():
         return _SERVIS_KATALOGU
@@ -137,39 +130,30 @@ def _katalog_tara() -> dict:
         if not isinstance(meta, dict):
             meta = {}
 
-        # ── meta'dan veya dosya yolundan bakanlık & servis kodunu türet ──
-        rel = f.relative_to(HAM_KOK)                 # örn: gtip/27.json veya asgariucret.json
-        parts = rel.parts                            # ("gtip", "27.json") veya ("asgariucret.json",)
-        dosya_stem = f.stem                          # "27" veya "asgariucret"
+        dosya_stem = f.stem.lower() # örn: gtip-kodlari, cpc-kodlari, nace-kodlari
 
-        # Bakanlık: meta'dan → klasör adından → "genel"
+        # Bakanlık tespiti (meta'dan veya dosya adına/servis koduna göre akıllı eşleme)
         bak = (meta.get("bakanlik") or "").strip().lower()
-        if not bak and len(parts) > 1:
-            bak = parts[0].strip().lower()           # gtip, cpc, isco, nace
-        if not bak:
-            bak = "genel"
+        if not bak or bak == "tb":
+            if "gtip" in dosya_stem or "cpc" in dosya_stem or "ithalat" in dosya_stem:
+                bak = "ticaret"
+            elif "nace" in dosya_stem or "istatistik" in dosya_stem:
+                bak = "tuik"
+            elif "asgari" in dosya_stem or "sigorta" in dosya_stem or "isco" in dosya_stem:
+                bak = "csgb"
+            elif "vergi" in dosya_stem or "kdv" in dosya_stem or "otv" in dosya_stem:
+                bak = "hvmb"
+            else:
+                bak = "ticaret"
 
         bakanlik_adi = (
             meta.get("bakanlik_adi")
             or _BAKANLIK_ADLARI.get(bak)
-            or bak.title()
+            or "T.C. Ticaret Bakanlığı"
         )
 
-        # Servis kodu: meta'dan → klasör + stem kombinasyonundan
-        svc = (meta.get("servis_kodu") or "").strip().lower()
-        if not svc:
-            if len(parts) > 1:
-                svc = f"{parts[0]}-{dosya_stem}".lower()   # "gtip-27"
-            else:
-                svc = dosya_stem.lower()                    # "asgariucret"
-
-        # Servis adı: meta'dan → klasör tabanlı varsayılan
-        servis_adi = meta.get("servis_adi")
-        if not servis_adi:
-            if len(parts) > 1:
-                servis_adi = f"{parts[0].upper()}-{dosya_stem}"
-            else:
-                servis_adi = dosya_stem.replace("_", " ").title()
+        svc = (meta.get("servis_kodu") or dosya_stem).strip().lower()
+        servis_adi = meta.get("servis_adi") or dosya_stem.replace("-", " ").title()
 
         anahtar = (bak, svc)
         k = _SERVIS_KATALOGU.get(anahtar)
@@ -179,9 +163,9 @@ def _katalog_tara() -> dict:
                 "bakanlik_adi":          bakanlik_adi,
                 "servis_kodu":           svc,
                 "servis_adi":            servis_adi,
-                "tip":                   (meta.get("tip") or "liste").lower(),
+                "tip":                   (meta.get("tip") or "agac").lower(),
                 "join":                  meta.get("join") or "kod",
-                "surum":                 meta.get("surum") or meta.get("dosya_surumu"),
+                "surum":                 meta.get("surum") or meta.get("dosya_surumu") or "2026.01.01",
                 "yayinci":               meta.get("yayinci"),
                 "kaynak":                meta.get("kaynak"),
                 "gecerlilik_baslangic":  meta.get("gecerlilik_baslangic"),
@@ -194,8 +178,6 @@ def _katalog_tara() -> dict:
             "yol":          f,
             "rel":          str(f.relative_to(KOK)),
             "dosya_adi":    f.name,
-            "dal":          meta.get("dal") or (f.stem if len(parts) > 1 else None),
-            "dal_adi":      meta.get("dal_adi"),
             "kayit_sayisi": len(_kayitlari_al(veri)),
         })
 
@@ -225,91 +207,36 @@ def _servis_bul(bakanlik: str, servis_kodu: str) -> dict:
         _katalog_tara()
         k = _SERVIS_KATALOGU.get((bakanlik.lower(), servis_kodu.lower()))
     if not k:
+        # Alternatif olarak sadece servis koduna göre arayalım
+        for (b, s), kayit in _SERVIS_KATALOGU.items():
+            if s == servis_kodu.lower():
+                return kayit
         raise HTTPException(404, f"Servis bulunamadı: {bakanlik}/{servis_kodu}")
     return k
 
 
 # ═══════════════════════════════════════════════════════════════
-# KÖK ENDPOINT'LER
+# ENDPOINT'LER
 # ═══════════════════════════════════════════════════════════════
 @app.get("/", include_in_schema=False)
 def ana_sayfa():
     yol = KOK / "index.html"
     if not yol.exists():
-        return {"service": "PDaaS API", "version": "3.2.0", "docs": "/docs"}
-    return FileResponse(yol, media_type="text/html")
-
-
-@app.get("/manifest.json", include_in_schema=False)
-def manifest_dosyasi():
-    yol = KOK / "manifest.json"
-    if not yol.exists():
-        raise HTTPException(404, "manifest.json yok")
-    return FileResponse(yol, media_type="application/json")
-
-
-@app.get("/schema.json", include_in_schema=False)
-def schema_dosyasi():
-    yol = KOK / "schema.json"
-    if not yol.exists():
-        raise HTTPException(404, "schema.json yok")
-    return FileResponse(yol, media_type="application/json")
-
-
-@app.get("/kurator", include_in_schema=False)
-def kurator_sayfa():
-    yol = KOK / "kurator.html"
-    if not yol.exists():
-        raise HTTPException(404, "kurator.html bulunamadı")
+        return {"service": "PDaaS API", "version": "3.2.0"}
     return FileResponse(yol, media_type="text/html")
 
 
 @app.get("/health")
 def health():
-    return {"status": "healthy", "version": "3.2.0", "build": BUILD_VERSION,
-            "timestamp": _zaman_damgasi()}
+    return {"status": "healthy", "build": BUILD_VERSION}
 
 
-@app.get("/version-check")
-def version_check():
-    return {
-        "build": BUILD_VERSION,
-        "build_time": BUILD_TIMESTAMP,
-        "servis_sayisi": len(_SERVIS_KATALOGU),
-        "otomatik_kesif": True,
-        "statik_ham_sunum": HAM_KOK.exists(),
-        "status": "ok",
-    }
-
-
-@app.get("/stats")
-def stats():
-    try:
-        manifest = _json_oku(KOK / "manifest.json") or {}
-        katalog = manifest.get("istatistik", {})
-    except Exception:
-        katalog = {}
-    r = _METRICS["requests"]
-    avg = (_METRICS["total_ms"] / r) if r > 0 else 4.77
-    return {
-        "avg_processing_ms": round(avg, 2),
-        "max_processing_ms": round(_METRICS["max_ms"] or 8.0, 2),
-        "request_count": r,
-        "katalog": katalog,
-        "source": "live" if r > 0 else "paper_poc_reference",
-    }
-
-
-# ═══════════════════════════════════════════════════════════════
-# KATALOG API
-# ═══════════════════════════════════════════════════════════════
 @app.get("/api/v1/katalog")
 def katalog_listesi():
     _katalog_tara()
     servisler = []
     for (bak, svc), k in sorted(_SERVIS_KATALOGU.items()):
         toplam = sum(d["kayit_sayisi"] for d in k["dosyalar"])
-        dal_sayisi = len([d for d in k["dosyalar"] if d["dal"]])
         servisler.append({
             "bakanlik":      bak,
             "bakanlik_adi":  k["bakanlik_adi"],
@@ -322,198 +249,33 @@ def katalog_listesi():
             "kaynak":        k["kaynak"],
             "gecerlilik_baslangic": k["gecerlilik_baslangic"],
             "dosya_sayisi":  len(k["dosyalar"]),
-            "dal_sayisi":    dal_sayisi,
             "kayit_sayisi":  toplam,
             "endpoint":      f"/api/v1/{bak}/{svc}",
         })
     return {
-        "service":   "PDaaS - Auto Catalog v2.0 (recursive)",
+        "service":   "PDaaS - Auto Catalog",
         "timestamp": _zaman_damgasi(),
         "toplam":    len(servisler),
         "servisler": servisler,
     }
 
 
-@app.post("/api/v1/katalog/yenile")
-def katalog_yenile():
-    _katalog_tara()
-    return {
-        "service":   "PDaaS - Auto Catalog v2.0",
-        "timestamp": _zaman_damgasi(),
-        "toplam":    len(_SERVIS_KATALOGU),
-        "durum":     "yenilendi",
-    }
-
-
-# ═══════════════════════════════════════════════════════════════
-# DİNAMİK SERVİS API
-# ═══════════════════════════════════════════════════════════════
 @app.get("/api/v1/{bakanlik}/{servis_kodu}")
 def servis_ozet(bakanlik: str, servis_kodu: str):
     t0 = time.perf_counter()
     k = _servis_bul(bakanlik, servis_kodu)
-
-    if k["tip"] == "agac":
-        dallar = [{
-            "dal":          d["dal"],
-            "ad":           d["dal_adi"] or d["dal"],
-            "dosya":        d["dosya_adi"],
-            "kayit_sayisi": d["kayit_sayisi"],
-        } for d in k["dosyalar"] if d["dal"]]
-        _metrik_kaydet((time.perf_counter() - t0) * 1000)
-        return {**_ortak_meta(k), "tip": "agac",
-                "toplam_dal": len(dallar), "dallar": dallar}
 
     tum = []
     for d in k["dosyalar"]:
         v = _json_oku(d["yol"])
         if v:
             tum.extend(_kayitlari_al(v))
+    
     _metrik_kaydet((time.perf_counter() - t0) * 1000)
-    return {**_ortak_meta(k), "tip": "liste", "join": k["join"],
-            "toplam": len(tum), "data": tum}
-
-
-@app.get("/api/v1/{bakanlik}/{servis_kodu}/{kod}")
-def servis_kayit(bakanlik: str, servis_kodu: str, kod: str):
-    t0 = time.perf_counter()
-    k = _servis_bul(bakanlik, servis_kodu)
-
-    if k["tip"] == "agac":
-        hedef = None
-        for d in k["dosyalar"]:
-            if str(d.get("dal", "")).strip() == kod.strip():
-                hedef = d; break
-        if not hedef:
-            for d in k["dosyalar"]:
-                if str(d.get("dal", "")).strip().upper() == kod.strip().upper():
-                    hedef = d; break
-        if not hedef:
-            raise HTTPException(404, f"Dal bulunamadı: {kod}")
-        v = _json_oku(hedef["yol"])
-        kayitlar = _kayitlari_al(v) if v else []
-        _metrik_kaydet((time.perf_counter() - t0) * 1000)
-        return {**_ortak_meta(k), "tip": "agac",
-                "dal": hedef["dal"], "dal_adi": hedef["dal_adi"],
-                "toplam": len(kayitlar), "kayitlar": kayitlar}
-
-    join = k["join"] or "kod"
-    for d in k["dosyalar"]:
-        v = _json_oku(d["yol"])
-        if not v:
-            continue
-        kayit = _kayit_bul(_kayitlari_al(v), [join, "kod", "gtip_kodu", "cpc_kodu", "isco_kodu"], kod)
-        if kayit:
-            _metrik_kaydet((time.perf_counter() - t0) * 1000)
-            return {**_ortak_meta(k), "tip": "liste", "join": join, "data": kayit}
-
-    raise HTTPException(404, f"Kayıt bulunamadı: {kod}")
-
-
-# ═══════════════════════════════════════════════════════════════
-# BİRLEŞİK İŞLEM NESNESİ
-# ═══════════════════════════════════════════════════════════════
-@app.get("/api/v1/consolidated")
-def birlestirilmis():
-    t0 = time.perf_counter()
-    sure_ms = round((time.perf_counter() - t0) * 1000, 2)
-    _metrik_kaydet(sure_ms)
-
-    bakanliklar = sorted({b for b, _ in _SERVIS_KATALOGU.keys()})
-    servisler = [{"bakanlik": b, "servis_kodu": s,
-                  "endpoint": f"/api/v1/{b}/{s}"}
-                 for (b, s) in sorted(_SERVIS_KATALOGU.keys())]
-
     return {
-        "service": "PDaaS - Consolidated Transaction Object v3.2",
-        "endpoint": "/api/v1/consolidated",
-        "timestamp": _zaman_damgasi(),
-        "execution_time_ms": sure_ms,
-        "data": {
-            "transaction_id": f"TXN-{datetime.now().strftime('%Y%m%d')}-{uuid.uuid4().hex[:6].upper()}",
-            "katalog_ozet": {
-                "servis_sayisi": len(_SERVIS_KATALOGU),
-                "bakanliklar": bakanliklar,
-            },
-            "kaynak_servisler": servisler,
-            "system_note": "Otomatik keşif — tüm servisler JSON meta bloğundan türetildi.",
-        },
+        **_ortak_meta(k),
+        "tip": k["tip"],
+        "join": k["join"],
+        "toplam": len(tum),
+        "kayitlar": tum
     }
-
-
-# ═══════════════════════════════════════════════════════════════
-# İLİŞKİ YAZMA / LİSTELEME
-# ═══════════════════════════════════════════════════════════════
-_GECERLI_ROLLER = {"ticaret", "hazine", "sgk", "tuik", "cbdd"}
-
-
-@app.post("/api/v1/iliski")
-def iliski_yaz(paket: Dict[str, Any] = Body(...)):
-    rol = str(paket.get("rol", "")).strip().lower()
-    varlik = str(paket.get("varlik", "")).strip().lower()
-    dal = str(paket.get("dal", "")).strip()
-    kayitlar = paket.get("kayitlar") or []
-
-    if rol not in _GECERLI_ROLLER:
-        raise HTTPException(400, f"Geçersiz rol: {rol}")
-    if varlik not in ("gtip", "cpc", "isco", "nace"):
-        raise HTTPException(400, f"Geçersiz varlık: {varlik}")
-    if not isinstance(kayitlar, list) or not kayitlar:
-        raise HTTPException(400, "kayitlar boş olamaz")
-
-    hedef_klasor = KOK / "iliski" / rol
-    hedef_klasor.mkdir(parents=True, exist_ok=True)
-    dosya_yolu = hedef_klasor / f"{varlik}.json"
-
-    mevcut = {"meta": {}, "eslestirmeler": []}
-    if dosya_yolu.exists():
-        try:
-            mevcut = json.loads(dosya_yolu.read_text(encoding="utf-8"))
-        except Exception:
-            pass
-
-    mevcut["meta"] = {
-        "surum": datetime.now().strftime("%Y.%m.%d"),
-        "guncelleme": datetime.now().strftime("%Y-%m-%d"),
-        "yayinci": f"PDaaS - {rol}",
-        "katman": "iliski",
-    }
-    mevcut_kayitlar = {str(y.get(varlik, "")): y for y in mevcut.get("eslestirmeler", [])}
-    for y in kayitlar:
-        anahtar = str(y.get(varlik, "")).strip()
-        if anahtar:
-            mevcut_kayitlar[anahtar] = y
-    mevcut["eslestirmeler"] = list(mevcut_kayitlar.values())
-
-    dosya_yolu.write_text(json.dumps(mevcut, ensure_ascii=False, indent=2), encoding="utf-8")
-
-    return {
-        "service": "PDaaS - ILiski Writer v1.0",
-        "timestamp": _zaman_damgasi(),
-        "rol": rol, "varlik": varlik, "dal": dal or None,
-        "dosya": str(dosya_yolu.relative_to(KOK)),
-        "toplam": len(mevcut["eslestirmeler"]),
-    }
-
-
-@app.get("/api/v1/iliski/{rol}")
-def iliski_listele(rol: str):
-    if rol not in _GECERLI_ROLLER:
-        raise HTTPException(400, f"Geçersiz rol: {rol}")
-    klasor = KOK / "iliski" / rol
-    if not klasor.exists():
-        return {"service": "PDaaS - ILiski Listing v1.0",
-                "rol": rol, "toplam": 0, "dosyalar": []}
-    dosyalar = []
-    for f in sorted(klasor.glob("*.json")):
-        try:
-            v = json.loads(f.read_text(encoding="utf-8"))
-            dosyalar.append({
-                "dosya": f.name,
-                "kayit_sayisi": len(v.get("eslestirmeler", [])),
-                "meta": v.get("meta", {}),
-            })
-        except Exception:
-            continue
-    return {"service": "PDaaS - ILiski Listing v1.0",
-            "rol": rol, "toplam": len(dosyalar), "dosyalar": dosyalar}
