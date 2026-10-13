@@ -469,7 +469,6 @@ async function kopyala(metin, btn){
   }
 }
 
-// Hızlandırılmış doğrudan fetch fonksiyonu (bekletme yok)
 async function getir(yol){
   const t0 = performance.now();
   try {
@@ -529,7 +528,7 @@ function jsonRenklendir(obj, indent = 0, derinlik = 0){
 }
 
 /* =========================================================
-   ANINDA YÜKLENEN KATALOG YÖNETİCİSİ
+   KATALOG YÜKLE (Başlangıçta Kapalı/Kapanabilir Menüler)
    ========================================================= */
 async function katalogYukle(){
   const s = await getir('/api/v1/katalog');
@@ -557,8 +556,9 @@ async function katalogYukle(){
 
   $('agac-ozet').textContent = `${Object.keys(gruplar).length} kurum · ${KATALOG.length} servis`;
 
+  // 'acik' sınıfı kaldırıldı, böylece menüler başlangıçta kapalı gelir
   const html = Object.entries(gruplar).map(([kurum, liste]) => `
-    <div class="bak acik" data-kurum="${kacis(kurum)}">
+    <div class="bak" data-kurum="${kacis(kurum)}">
       <button class="bak-baslik" type="button">
         <span class="bak-ikon">${bakanlikIkon(kurum)}</span>
         <span class="bak-metin">
@@ -567,7 +567,7 @@ async function katalogYukle(){
         </span>
         <span class="bak-ok">▶</span>
       </button>
-      <div class="bak-icerik" style="grid-template-rows: 1fr;">
+      <div class="bak-icerik">
         <div class="bak-icerik-ic">
           <div>
             ${liste.map((sv) => `
@@ -593,7 +593,10 @@ async function katalogYukle(){
 
 $('agac-liste').addEventListener('click', (e) => {
   const bakBtn = e.target.closest('.bak-baslik');
-  if (bakBtn){ bakBtn.closest('.bak').classList.toggle('acik'); return; }
+  if (bakBtn){ 
+    bakBtn.closest('.bak').classList.toggle('acik'); 
+    return; 
+  }
 
   const srvBtn = e.target.closest('.srv');
   if (srvBtn){
@@ -752,13 +755,10 @@ async function servisSec(sv){
     });
   });
 
-  alan.querySelector('[data-kopya-kod]').addEventListener('click', (e) => kopyala($('kod-metin').textContent, e.currentTarget));
+  alan.querySelector('[data-kopya-kod]').addEventListener('click', (e) => kopyala($('kod-metin'].textContent, e.currentTarget));
   alan.querySelector('[data-kopya-terminal]').addEventListener('click', (e) => kopyala(jsonHam, e.currentTarget));
 }
 
-/* =========================================================
-   TABLO ÜRET
-   ========================================================= */
 function tabloUret(kayitlar, limit = 100){
   if (!Array.isArray(kayitlar) || !kayitlar.length){
     return `<div class="hata-kutu"><b>Kayıt bulunamadı</b><span>Bu serviste gösterilecek veri yok.</span></div>`;
