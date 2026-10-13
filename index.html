@@ -646,8 +646,8 @@ async function servisSec(sv){
   ic.style.display = 'block';
   ic.scrollIntoView({ block: 'start' });
 
-  let yol = sv.endpoint;
-  yol = yol.replace(/^\/api\/v1\/[^/]+\/(.+)$/, '/api/v1/$1');
+  // Katalogdan gelen doğru endpoint'i direkt kullanıyoruz (örn: /api/v1/ticaret/gtip-kodlari)
+  let yol = sv.endpoint; 
 
   const tam = YEDEK_BASE + yol;
   const dosyaAdi = yol.split('/').pop();
@@ -712,7 +712,7 @@ async function servisSec(sv){
   const alan = $('veri-alani');
 
   if (!s.ok){
-    alan.innerHTML = `<div class="hata-kutu"><b>Veri alınamadı</b><span>Sunucu yanıt vermedi veya uç nokta geçersiz.</span></div>`;
+    alan.innerHTML = `<div class="hata-kutu"><b>Veri alınamadı</b><span>Sunucu yanıt vermedi veya uç nokta geçersiz. (${yol})</span></div>`;
     return;
   }
 
@@ -720,30 +720,25 @@ async function servisSec(sv){
   const adet = kayitlar ? kayitlar.length : 1;
   const jsonHam = JSON.stringify(s.body, null, 2);
 
-  const sekmeler = [];
-  if (kayitlar) sekmeler.push({ id:'tablo', ad:'Veri Tablosu', ikon:'📊', sayi:adet });
-  sekmeler.push({ id:'kod', ad:'Bağlantı Kodları', ikon:'⚡' });
-  sekmeler.push({ id:'json', ad:'Konsol', ikon:'▶' });
-
-  const baslik = dosyaAdi.length > 40 ? dosyaAdi.slice(0, 37) + '…' : dosyaAdi;
-
+  // Sekmeler ve tablo oluşturma adımları...
   alan.innerHTML = `
     <div class="sekmeler" role="tablist">
-      ${sekmeler.map((sk, i) => `
-        <button class="sekme ${i === 0 ? 'aktif' : ''}" type="button" role="tab" data-sekme="${sk.id}">
-          <span>${sk.ikon}</span>
-          <span>${sk.ad}</span>${sk.sayi != null ? `<span class="sayi-etiket">${sayi(sk.sayi)}</span>` : ''}
-        </button>
-      `).join('')}
+      <button class="sekme aktif" type="button" role="tab" data-sekme="tablo">
+        <span>📊</span><span>Veri Tablosu</span><span class="sayi-etiket">${sayi(adet)}</span>
+      </button>
+      <button class="sekme" type="button" role="tab" data-sekme="kod">
+        <span>⚡</span><span>Bağlantı Kodları</span>
+      </button>
+      <button class="sekme" type="button" role="tab" data-sekme="json">
+        <span>▶</span><span>Konsol</span>
+      </button>
     </div>
 
-    ${kayitlar ? `
-      <div class="sekme-panel aktif" data-panel="tablo">
-        ${tabloUret(kayitlar, 100)}
-      </div>
-    ` : ''}
+    <div class="sekme-panel aktif" data-panel="tablo">
+      ${tabloUret(kayitlar, 100)}
+    </div>
 
-    <div class="sekme-panel ${!kayitlar ? 'aktif' : ''}" data-panel="kod">
+    <div class="sekme-panel" data-panel="kod">
       <div class="kod">
         <div class="kod-ust">
           <div class="kod-diller">
@@ -761,40 +756,37 @@ async function servisSec(sv){
       <div class="terminal">
         <div class="terminal-ust">
           <div class="terminal-noktalar">
-            <span class="tk tk-k"></span>
-            <span class="tk tk-s"></span>
-            <span class="tk tk-y"></span>
+            <span class="tk tk-k"></span><span class="tk tk-s"></span><span class="tk tk-y"></span>
           </div>
-          <span class="terminal-baslik">~/ham/${kacis(baslik)}</span>
+          <span class="terminal-baslik">${kacis(dosyaAdi)}</span>
           <button class="terminal-kopya" type="button" data-kopya-terminal>Kopyala</button>
         </div>
         <pre class="terminal-icerik"><code>${jsonRenklendir(s.body)}</code></pre>
       </div>
     </div>
-
-    <div style="margin-top:20px;padding:14px 18px;background:var(--accent-soft);border-radius:var(--r);font-size:.85rem;color:var(--accent);display:flex;align-items:center;gap:10px;">
-      <span style="font-size:1.1rem;">ℹ️</span>
-      <span><b>Yanıt:</b> ${s.status} · ${s.ms} ms · ${sayi(adet)} kayıt</span>
-    </div>
   `;
 
-  alan.querySelectorAll('.sekme').forEach(btn => {
+  ic.querySelectorAll('.sekme').forEach(btn => {
     btn.addEventListener('click', () => {
-      alan.querySelectorAll('.sekme').forEach(x => x.classList.remove('aktif'));
-      alan.querySelectorAll('.sekme-panel').forEach(x => x.classList.remove('aktif'));
+      ic.querySelectorAll('.sekme').forEach(x => x.classList.remove('aktif'));
+      ic.querySelectorAll('.sekme-panel').forEach(x => x.classList.remove('aktif'));
       btn.classList.add('aktif');
-      const panel = alan.querySelector(`[data-panel="${btn.dataset.sekme}"]`);
-      if (panel) panel.classList.add('aktif');
+      ic.querySelector(`[data-panel="${btn.dataset.sekme}"]`).classList.add('aktif');
     });
   });
 
-  alan.querySelectorAll('.kod-dil').forEach(btn => {
+  ic.querySelectorAll('.kod-dil').forEach(btn => {
     btn.addEventListener('click', () => {
-      alan.querySelectorAll('.kod-dil').forEach(x => x.classList.remove('aktif'));
+      ic.querySelectorAll('.kod-dil').forEach(x => x.classList.remove('aktif'));
       btn.classList.add('aktif');
       $('kod-metin').textContent = KODLAR[btn.dataset.dil] || '';
     });
   });
+
+  ic.querySelector('[data-kopya-url]').addEventListener('click', (e) => kopyala(tam, e.currentTarget));
+  ic.querySelector('[data-kopya-kod]').addEventListener('click', (e) => kopyala($('kod-metin').textContent, e.currentTarget));
+  ic.querySelector('[data-kopya-terminal]').addEventListener('click', (e) => kopyala(jsonHam, e.currentTarget));
+}
 
   const kkBtn = alan.querySelector('[data-kopya-kod]');
   if (kkBtn) kkBtn.addEventListener('click', () => kopyala($('kod-metin').textContent, kkBtn));
