@@ -138,7 +138,8 @@
 </main>
 
 <script>
-const API_BASE = '';
+// GitHub Pages'te kök dizin '/'
+const API_BASE = ''; 
 
 /* ───────── yardımcılar ───────── */
 const $ = id => document.getElementById(id);
@@ -152,23 +153,21 @@ function el(tag, attrs, ...cocuk){
   for (const c of cocuk) if (c != null) e.append(c.nodeType ? c : document.createTextNode(c));
   return e;
 }
-async function getir(yol, opts){
+
+async function getir(yol){
   const t0 = performance.now();
   try{
-    const r = await fetch(API_BASE + yol, opts);
-    const body = await r.json().catch(() => null);
-    return {ok:r.ok, status:r.status, ms:Math.round(performance.now() - t0), body};
-  }catch(_){
-    return {ok:false, status:0, ms:0, body:null};
+    // GitHub'da dosya yolları büyük/küçük harf duyarlıdır.
+    const r = await fetch(API_BASE + yol);
+    if (!r.ok) throw new Error(r.status);
+    const body = await r.json();
+    return {ok:true, status:r.status, ms:Math.round(performance.now() - t0), body};
+  }catch(e){
+    return {ok:false, status:e.message || 0, ms:0, body:null};
   }
 }
+
 const sayi = n => (n == null ? '–' : Number(n).toLocaleString('tr-TR'));
-function hataMetni(s){
-  if (s.status === 0) return 'Sunucuya ulaşılamadı.';
-  const d = s.body && s.body.detail;
-  return `Hata ${s.status}${d ? ': ' + (typeof d === 'string' ? d : JSON.stringify(d)) : ''}`;
-}
-function nokta(durum){ return el('span', {class:'dot ' + (durum || '')}); }
 
 function tabloYap(kayitlar, limit = 50){
   if (!Array.isArray(kayitlar) || !kayitlar.length) return el('p', {class:'not'}, 'Kayıt yok.');
@@ -196,176 +195,143 @@ function tabloYap(kayitlar, limit = 50){
   return el('div', {}, kap, ek);
 }
 
-function detayAc(tr, kolonSayisi, icerikUret){
-  if (tr._detay){ tr._detay.remove(); tr._detay = null; tr._btn.textContent = 'Aç'; return; }
-  const td = el('td', {colspan:kolonSayisi});
-  const dtr = el('tr', {class:'detay'}, td);
-  tr.after(dtr);
-  tr._detay = dtr;
-  tr._btn.textContent = 'Kapat';
-  icerikUret(td);
+/* ───────── durum çubuğu (statik) ───────── */
+function durumYukle(){
+  $('saglik-nokta').className = 'dot ok';
+  $('saglik-metin').textContent = 'GitHub Statik Demo';
+  $('st-ort').textContent = '–';
+  $('st-istek').textContent = '–';
+  $('st-servis').textContent = '–';
+  $('st-bak').textContent = '–';
+  $('yapi').textContent = 'GitHub Pages';
 }
 
-/* ───────── durum çubuğu ───────── */
-async function durumYukle(){
-  const [h, s, v] = await Promise.all([getir('/health'), getir('/stats'), getir('/version-check')]);
-  $('saglik-nokta').className = 'dot ' + (h.ok ? 'ok' : 'bad');
-  $('saglik-metin').textContent = h.ok ? `Çalışıyor · v${h.body.version}` : 'Ulaşılamıyor';
-  if (s.ok){
-    $('st-ort').textContent = s.body.avg_processing_ms + ' ms';
-    $('st-istek').textContent = sayi(s.body.request_count);
-    $('st-bak').textContent = sayi((s.body.katalog || {}).toplam_bakanlik);
-  }
-  if (v.ok){
-    $('yapi').textContent = v.body.build;
-    $('st-servis').textContent = sayi(v.body.servis_sayisi);
-  }
-}
-
-/* ───────── katalog ───────── */
-let KATALOG = [];
+/* ───────── katalog (manifest.json okur) ───────── */
+let MANIFEST = null;
 
 async function katalogYukle(){
   const tb = $('tb-servis');
-  tb.replaceChildren(el('tr', {},
-    el('td', {colspan:7, class:'not'}, 'Servis kataloğu taranıyor…')));
+  tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not'}, 'Manifest yükleniyor…')));
 
-  const s = await getir('/api/v1/katalog');
-  if (!s.ok || !s.body || !Array.isArray(s.body.servisler)){
-    tb.replaceChildren(el('tr', {},
-      el('td', {colspan:7, class:'not hata'}, 'Katalog alınamadı. ' + hataMetni(s))));
+  const s = await getir('/manifest.json');
+  if (!s.ok || !s.body || !s.body.bakanliklar){
+    tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not hata'}, 'manifest.json okunamadı.')));
     return;
   }
-  KATALOG = s.body.servisler;
+  MANIFEST = s.body;
 
-  if (!KATALOG.length){
-    tb.replaceChildren(el('tr', {},
-      el('td', {colspan:7, class:'not'},
-        'ham/ altında tanınan JSON bulunamadı. Her dosyanın meta bloğunda "bakanlik" ve "servis_kodu" olmalı.')));
+  // Manifest'teki bakanlıkları ve dosyaları düz bir listeye çevir
+  const servisler = [];
+  Object.entries(MANIFEST.bakanliklar).forEach(([bakKey, bak]) => {
+    (bak.dosyalar || []).forEach(d => {
+      // GitHub'daki gerçek klasör yapısı: ham/ içinde düz dosyalar
+      // Ekran görüntüsüne göre dosyalar ham/ içinde: ham/asgariucret.json
+      // Ancak manifest'te "ticaret/gtip/27.json" gibi alt klasörler var.
+      // Biz en garantili yolu kullanacağız: ham/ + dosya adı (son parça)
+      const dosyaAdi = d.dosya.split('/').pop();
+      const gercekYol = '/ham/' + dosyaAdi;
+      
+      servisler.push({
+        bakanlik: bakKey,
+        bakanlik_adi: bak.ad,
+        servis_kodu: dosyaAdi.replace('.json',''),
+        servis_adi: d.ad,
+        dosya_yolu: gercekYol,
+        kategori: d.kategori,
+        endpoint: gercekYol
+      });
+    });
+  });
+
+  if (!servisler.length){
+    tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not'}, 'Manifest içinde dosya bulunamadı.')));
     return;
   }
 
-  tb.replaceChildren(...KATALOG.map(servisSatiri));
+  // Tabloyu doldur
+  tb.replaceChildren(...servisler.map(sv => servisSatiri(sv)));
 
   // Sorgu dropdown'unu doldur
   const sel = $('sorgu-servis');
-  sel.replaceChildren(...KATALOG.map(sv =>
-    el('option', {value:`${sv.bakanlik}/${sv.servis_kodu}`},
+  sel.replaceChildren(...servisler.map(sv =>
+    el('option', {value: sv.endpoint},
       `${sv.bakanlik_adi} — ${sv.servis_adi}`)
   ));
 }
 
 function servisSatiri(sv){
-  const agacMi = sv.tip === 'agac';
-  const cAd    = el('td', {class:'ad'}, nokta(), sv.servis_adi,
-                     el('span', {class:'rozet'}, sv.tip));
-  const cYol   = el('td', {class:'yol mono gizle-kucuk'}, sv.endpoint);
-  const cBak   = el('td', {}, sv.bakanlik_adi);
-  const cDal   = el('td', {class:'sayi'}, agacMi ? sayi(sv.dal_sayisi) : '');
-  const cKayit = el('td', {class:'sayi'}, sayi(sv.kayit_sayisi));
-  const cMs    = el('td', {class:'sayi gizle-kucuk'}, '');
-  const btn    = el('button', {class:'btn ikincil kucuk'}, 'Aç');
+  const cAd = el('td', {class:'ad'}, el('span', {class:'dot'}), sv.servis_adi, el('span', {class:'rozet'}, sv.kategori || 'liste'));
+  const cYol = el('td', {class:'yol mono gizle-kucuk'}, sv.endpoint);
+  const cBak = el('td', {}, sv.bakanlik_adi);
+  const cDal = el('td', {class:'sayi'}, '');
+  const cKayit = el('td', {class:'sayi'}, '…');
+  const cMs = el('td', {class:'sayi gizle-kucuk'}, '');
+  const btn = el('button', {class:'btn ikincil kucuk'}, 'Aç');
   const tr = el('tr', {}, cAd, cYol, cBak, cDal, cKayit, cMs, el('td', {}, btn));
-  tr._btn = btn;
+  
+  // Dosyayı çek
+  getir(sv.endpoint).then(async s => {
+    if (!s.ok) {
+      // Eğer ham/ içinde bulunamazsa, doğrudan kök dizini dene (bazı dosyalar kökte olabilir)
+      const kokYol = '/' + sv.endpoint.split('/').pop();
+      const s2 = await getir(kokYol);
+      if (s2.ok) {
+        s = s2;
+        sv.endpoint = kokYol;
+        cYol.textContent = kokYol;
+      }
+    }
 
-  getir(sv.endpoint).then(s => {
     cAd.firstChild.className = 'dot ' + (s.ok ? 'ok' : 'bad');
     cMs.textContent = s.ms;
-    if (!s.ok){
-      btn.addEventListener('click', () =>
-        detayAc(tr, 7, td => td.append(el('p', {class:'not hata'}, hataMetni(s)))));
+    
+    if (!s.ok) {
+      cKayit.textContent = '–';
+      btn.addEventListener('click', () => {
+        alert('Dosya yüklenemedi: ' + sv.endpoint + '\nLütfen dosyanın GitHub\'da doğru yerde olduğundan emin olun.');
+      });
       return;
     }
-    if (agacMi){
-      const dallar = s.body.dallar || [];
-      btn.addEventListener('click', () => detayAc(tr, 7, td => dallarGoster(td, sv, dallar)));
-    } else {
-      const veri = s.body.data || [];
-      btn.addEventListener('click', () => detayAc(tr, 7, td => {
+
+    const kayitSayisi = s.body.kayitlar ? s.body.kayitlar.length : (s.body.data ? s.body.data.length : 0);
+    cKayit.textContent = sayi(kayitSayisi);
+    
+    // Eğer meta.tip 'agac' ise dalları göster, değilse kayıtları göster
+    if (s.body.meta && s.body.meta.tip === 'agac' && s.body.dallar) {
+      cDal.textContent = s.body.dallar.length;
+      btn.addEventListener('click', () => {
+        // Ağaç yapısı için basit bir gösterim
+        const td = el('td', {colspan:7});
+        const dtr = el('tr', {class:'detay'}, td);
+        tr.after(dtr);
+        btn.textContent = 'Kapat';
+        btn.onclick = () => { dtr.remove(); btn.textContent = 'Aç'; btn.onclick = null; };
+        
         td.append(
-          el('p', {class:'not', style:'margin-bottom:8px'},
-            [s.body.yayinci, s.body.kaynak,
-             s.body.gecerlilik_baslangic && `Yürürlük: ${s.body.gecerlilik_baslangic}`]
-              .filter(Boolean).join(' · ') + ' · ',
-            el('a', {href:API_BASE + sv.endpoint, target:'_blank', rel:'noopener'}, 'JSON olarak aç')),
-          tabloYap(veri));
-      }));
+          el('p', {class:'not'}, `${s.body.dallar.length} dal bulundu.`),
+          el('pre', {}, JSON.stringify(s.body.dallar, null, 2))
+        );
+      });
+    } else {
+      cDal.textContent = '';
+      btn.addEventListener('click', () => {
+        const td = el('td', {colspan:7});
+        const dtr = el('tr', {class:'detay'}, td);
+        tr.after(dtr);
+        btn.textContent = 'Kapat';
+        btn.onclick = () => { dtr.remove(); btn.textContent = 'Aç'; btn.onclick = null; };
+
+        const meta = s.body.meta || {};
+        const ozet = el('p', {class:'not', style:'margin-bottom:8px'},
+          `${meta.yayinci || ''} · ${meta.kaynak || ''} · Sürüm: ${meta.surum || ''}`);
+        
+        const kayitlar = s.body.kayitlar || s.body.data || [];
+        td.append(ozet, tabloYap(kayitlar));
+      });
     }
   });
+
   return tr;
-}
-
-function dallarGoster(td, sv, dallar){
-  const kutu  = el('div', {});
-  const chips = el('div', {class:'dallar'});
-  const sonuc = el('div', {}, el('p', {class:'not'}, 'Bir dal seçin.'));
-  dallar.forEach(d => {
-    const c = el('button', {class:'dal', title:d.ad || ''}, d.dal);
-    c.addEventListener('click', async () => {
-      chips.querySelectorAll('.dal').forEach(x => x.classList.remove('secili'));
-      c.classList.add('secili');
-      sonuc.replaceChildren(el('p', {class:'not'}, 'Yükleniyor…'));
-      const yol = `${sv.endpoint}/${encodeURIComponent(d.dal)}`;
-      const s = await getir(yol);
-      if (!s.ok){ sonuc.replaceChildren(el('p', {class:'not hata'}, hataMetni(s))); return; }
-      sonuc.replaceChildren(
-        el('p', {class:'not', style:'margin-bottom:8px'},
-          `${d.ad || d.dal} · ${sayi(s.body.toplam)} kayıt · `,
-          el('a', {href:API_BASE + yol, target:'_blank', rel:'noopener'}, 'JSON olarak aç')),
-        tabloYap(s.body.kayitlar));
-    });
-    chips.append(c);
-  });
-  kutu.append(chips, sonuc);
-  td.append(kutu);
-}
-
-$('yenile-btn').addEventListener('click', async () => {
-  const btn = $('yenile-btn');
-  btn.disabled = true; btn.textContent = 'Yenileniyor…';
-  await getir('/api/v1/katalog/yenile', {method:'POST'});
-  await katalogYukle();
-  durumYukle();
-  btn.disabled = false; btn.textContent = 'Kataloğu yenile';
-});
-
-/* ───────── birleşik işlem ───────── */
-function birlesikSatiri(){
-  const yol = '/api/v1/consolidated';
-  const cAd = el('td', {class:'ad'}, nokta(), 'Konsolide işlem');
-  const cMs = el('td', {class:'sayi'}, '…');
-  const btn = el('button', {class:'btn ikincil kucuk', disabled:'disabled'}, 'Aç');
-  const tr = el('tr', {}, cAd, el('td', {class:'yol mono gizle-kucuk'}, yol), cMs, el('td', {}, btn));
-  tr._btn = btn;
-  getir(yol).then(s => {
-    cAd.firstChild.className = 'dot ' + (s.ok ? 'ok' : 'bad');
-    cMs.textContent = s.ok ? ((s.body.execution_time_ms ?? s.ms) + ' ms') : '–';
-    if (!s.ok){
-      btn.disabled = false;
-      btn.addEventListener('click', () => detayAc(tr, 4, td => td.append(el('p', {class:'not hata'}, hataMetni(s)))));
-      return;
-    }
-    btn.disabled = false;
-    btn.addEventListener('click', () => detayAc(tr, 4, td =>
-      td.append(el('pre', {}, JSON.stringify(s.body.data, null, 2)))));
-  });
-  return tr;
-}
-
-/* ───────── katalog (manifest.json) ───────── */
-async function manifestYukle(){
-  const kap = $('bak-liste');
-  const s = await getir('/manifest.json');
-  if (!s.ok || !s.body || !s.body.bakanliklar){
-    kap.replaceChildren(el('p', {class:'not'},
-      'manifest.json okunamadı.'));
-    return;
-  }
-  kap.replaceChildren(...Object.entries(s.body.bakanliklar).map(([anahtar, b]) =>
-    el('details', {class:'bak'},
-      el('summary', {}, el('b', {}, b.ad), el('span', {class:'not'}, `${b.dosya_sayisi} dosya`)),
-      el('ul', {}, ...(b.dosyalar || []).map(d => el('li', {}, `${d.ad} — `, el('span', {class:'mono'}, `${anahtar}/${d.dosya}`))))
-    )));
 }
 
 /* ───────── sorgu ───────── */
@@ -374,36 +340,60 @@ async function sorgula(){
   const kod = $('sorgu-kod').value.trim();
   const kap = $('sorgu-sonuc');
   if (!secili){ kap.replaceChildren(el('p', {class:'not hata'}, 'Servis seçin.')); return; }
-  let yol = `/api/v1/${secili}`;
-  if (kod) yol += `/${encodeURIComponent(kod)}`;
+  
   kap.replaceChildren(el('p', {class:'not'}, 'Sorgulanıyor…'));
-  const s = await getir(yol);
-  if (!s.ok){ kap.replaceChildren(el('p', {class:'not hata'}, hataMetni(s))); return; }
+  const s = await getir(secili);
+  
+  if (!s.ok){ 
+    kap.replaceChildren(el('p', {class:'not hata'}, 'Dosya yüklenemedi: ' + secili)); return;
+  }
+  
   const b = s.body;
-  const ozet = [b.bakanlik_adi, b.servis_adi, b.surum && `Sürüm ${b.surum}`,
-                b.dal && `Dal ${b.dal}`, `${s.ms} ms`]
+  const meta = b.meta || {};
+  const ozet = [meta.bakanlik_adi, meta.servis_adi, meta.surum && `Sürüm ${meta.surum}`, `${s.ms} ms`]
     .filter(Boolean).join(' · ');
 
   let icerik;
-  if (b.tip === 'agac' && Array.isArray(b.dallar)){
-    icerik = el('pre', {}, JSON.stringify({toplam_dal:b.toplam_dal, dallar:b.dallar}, null, 2));
-  } else if (b.tip === 'agac' && Array.isArray(b.kayitlar)){
-    icerik = tabloYap(b.kayitlar);
-  } else if (Array.isArray(b.data)){
-    icerik = tabloYap(b.data);
+  const kayitlar = b.kayitlar || b.data || [];
+  
+  if (kod) {
+    const bulunan = kayitlar.filter(k => 
+      (k.kod && k.kod.toLowerCase().includes(kod.toLowerCase())) || 
+      (k.aciklama && k.aciklama.toLowerCase().includes(kod.toLowerCase()))
+    );
+    icerik = tabloYap(bulunan);
   } else {
-    icerik = el('pre', {}, JSON.stringify(b.data, null, 2));
+    icerik = tabloYap(kayitlar);
   }
+  
   kap.replaceChildren(el('div', {class:'ozet'}, ozet), icerik);
 }
 
 $('sorgu-form').addEventListener('submit', e => { e.preventDefault(); sorgula(); });
 
+/* ───────── manifest (sayfa altı) ───────── */
+async function manifestYukle(){
+  const kap = $('bak-liste');
+  const s = await getir('/manifest.json');
+  if (!s.ok || !s.body || !s.body.bakanliklar){
+    kap.replaceChildren(el('p', {class:'not'}, 'manifest.json okunamadı.'));
+    return;
+  }
+  kap.replaceChildren(...Object.entries(s.body.bakanliklar).map(([anahtar, b]) =>
+    el('details', {class:'bak'},
+      el('summary', {}, el('b', {}, b.ad), el('span', {class:'not'}, `${b.dosya_sayisi || (b.dosyalar || []).length} dosya`)),
+      el('ul', {}, ...(b.dosyalar || []).map(d => el('li', {}, `${d.ad} — `, el('span', {class:'mono'}, `${anahtar}/${d.dosya}`))))
+    )));
+}
+
 /* ───────── başlat ───────── */
 durumYukle();
 katalogYukle();
-$('tb-birlesik').replaceChildren(birlesikSatiri());
 manifestYukle();
+
+// Birleşik işlem nesnesi statik olarak yok
+$('tb-birlesik').replaceChildren(el('tr', {}, 
+  el('td', {colspan:4, class:'not'}, 'Statik demoda /api/v1/consolidated endpoint\'i çalışmaz.')));
 </script>
 </body>
 </html>
