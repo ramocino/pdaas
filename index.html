@@ -138,7 +138,10 @@
 </main>
 
 <script>
-const API_BASE = '';
+// ⚠️ REPO ADINIZI BURAYA YAZIN. Eğer kullanıcı adınız.github.io/REPO/ ise:
+// const API_BASE = '/REPO';
+// Eğer özel domain veya kullanıcı adınız.github.io direkt kök ise:
+const API_BASE = ''; 
 
 const $ = id => document.getElementById(id);
 function el(tag, attrs, ...cocuk){
@@ -160,7 +163,6 @@ async function getir(yol){
     const body = await r.json();
     return {ok:true, status:r.status, ms:Math.round(performance.now() - t0), body};
   }catch(e){
-    console.warn('[PDaaS] Yüklenemedi:', yol, '-', e.message);
     return {ok:false, status:e.message || 0, ms:0, body:null};
   }
 }
@@ -193,7 +195,58 @@ function tabloYap(kayitlar, limit = 50){
   return el('div', {}, kap, ek);
 }
 
-/* ───── DURUM ───── */
+/* ───────── DOSYA BULMA: çoklu strateji ───────── */
+const BULUNAN_YOLLAR = {}; // manifest dosya adı → gerçek URL
+
+async function dosyaBul(manifestDosya){
+  if (BULUNAN_YOLLAR[manifestDosya]) return BULUNAN_YOLLAR[manifestDosya];
+
+  const sadeceAd = manifestDosya.split('/').pop();       // "damgavergisi.json"
+  const adKok = sadeceAd.replace('.json','').toLowerCase(); // "damgavergisi"
+
+  // 1. Önce bilinen yolları dene (hızlı yol)
+  const kesinDenemeler = [
+    '/ham/' + sadeceAd,           // ham/damgavergisi.json
+    '/ham/' + manifestDosya,      // ham/gtip/27.json
+    '/' + sadeceAd,               // /damgavergisi.json
+    '/' + manifestDosya,          // /gtip/27.json
+  ];
+  for (const yol of kesinDenemeler){
+    const s = await getir(yol);
+    if (s.ok) {
+      BULUNAN_YOLLAR[manifestDosya] = {yol, sonuc: s};
+      return BULUNAN_YOLLAR[manifestDosya];
+    }
+  }
+
+  // 2. Bulunamadıysa manifest'teki ismin varyasyonlarını dene
+  // (damgavergisi → damgavergisioranlari, kdv → kdvoranlari gibi)
+  const varyasyonlar = [
+    adKok + 'oranlari',
+    adKok + 'oranlari',
+    adKok + 'orani',
+    adKok + 'dilimleri',
+    adKok + 'katsayilari',
+    adKok + 'kodlari',
+    adKok + 'listesi',
+  ];
+  for (const v of varyasyonlar){
+    for (const onEk of ['/ham/', '/']){
+      const yol = onEk + v + '.json';
+      const s = await getir(yol);
+      if (s.ok) {
+        console.info('[PDaaS] Eşleşme bulundu:', manifestDosya, '→', yol);
+        BULUNAN_YOLLAR[manifestDosya] = {yol, sonuc: s};
+        return BULUNAN_YOLLAR[manifestDosya];
+      }
+    }
+  }
+
+  console.warn('[PDaaS] Bulunamadı:', manifestDosya);
+  return null;
+}
+
+/* ───────── DURUM ───────── */
 function durumYukle(){
   $('saglik-nokta').className = 'dot ok';
   $('saglik-metin').textContent = 'GitHub Statik Demo';
@@ -204,49 +257,28 @@ function durumYukle(){
   $('yapi').textContent = 'GitHub Pages';
 }
 
-/* ───── MANIFEST ───── */
+/* ───────── MANIFEST ───────── */
 let MANIFEST = null;
 
 async function manifestYukle(){
   const s = await getir('/manifest.json');
   if (!s.ok){
-    console.error('[PDaaS] manifest.json yüklenemedi. Kök dizinde manifest.json var mı?');
-    $('tb-servis').replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not hata'},
-      'manifest.json yüklenemedi. Konsola bakın (F12).')));
+    console.error('[PDaaS] manifest.json yüklenemedi.');
     return null;
   }
   MANIFEST = s.body;
   return s.body;
 }
 
-/* ───── BİR DOSYAYI BULMAK İÇİN ÇOKLU DENEME ───── */
-async function dosyaBul(dosyaYolu){
-  // dosyaYolu manifest'te örn: "damgavergisi.json" veya "gtip/27.json"
-  const sadeceAd = dosyaYolu.split('/').pop(); // "damgavergisi.json"
-  const adKok = sadeceAd.replace('.json','');   // "damgavergisi"
-
-  // Denenecek yollar, sırayla:
-  const denemeler = [
-    '/ham/' + sadeceAd,              // ham/damgavergisi.json
-    '/ham/' + dosyaYolu,             // ham/gtip/27.json
-    '/' + dosyaYolu,                 // /gtip/27.json (kök)
-    '/' + sadeceAd,                  // /damgavergisi.json (kök)
-  ];
-
-  for (const yol of denemeler){
-    const s = await getir(yol);
-    if (s.ok) return {yol, sonuc: s};
-  }
-  return null;
-}
-
-/* ───── KATALOG ───── */
+/* ───────── KATALOG ───────── */
 async function katalogYukle(){
   const tb = $('tb-servis');
   tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not'}, 'Manifest yükleniyor…')));
 
   const m = await manifestYukle();
   if (!m || !m.bakanliklar){
+    tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not hata'},
+      'manifest.json yüklenemedi.')));
     return;
   }
 
@@ -268,16 +300,14 @@ async function katalogYukle(){
     return;
   }
 
-  // Sorgu dropdown'ını doldur (dosya bulundukça endpoint güncellenecek)
+  // Sorgu dropdown'ını doldur (manifest dosya adıyla)
   const sel = $('sorgu-servis');
   sel.replaceChildren(...servisler.map(sv =>
     el('option', {value: sv.dosya},
       `${sv.bakanlik_adi} — ${sv.servis_adi}`)
   ));
 
-  // Satırları oluştur ve dosyaları asenkron yükle
-  const satirlar = servisler.map(sv => servisSatiri(sv));
-  tb.replaceChildren(...satirlar);
+  tb.replaceChildren(...servisler.map(sv => servisSatiri(sv)));
 }
 
 function servisSatiri(sv){
@@ -295,7 +325,7 @@ function servisSatiri(sv){
     if (!bulunan){
       dot.className = 'dot bad';
       cKayit.textContent = '–';
-      cYol.textContent = sv.dosya + '  (bulunamadı)';
+      cYol.textContent = sv.dosya + ' (bulunamadı)';
       btn.disabled = true;
       btn.textContent = 'Yok';
       return;
@@ -307,8 +337,6 @@ function servisSatiri(sv){
     const b = bulunan.sonuc.body;
     const kayitlar = b.kayitlar || b.data || [];
     cKayit.textContent = sayi(kayitlar.length);
-
-    // Eğer ağaç yapısıysa
     if (b.meta && b.meta.tip === 'agac' && b.dallar){
       cDal.textContent = sayi(b.dallar.length);
     }
@@ -331,7 +359,7 @@ function servisSatiri(sv){
   return tr;
 }
 
-/* ───── SORGU ───── */
+/* ───────── SORGU ───────── */
 async function sorgula(){
   const seciliDosya = $('sorgu-servis').value;
   const kod = $('sorgu-kod').value.trim().toLowerCase();
@@ -363,7 +391,7 @@ async function sorgula(){
 
 $('sorgu-form').addEventListener('submit', e => { e.preventDefault(); sorgula(); });
 
-/* ───── MANİFEST LİSTESİ (alt bölüm) ───── */
+/* ───────── MANİFEST LİSTESİ (alt bölüm) ───────── */
 async function manifestListele(){
   const kap = $('bak-liste');
   const m = MANIFEST || (await manifestYukle());
@@ -378,12 +406,12 @@ async function manifestListele(){
     )));
 }
 
-/* ───── BAŞLAT ───── */
+/* ───────── BAŞLAT ───────── */
 durumYukle();
 katalogYukle().then(manifestListele);
 
 $('tb-birlesik').replaceChildren(el('tr', {},
-  el('td', {colspan:4, class:'not'}, 'Statik demoda /api/v1/consolidated endpoint\'i çalışmaz.')));
+  el('td', {colspan:4, class:'not'}, 'Statik demoda /api/v1/consolidated çalışmaz.')));
 </script>
 </body>
 </html>
