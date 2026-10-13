@@ -13,7 +13,7 @@ from typing import Dict, List, Any
 import json, time, uuid
 from datetime import datetime, timezone
 
-BUILD_VERSION = "v9_fixed_discovery_2026_10_13"
+BUILD_VERSION = "v10_fixed_server_2026_10_13"
 BUILD_TIMESTAMP = "2026-10-13T12:00:00Z"
 
 app = FastAPI(
@@ -100,6 +100,7 @@ def _kayit_bul(kayitlar: list, alan_adlari: list, deger: str):
 # BAKANLIK ADI HARİTASI
 # ═══════════════════════════════════════════════════════════════
 _BAKANLIK_ADLARI = {
+    "ticaret":  "T.C. Ticaret Bakanlığı",
     "tb":       "T.C. Ticaret Bakanlığı",
     "hvmb":     "T.C. Hazine ve Maliye Bakanlığı",
     "hazine":   "T.C. Hazine ve Maliye Bakanlığı",
@@ -113,7 +114,7 @@ _BAKANLIK_ADLARI = {
 
 
 # ═══════════════════════════════════════════════════════════════
-# OTOMATİK KATALOG TARAMASI (Geliştirilmiş)
+# OTOMATİK KATALOG TARAMASI
 # ═══════════════════════════════════════════════════════════════
 def _katalog_tara() -> dict:
     _SERVIS_KATALOGU.clear()
@@ -129,12 +130,10 @@ def _katalog_tara() -> dict:
         if not isinstance(meta, dict):
             meta = {}
 
-        dosya_stem = f.stem.lower() # örn: gtip-kodlari, cpc-kodlari, nace-kodlari
+        dosya_stem = f.stem.lower()
 
-        # Bakanlık tespiti (meta'dan veya dosya adına/servis koduna göre akıllı eşleme)
         bak = (meta.get("bakanlik") or "").strip().lower()
-        if not bak:
-            bak = "genel"
+        if not bak or bak == "tb":
             if "gtip" in dosya_stem or "cpc" in dosya_stem or "ithalat" in dosya_stem:
                 bak = "ticaret"
             elif "nace" in dosya_stem or "istatistik" in dosya_stem:
@@ -202,17 +201,25 @@ def _ortak_meta(k: dict) -> dict:
 
 
 def _servis_bul(bakanlik: str, servis_kodu: str) -> dict:
-    k = _SERVIS_KATALOGU.get((bakanlik.lower(), servis_kodu.lower()))
-    if not k:
-        _katalog_tara()
-        k = _SERVIS_KATALOGU.get((bakanlik.lower(), servis_kodu.lower()))
-    if not k:
-        # Alternatif olarak sadece servis koduna göre arayalım
-        for (b, s), kayit in _SERVIS_KATALOGU.items():
-            if s == servis_kodu.lower():
-                return kayit
-        raise HTTPException(404, f"Servis bulunamadı: {bakanlik}/{servis_kodu}")
-    return k
+    bak_aranan = bakanlik.lower()
+    svc_aranan = servis_kodu.lower()
+    
+    # 1. Tam eşleşme dene
+    k = _SERVIS_KATALOGU.get((bak_aranan, svc_aranan))
+    if k:
+        return k
+
+    # 2. Bakanlık bağımsız sadece servis koduna göre ara
+    for (b, s), kayit in _SERVIS_KATALOGU.items():
+        if s == svc_aranan or s.replace("-", "") == svc_aranan.replace("-", ""):
+            return kayit
+
+    _katalog_tara()
+    for (b, s), kayit in _SERVIS_KATALOGU.items():
+        if s == svc_aranan or s.replace("-", "") == svc_aranan.replace("-", ""):
+            return kayit
+
+    raise HTTPException(404, f"Servis bulunamadı: {bakanlik}/{servis_kodu}")
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -258,34 +265,29 @@ def katalog_listesi():
         "toplam":    len(servisler),
         "servisler": servisler,
     }
-# Tüm yüklenen JSON verilerini RAM'de tutacak cache sözlüğü
-_VERI_CACHE = {}
 
 
 @app.get("/api/v1/{bakanlik}/{servis_kodu}")
 def servis_ozet(bakanlik: str, servis_kodu: str):
-  t0 = time.perf_counter()
-  k = _servis_bul(bakanlik, servis_kodu)
+    t0 = time.perf_counter()
+    try:
+        k = _servis_bul(bakanlik, servis_kodu)
 
-  cache_key = (bakanlik.lower(), servis_kodu.lower())
-
-  # Eğer veri daha önce belleğe alınmadıysa diskten oku ve RAM'e kaydet
-  if cache_key not in _VERI_CACHE:
-    tum = []
-    for d in k["dosyalar"]:
-      v = _json_oku(d["yol"])
-      if v:
-        tum.endswith(_kayitlari_al(v))  # veya extend
-        tum.extend(_kayitlari_al(v))
-    _VERI_CACHE[cache_key] = tum
-  else:
-    tum = _VERI_CACHE[cache_key]  # RAM'den anında al!
-
-  _metrik_kaydet((time.perf_counter() - t0) * 1000)
-  return {
-      **_ortak_meta(k),
-      "tip": k["tip"],
-      "join": k["join"],
-      "toplam": len(tum),
-      "kayitlar": tum,
-  }
+        tum = []
+        for d in k["dosyalar"]:
+            v = _json_oku(d["yol"])
+            if v:
+                tum.extend(_kayitlari_al(v))
+        
+        _metrik_kaydet((time.perf_counter() - t0) * 1000)
+        return {
+            **_ortak_meta(k),
+            "tip": k["tip"],
+            "join": k["join"],
+            "toplam": len(tum),
+            "kayitlar": tum
+        }
+    except HTTPException as he:
+        raise he
+    except Exception as e:
+        raise HTTPException(500, f"Sunucu hatası: {str(e)}")
