@@ -258,24 +258,34 @@ def katalog_listesi():
         "toplam":    len(servisler),
         "servisler": servisler,
     }
+# Tüm yüklenen JSON verilerini RAM'de tutacak cache sözlüğü
+_VERI_CACHE = {}
 
 
 @app.get("/api/v1/{bakanlik}/{servis_kodu}")
 def servis_ozet(bakanlik: str, servis_kodu: str):
-    t0 = time.perf_counter()
-    k = _servis_bul(bakanlik, servis_kodu)
+  t0 = time.perf_counter()
+  k = _servis_bul(bakanlik, servis_kodu)
 
+  cache_key = (bakanlik.lower(), servis_kodu.lower())
+
+  # Eğer veri daha önce belleğe alınmadıysa diskten oku ve RAM'e kaydet
+  if cache_key not in _VERI_CACHE:
     tum = []
     for d in k["dosyalar"]:
-        v = _json_oku(d["yol"])
-        if v:
-            tum.extend(_kayitlari_al(v))
-    
-    _metrik_kaydet((time.perf_counter() - t0) * 1000)
-    return {
-        **_ortak_meta(k),
-        "tip": k["tip"],
-        "join": k["join"],
-        "toplam": len(tum),
-        "kayitlar": tum
-    }
+      v = _json_oku(d["yol"])
+      if v:
+        tum.endswith(_kayitlari_al(v))  # veya extend
+        tum.extend(_kayitlari_al(v))
+    _VERI_CACHE[cache_key] = tum
+  else:
+    tum = _VERI_CACHE[cache_key]  # RAM'den anında al!
+
+  _metrik_kaydet((time.perf_counter() - t0) * 1000)
+  return {
+      **_ortak_meta(k),
+      "tip": k["tip"],
+      "join": k["join"],
+      "toplam": len(tum),
+      "kayitlar": tum,
+  }
