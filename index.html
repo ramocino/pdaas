@@ -138,10 +138,10 @@
 </main>
 
 <script>
-// ⚠️ REPO ADINIZI BURAYA YAZIN. Eğer kullanıcı adınız.github.io/REPO/ ise:
-// const API_BASE = '/REPO';
-// Eğer özel domain veya kullanıcı adınız.github.io direkt kök ise:
-const API_BASE = ''; 
+const API_BASE = '';
+// Yedek sunucu (üniversite ağı Cloudflare'i engelliyorsa buraya düşer)
+const YEDEK_BASE = 'https://pdaas.onrender.com';
+let yedekAktif = false; // Bir kere yedek çalışırsa hep onu kullan
 
 const $ = id => document.getElementById(id);
 function el(tag, attrs, ...cocuk){
@@ -157,12 +157,36 @@ function el(tag, attrs, ...cocuk){
 
 async function getir(yol){
   const t0 = performance.now();
+  // Önce yedek aktifse doğrudan yedeği kullan
+  if (yedekAktif) {
+    try {
+      const r = await fetch(YEDEK_BASE + yol);
+      if (r.ok) {
+        const body = await r.json();
+        return {ok:true, status:r.status, ms:Math.round(performance.now() - t0), body, kaynak:'yedek'};
+      }
+    } catch(_) {}
+    return {ok:false, status:0, ms:0, body:null};
+  }
+
+  // Normal yol
   try{
     const r = await fetch(API_BASE + yol);
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const body = await r.json();
-    return {ok:true, status:r.status, ms:Math.round(performance.now() - t0), body};
+    return {ok:true, status:r.status, ms:Math.round(performance.now() - t0), body, kaynak:'ana'};
   }catch(e){
+    // Normal yol başarısız → yedek sunucuyu dene
+    console.warn('[PDaaS] Ana sunucu başarısız (' + yol + '), yedek deneniyor...');
+    try {
+      const r2 = await fetch(YEDEK_BASE + yol);
+      if (r2.ok) {
+        const body = await r2.json();
+        yedekAktif = true; // Bundan sonra tüm istekler yedekten
+        console.info('[PDaaS] Yedek sunucu aktif: ' + YEDEK_BASE);
+        return {ok:true, status:r2.status, ms:Math.round(performance.now() - t0), body, kaynak:'yedek'};
+      }
+    } catch(_) {}
     return {ok:false, status:e.message || 0, ms:0, body:null};
   }
 }
@@ -195,90 +219,33 @@ function tabloYap(kayitlar, limit = 50){
   return el('div', {}, kap, ek);
 }
 
-/* ───────── DOSYA BULMA: çoklu strateji ───────── */
-const BULUNAN_YOLLAR = {}; // manifest dosya adı → gerçek URL
-
-async function dosyaBul(manifestDosya){
-  if (BULUNAN_YOLLAR[manifestDosya]) return BULUNAN_YOLLAR[manifestDosya];
-
-  const sadeceAd = manifestDosya.split('/').pop();       // "damgavergisi.json"
-  const adKok = sadeceAd.replace('.json','').toLowerCase(); // "damgavergisi"
-
-  // 1. Önce bilinen yolları dene (hızlı yol)
-  const kesinDenemeler = [
-    '/ham/' + sadeceAd,           // ham/damgavergisi.json
-    '/ham/' + manifestDosya,      // ham/gtip/27.json
-    '/' + sadeceAd,               // /damgavergisi.json
-    '/' + manifestDosya,          // /gtip/27.json
-  ];
-  for (const yol of kesinDenemeler){
-    const s = await getir(yol);
-    if (s.ok) {
-      BULUNAN_YOLLAR[manifestDosya] = {yol, sonuc: s};
-      return BULUNAN_YOLLAR[manifestDosya];
-    }
-  }
-
-  // 2. Bulunamadıysa manifest'teki ismin varyasyonlarını dene
-  // (damgavergisi → damgavergisioranlari, kdv → kdvoranlari gibi)
-  const varyasyonlar = [
-    adKok + 'oranlari',
-    adKok + 'oranlari',
-    adKok + 'orani',
-    adKok + 'dilimleri',
-    adKok + 'katsayilari',
-    adKok + 'kodlari',
-    adKok + 'listesi',
-  ];
-  for (const v of varyasyonlar){
-    for (const onEk of ['/ham/', '/']){
-      const yol = onEk + v + '.json';
-      const s = await getir(yol);
-      if (s.ok) {
-        console.info('[PDaaS] Eşleşme bulundu:', manifestDosya, '→', yol);
-        BULUNAN_YOLLAR[manifestDosya] = {yol, sonuc: s};
-        return BULUNAN_YOLLAR[manifestDosya];
-      }
-    }
-  }
-
-  console.warn('[PDaaS] Bulunamadı:', manifestDosya);
-  return null;
-}
-
-/* ───────── DURUM ───────── */
+/* ───────── durum ───────── */
 function durumYukle(){
   $('saglik-nokta').className = 'dot ok';
-  $('saglik-metin').textContent = 'GitHub Statik Demo';
+  $('saglik-metin').textContent = yedekAktif ? 'Yedek sunucu (Render)' : 'GitHub/Cloudflare';
   $('st-ort').textContent = '–';
   $('st-istek').textContent = '–';
   $('st-servis').textContent = '–';
   $('st-bak').textContent = '–';
-  $('yapi').textContent = 'GitHub Pages';
+  $('yapi').textContent = yedekAktif ? 'Render (yedek)' : 'Cloudflare';
 }
 
-/* ───────── MANIFEST ───────── */
-let MANIFEST = null;
-
+/* ───────── manifest ───────── */
 async function manifestYukle(){
   const s = await getir('/manifest.json');
-  if (!s.ok){
-    console.error('[PDaaS] manifest.json yüklenemedi.');
-    return null;
-  }
-  MANIFEST = s.body;
+  if (!s.ok) return null;
+  durumYukle();
   return s.body;
 }
 
-/* ───────── KATALOG ───────── */
+/* ───────── katalog ───────── */
 async function katalogYukle(){
   const tb = $('tb-servis');
   tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not'}, 'Manifest yükleniyor…')));
 
   const m = await manifestYukle();
   if (!m || !m.bakanliklar){
-    tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not hata'},
-      'manifest.json yüklenemedi.')));
+    tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not hata'}, 'manifest.json yüklenemedi.')));
     return;
   }
 
@@ -286,25 +253,20 @@ async function katalogYukle(){
   Object.entries(m.bakanliklar).forEach(([bakKey, bak]) => {
     (bak.dosyalar || []).forEach(d => {
       servisler.push({
-        bakanlik: bakKey,
-        bakanlik_adi: bak.ad,
-        servis_adi: d.ad,
-        kategori: d.kategori,
-        dosya: d.dosya,
+        bakanlik: bakKey, bakanlik_adi: bak.ad,
+        servis_adi: d.ad, kategori: d.kategori, dosya: d.dosya,
       });
     });
   });
 
   if (!servisler.length){
-    tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not'}, 'Manifest içinde dosya yok.')));
+    tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not'}, 'Dosya yok.')));
     return;
   }
 
-  // Sorgu dropdown'ını doldur (manifest dosya adıyla)
   const sel = $('sorgu-servis');
   sel.replaceChildren(...servisler.map(sv =>
-    el('option', {value: sv.dosya},
-      `${sv.bakanlik_adi} — ${sv.servis_adi}`)
+    el('option', {value: sv.dosya}, `${sv.bakanlik_adi} — ${sv.servis_adi}`)
   ));
 
   tb.replaceChildren(...servisler.map(sv => servisSatiri(sv)));
@@ -331,15 +293,13 @@ function servisSatiri(sv){
       return;
     }
     dot.className = 'dot ok';
-    cYol.textContent = bulunan.yol;
+    cYol.textContent = bulunan.yol + (bulunan.kaynak === 'yedek' ? ' (yedek)' : '');
     cMs.textContent = bulunan.sonuc.ms;
 
     const b = bulunan.sonuc.body;
     const kayitlar = b.kayitlar || b.data || [];
     cKayit.textContent = sayi(kayitlar.length);
-    if (b.meta && b.meta.tip === 'agac' && b.dallar){
-      cDal.textContent = sayi(b.dallar.length);
-    }
+    if (b.meta && b.meta.tip === 'agac' && b.dallar) cDal.textContent = sayi(b.dallar.length);
 
     btn.addEventListener('click', () => {
       const td = el('td', {colspan:7});
@@ -347,19 +307,32 @@ function servisSatiri(sv){
       tr.after(dtr);
       btn.textContent = 'Kapat';
       btn.onclick = () => { dtr.remove(); btn.textContent = 'Aç'; btn.onclick = null; };
-
       const meta = b.meta || {};
-      const ozet = el('p', {class:'not', style:'margin-bottom:8px'},
-        `${meta.yayinci || ''} · ${meta.kaynak || ''} · Sürüm: ${meta.surum || ''} · `,
-        el('a', {href: bulunan.yol, target:'_blank', rel:'noopener'}, 'JSON olarak aç'));
-      td.append(ozet, tabloYap(kayitlar));
+      td.append(
+        el('p', {class:'not', style:'margin-bottom:8px'},
+          `${meta.yayinci || ''} · ${meta.kaynak || ''} · Sürüm: ${meta.surum || ''} · Kaynak: ${bulunan.kaynak}`),
+        tabloYap(kayitlar)
+      );
     });
   });
 
   return tr;
 }
 
-/* ───────── SORGU ───────── */
+async function dosyaBul(manifestDosya){
+  const sadeceAd = manifestDosya.split('/').pop();
+  const denemeler = [
+    '/ham/' + sadeceAd, '/ham/' + manifestDosya,
+    '/' + sadeceAd, '/' + manifestDosya,
+  ];
+  for (const yol of denemeler){
+    const s = await getir(yol);
+    if (s.ok) return {yol, sonuc: s, kaynak: s.kaynak};
+  }
+  return null;
+}
+
+/* ───────── sorgu ───────── */
 async function sorgula(){
   const seciliDosya = $('sorgu-servis').value;
   const kod = $('sorgu-kod').value.trim().toLowerCase();
@@ -372,11 +345,10 @@ async function sorgula(){
     kap.replaceChildren(el('p', {class:'not hata'}, 'Dosya bulunamadı: ' + seciliDosya));
     return;
   }
-
   const b = bulunan.sonuc.body;
   const meta = b.meta || {};
-  const ozet = [meta.bakanlik_adi, meta.servis_adi, meta.surum && `Sürüm ${meta.surum}`, `${bulunan.sonuc.ms} ms`]
-    .filter(Boolean).join(' · ');
+  const ozet = [meta.bakanlik_adi, meta.servis_adi, meta.surum && `Sürüm ${meta.surum}`,
+                `${bulunan.sonuc.ms} ms`, `Kaynak: ${bulunan.kaynak}`].filter(Boolean).join(' · ');
 
   let kayitlar = b.kayitlar || b.data || [];
   if (kod){
@@ -391,22 +363,19 @@ async function sorgula(){
 
 $('sorgu-form').addEventListener('submit', e => { e.preventDefault(); sorgula(); });
 
-/* ───────── MANİFEST LİSTESİ (alt bölüm) ───────── */
+/* ───────── manifest listesi ───────── */
 async function manifestListele(){
   const kap = $('bak-liste');
-  const m = MANIFEST || (await manifestYukle());
-  if (!m || !m.bakanliklar){
-    kap.replaceChildren(el('p', {class:'not'}, 'manifest.json okunamadı.'));
-    return;
-  }
-  kap.replaceChildren(...Object.entries(m.bakanliklar).map(([anahtar, b]) =>
+  const s = await getir('/manifest.json');
+  if (!s.ok || !s.body.bakanliklar){ kap.replaceChildren(el('p', {class:'not'}, 'okunamadı.')); return; }
+  kap.replaceChildren(...Object.entries(s.body.bakanliklar).map(([anahtar, b]) =>
     el('details', {class:'bak'},
       el('summary', {}, el('b', {}, b.ad), el('span', {class:'not'}, `${b.dosya_sayisi || (b.dosyalar || []).length} dosya`)),
       el('ul', {}, ...(b.dosyalar || []).map(d => el('li', {}, `${d.ad} — `, el('span', {class:'mono'}, `${anahtar}/${d.dosya}`))))
     )));
 }
 
-/* ───────── BAŞLAT ───────── */
+/* ───────── başlat ───────── */
 durumYukle();
 katalogYukle().then(manifestListele);
 
