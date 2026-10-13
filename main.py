@@ -134,7 +134,8 @@ def _katalog_tara() -> dict:
 
         # Bakanlık tespiti (meta'dan veya dosya adına/servis koduna göre akıllı eşleme)
         bak = (meta.get("bakanlik") or "").strip().lower()
-        if not bak or bak == "tb":
+        if not bak:
+            bak = "genel"
             if "gtip" in dosya_stem or "cpc" in dosya_stem or "ithalat" in dosya_stem:
                 bak = "ticaret"
             elif "nace" in dosya_stem or "istatistik" in dosya_stem:
