@@ -7,17 +7,18 @@ Dosya adı ve klasör yapısı önemsizdir.
 from fastapi import FastAPI, HTTPException, Body
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles          # ← YENİ
 from pathlib import Path
 from typing import Dict, List, Any
 import json, time, uuid
 from datetime import datetime, timezone
 
-BUILD_VERSION = "v6_auto_discovery_2026_10_12"
-BUILD_TIMESTAMP = "2026-10-12T00:00:00Z"
+BUILD_VERSION = "v7_static_files_2026_10_13"          # ← güncellendi
+BUILD_TIMESTAMP = "2026-10-13T00:00:00Z"              # ← güncellendi
 
 app = FastAPI(
     title="PDaaS API",
-    version="3.0.0",
+    version="3.1.0",                                  # ← güncellendi
     description="Parametric Data as a Service — Turkish public parameters (auto-discovery)",
 )
 app.add_middleware(
@@ -34,6 +35,15 @@ _METRICS = {"requests": 0, "total_ms": 0.0, "max_ms": 0.0}
 
 # (bakanlik, servis_kodu) → servis tanımı
 _SERVIS_KATALOGU: Dict[tuple, dict] = {}
+
+
+# ═══════════════════════════════════════════════════════════════
+# STATİK DOSYA SUNUMU (ham/ klasörü)
+# ═══════════════════════════════════════════════════════════════
+# ham/ klasörünü /ham yolundan statik olarak sun.
+# Böylece /ham/asgariucret.json gibi doğrudan istekler çalışır.
+if HAM_KOK.exists():
+    app.mount("/ham", StaticFiles(directory=str(HAM_KOK)), name="ham")
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -179,7 +189,7 @@ def _servis_bul(bakanlik: str, servis_kodu: str) -> dict:
 def ana_sayfa():
     yol = KOK / "index.html"
     if not yol.exists():
-        return {"service": "PDaaS API", "version": "3.0.0", "docs": "/docs"}
+        return {"service": "PDaaS API", "version": "3.1.0", "docs": "/docs"}
     return FileResponse(yol, media_type="text/html")
 
 
@@ -209,7 +219,7 @@ def kurator_sayfa():
 
 @app.get("/health")
 def health():
-    return {"status": "healthy", "version": "3.0.0", "build": BUILD_VERSION,
+    return {"status": "healthy", "version": "3.1.0", "build": BUILD_VERSION,
             "timestamp": _zaman_damgasi()}
 
 
@@ -220,6 +230,7 @@ def version_check():
         "build_time": BUILD_TIMESTAMP,
         "servis_sayisi": len(_SERVIS_KATALOGU),
         "otomatik_kesif": True,
+        "statik_ham_sunum": HAM_KOK.exists(),
         "status": "ok",
     }
 
@@ -369,7 +380,7 @@ def birlestirilmis():
                  for (b, s) in sorted(_SERVIS_KATALOGU.keys())]
 
     return {
-        "service": "PDaaS - Consolidated Transaction Object v3.0",
+        "service": "PDaaS - Consolidated Transaction Object v3.1",
         "endpoint": "/api/v1/consolidated",
         "timestamp": _zaman_damgasi(),
         "execution_time_ms": sure_ms,
