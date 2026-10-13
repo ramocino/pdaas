@@ -484,7 +484,7 @@ async function getir(yol){
 function kayitlariCikar(b){
   if (!b) return null;
   if (Array.isArray(b)) return b;
-  for (const a of ['data','kayitlar','kayıtlar','dallar','sonuclar','items','results','rows']){
+  for (const a of ['kayitlar','data','kayıtlar','dallar','sonuclar','items','results','rows']){
     if (Array.isArray(b[a])) return b[a];
   }
   return null;
@@ -527,9 +527,6 @@ function jsonRenklendir(obj, indent = 0, derinlik = 0){
   return kacis(String(obj));
 }
 
-/* =========================================================
-   KATALOG YÜKLE (Başlangıçta Kapalı/Kapanabilir Menüler)
-   ========================================================= */
 async function katalogYukle(){
   const s = await getir('/api/v1/katalog');
   
@@ -556,7 +553,6 @@ async function katalogYukle(){
 
   $('agac-ozet').textContent = `${Object.keys(gruplar).length} kurum · ${KATALOG.length} servis`;
 
-  // 'acik' sınıfı kaldırıldı, böylece menüler başlangıçta kapalı gelir
   const html = Object.entries(gruplar).map(([kurum, liste]) => `
     <div class="bak" data-kurum="${kacis(kurum)}">
       <button class="bak-baslik" type="button">
@@ -612,9 +608,6 @@ $('agac-liste').addEventListener('click', (e) => {
   }
 });
 
-/* =========================================================
-   SERVİS DETAY
-   ========================================================= */
 async function servisSec(sv){
   $('bos-durum').style.display = 'none';
   const ic = $('detay-ic');
