@@ -156,27 +156,28 @@ function el(tag, attrs, ...cocuk){
 
 async function getir(yol){
   const t0 = performance.now();
-  if (yedekAktif) {
+  const dene = async (base) => {
     try {
-      const r = await fetch(YEDEK_BASE + yol);
-      if (r.ok) return {ok:true, status:r.status, ms:Math.round(performance.now() - t0), body: await r.json(), kaynak:'yedek'};
-    } catch(_) {}
-    return {ok:false, status:0, ms:0, body:null};
+      const r = await fetch(base + yol);
+      if (!r.ok) return null;
+      return {ok:true, status:r.status, ms:Math.round(performance.now() - t0),
+              body: await r.json(), kaynak: base ? 'yedek' : 'ana'};
+    } catch(_) { return null; }
+  };
+
+  // Yedek aktifse doğrudan yedek
+  if (yedekAktif){
+    const s = await dene(YEDEK_BASE);
+    return s || {ok:false, status:0, ms:0, body:null};
   }
-  try{
-    const r = await fetch(API_BASE + yol);
-    if (!r.ok) throw new Error('HTTP ' + r.status);
-    return {ok:true, status:r.status, ms:Math.round(performance.now() - t0), body: await r.json(), kaynak:'ana'};
-  }catch(e){
-    try {
-      const r2 = await fetch(YEDEK_BASE + yol);
-      if (r2.ok) {
-        yedekAktif = true;
-        return {ok:true, status:r2.status, ms:Math.round(performance.now() - t0), body: await r2.json(), kaynak:'yedek'};
-      }
-    } catch(_) {}
-    return {ok:false, status:0, ms:0, body:null};
-  }
+  // Önce ana sunucu
+  let s = await dene('');
+  if (s) return s;
+  // Ana başarısız → yedek
+  console.warn('[PDaaS] Ana sunucu başarısız (' + yol + '), yedek deneniyor…');
+  s = await dene(YEDEK_BASE);
+  if (s) { yedekAktif = true; console.info('[PDaaS] Yedek aktif: ' + YEDEK_BASE); return s; }
+  return {ok:false, status:0, ms:0, body:null};
 }
 
 const sayi = n => (n == null ? '–' : Number(n).toLocaleString('tr-TR'));
@@ -207,207 +208,130 @@ function tabloYap(kayitlar, limit = 100){
   return el('div', {}, kap, ek);
 }
 
-/* ───────── durum çubuğu ───────── */
-function durumYukle(servisSayisi, bakanlikSayisi){
+function durumYukle(){
   $('saglik-nokta').className = 'dot ok';
-  $('saglik-metin').textContent = yedekAktif ? 'Yedek sunucu' : 'Aktif';
-  $('st-servis').textContent = sayi(servisSayisi || '–');
-  $('st-bak').textContent = sayi(bakanlikSayisi || '–');
+  $('saglik-metin').textContent = yedekAktif ? 'Yedek sunucu (Render)' : 'Aktif';
   $('yapi').textContent = yedekAktif ? 'Render' : 'Cloudflare';
 }
 
-/* ───────── TÜM HAM DOSYALARINI KEŞFET ───────── */
-// Manifest'teki her dosya adayını dener, sadece 200 OK dönenleri döndürür.
-// Her bulunan dosya için JSON meta'sını da döndürür.
-async function hamDosyalariKesfet(){
-  const m = await getir('/manifest.json');
-  if (!m.ok || !m.body.bakanliklar){
-    console.error('[PDaaS] manifest.json okunamadı');
-    return [];
-  }
-
-  // Manifest'ten aday dosya listesi + her adayın bakanlık bilgisi
-  const adaylar = [];
-  Object.entries(m.body.bakanliklar).forEach(([bakKey, bak]) => {
-    (bak.dosyalar || []).forEach(d => {
-      adaylar.push({
-        bakanlik_key: bakKey,
-        bakanlik_manifest: bak.ad,
-        ad_manifest: d.ad,
-        kategori_manifest: d.kategori,
-        dosya: d.dosya,
-      });
-    });
-  });
-
-  console.info('[PDaaS]', adaylar.length, 'aday dosya kontrol edilecek…');
-
-  // Her adayı paralel olarak dene (Promise.all ile hızlandır)
-  const sonuclar = await Promise.all(adaylar.map(async aday => {
-    const sadeceAd = aday.dosya.split('/').pop();
-
-    // Sırayla dene: ham/dosya.json → ham/tam/yol.json → /dosya.json
-    const yollar = [
-      '/ham/' + sadeceAd,
-      '/ham/' + aday.dosya,
-      '/' + sadeceAd,
-      '/' + aday.dosya,
-    ];
-
-    for (const yol of yollar){
-      const s = await getir(yol);
-      if (s.ok && s.body && typeof s.body === 'object'){
-        const meta = s.body.meta || {};
-        const kayitlar = s.body.kayitlar || s.body.data || [];
-        return {
-          yol: yol,
-          dosya: sadeceAd,
-          // JSON meta'sından al (varsa)
-          bakanlik_key: meta.bakanlik || aday.bakanlik_key,
-          bakanlik_adi: meta.bakanlik_adi || aday.bakanlik_manifest,
-          servis_adi: meta.servis_adi || aday.ad_manifest,
-          kategori: meta.kategori || meta.tip || aday.kategori_manifest || 'liste',
-          surum: meta.surum || '',
-          yayinci: meta.yayinci || '',
-          kaynak: meta.kaynak || '',
-          tip: meta.tip || 'liste',
-          kayit_sayisi: kayitlar.length,
-          dal_sayisi: Array.isArray(s.body.dallar) ? s.body.dallar.length : 0,
-          veri: s.body,
-          ms: s.ms,
-          kaynak_sunucu: s.kaynak,
-        };
-      }
-    }
-    return null; // bulunamadı
-  }));
-
-  // Sadece bulunanları döndür
-  const bulunanlar = sonuclar.filter(Boolean);
-  console.info('[PDaaS]', bulunanlar.length, '/', adaylar.length, 'dosya bulundu');
-  return bulunanlar;
-}
-
-/* ───────── KATALOG LİSTESİ ───────── */
-let BULUNAN_SERVISLER = [];
+/* ═══════════════ KATALOG (main.py'nin keşif endpoint'i) ═══════════════ */
+let KATALOG = []; // main.py'den gelen gerçek servis listesi
 
 async function katalogYukle(){
   const tb = $('tb-servis');
-  tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not'}, 'Ham dosyalar taranıyor…')));
+  tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not'}, 'Katalog yükleniyor…')));
 
-  const bulunanlar = await hamDosyalariKesfet();
-  BULUNAN_SERVISLER = bulunanlar;
-
-  if (!bulunanlar.length){
-    tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not hata'}, 'Hiçbir JSON dosyası bulunamadı.')));
-    durumYukle(0, 0);
+  // main.py'nin otomatik keşif endpoint'i: ham/ altındaki TÜM json'ları bulur
+  const s = await getir('/api/v1/katalog');
+  if (!s.ok || !s.body || !Array.isArray(s.body.servisler)){
+    tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not hata'},
+      'Katalog alınamadı. /api/v1/katalog endpoint\'i çalışmıyor.')));
     return;
   }
 
-  // Bakanlık sayısını benzersiz olarak say
-  const bakanliklar = new Set(bulunanlar.map(b => b.bakanlik_key));
+  KATALOG = s.body.servisler;
+  console.info('[PDaaS] Katalog:', KATALOG.length, 'servis');
 
-  // Sorgu dropdown'ını doldur
+  if (!KATALOG.length){
+    tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not'}, 'Hiç servis yok.')));
+    return;
+  }
+
+  // Sorgu dropdown'ı
   const sel = $('sorgu-servis');
-  sel.replaceChildren(...bulunanlar.map(b =>
-    el('option', {value: b.yol},
-      `${b.bakanlik_adi} — ${b.servis_adi}`)
+  sel.replaceChildren(...KATALOG.map(sv =>
+    el('option', {value: sv.endpoint},
+      `${sv.bakanlik_adi} — ${sv.servis_adi}`)
   ));
 
-  // Tabloyu doldur
-  tb.replaceChildren(...bulunanlar.map(b => servisSatiri(b)));
+  // Tablo satırları
+  tb.replaceChildren(...KATALOG.map(sv => servisSatiri(sv)));
 
-  durumYukle(bulunanlar.length, bakanliklar.size);
+  // Durum
+  const bakanliklar = new Set(KATALOG.map(sv => sv.bakanlik));
+  $('st-servis').textContent = sayi(KATALOG.length);
+  $('st-bak').textContent = sayi(bakanliklar.size);
+  durumYukle();
 }
 
-function servisSatiri(b){
+function servisSatiri(sv){
+  // main.py'den gelen bilgiler zaten JSON meta'sından türetilmiş
   const dot = el('span', {class:'dot ok'});
-
-  // ⭐ Tüm bilgiler JSON'un meta'sından geliyor
-  const cAd = el('td', {class:'ad'},
-    dot,
-    b.servis_adi,
-    el('span', {class:'rozet'}, b.kategori)
-  );
-  const cYol = el('td', {class:'yol mono gizle-kucuk'}, b.yol + (b.kaynak_sunucu === 'yedek' ? ' (yedek)' : ''));
-  const cBak = el('td', {}, b.bakanlik_adi);
-  const cDal = el('td', {class:'sayi'}, b.dal_sayisi ? sayi(b.dal_sayisi) : '');
-  const cKayit = el('td', {class:'sayi'}, sayi(b.kayit_sayisi));
-  const cMs = el('td', {class:'sayi gizle-kucuk'}, b.ms);
+  const cAd = el('td', {class:'ad'}, dot, sv.servis_adi, el('span', {class:'rozet'}, sv.tip || 'liste'));
+  const cYol = el('td', {class:'yol mono gizle-kucuk'}, sv.endpoint + (yedekAktif ? ' (yedek)' : ''));
+  const cBak = el('td', {}, sv.bakanlik_adi);
+  const cDal = el('td', {class:'sayi'}, sv.dal_sayisi ? sayi(sv.dal_sayisi) : '');
+  const cKayit = el('td', {class:'sayi'}, sayi(sv.kayit_sayisi));
+  const cMs = el('td', {class:'sayi gizle-kucuk'}, '–');
   const btn = el('button', {class:'btn ikincil kucuk'}, 'Aç');
   const tr = el('tr', {}, cAd, cYol, cBak, cDal, cKayit, cMs, el('td', {}, btn));
 
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', async () => {
+    // Detay aç
     const td = el('td', {colspan:7});
     const dtr = el('tr', {class:'detay'}, td);
     tr.after(dtr);
     btn.textContent = 'Kapat';
     btn.onclick = () => { dtr.remove(); btn.textContent = 'Aç'; btn.onclick = null; };
+    td.append(el('p', {class:'not'}, 'Yükleniyor…'));
+
+    const s = await getir(sv.endpoint);
+    if (!s.ok){
+      td.replaceChildren(el('p', {class:'not hata'}, 'Veri alınamadı: ' + sv.endpoint));
+      return;
+    }
+    const b = s.body;
+    const meta = b.meta || {};
+    const kayitlar = b.data || b.kayitlar || [];
 
     const ozet = el('p', {class:'not', style:'margin-bottom:8px'},
-      [b.yayinci, b.kaynak, b.surum && `Sürüm: ${b.surum}`].filter(Boolean).join(' · '),
+      [meta.yayinci, meta.kaynak, meta.surum && `Sürüm: ${meta.surum}`].filter(Boolean).join(' · '),
       ' · ',
-      el('a', {href: b.yol, target:'_blank', rel:'noopener'}, 'JSON olarak aç')
-    );
-    td.append(ozet, tabloYap(b.veri.kayitlar || b.veri.data || []));
+      el('a', {href: sv.endpoint, target:'_blank', rel:'noopener'}, 'JSON olarak aç'));
+
+    td.replaceChildren(ozet, tabloYap(kayitlar));
   });
 
   return tr;
 }
 
-/* ───────── SORGU ───────── */
+/* ═══════════════ SORGU ═══════════════ */
 async function sorgula(){
-  const seciliYol = $('sorgu-servis').value;
+  const endpoint = $('sorgu-servis').value;
   const kod = $('sorgu-kod').value.trim().toLowerCase();
   const kap = $('sorgu-sonuc');
 
-  if (!seciliYol){
+  if (!endpoint){
     kap.replaceChildren(el('p', {class:'not hata'}, 'Servis seçin.'));
     return;
   }
+  kap.replaceChildren(el('p', {class:'not'}, 'Sorgulanıyor…'));
 
-  // Zaten yüklü olan servislerden birini bul (yeniden fetch etme)
-  const bulunan = BULUNAN_SERVISLER.find(b => b.yol === seciliYol);
-  if (!bulunan){
-    kap.replaceChildren(el('p', {class:'not hata'}, 'Servis bulunamadı.'));
+  const s = await getir(endpoint);
+  if (!s.ok){
+    kap.replaceChildren(el('p', {class:'not hata'}, 'Veri alınamadı: ' + endpoint));
     return;
   }
-
-  const b = bulunan.veri;
+  const b = s.body;
   const meta = b.meta || {};
-  const ozet = el('div', {class:'ozet'},
-    [meta.bakanlik_adi, meta.servis_adi,
-     meta.surum && `Sürüm ${meta.surum}`,
-     `${bulunan.ms} ms`].filter(Boolean).join(' · ')
-  );
+  const ozet = [meta.bakanlik_adi, meta.servis_adi,
+                meta.surum && `Sürüm ${meta.surum}`,
+                `${s.ms} ms`].filter(Boolean).join(' · ');
 
-  let kayitlar = b.kayitlar || b.data || [];
-
-  // Kod filtresi
+  let kayitlar = b.data || b.kayitlar || [];
   if (kod){
     kayitlar = kayitlar.filter(k =>
       (k.kod && String(k.kod).toLowerCase().includes(kod)) ||
       (k.aciklama && String(k.aciklama).toLowerCase().includes(kod)) ||
       (k.ad && String(k.ad).toLowerCase().includes(kod))
     );
-    if (!kayitlar.length){
-      kap.replaceChildren(ozet, el('p', {class:'not'}, `"${kod}" için sonuç bulunamadı.`));
-      return;
-    }
-    kap.replaceChildren(
-      ozet,
-      el('p', {class:'not', style:'margin-bottom:8px'}, `${sayi(kayitlar.length)} kayıt bulundu.`),
-      tabloYap(kayitlar)
-    );
-  } else {
-    // Filtre yok → tüm kayıtları göster
-    kap.replaceChildren(ozet, tabloYap(kayitlar));
   }
+  kap.replaceChildren(el('div', {class:'ozet'}, ozet), tabloYap(kayitlar));
 }
 
 $('sorgu-form').addEventListener('submit', e => { e.preventDefault(); sorgula(); });
 
-/* ───────── MANİFEST LİSTESİ ───────── */
+/* ═══════════════ MANIFEST LİSTESİ (sayfa altı) ═══════════════ */
 async function manifestListele(){
   const kap = $('bak-liste');
   const s = await getir('/manifest.json');
@@ -417,17 +341,12 @@ async function manifestListele(){
   }
   kap.replaceChildren(...Object.entries(s.body.bakanliklar).map(([anahtar, b]) =>
     el('details', {class:'bak'},
-      el('summary', {},
-        el('b', {}, b.ad),
-        el('span', {class:'not'}, `${b.dosya_sayisi || (b.dosyalar || []).length} dosya`)
-      ),
-      el('ul', {}, ...(b.dosyalar || []).map(d =>
-        el('li', {}, `${d.ad} — `, el('span', {class:'mono'}, `${anahtar}/${d.dosya}`))
-      ))
+      el('summary', {}, el('b', {}, b.ad), el('span', {class:'not'}, `${b.dosya_sayisi || (b.dosyalar || []).length} dosya`)),
+      el('ul', {}, ...(b.dosyalar || []).map(d => el('li', {}, `${d.ad} — `, el('span', {class:'mono'}, `${anahtar}/${d.dosya}`))))
     )));
 }
 
-/* ───────── BAŞLAT ───────── */
+/* ═══════════════ BAŞLAT ═══════════════ */
 durumYukle();
 katalogYukle().then(manifestListele);
 
