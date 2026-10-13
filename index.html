@@ -3,136 +3,150 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PDaaS — Parametrik Veri Servisi</title>
+<title>PDaaS — Parametrik Veri Servisi & Geliştirici Portalı</title>
 <style>
   :root{
-    --bg:#ffffff; --panel:#f5f6f8; --ink:#1b1f24; --muted:#667085; --line:#e3e6ea;
-    --accent:#1d4f91; --ok:#1a7f4b; --bad:#b42318; --wait:#b7791f;
+    --bg:#ffffff; --panel:#f8f9fa; --ink:#111827; --muted:#4b5563; --line:#e5e7eb;
+    --accent:#2563eb; --ok:#16a34a; --bad:#dc2626; --wait:#d97706; --code-bg:#f3f4f6;
   }
   @media (prefers-color-scheme:dark){
-    :root{ --bg:#101317; --panel:#171b21; --ink:#e7eaee; --muted:#8c96a5; --line:#262c35;
-           --accent:#7fb0ee; --ok:#4cc38a; --bad:#f2786d; --wait:#e0b44f; }
+    :root{ --bg:#0f172a; --panel:#1e293b; --ink:#f8fafc; --muted:#94a3b8; --line:#334155;
+           --accent:#3b82f6; --ok:#22c55e; --bad:#ef4444; --wait:#f59e0b; --code-bg:#090d16; }
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{-webkit-text-size-adjust:100%}
-  body{background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-  code,pre,.mono{font-family:ui-monospace,"SF Mono",Consolas,monospace;font-size:.82rem}
+  body{background:var(--bg);color:var(--ink);font:14px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  code,pre,.mono{font-family:ui-monospace,"SF Mono",Consolas,monospace;font-size:.85rem}
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
   button,input,select{font:inherit;color:inherit}
   :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  main{max-width:960px;margin:0 auto;padding:10px}
-  header h1{font-size:1.9rem;font-weight:700;letter-spacing:-.01em}
-  header p{color:var(--muted);max-width:60ch}
-  .durum{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:20px;font-size:.88rem;color:var(--muted)}
-  .durum b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+
+  main{max-width:1100px;margin:0 auto;padding:24px 16px}
+  
+  header{border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:30px}
+  header h1{font-size:1.8rem;font-weight:700;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+  header h1 span{font-size:.75rem;font-weight:500;background:var(--panel);border:1px solid var(--line);padding:2px 8px;border-radius:999px;color:var(--muted)}
+  header p{color:var(--muted);margin-top:6px;max-width:70ch}
+
+  .durum{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:16px;font-size:.85rem;color:var(--muted);background:var(--panel);padding:10px 16px;border-radius:8px;border:1px solid var(--line)}
+  .durum b{color:var(--ink);font-weight:600}
   .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--wait);margin-right:6px;vertical-align:1px}
   .dot.ok{background:var(--ok)} .dot.bad{background:var(--bad)}
-  section{margin-top:44px}
-  h2{font-size:1.02rem;font-weight:650;margin-bottom:12px}
-  h2 small{font-weight:400;color:var(--muted);margin-left:8px}
-  .sorgu{display:flex;flex-wrap:wrap;gap:8px}
-  .sorgu select,.sorgu input{height:38px;padding:0 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
-  .sorgu select{min-width:220px}
-  .sorgu input{flex:1;min-width:160px}
-  .btn{height:38px;padding:0 16px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer;font-weight:600}
-  @media (prefers-color-scheme:dark){ .btn{color:#0b1220} }
+
+  section{margin-top:40px}
+  h2{font-size:1.15rem;font-weight:650;margin-bottom:14px;display:flex;align-items:center;justify-content:between}
+  h2 small{font-weight:400;color:var(--muted);font-size:.85rem;margin-left:8px}
+
+  .sorgu-kutu{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+  .sorgu{display:flex;flex-wrap:wrap;gap:10px}
+  .sorgu select,.sorgu input{height:40px;padding:0 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+  .sorgu select{flex:2;min-width:280px}
+  .sorgu input{flex:1;min-width:180px}
+  .btn{height:40px;padding:0 18px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer;font-weight:600;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+  .btn:hover{opacity:.9}
   .btn.ikincil{background:transparent;color:var(--accent)}
-  .btn.kucuk{height:28px;padding:0 10px;font-size:.8rem}
-  .sonuc{margin-top:14px}
-  .sonuc .ozet{font-size:.84rem;color:var(--muted);margin-bottom:8px}
-  pre{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px;overflow:auto;max-height:380px;white-space:pre-wrap;word-break:break-word}
+  .btn.kucuk{height:30px;padding:0 12px;font-size:.8rem}
+
+  .sonuc{margin-top:16px}
+  .sonuc .ozet{font-size:.85rem;color:var(--muted);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+  
+  pre{background:var(--code-bg);border:1px solid var(--line);border-radius:8px;padding:16px;overflow:auto;max-height:400px;white-space:pre-wrap;word-break:break-word}
+  
+  .tablo-kapsayici{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
   table{width:100%;border-collapse:collapse}
-  th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
-  th{font-weight:600;font-size:.82rem;color:var(--muted)}
+  th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:middle}
+  th{font-weight:600;font-size:.8rem;color:var(--muted);background:var(--panel);text-transform:uppercase;letter-spacing:.03em}
+  tr:last-child td{border-bottom:none}
   td.sayi,th.sayi{text-align:right;font-variant-numeric:tabular-nums}
   td.ad{font-weight:600}
-  td.yol{color:var(--muted)}
-  tr.detay>td{background:var(--panel);padding:14px}
-  .kaydir{overflow-x:auto}
-  .kaydir table th,.kaydir table td{padding:6px 10px;font-size:.82rem;white-space:nowrap;max-width:260px;overflow:hidden;text-overflow:ellipsis}
-  .dallar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
-  .dal{padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:var(--bg);cursor:pointer;font-size:.8rem}
-  .dal:hover,.dal.secili{border-color:var(--accent);color:var(--accent)}
-  .rozet{display:inline-block;padding:1px 8px;border:1px solid var(--line);border-radius:999px;font-size:.72rem;color:var(--muted);margin-left:6px}
-  .not{color:var(--muted);font-size:.84rem}
+  td.yol{color:var(--muted);font-size:.85rem}
+  tr.detay>td{background:var(--panel);padding:20px}
+
+  .rozet{display:inline-block;padding:2px 8px;border:1px solid var(--line);border-radius:999px;font-size:.7rem;color:var(--muted);background:var(--panel)}
+  .not{color:var(--muted);font-size:.85rem}
   .not.hata{color:var(--bad)}
-  .bak{border-bottom:1px solid var(--line);padding:10px 0}
-  .bak summary{cursor:pointer;display:flex;gap:10px;align-items:baseline}
-  .bak summary b{font-weight:600}
-  .bak ul{margin:8px 0 0 18px;color:var(--muted);font-size:.86rem}
-  footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.88rem}
-  footer .sag{margin-left:auto;color:var(--muted)}
-  @media (max-width:640px){ .gizle-kucuk{display:none} }
+
+  .bak{border:1px solid var(--line);border-radius:8px;margin-bottom:10px;background:var(--panel);overflow:hidden}
+  .bak summary{cursor:pointer;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;font-weight:600}
+  .bak summary:hover{background:var(--line)}
+  .bak ul{padding:0 16px 16px 32px;color:var(--muted);font-size:.88rem;display:flex;flex-direction:column;gap:6px}
+
+  footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 24px;font-size:.85rem;color:var(--muted)}
+  footer .sag{margin-left:auto}
+
+  @media (max-width:768px){ .gizle-kucuk{display:none} .sorgu{flex-direction:column} .sorgu select,.sorgu input{width:100%}}
 </style>
 </head>
 <body>
 <main>
 
   <header>
-    <h1>PDaaS-Parametrik Veri Servisi</h1>
-    <p>Türkiye kamu kurumlarının referans verilerini tek API üzerinden sunan servis. Tüm servisler <code>ham/</code> altındaki JSON dosyalarından otomatik keşfedilir.</p>
+    <h1>PDaaS — Parametrik Veri Servisi <span>Otomatik Keşif Aktif</span></h1>
+    <p>Türkiye kamu kurumlarının referans verilerini (GTİP, CPC, NACE, SGK vb.) tek API üzerinden sunar. <code>ham/</code> klasöründeki tüm JSON dosyaları otomatik olarak taranır ve uç nokta üretilir.</p>
+    
     <div class="durum" id="durum">
-      <span><span class="dot" id="saglik-nokta"></span><span id="saglik-metin">Kontrol ediliyor…</span></span>
-      <span>Ortalama süre <b id="st-ort">–</b></span>
-      <span>İstek <b id="st-istek">–</b></span>
-      <span>Servis <b id="st-servis">–</b></span>
-      <span>Bakanlık <b id="st-bak">–</b></span>
+      <span><span class="dot" id="saglik-nokta"></span><span id="saglik-metin">Sistem taranıyor…</span></span>
+      <span>Ortalama Yanıt: <b id="st-ort">–</b></span>
+      <span>Toplam İstek: <b id="st-istek">–</b></span>
+      <span>Keşfedilen Servis: <b id="st-servis">–</b></span>
+      <span>Bakanlık: <b id="st-bak">–</b></span>
     </div>
   </header>
 
+  <!-- 1. DİNAMİK SERVİS KATALOĞU (HAM KLASÖRÜNDEN) -->
   <section>
-    <h2>Kod sorgula <small>katalogdan dinamik</small></h2>
-    <form class="sorgu" id="sorgu-form">
-      <select id="sorgu-servis" aria-label="Servis"></select>
-      <input id="sorgu-kod" placeholder="Kod (boş bırakılırsa servis özeti)" autocomplete="off">
-      <button class="btn" type="submit">Sorgula</button>
-    </form>
-    <div class="sonuc" id="sorgu-sonuc"></div>
+    <h2>Otomatik Keşfedilen Servisler <small>/api/v1/katalog</small></h2>
+    <div class="tablo-kapsayici">
+      <table>
+        <thead>
+          <tr>
+            <th>Servis Adı / Tip</th>
+            <th class="gizle-kucuk">Uç Nokta (Endpoint)</th>
+            <th>Bakanlık</th>
+            <th class="sayi">Dal / Alt Grup</th>
+            <th class="sayi">Kayıt Sayısı</th>
+            <th style="width: 80px;"></th>
+          </tr>
+        </thead>
+        <tbody id="tb-servis">
+          <tr><td colspan="6" class="not" style="text-align:center;padding:24px;">Katalog yükleniyor…</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:12px; display:flex; align-items:center; gap:12px;">
+      <button class="btn ikincil kucuk" id="yenile-btn" onclick="katalogYukle()">Kataloğu Yenile</button>
+      <span class="not">Yeni bir JSON eklendiğinde <code>POST /api/v1/katalog/yenile</code> tetiklenerek anında sisteme yansıtılır.</span>
+    </div>
   </section>
 
+  <!-- 2. CANLI KOD / PARAMETRE SORGULAMA -->
   <section>
-    <h2>Otomatik keşfedilen servisler <small>/api/v1/katalog</small></h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Servis</th>
-          <th class="gizle-kucuk">Uç nokta</th>
-          <th>Bakanlık</th>
-          <th class="sayi">Dal</th>
-          <th class="sayi">Kayıt</th>
-          <th class="sayi gizle-kucuk">ms</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody id="tb-servis"></tbody>
-    </table>
-    <p style="margin-top:10px">
-      <button class="btn ikincil kucuk" id="yenile-btn">Kataloğu yenile</button>
-      <span class="not" style="margin-left:10px">Yeni bir JSON eklendiyse <code>POST /api/v1/katalog/yenile</code> ile anında görünür.</span>
-    </p>
+    <h2>İnteraktif Veri Sorgula <small>Dinamik Uç Nokta Testi</small></h2>
+    <div class="sorgu-kutu">
+      <form class="sorgu" id="sorgu-form">
+        <select id="sorgu-servis" aria-label="Servis Seçin"></select>
+        <input id="sorgu-kod" placeholder="Kod filtrele (Örn: 2701, 101 vb. - Boş bırakılırsa tüm özet döner)" autocomplete="off">
+        <button class="btn" type="submit">Sorgula</button>
+      </form>
+      <div class="sonuc" id="sorgu-sonuc"></div>
+    </div>
   </section>
 
+  <!-- 3. MANIFEST DOSYA YAPISI -->
   <section>
-    <h2>Birleşik işlem nesnesi <small>/api/v1/consolidated</small></h2>
-    <table>
-      <thead><tr><th>Servis</th><th class="gizle-kucuk">Uç nokta</th><th class="sayi">Süre</th><th></th></tr></thead>
-      <tbody id="tb-birlesik"></tbody>
-    </table>
+    <h2>Klasör ve Dosya Manifestosu <small>manifest.json</small></h2>
+    <div id="bak-liste"><p class="not">Manifest yükleniyor…</p></div>
   </section>
 
-  <section id="bak-bolum">
-    <h2>Katalog <small>manifest.json</small></h2>
-    <div id="bak-liste"><p class="not">Yükleniyor…</p></div>
-  </section>
-
+  <!-- FOOTER -->
   <footer>
-    <a href="/docs">API dokümantasyonu</a>
-    <a href="/kurator">Küratör</a>
-    <a href="/health">/health</a>
-    <a href="/stats">/stats</a>
-    <a href="/version-check">/version-check</a>
-    <span class="sag" id="yapi">–</span>
+    <a href="/docs" target="_blank">API Dokümantasyonu (Swagger)</a>
+    <a href="/kurator" target="_blank">Küratör Paneli</a>
+    <a href="/health" target="_blank">/health</a>
+    <a href="/stats" target="_blank">/stats</a>
+    <a href="/version-check" target="_blank">/version-check</a>
+    <span class="sag" id="yapi">Bağlantı kuruluyor…</span>
   </footer>
 
 </main>
@@ -141,18 +155,9 @@
 const API_BASE = '';
 const YEDEK_BASE = 'https://pdaas.onrender.com';
 let yedekAktif = false;
+let KATALOG = [];
 
 const $ = id => document.getElementById(id);
-function el(tag, attrs, ...cocuk){
-  const e = document.createElement(tag);
-  for (const [k,v] of Object.entries(attrs || {})){
-    if (k === 'class') e.className = v;
-    else if (k.startsWith('on')) e.addEventListener(k.slice(2), v);
-    else e.setAttribute(k, v);
-  }
-  for (const c of cocuk) if (c != null) e.append(c.nodeType ? c : document.createTextNode(c));
-  return e;
-}
 
 async function getir(yol){
   const t0 = performance.now();
@@ -160,198 +165,228 @@ async function getir(yol){
     try {
       const r = await fetch(base + yol);
       if (!r.ok) return null;
-      return {ok:true, status:r.status, ms:Math.round(performance.now() - t0),
-              body: await r.json(), kaynak: base ? 'yedek' : 'ana'};
+      return {ok:true, status:r.status, ms:Math.round(performance.now() - t0), body: await r.json()};
     } catch(_) { return null; }
   };
-
-  // Yedek aktifse doğrudan yedek
   if (yedekAktif){
     const s = await dene(YEDEK_BASE);
     return s || {ok:false, status:0, ms:0, body:null};
   }
-  // Önce ana sunucu
   let s = await dene('');
   if (s) return s;
-  // Ana başarısız → yedek
-  console.warn('[PDaaS] Ana sunucu başarısız (' + yol + '), yedek deneniyor…');
   s = await dene(YEDEK_BASE);
-  if (s) { yedekAktif = true; console.info('[PDaaS] Yedek aktif: ' + YEDEK_BASE); return s; }
+  if (s) { yedekAktif = true; return s; }
   return {ok:false, status:0, ms:0, body:null};
 }
 
 const sayi = n => (n == null ? '–' : Number(n).toLocaleString('tr-TR'));
 
-function tabloYap(kayitlar, limit = 100){
-  if (!Array.isArray(kayitlar) || !kayitlar.length) return el('p', {class:'not'}, 'Kayıt yok.');
-  const ornek = kayitlar.slice(0, 20);
+function tabloYap(kayitlar, limit = 50){
+  if (!Array.isArray(kayitlar) || !kayitlar.length) return document.createTextNode('Kayıt bulunamadı.');
+  const ornek = kayitlar.slice(0, 15);
   const sutunlar = [];
   for (const k of ornek) for (const alan of Object.keys(k)){
     if (!sutunlar.includes(alan)) sutunlar.push(alan);
   }
-  const goster = sutunlar.slice(0, 8);
+  const goster = sutunlar.slice(0, 7);
   const hucre = v => {
     if (v == null) return '';
     if (typeof v === 'object') return Array.isArray(v) ? `[${v.length}]` : '{…}';
     return String(v);
   };
-  const tablo = el('table', {},
-    el('thead', {}, el('tr', {}, ...goster.map(s => el('th', {}, s)))),
-    el('tbody', {}, ...kayitlar.slice(0, limit).map(k =>
-      el('tr', {}, ...goster.map(s => { const t = hucre(k[s]); return el('td', {title:t}, t); }))
-    ))
-  );
-  const kap = el('div', {class:'kaydir'}, tablo);
-  const ek = kayitlar.length > limit
-    ? el('p', {class:'not', style:'margin-top:8px'}, `İlk ${limit} kayıt gösteriliyor (toplam ${sayi(kayitlar.length)}).`)
-    : null;
-  return el('div', {}, kap, ek);
+  
+  const ths = goster.map(s => `<th>${s}</th>`).join('');
+  const trs = kayitlar.slice(0, limit).map(k => 
+    `<tr>${goster.map(s => `<td title="${hucre(k[s])}">${hucre(k[s])}</td>`).join('')}</tr>`
+  ).join('');
+
+  const tabloHtml = `<div style="overflow-x:auto"><table style="font-size:0.85rem"><thead><tr>${ths}</tr></thead><tbody>${trs}</tbody></table></div>`;
+  const bilgiHtml = kayitlar.length > limit ? `<p class="not" style="margin-top:8px">İlk ${limit} kayıt gösteriliyor (Toplam: ${sayi(kayitlar.length)}).</p>` : '';
+  
+  const div = document.createElement('div');
+  div.innerHTML = tabloHtml + bilgiHtml;
+  return div;
 }
 
-function durumYukle(){
-  $('saglik-nokta').className = 'dot ok';
-  $('saglik-metin').textContent = yedekAktif ? 'Yedek sunucu (Render)' : 'Aktif';
-  $('yapi').textContent = yedekAktif ? 'Render' : 'Cloudflare';
-}
-
-/* ═══════════════ KATALOG (main.py'nin keşif endpoint'i) ═══════════════ */
-let KATALOG = []; // main.py'den gelen gerçek servis listesi
-
+/* ───── KATALOG YÜKLEME (OTOMATİK KEŞİF) ───── */
 async function katalogYukle(){
   const tb = $('tb-servis');
-  tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not'}, 'Katalog yükleniyor…')));
+  tb.innerHTML = `<tr><td colspan="6" class="not" style="text-align:center;padding:24px;">Katalog taranıyor…</td></tr>`;
 
-  // main.py'nin otomatik keşif endpoint'i: ham/ altındaki TÜM json'ları bulur
+  // Sağlık ve İstatistikleri al
+  const h = await getir('/health');
+  if (h.ok) {
+    $('saglik-nokta').className = 'dot ok';$('saglik-metin').textContent = yedekAktif ? 'Yedek Sunucu (Render)' : 'Sistem Aktif';
+    $('yapi').textContent = yedekAktif ? 'Yedek: Render' : 'Ana Sunucu: Cloudflare/Local';
+  } else {
+    $('saglik-nokta').className = 'dot bad';$('saglik-metin').textContent = 'Bağlantı Hatası';
+  }
+
+  const st = await getir('/stats');
+  if (st.ok && st.body) {
+    $('st-ort').textContent = (st.body.avg_processing_ms || 0) + ' ms';
+    $('st-istek').textContent = sayi(st.body.request_count);
+  }
+
   const s = await getir('/api/v1/katalog');
   if (!s.ok || !s.body || !Array.isArray(s.body.servisler)){
-    tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not hata'},
-      'Katalog alınamadı. /api/v1/katalog endpoint\'i çalışmıyor.')));
+    tb.innerHTML = `<tr><td colspan="6" class="not hata" style="text-align:center;padding:24px;">Katalog alınamadı. /api/v1/katalog yanıt vermedi.</td></tr>`;
     return;
   }
 
   KATALOG = s.body.servisler;
-  console.info('[PDaaS] Katalog:', KATALOG.length, 'servis');
-
+  
   if (!KATALOG.length){
-    tb.replaceChildren(el('tr', {}, el('td', {colspan:7, class:'not'}, 'Hiç servis yok.')));
+    tb.innerHTML = `<tr><td colspan="6" class="not" style="text-align:center;padding:24px;">ham/ klasöründe henüz JSON servis dosyası bulunamadı.</td></tr>`;
     return;
   }
 
-  // Sorgu dropdown'ı
-  const sel = $('sorgu-servis');
-  sel.replaceChildren(...KATALOG.map(sv =>
-    el('option', {value: sv.endpoint},
-      `${sv.bakanlik_adi} — ${sv.servis_adi}`)
-  ));
-
-  // Tablo satırları
-  tb.replaceChildren(...KATALOG.map(sv => servisSatiri(sv)));
-
-  // Durum
-  const bakanliklar = new Set(KATALOG.map(sv => sv.bakanlik));
   $('st-servis').textContent = sayi(KATALOG.length);
+  const bakanliklar = new Set(KATALOG.map(sv => sv.bakanlik));
   $('st-bak').textContent = sayi(bakanliklar.size);
-  durumYukle();
+
+  // Select kutusunu doldur
+  const sel = $('sorgu-servis');
+  sel.innerHTML = '<option value="">-- Bir servis seçin (Tüm ham JSON servisleri) --</option>' + KATALOG.map(sv =>
+    `<option value="${sv.endpoint}">${sv.bakanlik_adi} — ${sv.servis_adi} (${sv.endpoint})</option>`
+  ).join('');
+
+  // Tabloyu doldur
+  tb.innerHTML = KATALOG.map((sv, idx) => `
+    <tr>
+      <td class="ad">
+        ${sv.servis_adi}
+        <span class="rozet" style="margin-left:6px">${sv.tip || 'liste'}</span>
+      </td>
+      <td class="yol mono gizle-kucuk">${sv.endpoint}</td>
+      <td>${sv.bakanlik_adi}</td>
+      <td class="sayi">${sv.dal_sayisi ? sayi(sv.dal_sayisi) : '–'}</td>
+      <td class="sayi">${sayi(sv.kayit_sayisi)}</td>
+      <td style="text-align:right">
+        <button class="btn ikincil kucuk" onclick="detayAc(${idx}, this)">İncele</button>
+      </td>
+    </tr>
+    <tr id="detay-tr-${idx}" style="display:none" class="detay">
+      <td colspan="6" id="detay-td-${idx}">Yükleniyor…</td>
+    </tr>
+  `).join('');
 }
 
-function servisSatiri(sv){
-  // main.py'den gelen bilgiler zaten JSON meta'sından türetilmiş
-  const dot = el('span', {class:'dot ok'});
-  const cAd = el('td', {class:'ad'}, dot, sv.servis_adi, el('span', {class:'rozet'}, sv.tip || 'liste'));
-  const cYol = el('td', {class:'yol mono gizle-kucuk'}, sv.endpoint + (yedekAktif ? ' (yedek)' : ''));
-  const cBak = el('td', {}, sv.bakanlik_adi);
-  const cDal = el('td', {class:'sayi'}, sv.dal_sayisi ? sayi(sv.dal_sayisi) : '');
-  const cKayit = el('td', {class:'sayi'}, sayi(sv.kayit_sayisi));
-  const cMs = el('td', {class:'sayi gizle-kucuk'}, '–');
-  const btn = el('button', {class:'btn ikincil kucuk'}, 'Aç');
-  const tr = el('tr', {}, cAd, cYol, cBak, cDal, cKayit, cMs, el('td', {}, btn));
+async function detayAc(idx, btn){
+  const sv = KATALOG[idx];
+  const tr = $(`detay-tr-${idx}`);
+  const td = $(`detay-td-${idx}`);
 
-  btn.addEventListener('click', async () => {
-    // Detay aç
-    const td = el('td', {colspan:7});
-    const dtr = el('tr', {class:'detay'}, td);
-    tr.after(dtr);
-    btn.textContent = 'Kapat';
-    btn.onclick = () => { dtr.remove(); btn.textContent = 'Aç'; btn.onclick = null; };
-    td.append(el('p', {class:'not'}, 'Yükleniyor…'));
-
-    const s = await getir(sv.endpoint);
-    if (!s.ok){
-      td.replaceChildren(el('p', {class:'not hata'}, 'Veri alınamadı: ' + sv.endpoint));
-      return;
-    }
-    const b = s.body;
-    const meta = b.meta || {};
-    const kayitlar = b.data || b.kayitlar || [];
-
-    const ozet = el('p', {class:'not', style:'margin-bottom:8px'},
-      [meta.yayinci, meta.kaynak, meta.surum && `Sürüm: ${meta.surum}`].filter(Boolean).join(' · '),
-      ' · ',
-      el('a', {href: sv.endpoint, target:'_blank', rel:'noopener'}, 'JSON olarak aç'));
-
-    td.replaceChildren(ozet, tabloYap(kayitlar));
-  });
-
-  return tr;
-}
-
-/* ═══════════════ SORGU ═══════════════ */
-async function sorgula(){
-  const endpoint = $('sorgu-servis').value;
-  const kod = $('sorgu-kod').value.trim().toLowerCase();
-  const kap = $('sorgu-sonuc');
-
-  if (!endpoint){
-    kap.replaceChildren(el('p', {class:'not hata'}, 'Servis seçin.'));
+  if (tr.style.display === 'table-row') {
+    tr.style.display = 'none';
+    btn.textContent = 'İncele';
     return;
   }
-  kap.replaceChildren(el('p', {class:'not'}, 'Sorgulanıyor…'));
 
-  const s = await getir(endpoint);
+  // Diğer açık detayları kapat
+  document.querySelectorAll('[id^="detay-tr-"]').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('table .btn').forEach(b => b.textContent = 'İncele');
+
+  tr.style.display = 'table-row';
+  btn.textContent = 'Kapat';
+  td.innerHTML = '<p class="not">Veriler yükleniyor…</p>';
+
+  const s = await getir(sv.endpoint);
   if (!s.ok){
-    kap.replaceChildren(el('p', {class:'not hata'}, 'Veri alınamadı: ' + endpoint));
+    td.innerHTML = '<p class="not hata">Veri alınamadı.</p>';
     return;
   }
+
   const b = s.body;
   const meta = b.meta || {};
-  const ozet = [meta.bakanlik_adi, meta.servis_adi,
-                meta.surum && `Sürüm ${meta.surum}`,
-                `${s.ms} ms`].filter(Boolean).join(' · ');
+  const kayitlar = b.data || b.kayitlar || b.dallar || [];
 
-  let kayitlar = b.data || b.kayitlar || [];
-  if (kod){
-    kayitlar = kayitlar.filter(k =>
-      (k.kod && String(k.kod).toLowerCase().includes(kod)) ||
-      (k.aciklama && String(k.aciklama).toLowerCase().includes(kod)) ||
-      (k.ad && String(k.ad).toLowerCase().includes(kod))
-    );
+  const ozetP = document.createElement('div');
+  ozetP.className = 'ozet';
+  ozetP.innerHTML = `
+    <span><b>Yayıncı:</b> ${meta.yayinci || sv.yayinci || 'Bilinmiyor'} · <b>Kaynak:</b> ${meta.kaynak || sv.kaynak || 'Resmi Kurum'} ${meta.surum ? '· <b>Sürüm:</b> ' + meta.surum : ''}</span>
+    <a href="${sv.endpoint}" target="_blank" rel="noopener">Ham JSON Verisini Aç ↗</a>
+  `;
+
+  td.replaceChildren(ozetP, tabloYap(kayitlar));
+}
+
+/* ───── SORGULA ───── */
+async function sorgula(){
+  const endpoint = $('sorgu-servis').value;
+  const kod = $('sorgu-kod').value.trim();
+  const kap = $('sorgu-sonuc');
+  
+  if (!endpoint){
+    kap.innerHTML = '<p class="not hata">Lütfen bir servis seçin.</p>';
+    return;
   }
-  kap.replaceChildren(el('div', {class:'ozet'}, ozet), tabloYap(kayitlar));
+
+  kap.innerHTML = '<p class="not">Sorgulanıyor…</p>';
+  const hedefYol = kod ? `${endpoint}/${encodeURIComponent(kod)}` : endpoint;
+  const s = await getir(hedefYol);
+
+  if (!s.ok){
+    kap.innerHTML = `<p class="not hata">Kayıt bulunamadı veya istek başarısız oldu (${hedefYol}).</p>`;
+    return;
+  }
+
+  const b = s.body;
+  const meta = b.meta || {};
+  const ozetMetin = `${meta.bakanlik_adi || ''} / ${meta.servis_adi || ''} · Süre: ${s.ms} ms`;
+
+  const div = document.createElement('div');
+  div.innerHTML = `
+    <div class="ozet">
+      <span><b>${ozetMetin}</b></span>
+      <a href="${hedefYol}" target="_blank">Uç Noktayı Aç ↗</a>
+    </div>
+  `;
+
+  if (b.data && Array.isArray(b.data)) {
+    div.appendChild(tabloYap(b.data));
+  } else if (b.kayitlar && Array.isArray(b.kayitlar)) {
+    div.appendChild(tabloYap(b.kayitlar));
+  } else if (b.dallar && Array.isArray(b.dallar)) {
+    div.appendChild(tabloYap(b.dallar));
+  } else {
+    const pre = document.createElement('pre');
+    pre.textContent = JSON.stringify(b, null, 2);
+    div.appendChild(pre);
+  }
+
+  kap.replaceChildren(div);
 }
 
 $('sorgu-form').addEventListener('submit', e => { e.preventDefault(); sorgula(); });
 
-/* ═══════════════ MANIFEST LİSTESİ (sayfa altı) ═══════════════ */
+/* ───── MANIFEST LİSTELEME ───── */
 async function manifestListele(){
   const kap = $('bak-liste');
   const s = await getir('/manifest.json');
   if (!s.ok || !s.body.bakanliklar){
-    kap.replaceChildren(el('p', {class:'not'}, 'manifest.json okunamadı.'));
+    kap.innerHTML = '<p class="not">manifest.json okunamadı.</p>';
     return;
   }
-  kap.replaceChildren(...Object.entries(s.body.bakanliklar).map(([anahtar, b]) =>
-    el('details', {class:'bak'},
-      el('summary', {}, el('b', {}, b.ad), el('span', {class:'not'}, `${b.dosya_sayisi || (b.dosyalar || []).length} dosya`)),
-      el('ul', {}, ...(b.dosyalar || []).map(d => el('li', {}, `${d.ad} — `, el('span', {class:'mono'}, `${anahtar}/${d.dosya}`))))
-    )));
+  kap.replaceChildren(...Object.entries(s.body.bakanliklar).map(([anahtar, b]) => {
+    const dosyalar = b.dosyalar || [];
+    const detay = document.createElement('details');
+    detay.className = 'bak';
+    detay.innerHTML = `
+      <summary>
+        <span><b>${b.ad}</b> <span class="rozet" style="margin-left:8px">${anahtar}</span></span>
+        <span class="not">${dosyalar.length} dosya</span>
+      </summary>
+      <ul>
+        ${dosyalar.map(d => `<li><b>${d.ad}</b> — <span class="mono">${anahtar}/${d.dosya}</span> <span class="rozet">join: ${d.join || 'kod'}</span></li>`).join('')}
+      </ul>
+    `;
+    return detay;
+  }));
 }
 
-/* ═══════════════ BAŞLAT ═══════════════ */
-durumYukle();
+// Başlat
 katalogYukle().then(manifestListele);
-
-$('tb-birlesik').replaceChildren(el('tr', {},
-  el('td', {colspan:4, class:'not'}, 'Statik demoda /api/v1/consolidated çalışmaz.')));
 </script>
 </body>
 </html>
