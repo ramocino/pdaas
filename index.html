@@ -578,55 +578,34 @@ function jsonRenklendir(obj, indent = 0, derinlik = 0){
    ========================================================= */
 async function katalogYukle(){
   const rozet = $('saglik-rozet');
-  rozet.classList.add('ok');
-  $('saglik-metin').textContent = 'Sistem Hazır';
-
-  // Ham klasöründe yer almasını beklediğiniz birleştirilmiş master JSON dosyaları listesi
-  const dosyaListesi = [
-    'nace-kodlari.json',
-    'cpc-kodlari.json',
-    'gtip-kodlari.json',
-    'isco-kodlari.json'
-  ];
-
-  KATALOG = [];
-
-  for (const dosyaAdi of dosyaListesi){
-    try {
-      const res = await fetch(`ham/${dosyaAdi}`);
-      if (!res.ok) continue;
-      const veri = await res.json();
-      
-      if (veri && veri.meta){
-        const meta = veri.meta;
-        const kayitSayisi = veri.kayitlar ? veri.kayitlar.length : 0;
-        
-        // Veriyi bellekte sakla
-        VERI_HAVUZU[meta.servis_kodu] = veri;
-
-        KATALOG.push({
-          bakanlik_adi: meta.bakanlik_adi || 'Diğer Kurumlar',
-          servis_adi: meta.servis_adi || meta.servis_kodu,
-          servis_kodu: meta.servis_kodu,
-          tip: meta.tip || 'agac',
-          kayit_sayisi: kayitSayisi,
-          endpoint: `ham/${dosyaAdi}`
-        });
-      }
-    } catch(err){
-      console.warn(`${dosyaAdi} yüklenemedi:`, err);
-    }
+  const h = await getir('/health');
+  if (h.ok){
+    rozet.classList.add('ok');
+    $('saglik-metin').textContent = 'pdaas.com.tr';
+  } else {
+    rozet.classList.add('bad');
+    $('saglik-metin').textContent = 'Bağlantı yok';
   }
 
+  // Doğrudan backend kataloğunu çağırıyoruz
+  const s = await getir('/api/v1/katalog');
+  if (!s.ok || !s.body || !Array.isArray(s.body.servisler)){
+    $('agac-liste').innerHTML = `<div class="hata-kutu"><b>Katalog alınamadı</b><span>API yanıt vermedi.</span></div>`;
+    $('agac-ozet').textContent = 'Yüklenemedi';
+    return;
+  }
+
+  KATALOG = s.body.servisler;
+
   if (!KATALOG.length){
-    $('agac-liste').innerHTML = `<div class="hata-kutu"><b>Kayıt bulunamadı</b><span>ham/ klasöründe JSON dosyası bulunamadı.</span></div>`;
+    $('agac-liste').innerHTML = `<div class="hata-kutu"><b>Henüz veri seti yok</b><span>JSON dosyaları eklenmeli.</span></div>`;
     $('agac-ozet').textContent = '0 veri seti';
     return;
   }
 
   const gruplar = {};
   for (const sv of KATALOG){
-    const k = sv.bakanlik_adi;
+    const k = sv.bakanlik_adi || 'Diğer Kurumlar';
     if (!gruplar[k]) gruplar[k] = [];
     gruplar[k].push(sv);
   }
@@ -649,10 +628,10 @@ async function katalogYukle(){
             ${liste.map((sv) => `
               <button class="srv" type="button"
                 data-kurum="${kacis(kurum)}"
-                data-kod="${kacis(sv.servis_kodu)}"
+                data-endpoint="${kacis(sv.endpoint)}"
                 data-ad="${kacis(sv.servis_adi)}"
-                data-sayi="${sv.kayit_sayisi}"
-                data-tip="${kacis(sv.tip)}">
+                data-sayi="${sv.kayit_sayisi ?? 0}"
+                data-tip="${kacis(sv.tip || '')}">
                 <span class="srv-metin">
                   <b>${kacis(sv.servis_adi)}</b>
                   <span class="srv-tip">${kacis(sv.tip)}</span>
@@ -669,30 +648,7 @@ async function katalogYukle(){
   $('agac-liste').innerHTML = html;
 }
 
-$('agac-liste').addEventListener('click', (e) => {
-  const bakBtn = e.target.closest('.bak-baslik');
-  if (bakBtn){ bakBtn.closest('.bak').classList.toggle('acik'); return; }
-
-  const srvBtn = e.target.closest('.srv');
-  if (srvBtn){
-    document.querySelectorAll('.srv.aktif').forEach(b => b.classList.remove('aktif'));
-    srvBtn.classList.add('aktif');
-    $('agac').classList.remove('acik');$('karartma').classList.remove('acik');
-    
-    const servisKodu = srvBtn.dataset.kod;
-    const veri = VERI_HAVUZU[servisKodu];
-    
-    servisGoster({
-      kurum: srvBtn.dataset.kurum,
-      ad: srvBtn.dataset.ad,
-      sayi: parseInt(srvBtn.dataset.sayi, 10) || 0,
-      kod: servisKodu,
-      veri: veri
-    });
-  }
-});
-
-/* =========================================================
+  /* =========================================================
    SERVİS DETAY GÖSTERİMİ
    ========================================================= */
 function servisGoster(sv){
