@@ -2,7 +2,7 @@
 PDaaS API — Parametric Data as a Service
 Otomatik servis keşfi: ham/ altındaki her JSON kendi meta bloğuyla
 hangi bakanlığa ait olduğunu ve servis kodunu bildirir.
-Meta eksikse dosya yolundan türetilir.
+Meta eksikse dosya yolundan türetilir (Asla ezinleme yapılmaz).
 """
 from fastapi import FastAPI, HTTPException, Body
 from fastapi.middleware.cors import CORSMiddleware
@@ -13,7 +13,7 @@ from typing import Dict, List, Any
 import json, time, uuid
 from datetime import datetime, timezone
 
-BUILD_VERSION = "v10_fixed_server_2026_10_13"
+BUILD_VERSION = "v11_pure_meta_2026_10_13"
 BUILD_TIMESTAMP = "2026-10-13T12:00:00Z"
 
 app = FastAPI(
@@ -100,7 +100,6 @@ def _kayit_bul(kayitlar: list, alan_adlari: list, deger: str):
 # BAKANLIK ADI HARİTASI
 # ═══════════════════════════════════════════════════════════════
 _BAKANLIK_ADLARI = {
-    "ticaret":  "T.C. Ticaret Bakanlığı",
     "tb":       "T.C. Ticaret Bakanlığı",
     "hvmb":     "T.C. Hazine ve Maliye Bakanlığı",
     "hazine":   "T.C. Hazine ve Maliye Bakanlığı",
@@ -114,7 +113,7 @@ _BAKANLIK_ADLARI = {
 
 
 # ═══════════════════════════════════════════════════════════════
-# OTOMATİK KATALOG TARAMASI
+# OTOMATİK KATALOG TARAMASI (Saf Meta Tabanlı)
 # ═══════════════════════════════════════════════════════════════
 def _katalog_tara() -> dict:
     _SERVIS_KATALOGU.clear()
@@ -131,27 +130,30 @@ def _katalog_tara() -> dict:
             meta = {}
 
         dosya_stem = f.stem.lower()
+        rel = f.relative_to(HAM_KOK)
+        parts = rel.parts
 
+        # JSON içindeki meta.bakanlik değerini doğrudan baz al, yoksa klasör/dosya adından türet
         bak = (meta.get("bakanlik") or "").strip().lower()
-        if not bak or bak == "tb":
-            if "gtip" in dosya_stem or "cpc" in dosya_stem or "ithalat" in dosya_stem:
-                bak = "ticaret"
-            elif "nace" in dosya_stem or "istatistik" in dosya_stem:
-                bak = "tuik"
-            elif "asgari" in dosya_stem or "sigorta" in dosya_stem or "isco" in dosya_stem:
-                bak = "csgb"
-            elif "vergi" in dosya_stem or "kdv" in dosya_stem or "otv" in dosya_stem:
-                bak = "hvmb"
+        if not bak:
+            if len(parts) > 1:
+                bak = parts[0].strip().lower()
             else:
-                bak = "ticaret"
+                bak = "genel"
 
         bakanlik_adi = (
             meta.get("bakanlik_adi")
             or _BAKANLIK_ADLARI.get(bak)
-            or "T.C. Ticaret Bakanlığı"
+            or bak.upper()
         )
 
-        svc = (meta.get("servis_kodu") or dosya_stem).strip().lower()
+        svc = (meta.get("servis_kodu") or "").strip().lower()
+        if not svc:
+            if len(parts) > 1:
+                svc = f"{parts[0]}-{dosya_stem}".lower()
+            else:
+                svc = dosya_stem.lower()
+
         servis_adi = meta.get("servis_adi") or dosya_stem.replace("-", " ").title()
 
         anahtar = (bak, svc)
@@ -204,12 +206,10 @@ def _servis_bul(bakanlik: str, servis_kodu: str) -> dict:
     bak_aranan = bakanlik.lower()
     svc_aranan = servis_kodu.lower()
     
-    # 1. Tam eşleşme dene
     k = _SERVIS_KATALOGU.get((bak_aranan, svc_aranan))
     if k:
         return k
 
-    # 2. Bakanlık bağımsız sadece servis koduna göre ara
     for (b, s), kayit in _SERVIS_KATALOGU.items():
         if s == svc_aranan or s.replace("-", "") == svc_aranan.replace("-", ""):
             return kayit
