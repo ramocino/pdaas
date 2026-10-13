@@ -2,24 +2,24 @@
 PDaaS API — Parametric Data as a Service
 Otomatik servis keşfi: ham/ altındaki her JSON kendi meta bloğuyla
 hangi bakanlığa ait olduğunu ve servis kodunu bildirir.
-Dosya adı ve klasör yapısı önemsizdir.
+Meta eksikse dosya yolundan türetilir.
 """
 from fastapi import FastAPI, HTTPException, Body
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
-from fastapi.staticfiles import StaticFiles          # ← YENİ
+from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 from typing import Dict, List, Any
 import json, time, uuid
 from datetime import datetime, timezone
 
-BUILD_VERSION = "v7_static_files_2026_10_13"          # ← güncellendi
-BUILD_TIMESTAMP = "2026-10-13T00:00:00Z"              # ← güncellendi
+BUILD_VERSION = "v8_recursive_discovery_2026_10_13"
+BUILD_TIMESTAMP = "2026-10-13T12:00:00Z"
 
 app = FastAPI(
     title="PDaaS API",
-    version="3.1.0",                                  # ← güncellendi
-    description="Parametric Data as a Service — Turkish public parameters (auto-discovery)",
+    version="3.2.0",
+    description="Parametric Data as a Service — Turkish public parameters (recursive auto-discovery)",
 )
 app.add_middleware(
     CORSMiddleware,
@@ -33,15 +33,12 @@ KOK = Path(__file__).parent
 HAM_KOK = KOK / "ham"
 _METRICS = {"requests": 0, "total_ms": 0.0, "max_ms": 0.0}
 
-# (bakanlik, servis_kodu) → servis tanımı
 _SERVIS_KATALOGU: Dict[tuple, dict] = {}
 
 
 # ═══════════════════════════════════════════════════════════════
-# STATİK DOSYA SUNUMU (ham/ klasörü)
+# STATİK DOSYA SUNUMU
 # ═══════════════════════════════════════════════════════════════
-# ham/ klasörünü /ham yolundan statik olarak sun.
-# Böylece /ham/asgariucret.json gibi doğrudan istekler çalışır.
 if HAM_KOK.exists():
     app.mount("/ham", StaticFiles(directory=str(HAM_KOK)), name="ham")
 
@@ -68,7 +65,6 @@ def _json_oku(yol: Path):
 
 
 def _kayitlari_al(veri) -> list:
-    """kayitlar / data / kök liste / ilk liste alanı sırayla denenir."""
     if isinstance(veri, list):
         return veri
     if isinstance(veri, dict):
@@ -101,11 +97,33 @@ def _kayit_bul(kayitlar: list, alan_adlari: list, deger: str):
 
 
 # ═══════════════════════════════════════════════════════════════
-# OTOMATİK KATALOG TARAMASI
+# BAKANLIK ADI HARİTASI (klasör adı → resmi ad)
+# ═══════════════════════════════════════════════════════════════
+_BAKANLIK_ADLARI = {
+    "ticaret":  "T.C. Ticaret Bakanlığı",
+    "hvmb":     "T.C. Hazine ve Maliye Bakanlığı",
+    "hazine":   "T.C. Hazine ve Maliye Bakanlığı",
+    "csgb":     "T.C. Çalışma ve Sosyal Güvenlik Bakanlığı",
+    "sgk":      "T.C. Sosyal Güvenlik Kurumu",
+    "tuik":     "Türkiye İstatistik Kurumu",
+    "csidb":    "T.C. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
+    "etkb":     "T.C. Enerji ve Tabii Kaynaklar Bakanlığı",
+    "cbdd":     "CBDDO — Koordinatör",
+    "genel":    "Genel Referans Veriler",
+    "cpc":      "T.C. Ticaret Bakanlığı",
+    "gtip":     "T.C. Ticaret Bakanlığı",
+    "isco":     "T.C. Ticaret Bakanlığı",
+    "nace":     "Türkiye İstatistik Kurumu",
+}
+
+
+# ═══════════════════════════════════════════════════════════════
+# OTOMATİK KATALOG TARAMASI — ÖZYİNELEMELİ (recursive)
 # ═══════════════════════════════════════════════════════════════
 def _katalog_tara() -> dict:
-    """ham/ altındaki tüm *.json dosyalarını özyinelemeli gez,
-    meta.bakanlik + meta.servis_kodu'na göre kataloğu kur."""
+    """ham/ altındaki TÜM *.json dosyalarını özyinelemeli gez.
+    meta.bakanlik/servis_kodu varsa onu kullan, yoksa dosya yolundan türet.
+    """
     _SERVIS_KATALOGU.clear()
     if not HAM_KOK.exists():
         return _SERVIS_KATALOGU
@@ -114,31 +132,61 @@ def _katalog_tara() -> dict:
         veri = _json_oku(f)
         if not isinstance(veri, dict):
             continue
-        meta = veri.get("meta")
-        if not isinstance(meta, dict):
-            continue
 
-        bak = str(meta.get("bakanlik") or "").strip().lower()
-        svc = str(meta.get("servis_kodu") or "").strip().lower()
-        if not bak or not svc:
-            continue
+        meta = veri.get("meta") or {}
+        if not isinstance(meta, dict):
+            meta = {}
+
+        # ── meta'dan veya dosya yolundan bakanlık & servis kodunu türet ──
+        rel = f.relative_to(HAM_KOK)                 # örn: gtip/27.json veya asgariucret.json
+        parts = rel.parts                            # ("gtip", "27.json") veya ("asgariucret.json",)
+        dosya_stem = f.stem                          # "27" veya "asgariucret"
+
+        # Bakanlık: meta'dan → klasör adından → "genel"
+        bak = (meta.get("bakanlik") or "").strip().lower()
+        if not bak and len(parts) > 1:
+            bak = parts[0].strip().lower()           # gtip, cpc, isco, nace
+        if not bak:
+            bak = "genel"
+
+        bakanlik_adi = (
+            meta.get("bakanlik_adi")
+            or _BAKANLIK_ADLARI.get(bak)
+            or bak.title()
+        )
+
+        # Servis kodu: meta'dan → klasör + stem kombinasyonundan
+        svc = (meta.get("servis_kodu") or "").strip().lower()
+        if not svc:
+            if len(parts) > 1:
+                svc = f"{parts[0]}-{dosya_stem}".lower()   # "gtip-27"
+            else:
+                svc = dosya_stem.lower()                    # "asgariucret"
+
+        # Servis adı: meta'dan → klasör tabanlı varsayılan
+        servis_adi = meta.get("servis_adi")
+        if not servis_adi:
+            if len(parts) > 1:
+                servis_adi = f"{parts[0].upper()}-{dosya_stem}"
+            else:
+                servis_adi = dosya_stem.replace("_", " ").title()
 
         anahtar = (bak, svc)
         k = _SERVIS_KATALOGU.get(anahtar)
         if not k:
             k = {
-                "bakanlik":           bak,
-                "bakanlik_adi":       meta.get("bakanlik_adi") or bak,
-                "servis_kodu":        svc,
-                "servis_adi":         meta.get("servis_adi") or svc,
-                "tip":                (meta.get("tip") or "liste").lower(),
-                "join":               meta.get("join") or "kod",
-                "surum":              meta.get("surum") or meta.get("dosya_surumu"),
-                "yayinci":            meta.get("yayinci"),
-                "kaynak":             meta.get("kaynak"),
-                "gecerlilik_baslangic": meta.get("gecerlilik_baslangic"),
-                "gecerlilik_bitis":     meta.get("gecerlilik_bitis"),
-                "dosyalar":           [],
+                "bakanlik":              bak,
+                "bakanlik_adi":          bakanlik_adi,
+                "servis_kodu":           svc,
+                "servis_adi":            servis_adi,
+                "tip":                   (meta.get("tip") or "liste").lower(),
+                "join":                  meta.get("join") or "kod",
+                "surum":                 meta.get("surum") or meta.get("dosya_surumu"),
+                "yayinci":               meta.get("yayinci"),
+                "kaynak":                meta.get("kaynak"),
+                "gecerlilik_baslangic":  meta.get("gecerlilik_baslangic"),
+                "gecerlilik_bitis":      meta.get("gecerlilik_bitis"),
+                "dosyalar":              [],
             }
             _SERVIS_KATALOGU[anahtar] = k
 
@@ -146,7 +194,7 @@ def _katalog_tara() -> dict:
             "yol":          f,
             "rel":          str(f.relative_to(KOK)),
             "dosya_adi":    f.name,
-            "dal":          meta.get("dal"),
+            "dal":          meta.get("dal") or (f.stem if len(parts) > 1 else None),
             "dal_adi":      meta.get("dal_adi"),
             "kayit_sayisi": len(_kayitlari_al(veri)),
         })
@@ -154,7 +202,6 @@ def _katalog_tara() -> dict:
     return _SERVIS_KATALOGU
 
 
-# Uygulama import edilirken bir kez tara
 _katalog_tara()
 
 
@@ -175,7 +222,7 @@ def _ortak_meta(k: dict) -> dict:
 def _servis_bul(bakanlik: str, servis_kodu: str) -> dict:
     k = _SERVIS_KATALOGU.get((bakanlik.lower(), servis_kodu.lower()))
     if not k:
-        _katalog_tara()  # yeni dosya eklenmiş olabilir
+        _katalog_tara()
         k = _SERVIS_KATALOGU.get((bakanlik.lower(), servis_kodu.lower()))
     if not k:
         raise HTTPException(404, f"Servis bulunamadı: {bakanlik}/{servis_kodu}")
@@ -189,7 +236,7 @@ def _servis_bul(bakanlik: str, servis_kodu: str) -> dict:
 def ana_sayfa():
     yol = KOK / "index.html"
     if not yol.exists():
-        return {"service": "PDaaS API", "version": "3.1.0", "docs": "/docs"}
+        return {"service": "PDaaS API", "version": "3.2.0", "docs": "/docs"}
     return FileResponse(yol, media_type="text/html")
 
 
@@ -219,7 +266,7 @@ def kurator_sayfa():
 
 @app.get("/health")
 def health():
-    return {"status": "healthy", "version": "3.1.0", "build": BUILD_VERSION,
+    return {"status": "healthy", "version": "3.2.0", "build": BUILD_VERSION,
             "timestamp": _zaman_damgasi()}
 
 
@@ -280,7 +327,7 @@ def katalog_listesi():
             "endpoint":      f"/api/v1/{bak}/{svc}",
         })
     return {
-        "service":   "PDaaS - Auto Catalog v1.0",
+        "service":   "PDaaS - Auto Catalog v2.0 (recursive)",
         "timestamp": _zaman_damgasi(),
         "toplam":    len(servisler),
         "servisler": servisler,
@@ -291,7 +338,7 @@ def katalog_listesi():
 def katalog_yenile():
     _katalog_tara()
     return {
-        "service":   "PDaaS - Auto Catalog v1.0",
+        "service":   "PDaaS - Auto Catalog v2.0",
         "timestamp": _zaman_damgasi(),
         "toplam":    len(_SERVIS_KATALOGU),
         "durum":     "yenilendi",
@@ -300,8 +347,6 @@ def katalog_yenile():
 
 # ═══════════════════════════════════════════════════════════════
 # DİNAMİK SERVİS API
-#   GET /api/v1/{bakanlik}/{servis_kodu}            → özet (liste veya dallar)
-#   GET /api/v1/{bakanlik}/{servis_kodu}/{kod}      → kayıt (liste) veya dal (agac)
 # ═══════════════════════════════════════════════════════════════
 @app.get("/api/v1/{bakanlik}/{servis_kodu}")
 def servis_ozet(bakanlik: str, servis_kodu: str):
@@ -366,7 +411,7 @@ def servis_kayit(bakanlik: str, servis_kodu: str, kod: str):
 
 
 # ═══════════════════════════════════════════════════════════════
-# BİRLEŞİK İŞLEM NESNESİ (örnek)
+# BİRLEŞİK İŞLEM NESNESİ
 # ═══════════════════════════════════════════════════════════════
 @app.get("/api/v1/consolidated")
 def birlestirilmis():
@@ -380,7 +425,7 @@ def birlestirilmis():
                  for (b, s) in sorted(_SERVIS_KATALOGU.keys())]
 
     return {
-        "service": "PDaaS - Consolidated Transaction Object v3.1",
+        "service": "PDaaS - Consolidated Transaction Object v3.2",
         "endpoint": "/api/v1/consolidated",
         "timestamp": _zaman_damgasi(),
         "execution_time_ms": sure_ms,
@@ -397,7 +442,7 @@ def birlestirilmis():
 
 
 # ═══════════════════════════════════════════════════════════════
-# İLİŞKİ YAZMA / LİSTELEME (korundu)
+# İLİŞKİ YAZMA / LİSTELEME
 # ═══════════════════════════════════════════════════════════════
 _GECERLI_ROLLER = {"ticaret", "hazine", "sgk", "tuik", "cbdd"}
 
