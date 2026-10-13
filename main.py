@@ -100,7 +100,6 @@ def _kayit_bul(kayitlar: list, alan_adlari: list, deger: str):
 # BAKANLIK ADI HARİTASI
 # ═══════════════════════════════════════════════════════════════
 _BAKANLIK_ADLARI = {
-    "ticaret":  "T.C. Ticaret Bakanlığı",
     "tb":       "T.C. Ticaret Bakanlığı",
     "hvmb":     "T.C. Hazine ve Maliye Bakanlığı",
     "hazine":   "T.C. Hazine ve Maliye Bakanlığı",
