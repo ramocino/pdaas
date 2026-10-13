@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "bakanlik": "hvmb",
+    "bakanlik_adi": "T.C. Hazine ve Maliye Bakanlığı",
+    "birim": "Gelir İdaresi Başkanlığı (GİB)",
+    "yayinci": "T.C. Hazine ve Maliye Bakanlığı",
+    "servis_kodu": "gelir-vergisi-dilimleri",
+    "servis_adi": "Gelir Vergisi Dilimleri",
+    "surum": "2026.10.08",
+    "dosya_surumu": "1.0.0",
+    "schema_surumu": "1.2.0",
+    "onceki_surum": "2026.01.01",
+    "guncelleme": "2026-10-08",
+    "kaynak": "193 sayılı Gelir Vergisi Kanunu Madde 103 · Gelir Vergisi Genel Tebliği (Seri No: 332)",
+    "resmi_gazete": "33124 (5. Mükerrer) / 31.12.2025",
+    "mevzuat_ref": [
+      { "tur": "kanun", "no": "193", "ad": "Gelir Vergisi Kanunu", "madde": "103" },
+      { "tur": "genel_teblig", "ad": "Gelir Vergisi Genel Tebliği (Seri No: 332)", "resmi_gazete_no": "33124", "mukerrer": 5, "tarih": "2025-12-31" }
+    ],
+    "yayin_durumu": "yayinda",
+    "katman": "ham",
+    "tip": "liste",
+    "join": "kod",
+    "zaman_bazli": true,
+    "gecerlilik_baslangic": "2026-01-01",
+    "gecerlilik_bitis": "2026-12-31",
+    "checksum": null
+  },
+  "kayitlar": [
+    { "kod": "GV-UCRET-1", "kategori": "ucret", "matrah_alt_sinir_tl": 0.00,       "matrah_ust_sinir_tl": 190000.00,  "oran": 0.15, "sabit_vergi_tl": 0.00 },
+    { "kod": "GV-UCRET-2", "kategori": "ucret", "matrah_alt_sinir_tl": 190000.00,  "matrah_ust_sinir_tl": 400000.00,  "oran": 0.20, "sabit_vergi_tl": 28500.00 },
+    { "kod": "GV-UCRET-3", "kategori": "ucret", "matrah_alt_sinir_tl": 400000.00,  "matrah_ust_sinir_tl": 1500000.00, "oran": 0.27, "sabit_vergi_tl": 70500.00 },
+    { "kod": "GV-UCRET-4", "kategori": "ucret", "matrah_alt_sinir_tl": 1500000.00, "matrah_ust_sinir_tl": 5300000.00, "oran": 0.35, "sabit_vergi_tl": 367500.00 },
+    { "kod": "GV-UCRET-5", "kategori": "ucret", "matrah_alt_sinir_tl": 5300000.00, "matrah_ust_sinir_tl": null,       "oran": 0.40, "sabit_vergi_tl": 1697500.00 },
+
+    { "kod": "GV-DIGER-1", "kategori": "diger", "matrah_alt_sinir_tl": 0.00,       "matrah_ust_sinir_tl": 190000.00,  "oran": 0.15, "sabit_vergi_tl": 0.00 },
+    { "kod": "GV-DIGER-2", "kategori": "diger", "matrah_alt_sinir_tl": 190000.00,  "matrah_ust_sinir_tl": 400000.00,  "oran": 0.20, "sabit_vergi_tl": 28500.00 },
+    { "kod": "GV-DIGER-3", "kategori": "diger", "matrah_alt_sinir_tl": 400000.00,  "matrah_ust_sinir_tl": 1000000.00, "oran": 0.27, "sabit_vergi_tl": 70500.00 },
+    { "kod": "GV-DIGER-4", "kategori": "diger", "matrah_alt_sinir_tl": 1000000.00, "matrah_ust_sinir_tl": 5300000.00, "oran": 0.35, "sabit_vergi_tl": 232500.00 },
+    { "kod": "GV-DIGER-5", "kategori": "diger", "matrah_alt_sinir_tl": 5300000.00, "matrah_ust_sinir_tl": null,       "oran": 0.40, "sabit_vergi_tl": 1737500.00 }
+  ],
+  "notlar": [
+    "Ücret gelirleri için ayrı, diğer gelirler için ayrı tarife uygulanır.",
+    "İlk iki dilim (190.000 TL ve 400.000 TL) her iki tarife için ortaktır.",
+    "Fark, 3. dilimden itibaren başlar.",
+    "Asgari ücret istisnası nedeniyle, asgari ücretli çalışanlar yıl boyunca gelir vergisi ödemez.",
+    "kategori='ucret' → ücret gelirleri tarifesi; kategori='diger' → ücret dışı gelirler tarifesi.",
+    "matrah_ust_sinir_tl=null → en üst dilim (üst sınır yok).",
+    "sabit_vergi_tl → bu dilime kadar olan kısmın toplam vergisi."
+  ]
+}
