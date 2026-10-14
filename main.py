@@ -3,10 +3,11 @@ PDaaS API — Parametric Data as a Service
 Otomatik servis keşfi: ham/ altındaki her JSON kendi meta bloğuyla
 hangi bakanlığa ait olduğunu ve servis kodunu bildirir.
 
-Performance v13:
+Performance v14:
 - GZip sıkıştırma (JSON %85-90 küçülür)
 - Bellek içi JSON cache (lru_cache) — disk I/O yok
 - HTTP Cache-Control başlıkları (tarayıcı önbelleği)
+- Çift dilli meta alanları (bakanlik_adi_en, servis_adi_en, kaynak_en)
 """
 from fastapi import FastAPI, HTTPException, Response
 from fastapi.middleware.cors import CORSMiddleware
@@ -19,12 +20,12 @@ from functools import lru_cache
 import json, time
 from datetime import datetime, timezone
 
-BUILD_VERSION = "v13_perf_2026_10_14"
+BUILD_VERSION = "v14_i18n_meta_2026_10_14"
 BUILD_TIMESTAMP = "2026-10-14T12:00:00Z"
 
 app = FastAPI(
     title="PDaaS API",
-    version="3.3.0",
+    version="3.4.0",
     description="Parametric Data as a Service — Turkish public parameters (recursive auto-discovery)",
 )
 
@@ -38,7 +39,7 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
-# GZip son ekleniyor → en dış katman (yanıtları sıkıştırır)
+# GZip en dış katman → tüm yanıtları sıkıştırır
 app.add_middleware(GZipMiddleware, minimum_size=500)
 
 KOK = Path(__file__).parent
@@ -116,7 +117,7 @@ def _kayit_bul(kayitlar: list, alan_adlari: list, deger: str):
 
 
 # ═══════════════════════════════════════════════════════════════
-# BAKANLIK ADI HARİTASI
+# BAKANLIK ADI HARİTASI (TR + EN)
 # ═══════════════════════════════════════════════════════════════
 _BAKANLIK_ADLARI = {
     "tb":       "T.C. Ticaret Bakanlığı",
@@ -128,6 +129,18 @@ _BAKANLIK_ADLARI = {
     "csidb":    "T.C. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
     "etkb":     "T.C. Enerji ve Tabii Kaynaklar Bakanlığı",
     "genel":    "Genel Referans Veriler",
+}
+
+_BAKANLIK_ADLARI_EN = {
+    "tb":       "Republic of Türkiye Ministry of Trade",
+    "hvmb":     "Republic of Türkiye Ministry of Treasury and Finance",
+    "hazine":   "Republic of Türkiye Ministry of Treasury and Finance",
+    "csgb":     "Republic of Türkiye Ministry of Labour and Social Security",
+    "sgk":      "Social Security Institution",
+    "tuik":     "Turkish Statistical Institute",
+    "csidb":    "Republic of Türkiye Ministry of Environment, Urbanisation and Climate Change",
+    "etkb":     "Republic of Türkiye Ministry of Energy and Natural Resources",
+    "genel":    "General Reference Data",
 }
 
 
@@ -156,10 +169,16 @@ def _katalog_tara() -> dict:
         if not bak:
             bak = parts[0].strip().lower() if len(parts) > 1 else "genel"
 
+        # TR / EN bakanlık adı — meta'dan gel, yoksa sözlükten, yoksa koddan
         bakanlik_adi = (
             meta.get("bakanlik_adi")
             or _BAKANLIK_ADLARI.get(bak)
             or bak.upper()
+        )
+        bakanlik_adi_en = (
+            meta.get("bakanlik_adi_en")
+            or _BAKANLIK_ADLARI_EN.get(bak)
+            or bakanlik_adi
         )
 
         svc = (meta.get("servis_kodu") or "").strip().lower()
@@ -167,6 +186,7 @@ def _katalog_tara() -> dict:
             svc = f"{parts[0]}-{dosya_stem}".lower() if len(parts) > 1 else dosya_stem.lower()
 
         servis_adi = meta.get("servis_adi") or dosya_stem.replace("-", " ").title()
+        servis_adi_en = meta.get("servis_adi_en") or servis_adi
 
         anahtar = (bak, svc)
         k = _SERVIS_KATALOGU.get(anahtar)
@@ -174,13 +194,17 @@ def _katalog_tara() -> dict:
             k = {
                 "bakanlik":              bak,
                 "bakanlik_adi":          bakanlik_adi,
+                "bakanlik_adi_en":       bakanlik_adi_en,
                 "servis_kodu":           svc,
                 "servis_adi":            servis_adi,
+                "servis_adi_en":         servis_adi_en,
                 "tip":                   (meta.get("tip") or "agac").lower(),
                 "join":                  meta.get("join") or "kod",
                 "surum":                 meta.get("surum") or meta.get("dosya_surumu") or "2026.01.01",
                 "yayinci":               meta.get("yayinci"),
+                "yayinci_en":            meta.get("yayinci_en"),
                 "kaynak":                meta.get("kaynak"),
+                "kaynak_en":             meta.get("kaynak_en"),
                 "gecerlilik_baslangic":  meta.get("gecerlilik_baslangic"),
                 "gecerlilik_bitis":      meta.get("gecerlilik_bitis"),
                 "dosyalar":              [],
@@ -201,16 +225,21 @@ _katalog_tara()
 
 
 def _ortak_meta(k: dict) -> dict:
+    """Hem TR hem EN meta alanlarını dışa verir."""
     return {
         "bakanlik":             k["bakanlik"],
         "bakanlik_adi":         k["bakanlik_adi"],
+        "bakanlik_adi_en":      k.get("bakanlik_adi_en"),
         "servis_kodu":          k["servis_kodu"],
         "servis_adi":           k["servis_adi"],
+        "servis_adi_en":        k.get("servis_adi_en"),
         "surum":                k["surum"],
-        "yayinci":              k["yayinci"],
-        "kaynak":               k["kaynak"],
-        "gecerlilik_baslangic": k["gecerlilik_baslangic"],
-        "gecerlilik_bitis":     k["gecerlilik_bitis"],
+        "yayinci":              k.get("yayinci"),
+        "yayinci_en":           k.get("yayinci_en"),
+        "kaynak":               k.get("kaynak"),
+        "kaynak_en":            k.get("kaynak_en"),
+        "gecerlilik_baslangic": k.get("gecerlilik_baslangic"),
+        "gecerlilik_bitis":     k.get("gecerlilik_bitis"),
     }
 
 
@@ -241,7 +270,7 @@ def _servis_bul(bakanlik: str, servis_kodu: str) -> dict:
 def ana_sayfa():
     yol = KOK / "index.html"
     if not yol.exists():
-        return {"service": "PDaaS API", "version": "3.3.0"}
+        return {"service": "PDaaS API", "version": "3.4.0"}
     return FileResponse(yol, media_type="text/html")
 
 
@@ -258,7 +287,6 @@ def urunler_sayfasi():
 # ═══════════════════════════════════════════════════════════════
 @app.get("/health")
 def health():
-    # Sağlık kontrolü cache'lenmesin
     return {"status": "healthy", "build": BUILD_VERSION}
 
 
@@ -270,19 +298,23 @@ def katalog_listesi(response: Response):
     for (bak, svc), k in sorted(_SERVIS_KATALOGU.items()):
         toplam = sum(d["kayit_sayisi"] for d in k["dosyalar"])
         servisler.append({
-            "bakanlik":      bak,
-            "bakanlik_adi":  k["bakanlik_adi"],
-            "servis_kodu":   svc,
-            "servis_adi":    k["servis_adi"],
-            "tip":           k["tip"],
-            "join":          k["join"],
-            "surum":         k["surum"],
-            "yayinci":       k["yayinci"],
-            "kaynak":        k["kaynak"],
-            "gecerlilik_baslangic": k["gecerlilik_baslangic"],
-            "dosya_sayisi":  len(k["dosyalar"]),
-            "kayit_sayisi":  toplam,
-            "endpoint":      f"/api/v1/{bak}/{svc}",
+            "bakanlik":             bak,
+            "bakanlik_adi":         k["bakanlik_adi"],
+            "bakanlik_adi_en":      k.get("bakanlik_adi_en"),
+            "servis_kodu":          svc,
+            "servis_adi":           k["servis_adi"],
+            "servis_adi_en":        k.get("servis_adi_en"),
+            "tip":                  k["tip"],
+            "join":                 k["join"],
+            "surum":                k["surum"],
+            "yayinci":              k.get("yayinci"),
+            "yayinci_en":           k.get("yayinci_en"),
+            "kaynak":               k.get("kaynak"),
+            "kaynak_en":            k.get("kaynak_en"),
+            "gecerlilik_baslangic": k.get("gecerlilik_baslangic"),
+            "dosya_sayisi":         len(k["dosyalar"]),
+            "kayit_sayisi":         toplam,
+            "endpoint":             f"/api/v1/{bak}/{svc}",
         })
 
     response.headers["Cache-Control"] = "public, max-age=600, stale-while-revalidate=3600"
@@ -304,11 +336,10 @@ def servis_ozet(bakanlik: str, servis_kodu: str, response: Response):
 
         tum = []
         for d in k["dosyalar"]:
-            v = _json_oku(d["yol"])   # artık cache'den geliyor — disk I/O yok
+            v = _json_oku(d["yol"])
             if v:
                 tum.extend(_kayitlari_al(v))
 
-        # Tarayıcıda 1 saat, bayatsa arka planda yenile (stale-while-revalidate)
         response.headers["Cache-Control"] = "public, max-age=3600, stale-while-revalidate=86400"
         response.headers["Vary"] = "Accept-Encoding"
 
@@ -332,8 +363,8 @@ def metrics():
     """Basit performans metrikleri (opsiyonel)."""
     ort = (_METRICS["total_ms"] / _METRICS["requests"]) if _METRICS["requests"] else 0
     return {
-        "requests":   _METRICS["requests"],
+        "requests":    _METRICS["requests"],
         "ortalama_ms": round(ort, 2),
-        "max_ms":     round(_METRICS["max_ms"], 2),
-        "cache_info": str(_json_oku_cache.cache_info()),
+        "max_ms":      round(_METRICS["max_ms"], 2),
+        "cache_info":  str(_json_oku_cache.cache_info()),
     }
