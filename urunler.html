@@ -454,14 +454,54 @@ function sayilariGuncelle(){
   $('sayi-nace').textContent  = sayi(t(VERI.nace));
 }
 
+// Bir kaydın kökten kendine uzanan yolu: [ [sira, kod], [sira, kod], ... ]
+// üst_kod zinciri ve sira alanı üzerinden kurulur.
+function kayitYolu(kayit, kodMap, onbellek){
+  const kk = normKod(kayit.kod);
+  if(onbellek.has(kk)) return onbellek.get(kk);
+
+  const zincir = [];
+  const gorulen = new Set();
+  let m = kayit;
+  while(m){
+    const mk = normKod(m.kod);
+    if(gorulen.has(mk)) break;          // döngü koruması
+    gorulen.add(mk);
+    zincir.unshift([Number(m.sira) || 9999, mk]);
+    m = m.ust_kod ? kodMap.get(normKod(m.ust_kod)) : null;
+  }
+  onbellek.set(kk, zincir);
+  return zincir;
+}
+
+// Sonuç dizisini ağaç sırasına göre sıralar.
+// sonuclar: [{ kaynak, kayit, skor }, ...]
+// tumKayitlar: aynı kaynağın TÜM kayıtları (parent'ları bulmak için)
+function hiyerarsiSirala(sonuclar, tumKayitlar){
+  const kodMap = new Map();
+  for(const k of tumKayitlar) kodMap.set(normKod(k.kod), k);
+
+  const onbellek = new Map();
+  return [...sonuclar].sort((a, b) => {
+    const A = kayitYolu(a.kayit, kodMap, onbellek);
+    const B = kayitYolu(b.kayit, kodMap, onbellek);
+    const n = Math.min(A.length, B.length);
+    for(let i = 0; i < n; i++){
+      if(A[i][0] !== B[i][0]) return A[i][0] - B[i][0];   // sira
+      const c = A[i][1].localeCompare(B[i][1]);            // kod (eşit sira)
+      if(c !== 0) return c;
+    }
+    return A.length - B.length;                            // kısa yol önce
+  });
+}
+
 // =================================================================
 // 3. ARAMA MOTORU
 // =================================================================
 function kaynaklariTara(q, filtre){
-  if(!q || q.length < 1) return [];
-  const sorgu = tr_lower(q);
+  const sorgu      = tr_lower(q || '');
   const sorguTemiz = sorgu.replace(/\./g,'').replace(/\s/g,'');
-  const sonuclar = [];
+  const tekKaynak  = filtre !== 'hepsi';
 
   const kaynaklar = [];
   if(filtre === 'hepsi' || filtre === 'gtip') kaynaklar.push(['gtip', VERI.gtip]);
@@ -469,34 +509,55 @@ function kaynaklariTara(q, filtre){
   if(filtre === 'hepsi' || filtre === 'cpc')  kaynaklar.push(['cpc',  VERI.cpc]);
   if(filtre === 'hepsi' || filtre === 'nace') kaynaklar.push(['nace', VERI.nace]);
 
+  const tumSonuclar = [];
+
   for(const [kaynakTip, veri] of kaynaklar){
+    const eslesenler = [];
+
     for(const k of veri.kayitlar){
-      const kod = normKod(k.kod);
-      const kodT = kodTemiz(kod);
-      const ad  = tr_lower(k.tanim_tr || k.ad || '');
-      const ad2 = tr_lower(k.tanim_en || '');
-      const seviye = tr_lower(k.seviye_adi || '');
+      // Sorgu boş + tek kaynak → tüm kayıtları göster (ağaç modu)
+      if(!sorgu){
+        if(!tekKaynak) continue;   // "hepsi" + boş sorgu → hiçbir şey gösterme
+        eslesenler.push({ kaynak:kaynakTip, kayit:k, skor:0 });
+        continue;
+      }
+
+      const kod     = normKod(k.kod);
+      const kodL    = tr_lower(kod);
+      const kodT    = kodTemiz(kod);
+      const ad      = tr_lower(k.tanim_tr || k.ad || '');
+      const ad2     = tr_lower(k.tanim_en || '');
+      const seviye  = tr_lower(k.seviye_adi || '');
 
       let skor = 0;
-      if(kod === q || kodT === sorguTemiz) skor = 100;
-      else if(kod.startsWith(q)) skor = 90;
-      else if(kodT.startsWith(sorguTemiz)) skor = 85;
-      else if(ad.startsWith(sorgu)) skor = 70;
-      else if(ad.includes(sorgu)) skor = 50;
-      else if(ad2.includes(sorgu)) skor = 30;
-      else if(seviye.includes(sorgu)) skor = 20;
-      else if(kod.includes(q)) skor = 40;
+      if(kodL === sorgu || kodT === sorguTemiz) skor = 100;
+      else if(kodL.startsWith(sorgu))           skor = 90;
+      else if(kodT.startsWith(sorguTemiz))      skor = 85;
+      else if(ad.startsWith(sorgu))             skor = 70;
+      else if(ad.includes(sorgu))               skor = 50;
+      else if(ad2.includes(sorgu))              skor = 30;
+      else if(seviye.includes(sorgu))           skor = 20;
+      else if(kodL.includes(sorgu))             skor = 40;
 
-      if(skor > 0) sonuclar.push({ kaynak:kaynakTip, kayit:k, skor });
+      if(skor > 0) eslesenler.push({ kaynak:kaynakTip, kayit:k, skor });
+    }
+
+    // Tek kaynak → ağaç sırası (kullanıcı hiyerarşiyi görmek ister)
+    // Hepsi      → skor sırası (en alakalı en üstte)
+    if(tekKaynak){
+      tumSonuclar.push(...hiyerarsiSirala(eslesenler, veri.kayitlar));
+    }else{
+      eslesenler.sort((a,b) => {
+        if(b.skor !== a.skor) return b.skor - a.skor;
+        return normKod(a.kayit.kod).length - normKod(b.kayit.kod).length;
+      });
+      tumSonuclar.push(...eslesenler);
     }
   }
 
-  sonuclar.sort((a,b) => {
-    if(b.skor !== a.skor) return b.skor - a.skor;
-    return normKod(a.kayit.kod).length - normKod(b.kayit.kod).length;
-  });
-
-  return sonuclar.slice(0, 40);
+  // Tek kaynak modunda limit yüksek (tüm ağacı görebilmek için)
+  const limit = tekKaynak ? 500 : 40;
+  return tumSonuclar.slice(0, limit);
 }
 
 // =================================================================
@@ -661,7 +722,10 @@ function sonucKartHTML(s){
   const seviye = kayit.seviye_adi ? `<code>${kacis(kayit.seviye_adi)}</code>` : '';
   const kaynakAd = { gtip:'GTİP', isco:'ISCO', cpc:'CPC', nace:'NACE' }[kaynak];
 
-  // Mini rozet: kaydın KDV kodu varsa oradan, yoksa gösterilmez
+  // Seviye → görsel girinti (ana kök 0px, her alt seviye +18px)
+  const lvl = Math.max(1, Number(kayit.seviye) || 1);
+  const girinti = (lvl - 1) * 18;
+
   let mini = '';
   if(kayit.kdv_kodu){
     const oran = oranBul(kayit.kdv_kodu);
@@ -671,7 +735,7 @@ function sonucKartHTML(s){
   if(kayit.otv_kodu) mini += `<span class="mr-otv">ÖTV</span>`;
 
   return `
-    <div class="sonuc-satir">
+    <div class="sonuc-satir" style="margin-left:${girinti}px">
       <span class="kaynak-etiket kaynak-${kaynak}">${kaynakAd}</span>
       <div class="sonuc-metin">
         <b>${kacis(ad)}</b>
