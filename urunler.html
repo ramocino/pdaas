@@ -169,6 +169,7 @@
   .sonuc-liste.agac .sonuc-satir[data-seviye="4"]{padding-left:68px}
   .sonuc-liste.agac .sonuc-satir[data-seviye="5"]{padding-left:86px}
   .sonuc-liste.agac .sonuc-satir[data-seviye="6"]{padding-left:104px}
+  .sonuc-liste.agac .sonuc-satir[data-seviye="7"]{padding-left:122px}
 
   /* Kaynak başlık şeridi */
   .kaynak-baslik{
@@ -520,11 +521,9 @@ function sayilariGuncelle(){
 // =================================================================
 // 3. AĞAÇ MOTORU
 // =================================================================
-// Bir kaydın kökten kendine uzanan yolunu döner: [[sira, kod], ...]
-// Kod karşılaştırma: "01.1" < "01.10" < "01.2" gibi doğal sıralama
+
+// Doğal kod karşılaştırma: "01.1" < "01.10" < "01.2"
 function karsilastirKod(a, b){
-  // Kodu rakam gruplarına ve harf gruplarına ayır
-  // "01.10" → ["01","10"]  /  "63114" → ["63114"]  /  "A.01" → ["A","01"]
   const parcala = s => String(s).match(/\d+|[A-Za-zĞÜŞİÖÇğüşıöç]+/g) || [];
   const A = parcala(a);
   const B = parcala(b);
@@ -541,51 +540,72 @@ function karsilastirKod(a, b){
       const c = x.localeCompare(y, 'tr');
       if(c !== 0) return c;
     }else{
-      // Sayı < harf (0 < A) — kararlı bir kural
       return xn ? -1 : 1;
     }
   }
   return A.length - B.length;
 }
 
-// Bir kaydın kökten kendine uzanan yolunu döner (yalnızca kodlar)
-function kayitYolu(kayit, kodMap, onbellek){
-  const kk = normKod(kayit.kod);
-  if(onbellek.has(kk)) return onbellek.get(kk);
-
+// GTİP kodundan atasal zincir üretir (kod uzunluğuna göre dilimler)
+// "8703219010" → ["87", "8703", "870321", "87032190", "8703219010"]
+function gtipZinciri(kod){
+  const t = kodTemiz(kod);
+  if(!/^\d+$/.test(t)) return [normKod(kod)];
+  const dilimler = [2, 4, 6, 8, 10, 12];
   const zincir = [];
-  const gorulen = new Set();
-  let m = kayit;
-  while(m){
-    const mk = normKod(m.kod);
-    if(gorulen.has(mk)) break;
-    gorulen.add(mk);
-    zincir.unshift(mk);            // kod string'i
-    m = m.ust_kod ? kodMap.get(normKod(m.ust_kod)) : null;
+  for(const d of dilimler){
+    if(t.length >= d) zincir.push(t.slice(0, d));
   }
-  onbellek.set(kk, zincir);
   return zincir;
 }
 
-// Sonuç listesini kod-hiyerarşisine göre sıralar — sira alanı yok sayılır
-function hiyerarsiSirala(sonuclar, tumKayitlar){
-  const kodMap = new Map(tumKayitlar.map(k => [normKod(k.kod), k]));
-  const onbellek = new Map();
+// Kaynağa duyarlı kayıt yolu (kod string dizisi)
+function kayitYolu(kayit, kodMap, onbellek, kaynakTip){
+  const kk = normKod(kayit.kod);
+  const anahtar = kaynakTip + '::' + kk;
+  if(onbellek.has(anahtar)) return onbellek.get(anahtar);
 
-  return [...sonuclar].sort((a, b) => {
-    const A = kayitYolu(a.kayit, kodMap, onbellek);
-    const B = kayitYolu(b.kayit, kodMap, onbellek);
-    const n = Math.min(A.length, B.length);
-    for(let i = 0; i < n; i++){
-      const c = karsilastirKod(A[i], B[i]);
-      if(c !== 0) return c;
+  let zincir = [];
+
+  if(kaynakTip === 'gtip'){
+    const g = gtipZinciri(kayit.kod);
+    // Yalnızca veri setinde var olan kodları tut
+    zincir = g.filter(x => kodMap.has(x));
+    if(zincir[zincir.length-1] !== kk) zincir.push(kk);
+  }else{
+    const gorulen = new Set();
+    let m = kayit;
+    while(m){
+      const mk = normKod(m.kod);
+      if(gorulen.has(mk)) break;
+      gorulen.add(mk);
+      zincir.unshift(mk);
+      m = m.ust_kod ? kodMap.get(normKod(m.ust_kod)) : null;
     }
-    return A.length - B.length;    // kısa yol (ata) önce
-  });
+  }
+
+  onbellek.set(anahtar, zincir);
+  return zincir;
 }
 
-// Ata zincirini toplar
-function ataZinciri(kayit, kodMap){
+// Ata zincirini kayıt nesneleri olarak döner
+function ataZinciri(kayit, kodMap, kaynakTip){
+  const kod = normKod(kayit.kod);
+
+  if(kaynakTip === 'gtip'){
+    const g = gtipZinciri(kod);
+    const kayitlar = [];
+    for(const x of g){
+      const k = kodMap.get(x);
+      if(k) kayitlar.push(k);
+    }
+    const son = kayitlar[kayitlar.length-1];
+    if(!son || normKod(son.kod) !== kod){
+      kayitlar.push(kayit);
+    }
+    return kayitlar;
+  }
+
   const zincir = [];
   const gorulen = new Set();
   let m = kayit;
@@ -599,15 +619,32 @@ function ataZinciri(kayit, kodMap){
   return zincir;
 }
 
-// Eşleşen kayıtlar + atalarını birleştirip ağaç sırasında döner
+// Kod hiyerarşisine göre sırala — sira alanı yok sayılır
+function hiyerarsiSirala(sonuclar, tumKayitlar, kaynakTip){
+  const kodMap = new Map(tumKayitlar.map(k => [normKod(k.kod), k]));
+  const onbellek = new Map();
+
+  return [...sonuclar].sort((a, b) => {
+    const A = kayitYolu(a.kayit, kodMap, onbellek, kaynakTip);
+    const B = kayitYolu(b.kayit, kodMap, onbellek, kaynakTip);
+    const n = Math.min(A.length, B.length);
+    for(let i = 0; i < n; i++){
+      const c = karsilastirKod(A[i], B[i]);
+      if(c !== 0) return c;
+    }
+    return A.length - B.length;
+  });
+}
+
+// Eşleşenler + atalarını birleştirip ağaç sırasında döner
 function agacKur(kaynakTip, tumKayitlar, eslesenKodlar){
   const kodMap = new Map(tumKayitlar.map(k => [normKod(k.kod), k]));
-  const dahil = new Map(); // kod → { kayit, eslesme }
+  const dahil = new Map();
 
   for(const kod of eslesenKodlar){
     const k = kodMap.get(kod);
     if(!k) continue;
-    const zincir = ataZinciri(k, kodMap);
+    const zincir = ataZinciri(k, kodMap, kaynakTip);
     zincir.forEach((z, i) => {
       const zk = normKod(z.kod);
       const sonuncu = (i === zincir.length - 1);
@@ -622,7 +659,7 @@ function agacKur(kaynakTip, tumKayitlar, eslesenKodlar){
     kayit:  x.kayit,
     eslesme:x.eslesme
   }));
-  return hiyerarsiSirala(liste, tumKayitlar);
+  return hiyerarsiSirala(liste, tumKayitlar, kaynakTip);
 }
 
 // =================================================================
@@ -633,7 +670,6 @@ function kaynaklariTara(q, filtre){
   const sorguTemiz = sorgu.replace(/\./g,'').replace(/\s/g,'');
   const tekKaynak  = filtre !== 'hepsi';
 
-  // "hepsi" + boş sorgu → boş liste
   if(!sorgu && !tekKaynak) return [];
 
   const kaynaklar = [];
@@ -648,7 +684,6 @@ function kaynaklariTara(q, filtre){
     const eslesenKodlar = [];
 
     for(const k of veri.kayitlar){
-      // Boş sorgu + tek kaynak → tüm ağaç
       if(!sorgu){
         eslesenKodlar.push(normKod(k.kod));
         continue;
@@ -674,7 +709,6 @@ function kaynaklariTara(q, filtre){
       if(ok) eslesenKodlar.push(kod);
     }
 
-    // Her kaynak kendi içinde ağaç olarak kurulur
     tumSonuclar.push(...agacKur(kaynakTip, veri.kayitlar, eslesenKodlar));
   }
 
@@ -789,6 +823,22 @@ function otvBul(gtipKod, matrah){
 // =================================================================
 // 6. SONUÇ LİSTESİNİ ÇİZ
 // =================================================================
+
+// Kaynağa göre gerçek seviye (GTİP'te kod uzunluğundan türetilir)
+function gercekSeviye(kayit, kaynakTip){
+  if(kaynakTip === 'gtip'){
+    const t = kodTemiz(kayit.kod);
+    if(!/^\d+$/.test(t)) return 1;   // Roma rakamı → bölüm
+    if(t.length <= 2) return 2;      // fasıl
+    if(t.length <= 4) return 3;      // pozisyon
+    if(t.length <= 6) return 4;      // alt pozisyon
+    if(t.length <= 8) return 5;      // tarife alt açılımı
+    if(t.length <= 10) return 6;
+    return 7;
+  }
+  return Math.max(1, Number(kayit.seviye) || 1);
+}
+
 function sonuclariCiz(sonuclar){
   const alan = $('sonuc-alani');
 
@@ -802,7 +852,6 @@ function sonuclariCiz(sonuclar){
     return;
   }
 
-  // Kaynağa göre grupla
   const gruplar = { gtip:[], isco:[], cpc:[], nace:[] };
   for(const s of sonuclar) gruplar[s.kaynak].push(s);
 
@@ -850,7 +899,7 @@ function sonucKartHTML(s, idx){
   const { kaynak, kayit, eslesme } = s;
   const kod = normKod(kayit.kod);
   const ad  = kayit.tanim_tr || kayit.ad || '—';
-  const lvl = Math.max(1, Number(kayit.seviye) || 1);
+  const lvl = gercekSeviye(kayit, kaynak);
   const seviye = kayit.seviye_adi ? `<span class="seviye-rozet">${kacis(kayit.seviye_adi)}</span>` : '';
   const kaynakAd = { gtip:'GTİP', isco:'ISCO', cpc:'CPC', nace:'NACE' }[kaynak];
 
@@ -1027,7 +1076,6 @@ $('filtreler').addEventListener('click', (e) => {
   btn.classList.add('aktif');
   AKTIF_FILTRE = btn.dataset.tip;
   const q = $('arama').value.trim();
-  // Filtre değişince her durumda yeniden çiz (boş sorguda da ağaç gösterilsin)
   sonuclariCiz(kaynaklariTara(q, AKTIF_FILTRE));
   $('detay-kap').style.display = 'none';
 });
