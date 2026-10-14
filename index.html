@@ -40,6 +40,85 @@
     .light .j-num { color: #d97706; }
     .light .j-kw  { color: #db2777; }
     .light .j-punct { color: #64748b; }
+    /* ═══════════════════════════════════════════════
+   AYDINLIK MOD OVERRIDE
+   Tailwind sınıflarını ezerek renkleri çevirir
+   ═══════════════════════════════════════════════ */
+
+html.light body {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+/* Arka plan renkleri */
+html.light .bg-slate-900,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-900\/50 { background-color: #ffffff !important; }
+
+html.light .bg-slate-950,
+html.light .bg-slate-950\/50,
+html.light .bg-slate-950\/40,
+html.light .bg-slate-950\/80 { background-color: #f8fafc !important; }
+
+html.light .bg-slate-800,
+html.light .bg-slate-800\/50,
+html.light .bg-slate-800\/60,
+html.light .bg-slate-800\/80 { background-color: #e2e8f0 !important; }
+
+html.light .bg-slate-700\/50 { background-color: #cbd5e1 !important; }
+
+/* Kenarlıklar */
+html.light .border-slate-800,
+html.light .border-slate-800\/80,
+html.light .border-slate-800\/60,
+html.light .border-slate-800\/40,
+html.light .border-slate-700,
+html.light .border-slate-700\/70,
+html.light .border-slate-700\/60,
+html.light .border-slate-700\/50 { border-color: #cbd5e1 !important; }
+
+/* Metin renkleri */
+html.light .text-white      { color: #0f172a !important; }
+html.light .text-slate-100  { color: #0f172a !important; }
+html.light .text-slate-200  { color: #1e293b !important; }
+html.light .text-slate-300  { color: #334155 !important; }
+html.light .text-slate-400  { color: #64748b !important; }
+html.light .text-slate-500  { color: #94a3b8 !important; }
+html.light .text-slate-600  { color: #94a3b8 !important; }
+html.light .text-brand-300  { color: #4f46e5 !important; }
+html.light .text-brand-400  { color: #4f46e5 !important; }
+
+/* Marka arka planı */
+html.light .bg-brand-600\/20,
+html.light .bg-brand-500\/20 { background-color: rgba(99,102,241,.15) !important; }
+html.light .bg-brand-600\/10 { background-color: rgba(99,102,241,.08) !important; }
+
+/* Durum renkleri */
+html.light .bg-emerald-500\/10 { background-color: rgba(16,185,129,.1) !important; }
+html.light .bg-rose-500\/10    { background-color: rgba(244,63,94,.1) !important; }
+html.light .bg-rose-500\/20    { background-color: rgba(244,63,94,.15) !important; }
+
+/* Hover durumları */
+html.light .hover\:bg-slate-800:hover,
+html.light .hover\:bg-slate-800\/60:hover,
+html.light .hover\:bg-slate-700:hover { background-color: #e2e8f0 !important; }
+
+html.light .hover\:bg-brand-600\/10:hover,
+html.light .hover\:bg-brand-600\/20:hover { background-color: rgba(99,102,241,.12) !important; }
+
+html.light .hover\:text-white:hover    { color: #0f172a !important; }
+html.light .hover\:text-slate-200:hover { color: #334155 !important; }
+html.light .hover\:border-slate-600:hover { border-color: #94a3b8 !important; }
+
+/* Placeholder */
+html.light .placeholder-slate-500::placeholder { color: #94a3b8 !important; }
+
+/* JSON terminal özel renkleri */
+html.light .j-key   { color: #0284c7; }
+html.light .j-str   { color: #0f766e; }
+html.light .j-num   { color: #d97706; }
+html.light .j-kw    { color: #db2777; }
+html.light .j-punct { color: #64748b; }
   </style>
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans min-h-screen flex flex-col antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200" id="app-body">
