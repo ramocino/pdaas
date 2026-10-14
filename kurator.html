@@ -1,269 +1,215 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PDaaS Kurator — Rol Bazlı Eşleştirme</title>
-<style>
-  :root{
-    --bg:#0b1220; --panel:#121b2e; --panel2:#1a2540; --panel3:#0f1729;
-    --line:#243255; --txt:#e6ecff; --muted:#8b9ac4;
-    --accent:#4da3ff; --accent2:#22d3a6; --warn:#ffb454; --danger:#ff6b6b;
-    --gtip:#4da3ff; --cpc:#a78bfa; --isco:#22d3a6; --nace:#ffb454;
+<title>PDaaS Küratör — Rol Bazlı Eşleştirme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      colors: {
+        brand: { 50:'#eef2ff',100:'#e0e7ff',500:'#6366f1',600:'#4f46e5',700:'#4338ca',900:'#312e81' }
+      }
+    }
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:.88rem;line-height:1.5;height:100vh;overflow:hidden}
-  button{font-family:inherit;cursor:pointer;border:none;border-radius:7px;font-weight:600;transition:.15s}
-  input,select,textarea{font-family:inherit;background:var(--panel3);border:1px solid var(--line);color:var(--txt);padding:8px 12px;border-radius:7px;font-size:.85rem;width:100%}
-  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
-  pre{font-family:"JetBrains Mono",Consolas,monospace;font-size:.75rem;color:#c9d5f5}
+}
+</script>
+<style>
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(156,163,175,.3); border-radius: 99px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(156,163,175,.5); }
+  .glass-panel { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  input:disabled, select:disabled, textarea:disabled { opacity:.55; cursor:not-allowed; }
+  input[type="checkbox"]{ accent-color:#6366f1; }
+  .dal-chevron { transition: transform .22s ease; }
+  .agac-dal.open .dal-chevron { transform: rotate(90deg); }
+  .agac-dal.open .dal-body { display: block !important; }
 
-  /* TOPBAR */
-  .topbar{background:var(--panel2);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-  .topbar .brand{font-weight:800;font-size:.95rem;display:flex;align-items:center;gap:10px}
-  .topbar .brand .logo{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,var(--gtip),var(--cpc),var(--isco),var(--nace));display:grid;place-items:center;color:#04122a;font-weight:800;font-size:.75rem}
-  .topbar .brand small{color:var(--muted);font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:.65rem;margin-left:4px}
-  .topbar .spacer{flex:1}
-  .role-picker{display:flex;align-items:center;gap:8px;font-size:.78rem}
-  .role-picker label{color:var(--muted);font-weight:600}
-  .role-picker select{width:auto;padding:6px 10px;font-size:.78rem;min-width:230px}
-  .btn{padding:7px 14px;font-size:.78rem;background:var(--accent);color:#04122a}
-  .btn:hover{filter:brightness(1.1)}
-  .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--muted)}
-  .btn.ghost:hover{color:var(--txt);border-color:var(--accent)}
-  .btn.danger{background:var(--danger);color:#fff}
-  .btn.save{background:var(--accent2)}
+  html.light body { background:#f1f5f9 !important; color:#0f172a !important; }
+  html.light .bg-slate-900, html.light .bg-slate-900\/80, html.light .bg-slate-900\/50, html.light .bg-slate-900\/60, html.light .bg-slate-900\/40 { background:#fff !important; }
+  html.light .bg-slate-950, html.light .bg-slate-950\/50, html.light .bg-slate-950\/40 { background:#f8fafc !important; }
+  html.light .bg-slate-800, html.light .bg-slate-800\/60, html.light .bg-slate-800\/50, html.light .bg-slate-800\/70 { background:#e2e8f0 !important; }
+  html.light .border-slate-800, html.light .border-slate-800\/60, html.light .border-slate-800\/40, html.light .border-slate-700, html.light .border-slate-700\/60 { border-color:#cbd5e1 !important; }
+  html.light .text-white { color:#0f172a !important; }
+  html.light .text-slate-100, html.light .text-slate-200 { color:#1e293b !important; }
+  html.light .text-slate-300 { color:#334155 !important; }
+  html.light .text-slate-400 { color:#64748b !important; }
+  html.light .text-slate-500 { color:#94a3b8 !important; }
 
-  .dropdown{position:relative;display:inline-block}
-  .dropdown-menu{display:none;position:absolute;top:100%;right:0;margin-top:6px;background:var(--panel2);border:1px solid var(--line);border-radius:9px;min-width:230px;padding:6px;z-index:50;box-shadow:0 12px 36px -10px rgba(0,0,0,.6)}
-  .dropdown.open .dropdown-menu{display:block}
-  .dropdown-menu button{display:flex;align-items:center;gap:8px;width:100%;padding:9px 12px;background:transparent;color:var(--txt);font-size:.8rem;text-align:left;border-radius:6px;font-weight:500}
-  .dropdown-menu button:hover{background:rgba(77,163,255,.1)}
-  .dropdown-menu .ayrac{height:1px;background:var(--line);margin:4px 6px}
+  .entity-tab{
+    padding: 6px 14px; border-radius: 10px; font-size: 11px; font-weight: 700;
+    background: #1e293b; color: #94a3b8; border: 1px solid #334155; transition: all .15s;
+  }
+  .entity-tab:hover{ color: #e2e8f0; }
+  .entity-tab[data-e="gtip"].active{ background:#0ea5e9; color:#04122a; border-color:#0ea5e9; box-shadow:0 6px 18px -8px #0ea5e9; }
+  .entity-tab[data-e="cpc"].active{  background:#a78bfa; color:#1e1b4b; border-color:#a78bfa; box-shadow:0 6px 18px -8px #a78bfa; }
+  .entity-tab[data-e="isco"].active{ background:#34d399; color:#04122a; border-color:#34d399; box-shadow:0 6px 18px -8px #34d399; }
+  .entity-tab[data-e="nace"].active{ background:#fbbf24; color:#3b2100; border-color:#fbbf24; box-shadow:0 6px 18px -8px #fbbf24; }
 
-  /* VARLIK SEÇİCİ */
-  .entity-bar{background:var(--panel3);border-bottom:1px solid var(--line);padding:10px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-  .entity-bar .eb-label{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-weight:700}
-  .entity-tabs{display:flex;gap:6px;flex-wrap:wrap}
-  .entity-tab{padding:8px 16px;font-size:.82rem;font-weight:700;background:var(--panel);border:2px solid transparent;color:var(--muted);border-radius:9px;transition:.2s}
-  .entity-tab:hover{color:var(--txt)}
-  .entity-tab.active{color:#04122a}
-  .entity-tab[data-e="gtip"].active{background:var(--gtip);border-color:var(--gtip);box-shadow:0 4px 16px -6px var(--gtip)}
-  .entity-tab[data-e="cpc"].active{background:var(--cpc);border-color:var(--cpc);box-shadow:0 4px 16px -6px var(--cpc)}
-  .entity-tab[data-e="isco"].active{background:var(--isco);border-color:var(--isco);box-shadow:0 4px 16px -6px var(--isco)}
-  .entity-tab[data-e="nace"].active{background:var(--nace);border-color:var(--nace);box-shadow:0 4px 16px -6px var(--nace)}
-
-  .role-info{background:rgba(77,163,255,.08);border-bottom:1px solid var(--line);padding:8px 20px;font-size:.75rem;color:var(--muted);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .role-info .rozet{background:var(--panel);border:1px solid var(--line);padding:3px 9px;border-radius:6px;font-weight:600;color:var(--txt)}
-  .role-info .uyari{color:var(--warn);font-weight:600}
-
-  /* LAYOUT */
-  .curator-layout{display:grid;grid-template-columns:320px 1fr;height:calc(100vh - 152px)}
-  @media(max-width:900px){ .curator-layout{grid-template-columns:1fr;height:auto} }
-
-  /* SOL LİSTE — AĞAÇ */
-  .code-list{background:var(--panel);border-right:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
-  .code-list-header{padding:12px;border-bottom:1px solid var(--line)}
-  .code-list-header h3{font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;font-weight:700}
-  .code-list-body{flex:1;overflow-y:auto;padding:8px}
-  .code-list-body::-webkit-scrollbar{width:6px}
-  .code-list-body::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
-
-  .durum-yukleniyor{padding:20px;text-align:center;color:var(--muted);font-size:.78rem;font-style:italic}
-  .durum-hata{padding:20px;text-align:center;color:var(--danger);font-size:.78rem}
-
-  /* Ağaç dalı */
-  .agac-dal{background:var(--panel2);border-radius:8px;margin-bottom:4px;overflow:hidden;border:1px solid transparent;transition:.15s}
-  .agac-dal.open{border-color:var(--line)}
-  .agac-dal>.dal-head{display:flex;align-items:center;gap:8px;padding:9px 11px;cursor:pointer;user-select:none;font-weight:700;font-size:.78rem;transition:.15s}
-  .agac-dal>.dal-head:hover{background:rgba(77,163,255,.08)}
-  .agac-dal>.dal-head .dal-chevron{width:10px;height:10px;flex-shrink:0;color:var(--muted);transition:transform .22s}
-  .agac-dal.open>.dal-head .dal-chevron{transform:rotate(90deg)}
-  .agac-dal>.dal-head .dal-kod{font-family:"JetBrains Mono",Consolas,monospace;font-size:.72rem;font-weight:800;padding:2px 7px;border-radius:5px;background:rgba(0,0,0,.35);flex-shrink:0}
-  .agac-dal[data-v="gtip"]>.dal-head .dal-kod{color:var(--gtip)}
-  .agac-dal[data-v="cpc"]>.dal-head .dal-kod{color:var(--cpc)}
-  .agac-dal[data-v="isco"]>.dal-head .dal-kod{color:var(--isco)}
-  .agac-dal[data-v="nace"]>.dal-head .dal-kod{color:var(--nace)}
-  .agac-dal>.dal-head .dal-ad{flex:1;color:var(--txt);line-height:1.2;font-weight:600;font-size:.74rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .agac-dal>.dal-head .dal-sayi{font-size:.65rem;background:rgba(0,0,0,.35);color:var(--muted);padding:2px 7px;border-radius:999px;font-weight:700;flex-shrink:0}
-  .agac-dal>.dal-body{display:none;padding:3px 6px 6px}
-  .agac-dal.open>.dal-body{display:block}
-
-  .code-item{padding:7px 10px;border-radius:7px;cursor:pointer;margin-bottom:2px;transition:.12s;border:1px solid transparent}
-  .code-item:hover{background:var(--panel3)}
-  .code-item.active{background:rgba(77,163,255,.15);border-color:var(--accent)}
-  .code-item .kod{font-family:"JetBrains Mono",Consolas,monospace;font-size:.72rem;font-weight:700;display:block}
-  .code-item[data-e="gtip"] .kod{color:var(--gtip)}
-  .code-item[data-e="cpc"]  .kod{color:var(--cpc)}
-  .code-item[data-e="isco"] .kod{color:var(--isco)}
-  .code-item[data-e="nace"] .kod{color:var(--nace)}
-  .code-item .ad{font-size:.72rem;color:var(--muted);display:block;margin-top:1px;line-height:1.3}
-  .code-item .durum{font-size:.6rem;color:var(--muted);margin-top:3px;display:flex;gap:5px;flex-wrap:wrap}
-  .code-item .durum span{background:rgba(0,0,0,.3);padding:1px 5px;border-radius:4px}
-  .code-item .durum span.ok{color:var(--accent2)}
-  .code-item .durum span.benim{background:rgba(34,211,166,.2);color:var(--accent2);font-weight:700}
-
-  /* SAĞ */
-  .curator-main{display:grid;grid-template-rows:auto auto 1fr auto;overflow:hidden;background:var(--panel3)}
-  .detail-header{padding:14px 20px;background:var(--panel2);border-bottom:1px solid var(--line)}
-  .detail-header.empty{color:var(--muted);text-align:center;font-style:italic;padding:24px}
-  .detail-header .kod-buyuk{font-family:"JetBrains Mono",Consolas,monospace;font-size:1.05rem;font-weight:800;letter-spacing:.02em}
-  .detail-header[data-e="gtip"] .kod-buyuk{color:var(--gtip)}
-  .detail-header[data-e="cpc"]  .kod-buyuk{color:var(--cpc)}
-  .detail-header[data-e="isco"] .kod-buyuk{color:var(--isco)}
-  .detail-header[data-e="nace"] .kod-buyuk{color:var(--nace)}
-  .detail-header .ad-buyuk{font-size:.95rem;color:var(--txt);margin-top:4px}
-  .detail-header .meta-satir{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;font-size:.72rem;color:var(--muted)}
-  .detail-header .meta-satir b{color:var(--txt);font-weight:600}
-  .detail-header .meta-satir b.rol{color:var(--accent2)}
-
-  .tabs{display:flex;gap:2px;background:var(--panel2);border-bottom:1px solid var(--line);padding:0 12px;overflow-x:auto}
-  .tab{padding:10px 16px;font-size:.8rem;font-weight:600;color:var(--muted);background:transparent;border-radius:0;border-bottom:2px solid transparent;white-space:nowrap}
-  .tab:hover{color:var(--txt)}
-  .tab.active{color:var(--accent);border-bottom-color:var(--accent);background:rgba(77,163,255,.06)}
-  .tab .badge{background:rgba(0,0,0,.4);padding:1px 6px;border-radius:4px;font-size:.65rem;margin-left:6px;color:var(--accent2)}
-  .tab .badge.bos{color:var(--warn)}
-
-  .tabs-empty{padding:14px 20px;color:var(--warn);font-size:.82rem;font-weight:600;background:rgba(255,180,84,.08);border-bottom:1px solid var(--line)}
-
-  .panels{overflow-y:auto;padding:20px}
-  .panels::-webkit-scrollbar{width:8px}
-  .panels::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
-  .panel{display:none}
-  .panel.active{display:block}
-
-  .field{margin-bottom:16px}
-  .field label{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;font-weight:700}
-  .field .help{font-size:.72rem;color:var(--muted);margin-top:4px;font-style:italic}
-  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  @media(max-width:600px){ .field-row{grid-template-columns:1fr} }
-
-  .multi-list{background:var(--panel);border:1px solid var(--line);border-radius:8px;max-height:280px;overflow-y:auto;padding:6px}
-  .multi-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:6px;cursor:pointer;transition:.12s}
-  .multi-item:hover{background:var(--panel2)}
-  .multi-item input[type="checkbox"]{width:16px;height:16px;accent-color:var(--accent);cursor:pointer}
-  .multi-item .kod{font-family:"JetBrains Mono",Consolas,monospace;font-size:.78rem;font-weight:700;min-width:72px}
-  .multi-item .ad{font-size:.78rem;color:var(--muted);flex:1}
-  .multi-item.checked{background:rgba(77,163,255,.1)}
-  .multi-item.checked .ad{color:var(--txt)}
-
-  .urun-listesi{display:flex;flex-direction:column;gap:8px}
-  .urun-satir{display:grid;grid-template-columns:2fr 2fr 80px 30px;gap:8px;align-items:center}
-  .urun-satir input{padding:6px 10px;font-size:.78rem}
-  .urun-satir .sil{background:var(--danger);color:#fff;width:26px;height:26px;border-radius:6px;font-size:.9rem;line-height:1;padding:0;display:grid;place-items:center}
-  .ekle-btn{background:transparent;border:1px dashed var(--line);color:var(--muted);padding:8px;border-radius:7px;font-size:.78rem;width:100%;margin-top:8px}
-  .ekle-btn:hover{border-color:var(--accent);color:var(--accent)}
-
-  .json-bar{background:var(--panel2);border-top:1px solid var(--line);padding:12px 20px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;max-height:240px}
-  .json-bar pre{background:#0a0f1c;border:1px solid var(--line);border-radius:8px;padding:12px;overflow:auto;max-height:200px;margin:0}
-  .json-bar .actions{display:flex;flex-direction:column;gap:6px;min-width:150px}
-
-  .toast{position:fixed;bottom:24px;right:24px;background:var(--accent2);color:#04122a;padding:12px 20px;border-radius:9px;font-weight:700;font-size:.82rem;opacity:0;transform:translateY(10px);transition:.3s;pointer-events:none;box-shadow:0 10px 30px -10px rgba(34,211,166,.5);z-index:100;max-width:340px}
-  .toast.show{opacity:1;transform:translateY(0)}
-  .toast.err{background:var(--danger);color:#fff}
-  .toast.warn{background:var(--warn);color:#04122a}
+  .rozet{ padding:3px 9px; border-radius:8px; font-weight:700; font-size:10.5px;
+          background:#0f172a; border:1px solid #334155; }
 </style>
 </head>
-<body>
+<body class="bg-slate-900 text-slate-100 font-sans h-screen flex flex-col antialiased overflow-hidden selection:bg-brand-500 selection:text-white">
 
-<header class="topbar">
-  <div class="brand">
-    <div class="logo">K</div>
-    PDaaS Kurator
-    <small>Rol Bazlı Eşleştirme · v0.5</small>
-  </div>
-  <div class="spacer"></div>
-  <div class="role-picker">
-    <label>Aktif Rol:</label>
-    <select id="role">
-      <option value="ticaret">T.C. Ticaret Bakanlığı</option>
-      <option value="hazine">T.C. Hazine ve Maliye Bakanlığı (GİB)</option>
-      <option value="sgk">T.C. Sosyal Güvenlik Kurumu (SGK)</option>
-      <option value="tuik">Türkiye İstatistik Kurumu (TÜİK)</option>
-      <option value="cbdd">CBDDO — Koordinatör</option>
-    </select>
-  </div>
-  <div class="dropdown" id="yukle-dropdown">
-    <button class="btn ghost" onclick="toggleDropdown('yukle-dropdown')">Yükle ▼</button>
-    <div class="dropdown-menu">
-      <button onclick="yukleTekKayit()">📄 Tek Kayıt Yükle</button>
-      <button onclick="yukleTopluDosya()">📦 Toplu Dosya Yükle</button>
-      <div class="ayrac"></div>
-      <button onclick="yereldenYukle()">💾 Yerel Kayıtlardan Yükle</button>
+  <!-- ══════════════ HEADER ══════════════ -->
+  <header class="h-16 border-b border-slate-800 bg-slate-900/80 sticky top-0 z-40 glass-panel flex items-center justify-between px-4 lg:px-6 gap-4 flex-none">
+    <div class="flex items-center gap-4 min-w-0">
+      <a href="index.html" class="flex items-center gap-3 flex-none">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center font-extrabold text-white text-lg shadow-lg shadow-brand-500/30">P</div>
+        <div class="hidden sm:block">
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-base tracking-tight text-white">PDaaS</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-brand-500/20 text-brand-400 px-2 py-0.5 rounded-full border border-brand-500/30">Küratör</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Rol Bazlı Eşleştirme</p>
+        </div>
+      </a>
+
+      <!-- SAYFA GEZİNME -->
+      <nav class="hidden lg:flex items-center gap-1 ml-2">
+        <a href="index.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition">Portal</a>
+        <a href="urunler.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition">Ürün Arama</a>
+        <a href="kurator.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-800 border border-slate-700">Küratör</a>
+      </nav>
     </div>
-  </div>
-  <button class="btn save" onclick="kaydetJson()">Kaydet</button>
-  <input type="file" id="file-input" accept=".json" style="display:none">
-</header>
 
-<div class="entity-bar">
-  <span class="eb-label">Varlık Türü</span>
-  <div class="entity-tabs">
-    <button class="entity-tab active" data-e="gtip" onclick="varlikSec('gtip')">GTİP · Ürün</button>
-    <button class="entity-tab" data-e="cpc"  onclick="varlikSec('cpc')">CPC · Hizmet</button>
-    <button class="entity-tab" data-e="isco" onclick="varlikSec('isco')">ISCO · Meslek</button>
-    <button class="entity-tab" data-e="nace" onclick="varlikSec('nace')">NACE · Faaliyet</button>
-  </div>
-  <span style="margin-left:auto;font-size:.72rem;color:var(--muted)">
-    Kaynak: <b id="aktif-kaynak" style="color:var(--txt)">—</b>
-  </span>
-</div>
-
-<div class="role-info" id="role-info">
-  <span>Yazma yetkisi:</span>
-  <span id="yetki-rozetleri"></span>
-  <span class="uyari" id="yetki-uyari" style="display:none"></span>
-</div>
-
-<div class="curator-layout">
-  <aside class="code-list">
-    <div class="code-list-header">
-      <h3 id="liste-baslik">Yükleniyor…</h3>
-      <input type="text" id="ara" placeholder="Kod veya açıklama ara…" oninput="filtrele()">
-    </div>
-    <div class="code-list-body" id="kod-listesi">
-      <div class="durum-yukleniyor">Katalog yükleniyor…</div>
-    </div>
-  </aside>
-
-  <main class="curator-main">
-    <div class="detail-header empty" id="detail-header">Soldaki listeden bir kod seçin</div>
-    <div>
-      <div class="tabs" id="tabs"></div>
-      <div class="panels" id="panels"></div>
-    </div>
-    <div class="json-bar">
-      <pre id="json-preview">// Bir kod seçin…</pre>
-      <div class="actions">
-        <button class="btn" onclick="kopyalaJson()">Panoya Kopyala</button>
-        <button class="btn ghost" onclick="indirJson()">JSON İndir</button>
-        <button class="btn danger" onclick="temizle()">Temizle</button>
+    <div class="flex items-center gap-2 flex-none">
+      <div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-800/60 border border-slate-700/60">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Rol</span>
+        <select id="role" class="bg-transparent text-xs font-bold text-white focus:outline-none pr-1 cursor-pointer">
+          <option class="bg-slate-800" value="ticaret">T.C. Ticaret Bakanlığı</option>
+          <option class="bg-slate-800" value="hazine">Hazine ve Maliye (GİB)</option>
+          <option class="bg-slate-800" value="sgk">SGK</option>
+          <option class="bg-slate-800" value="tuik">TÜİK</option>
+          <option class="bg-slate-800" value="cbdd">CBDDO — Koordinatör</option>
+        </select>
       </div>
-    </div>
-  </main>
-</div>
 
-<div class="toast" id="toast"></div>
+      <div class="relative" id="yukle-dropdown">
+        <button type="button" onclick="toggleDropdown('yukle-dropdown')" class="px-3 py-2 text-xs font-bold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          <span class="hidden sm:inline">Yükle</span>
+        </button>
+        <div class="dropdown-menu hidden absolute top-full right-0 mt-2 bg-slate-900 border border-slate-700 rounded-xl min-w-[220px] p-1.5 z-50 shadow-2xl">
+          <button onclick="yukleTekKayit()" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-200 hover:bg-brand-500/10 hover:text-brand-300 rounded-lg transition flex items-center gap-2">📄 Tek Kayıt Yükle</button>
+          <button onclick="yukleTopluDosya()" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-200 hover:bg-brand-500/10 hover:text-brand-300 rounded-lg transition flex items-center gap-2">📦 Toplu Dosya Yükle</button>
+          <div class="h-px bg-slate-800 my-1"></div>
+          <button onclick="yereldenYukle()" class="w-full text-left px-3 py-2 text-xs font-semibold text-slate-200 hover:bg-brand-500/10 hover:text-brand-300 rounded-lg transition flex items-center gap-2">💾 Yerelden Yükle</button>
+        </div>
+      </div>
+
+      <button onclick="kaydetJson()" class="px-3.5 py-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl shadow-lg shadow-emerald-500/25 transition flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        <span class="hidden sm:inline">Kaydet</span>
+      </button>
+
+      <input type="file" id="file-input" accept=".json" class="hidden">
+    </div>
+  </header>
+
+  <!-- ══════════════ VARLIK SEÇİCİ ══════════════ -->
+  <div class="border-b border-slate-800 bg-slate-950/50 px-4 lg:px-6 py-3 flex items-center gap-4 flex-wrap flex-none">
+    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Varlık Türü</span>
+    <div class="flex gap-1.5 flex-wrap" id="entity-tabs">
+      <button class="entity-tab active" data-e="gtip" onclick="varlikSec('gtip')">GTİP · Ürün</button>
+      <button class="entity-tab" data-e="cpc"  onclick="varlikSec('cpc')">CPC · Hizmet</button>
+      <button class="entity-tab" data-e="isco" onclick="varlikSec('isco')">ISCO · Meslek</button>
+      <button class="entity-tab" data-e="nace" onclick="varlikSec('nace')">NACE · Faaliyet</button>
+    </div>
+    <span class="ml-auto text-[11px] text-slate-500">
+      Kaynak: <b id="aktif-kaynak" class="text-slate-300 font-mono">—</b>
+    </span>
+  </div>
+
+  <!-- ══════════════ ROL BİLGİ ══════════════ -->
+  <div class="border-b border-slate-800 bg-brand-500/5 px-4 lg:px-6 py-2 text-[11px] text-slate-400 flex items-center gap-3 flex-wrap flex-none">
+    <span class="font-bold uppercase tracking-wider text-slate-500">Yazma Yetkisi:</span>
+    <span id="yetki-rozetleri" class="flex flex-wrap gap-1.5"></span>
+    <span class="text-amber-400 font-semibold" id="yetki-uyari"></span>
+  </div>
+
+  <!-- ══════════════ ANA LAYOUT ══════════════ -->
+  <div class="flex-1 grid grid-cols-1 lg:grid-cols-[340px_1fr] overflow-hidden">
+
+    <!-- SOL: AĞAÇ -->
+    <aside class="bg-slate-900 border-r border-slate-800 flex flex-col overflow-hidden">
+      <div class="p-3 border-b border-slate-800 space-y-2 flex-none">
+        <div class="flex items-center justify-between">
+          <h3 id="liste-baslik" class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Kodlar</h3>
+          <span id="liste-sayac" class="px-2 py-0.5 text-[10px] font-bold bg-slate-800 text-slate-400 rounded-md border border-slate-700">0</span>
+        </div>
+        <div class="relative">
+          <svg class="w-3.5 h-3.5 text-slate-500 absolute left-2.5 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input type="text" id="ara" placeholder="Kod veya açıklama ara…" oninput="filtrele()"
+            class="w-full h-8 pl-8 pr-2 text-xs bg-slate-800/70 text-white rounded-lg border border-slate-700/60 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 placeholder-slate-500 transition">
+        </div>
+      </div>
+      <div class="flex-1 overflow-y-auto p-2 space-y-1.5" id="kod-listesi">
+        <div class="p-6 text-center text-slate-500 text-xs">
+          <div class="inline-block w-5 h-5 border-2 border-brand-500 border-t-transparent rounded-full animate-spin mb-2"></div>
+          <p>Katalog yükleniyor…</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- SAĞ: DETAY -->
+    <main class="flex flex-col overflow-hidden bg-slate-950/50">
+      <!-- Detay başlığı -->
+      <div id="detail-header" class="p-5 border-b border-slate-800 bg-slate-900/60 flex-none">
+        <div class="text-center text-slate-500 italic text-sm py-3">Soldaki listeden bir kod seçin</div>
+      </div>
+
+      <!-- Sekmeler -->
+      <div id="tabs" class="flex items-center gap-1 px-2 border-b border-slate-800 bg-slate-900/40 overflow-x-auto flex-none"></div>
+
+      <!-- Panel içeriği -->
+      <div id="panels" class="flex-1 overflow-y-auto p-5"></div>
+
+      <!-- JSON ön izleme -->
+      <div class="border-t border-slate-800 bg-slate-900/60 flex-none grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 p-4">
+        <pre id="json-preview" class="bg-slate-950 border border-slate-800 rounded-xl p-3 overflow-auto max-h-44 text-[11px] font-mono text-slate-300 leading-relaxed">// Bir kod seçin…</pre>
+        <div class="flex flex-col gap-2 min-w-[160px]">
+          <button onclick="kopyalaJson()" class="px-3 py-2 text-xs font-bold bg-brand-600 hover:bg-brand-500 text-white rounded-xl transition shadow-lg shadow-brand-500/25">📋 Panoya Kopyala</button>
+          <button onclick="indirJson()" class="px-3 py-2 text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-xl transition">⬇ JSON İndir</button>
+          <button onclick="temizle()" class="px-3 py-2 text-xs font-bold bg-rose-600/90 hover:bg-rose-500 text-white rounded-xl transition">🗑 Temizle</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ══════════════ TOAST ══════════════ -->
+  <div id="toast" class="fixed bottom-6 right-6 bg-emerald-500 text-slate-900 px-5 py-3 rounded-2xl shadow-2xl shadow-emerald-500/40 font-bold text-sm opacity-0 translate-y-3 transition-all duration-300 pointer-events-none z-50 max-w-xs"></div>
 
 <script>
 /* ═══════════════ AYAR ═══════════════ */
-const API_BASE = '';   // aynı sunucu → boş. Farklı sunucuda ise tam URL yaz.
+const API_BASE = '';
 
-/* ═══════════════ ROL TANIMLARI ═══════════════ */
 const ROLLER = {
-  ticaret: { ad:"T.C. Ticaret Bakanlığı", kisa:"Ticaret Bak.", renk:"var(--gtip)",
+  ticaret: { ad:"T.C. Ticaret Bakanlığı", kisa:"Ticaret Bak.", renk:"#0ea5e9",
              yazabilir:["cpc","isco","nace","randiman","tehlike","etiket"],
              goruntuler:["vergi","prim","adamsaat"], dosya_hedefi:"iliski/ticaret" },
-  hazine:  { ad:"T.C. Hazine ve Maliye Bakanlığı", kisa:"Hazine", renk:"var(--warn)",
+  hazine:  { ad:"T.C. Hazine ve Maliye Bakanlığı", kisa:"Hazine", renk:"#fbbf24",
              yazabilir:["vergi","etiket"], goruntuler:["randiman","tehlike","prim"],
              dosya_hedefi:"iliski/hazine" },
-  sgk:     { ad:"T.C. Sosyal Güvenlik Kurumu", kisa:"SGK", renk:"var(--isco)",
+  sgk:     { ad:"T.C. Sosyal Güvenlik Kurumu", kisa:"SGK", renk:"#34d399",
              yazabilir:["prim","etiket"], goruntuler:["randiman","vergi"],
              dosya_hedefi:"iliski/sgk" },
-  tuik:    { ad:"Türkiye İstatistik Kurumu", kisa:"TÜİK", renk:"var(--cpc)",
+  tuik:    { ad:"Türkiye İstatistik Kurumu", kisa:"TÜİK", renk:"#a78bfa",
              yazabilir:["nace","etiket"], goruntuler:["randiman","vergi","prim"],
              dosya_hedefi:"iliski/tuik" },
-  cbdd:    { ad:"CBDDO — Koordinatör", kisa:"CBDDO", renk:"var(--accent)",
+  cbdd:    { ad:"CBDDO — Koordinatör", kisa:"CBDDO", renk:"#6366f1",
              yazabilir:["gtip","cpc","isco","nace","randiman","tehlike","vergi","prim","adamsaat","etiket"],
              goruntuler:[], dosya_hedefi:"iliski/cbdd" },
 };
@@ -291,12 +237,18 @@ const ALAN_SAHIBI = {
   adamsaat:"cbdd", prim:"sgk", vergi:"hazine", etiket:"*",
 };
 
+const VARLIK_RENK = {
+  gtip: { text:'text-sky-400',     bg:'bg-sky-500/15',     border:'border-sky-500/40' },
+  cpc:  { text:'text-violet-400',  bg:'bg-violet-500/15',  border:'border-violet-500/40' },
+  isco: { text:'text-emerald-400', bg:'bg-emerald-500/15', border:'border-emerald-500/40' },
+  nace: { text:'text-amber-400',   bg:'bg-amber-500/15',   border:'border-amber-500/40' },
+};
+
 /* ═══════════════ DURUM ═══════════════ */
 let AKTIF_VARLIK = "gtip";
 let SECILI_KOD   = null;
-const KAYITLAR   = {};   // "gtip:2702.10.00.00.00" → { ... }
+const KAYITLAR   = {};
 
-/* KATALOG: { gtip: { dallar:[], kayitlar:{dal:[...]}, acik:Set } } */
 const KATALOG = {
   gtip: { dallar:[], kayitlar:{}, acik:new Set(), yuklendi:false },
   cpc:  { dallar:[], kayitlar:{}, acik:new Set(), yuklendi:false },
@@ -317,9 +269,9 @@ function yazabilir(alan){
 function gorunur(alan){
   const rol = aktifRol();
   if (rol === 'cbdd') return true;
-  return ROLLER[rol]?.yazabilir?.includes(alan) ||
-         ROLLER[rol]?.goruntuler?.includes(alan);
+  return ROLLER[rol]?.yazabilir?.includes(alan) || ROLLER[rol]?.goruntuler?.includes(alan);
 }
+const kacis = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 async function api(path, opsiyonlar = {}){
   const r = await fetch(API_BASE + path, {
@@ -349,31 +301,24 @@ function rolBilgiGuncelle(){
   const r = ROLLER[aktifRol()];
   document.getElementById('yetki-rozetleri').innerHTML = r.yazabilir
     .filter(x => x !== 'etiket')
-    .map(x => `<span class="rozet" style="color:${r.renk}">${SEKME_META[x]?.ad || x}</span>`)
-    .join(' ');
+    .map(x => `<span class="rozet" style="color:${r.renk};border-color:${r.renk}55">${SEKME_META[x]?.ad || x}</span>`)
+    .join('');
   const uy = document.getElementById('yetki-uyari');
   if (r.goruntuler.length){
-    uy.style.display = 'inline';
-    uy.textContent = `+ sadece görüntüleme: ${r.goruntuler.map(x=>SEKME_META[x]?.ad||x).join(', ')}`;
-  } else { uy.style.display = 'none'; }
+    uy.textContent = `+ görüntüleme: ${r.goruntuler.map(x=>SEKME_META[x]?.ad||x).join(', ')}`;
+  } else { uy.textContent = ''; }
 }
 
-/* ═══════════════ KATALOG YÜKLE (API) ═══════════════ */
+/* ═══════════════ KATALOG YÜKLE ═══════════════ */
 async function katalogYukle(v){
   if (KATALOG[v].yuklendi) return true;
   try{
     const {status, body} = await api(`/api/v1/${v}/agac`);
-    if (status !== 200){
-      KATALOG[v].dallar = [];
-      return false;
-    }
+    if (status !== 200){ KATALOG[v].dallar = []; return false; }
     KATALOG[v].dallar = body.dallar || [];
     KATALOG[v].yuklendi = true;
     return true;
-  }catch(e){
-    KATALOG[v].dallar = [];
-    return false;
-  }
+  }catch(e){ KATALOG[v].dallar = []; return false; }
 }
 
 async function dalYukle(v, dalKodu){
@@ -381,79 +326,70 @@ async function dalYukle(v, dalKodu){
   if (KATALOG[v].kayitlar[k]) return KATALOG[v].kayitlar[k];
   try{
     const {status, body} = await api(`/api/v1/${v}/dal/${k}`);
-    if (status !== 200){
-      KATALOG[v].kayitlar[k] = [];
-      return [];
-    }
+    if (status !== 200){ KATALOG[v].kayitlar[k] = []; return []; }
     KATALOG[v].kayitlar[k] = body.kayitlar || [];
     return KATALOG[v].kayitlar[k];
-  }catch(e){
-    KATALOG[v].kayitlar[k] = [];
-    return [];
-  }
+  }catch(e){ KATALOG[v].kayitlar[k] = []; return []; }
 }
 
 /* ═══════════════ AĞAÇ RENDER ═══════════════ */
 async function renderAgac(filtre=""){
   const v = AKTIF_VARLIK;
   const el = document.getElementById('kod-listesi');
-  el.innerHTML = `<div class="durum-yukleniyor">Katalog yükleniyor…</div>`;
+  el.innerHTML = `<div class="p-6 text-center text-slate-500 text-xs">
+    <div class="inline-block w-5 h-5 border-2 border-brand-500 border-t-transparent rounded-full animate-spin mb-2"></div>
+    <p>Katalog yükleniyor…</p></div>`;
 
   const ok = await katalogYukle(v);
   if (!ok || KATALOG[v].dallar.length === 0){
-    el.innerHTML = `<div class="durum-hata">Ağaç boş veya API erişilemiyor.<br><small>Endpoint: /api/v1/${v}/agac</small></div>`;
+    el.innerHTML = `<div class="p-6 text-center text-rose-400 text-xs">
+      <p class="font-bold mb-1">Ağaç boş veya API erişilemiyor.</p>
+      <code class="text-slate-500 text-[10px]">/api/v1/${v}/agac</code></div>`;
+    document.getElementById('liste-sayac').textContent = '0';
     return;
   }
 
   const f = filtre.toLowerCase().trim();
   const dallar = KATALOG[v].dallar;
-
-  // Filtre varsa dalları filtrele
   let filtreli = dallar;
+
   if (f){
     filtreli = [];
     for (const d of dallar){
       const dalKod = String(d.dal).toLowerCase();
       const dalAd  = (d.ad||'').toLowerCase();
-      // Dal başlığı eşleşiyorsa ekle
-      if (dalKod.includes(f) || dalAd.includes(f)){
-        filtreli.push(d);
-        continue;
-      }
-      // Dal içeriği yüklü değilse yükle
-      if (!KATALOG[v].kayitlar[String(d.dal)]){
-        await dalYukle(v, d.dal);
-      }
+      if (dalKod.includes(f) || dalAd.includes(f)){ filtreli.push(d); continue; }
+      if (!KATALOG[v].kayitlar[String(d.dal)]) await dalYukle(v, d.dal);
       const ky = KATALOG[v].kayitlar[String(d.dal)] || [];
-      if (ky.some(x => (x.kod||'').toLowerCase().includes(f) ||
-                       (x.aciklama||'').toLowerCase().includes(f))){
+      if (ky.some(x => (x.kod||'').toLowerCase().includes(f) || (x.aciklama||'').toLowerCase().includes(f))){
         filtreli.push(d);
       }
     }
   }
 
   if (filtreli.length === 0){
-    el.innerHTML = `<div class="durum-yukleniyor">Sonuç bulunamadı</div>`;
+    el.innerHTML = `<div class="p-6 text-center text-slate-500 text-xs">Sonuç bulunamadı</div>`;
+    document.getElementById('liste-sayac').textContent = '0';
     return;
   }
 
+  const renk = VARLIK_RENK[v];
   el.innerHTML = filtreli.map(d => {
     const dalKod = String(d.dal);
-    const acik   = KATALOG[v].acik.has(dalKod);
+    const acik = KATALOG[v].acik.has(dalKod);
     return `
-      <div class="agac-dal ${acik?'open':''}" data-v="${v}" data-dal="${dalKod}">
-        <div class="dal-head" onclick="toggleDal('${v}','${dalKod}',this)">
-          <svg class="dal-chevron" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
-          <span class="dal-kod">${d.dal}</span>
-          <span class="dal-ad" title="${d.ad}">${d.ad || '—'}</span>
-          <span class="dal-sayi">${d.kayit_sayisi}</span>
-        </div>
-        <div class="dal-body" id="dal-body-${dalKod}"></div>
+      <div class="agac-dal ${acik?'open':''} rounded-xl border border-slate-800 overflow-hidden bg-slate-900/60" data-v="${v}" data-dal="${dalKod}">
+        <button type="button" class="dal-head w-full px-3 py-2.5 flex items-center gap-2 hover:bg-slate-800/60 transition text-left" onclick="toggleDal('${v}','${dalKod}',this)">
+          <svg class="dal-chevron w-3 h-3 text-slate-500 flex-none" viewBox="0 0 12 12" fill="currentColor"><path d="M4 2l4 4-4 4z"/></svg>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold ${renk.text} ${renk.bg} ${renk.border} border">${kacis(d.dal)}</span>
+          <span class="flex-1 text-xs font-semibold text-slate-200 truncate" title="${kacis(d.ad||'')}">${kacis(d.ad || '—')}</span>
+          <span class="px-1.5 py-0.5 text-[10px] font-bold bg-slate-800 text-slate-400 rounded-full border border-slate-700">${d.kayit_sayisi}</span>
+        </button>
+        <div class="dal-body hidden border-t border-slate-800/60 p-1.5 space-y-0.5" id="dal-body-${dalKod}"></div>
       </div>
     `;
   }).join('');
 
-  // Açık dalların içeriğini doldur
   for (const dalKod of KATALOG[v].acik){
     const bodyEl = document.getElementById(`dal-body-${dalKod}`);
     if (bodyEl){
@@ -461,6 +397,8 @@ async function renderAgac(filtre=""){
       renderDalIcerik(bodyEl, v, dalKod);
     }
   }
+
+  document.getElementById('liste-sayac').textContent = filtreli.length;
 }
 
 async function toggleDal(v, dalKodu, headEl){
@@ -472,21 +410,25 @@ async function toggleDal(v, dalKodu, headEl){
   if (acik){
     KATALOG[v].acik.add(k);
     if (!KATALOG[v].kayitlar[k]){
-      bodyEl.innerHTML = `<div class="durum-yukleniyor">Yükleniyor…</div>`;
+      bodyEl.classList.remove('hidden');
+      bodyEl.innerHTML = `<div class="p-3 text-center text-slate-500 text-[11px]">Yükleniyor…</div>`;
       await dalYukle(v, dalKodu);
     }
+    bodyEl.classList.remove('hidden');
     renderDalIcerik(bodyEl, v, dalKodu);
   } else {
     KATALOG[v].acik.delete(k);
+    bodyEl.classList.add('hidden');
   }
 }
 
 function renderDalIcerik(bodyEl, v, dalKodu){
   const kayitlar = KATALOG[v].kayitlar[String(dalKodu)] || [];
   const rol = aktifRol();
+  const renk = VARLIK_RENK[v];
 
   if (kayitlar.length === 0){
-    bodyEl.innerHTML = `<div class="durum-yukleniyor" style="font-size:.72rem">Kayıt yok</div>`;
+    bodyEl.innerHTML = `<div class="p-3 text-center text-slate-500 text-[11px]">Kayıt yok</div>`;
     return;
   }
 
@@ -494,28 +436,29 @@ function renderDalIcerik(bodyEl, v, dalKodu){
     const kod = x.kod || '';
     const ad  = x.aciklama || x.ad || '';
     const k = KAYITLAR[kayitAnahtari(v, kod)];
+    const aktifMi = SECILI_KOD === kod;
 
-    let durumlar = '<span style="color:var(--muted);background:transparent">—</span>';
+    let durumlar = '';
     if (k){
       const d = [];
       ["gtip","cpc","isco","nace","randiman","tehlike","adamsaat","prim","vergi"].forEach(alan=>{
         if (alan === v) return;
         if (!gorunur(alan)) return;
         const e = k[alan];
-        let dolu = !!(e?.kodlar?.length || e?.islem || e?.kdv || e?.isci || e?.sinif || e?.sure_dk);
+        const dolu = !!(e?.kodlar?.length || e?.islem || e?.kdv || e?.isci || e?.sinif || e?.sure_dk);
         if (dolu){
           const benim = ALAN_SAHIBI[alan] === rol || rol === 'cbdd';
-          d.push(`<span class="${benim?'benim':'ok'}">${SEKME_META[alan]?.ad||alan}${benim?' ✎':''}</span>`);
+          d.push(`<span class="px-1.5 py-0.5 rounded text-[9px] font-bold ${benim ? 'bg-emerald-500/20 text-emerald-300' : 'bg-slate-800 text-slate-400'}">${SEKME_META[alan]?.ad||alan}${benim?' ✎':''}</span>`);
         }
       });
       if (d.length) durumlar = d.join('');
     }
 
     return `
-      <div class="code-item ${SECILI_KOD===kod?'active':''}" data-e="${v}" onclick="kodSec('${kod}')">
-        <span class="kod">${kod}</span>
-        <span class="ad">${ad}</span>
-        <div class="durum">${durumlar}</div>
+      <div class="p-2 rounded-lg cursor-pointer transition ${aktifMi ? 'bg-brand-500/15 ring-1 ring-brand-500/40' : 'hover:bg-slate-800/60'}" onclick="kodSec('${kod}')">
+        <div class="text-[11px] font-mono font-bold ${renk.text}">${kacis(kod)}</div>
+        <div class="text-[11px] text-slate-400 mt-0.5 truncate">${kacis(ad)}</div>
+        ${durumlar ? `<div class="mt-1.5 flex flex-wrap gap-1">${durumlar}</div>` : ''}
       </div>
     `;
   }).join('');
@@ -523,7 +466,7 @@ function renderDalIcerik(bodyEl, v, dalKodu){
 
 function filtrele(){ renderAgac(document.getElementById('ara').value); }
 
-/* ═══════════════ KOD BUL (katalogdan) ═══════════════ */
+/* ═══════════════ KOD BUL ═══════════════ */
 function bulHamKod(varlik, kod){
   const kayitlar = KATALOG[varlik].kayitlar;
   for (const dal in kayitlar){
@@ -546,10 +489,7 @@ async function varlikSec(v){
   document.getElementById('ara').value = "";
 
   const dh = document.getElementById('detail-header');
-  dh.classList.add('empty');
-  dh.innerHTML = 'Soldaki listeden bir kod seçin';
-  dh.removeAttribute('data-e');
-
+  dh.innerHTML = `<div class="text-center text-slate-500 italic text-sm py-3">Soldaki listeden bir kod seçin</div>`;
   document.getElementById('tabs').innerHTML = '';
   document.getElementById('panels').innerHTML = '';
   document.getElementById('json-preview').textContent = '// Bir kod seçin…';
@@ -565,16 +505,19 @@ function kodSec(kod){
   if (!ham) return;
 
   const rol = aktifRol();
+  const renk = VARLIK_RENK[v];
   const dh = document.getElementById('detail-header');
-  dh.classList.remove('empty');
-  dh.dataset.e = v;
   dh.innerHTML = `
-    <div class="kod-buyuk">${ham.kod}</div>
-    <div class="ad-buyuk">${ham.ad}</div>
-    <div class="meta-satir">
-      <span>Varlık: <b>${VARLIKLAR[v].ad} · ${VARLIKLAR[v].etiket}</b></span>
-      <span>Dal: <b>${ham.dal}</b></span>
-      <span>Rol: <b class="rol">${ROLLER[rol].kisa}</b></span>
+    <div class="flex items-start justify-between gap-4 flex-wrap">
+      <div class="min-w-0">
+        <div class="flex items-center gap-2 flex-wrap mb-1.5">
+          <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider ${renk.text} ${renk.bg} ${renk.border} border">${VARLIKLAR[v].ad} · ${VARLIKLAR[v].etiket}</span>
+          <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-800 text-slate-400 border border-slate-700">Rol: ${ROLLER[rol].kisa}</span>
+        </div>
+        <div class="font-mono font-extrabold text-xl ${renk.text}">${kacis(ham.kod)}</div>
+        <div class="text-sm text-slate-200 mt-1">${kacis(ham.ad)}</div>
+      </div>
+      <span class="text-[10px] text-slate-500 font-mono bg-slate-900 border border-slate-800 rounded-lg px-2 py-1">Dal: ${kacis(ham.dal)}</span>
     </div>
   `;
 
@@ -584,11 +527,7 @@ function kodSec(kod){
   renderSekmeler(v);
   ilkSekmeAc();
 
-  // Ağaçtaki aktif göstergeyi yenile
-  document.querySelectorAll('.code-item').forEach(el=>{
-    const kEl = el.querySelector('.kod');
-    el.classList.toggle('active', kEl && kEl.textContent === kod);
-  });
+  renderAgac(document.getElementById('ara').value);
 
   updateJson();
 }
@@ -606,24 +545,31 @@ function renderSekmeler(v){
 
   if (hedefler.length === 0){
     tabsEl.innerHTML = '';
-    panelsEl.innerHTML = `<div class="tabs-empty">Bu rolde <b>${VARLIKLAR[v].ad}</b> için yetkiniz bulunmuyor.</div>`;
+    panelsEl.innerHTML = `<div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold">Bu rolde <b>${VARLIKLAR[v].ad}</b> için yetkiniz bulunmuyor.</div>`;
     return;
   }
 
   tabsEl.innerHTML = hedefler.map(h=>{
     const benim = ALAN_SAHIBI[h] === aktifRol() || aktifRol() === 'cbdd';
     const yildiz = benim ? ' ✎' : '';
-    return `<button class="tab" data-tab="${h}">${SEKME_META[h].ad}${yildiz} <span class="badge bos" id="b-${h}">—</span></button>`;
+    return `<button class="tab-btn px-4 py-2.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 transition whitespace-nowrap flex items-center gap-2" data-tab="${h}">
+      <span>${SEKME_META[h].ad}${yildiz}</span>
+      <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] text-slate-500 font-bold" id="b-${h}">—</span>
+    </button>`;
   }).join('');
 
   panelsEl.innerHTML = hedefler.map(h => renderPanel(h, v)).join('');
 
-  tabsEl.querySelectorAll('.tab').forEach(t=>{
+  tabsEl.querySelectorAll('.tab-btn').forEach(t=>{
     t.addEventListener('click', ()=>{
-      tabsEl.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
-      panelsEl.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
-      t.classList.add('active');
-      panelsEl.querySelector(`.panel[data-panel="${t.dataset.tab}"]`).classList.add('active');
+      tabsEl.querySelectorAll('.tab-btn').forEach(x=>{
+        x.classList.remove('border-brand-500','text-brand-400','active');
+        x.classList.add('border-transparent','text-slate-400');
+      });
+      panelsEl.querySelectorAll('.panel').forEach(x=>x.classList.add('hidden'));
+      t.classList.add('border-brand-500','text-brand-400','active');
+      t.classList.remove('border-transparent','text-slate-400');
+      panelsEl.querySelector(`.panel[data-panel="${t.dataset.tab}"]`).classList.remove('hidden');
     });
   });
 
@@ -635,7 +581,7 @@ function renderSekmeler(v){
 }
 
 function ilkSekmeAc(){
-  const first = document.querySelector('.tab');
+  const first = document.querySelector('.tab-btn');
   if (first) first.click();
 }
 
@@ -643,57 +589,58 @@ function ilkSekmeAc(){
 function renderPanel(h, v){
   const k = KAYITLAR[kayitAnahtari(v, SECILI_KOD)];
   const rolum = ALAN_SAHIBI[h] === aktifRol() || aktifRol() === 'cbdd';
-  const disabled = rolum ? '' : 'disabled style="opacity:.55;cursor:not-allowed"';
+  const disabled = rolum ? '' : 'disabled';
   const saltOkunur = rolum ? '' :
-    `<div class="help" style="color:var(--warn)">ⓘ Bu alan <b>${ROLLER[ALAN_SAHIBI[h]]?.kisa||'başka kurum'}</b> tarafından yönetilir.</div>`;
+    `<div class="mb-3 px-3 py-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 text-[11px] font-semibold">ⓘ Bu alan <b>${ROLLER[ALAN_SAHIBI[h]]?.kisa||'başka kurum'}</b> tarafından yönetilir.</div>`;
+
+  const inputCls = "w-full h-9 px-3 text-xs bg-slate-950 text-white rounded-lg border border-slate-800 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition disabled:opacity-60";
+  const selectCls = inputCls + " pr-8";
+  const textareaCls = "w-full px-3 py-2 text-xs bg-slate-950 text-white rounded-lg border border-slate-800 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition resize-none";
+  const labelCls = "block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1.5";
 
   // Varlık sekmeleri
   if (["gtip","cpc","isco","nace"].includes(h) && h !== v){
-    const hedefListe = KATALOG[h].kayitlar[Object.keys(KATALOG[h].kayitlar)[0]] || [];
-    // Hedef varlık yüklenmemişse, kendi dallarından düz liste yap
     const tumKayitlar = [];
     Object.keys(KATALOG[h].kayitlar).forEach(d=>{
       KATALOG[h].kayitlar[d].forEach(x=> tumKayitlar.push(x));
     });
-    const hedefKaynak = tumKayitlar.length ? tumKayitlar : [];
-
     const secili = k[h]?.kodlar || [];
     const guven  = k[h]?.guven || "yuksek";
     const not    = k[h]?.not || "";
+    const renk   = VARLIK_RENK[h];
 
     return `
-      <div class="panel" data-panel="${h}">
+      <div class="panel hidden space-y-4" data-panel="${h}">
         ${saltOkunur}
-        <div class="field">
-          <label>Eşleşen ${SEKME_META[h].ad} Kodları</label>
-          <div class="multi-list" id="ml-${h}">
-            ${hedefKaynak.length === 0
-              ? `<div style="padding:14px;text-align:center;color:var(--muted);font-size:.75rem">
+        <div>
+          <label class="${labelCls}">Eşleşen ${SEKME_META[h].ad} Kodları</label>
+          <div class="bg-slate-900 border border-slate-800 rounded-xl max-h-72 overflow-y-auto p-1.5 space-y-0.5" id="ml-${h}">
+            ${tumKayitlar.length === 0
+              ? `<div class="p-4 text-center text-slate-500 text-[11px]">
                    ${SEKME_META[h].ad} kataloğu henüz yüklenmedi.<br>
-                   <small>Bu varlık için hiçbir dal açılmadıysa boş görünebilir.</small>
+                   <span class="text-slate-600">Önce bu varlık sekmesini açıp dalları genişletin.</span>
                  </div>`
-              : hedefKaynak.map(r=>`
-                  <label class="multi-item ${secili.includes(r.kod)?'checked':''}">
-                    <input type="checkbox" value="${r.kod}" ${secili.includes(r.kod)?'checked':''}
-                           ${disabled} onchange="toggleMulti(this, '${h}')">
-                    <span class="kod">${r.kod}</span>
-                    <span class="ad">${r.aciklama || r.ad || ''}</span>
+              : tumKayitlar.map(r=>`
+                  <label class="multi-item flex items-center gap-3 px-2.5 py-2 rounded-lg cursor-pointer transition ${secili.includes(r.kod)?'bg-brand-500/10':''} hover:bg-slate-800/60">
+                    <input type="checkbox" value="${kacis(r.kod)}" ${secili.includes(r.kod)?'checked':''} ${disabled} onchange="toggleMulti(this, '${h}')" class="w-4 h-4 flex-none">
+                    <span class="font-mono text-[11px] font-bold ${renk.text} flex-none min-w-[76px]">${kacis(r.kod)}</span>
+                    <span class="text-[11px] text-slate-400 truncate">${kacis(r.aciklama || r.ad || '')}</span>
                   </label>
                 `).join('')}
           </div>
-          <div class="help">Birden fazla ${SEKME_META[h].ad} kodu seçilebilir.</div>
+          <div class="mt-1.5 text-[10px] text-slate-500 italic">Birden fazla ${SEKME_META[h].ad} kodu seçilebilir.</div>
         </div>
-        <div class="field">
-          <label>Güven Seviyesi</label>
-          <select data-alan="${h}.guven" ${disabled}>
+        <div>
+          <label class="${labelCls}">Güven Seviyesi</label>
+          <select data-alan="${h}.guven" ${disabled} class="${selectCls}">
             <option value="yuksek" ${guven==='yuksek'?'selected':''}>Yüksek — doğrudan eşleşme</option>
             <option value="orta"   ${guven==='orta'?'selected':''}>Orta — kısmi eşleşme</option>
             <option value="dusuk"  ${guven==='dusuk'?'selected':''}>Düşük — varsayımsal</option>
           </select>
         </div>
-        <div class="field">
-          <label>Not</label>
-          <textarea data-alan="${h}.not" rows="2" ${disabled} placeholder="Gerekçe, kaynak…">${not}</textarea>
+        <div>
+          <label class="${labelCls}">Not</label>
+          <textarea data-alan="${h}.not" rows="2" ${disabled} class="${textareaCls}" placeholder="Gerekçe, kaynak…">${kacis(not)}</textarea>
         </div>
       </div>
     `;
@@ -703,39 +650,39 @@ function renderPanel(h, v){
   if (h === "randiman"){
     const r = k.randiman || {};
     return `
-      <div class="panel" data-panel="randiman">
+      <div class="panel hidden space-y-4" data-panel="randiman">
         ${saltOkunur}
-        <div class="field">
-          <label>İşlem Adı</label>
-          <input type="text" data-alan="randiman.islem" value="${r.islem||''}" ${disabled} placeholder="örn. Koklaştırma">
+        <div>
+          <label class="${labelCls}">İşlem Adı</label>
+          <input type="text" data-alan="randiman.islem" value="${kacis(r.islem||'')}" ${disabled} class="${inputCls}" placeholder="örn. Koklaştırma">
         </div>
-        <div class="field">
-          <label>Çıktı GTİP Kodu</label>
-          <input type="text" data-alan="randiman.cikti" value="${r.cikti||''}" ${disabled} placeholder="2704.00.10.00.00">
+        <div>
+          <label class="${labelCls}">Çıktı GTİP Kodu</label>
+          <input type="text" data-alan="randiman.cikti" value="${kacis(r.cikti||'')}" ${disabled} class="${inputCls} font-mono" placeholder="2704.00.10.00.00">
         </div>
-        <div class="field-row">
-          <div class="field">
-            <label>Asgari Randıman (%)</label>
-            <input type="number" step="0.1" data-alan="randiman.asgari" value="${r.asgari||''}" ${disabled} placeholder="70.0">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="${labelCls}">Asgari Randıman (%)</label>
+            <input type="number" step="0.1" data-alan="randiman.asgari" value="${kacis(r.asgari||'')}" ${disabled} class="${inputCls}" placeholder="70.0">
           </div>
-          <div class="field">
-            <label>Azami Fire (%)</label>
-            <input type="number" step="0.1" data-alan="randiman.fire" value="${r.fire||''}" ${disabled} placeholder="12.0">
+          <div>
+            <label class="${labelCls}">Azami Fire (%)</label>
+            <input type="number" step="0.1" data-alan="randiman.fire" value="${kacis(r.fire||'')}" ${disabled} class="${inputCls}" placeholder="12.0">
           </div>
         </div>
-        <div class="field">
-          <label>İkincil Ürünler</label>
-          <div class="urun-listesi" id="ikincil-urunler">
+        <div>
+          <label class="${labelCls}">İkincil Ürünler</label>
+          <div class="space-y-2" id="ikincil-urunler">
             ${(r.ikincil||[]).map((u,i)=>`
-              <div class="urun-satir">
-                <input type="text" value="${u.ad||''}" placeholder="Ürün adı" ${disabled} oninput="ikincilGuncelle(${i},'ad',this.value)">
-                <input type="text" value="${u.gtip||''}" placeholder="GTİP" ${disabled} oninput="ikincilGuncelle(${i},'gtip',this.value)">
-                <input type="number" value="${u.oran||''}" placeholder="%" step="0.1" ${disabled} oninput="ikincilGuncelle(${i},'oran',this.value)">
-                <button class="sil" onclick="ikincilSil(${i})" ${rolum?'':'disabled'}>×</button>
+              <div class="grid grid-cols-[1fr_1fr_70px_30px] gap-2 items-center">
+                <input type="text" value="${kacis(u.ad||'')}" placeholder="Ürün adı" ${disabled} oninput="ikincilGuncelle(${i},'ad',this.value)" class="${inputCls} !h-8">
+                <input type="text" value="${kacis(u.gtip||'')}" placeholder="GTİP" ${disabled} oninput="ikincilGuncelle(${i},'gtip',this.value)" class="${inputCls} !h-8 font-mono">
+                <input type="number" value="${kacis(u.oran||'')}" placeholder="%" step="0.1" ${disabled} oninput="ikincilGuncelle(${i},'oran',this.value)" class="${inputCls} !h-8">
+                <button onclick="ikincilSil(${i})" ${rolum?'':'disabled'} class="w-7 h-7 rounded-lg bg-rose-600/90 hover:bg-rose-500 text-white text-sm font-bold flex items-center justify-center disabled:opacity-40">×</button>
               </div>
             `).join('')}
           </div>
-          <button class="ekle-btn" onclick="ikincilEkle()" ${rolum?'':'disabled'}>+ İkincil ürün ekle</button>
+          <button onclick="ikincilEkle()" ${rolum?'':'disabled'} class="w-full mt-2 py-2 text-[11px] font-bold text-slate-400 hover:text-brand-400 border border-dashed border-slate-700 hover:border-brand-500 rounded-lg transition disabled:opacity-40">+ İkincil ürün ekle</button>
         </div>
       </div>
     `;
@@ -745,23 +692,23 @@ function renderPanel(h, v){
   if (h === "adamsaat"){
     const a = k.adamsaat || {};
     return `
-      <div class="panel" data-panel="adamsaat">
+      <div class="panel hidden space-y-4" data-panel="adamsaat">
         ${saltOkunur}
-        <div class="field">
-          <label>Norm Süre (dakika/adam)</label>
-          <input type="number" step="0.1" data-alan="adamsaat.sure_dk" value="${a.sure_dk||''}" ${disabled} placeholder="45">
+        <div>
+          <label class="${labelCls}">Norm Süre (dakika/adam)</label>
+          <input type="number" step="0.1" data-alan="adamsaat.sure_dk" value="${kacis(a.sure_dk||'')}" ${disabled} class="${inputCls}" placeholder="45">
         </div>
-        <div class="field">
-          <label>Birim</label>
-          <select data-alan="adamsaat.birim" ${disabled}>
+        <div>
+          <label class="${labelCls}">Birim</label>
+          <select data-alan="adamsaat.birim" ${disabled} class="${selectCls}">
             <option value="saat" ${a.birim==='saat'?'selected':''}>Saat</option>
             <option value="gun"  ${a.birim==='gun'?'selected':''}>Gün</option>
             <option value="adam-gun" ${a.birim==='adam-gun'?'selected':''}>Adam-gün</option>
           </select>
         </div>
-        <div class="field">
-          <label>Not</label>
-          <textarea data-alan="adamsaat.not" rows="2" ${disabled}>${a.not||''}</textarea>
+        <div>
+          <label class="${labelCls}">Not</label>
+          <textarea data-alan="adamsaat.not" rows="2" ${disabled} class="${textareaCls}">${kacis(a.not||'')}</textarea>
         </div>
       </div>
     `;
@@ -771,26 +718,26 @@ function renderPanel(h, v){
   if (h === "prim"){
     const p = k.prim || {};
     return `
-      <div class="panel" data-panel="prim">
+      <div class="panel hidden space-y-4" data-panel="prim">
         ${saltOkunur}
-        <div class="field-row">
-          <div class="field">
-            <label>İşçi Prim (%)</label>
-            <input type="number" step="0.01" data-alan="prim.isci" value="${p.isci||''}" ${disabled} placeholder="14.00">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="${labelCls}">İşçi Prim (%)</label>
+            <input type="number" step="0.01" data-alan="prim.isci" value="${kacis(p.isci||'')}" ${disabled} class="${inputCls}" placeholder="14.00">
           </div>
-          <div class="field">
-            <label>İşveren Prim (%)</label>
-            <input type="number" step="0.01" data-alan="prim.isveren" value="${p.isveren||''}" ${disabled} placeholder="20.50">
+          <div>
+            <label class="${labelCls}">İşveren Prim (%)</label>
+            <input type="number" step="0.01" data-alan="prim.isveren" value="${kacis(p.isveren||'')}" ${disabled} class="${inputCls}" placeholder="20.50">
           </div>
         </div>
-        <div class="field-row">
-          <div class="field">
-            <label>İşsizlik İşçi (%)</label>
-            <input type="number" step="0.01" data-alan="prim.issizlik_isci" value="${p.issizlik_isci||''}" ${disabled} placeholder="1.00">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="${labelCls}">İşsizlik İşçi (%)</label>
+            <input type="number" step="0.01" data-alan="prim.issizlik_isci" value="${kacis(p.issizlik_isci||'')}" ${disabled} class="${inputCls}" placeholder="1.00">
           </div>
-          <div class="field">
-            <label>İşsizlik İşveren (%)</label>
-            <input type="number" step="0.01" data-alan="prim.issizlik_isveren" value="${p.issizlik_isveren||''}" ${disabled} placeholder="2.00">
+          <div>
+            <label class="${labelCls}">İşsizlik İşveren (%)</label>
+            <input type="number" step="0.01" data-alan="prim.issizlik_isveren" value="${kacis(p.issizlik_isveren||'')}" ${disabled} class="${inputCls}" placeholder="2.00">
           </div>
         </div>
       </div>
@@ -801,28 +748,29 @@ function renderPanel(h, v){
   if (h === "tehlike"){
     const t = k.tehlike || {};
     return `
-      <div class="panel" data-panel="tehlike">
+      <div class="panel hidden space-y-4" data-panel="tehlike">
         ${saltOkunur}
-        <div class="field">
-          <label>Tehlike Sınıfı</label>
-          <select data-alan="tehlike.sinif" ${disabled}>
+        <div>
+          <label class="${labelCls}">Tehlike Sınıfı</label>
+          <select data-alan="tehlike.sinif" ${disabled} class="${selectCls}">
             <option value="">— Seçin —</option>
             <option value="Az Tehlikeli" ${t.sinif==='Az Tehlikeli'?'selected':''}>Az Tehlikeli</option>
             <option value="Tehlikeli"     ${t.sinif==='Tehlikeli'?'selected':''}>Tehlikeli</option>
             <option value="Çok Tehlikeli" ${t.sinif==='Çok Tehlikeli'?'selected':''}>Çok Tehlikeli</option>
           </select>
         </div>
-        <div class="field">
-          <label><input type="checkbox" data-alan="tehlike.ced_gerekli" ${t.ced_gerekli?'checked':''} ${disabled} style="width:auto;margin-right:8px">ÇED Raporu Gerekli</label>
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label>Kükürt Maks. (%)</label>
-            <input type="number" step="0.1" data-alan="tehlike.kukurt_max" value="${t.kukurt_max||''}" ${disabled} placeholder="0.8">
+        <label class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 border border-slate-800 cursor-pointer hover:border-slate-700 transition">
+          <input type="checkbox" data-alan="tehlike.ced_gerekli" ${t.ced_gerekli?'checked':''} ${disabled} class="w-4 h-4">
+          <span class="text-xs font-semibold text-slate-300">ÇED Raporu Gerekli</span>
+        </label>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="${labelCls}">Kükürt Maks. (%)</label>
+            <input type="number" step="0.1" data-alan="tehlike.kukurt_max" value="${kacis(t.kukurt_max||'')}" ${disabled} class="${inputCls}" placeholder="0.8">
           </div>
-          <div class="field">
-            <label>Nem Maks. (%)</label>
-            <input type="number" step="0.1" data-alan="tehlike.nem_max" value="${t.nem_max||''}" ${disabled} placeholder="5.0">
+          <div>
+            <label class="${labelCls}">Nem Maks. (%)</label>
+            <input type="number" step="0.1" data-alan="tehlike.nem_max" value="${kacis(t.nem_max||'')}" ${disabled} class="${inputCls}" placeholder="5.0">
           </div>
         </div>
       </div>
@@ -833,35 +781,35 @@ function renderPanel(h, v){
   if (h === "vergi"){
     const vg = k.vergi || {};
     return `
-      <div class="panel" data-panel="vergi">
+      <div class="panel hidden space-y-4" data-panel="vergi">
         ${saltOkunur}
-        <div class="field-row">
-          <div class="field">
-            <label>KDV Oranı (%)</label>
-            <input type="number" step="0.1" data-alan="vergi.kdv" value="${vg.kdv||''}" ${disabled} placeholder="20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="${labelCls}">KDV Oranı (%)</label>
+            <input type="number" step="0.1" data-alan="vergi.kdv" value="${kacis(vg.kdv||'')}" ${disabled} class="${inputCls}" placeholder="20">
           </div>
-          <div class="field">
-            <label>ÖTV Durumu</label>
-            <select data-alan="vergi.otv_durum" ${disabled}>
+          <div>
+            <label class="${labelCls}">ÖTV Durumu</label>
+            <select data-alan="vergi.otv_durum" ${disabled} class="${selectCls}">
               <option value="muaf" ${vg.otv_durum==='muaf'?'selected':''}>Muaf</option>
               <option value="tabi" ${vg.otv_durum==='tabi'?'selected':''}>Tabi</option>
               <option value="kismi" ${vg.otv_durum==='kismi'?'selected':''}>Kısmi</option>
             </select>
           </div>
         </div>
-        <div class="field-row">
-          <div class="field">
-            <label>ÖTV Oranı (%)</label>
-            <input type="number" step="0.1" data-alan="vergi.otv_oran" value="${vg.otv_oran||''}" ${disabled} placeholder="0">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="${labelCls}">ÖTV Oranı (%)</label>
+            <input type="number" step="0.1" data-alan="vergi.otv_oran" value="${kacis(vg.otv_oran||'')}" ${disabled} class="${inputCls}" placeholder="0">
           </div>
-          <div class="field">
-            <label>Tevkifat Kodu</label>
-            <input type="text" data-alan="vergi.tevkifat_kod" value="${vg.tevkifat_kod||''}" ${disabled} placeholder="608">
+          <div>
+            <label class="${labelCls}">Tevkifat Kodu</label>
+            <input type="text" data-alan="vergi.tevkifat_kod" value="${kacis(vg.tevkifat_kod||'')}" ${disabled} class="${inputCls}" placeholder="608">
           </div>
         </div>
-        <div class="field">
-          <label>Tevkifat Oranı</label>
-          <input type="text" data-alan="vergi.tevkifat_oran" value="${vg.tevkifat_oran||''}" ${disabled} placeholder="5/10">
+        <div>
+          <label class="${labelCls}">Tevkifat Oranı</label>
+          <input type="text" data-alan="vergi.tevkifat_oran" value="${kacis(vg.tevkifat_oran||'')}" ${disabled} class="${inputCls}" placeholder="5/10">
         </div>
       </div>
     `;
@@ -871,11 +819,11 @@ function renderPanel(h, v){
   if (h === "etiket"){
     const e = k.etiket || {};
     return `
-      <div class="panel" data-panel="etiket">
-        <div class="field">
-          <label>Etiketler</label>
-          <input type="text" data-alan="etiket.liste" value="${(e.liste||[]).join(', ')}" placeholder="kömür, linyit">
-          <div class="help">Virgülle ayırın.</div>
+      <div class="panel hidden space-y-4" data-panel="etiket">
+        <div>
+          <label class="${labelCls}">Etiketler</label>
+          <input type="text" data-alan="etiket.liste" value="${kacis((e.liste||[]).join(', '))}" class="${inputCls}" placeholder="kömür, linyit">
+          <div class="mt-1.5 text-[10px] text-slate-500 italic">Virgülle ayırın.</div>
         </div>
       </div>
     `;
@@ -908,7 +856,7 @@ function toggleMulti(cb, hedef){
   if (!k[hedef]) k[hedef] = { kodlar: [], guven:"yuksek", not:"" };
   const checked = [...document.querySelectorAll(`#ml-${hedef} input[type="checkbox"]:checked`)].map(x=>x.value);
   k[hedef].kodlar = checked;
-  cb.closest('.multi-item').classList.toggle('checked', cb.checked);
+  cb.closest('.multi-item').classList.toggle('bg-brand-500/10', cb.checked);
   updateBadges(v); updateJson();
 }
 
@@ -937,10 +885,13 @@ function yenilePanel(panelAdi){
   const panelsEl = document.getElementById('panels');
   const panelEl = panelsEl.querySelector(`.panel[data-panel="${panelAdi}"]`);
   if (!panelEl) return;
+  const aktifMi = !panelEl.classList.contains('hidden');
   const tmp = document.createElement('div');
   tmp.innerHTML = renderPanel(panelAdi, v);
-  panelEl.replaceWith(tmp.firstElementChild);
-  panelsEl.querySelectorAll(`.panel[data-panel="${panelAdi}"] input, .panel[data-panel="${panelAdi}"] select, .panel[data-panel="${panelAdi}"] textarea`).forEach(el=>{
+  const yeni = tmp.firstElementChild;
+  if (aktifMi) yeni.classList.remove('hidden');
+  panelEl.replaceWith(yeni);
+  yeni.querySelectorAll('input, select, textarea').forEach(el=>{
     el.addEventListener('input', ()=>formGuncelle(el));
   });
 }
@@ -953,7 +904,8 @@ function updateBadges(v){
     const el = document.getElementById(id);
     if (!el) return;
     el.textContent = val;
-    el.classList.toggle('bos', !ok);
+    el.classList.toggle('text-emerald-400', !!ok);
+    el.classList.toggle('text-slate-500', !ok);
   };
   ["gtip","cpc","isco","nace"].forEach(h=>{
     if (h === v) return;
@@ -1068,11 +1020,10 @@ async function kaydetJson(){
   const v = AKTIF_VARLIK;
   const yetkiliAlanlar = ROLLER[rol].yazabilir;
 
-  // Bu rolün yazabildiği alanları topla
   const kayitlar = [];
   Object.keys(KAYITLAR).forEach(anahtar=>{
     const [kv, kod] = anahtar.split(':');
-    if (kv !== v) return;   // sadece aktif varlık
+    if (kv !== v) return;
     const k = KAYITLAR[anahtar];
     const ham = bulHamKod(kv, kod);
     const kayit = { [kv]: kod, aciklama: ham?.ad || "" };
@@ -1108,12 +1059,11 @@ async function kaydetJson(){
       body: JSON.stringify({ rol, varlik: v, kayitlar })
     });
     if (status === 200){
-      toast(`✓ ${body.toplam} kayıt kaydedildi → ${body.yazilanlar.map(x=>x.dosya).join(', ')}`);
+      toast(`✓ ${body.toplam} kayıt kaydedildi`);
     } else {
       toast('Sunucu hatası: ' + (body.detail || status), true);
     }
   }catch(e){
-    // API erişilemezse yerel indir
     const json = { meta: { yayinci: ROLLER[rol].ad, katman: "iliski" }, eslestirmeler: kayitlar };
     indir(JSON.stringify(json, null, 2), `${v}-${rol}.json`);
     toast('API erişilemedi, dosya indirildi');
@@ -1139,23 +1089,24 @@ function temizle(){
 
 /* ═══════════════ DROPDOWN ═══════════════ */
 function toggleDropdown(id){
-  document.querySelectorAll('.dropdown').forEach(d=>{
-    if (d.id === id) d.classList.toggle('open');
-    else d.classList.remove('open');
+  document.querySelectorAll('.dropdown-menu').forEach(d=>{
+    const parent = d.parentElement;
+    if (parent.id === id) d.classList.toggle('hidden');
+    else d.classList.add('hidden');
   });
 }
 document.addEventListener('click', e=>{
-  if (!e.target.closest('.dropdown')) {
-    document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('open'));
+  if (!e.target.closest('.relative[id^="yukle"]')) {
+    document.querySelectorAll('.dropdown-menu').forEach(d=>d.classList.add('hidden'));
   }
 });
 
-function yukleTekKayit(){ document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('open'));
+function yukleTekKayit(){ document.querySelectorAll('.dropdown-menu').forEach(d=>d.classList.add('hidden'));
   const i = document.getElementById('file-input'); i.dataset.mod='tek'; i.click(); }
-function yukleTopluDosya(){ document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('open'));
+function yukleTopluDosya(){ document.querySelectorAll('.dropdown-menu').forEach(d=>d.classList.add('hidden'));
   const i = document.getElementById('file-input'); i.dataset.mod='toplu'; i.click(); }
 function yereldenYukle(){
-  document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('open'));
+  document.querySelectorAll('.dropdown-menu').forEach(d=>d.classList.add('hidden'));
   const local = localStorage.getItem('pdaas-iliski-v5');
   if (!local) return toast('Yerel kayıt bulunamadı', true);
   try {
@@ -1170,7 +1121,7 @@ document.getElementById('file-input').addEventListener('change', e=>{
   const mod = e.target.dataset.mod || 'tek';
   if (!file) return;
   const r = new FileReader();
-    r.onload = async ev=>{
+  r.onload = async ev=>{
     try{
       const j = JSON.parse(ev.target.result);
       if (mod === 'tek'){
@@ -1214,10 +1165,11 @@ document.getElementById('file-input').addEventListener('change', e=>{
 function toast(msg, hata=false){
   const t = document.getElementById('toast');
   t.textContent = msg;
-  t.classList.toggle('err', hata);
-  t.classList.add('show');
+  t.className = 'fixed bottom-6 right-6 px-5 py-3 rounded-2xl shadow-2xl font-bold text-sm opacity-0 translate-y-3 transition-all duration-300 pointer-events-none z-50 max-w-xs ' +
+    (hata ? 'bg-rose-500 text-white shadow-rose-500/40' : 'bg-emerald-500 text-slate-900 shadow-emerald-500/40');
+  requestAnimationFrame(()=>{ t.classList.remove('opacity-0','translate-y-3'); });
   clearTimeout(window.__toastT);
-  window.__toastT = setTimeout(()=>t.classList.remove('show'), 2800);
+  window.__toastT = setTimeout(()=>t.classList.add('opacity-0','translate-y-3'), 2800);
 }
 
 /* ═══════════════ ROL DEĞİŞİKLİĞİ ═══════════════ */

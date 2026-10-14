@@ -40,17 +40,17 @@
     .light .j-num { color: #d97706; }
     .light .j-kw  { color: #db2777; }
     .light .j-punct { color: #64748b; }
-    /* ═══════════════════════════════════════════════
-   AYDINLIK MOD OVERRIDE
-   Tailwind sınıflarını ezerek renkleri çevirir
-   ═══════════════════════════════════════════════ */
+
+    /* Sidebar scrollbar özel (ince, koyu) */
+    #catalog-tree-container::-webkit-scrollbar { width: 6px; }
+    #catalog-tree-container::-webkit-scrollbar-thumb { background: rgba(99,102,241,.25); border-radius: 99px; }
+    #catalog-tree-container::-webkit-scrollbar-thumb:hover { background: rgba(99,102,241,.5); }
 
 html.light body {
   background-color: #f1f5f9 !important;
   color: #0f172a !important;
 }
 
-/* Arka plan renkleri */
 html.light .bg-slate-900,
 html.light .bg-slate-900\/80,
 html.light .bg-slate-900\/50 { background-color: #ffffff !important; }
@@ -67,7 +67,6 @@ html.light .bg-slate-800\/80 { background-color: #e2e8f0 !important; }
 
 html.light .bg-slate-700\/50 { background-color: #cbd5e1 !important; }
 
-/* Kenarlıklar */
 html.light .border-slate-800,
 html.light .border-slate-800\/80,
 html.light .border-slate-800\/60,
@@ -77,7 +76,6 @@ html.light .border-slate-700\/70,
 html.light .border-slate-700\/60,
 html.light .border-slate-700\/50 { border-color: #cbd5e1 !important; }
 
-/* Metin renkleri */
 html.light .text-white      { color: #0f172a !important; }
 html.light .text-slate-100  { color: #0f172a !important; }
 html.light .text-slate-200  { color: #1e293b !important; }
@@ -88,17 +86,14 @@ html.light .text-slate-600  { color: #94a3b8 !important; }
 html.light .text-brand-300  { color: #4f46e5 !important; }
 html.light .text-brand-400  { color: #4f46e5 !important; }
 
-/* Marka arka planı */
 html.light .bg-brand-600\/20,
 html.light .bg-brand-500\/20 { background-color: rgba(99,102,241,.15) !important; }
 html.light .bg-brand-600\/10 { background-color: rgba(99,102,241,.08) !important; }
 
-/* Durum renkleri */
 html.light .bg-emerald-500\/10 { background-color: rgba(16,185,129,.1) !important; }
 html.light .bg-rose-500\/10    { background-color: rgba(244,63,94,.1) !important; }
 html.light .bg-rose-500\/20    { background-color: rgba(244,63,94,.15) !important; }
 
-/* Hover durumları */
 html.light .hover\:bg-slate-800:hover,
 html.light .hover\:bg-slate-800\/60:hover,
 html.light .hover\:bg-slate-700:hover { background-color: #e2e8f0 !important; }
@@ -110,10 +105,8 @@ html.light .hover\:text-white:hover    { color: #0f172a !important; }
 html.light .hover\:text-slate-200:hover { color: #334155 !important; }
 html.light .hover\:border-slate-600:hover { border-color: #94a3b8 !important; }
 
-/* Placeholder */
 html.light .placeholder-slate-500::placeholder { color: #94a3b8 !important; }
 
-/* JSON terminal özel renkleri */
 html.light .j-key   { color: #0284c7; }
 html.light .j-str   { color: #0f766e; }
 html.light .j-num   { color: #d97706; }
@@ -121,10 +114,10 @@ html.light .j-kw    { color: #db2777; }
 html.light .j-punct { color: #64748b; }
   </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans min-h-screen flex flex-col antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200" id="app-body">
+<body class="bg-slate-900 text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200" id="app-body">
 
-  <!-- HEADER -->
-  <header class="h-16 border-b border-slate-800 bg-slate-900/80 sticky top-0 z-40 glass-panel flex items-center justify-between px-4 lg:px-6">
+  <!-- HEADER (sabit, scroll olmaz) -->
+  <header class="h-16 flex-none border-b border-slate-800 bg-slate-900/80 z-40 glass-panel flex items-center justify-between px-4 lg:px-6">
     <div class="flex items-center gap-3">
       <button id="btn-mobile-menu" type="button" class="lg:hidden p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition" aria-label="Menü">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -139,6 +132,12 @@ html.light .j-punct { color: #64748b; }
           <p class="text-xs text-slate-400 font-medium" data-i18n="portal_alt">Parametrik Veri Servisi Portalı</p>
         </div>
       </div>
+
+      <nav class="hidden lg:flex items-center gap-1 ml-4">
+        <a href="index.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-800 border border-slate-700">Portal</a>
+        <a href="urunler.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition">Ürün Arama</a>
+        <a href="kurator.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition">Küratör</a>
+      </nav>
     </div>
 
     <div class="hidden md:flex items-center flex-1 max-w-md mx-8">
@@ -167,10 +166,13 @@ html.light .j-punct { color: #64748b; }
     </div>
   </header>
 
-  <!-- MAIN -->
-  <div class="flex-1 flex overflow-hidden relative">
-    <aside id="sidebar" class="w-80 lg:w-88 bg-slate-900 border-r border-slate-800 flex flex-col fixed lg:static inset-y-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
-      <div class="p-4 border-b border-slate-800 space-y-3">
+  <!-- MAIN WRAP (min-h-0 kritik: flex child'ların düzgün küçülmesi için) -->
+  <div class="flex-1 flex overflow-hidden relative min-h-0">
+
+    <!-- SIDEBAR: kendi içinde scroll, sabit yükseklik -->
+    <aside id="sidebar" class="w-80 lg:w-[22rem] flex-none bg-slate-900 border-r border-slate-800 flex flex-col fixed lg:static inset-y-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
+      <!-- Sabit üst başlık + arama -->
+      <div class="p-4 border-b border-slate-800 space-y-3 flex-none">
         <div class="flex items-center justify-between">
           <h2 class="text-sm font-bold tracking-tight text-white uppercase flex items-center gap-2">
             <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
@@ -186,13 +188,17 @@ html.light .j-punct { color: #64748b; }
           </button>
         </div>
       </div>
-      <div id="catalog-tree-container" class="flex-1 overflow-y-auto p-3 space-y-2">
+
+      <!-- AĞAÇ: sadece bu kısım scroll olur -->
+      <div id="catalog-tree-container" class="flex-1 overflow-y-auto overscroll-contain p-3 space-y-2 min-h-0">
         <div class="p-8 text-center text-slate-500 text-xs">
           <div class="inline-block w-6 h-6 border-2 border-brand-500 border-t-transparent rounded-full animate-spin mb-2"></div>
           <p data-i18n="catalog_loading">Katalog yükleniyor...</p>
         </div>
       </div>
-      <div class="p-3 border-t border-slate-800 bg-slate-900/50 text-[11px] text-slate-500 flex items-center justify-between">
+
+      <!-- Sabit alt bilgi -->
+      <div class="p-3 border-t border-slate-800 bg-slate-900/50 text-[11px] text-slate-500 flex items-center justify-between flex-none">
         <span>REST JSON API</span>
         <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> <span data-i18n="live_connection">Canlı Bağlantı</span></span>
       </div>
@@ -200,7 +206,8 @@ html.light .j-punct { color: #64748b; }
 
     <div id="mobile-overlay" class="fixed inset-0 bg-slate-950/70 z-20 hidden lg:hidden glass-panel"></div>
 
-    <main id="main-content" class="flex-1 overflow-y-auto bg-slate-950/50 flex flex-col">
+    <!-- MAIN: kendi içinde scroll -->
+    <main id="main-content" class="flex-1 overflow-y-auto overscroll-contain bg-slate-950/50 flex flex-col min-h-0">
       <div id="view-empty-state" class="flex-1 flex flex-col items-center justify-center p-8 text-center max-w-lg mx-auto">
         <div class="w-20 h-20 rounded-3xl bg-gradient-to-tr from-brand-600/20 to-slate-800 border border-brand-500/20 text-brand-400 flex items-center justify-center text-3xl mb-6 shadow-2xl shadow-brand-500/10">⚡</div>
         <h2 class="text-2xl font-bold text-white tracking-tight mb-2" data-i18n="empty_title">Veri Seti veya Servis Seçin</h2>
@@ -499,13 +506,11 @@ html.light .j-punct { color: #64748b; }
     }
   };
 
-  // tip alanı dile göre çevrilir (JSON'da tek değer olduğu için sözlükten)
   const TIP_SOZLUK = {
     tr: { liste:'Liste', agac:'Ağaç', harita:'Harita', tablo:'Tablo' },
     en: { liste:'List',  agac:'Tree', harita:'Map',    tablo:'Table' }
   };
 
-  // Tablo sütun başlıkları
   const ALAN_ETIKET_TR = {
     kod:'Kod', ust_kod:'Üst Kod', seviye:'Seviye', seviye_adi:'Seviye Adı',
     sira:'Sıra', ad_tr:'Ad (TR)', ad_en:'Ad (EN)',
@@ -535,7 +540,6 @@ html.light .j-punct { color: #64748b; }
     oncelik:'Priority', aciklama:'Explanation', ad:'Name', islem:'Operation',
   };
 
-  // Şema açıklamaları
   const SCHEMA_ACIKLAMA_TR = {
     kod:'Benzersiz kod / kod kimliği',
     ust_kod:'Üst kategori kodu (ağaç bağlantısı)',
@@ -637,7 +641,6 @@ html.light .j-punct { color: #64748b; }
     try{ localStorage.setItem('pdaas_dil', DIL); }catch(e){}
   }
 
-  // Dil değişince UI + tablo + kod + şema yenilenir (veri yeniden çekilmez)
   function dilDegistir(yeni){
     if(yeni === DIL) return;
     DIL = yeni;
@@ -849,6 +852,8 @@ html.light .j-punct { color: #64748b; }
     servisSecUI(sv);
     renderCatalogTree($('input-catalog-search').value);
     servisDetayYukle(endpoint);
+    // Main scroll'u en üste al
+    $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   async function servisDetayYukle(endpoint){
@@ -885,7 +890,7 @@ html.light .j-punct { color: #64748b; }
   }
 
   // =================================================================
-  // TABLO (alan etiketleri artık dil-duyarlı)
+  // TABLO
   // =================================================================
   function renderTableData(){
     const tbody = $('table-body-rows');
@@ -981,7 +986,7 @@ html.light .j-punct { color: #64748b; }
   }
 
   // =================================================================
-  // DOCS (açıklamalar da dil-duyarlı)
+  // DOCS
   // =================================================================
   function renderDocsSchema(){
     if(!currentData.length){
@@ -1106,12 +1111,14 @@ html.light .j-punct { color: #64748b; }
       $('view-service-detail').classList.add('hidden');
       currentService = null;
       renderCatalogTree($('input-catalog-search').value);
+      $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
     });
     $('btn-logo').addEventListener('click', () => {
       $('view-empty-state').classList.remove('hidden');
       $('view-service-detail').classList.add('hidden');
       currentService = null;
       renderCatalogTree($('input-catalog-search').value);
+      $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     $('btn-export-json').addEventListener('click', () => {
@@ -1203,13 +1210,13 @@ html.light .j-punct { color: #64748b; }
         document.documentElement.classList.add('dark');
         $('theme-icon-dark').classList.remove('hidden');
         $('theme-icon-light').classList.add('hidden');
-        $('app-body').className = "bg-slate-900 text-slate-100 font-sans min-h-screen flex flex-col antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200";
+        $('app-body').className = "bg-slate-900 text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200";
       }else{
         document.documentElement.classList.remove('dark');
         document.documentElement.classList.add('light');
         $('theme-icon-dark').classList.add('hidden');
         $('theme-icon-light').classList.remove('hidden');
-        $('app-body').className = "bg-slate-100 text-slate-800 font-sans min-h-screen flex flex-col antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200";
+        $('app-body').className = "bg-slate-100 text-slate-800 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200";
       }
     });
 
