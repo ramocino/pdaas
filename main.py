@@ -232,6 +232,12 @@ def ana_sayfa():
         return {"service": "PDaaS API", "version": "3.2.0"}
     return FileResponse(yol, media_type="text/html")
 
+@app.get("/urunler.html", include_in_schema=False)
+def urunler_sayfasi():
+    yol = KOK / "urunler.html"
+    if not yol.exists():
+        raise HTTPException(404, "urunler.html bulunamadı")
+    return FileResponse(yol, media_type="text/html")
 
 @app.get("/health")
 def health():
