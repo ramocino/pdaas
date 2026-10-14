@@ -691,37 +691,37 @@
   // =================================================================
   // SERVİS SEÇ + DETAY YÜKLE
   // =================================================================
-  function servisSec(endpoint){
-    const sv = KATALOG.find(s => s.endpoint === endpoint);
-    if(!sv) return;
-    currentService = sv;
+ // Sadece UI kartlarını dile göre yeniden yazar (veri çekmez)
+function servisSecUI(sv){
+  if(!sv) return;
+  const grupAdi   = DIL === 'en' ? (sv.bakanlik_adi_en || sv.bakanlik_adi) : sv.bakanlik_adi;
+  const servisAdi = DIL === 'en' ? (sv.servis_adi_en   || sv.servis_adi)   : sv.servis_adi;
+  const kaynakAd  = DIL === 'en' ? (sv.kaynak_en || sv.kaynak || grupAdi) : (sv.kaynak || grupAdi);
 
-    // UI
-    $('view-empty-state').classList.add('hidden');
-    $('view-service-detail').classList.remove('hidden');
+  $('bc-ministry').textContent = grupAdi;
+  $('bc-service').textContent  = servisAdi;
+  $('service-ministry-badge').textContent = grupAdi;
+  $('service-records-count').textContent = (sv.kayit_sayisi ?? 0).toLocaleString(DIL==='tr'?'tr-TR':'en-US') + ' ' + t('records');
+  $('service-type-badge').textContent = tipEtiket(sv.tip);
+  $('service-title').textContent = servisAdi;
+  $('service-desc').textContent  = kaynakAd;
+  $('service-last-update').textContent = sv.surum ? ('v' + sv.surum) : '—';
+  $('endpoint-url-text').textContent = window.location.origin + sv.endpoint;
+}
 
-    const grupAdi = DIL === 'en' ? (sv.bakanlik_adi_en || sv.bakanlik_adi) : sv.bakanlik_adi;
-    const servisAdi = DIL === 'en' ? (sv.servis_adi_en || sv.servis_adi) : sv.servis_adi;
+// Servis seç — UI + veri
+function servisSec(endpoint){
+  const sv = KATALOG.find(s => s.endpoint === endpoint);
+  if(!sv) return;
+  currentService = sv;
 
-    $('bc-ministry').textContent = grupAdi;
-    $('bc-service').textContent = servisAdi;
-    $('service-ministry-badge').textContent = grupAdi;
-    $('service-records-count').textContent = (sv.kayit_sayisi ?? 0).toLocaleString(DIL==='tr'?'tr-TR':'en-US') + ' ' + t('records');
-    $('service-type-badge').textContent = sv.tip || '—';
-    $('service-title').textContent = servisAdi;
-    $('service-desc').textContent = sv.kaynak || grupAdi;
-    $('service-last-update').textContent = sv.surum ? ('v' + sv.surum) : '—';
+  $('view-empty-state').classList.add('hidden');
+  $('view-service-detail').classList.remove('hidden');
 
-    const fullUrl = window.location.origin + endpoint;
-    $('endpoint-url-text').textContent = fullUrl;
-
-    // Yan panel vurgusu
-    renderCatalogTree($('input-catalog-search').value);
-
-    // Veriyi çek
-    servisDetayYukle(endpoint);
-  }
-
+  servisSecUI(sv);
+  renderCatalogTree($('input-catalog-search').value);
+  servisDetayYukle(endpoint);
+}
   async function servisDetayYukle(endpoint){
     // Yükleme durumu
     $('table-body-rows').innerHTML = `
