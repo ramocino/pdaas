@@ -383,21 +383,21 @@ async function dosyaYukle(yol){
 
 async function tumVeriYukle(){
   const [gtip, isco, cpc, nace, kdv, otv, integ] = await Promise.all([
-    dosyaYukle('/api/v1/gtip-kodlari'),
-    dosyaYukle('/api/v1/isco-kodlari'),
-    dosyaYukle('/api/v1/cpc-kodlari'),
-    dosyaYukle('/api/v1/nace-kodlari'),
-    dosyaYukle('/api/v1/kdv-oranlari'),
-    dosyaYukle('/api/v1/otv-oranlari'),
-    dosyaYukle('/api/v1/kod-entegrasyon')
+    dosyaYukle('/api/v1/tb/gtip-kodlari'),
+    dosyaYukle('/api/v1/csgb/isco-kodlari'),
+    dosyaYukle('/api/v1/tb/cpc-kodlari'),
+    dosyaYukle('/api/v1/hvmb/nace-kodlari'),
+    dosyaYukle('/api/v1/hmb/kdv-oranlari'),
+    dosyaYukle('/api/v1/hmb/otv-oranlari'),
+    dosyaYukle('/api/v1/genel/kod-entegrasyon')   // dosya ham/ kökündeyse
   ]);
 
   if(gtip?.kayitlar){ VERI.gtip.kayitlar = gtip.kayitlar; VERI.gtip.yuklendi = true; }
   if(isco?.kayitlar){ VERI.isco.kayitlar = isco.kayitlar; VERI.isco.yuklendi = true; }
   if(cpc?.kayitlar){  VERI.cpc.kayitlar  = cpc.kayitlar;  VERI.cpc.yuklendi  = true; }
   if(nace?.kayitlar){ VERI.nace.kayitlar = nace.kayitlar; VERI.nace.yuklendi = true; }
-  KDV_DATA = kdv;
-  OTV_DATA = otv;
+  KDV_DATA  = kdv;
+  OTV_DATA  = otv;
   KOD_INTEG = integ;
 
   sayilariGuncelle();
