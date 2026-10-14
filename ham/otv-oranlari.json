@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "bakanlik": "hmb",
+    "bakanlik_adi": "T.C. Hazine ve Maliye Bakanlığı",
+    "birim": "Gelir İdaresi Başkanlığı (GİB)",
+    "servis_kodu": "otv-oranlari",
+    "servis_adi": "Özel Tüketim Vergisi Oranları",
+    "surum": "2026.10.08",
+    "kaynak": "4760 sayılı ÖTV Kanunu eki (I), (II), (III) ve (IV) sayılı listeler",
+    "join": "kod",
+    "tip": "liste"
+  },
+  "listeler": {
+    "I": {
+      "ad": "I Sayılı Liste (Petrol Ürünleri, Doğal Gaz, Solventler)",
+      "kapsam": "Akaryakıt, LPG, doğal gaz, solvent ve türevleri",
+      "vergi_tipi": "maktu",
+      "kategoriler": [
+        {
+          "kod": "I-A",
+          "ad": "Akaryakıt Ürünleri",
+          "gtip_prefix": ["2710"],
+          "ornekler": ["Benzin", "Motorin", "Gazyağı", "Fuel Oil"],
+          "birim": "Litre"
+        },
+        {
+          "kod": "I-B",
+          "ad": "LPG ve Doğal Gaz",
+          "gtip_prefix": ["2711"],
+          "ornekler": ["LPG", "Doğal Gaz", "Bütan", "Propan"],
+          "birim": "Kg / m³"
+        },
+        {
+          "kod": "I-C",
+          "ad": "Solventler",
+          "gtip_prefix": ["2902", "2905"],
+          "ornekler": ["Toluen", "Ksilen", "Metanol"],
+          "birim": "Litre"
+        }
+      ]
+    },
+    "II": {
+      "ad": "II Sayılı Liste (Motorlu Taşıtlar)",
+      "kapsam": "Otomobil, minibüs, kamyonet, motosiklet, uçak, helikopter, yat",
+      "vergi_tipi": "oran",
+      "kategoriler": [
+        {
+          "kod": "II-A",
+          "ad": "Otomobiller (1600 cm³'e kadar)",
+          "gtip_prefix": ["8703"],
+          "matrah_dilimleri": [
+            { "max_matrah": 85000, "oran": 0.45 },
+            { "min_matrah": 85000, "max_matrah": 130000, "oran": 0.50 },
+            { "min_matrah": 130000, "oran": 0.80 }
+          ]
+        },
+        {
+          "kod": "II-B",
+          "ad": "Otomobiller (1600-2000 cm³)",
+          "gtip_prefix": ["8703"],
+          "matrah_dilimleri": [
+            { "max_matrah": 135000, "oran": 0.50 },
+            { "min_matrah": 135000, "max_matrah": 170000, "oran": 0.80 },
+            { "min_matrah": 170000, "oran": 1.30 }
+          ]
+        },
+        {
+          "kod": "II-C",
+          "ad": "Otomobiller (2000 cm³ üzeri)",
+          "gtip_prefix": ["8703"],
+          "matrah_dilimleri": [
+            { "max_matrah": 170000, "oran": 1.30 },
+            { "min_matrah": 170000, "oran": 2.20 }
+          ]
+        },
+        {
+          "kod": "II-D",
+          "ad": "Elektrikli Otomobiller",
+          "gtip_prefix": ["8703"],
+          "matrah_dilimleri": [
+            { "max_matrah": 1250000, "oran": 0.25 },
+            { "min_matrah": 1250000, "oran": 0.60 }
+          ]
+        },
+        {
+          "kod": "II-E",
+          "ad": "Motosikletler",
+          "gtip_prefix": ["8711"],
+          "oran": 0.37,
+          "matrah_dilimleri": [
+            { "max_matrah": 50000, "oran": 0.37 },
+            { "min_matrah": 50000, "oran": 0.60 }
+          ]
+        }
+      ]
+    },
+    "III": {
+      "ad": "III Sayılı Liste (Alkollü İçecekler ve Tütün Mamulleri)",
+      "kapsam": "Alkol, bira, şarap, sigara, puro, tütün",
+      "vergi_tipi": "karma",
+      "kategoriler": [
+        {
+          "kod": "III-A",
+          "ad": "Alkollü İçecekler",
+          "gtip_prefix": ["2203", "2204", "2205", "2206", "2208"],
+          "ornekler": ["Bira", "Şarap", "Rakı", "Viski", "Votka"],
+          "vergi_tipi": "oran + maktu"
+        },
+        {
+          "kod": "III-B",
+          "ad": "Tütün Mamulleri",
+          "gtip_prefix": ["2402", "2403"],
+          "ornekler": ["Sigara", "Puro", "Sigarillo", "Enfiye", "Çiğneme tütünü"],
+          "vergi_tipi": "oran + asgari maktu"
+        }
+      ],
+      "guncel_oranlar": [
+        {
+          "gtip": "2402.20",
+          "mal_ismi": "Tütün içeren sigaralar",
+          "oran": 0.42,
+          "asgari_maktu": 2.2953,
+          "maktu": 23.7404
+        },
+        {
+          "gtip": "2403.99.10.00.00",
+          "mal_ismi": "Enfiye ve çiğnemeye mahsus tütün",
+          "oran": 0.42,
+          "asgari_maktu": 2.2953,
+          "maktu": 23.7404
+        }
+      ]
+    },
+    "IV": {
+      "ad": "IV Sayılı Liste (Lüks Ürünler)",
+      "kapsam": "Kürk, mücevher, bazı dayanıklı tüketim malları, uçak, helikopter, yat",
+      "vergi_tipi": "oran",
+      "kategoriler": [
+        {
+          "kod": "IV-A",
+          "ad": "Kürk ve Mücevher",
+          "gtip_prefix": ["4303", "7113", "7114"],
+          "ornekler": ["Kürk giysi", "Altın takı", "Pırlanta", "Mücevher"],
+          "oran": 0.20
+        },
+        {
+          "kod": "IV-B",
+          "ad": "Bazı Elektrikli Ev Aletleri",
+          "gtip_prefix": ["8418", "8450", "8508", "8516"],
+          "ornekler": ["Buzdolabı", "Çamaşır makinesi", "Elektrikli süpürge", "Mikrodalga fırın"],
+          "oran": 0.065
+        },
+        {
+          "kod": "IV-C",
+          "ad": "Uçak ve Helikopter",
+          "gtip_prefix": ["8802"],
+          "ornekler": ["Uçak", "Helikopter", "Planör"],
+          "oran": 0.20
+        },
+        {
+          "kod": "IV-D",
+          "ad": "Yat ve Tekneler",
+          "gtip_prefix": ["8903"],
+          "ornekler": ["Yat", "Tekne", "Sürat teknesi"],
+          "oran": 0.20
+        }
+      ]
+    }
+  }
+}

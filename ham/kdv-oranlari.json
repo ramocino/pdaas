@@ -1,76 +1,162 @@
 {
   "meta": {
-    "bakanlik": "hvmb",
+    "bakanlik": "hmb",
     "bakanlik_adi": "T.C. Hazine ve Maliye Bakanlığı",
     "birim": "Gelir İdaresi Başkanlığı (GİB)",
-    "yayinci": "T.C. Hazine ve Maliye Bakanlığı",
     "servis_kodu": "kdv-oranlari",
-    "servis_adi": "KDV Oranları",
+    "servis_adi": "KDV Oranları ve Liste Detayları",
     "surum": "2026.10.08",
-    "dosya_surumu": "1.0.0",
-    "schema_surumu": "1.2.0",
-    "onceki_surum": null,
-    "guncelleme": "2026-10-08",
-    "kaynak": "3065 sayılı KDV Kanunu Madde 28 · 2007/13033 sayılı Bakanlar Kurulu Kararı (7346 sayılı Cumhurbaşkanı Kararı ile değişik)",
-    "resmi_gazete": "32241 / 07.07.2023",
-    "mevzuat_ref": [
-      { "tur": "kanun", "no": "3065", "ad": "Katma Değer Vergisi Kanunu", "madde": "28" },
-      { "tur": "cumhurbaskani_karari", "karar_sayisi": "7346", "resmi_gazete_no": "32241", "tarih": "2023-07-07", "yururluk": "2023-07-10" }
-    ],
-    "kapsam": {
-      "aciklama": "Katma Değer Vergisi oranları ve istisna durumları (5 kayıt)",
-      "parametre_adi": "kdv_oranlari",
-      "kategori": "vergi"
-    },
-    "yayin_durumu": "yayinda",
-    "katman": "ham",
-    "tip": "liste",
+    "kaynak": "3065 sayılı KDV Kanunu Madde 28 · 2007/13033 sayılı BKK eki (I) ve (II) sayılı listeler",
     "join": "kod",
-    "zaman_bazli": true,
-    "gecerlilik_baslangic": "2023-07-10",
-    "gecerlilik_bitis": null,
-    "checksum": null
+    "tip": "liste"
+  },
+  "listeler": {
+    "I": {
+      "ad": "I Sayılı Liste (KDV %1)",
+      "kdv_orani": 0.01,
+      "mevzuat": "2007/13033 s. BKK eki (I) sayılı liste",
+      "kategoriler": [
+        {
+          "kod": "I-A",
+          "ad": "Temel Gıda Maddeleri",
+          "gtip_prefix": ["01", "02", "03", "04", "07", "08", "10", "11"],
+          "cpc_prefix": ["01", "02", "21", "23", "24"],
+          "ornekler": ["Ekmek", "Un", "Bulgur", "Pirinç", "Makarna", "Süt", "Yoğurt", "Peynir", "Yumurta", "Taze sebze", "Taze meyve", "Kırmızı et", "Beyaz et", "Balık", "Bakliyat"]
+        },
+        {
+          "kod": "I-B",
+          "ad": "Kültürel Ürünler",
+          "gtip_prefix": ["49"],
+          "cpc_prefix": ["32"],
+          "ornekler": ["Kitap", "Dergi", "Gazete", "Broşür"]
+        },
+        {
+          "kod": "I-C",
+          "ad": "Eğitim ve Sağlık Hizmetleri",
+          "cpc_prefix": ["92"],
+          "ornekler": ["Eğitim hizmetleri", "Öğretim hizmetleri"]
+        },
+        {
+          "kod": "I-D",
+          "ad": "Tarımsal Ürün Teslimleri",
+          "gtip_prefix": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"],
+          "cpc_prefix": ["01", "02", "03", "04"],
+          "ornekler": ["Buğday", "Arpa", "Mısır", "Pamuk", "Tütün", "Şeker pancarı", "Canlı hayvan", "Balık"]
+        },
+        {
+          "kod": "I-E",
+          "ad": "Konut Teslimleri (Net 150 m²'ye kadar, ilk teslim)",
+          "cpc_prefix": ["53"],
+          "ornekler": ["Konut", "Daire", "Villa"]
+        }
+      ]
+    },
+    "II": {
+      "ad": "II Sayılı Liste (KDV %10)",
+      "kdv_orani": 0.10,
+      "mevzuat": "2007/13033 s. BKK eki (II) sayılı liste",
+      "kategoriler": [
+        {
+          "kod": "II-A",
+          "ad": "Tekstil ve Hazır Giyim",
+          "gtip_prefix": ["50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63"],
+          "cpc_prefix": ["26", "27", "28"],
+          "ornekler": ["Kumaş", "Gömlek", "Pantolon", "Elbise", "Çorap", "İç giyim", "Ayakkabı", "Deri ürünler"]
+        },
+        {
+          "kod": "II-B",
+          "ad": "İşlenmiş Gıda Ürünleri",
+          "gtip_prefix": ["16", "17", "18", "19", "20", "21", "22"],
+          "cpc_prefix": ["21", "23", "24"],
+          "ornekler": ["Konserve", "Dondurulmuş gıda", "İşlenmiş et", "Peynir", "Zeytinyağı", "Şekerleme", "Çikolata"]
+        },
+        {
+          "kod": "II-C",
+          "ad": "Mobilya ve Ev Eşyaları",
+          "gtip_prefix": ["94"],
+          "cpc_prefix": ["38"],
+          "ornekler": ["Mobilya", "Yatak", "Aydınlatma", "Ev tekstili", "Halı"]
+        },
+        {
+          "kod": "II-D",
+          "ad": "Yiyecek-İçecek Hizmetleri",
+          "cpc_prefix": ["63"],
+          "ornekler": ["Restoran hizmetleri", "Lokanta hizmetleri", "Kafe hizmetleri", "Catering hizmetleri"]
+        },
+        {
+          "kod": "II-E",
+          "ad": "Konaklama Hizmetleri",
+          "cpc_prefix": ["63"],
+          "ornekler": ["Otel", "Motel", "Pansiyon", "Tatil köyü", "Kamp alanı"]
+        },
+        {
+          "kod": "II-F",
+          "ad": "Sağlık Hizmetleri",
+          "cpc_prefix": ["93"],
+          "ornekler": ["Özel hastane hizmetleri", "Poliklinik hizmetleri", "Dişçilik hizmetleri"]
+        },
+        {
+          "kod": "II-G",
+          "ad": "Ulaştırma Hizmetleri",
+          "cpc_prefix": ["64", "65"],
+          "ornekler": ["Yolcu taşımacılığı", "Şehirlerarası otobüs", "Havayolu yolcu taşımacılığı"]
+        },
+        {
+          "kod": "II-H",
+          "ad": "Eğlence ve Kültür Hizmetleri",
+          "cpc_prefix": ["96"],
+          "ornekler": ["Sinema", "Tiyatro", "Konser", "Müze"]
+        }
+      ]
+    }
   },
   "kayitlar": [
     {
       "kod": "KDV-01",
-      "aciklama": "Genel oran",
-      "oran": 20,
+      "aciklama": "Genel Oran",
+      "oran": 0.20,
       "kategori": "genel",
       "kanun_dayanagi": "KDV Kanunu md.28",
-      "kapsam": "Vergiye tabi tüm mal ve hizmetler (özel oran uygulanmayanlar)"
+      "kapsam": "Özel oran uygulanmayan tüm mal ve hizmetler"
     },
     {
       "kod": "KDV-10",
-      "aciklama": "İndirimli oran - temel ihtiyaç",
-      "oran": 10,
+      "aciklama": "İndirimli Oran (II Sayılı Liste)",
+      "oran": 0.10,
       "kategori": "indirimli",
-      "kanun_dayanagi": "KDV Kanunu md.28",
-      "kapsam": "Tekstil, gıda, ilaç, eğitim, sağlık hizmetleri"
+      "kanun_dayanagi": "2007/13033 s. BKK eki (II) sayılı liste"
     },
     {
       "kod": "KDV-01D",
-      "aciklama": "İndirimli oran - düşük",
-      "oran": 1,
+      "aciklama": "Düşük Oran (I Sayılı Liste)",
+      "oran": 0.01,
       "kategori": "indirimli",
-      "kanun_dayanagi": "KDV Kanunu md.28",
-      "kapsam": "Temel gıda maddeleri, gazete, dergi, bazı tarım ürünleri"
+      "kanun_dayanagi": "2007/13033 s. BKK eki (I) sayılı liste"
     },
     {
       "kod": "KDV-00",
-      "aciklama": "Sıfır oran",
-      "oran": 0,
+      "aciklama": "Sıfır Oran",
+      "oran": 0.00,
       "kategori": "sifir",
       "kanun_dayanagi": "KDV Kanunu md.11-13",
       "kapsam": "İhracat, transit taşımacılık, diplomatik istisnalar"
     },
     {
       "kod": "KDV-MUAF",
-      "aciklama": "KDV'den istisna",
+      "aciklama": "KDV'den İstisna",
       "oran": null,
       "kategori": "istisna",
       "kanun_dayanagi": "KDV Kanunu md.17",
-      "kapsam": "Bazı sosyal ve askeri amaçlı teslimler, finansal hizmetler"
+      "kapsam": "Finansal hizmetler, sosyal ve askeri amaçlı teslimler"
     }
+  ],
+  "tevkifat_oranlari": [
+    { "kod": "TEV-01", "islem": "Yapım işleri ve hafriyat", "oran": 0.40 },
+    { "kod": "TEV-02", "islem": "Temizlik, bahçe bakım hizmetleri", "oran": 0.90 },
+    { "kod": "TEV-03", "islem": "Makine, teçhizat bakım onarım", "oran": 0.70 },
+    { "kod": "TEV-04", "islem": "Yemek servis hizmetleri", "oran": 0.50 },
+    { "kod": "TEV-05", "islem": "Yolcu taşımacılığı", "oran": 0.20 },
+    { "kod": "TEV-06", "islem": "Konaklama hizmetleri", "oran": 0.50 },
+    { "kod": "TEV-07", "islem": "Danışmanlık hizmetleri", "oran": 0.90 }
   ]
 }
