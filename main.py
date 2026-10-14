@@ -1,9 +1,4 @@
-"""
-PDaaS API — Parametric Data as a Service
-Otomatik servis keşfi: ham/ altındaki her JSON kendi meta bloğuyla
-hangi bakanlığa ait olduğunu ve servis kodunu bildirir.
-Meta eksikse dosya yolundan türetilir (Asla ezinleme yapılmaz).
-"""
+
 from fastapi import FastAPI, HTTPException, Body
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
@@ -13,8 +8,8 @@ from typing import Dict, List, Any
 import json, time, uuid
 from datetime import datetime, timezone
 
-BUILD_VERSION = "v11_pure_meta_2026_10_13"
-BUILD_TIMESTAMP = "2026-10-13T12:00:00Z"
+BUILD_VERSION = "v12_urunler_route_2026_10_14"
+BUILD_TIMESTAMP = "2026-10-14T12:00:00Z"
 
 app = FastAPI(
     title="PDaaS API",
