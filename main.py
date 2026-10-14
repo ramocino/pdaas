@@ -266,21 +266,52 @@ def _servis_bul(bakanlik: str, servis_kodu: str) -> dict:
 # ═══════════════════════════════════════════════════════════════
 # HTML SAYFALARI
 # ═══════════════════════════════════════════════════════════════
-@app.get("/", include_in_schema=False)
-def ana_sayfa():
-    yol = KOK / "index.html"
+# ═══════════════════════════════════════════════════════════════
+# HTML SAYFALARI — uzantısız + uzantılı alias
+# ═══════════════════════════════════════════════════════════════
+def _html_serve(dosya_adi: str, response: Response = None):
+    """HTML sayfasını güvenli şekilde döner; 404'te bilgi verir."""
+    yol = KOK / dosya_adi
     if not yol.exists():
-        return {"service": "PDaaS API", "version": "3.4.0"}
-    return FileResponse(yol, media_type="text/html")
+        raise HTTPException(404, f"{dosya_adi} bulunamadı")
+    # HTML sayfalarını 5 dk tarayıcı cache'ine al (hızlı gezinme)
+    if response is not None:
+        response.headers["Cache-Control"] = "public, max-age=300"
+    return FileResponse(yol, media_type="text/html; charset=utf-8")
 
+
+# ─── Ana sayfa (Portal) ───
+@app.get("/", include_in_schema=False)
+def ana_sayfa(response: Response):
+    return _html_serve("index.html", response)
+
+@app.get("/index", include_in_schema=False)
+def ana_sayfa_kisa(response: Response):
+    return _html_serve("index.html", response)
+
+@app.get("/index.html", include_in_schema=False)
+def ana_sayfa_html(response: Response):
+    return _html_serve("index.html", response)
+
+
+# ─── Ürün Arama ───
+@app.get("/urunler", include_in_schema=False)
+def urunler_sayfasi(response: Response):
+    return _html_serve("urunler.html", response)
 
 @app.get("/urunler.html", include_in_schema=False)
-def urunler_sayfasi():
-    yol = KOK / "urunler.html"
-    if not yol.exists():
-        raise HTTPException(404, "urunler.html bulunamadı")
-    return FileResponse(yol, media_type="text/html")
+def urunler_sayfasi_html(response: Response):
+    return _html_serve("urunler.html", response)
 
+
+# ─── Küratör ───
+@app.get("/kurator", include_in_schema=False)
+def kurator_sayfasi(response: Response):
+    return _html_serve("kurator.html", response)
+
+@app.get("/kurator.html", include_in_schema=False)
+def kurator_sayfasi_html(response: Response):
+    return _html_serve("kurator.html", response)
 
 # ═══════════════════════════════════════════════════════════════
 # API ENDPOINT'LERİ
