@@ -521,6 +521,34 @@ function sayilariGuncelle(){
 // 3. AĞAÇ MOTORU
 // =================================================================
 // Bir kaydın kökten kendine uzanan yolunu döner: [[sira, kod], ...]
+// Kod karşılaştırma: "01.1" < "01.10" < "01.2" gibi doğal sıralama
+function karsilastirKod(a, b){
+  // Kodu rakam gruplarına ve harf gruplarına ayır
+  // "01.10" → ["01","10"]  /  "63114" → ["63114"]  /  "A.01" → ["A","01"]
+  const parcala = s => String(s).match(/\d+|[A-Za-zĞÜŞİÖÇğüşıöç]+/g) || [];
+  const A = parcala(a);
+  const B = parcala(b);
+  const n = Math.min(A.length, B.length);
+
+  for(let i = 0; i < n; i++){
+    const x = A[i], y = B[i];
+    const xn = /^\d+$/.test(x), yn = /^\d+$/.test(y);
+
+    if(xn && yn){
+      const d = parseInt(x, 10) - parseInt(y, 10);
+      if(d !== 0) return d;
+    }else if(!xn && !yn){
+      const c = x.localeCompare(y, 'tr');
+      if(c !== 0) return c;
+    }else{
+      // Sayı < harf (0 < A) — kararlı bir kural
+      return xn ? -1 : 1;
+    }
+  }
+  return A.length - B.length;
+}
+
+// Bir kaydın kökten kendine uzanan yolunu döner (yalnızca kodlar)
 function kayitYolu(kayit, kodMap, onbellek){
   const kk = normKod(kayit.kod);
   if(onbellek.has(kk)) return onbellek.get(kk);
@@ -532,13 +560,14 @@ function kayitYolu(kayit, kodMap, onbellek){
     const mk = normKod(m.kod);
     if(gorulen.has(mk)) break;
     gorulen.add(mk);
-    zincir.unshift([Number(m.sira) || 9999, mk]);
+    zincir.unshift(mk);            // kod string'i
     m = m.ust_kod ? kodMap.get(normKod(m.ust_kod)) : null;
   }
   onbellek.set(kk, zincir);
   return zincir;
 }
 
+// Sonuç listesini kod-hiyerarşisine göre sıralar — sira alanı yok sayılır
 function hiyerarsiSirala(sonuclar, tumKayitlar){
   const kodMap = new Map(tumKayitlar.map(k => [normKod(k.kod), k]));
   const onbellek = new Map();
@@ -548,11 +577,10 @@ function hiyerarsiSirala(sonuclar, tumKayitlar){
     const B = kayitYolu(b.kayit, kodMap, onbellek);
     const n = Math.min(A.length, B.length);
     for(let i = 0; i < n; i++){
-      if(A[i][0] !== B[i][0]) return A[i][0] - B[i][0];
-      const c = A[i][1].localeCompare(B[i][1]);
+      const c = karsilastirKod(A[i], B[i]);
       if(c !== 0) return c;
     }
-    return A.length - B.length;
+    return A.length - B.length;    // kısa yol (ata) önce
   });
 }
 
