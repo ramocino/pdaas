@@ -2,20 +2,25 @@
   "meta": {
     "bakanlik": "hvmb",
     "bakanlik_adi": "T.C. Hazine ve Maliye Bakanlığı",
+    "bakanlik_adi_en": "Republic of Türkiye Ministry of Treasury and Finance",
     "birim": "Gelir İdaresi Başkanlığı (GİB)",
+    "birim_en": "Revenue Administration (GİB)",
     "yayinci": "T.C. Hazine ve Maliye Bakanlığı",
+    "yayinci_en": "Republic of Türkiye Ministry of Treasury and Finance",
     "servis_kodu": "gelir-vergisi-dilimleri",
     "servis_adi": "Gelir Vergisi Dilimleri",
+    "servis_adi_en": "Personal Income Tax Brackets",
     "surum": "2026.10.08",
     "dosya_surumu": "1.0.0",
     "schema_surumu": "1.2.0",
     "onceki_surum": "2026.01.01",
     "guncelleme": "2026-10-08",
     "kaynak": "193 sayılı Gelir Vergisi Kanunu Madde 103 · Gelir Vergisi Genel Tebliği (Seri No: 332)",
+    "kaynak_en": "Income Tax Law No. 193, Article 103 · Income Tax General Communiqué (Serial No: 332)",
     "resmi_gazete": "33124 (5. Mükerrer) / 31.12.2025",
     "mevzuat_ref": [
-      { "tur": "kanun", "no": "193", "ad": "Gelir Vergisi Kanunu", "madde": "103" },
-      { "tur": "genel_teblig", "ad": "Gelir Vergisi Genel Tebliği (Seri No: 332)", "resmi_gazete_no": "33124", "mukerrer": 5, "tarih": "2025-12-31" }
+      { "tur": "kanun", "no": "193", "ad": "Gelir Vergisi Kanunu", "ad_en": "Income Tax Law", "madde": "103" },
+      { "tur": "genel_teblig", "ad": "Gelir Vergisi Genel Tebliği (Seri No: 332)", "ad_en": "Income Tax General Communiqué (Serial No: 332)", "resmi_gazete_no": "33124", "mukerrer": 5, "tarih": "2025-12-31" }
     ],
     "yayin_durumu": "yayinda",
     "katman": "ham",
@@ -27,19 +32,109 @@
     "checksum": null
   },
   "kayitlar": [
-    { "kod": "GV-UCRET-1", "kategori": "ucret", "matrah_alt_sinir_tl": 0.00,       "matrah_ust_sinir_tl": 190000.00,  "oran": 0.15, "sabit_vergi_tl": 0.00 },
-    { "kod": "GV-UCRET-2", "kategori": "ucret", "matrah_alt_sinir_tl": 190000.00,  "matrah_ust_sinir_tl": 400000.00,  "oran": 0.20, "sabit_vergi_tl": 28500.00 },
-    { "kod": "GV-UCRET-3", "kategori": "ucret", "matrah_alt_sinir_tl": 400000.00,  "matrah_ust_sinir_tl": 1500000.00, "oran": 0.27, "sabit_vergi_tl": 70500.00 },
-    { "kod": "GV-UCRET-4", "kategori": "ucret", "matrah_alt_sinir_tl": 1500000.00, "matrah_ust_sinir_tl": 5300000.00, "oran": 0.35, "sabit_vergi_tl": 367500.00 },
-    { "kod": "GV-UCRET-5", "kategori": "ucret", "matrah_alt_sinir_tl": 5300000.00, "matrah_ust_sinir_tl": null,       "oran": 0.40, "sabit_vergi_tl": 1697500.00 },
+    {
+      "kod": "GV-UCRET-1",
+      "kategori": "ucret",
+      "ad_tr": "Ücret Gelirleri — 1. Dilim (0 – 190.000 TL)",
+      "ad_en": "Wage Income — Tier 1 (0 – 190,000 TRY)",
+      "matrah_alt_sinir_tl": 0.00,
+      "matrah_ust_sinir_tl": 190000.00,
+      "oran": 0.15,
+      "sabit_vergi_tl": 0.00
+    },
+    {
+      "kod": "GV-UCRET-2",
+      "kategori": "ucret",
+      "ad_tr": "Ücret Gelirleri — 2. Dilim (190.000 – 400.000 TL)",
+      "ad_en": "Wage Income — Tier 2 (190,000 – 400,000 TRY)",
+      "matrah_alt_sinir_tl": 190000.00,
+      "matrah_ust_sinir_tl": 400000.00,
+      "oran": 0.20,
+      "sabit_vergi_tl": 28500.00
+    },
+    {
+      "kod": "GV-UCRET-3",
+      "kategori": "ucret",
+      "ad_tr": "Ücret Gelirleri — 3. Dilim (400.000 – 1.500.000 TL)",
+      "ad_en": "Wage Income — Tier 3 (400,000 – 1,500,000 TRY)",
+      "matrah_alt_sinir_tl": 400000.00,
+      "matrah_ust_sinir_tl": 1500000.00,
+      "oran": 0.27,
+      "sabit_vergi_tl": 70500.00
+    },
+    {
+      "kod": "GV-UCRET-4",
+      "kategori": "ucret",
+      "ad_tr": "Ücret Gelirleri — 4. Dilim (1.500.000 – 5.300.000 TL)",
+      "ad_en": "Wage Income — Tier 4 (1,500,000 – 5,300,000 TRY)",
+      "matrah_alt_sinir_tl": 1500000.00,
+      "matrah_ust_sinir_tl": 5300000.00,
+      "oran": 0.35,
+      "sabit_vergi_tl": 367500.00
+    },
+    {
+      "kod": "GV-UCRET-5",
+      "kategori": "ucret",
+      "ad_tr": "Ücret Gelirleri — 5. Dilim (5.300.000 TL üzeri)",
+      "ad_en": "Wage Income — Tier 5 (Above 5,300,000 TRY)",
+      "matrah_alt_sinir_tl": 5300000.00,
+      "matrah_ust_sinir_tl": null,
+      "oran": 0.40,
+      "sabit_vergi_tl": 1697500.00
+    },
 
-    { "kod": "GV-DIGER-1", "kategori": "diger", "matrah_alt_sinir_tl": 0.00,       "matrah_ust_sinir_tl": 190000.00,  "oran": 0.15, "sabit_vergi_tl": 0.00 },
-    { "kod": "GV-DIGER-2", "kategori": "diger", "matrah_alt_sinir_tl": 190000.00,  "matrah_ust_sinir_tl": 400000.00,  "oran": 0.20, "sabit_vergi_tl": 28500.00 },
-    { "kod": "GV-DIGER-3", "kategori": "diger", "matrah_alt_sinir_tl": 400000.00,  "matrah_ust_sinir_tl": 1000000.00, "oran": 0.27, "sabit_vergi_tl": 70500.00 },
-    { "kod": "GV-DIGER-4", "kategori": "diger", "matrah_alt_sinir_tl": 1000000.00, "matrah_ust_sinir_tl": 5300000.00, "oran": 0.35, "sabit_vergi_tl": 232500.00 },
-    { "kod": "GV-DIGER-5", "kategori": "diger", "matrah_alt_sinir_tl": 5300000.00, "matrah_ust_sinir_tl": null,       "oran": 0.40, "sabit_vergi_tl": 1737500.00 }
+    {
+      "kod": "GV-DIGER-1",
+      "kategori": "diger",
+      "ad_tr": "Diğer Gelirler — 1. Dilim (0 – 190.000 TL)",
+      "ad_en": "Other Income — Tier 1 (0 – 190,000 TRY)",
+      "matrah_alt_sinir_tl": 0.00,
+      "matrah_ust_sinir_tl": 190000.00,
+      "oran": 0.15,
+      "sabit_vergi_tl": 0.00
+    },
+    {
+      "kod": "GV-DIGER-2",
+      "kategori": "diger",
+      "ad_tr": "Diğer Gelirler — 2. Dilim (190.000 – 400.000 TL)",
+      "ad_en": "Other Income — Tier 2 (190,000 – 400,000 TRY)",
+      "matrah_alt_sinir_tl": 190000.00,
+      "matrah_ust_sinir_tl": 400000.00,
+      "oran": 0.20,
+      "sabit_vergi_tl": 28500.00
+    },
+    {
+      "kod": "GV-DIGER-3",
+      "kategori": "diger",
+      "ad_tr": "Diğer Gelirler — 3. Dilim (400.000 – 1.000.000 TL)",
+      "ad_en": "Other Income — Tier 3 (400,000 – 1,000,000 TRY)",
+      "matrah_alt_sinir_tl": 400000.00,
+      "matrah_ust_sinir_tl": 1000000.00,
+      "oran": 0.27,
+      "sabit_vergi_tl": 70500.00
+    },
+    {
+      "kod": "GV-DIGER-4",
+      "kategori": "diger",
+      "ad_tr": "Diğer Gelirler — 4. Dilim (1.000.000 – 5.300.000 TL)",
+      "ad_en": "Other Income — Tier 4 (1,000,000 – 5,300,000 TRY)",
+      "matrah_alt_sinir_tl": 1000000.00,
+      "matrah_ust_sinir_tl": 5300000.00,
+      "oran": 0.35,
+      "sabit_vergi_tl": 232500.00
+    },
+    {
+      "kod": "GV-DIGER-5",
+      "kategori": "diger",
+      "ad_tr": "Diğer Gelirler — 5. Dilim (5.300.000 TL üzeri)",
+      "ad_en": "Other Income — Tier 5 (Above 5,300,000 TRY)",
+      "matrah_alt_sinir_tl": 5300000.00,
+      "matrah_ust_sinir_tl": null,
+      "oran": 0.40,
+      "sabit_vergi_tl": 1737500.00
+    }
   ],
-  "notlar": [
+  "notlar_tr": [
     "Ücret gelirleri için ayrı, diğer gelirler için ayrı tarife uygulanır.",
     "İlk iki dilim (190.000 TL ve 400.000 TL) her iki tarife için ortaktır.",
     "Fark, 3. dilimden itibaren başlar.",
@@ -47,5 +142,14 @@
     "kategori='ucret' → ücret gelirleri tarifesi; kategori='diger' → ücret dışı gelirler tarifesi.",
     "matrah_ust_sinir_tl=null → en üst dilim (üst sınır yok).",
     "sabit_vergi_tl → bu dilime kadar olan kısmın toplam vergisi."
+  ],
+  "notlar_en": [
+    "A separate bracket schedule applies to wage income and to other income.",
+    "The first two brackets (190,000 TRY and 400,000 TRY) are common to both schedules.",
+    "The difference begins from the 3rd bracket onwards.",
+    "Due to the minimum wage exemption, minimum-wage employees pay no income tax throughout the year.",
+    "kategori='ucret' → wage income schedule; kategori='diger' → non-wage income schedule.",
+    "matrah_ust_sinir_tl=null → topmost bracket (no upper limit).",
+    "sabit_vergi_tl → cumulative tax on the portion up to this bracket."
   ]
 }
