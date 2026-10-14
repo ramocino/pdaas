@@ -37,7 +37,6 @@
   code,pre,.mono{font-family:var(--mono);font-size:.86em}
   button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 
-  /* ÜST BAR */
   .ust{
     height:60px;background:var(--sidebar);border-bottom:1px solid var(--line);
     display:flex;align-items:center;padding:0 20px;gap:14px;
@@ -51,10 +50,29 @@
   .marka b{font-size:.98rem;font-weight:700;letter-spacing:-.01em;line-height:1.1;display:block}
   .marka small{font-size:.72rem;color:var(--muted);font-weight:500}
 
-  /* ANA YERLEŞİM */
   .kap{max-width:1100px;margin:0 auto;padding:32px 24px 80px}
 
-  /* ARAMA KUTUSU */
+  /* UYARI BANDI */
+  .uyari-bant{
+    background:var(--amber-soft);color:var(--amber);
+    border:1px solid var(--amber);border-radius:var(--r-s);
+    padding:10px 14px;margin-bottom:16px;font-size:.85rem;line-height:1.5;
+  }
+  .uyari-bant b{color:var(--ink)}
+
+  /* YÜKLEME BANDI */
+  .yukleme-bant{
+    background:var(--accent-soft);color:var(--accent);
+    border-radius:var(--r-s);padding:10px 14px;margin-bottom:16px;
+    font-size:.85rem;display:flex;align-items:center;gap:10px;
+  }
+  .spin{
+    width:14px;height:14px;border:2px solid var(--accent);
+    border-top-color:transparent;border-radius:50%;
+    animation:don .8s linear infinite;
+  }
+  @keyframes don{to{transform:rotate(360deg)}}
+
   .arama-kap{
     background:var(--panel);border:1px solid var(--line);
     border-radius:var(--r);padding:20px;margin-bottom:24px;
@@ -92,7 +110,6 @@
   }
   .cip:not(.aktif) .sayi{background:var(--line);color:var(--soft)}
 
-  /* SONUÇ LİSTESİ */
   .sonuc-liste{display:flex;flex-direction:column;gap:8px}
   .sonuc-satir{
     background:var(--panel);border:1px solid var(--line);
@@ -125,15 +142,8 @@
     font-size:.78rem;color:var(--muted);
     background:var(--line-2);padding:1px 7px;border-radius:5px;
   }
-  .sonuc-metin .aciklama{
-    font-size:.82rem;color:var(--muted);
-    margin-top:6px;overflow:hidden;text-overflow:ellipsis;
-    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
-  }
 
-  .mini-rozet{
-    flex:none;display:flex;gap:5px;margin-top:2px;
-  }
+  .mini-rozet{flex:none;display:flex;gap:5px;margin-top:2px}
   .mini-rozet span{
     font-size:.68rem;font-weight:700;padding:3px 8px;
     border-radius:6px;white-space:nowrap;
@@ -142,11 +152,7 @@
   .mr-otv{background:var(--amber-soft);color:var(--amber)}
   .mr-kdv.sifir{background:var(--ok-soft);color:var(--ok)}
 
-  /* SEÇİLİ DETAY */
-  .detay-kap{
-    margin-top:32px;
-    animation:belir .25s ease;
-  }
+  .detay-kap{margin-top:32px;animation:belir .25s ease}
   @keyframes belir{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
   .detay-ust{
@@ -169,7 +175,6 @@
   }
   .kapat-btn:hover{background:var(--bad-soft);color:var(--bad)}
 
-  /* VERGİ KARTLARI */
   .vergi-ızgarası{
     display:grid;grid-template-columns:1fr 1fr;gap:14px;
     margin-bottom:22px;
@@ -208,7 +213,6 @@
     font-size:.82rem;color:var(--muted);line-height:1.6;
   }
 
-  /* GEREKÇE */
   .gerekce-kart{
     background:var(--panel);border:1px solid var(--line);
     border-radius:var(--r);padding:20px 22px;margin-bottom:22px;
@@ -231,7 +235,6 @@
     display:block;color:var(--muted);font-size:.8rem;margin-top:2px;
   }
 
-  /* GÜVEN */
   .guven-kart{
     background:var(--panel);border:1px solid var(--line);
     border-radius:var(--r);padding:16px 20px;
@@ -252,22 +255,16 @@
   }
   .guven-sayi{font-size:1.05rem;font-weight:800;flex:none;color:var(--ok)}
 
-  /* BOŞ DURUM */
-  .bos-durum{
-    text-align:center;padding:60px 20px;color:var(--muted);
-  }
+  .bos-durum{text-align:center;padding:60px 20px;color:var(--muted)}
   .bos-durum .ikon{
     width:80px;height:80px;border-radius:22px;
     background:var(--accent-soft);color:var(--accent);
     display:inline-grid;place-items:center;font-size:2.2rem;
     margin-bottom:22px;
   }
-  .bos-durum h3{
-    font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:8px;
-  }
+  .bos-durum h3{font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:8px}
   .bos-durum p{max-width:52ch;margin:0 auto;font-size:.92rem}
 
-  /* YARDIMCI */
   .yardim{
     font-size:.82rem;color:var(--soft);margin-top:8px;
     display:flex;gap:10px;flex-wrap:wrap;
@@ -291,7 +288,8 @@
 
 <div class="kap">
 
-  <!-- ARAMA -->
+  <div id="durum-alani"></div>
+
   <div class="arama-kap">
     <div class="arama-satir">
       <div class="arama-ikon">🔍</div>
@@ -322,7 +320,6 @@
     </div>
   </div>
 
-  <!-- SONUÇ LİSTESİ -->
   <div id="sonuc-alani">
     <div class="bos-durum">
       <div class="ikon">🏷️</div>
@@ -331,7 +328,6 @@
     </div>
   </div>
 
-  <!-- DETAY -->
   <div class="detay-kap" id="detay-kap" style="display:none"></div>
 
 </div>
@@ -341,10 +337,10 @@
 // 0. VERİ DEPOSU
 // =================================================================
 const VERI = {
-  gtip: { kayitlar: [], yuklendi: false },
-  isco: { kayitlar: [], yuklendi: false },
-  cpc:  { kayitlar: [], yuklendi: false },
-  nace: { kayitlar: [], yuklendi: false }
+  gtip: { kayitlar: [], yuklendi: false, hata:null },
+  isco: { kayitlar: [], yuklendi: false, hata:null },
+  cpc:  { kayitlar: [], yuklendi: false, hata:null },
+  nace: { kayitlar: [], yuklendi: false, hata:null }
 };
 let KDV_DATA = null;
 let OTV_DATA = null;
@@ -361,55 +357,101 @@ const kacis = s => String(s ?? '').replace(/[&<>"']/g, c => (
 ));
 const tr_lower = s => String(s ?? '').toLocaleLowerCase('tr-TR');
 const sayi = n => (n == null ? '—' : Number(n).toLocaleString('tr-TR'));
-
-// Kod normalizasyonu: "01.11.07" → "011107", "6105.10.00" → "6105.10.00"
-function normKod(k){
-  return String(k ?? '').trim().replace(/\s+/g,'');
-}
-function kodTemiz(k){
-  return normKod(k).replace(/\./g,'');
-}
+const normKod = k => String(k ?? '').trim().replace(/\s+/g,'');
+const kodTemiz = k => normKod(k).replace(/\./g,'');
 
 // =================================================================
-// 2. VERİ YÜKLE
+// 2. VERİ YÜKLE  (çoklu bakanlık yolunu dener)
 // =================================================================
-async function dosyaYukle(yol){
+async function fetchJSON(yol){
   try{
-    const r = await fetch(yol, { headers:{Accept:'application/json'} });
-    if(!r.ok) return null;
-    return await r.json();
-  }catch(e){ return null; }
+    const r = await fetch(yol, { headers:{Accept:'application/json'}, cache:'no-store' });
+    if(!r.ok){
+      return { ok:false, status:r.status, yol };
+    }
+    const j = await r.json();
+    return { ok:true, data:j, yol };
+  }catch(e){
+    return { ok:false, status:0, yol, hata:e.message };
+  }
+}
+
+// Birden fazla yolu sırayla dener; ilk başarılıyı döner
+async function ilkBasari(yollar){
+  for(const y of yollar){
+    const r = await fetchJSON(y);
+    if(r.ok && r.data) return { ...r, denenen:yollar };
+  }
+  return { ok:false, data:null, yol:yollar[0], denenen:yollar };
 }
 
 async function tumVeriYukle(){
-  const [gtip, isco, cpc, nace, kdv, otv, integ] = await Promise.all([
-    dosyaYukle('/api/v1/tb/gtip-kodlari'),
-    dosyaYukle('/api/v1/csgb/isco-kodlari'),
-    dosyaYukle('/api/v1/tb/cpc-kodlari'),
-    dosyaYukle('/api/v1/hvmb/nace-kodlari'),
-    dosyaYukle('/api/v1/hmb/kdv-oranlari'),
-    dosyaYukle('/api/v1/hmb/otv-oranlari'),
-    dosyaYukle('/api/v1/genel/kod-entegrasyon')   // dosya ham/ kökündeyse
-  ]);
+  const durum = $('durum-alani');
+  durum.innerHTML = `
+    <div class="yukleme-bant">
+      <div class="spin"></div>
+      <span>Veri kaynakları yükleniyor…</span>
+    </div>`;
 
-  if(gtip?.kayitlar){ VERI.gtip.kayitlar = gtip.kayitlar; VERI.gtip.yuklendi = true; }
-  if(isco?.kayitlar){ VERI.isco.kayitlar = isco.kayitlar; VERI.isco.yuklendi = true; }
-  if(cpc?.kayitlar){  VERI.cpc.kayitlar  = cpc.kayitlar;  VERI.cpc.yuklendi  = true; }
-  if(nace?.kayitlar){ VERI.nace.kayitlar = nace.kayitlar; VERI.nace.yuklendi = true; }
-  KDV_DATA  = kdv;
-  OTV_DATA  = otv;
-  KOD_INTEG = integ;
+  // Her kaynak için olası yollar (bakanlık öneki değişebilir)
+  const gorevler = {
+    gtip:  ['/api/v1/tb/gtip-kodlari',  '/api/v1/genel/gtip-kodlari'],
+    isco:  ['/api/v1/csgb/isco-kodlari','/api/v1/genel/isco-kodlari'],
+    cpc:   ['/api/v1/tb/cpc-kodlari',   '/api/v1/genel/cpc-kodlari'],
+    nace:  ['/api/v1/hvmb/nace-kodlari','/api/v1/tb/nace-kodlari', '/api/v1/genel/nace-kodlari'],
+    kdv:   ['/api/v1/hvmb/kdv-oranlari','/api/v1/hmb/kdv-oranlari'],
+    otv:   ['/api/v1/hvmb/otv-oranlari','/api/v1/hmb/otv-oranlari'],
+    integ: ['/api/v1/genel/kod-entegrasyon', '/api/v1/tb/kod-entegrasyon', '/api/v1/hvmb/kod-entegrasyon']
+  };
+
+  const anahtarlar = Object.keys(gorevler);
+  const sonuclar = await Promise.all(anahtarlar.map(k => ilkBasari(gorevler[k])));
+
+  const eksik = [];
+  const loglar = [];
+
+  anahtarlar.forEach((anahtar, i) => {
+    const r = sonuclar[i];
+    if(r.ok && r.data){
+      if(anahtar === 'kdv')  KDV_DATA  = r.data;
+      if(anahtar === 'otv')  OTV_DATA  = r.data;
+      if(anahtar === 'integ') KOD_INTEG = r.data;
+      if(VERI[anahtar]){
+        VERI[anahtar].kayitlar = r.data.kayitlar || r.data.kurallar || [];
+        VERI[anahtar].yuklendi = true;
+      }
+      const adet = (r.data.kayitlar || r.data.kurallar || []).length;
+      loglar.push(`${anahtar.toUpperCase()} ✓ ${r.yol} (${adet} kayıt)`);
+    }else{
+      eksik.push(anahtar);
+      loglar.push(`${anahtar.toUpperCase()} ✗ ${gorevler[anahtar].join(' | ')}`);
+    }
+  });
+
+  console.log('%c[PDaaS] Veri yükleme raporu', 'font-weight:bold');
+  loglar.forEach(l => console.log('  ' + l));
+
+  if(eksik.length){
+    durum.innerHTML = `
+      <div class="uyari-bant">
+        ⚠️ <b>${eksik.length}</b> kaynak yüklenemedi: <b>${eksik.join(', ')}</b>.
+        Tarayıcı konsolunda (<code>F12</code>) hangi URL'lerin başarısız olduğunu görebilirsiniz.
+        <code>https://pdaas.com.tr/api/v1/katalog</code> adresinden geçerli endpoint'leri listeleyin.
+      </div>`;
+  }else{
+    durum.innerHTML = '';
+  }
 
   sayilariGuncelle();
 }
 
 function sayilariGuncelle(){
-  const toplam = (v)=> v.kayitlar.length;
-  $('sayi-hepsi').textContent = sayi(toplam(VERI.gtip)+toplam(VERI.isco)+toplam(VERI.cpc)+toplam(VERI.nace));
-  $('sayi-gtip').textContent  = sayi(toplam(VERI.gtip));
-  $('sayi-isco').textContent  = sayi(toplam(VERI.isco));
-  $('sayi-cpc').textContent   = sayi(toplam(VERI.cpc));
-  $('sayi-nace').textContent  = sayi(toplam(VERI.nace));
+  const t = v => v.kayitlar.length;
+  $('sayi-hepsi').textContent = sayi(t(VERI.gtip)+t(VERI.isco)+t(VERI.cpc)+t(VERI.nace));
+  $('sayi-gtip').textContent  = sayi(t(VERI.gtip));
+  $('sayi-isco').textContent  = sayi(t(VERI.isco));
+  $('sayi-cpc').textContent   = sayi(t(VERI.cpc));
+  $('sayi-nace').textContent  = sayi(t(VERI.nace));
 }
 
 // =================================================================
@@ -436,27 +478,22 @@ function kaynaklariTara(q, filtre){
       const seviye = tr_lower(k.seviye_adi || '');
 
       let skor = 0;
-      if(kod === q || kodT === sorguTemiz) skor = 100;              // Tam eşleşme
-      else if(kod.startsWith(q)) skor = 90;                          // Kod başlangıç
+      if(kod === q || kodT === sorguTemiz) skor = 100;
+      else if(kod.startsWith(q)) skor = 90;
       else if(kodT.startsWith(sorguTemiz)) skor = 85;
-      else if(ad.startsWith(sorgu)) skor = 70;                       // Ad başlangıç
-      else if(ad.includes(sorgu)) skor = 50;                        // Ad içinde
-      else if(ad2.includes(sorgu)) skor = 30;                       // İngilizce ad
+      else if(ad.startsWith(sorgu)) skor = 70;
+      else if(ad.includes(sorgu)) skor = 50;
+      else if(ad2.includes(sorgu)) skor = 30;
       else if(seviye.includes(sorgu)) skor = 20;
       else if(kod.includes(q)) skor = 40;
 
-      if(skor > 0){
-        sonuclar.push({ kaynak:kaynakTip, kayit:k, skor });
-      }
+      if(skor > 0) sonuclar.push({ kaynak:kaynakTip, kayit:k, skor });
     }
   }
 
-  // Skora göre sırala; eşit skorda kod kısası önce
   sonuclar.sort((a,b) => {
     if(b.skor !== a.skor) return b.skor - a.skor;
-    const ka = normKod(a.kayit.kod).length;
-    const kb = normKod(b.kayit.kod).length;
-    return ka - kb;
+    return normKod(a.kayit.kod).length - normKod(b.kayit.kod).length;
   });
 
   return sonuclar.slice(0, 40);
@@ -465,45 +502,43 @@ function kaynaklariTara(q, filtre){
 // =================================================================
 // 4. KDV & ÖTV KARAR MOTORU
 // =================================================================
-function kdvBul(gtipKod, cpcKod, naceKod, iscoKod, urunAdi, islemTipi){
-  // 1) İstisnalar
+function kdvBul({ gtipKod, cpcKod, naceKod, iscoKod, islemTipi }){
+  // İstisnalar
   if(islemTipi === 'ihracat'){
-    return { kod:'KDV-00', oran:0, ad:'Sıfır Oran', gerekce:'İhracat teslimleri KDV\'den istisnadır (KDVK md.11).', guven:0.98 };
+    return { kod:'KDV-00', oran:0, ad:'Sıfır Oran',
+             gerekce:'İhracat teslimleri KDV\'den istisnadır (KDVK md.11).', guven:0.98 };
   }
-  if(naceKod && (naceKod.startsWith('64') || naceKod.startsWith('65') || naceKod.startsWith('66'))){
-    return { kod:'KDV-MUAF', oran:null, ad:'KDV\'den İstisna', gerekce:'Finans ve sigorta işlemleri KDV\'den istisnadır (KDVK md.17/4-e).', guven:0.95 };
+  if(naceKod && /^(64|65|66)/.test(kodTemiz(naceKod))){
+    return { kod:'KDV-MUAF', oran:null, ad:'KDV\'den İstisna',
+             gerekce:'Finans ve sigorta işlemleri KDV\'den istisnadır (KDVK md.17/4-e).', guven:0.95 };
   }
 
-  // 2) Kaydın kendi kdv_kodu varsa onu kullan
-  // (bu fonksiyon dışarıdan kayit.kdv_kodu ile çağrılabilir)
-
-  // 3) Kod entegrasyon kuralları
-  if(KOD_INTEG?.kurallar){
-    for(const k of KOD_INTEG.kurallar){
+  // Kod entegrasyon kuralları — API "kurallar" listesini "kayitlar" olarak döner
+  const kurallar = KOD_INTEG?.kayitlar || KOD_INTEG?.kurallar || [];
+  if(kurallar.length){
+    for(const k of kurallar){
       if(k.oncelik === 99) continue; // varsayılan en sona
-      const gtipEsles = gtipKod && k.gtip_prefix?.some(p => kodTemiz(gtipKod).startsWith(kodTemiz(p)));
-      const cpcEsles  = cpcKod  && k.cpc_prefix?.some(p => kodTemiz(cpcKod).startsWith(kodTemiz(p)));
-      const naceEsles = naceKod && k.nace_prefix?.some(p => kodTemiz(naceKod).startsWith(kodTemiz(p)));
-      const iscoEsles = iscoKod && k.isco_prefix?.some(p => kodTemiz(iscoKod).startsWith(kodTemiz(p)));
+      const gE = gtipKod && k.gtip_prefix?.some(p => kodTemiz(gtipKod).startsWith(kodTemiz(p)));
+      const cE = cpcKod  && k.cpc_prefix ?.some(p => kodTemiz(cpcKod ).startsWith(kodTemiz(p)));
+      const nE = naceKod && k.nace_prefix?.some(p => kodTemiz(naceKod).startsWith(kodTemiz(p)));
+      const iE = iscoKod && k.isco_prefix?.some(p => kodTemiz(iscoKod).startsWith(kodTemiz(p)));
 
-      if(gtipEsles || cpcEsles || naceEsles || iscoEsles){
+      if(gE || cE || nE || iE){
         return {
-          kod:k.kdv_kodu,
-          oran:oranBul(k.kdv_kodu),
+          kod: k.kdv_kodu,
+          oran: oranBul(k.kdv_kodu),
           ad: kdvAd(k.kdv_kodu),
-          gerekce:`Kod eşleşmesi "${k.aciklama}" kuralına uyuyor.`,
-          guven:0.90
+          gerekce: `Kod eşleşmesi: "${k.aciklama}" kuralına (${k.kod}) uyuyor.`,
+          guven: 0.90
         };
       }
     }
   }
 
-  // 4) Varsayılan
-  return {
-    kod:'KDV-01', oran:0.20, ad:'Genel Oran',
-    gerekce:'Özel oran uygulanmayan mal ve hizmetler için genel KDV oranı %20\'dir.',
-    guven:0.65
-  };
+  // Varsayılan
+  return { kod:'KDV-01', oran:0.20, ad:'Genel Oran',
+           gerekce:'Özel oran uygulanmayan mal ve hizmetler için genel KDV oranı %20\'dir.',
+           guven:0.65 };
 }
 
 function oranBul(kdvKodu){
@@ -517,35 +552,65 @@ function kdvAd(kdvKodu){
   return k ? k.aciklama : kdvKodu;
 }
 
+// ÖTV: önce OTV_DATA.kayitlar üzerinden GTİP prefix eşleşmesi,
+//      bulunamazsa hardcoded liste fallback.
 function otvBul(gtipKod, matrah){
   if(!gtipKod) return null;
   const gt = kodTemiz(gtipKod);
 
-  // I - Petrol
-  if(['2710','2711','2902','2905'].some(p => gt.startsWith(p))){
+  // 1) Dinamik veri
+  if(OTV_DATA?.kayitlar?.length){
+    for(const k of OTV_DATA.kayitlar){
+      const pref = k.gtip_prefix || [];
+      if(!pref.some(p => gt.startsWith(kodTemiz(p)))) continue;
+
+      let oran = k.oran ?? null;
+      // Matrah dilimi varsa uygula
+      if(k.matrah_dilimleri && Array.isArray(k.matrah_dilimleri)){
+        const m = Number(matrah) || 0;
+        for(const d of k.matrah_dilimleri){
+          const alt = d.min_matrah ?? 0;
+          const ust = d.max_matrah ?? Infinity;
+          if(m >= alt && m <= ust){ oran = d.oran; break; }
+        }
+      }
+      return {
+        kod: k.kod,
+        liste: k.liste,
+        ad: `${k.liste} Sayılı Liste — ${k.ad}`,
+        tip: k.vergi_tipi,
+        oran,
+        aciklama: `${k.ad} kapsamında ÖTV uygulanır.` +
+                  (k.vergi_tipi === 'maktu' ? ' Maktu vergi uygulanır.' : '')
+      };
+    }
+  }
+
+  // 2) Hardcoded fallback (kayıt yoksa)
+  if(['2710','2711','2902','2905'].some(p => gt.startsWith(p)))
     return { kod:'OTV-I', ad:'I Sayılı Liste — Petrol Ürünleri', tip:'maktu',
              aciklama:'Akaryakıt/doğal gaz/solvent için maktu ÖTV uygulanır.' };
-  }
-  // II - Otomobil
   if(gt.startsWith('8703')){
-    const m = matrah || 0;
-    let oran;
-    if(m <= 85000) oran = 0.45;
-    else if(m <= 130000) oran = 0.50;
-    else oran = 0.80;
+    const m = Number(matrah) || 0;
+    let oran = m <= 85000 ? 0.45 : m <= 130000 ? 0.50 : 0.80;
     return { kod:'OTV-II', ad:'II Sayılı Liste — Otomobil', tip:'oran', oran,
              aciklama:`Matrah ${sayi(m)} TL → ÖTV %${(oran*100).toFixed(0)}.` };
   }
-  // III - Alkol/Tütün
-  if(['2203','2204','2205','2206','2208','2402','2403'].some(p => gt.startsWith(p))){
+  if(gt.startsWith('8711')){
+    const m = Number(matrah) || 0;
+    let oran = m <= 50000 ? 0.37 : 0.60;
+    return { kod:'OTV-II', ad:'II Sayılı Liste — Motosiklet', tip:'oran', oran,
+             aciklama:`Matrah ${sayi(m)} TL → ÖTV %${(oran*100).toFixed(0)}.` };
+  }
+  if(['2203','2204','2205','2206','2208','2402','2403'].some(p => gt.startsWith(p)))
     return { kod:'OTV-III', ad:'III Sayılı Liste — Alkollü İçecek/Tütün', tip:'karma',
              aciklama:'Oran + asgari maktu vergi uygulanır.' };
-  }
-  // IV - Lüks
-  if(['4303','7113','7114','8418','8450','8508','8516','8802','8903'].some(p => gt.startsWith(p))){
+  if(['4303','7113','7114','8802','8903'].some(p => gt.startsWith(p)))
     return { kod:'OTV-IV', ad:'IV Sayılı Liste — Lüks Ürün', tip:'oran', oran:0.20,
              aciklama:'ÖTV IV sayılı liste kapsamındadır (%20).' };
-  }
+  if(['8418','8450','8508','8516'].some(p => gt.startsWith(p)))
+    return { kod:'OTV-IV', ad:'IV Sayılı Liste — Elektrikli Ev Aleti', tip:'oran', oran:0.065,
+             aciklama:'ÖTV IV sayılı liste kapsamındadır (%6,5).' };
   return null;
 }
 
@@ -565,8 +630,6 @@ function sonuclariCiz(sonuclar){
     `;
     return;
   }
-
-  const kaynakAd = { gtip:'GTİP', isco:'ISCO', cpc:'CPC', nace:'NACE' };
 
   alan.innerHTML = `
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding:0 4px;">
@@ -591,27 +654,24 @@ function sonuclariCiz(sonuclar){
   });
 }
 
-function sonucKartHTML(s, idx){
+function sonucKartHTML(s){
   const { kaynak, kayit } = s;
   const kod = normKod(kayit.kod);
   const ad  = kayit.tanim_tr || kayit.ad || '—';
   const seviye = kayit.seviye_adi ? `<code>${kacis(kayit.seviye_adi)}</code>` : '';
   const kaynakAd = { gtip:'GTİP', isco:'ISCO', cpc:'CPC', nace:'NACE' }[kaynak];
 
-  // Mini KDV/ÖTV önizleme
-  const kdvKod = kayit.kdv_kodu || null;
-  const otvKod = kayit.otv_kodu || null;
-
+  // Mini rozet: kaydın KDV kodu varsa oradan, yoksa gösterilmez
   let mini = '';
-  if(kdvKod){
-    const oran = oranBul(kdvKod);
+  if(kayit.kdv_kodu){
+    const oran = oranBul(kayit.kdv_kodu);
     const cls = oran === 0 ? 'mr-kdv sifir' : 'mr-kdv';
     mini += `<span class="${cls}">KDV ${oran !== null ? '%'+(oran*100).toFixed(0) : 'İstisna'}</span>`;
   }
-  if(otvKod) mini += `<span class="mr-otv">ÖTV</span>`;
+  if(kayit.otv_kodu) mini += `<span class="mr-otv">ÖTV</span>`;
 
   return `
-    <div class="sonuc-satir" data-idx="${idx}">
+    <div class="sonuc-satir">
       <span class="kaynak-etiket kaynak-${kaynak}">${kaynakAd}</span>
       <div class="sonuc-metin">
         <b>${kacis(ad)}</b>
@@ -631,44 +691,40 @@ function detayGoster(s){
   AKTIF_KAYIT = s;
   const kod = normKod(kayit.kod);
   const ad  = kayit.tanim_tr || kayit.ad || '—';
-
   const kaynakAd = { gtip:'GTİP', isco:'ISCO', cpc:'CPC', nace:'NACE' }[kaynak];
 
   // KDV kararı
-  const kdvKodKayit = kayit.kdv_kodu || null;
   let kdv;
-  if(kdvKodKayit){
+  if(kayit.kdv_kodu){
     kdv = {
-      kod: kdvKodKayit,
-      oran: oranBul(kdvKodKayit),
-      ad: kdvAd(kdvKodKayit),
-      gerekce:`"${ad}" kaydının katalogunda tanımlı KDV kodu: ${kdvKodKayit}.`,
-      guven:0.95
+      kod: kayit.kdv_kodu,
+      oran: oranBul(kayit.kdv_kodu),
+      ad: kdvAd(kayit.kdv_kodu),
+      gerekce: `"${ad}" kaydının kataloğunda tanımlı KDV kodu: ${kayit.kdv_kodu}.`,
+      guven: 0.95
     };
   }else{
-    // kod entegrasyon / varsayılan
-    kdv = kdvBul(
-      kaynak === 'gtip' ? kod : null,
-      kaynak === 'cpc'  ? kod : null,
-      kaynak === 'nace' ? kod : null,
-      kaynak === 'isco' ? kod : null,
-      ad,
-      'satis'
-    );
+    kdv = kdvBul({
+      gtipKod: kaynak === 'gtip' ? kod : null,
+      cpcKod:  kaynak === 'cpc'  ? kod : null,
+      naceKod: kaynak === 'nace' ? kod : null,
+      iscoKod: kaynak === 'isco' ? kod : null,
+      islemTipi: 'satis'
+    });
   }
 
-  // ÖTV kararı
-  const otv = otvBul(
-    kaynak === 'gtip' ? kod : (kayit.otv_kodu ? kod : null),
-    0
-  ) || (kayit.otv_kodu ? { kod:kayit.otv_kodu, ad:'ÖTV uygulanır', tip:'oran', aciklama:'İlgili ÖTV listesine tabidir.' } : null);
+  // ÖTV kararı — yalnızca GTİP için anlamlı
+  const otv = otvBul(kaynak === 'gtip' ? kod : null, 0)
+           || (kayit.otv_kodu
+                ? { kod:kayit.otv_kodu, ad:'ÖTV uygulanır', tip:'oran',
+                    aciklama:'İlgili ÖTV listesine tabidir.' }
+                : null);
 
-  // KDV sınıfı
+  // Sınıflar
   let kdvSinif = 'kdv', kdvOranSinif = 'accent';
-  if(kdv.oran === 0.01){ kdvOranSinif = 'ok'; }
-  else if(kdv.oran === 0.10){ kdvOranSinif = 'amber'; }
-  else if(kdv.oran === 0.20){ kdvOranSinif = ''; }
-  else if(kdv.oran === 0 || kdv.kod === 'KDV-00'){ kdvSinif += ' istisna'; kdvOranSinif = 'ok'; }
+  if(kdv.oran === 0.01) kdvOranSinif = 'ok';
+  else if(kdv.oran === 0.10) kdvOranSinif = 'amber';
+  else if(kdv.oran === 0) { kdvSinif += ' istisna'; kdvOranSinif = 'ok'; }
   else if(kdv.kod === 'KDV-MUAF'){ kdvSinif += ' istisna'; kdvOranSinif = 'ok'; }
 
   const kdvOranMetin = kdv.oran === null ? 'İstisna'
@@ -691,7 +747,6 @@ function detayGoster(s){
       <button class="kapat-btn" title="Kapat" id="kapat-btn">✕</button>
     </div>
 
-    <!-- VERGİ KARTLARI -->
     <div class="vergi-ızgarası">
       <div class="vergi-kart ${kdvSinif}">
         <div class="vk-baslik"><span>KDV Oranı</span><span>${kdv.kod}</span></div>
@@ -704,7 +759,8 @@ function detayGoster(s){
         <div class="vergi-kart otv">
           <div class="vk-baslik"><span>ÖTV</span><span>${otv.kod}</span></div>
           <div class="vk-oran amber">
-            ${otv.oran != null ? '%' + (otv.oran*100).toFixed(0) : (otv.tip === 'maktu' ? 'Maktu' : 'Karma')}
+            ${otv.oran != null ? '%' + (otv.oran*100).toFixed(1).replace(/\.0$/,'')
+                                : (otv.tip === 'maktu' ? 'Maktu' : 'Karma')}
           </div>
           <div class="vk-ad"><strong>${kacis(otv.ad)}</strong></div>
           <div class="vk-detay">${kacis(otv.aciklama)}</div>
@@ -718,7 +774,6 @@ function detayGoster(s){
       `}
     </div>
 
-    <!-- GEREKÇE -->
     <div class="gerekce-kart">
       <h3>📋 Karar Gerekçesi</h3>
       <ul>
@@ -744,7 +799,6 @@ function detayGoster(s){
       </ul>
     </div>
 
-    <!-- GÜVEN -->
     <div class="guven-kart">
       <span class="guven-baslik">Güven Skoru</span>
       <div class="guven-bar">
@@ -785,8 +839,7 @@ $('filtreler').addEventListener('click', (e) => {
   AKTIF_FILTRE = btn.dataset.tip;
   const q = $('arama').value.trim();
   if(q){
-    const sonuclar = kaynaklariTara(q, AKTIF_FILTRE);
-    sonuclariCiz(sonuclar);
+    sonuclariCiz(kaynaklariTara(q, AKTIF_FILTRE));
     $('detay-kap').style.display = 'none';
   }
 });
