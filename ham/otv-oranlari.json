@@ -3,12 +3,27 @@
     "bakanlik": "hvmb",
     "bakanlik_adi": "T.C. Hazine ve Maliye Bakanlığı",
     "birim": "Gelir İdaresi Başkanlığı (GİB)",
+    "yayinci": "T.C. Hazine ve Maliye Bakanlığı",
     "servis_kodu": "otv-oranlari",
     "servis_adi": "Özel Tüketim Vergisi Oranları",
     "surum": "2026.10.08",
+    "dosya_surumu": "1.0.0",
+    "schema_surumu": "1.2.0",
+    "onceki_surum": null,
+    "guncelleme": "2026-10-08",
     "kaynak": "4760 sayılı ÖTV Kanunu eki (I), (II), (III) ve (IV) sayılı listeler",
+    "resmi_gazete": null,
+    "mevzuat_ref": [
+      { "tur": "kanun", "no": "4760" }
+    ],
+    "yayin_durumu": "yayinda",
+    "katman": "ham",
+    "tip": "liste",
     "join": "kod",
-    "tip": "liste"
+    "zaman_bazli": false,
+    "gecerlilik_baslangic": null,
+    "gecerlilik_bitis": null,
+    "checksum": null
   },
   "listeler": {
     "I": {
@@ -166,5 +181,147 @@
         }
       ]
     }
-  }
+  },
+  "kayitlar": [
+    {
+      "kod": "OTV-I-A",
+      "liste": "I",
+      "ad": "Akaryakıt Ürünleri",
+      "gtip_prefix": ["2710"],
+      "vergi_tipi": "maktu",
+      "birim": "Litre",
+      "ornekler": ["Benzin", "Motorin", "Gazyağı", "Fuel Oil"]
+    },
+    {
+      "kod": "OTV-I-B",
+      "liste": "I",
+      "ad": "LPG ve Doğal Gaz",
+      "gtip_prefix": ["2711"],
+      "vergi_tipi": "maktu",
+      "birim": "Kg / m³",
+      "ornekler": ["LPG", "Doğal Gaz", "Bütan", "Propan"]
+    },
+    {
+      "kod": "OTV-I-C",
+      "liste": "I",
+      "ad": "Solventler",
+      "gtip_prefix": ["2902", "2905"],
+      "vergi_tipi": "maktu",
+      "birim": "Litre",
+      "ornekler": ["Toluen", "Ksilen", "Metanol"]
+    },
+    {
+      "kod": "OTV-II-A",
+      "liste": "II",
+      "ad": "Otomobiller (1600 cm³'e kadar)",
+      "gtip_prefix": ["8703"],
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        { "max_matrah": 85000, "oran": 0.45 },
+        { "min_matrah": 85000, "max_matrah": 130000, "oran": 0.50 },
+        { "min_matrah": 130000, "oran": 0.80 }
+      ]
+    },
+    {
+      "kod": "OTV-II-B",
+      "liste": "II",
+      "ad": "Otomobiller (1600-2000 cm³)",
+      "gtip_prefix": ["8703"],
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        { "max_matrah": 135000, "oran": 0.50 },
+        { "min_matrah": 135000, "max_matrah": 170000, "oran": 0.80 },
+        { "min_matrah": 170000, "oran": 1.30 }
+      ]
+    },
+    {
+      "kod": "OTV-II-C",
+      "liste": "II",
+      "ad": "Otomobiller (2000 cm³ üzeri)",
+      "gtip_prefix": ["8703"],
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        { "max_matrah": 170000, "oran": 1.30 },
+        { "min_matrah": 170000, "oran": 2.20 }
+      ]
+    },
+    {
+      "kod": "OTV-II-D",
+      "liste": "II",
+      "ad": "Elektrikli Otomobiller",
+      "gtip_prefix": ["8703"],
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        { "max_matrah": 1250000, "oran": 0.25 },
+        { "min_matrah": 1250000, "oran": 0.60 }
+      ]
+    },
+    {
+      "kod": "OTV-II-E",
+      "liste": "II",
+      "ad": "Motosikletler",
+      "gtip_prefix": ["8711"],
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        { "max_matrah": 50000, "oran": 0.37 },
+        { "min_matrah": 50000, "oran": 0.60 }
+      ]
+    },
+    {
+      "kod": "OTV-III-A",
+      "liste": "III",
+      "ad": "Alkollü İçecekler",
+      "gtip_prefix": ["2203", "2204", "2205", "2206", "2208"],
+      "vergi_tipi": "karma",
+      "ornekler": ["Bira", "Şarap", "Rakı", "Viski", "Votka"]
+    },
+    {
+      "kod": "OTV-III-B",
+      "liste": "III",
+      "ad": "Tütün Mamulleri",
+      "gtip_prefix": ["2402", "2403"],
+      "vergi_tipi": "karma",
+      "ornekler": ["Sigara", "Puro", "Sigarillo", "Enfiye", "Çiğneme tütünü"],
+      "guncel_oranlar": [
+        { "gtip": "2402.20", "mal_ismi": "Tütün içeren sigaralar", "oran": 0.42, "asgari_maktu": 2.2953, "maktu": 23.7404 },
+        { "gtip": "2403.99.10.00.00", "mal_ismi": "Enfiye ve çiğnemeye mahsus tütün", "oran": 0.42, "asgari_maktu": 2.2953, "maktu": 23.7404 }
+      ]
+    },
+    {
+      "kod": "OTV-IV-A",
+      "liste": "IV",
+      "ad": "Kürk ve Mücevher",
+      "gtip_prefix": ["4303", "7113", "7114"],
+      "vergi_tipi": "oran",
+      "oran": 0.20,
+      "ornekler": ["Kürk giysi", "Altın takı", "Pırlanta", "Mücevher"]
+    },
+    {
+      "kod": "OTV-IV-B",
+      "liste": "IV",
+      "ad": "Bazı Elektrikli Ev Aletleri",
+      "gtip_prefix": ["8418", "8450", "8508", "8516"],
+      "vergi_tipi": "oran",
+      "oran": 0.065,
+      "ornekler": ["Buzdolabı", "Çamaşır makinesi", "Elektrikli süpürge", "Mikrodalga fırın"]
+    },
+    {
+      "kod": "OTV-IV-C",
+      "liste": "IV",
+      "ad": "Uçak ve Helikopter",
+      "gtip_prefix": ["8802"],
+      "vergi_tipi": "oran",
+      "oran": 0.20,
+      "ornekler": ["Uçak", "Helikopter", "Planör"]
+    },
+    {
+      "kod": "OTV-IV-D",
+      "liste": "IV",
+      "ad": "Yat ve Tekneler",
+      "gtip_prefix": ["8903"],
+      "vergi_tipi": "oran",
+      "oran": 0.20,
+      "ornekler": ["Yat", "Tekne", "Sürat teknesi"]
+    }
+  ]
 }
