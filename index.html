@@ -18,33 +18,23 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            brand: {
-              50: '#eef2ff', 100: '#e0e7ff', 500: '#6366f1',
-              600: '#4f46e5', 700: '#4338ca', 900: '#312e81',
-            }
+            brand: { 50:'#eef2ff',100:'#e0e7ff',500:'#6366f1',600:'#4f46e5',700:'#4338ca',900:'#312e81' }
           }
         }
       }
     }
   </script>
-
   <style>
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: rgba(156, 163, 175, 0.3); border-radius: 99px; }
     ::-webkit-scrollbar-thumb:hover { background: rgba(156, 163, 175, 0.5); }
-
-    .glass-panel {
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-
+    .glass-panel { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
     .j-key { color: #38bdf8; font-weight: 500; }
     .j-str { color: #a5f3fc; }
     .j-num { color: #fbbf24; }
     .j-kw  { color: #f472b6; font-weight: 600; }
     .j-punct { color: #94a3b8; }
-
     .light .j-key { color: #0284c7; }
     .light .j-str { color: #0f766e; }
     .light .j-num { color: #d97706; }
@@ -60,13 +50,12 @@
       <button id="btn-mobile-menu" type="button" class="lg:hidden p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition" aria-label="Menü">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
-
       <div class="flex items-center gap-3 cursor-pointer" id="btn-logo">
         <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center font-extrabold text-white text-lg shadow-lg shadow-brand-500/30">P</div>
         <div>
           <div class="flex items-center gap-2">
             <span class="font-extrabold text-base tracking-tight text-white">PDaaS</span>
-            <span class="text-[10px] font-bold uppercase tracking-wider bg-brand-500/20 text-brand-400 px-2 py-0.5 rounded-full border border-brand-500/30">v13 API</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-brand-500/20 text-brand-400 px-2 py-0.5 rounded-full border border-brand-500/30">v14 API</span>
           </div>
           <p class="text-xs text-slate-400 font-medium" data-i18n="portal_alt">Parametrik Veri Servisi Portalı</p>
         </div>
@@ -88,12 +77,10 @@
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         <span data-i18n="system_active">Sistem Aktif</span>
       </div>
-
       <button id="btn-theme-toggle" type="button" class="p-2 text-slate-400 hover:text-white rounded-xl hover:bg-slate-800 border border-transparent hover:border-slate-700 transition" title="Theme">
         <svg id="theme-icon-dark" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
         <svg id="theme-icon-light" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
       </button>
-
       <div class="flex items-center bg-slate-800 p-1 rounded-xl border border-slate-700/60 text-xs font-semibold">
         <button id="lang-tr" type="button" class="px-2.5 py-1 rounded-lg bg-brand-600 text-white transition">TR</button>
         <button id="lang-en" type="button" class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition">EN</button>
@@ -103,7 +90,6 @@
 
   <!-- MAIN -->
   <div class="flex-1 flex overflow-hidden relative">
-
     <aside id="sidebar" class="w-80 lg:w-88 bg-slate-900 border-r border-slate-800 flex flex-col fixed lg:static inset-y-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
       <div class="p-4 border-b border-slate-800 space-y-3">
         <div class="flex items-center justify-between">
@@ -113,7 +99,6 @@
           </h2>
           <span id="catalog-count-badge" class="px-2 py-0.5 text-[11px] font-semibold bg-slate-800 text-slate-300 rounded-md border border-slate-700">0</span>
         </div>
-
         <div class="relative">
           <input type="text" id="input-catalog-search" data-i18n-placeholder="catalog_search" placeholder="Bakanlık, kurum veya veri ara..." class="w-full h-9 pl-9 pr-8 text-xs bg-slate-800/80 text-white rounded-xl border border-slate-700/70 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition placeholder-slate-500">
           <svg class="w-4 h-4 text-slate-500 absolute left-2.5 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
@@ -122,14 +107,12 @@
           </button>
         </div>
       </div>
-
       <div id="catalog-tree-container" class="flex-1 overflow-y-auto p-3 space-y-2">
         <div class="p-8 text-center text-slate-500 text-xs">
           <div class="inline-block w-6 h-6 border-2 border-brand-500 border-t-transparent rounded-full animate-spin mb-2"></div>
           <p data-i18n="catalog_loading">Katalog yükleniyor...</p>
         </div>
       </div>
-
       <div class="p-3 border-t border-slate-800 bg-slate-900/50 text-[11px] text-slate-500 flex items-center justify-between">
         <span>REST JSON API</span>
         <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> <span data-i18n="live_connection">Canlı Bağlantı</span></span>
@@ -139,13 +122,10 @@
     <div id="mobile-overlay" class="fixed inset-0 bg-slate-950/70 z-20 hidden lg:hidden glass-panel"></div>
 
     <main id="main-content" class="flex-1 overflow-y-auto bg-slate-950/50 flex flex-col">
-
       <div id="view-empty-state" class="flex-1 flex flex-col items-center justify-center p-8 text-center max-w-lg mx-auto">
         <div class="w-20 h-20 rounded-3xl bg-gradient-to-tr from-brand-600/20 to-slate-800 border border-brand-500/20 text-brand-400 flex items-center justify-center text-3xl mb-6 shadow-2xl shadow-brand-500/10">⚡</div>
         <h2 class="text-2xl font-bold text-white tracking-tight mb-2" data-i18n="empty_title">Veri Seti veya Servis Seçin</h2>
-        <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="empty_desc">
-          Sol taraftaki katalog ağacından bir Bakanlık veya Kurum seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz.
-        </p>
+        <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="empty_desc">Sol taraftaki katalog ağacından bir Bakanlık veya Kurum seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz.</p>
         <div class="grid grid-cols-2 gap-3 w-full text-left text-xs text-slate-300">
           <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-3">
             <span class="text-base">📊</span>
@@ -165,7 +145,6 @@
       </div>
 
       <div id="view-service-detail" class="hidden flex-1 p-4 lg:p-8 max-w-6xl w-full mx-auto space-y-6">
-
         <nav class="flex items-center gap-2 text-xs text-slate-400">
           <button id="btn-bc-home" type="button" class="hover:text-white transition" data-i18n="bc_home">Katalog</button>
           <span>/</span>
@@ -187,7 +166,7 @@
           <div class="flex items-center gap-2">
             <button id="btn-run-query" type="button" class="px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold shadow-lg shadow-brand-500/25 flex items-center gap-2 transition transform active:scale-95">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              <span data-i18n="run_query">Sorguyu Çalıştır</span>
+              <span data-i18n="run_query">Yenile</span>
             </button>
           </div>
         </div>
@@ -226,7 +205,7 @@
             </button>
           </div>
 
-          <!-- 1. TABLE -->
+          <!-- TABLE -->
           <div id="tab-table" class="tab-panel space-y-3">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-900 p-3 rounded-xl border border-slate-800 text-xs">
               <div class="relative w-full sm:w-64">
@@ -244,28 +223,23 @@
                 </button>
               </div>
             </div>
-
             <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
               <div class="overflow-x-auto max-h-[480px]">
                 <table class="w-full text-left text-xs text-slate-300 border-collapse" id="data-table">
                   <thead class="bg-slate-800/80 sticky top-0 backdrop-blur border-b border-slate-700 text-slate-400 font-bold uppercase tracking-wider">
                     <tr id="table-head-row"><th class="p-3">#</th></tr>
                   </thead>
-                  <tbody id="table-body-rows" class="divide-y divide-slate-800/60 font-mono">
-                    <tr><td colspan="10" class="p-6 text-center text-slate-500">
-                      <div class="inline-block w-5 h-5 border-2 border-brand-500 border-t-transparent rounded-full animate-spin"></div>
-                    </td></tr>
-                  </tbody>
+                  <tbody id="table-body-rows" class="divide-y divide-slate-800/60 font-mono"></tbody>
                 </table>
               </div>
               <div class="p-3 bg-slate-900 border-t border-slate-800 text-slate-400 text-[11px] flex items-center justify-between">
                 <span id="table-pagination-info">—</span>
-                <span data-i18n="table_paging">Otomatik Sayfalandırma (Maks. 100)</span>
+                <span data-i18n="table_paging">İlk 100 kayıt gösteriliyor</span>
               </div>
             </div>
           </div>
 
-          <!-- 2. CODE -->
+          <!-- CODE -->
           <div id="tab-code" class="tab-panel hidden space-y-4">
             <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
               <div class="flex items-center justify-between bg-slate-950 px-4 py-2.5 border-b border-slate-800">
@@ -282,7 +256,7 @@
             </div>
           </div>
 
-          <!-- 3. JSON -->
+          <!-- JSON -->
           <div id="tab-json" class="tab-panel hidden space-y-3">
             <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden font-mono shadow-2xl">
               <div class="bg-slate-900 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between">
@@ -301,7 +275,7 @@
             </div>
           </div>
 
-          <!-- 4. DOCS -->
+          <!-- DOCS -->
           <div id="tab-docs" class="tab-panel hidden space-y-4">
             <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
               <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
@@ -328,7 +302,6 @@
     </main>
   </div>
 
-  <!-- TOAST -->
   <div id="toast-notification" class="fixed bottom-6 right-6 bg-slate-800 text-white border border-slate-700 px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 z-50 pointer-events-none">
     <div id="toast-icon" class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">✓</div>
     <div>
@@ -337,7 +310,6 @@
     </div>
   </div>
 
-  <!-- QUICK SEARCH MODAL -->
   <div id="modal-quick-search" class="fixed inset-0 bg-slate-950/80 glass-panel z-50 flex items-start justify-center pt-20 px-4 hidden">
     <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-xl w-full shadow-2xl overflow-hidden space-y-2">
       <div class="p-4 border-b border-slate-800 flex items-center gap-3">
@@ -399,8 +371,6 @@
       error_copy: "Kopyalanamadı",
       no_service: "Bu kategoride eşleşen servis bulunamadı",
       no_matches: "Eşleşen servis bulunamadı. Farklı bir arama deneyin.",
-      service_meta_label: "Kaynak",
-      service_updated_label: "Güncelleme",
     },
     en: {
       portal_alt: "Parametric Data Service Portal",
@@ -447,16 +417,103 @@
       error_copy: "Copy failed",
       no_service: "No matching service in this category",
       no_matches: "No service found. Try a different search.",
-      service_meta_label: "Source",
-      service_updated_label: "Updated",
     }
+  };
+
+  // tip alanı dile göre çevrilir (JSON'da tek değer olduğu için sözlükten)
+  const TIP_SOZLUK = {
+    tr: { liste:'Liste', agac:'Ağaç', harita:'Harita', tablo:'Tablo' },
+    en: { liste:'List',  agac:'Tree', harita:'Map',    tablo:'Table' }
+  };
+
+  // Tablo sütun başlıkları
+  const ALAN_ETIKET_TR = {
+    kod:'Kod', ust_kod:'Üst Kod', seviye:'Seviye', seviye_adi:'Seviye Adı',
+    sira:'Sıra', ad_tr:'Ad (TR)', ad_en:'Ad (EN)',
+    tanim_tr:'Tanım (TR)', tanim_en:'Tanım (EN)',
+    aciklama_tr:'Açıklama (TR)', aciklama_en:'Açıklama (EN)',
+    kategori:'Kategori', oran:'Oran', oran_binde:'Binde Oran',
+    matrah_alt_sinir_tl:'Matrah Alt (₺)', matrah_ust_sinir_tl:'Matrah Üst (₺)',
+    sabit_vergi_tl:'Sabit Vergi (₺)', olcu_birimi:'Ölçü Birimi',
+    para_birimi:'Para Birimi', periyot:'Periyot', tip:'Tip', liste:'Liste',
+    kaynak:'Kaynak', gecerlilik:'Geçerlilik', deger:'Değer',
+    gtip_prefix:'GTİP Öneki', cpc_prefix:'CPC Öneki', nace_prefix:'NACE Öneki',
+    isco_prefix:'ISCO Öneki', kdv_kodu:'KDV Kodu', otv_kodu:'ÖTV Kodu',
+    oncelik:'Öncelik', aciklama:'Açıklama', ad:'Ad', islem:'İşlem',
+  };
+  const ALAN_ETIKET_EN = {
+    kod:'Code', ust_kod:'Parent Code', seviye:'Level', seviye_adi:'Level Name',
+    sira:'Order', ad_tr:'Name (TR)', ad_en:'Name (EN)',
+    tanim_tr:'Description (TR)', tanim_en:'Description (EN)',
+    aciklama_tr:'Explanation (TR)', aciklama_en:'Explanation (EN)',
+    kategori:'Category', oran:'Rate', oran_binde:'Rate (per mille)',
+    matrah_alt_sinir_tl:'Base Min (₺)', matrah_ust_sinir_tl:'Base Max (₺)',
+    sabit_vergi_tl:'Fixed Tax (₺)', olcu_birimi:'Unit',
+    para_birimi:'Currency', periyot:'Period', tip:'Type', liste:'Schedule',
+    kaynak:'Source', gecerlilik:'Validity', deger:'Value',
+    gtip_prefix:'HS Prefix', cpc_prefix:'CPC Prefix', nace_prefix:'NACE Prefix',
+    isco_prefix:'ISCO Prefix', kdv_kodu:'VAT Code', otv_kodu:'SCT Code',
+    oncelik:'Priority', aciklama:'Explanation', ad:'Name', islem:'Operation',
+  };
+
+  // Şema açıklamaları
+  const SCHEMA_ACIKLAMA_TR = {
+    kod:'Benzersiz kod / kod kimliği',
+    ust_kod:'Üst kategori kodu (ağaç bağlantısı)',
+    seviye:'Hiyerarşi seviyesi (1=kök)',
+    seviye_adi:'Seviye adı (bölüm, fasıl, grup...)',
+    sira:'Görüntüleme sırası',
+    tanim_tr:'Türkçe tanım',
+    tanim_en:'İngilizce tanım',
+    ad_tr:'Türkçe ad',
+    ad_en:'İngilizce ad',
+    aciklama_tr:'Türkçe açıklama',
+    aciklama_en:'İngilizce açıklama',
+    oran:'Vergi oranı (ondalık)',
+    oran_binde:'Binde oran',
+    olcu_birimi:'Ölçü birimi',
+    para_birimi:'Para birimi (ISO 4217)',
+    matrah_alt_sinir_tl:'Matrah alt sınırı (₺)',
+    matrah_ust_sinir_tl:'Matrah üst sınırı (₺)',
+    sabit_vergi_tl:'Sabit vergi tutarı (₺)',
+    kategori:'Kategori etiketi',
+    periyot:'Dönem (aylık, yıllık, sabit)',
+    tip:'Veri yapısı tipi',
+    liste:'Liste numarası',
+    kaynak:'Kaynak referansı',
+    deger:'Sayısal değer',
+  };
+  const SCHEMA_ACIKLAMA_EN = {
+    kod:'Unique code identifier',
+    ust_kod:'Parent category code (tree link)',
+    seviye:'Hierarchy level (1=root)',
+    seviye_adi:'Level name (section, chapter, group...)',
+    sira:'Display order',
+    tanim_tr:'Turkish description',
+    tanim_en:'English description',
+    ad_tr:'Turkish name',
+    ad_en:'English name',
+    aciklama_tr:'Turkish explanation',
+    aciklama_en:'English explanation',
+    oran:'Tax rate (decimal)',
+    oran_binde:'Rate per mille',
+    olcu_birimi:'Unit of measure',
+    para_birimi:'Currency (ISO 4217)',
+    matrah_alt_sinir_tl:'Tax base lower limit (TRY)',
+    matrah_ust_sinir_tl:'Tax base upper limit (TRY)',
+    sabit_vergi_tl:'Fixed tax amount (TRY)',
+    kategori:'Category label',
+    periyot:'Period (monthly, annual, fixed)',
+    tip:'Data structure type',
+    liste:'Schedule number',
+    kaynak:'Source reference',
+    deger:'Numeric value',
   };
 
   let DIL = 'tr';
 
   function t(k){ return (UI[DIL] && UI[DIL][k]) || k; }
 
-  // Metadan TR/EN seç
   function alanSec(obj, temelAd){
     if(!obj) return '';
     const en = obj[temelAd + '_en'];
@@ -465,17 +522,30 @@
     return tr || en || '';
   }
 
+  function tipEtiket(tip){
+    if(!tip) return '—';
+    const anahtar = String(tip).toLowerCase();
+    return (TIP_SOZLUK[DIL] && TIP_SOZLUK[DIL][anahtar]) || tip;
+  }
+
+  function alanEtiket(anahtar){
+    const sozluk = DIL === 'tr' ? ALAN_ETIKET_TR : ALAN_ETIKET_EN;
+    if(sozluk[anahtar]) return sozluk[anahtar];
+    return anahtar.replace(/_/g,' ').replace(/\b\w/g, h => h.toLocaleUpperCase(DIL==='tr'?'tr-TR':'en-US'));
+  }
+
+  const kacis = s => String(s ?? '').replace(/[&<>"']/g, c => (
+    {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]
+  ));
+
   function dilUygula(){
     document.documentElement.lang = DIL;
     document.querySelectorAll('[data-i18n]').forEach(el => {
-      const k = el.dataset.i18n;
-      el.textContent = t(k);
+      el.textContent = t(el.dataset.i18n);
     });
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       el.placeholder = t(el.dataset.i18nPlaceholder);
     });
-
-    // Dil düğmeleri
     const trBtn = $('lang-tr');
     const enBtn = $('lang-en');
     if(DIL === 'tr'){
@@ -488,13 +558,17 @@
     try{ localStorage.setItem('pdaas_dil', DIL); }catch(e){}
   }
 
+  // Dil değişince UI + tablo + kod + şema yenilenir (veri yeniden çekilmez)
   function dilDegistir(yeni){
     if(yeni === DIL) return;
     DIL = yeni;
     dilUygula();
-    // Aktif servis varsa yeniden yükle ve çiz
+
     if(currentService){
-      servisDetayYukle(currentService.endpoint);
+      servisSecUI(currentService);
+      renderTableData();
+      renderCodeSnippets();
+      renderDocsSchema();
     }
     renderCatalogTree($('input-catalog-search').value);
   }
@@ -511,7 +585,6 @@
 
   const $ = id => document.getElementById(id);
 
-  // Bakanlık ikonu (isimden tahmin)
   function bakanlikIkon(ad){
     const a = (ad || '').toLocaleLowerCase('tr-TR');
     if(a.includes('mali') || a.includes('hazine') || a.includes('vergi')) return '💰';
@@ -527,16 +600,11 @@
     return '🏛️';
   }
 
-  // =================================================================
-  // TOAST
-  // =================================================================
   function showToast(title, message, isError = false){
     const toast = $('toast-notification');
-    const toastTitle = $('toast-title');
-    const toastMsg = $('toast-message');
+    $('toast-title').textContent = title;
+    $('toast-message').textContent = message;
     const toastIcon = $('toast-icon');
-    toastTitle.textContent = title;
-    toastMsg.textContent = message;
     if(isError){
       toastIcon.className = "w-7 h-7 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center font-bold text-sm";
       toastIcon.textContent = "✕";
@@ -564,7 +632,7 @@
   }
 
   // =================================================================
-  // KATALOG YÜKLEME
+  // KATALOG
   // =================================================================
   async function katalogYukle(){
     $('catalog-tree-container').innerHTML = `
@@ -572,7 +640,6 @@
         <div class="inline-block w-6 h-6 border-2 border-brand-500 border-t-transparent rounded-full animate-spin mb-2"></div>
         <p>${t('catalog_loading')}</p>
       </div>`;
-
     try{
       const r = await fetch('/api/v1/katalog', { headers: { Accept: 'application/json' } });
       if(!r.ok) throw new Error('HTTP ' + r.status);
@@ -590,14 +657,10 @@
     }
   }
 
-  // =================================================================
-  // SIDEBAR AĞACINI ÇİZ
-  // =================================================================
   function renderCatalogTree(filterQuery = ''){
     const container = $('catalog-tree-container');
     const q = (filterQuery || '').toLocaleLowerCase('tr-TR').trim();
 
-    // Bakanlıklara göre grupla
     const gruplar = new Map();
     for(const sv of KATALOG){
       const anahtar = sv.bakanlik;
@@ -618,7 +681,6 @@
 
     for(const grup of gruplar.values()){
       const grupAdi = DIL === 'en' ? (grup.adi_en || grup.adi) : grup.adi;
-
       const eslesen = grup.servisler.filter(s => {
         if(!q) return true;
         const sAdi = (DIL === 'en' ? (s.servis_adi_en || s.servis_adi) : s.servis_adi) || '';
@@ -626,7 +688,6 @@
             || (s.endpoint || '').toLocaleLowerCase('tr-TR').includes(q)
             || grupAdi.toLocaleLowerCase('tr-TR').includes(q);
       });
-
       if(!eslesen.length) continue;
       totalServices += eslesen.length;
       const isOpen = q.length > 0;
@@ -637,7 +698,7 @@
             <div class="flex items-center gap-2.5 min-w-0">
               <span class="text-base">${grup.ikon}</span>
               <div class="truncate">
-                <strong class="block text-slate-200 font-semibold truncate">${grupAdi}</strong>
+                <strong class="block text-slate-200 font-semibold truncate">${kacis(grupAdi)}</strong>
                 <span class="text-[10px] text-slate-500 font-medium">${eslesen.length} ${t('services')}</span>
               </div>
             </div>
@@ -649,7 +710,7 @@
               const aktif = currentService && currentService.servis_kodu === s.servis_kodu && currentService.bakanlik === s.bakanlik;
               return `
                 <button type="button" class="service-item-btn w-full px-3 py-2 pl-9 flex items-center justify-between text-left hover:bg-brand-600/10 hover:text-brand-300 transition text-slate-400 ${aktif ? 'bg-brand-600/20 text-brand-300 font-semibold border-l-2 border-brand-500' : ''}" data-endpoint="${s.endpoint}">
-                  <span class="truncate pr-2">${sAdi}</span>
+                  <span class="truncate pr-2">${kacis(sAdi)}</span>
                   <span class="px-1.5 py-0.5 text-[9px] font-mono bg-slate-800 text-slate-400 rounded">${(s.kayit_sayisi ?? 0).toLocaleString(DIL==='tr'?'tr-TR':'en-US')}</span>
                 </button>
               `;
@@ -660,26 +721,18 @@
     }
 
     if(!totalServices){
-      html = `
-        <div class="p-6 text-center text-slate-500 text-xs">
-          <p class="font-bold text-slate-400 mb-1">${t('no_matches')}</p>
-        </div>`;
+      html = `<div class="p-6 text-center text-slate-500 text-xs"><p class="font-bold text-slate-400 mb-1">${t('no_matches')}</p></div>`;
     }
 
     container.innerHTML = html;
     $('catalog-count-badge').textContent = `${totalServices} ${t('services')}`;
 
-    // Accordion dinleyicileri
     container.querySelectorAll('.group-header').forEach(btn => {
       btn.addEventListener('click', () => {
-        const servicesDiv = btn.nextElementSibling;
-        const arrow = btn.querySelector('.group-arrow');
-        servicesDiv.classList.toggle('hidden');
-        arrow.classList.toggle('rotate-180');
+        btn.nextElementSibling.classList.toggle('hidden');
+        btn.querySelector('.group-arrow').classList.toggle('rotate-180');
       });
     });
-
-    // Servis seçim dinleyicileri
     container.querySelectorAll('.service-item-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         servisSec(btn.dataset.endpoint);
@@ -689,69 +742,58 @@
   }
 
   // =================================================================
-  // SERVİS SEÇ + DETAY YÜKLE
+  // SERVİS SEÇ + UI
   // =================================================================
- // Sadece UI kartlarını dile göre yeniden yazar (veri çekmez)
-function servisSecUI(sv){
-  if(!sv) return;
-  const grupAdi   = DIL === 'en' ? (sv.bakanlik_adi_en || sv.bakanlik_adi) : sv.bakanlik_adi;
-  const servisAdi = DIL === 'en' ? (sv.servis_adi_en   || sv.servis_adi)   : sv.servis_adi;
-  const kaynakAd  = DIL === 'en' ? (sv.kaynak_en || sv.kaynak || grupAdi) : (sv.kaynak || grupAdi);
+  function servisSecUI(sv){
+    if(!sv) return;
+    const grupAdi   = DIL === 'en' ? (sv.bakanlik_adi_en || sv.bakanlik_adi) : sv.bakanlik_adi;
+    const servisAdi = DIL === 'en' ? (sv.servis_adi_en   || sv.servis_adi)   : sv.servis_adi;
+    const kaynakAd  = DIL === 'en' ? (sv.kaynak_en || sv.kaynak || grupAdi) : (sv.kaynak || grupAdi);
 
-  $('bc-ministry').textContent = grupAdi;
-  $('bc-service').textContent  = servisAdi;
-  $('service-ministry-badge').textContent = grupAdi;
-  $('service-records-count').textContent = (sv.kayit_sayisi ?? 0).toLocaleString(DIL==='tr'?'tr-TR':'en-US') + ' ' + t('records');
-  $('service-type-badge').textContent = tipEtiket(sv.tip);
-  $('service-title').textContent = servisAdi;
-  $('service-desc').textContent  = kaynakAd;
-  $('service-last-update').textContent = sv.surum ? ('v' + sv.surum) : '—';
-  $('endpoint-url-text').textContent = window.location.origin + sv.endpoint;
-}
+    $('bc-ministry').textContent = grupAdi;
+    $('bc-service').textContent  = servisAdi;
+    $('service-ministry-badge').textContent = grupAdi;
+    $('service-records-count').textContent = (sv.kayit_sayisi ?? 0).toLocaleString(DIL==='tr'?'tr-TR':'en-US') + ' ' + t('records');
+    $('service-type-badge').textContent = tipEtiket(sv.tip);
+    $('service-title').textContent = servisAdi;
+    $('service-desc').textContent  = kaynakAd;
+    $('service-last-update').textContent = sv.surum ? ('v' + sv.surum) : '—';
+    $('endpoint-url-text').textContent = window.location.origin + sv.endpoint;
+  }
 
-// Servis seç — UI + veri
-function servisSec(endpoint){
-  const sv = KATALOG.find(s => s.endpoint === endpoint);
-  if(!sv) return;
-  currentService = sv;
+  function servisSec(endpoint){
+    const sv = KATALOG.find(s => s.endpoint === endpoint);
+    if(!sv) return;
+    currentService = sv;
+    $('view-empty-state').classList.add('hidden');
+    $('view-service-detail').classList.remove('hidden');
+    servisSecUI(sv);
+    renderCatalogTree($('input-catalog-search').value);
+    servisDetayYukle(endpoint);
+  }
 
-  $('view-empty-state').classList.add('hidden');
-  $('view-service-detail').classList.remove('hidden');
-
-  servisSecUI(sv);
-  renderCatalogTree($('input-catalog-search').value);
-  servisDetayYukle(endpoint);
-}
   async function servisDetayYukle(endpoint){
-    // Yükleme durumu
     $('table-body-rows').innerHTML = `
       <tr><td colspan="10" class="p-6 text-center text-slate-500">
         <div class="inline-block w-5 h-5 border-2 border-brand-500 border-t-transparent rounded-full animate-spin"></div>
         <p class="mt-2">${t('loading_data')}</p>
       </td></tr>`;
-
     const t0 = performance.now();
     try{
       const r = await fetch(endpoint, { headers: { Accept: 'application/json' } });
       const sure = Math.round(performance.now() - t0);
-
       if(!r.ok){
         $('json-status-label').textContent = `HTTP ${r.status}`;
         $('table-body-rows').innerHTML = `<tr><td colspan="10" class="p-6 text-center text-rose-400">${t('load_error')} (HTTP ${r.status})</td></tr>`;
         return;
       }
-
       const body = await r.json();
       currentRawBody = body;
       currentData = Array.isArray(body.kayitlar) ? body.kayitlar : [];
       currentFilteredData = [...currentData];
-
       $('json-status-label').textContent = `HTTP ${r.status}`;
       $('json-response-time').textContent = `${sure} ms`;
-
-      // Sayaçları güncelle
       $('service-records-count').textContent = currentData.length.toLocaleString(DIL==='tr'?'tr-TR':'en-US') + ' ' + t('records');
-
       renderTableData();
       renderCodeSnippets();
       renderJsonConsole();
@@ -764,7 +806,7 @@ function servisSec(endpoint){
   }
 
   // =================================================================
-  // TABLO
+  // TABLO (alan etiketleri artık dil-duyarlı)
   // =================================================================
   function renderTableData(){
     const tbody = $('table-body-rows');
@@ -785,7 +827,7 @@ function servisSec(endpoint){
     const keys = Object.keys(currentData[0]);
 
     theadRow.innerHTML = `<th class="p-3 text-slate-400 font-bold border-r border-slate-700/50">#</th>` +
-      keys.map(k => `<th class="p-3 text-slate-300 font-bold tracking-wider whitespace-nowrap">${k.replace(/_/g,' ').toUpperCase()}</th>`).join('');
+      keys.map(k => `<th class="p-3 text-slate-300 font-bold tracking-wider whitespace-nowrap">${kacis(alanEtiket(k))}</th>`).join('');
 
     const gosterim = currentFilteredData.slice(0, 100);
 
@@ -811,7 +853,7 @@ function servisSec(endpoint){
             }else{
               const str = String(val);
               const goster = str.length > 80 ? str.slice(0, 80) + '…' : str;
-              cell = `<span class="text-slate-300" title="${str.replace(/"/g,'&quot;')}">${goster}</span>`;
+              cell = `<span class="text-slate-300" title="${kacis(str)}">${kacis(goster)}</span>`;
             }
             return `<td class="p-3 align-top">${cell}</td>`;
           }).join('')}
@@ -829,15 +871,13 @@ function servisSec(endpoint){
   function renderCodeSnippets(){
     if(!currentService) return;
     const url = window.location.origin + currentService.endpoint;
-
     const snippets = {
       curl: `curl -X GET "${url}" \\\n  -H "Accept: application/json" \\\n  -H "Accept-Encoding: gzip"`,
       python: `import requests\n\nurl = "${url}"\nheaders = {"Accept": "application/json"}\n\nresponse = requests.get(url, headers=headers, timeout=15)\nresponse.raise_for_status()\nveri = response.json()\n\nkayitlar = veri.get("kayitlar", [])\nprint(f"Toplam: {len(kayitlar)}")\nfor k in kayitlar[:5]:\n    print(k.get("kod"), "-", k.get("tanim_tr"))`,
-      js: `// Fetch with caching\nasync function fetchData() {\n  const res = await fetch("${url}", {\n    headers: { "Accept": "application/json" }\n  });\n  if (!res.ok) throw new Error("HTTP " + res.status);\n  const { kayitlar = [], toplam } = await res.json();\n  console.log("Toplam:", toplam, "kayıt");\n  console.table(kayitlar.slice(0, 10));\n}\n\nfetchData().catch(console.error);`,
+      js: `async function fetchData() {\n  const res = await fetch("${url}", {\n    headers: { "Accept": "application/json" }\n  });\n  if (!res.ok) throw new Error("HTTP " + res.status);\n  const { kayitlar = [], toplam } = await res.json();\n  console.log("Toplam:", toplam);\n  console.table(kayitlar.slice(0, 10));\n}\n\nfetchData().catch(console.error);`,
       go: `package main\n\nimport (\n\t"encoding/json"\n\t"fmt"\n\t"io"\n\t"net/http"\n\t"time"\n)\n\nfunc main() {\n\turl := "${url}"\n\tclient := &http.Client{Timeout: 15 * time.Second}\n\treq, _ := http.NewRequest("GET", url, nil)\n\treq.Header.Set("Accept", "application/json")\n\n\tresp, err := client.Do(req)\n\tif err != nil { panic(err) }\n\tdefer resp.Body.Close()\n\n\tbody, _ := io.ReadAll(resp.Body)\n\tvar veri map[string]interface{}\n\tjson.Unmarshal(body, &veri)\n\tfmt.Println("Toplam:", veri["toplam"])\n}`,
       php: `<?php\n$url = "${url}";\n$opts = [\n    "http" => [\n        "method" => "GET",\n        "header" => "Accept: application/json\\r\\n"\n    ]\n];\n$ctx = stream_context_create($opts);\n$resp = file_get_contents($url, false, $ctx);\n$veri = json_decode($resp, true);\n\necho "Toplam: " . $veri["toplam"] . " kayıt\\n";\nprint_r(array_slice($veri["kayitlar"], 0, 3));`
     };
-
     $('code-snippet-box').textContent = snippets[activeCodeLang] || snippets.curl;
   }
 
@@ -849,13 +889,9 @@ function servisSec(endpoint){
     if(json === undefined) return '';
     return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, match => {
       let cls = 'j-num';
-      if(/^"/.test(match)){
-        cls = /:$/.test(match) ? 'j-key' : 'j-str';
-      }else if(/true|false/.test(match)){
-        cls = 'j-kw';
-      }else if(/null/.test(match)){
-        cls = 'j-kw';
-      }
+      if(/^"/.test(match)){ cls = /:$/.test(match) ? 'j-key' : 'j-str'; }
+      else if(/true|false/.test(match)){ cls = 'j-kw'; }
+      else if(/null/.test(match)){ cls = 'j-kw'; }
       return `<span class="${cls}">${match}</span>`;
     });
   }
@@ -866,15 +902,16 @@ function servisSec(endpoint){
   }
 
   // =================================================================
-  // DOCS
+  // DOCS (açıklamalar da dil-duyarlı)
   // =================================================================
   function renderDocsSchema(){
     if(!currentData.length){
       $('docs-schema-tbody').innerHTML = `<tr><td colspan="4" class="p-6 text-center text-slate-500">${t('no_records')}</td></tr>`;
       return;
     }
-
     const ornek = currentData[0];
+    const sozluk = DIL === 'tr' ? SCHEMA_ACIKLAMA_TR : SCHEMA_ACIKLAMA_EN;
+
     $('docs-schema-tbody').innerHTML = Object.keys(ornek).map(key => {
       const val = ornek[key];
       let tip = typeof val;
@@ -886,29 +923,13 @@ function servisSec(endpoint){
       else if(typeof val === 'object') ornekStr = Array.isArray(val) ? `[${val.length}]` : '{...}';
       else ornekStr = String(val).slice(0, 40);
 
-      const aciklama = {
-        kod: 'Benzersiz kod / kod kimliği',
-        ust_kod: 'Üst kategori kodu (ağaç bağlantısı)',
-        seviye: 'Hiyerarşi seviyesi (1=kök)',
-        seviye_adi: 'Seviye adı (bölüm, fasıl, grup...)',
-        sira: 'Görüntüleme sırası',
-        tanim_tr: 'Türkçe tanım',
-        tanim_en: 'İngilizce tanım',
-        ad_tr: 'Türkçe ad',
-        ad_en: 'İngilizce ad',
-        aciklama_tr: 'Türkçe açıklama',
-        aciklama_en: 'İngilizce açıklama',
-        oran: 'Vergi oranı (ondalık)',
-        oran_binde: 'Binde oran',
-        olcu_birimi: 'Ölçü birimi',
-        para_birimi: 'Para birimi (ISO 4217)',
-      }[key] || '—';
+      const aciklama = sozluk[key] || '—';
 
       return `
         <tr class="hover:bg-slate-800/40 transition">
-          <td class="p-3 text-brand-300 font-semibold">${key}</td>
+          <td class="p-3 text-brand-300 font-semibold">${kacis(key)}</td>
           <td class="p-3"><span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">${tip}</span></td>
-          <td class="p-3 text-slate-400 text-[11px]">${ornekStr.replace(/</g,'&lt;')}</td>
+          <td class="p-3 text-slate-400 text-[11px]">${kacis(ornekStr)}</td>
           <td class="p-3 text-slate-400 font-sans">${aciklama}</td>
         </tr>
       `;
@@ -927,13 +948,11 @@ function servisSec(endpoint){
         });
         tab.classList.add('border-brand-500','text-brand-400','active');
         tab.classList.remove('border-transparent','text-slate-400');
-
         const target = tab.dataset.tab;
         document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
         $(target).classList.remove('hidden');
       });
     });
-
     document.querySelectorAll('.code-lang-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.code-lang-btn').forEach(b => {
@@ -948,9 +967,6 @@ function servisSec(endpoint){
     });
   }
 
-  // =================================================================
-  // MOBILE
-  // =================================================================
   function openMobileSidebar(){
     $('sidebar').classList.remove('-translate-x-full');
     $('mobile-overlay').classList.remove('hidden');
@@ -964,7 +980,6 @@ function servisSec(endpoint){
   // BAŞLAT
   // =================================================================
   window.addEventListener('DOMContentLoaded', () => {
-    // Dili belirle
     const url = new URLSearchParams(location.search).get('lang');
     if(url && ['tr','en'].includes(url)) DIL = url;
     else {
@@ -980,7 +995,6 @@ function servisSec(endpoint){
     $('btn-mobile-menu').addEventListener('click', openMobileSidebar);
     $('mobile-overlay').addEventListener('click', closeMobileSidebar);
 
-    // Sidebar arama
     const searchInput = $('input-catalog-search');
     const clearBtn = $('btn-clear-search');
     searchInput.addEventListener('input', e => {
@@ -992,10 +1006,8 @@ function servisSec(endpoint){
       searchInput.value = ''; clearBtn.classList.add('hidden'); renderCatalogTree('');
     });
 
-    // Tablo filtresi
     $('input-table-filter').addEventListener('input', renderTableData);
 
-    // Kopyala butonları
     $('btn-copy-url').addEventListener('click', () => {
       if(currentService) copyToClipboard($('endpoint-url-text').textContent, t('copied_url'));
     });
@@ -1006,12 +1018,10 @@ function servisSec(endpoint){
       if(currentRawBody) copyToClipboard(JSON.stringify(currentRawBody, null, 2), t('copied_json'));
     });
 
-    // Yenile
     $('btn-run-query').addEventListener('click', () => {
       if(currentService) servisDetayYukle(currentService.endpoint);
     });
 
-    // Home
     $('btn-bc-home').addEventListener('click', () => {
       $('view-empty-state').classList.remove('hidden');
       $('view-service-detail').classList.add('hidden');
@@ -1025,7 +1035,6 @@ function servisSec(endpoint){
       renderCatalogTree($('input-catalog-search').value);
     });
 
-    // Dışa aktar
     $('btn-export-json').addEventListener('click', () => {
       if(!currentData.length) return;
       const blob = new Blob([JSON.stringify(currentData, null, 2)], { type: 'application/json' });
@@ -1052,7 +1061,6 @@ function servisSec(endpoint){
       showToast('✓', t('copied_json'));
     });
 
-    // Quick search modal
     const modalSearch = $('modal-quick-search');
     const modalInput = $('modal-search-input');
     const modalResults = $('modal-search-results');
@@ -1090,8 +1098,8 @@ function servisSec(endpoint){
             <div class="flex items-center gap-3">
               <span class="text-xl">${bakanlikIkon(bAdi)}</span>
               <div>
-                <strong class="block text-xs font-semibold text-white group-hover:text-brand-300">${sAdi}</strong>
-                <span class="text-[10px] text-slate-400">${bAdi} • ${r.endpoint}</span>
+                <strong class="block text-xs font-semibold text-white group-hover:text-brand-300">${kacis(sAdi)}</strong>
+                <span class="text-[10px] text-slate-400">${kacis(bAdi)} • ${r.endpoint}</span>
               </div>
             </div>
             <span class="text-xs text-brand-400 font-semibold font-mono">↵</span>
@@ -1108,7 +1116,6 @@ function servisSec(endpoint){
     }
     modalInput.addEventListener('input', e => renderModalSearchResults(e.target.value));
 
-    // Tema
     let isDark = true;
     $('btn-theme-toggle').addEventListener('click', () => {
       isDark = !isDark;
@@ -1127,11 +1134,9 @@ function servisSec(endpoint){
       }
     });
 
-    // Dil
     $('lang-tr').addEventListener('click', () => dilDegistir('tr'));
     $('lang-en').addEventListener('click', () => dilDegistir('en'));
 
-    // Kataloğu yükle
     katalogYukle();
   });
   </script>
