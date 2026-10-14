@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,18 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            brand: { 50:'#eef2ff',100:'#e0e7ff',500:'#6366f1',600:'#4f46e5',700:'#4338ca',900:'#312e81' }
+            win: {
+              50: '#e6f2ff',
+              100: '#cce5ff',
+              500: '#0067c0',
+              600: '#005fb8',
+              700: '#00458c',
+              dark: '#202020',
+              card: '#2b2b2b',
+              hover: '#3a3a3a',
+              border: '#383838',
+              base: '#191919',
+            }
           }
         }
       }
@@ -27,116 +38,35 @@
   <style>
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: rgba(156, 163, 175, 0.3); border-radius: 99px; }
-    ::-webkit-scrollbar-thumb:hover { background: rgba(156, 163, 175, 0.5); }
-    .glass-panel { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-    .j-key { color: #38bdf8; font-weight: 500; }
-    .j-str { color: #a5f3fc; }
-    .j-num { color: #fbbf24; }
-    .j-kw  { color: #f472b6; font-weight: 600; }
-    .j-punct { color: #94a3b8; }
-    .light .j-key { color: #0284c7; }
-    .light .j-str { color: #0f766e; }
-    .light .j-num { color: #d97706; }
-    .light .j-kw  { color: #db2777; }
-    .light .j-punct { color: #64748b; }
-
-    /* Sidebar scrollbar özel (ince, koyu) */
-    #catalog-tree-container::-webkit-scrollbar { width: 6px; }
-    #catalog-tree-container::-webkit-scrollbar-thumb { background: rgba(99,102,241,.25); border-radius: 99px; }
-    #catalog-tree-container::-webkit-scrollbar-thumb:hover { background: rgba(99,102,241,.5); }
-
-html.light body {
-  background-color: #f1f5f9 !important;
-  color: #0f172a !important;
-}
-
-html.light .bg-slate-900,
-html.light .bg-slate-900\/80,
-html.light .bg-slate-900\/50 { background-color: #ffffff !important; }
-
-html.light .bg-slate-950,
-html.light .bg-slate-950\/50,
-html.light .bg-slate-950\/40,
-html.light .bg-slate-950\/80 { background-color: #f8fafc !important; }
-
-html.light .bg-slate-800,
-html.light .bg-slate-800\/50,
-html.light .bg-slate-800\/60,
-html.light .bg-slate-800\/80 { background-color: #e2e8f0 !important; }
-
-html.light .bg-slate-700\/50 { background-color: #cbd5e1 !important; }
-
-html.light .border-slate-800,
-html.light .border-slate-800\/80,
-html.light .border-slate-800\/60,
-html.light .border-slate-800\/40,
-html.light .border-slate-700,
-html.light .border-slate-700\/70,
-html.light .border-slate-700\/60,
-html.light .border-slate-700\/50 { border-color: #cbd5e1 !important; }
-
-html.light .text-white      { color: #0f172a !important; }
-html.light .text-slate-100  { color: #0f172a !important; }
-html.light .text-slate-200  { color: #1e293b !important; }
-html.light .text-slate-300  { color: #334155 !important; }
-html.light .text-slate-400  { color: #64748b !important; }
-html.light .text-slate-500  { color: #94a3b8 !important; }
-html.light .text-slate-600  { color: #94a3b8 !important; }
-html.light .text-brand-300  { color: #4f46e5 !important; }
-html.light .text-brand-400  { color: #4f46e5 !important; }
-
-html.light .bg-brand-600\/20,
-html.light .bg-brand-500\/20 { background-color: rgba(99,102,241,.15) !important; }
-html.light .bg-brand-600\/10 { background-color: rgba(99,102,241,.08) !important; }
-
-html.light .bg-emerald-500\/10 { background-color: rgba(16,185,129,.1) !important; }
-html.light .bg-rose-500\/10    { background-color: rgba(244,63,94,.1) !important; }
-html.light .bg-rose-500\/20    { background-color: rgba(244,63,94,.15) !important; }
-
-html.light .hover\:bg-slate-800:hover,
-html.light .hover\:bg-slate-800\/60:hover,
-html.light .hover\:bg-slate-700:hover { background-color: #e2e8f0 !important; }
-
-html.light .hover\:bg-brand-600\/10:hover,
-html.light .hover\:bg-brand-600\/20:hover { background-color: rgba(99,102,241,.12) !important; }
-
-html.light .hover\:text-white:hover    { color: #0f172a !important; }
-html.light .hover\:text-slate-200:hover { color: #334155 !important; }
-html.light .hover\:border-slate-600:hover { border-color: #94a3b8 !important; }
-
-html.light .placeholder-slate-500::placeholder { color: #94a3b8 !important; }
-
-html.light .j-key   { color: #0284c7; }
-html.light .j-str   { color: #0f766e; }
-html.light .j-num   { color: #d97706; }
-html.light .j-kw    { color: #db2777; }
-html.light .j-punct { color: #64748b; }
+    ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 99px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.3); }
+    .glass-panel { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
   </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200" id="app-body">
+<body class="bg-win-base text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-win-500 selection:text-white transition-colors duration-200" id="app-body">
 
-  <!-- HEADER (sabit, scroll olmaz) -->
-  <header class="h-16 flex-none border-b border-slate-800 bg-slate-900/80 z-40 glass-panel flex items-center justify-between px-4 lg:px-6">
+  <!-- HEADER -->
+  <header class="h-16 flex-none border-b border-win-border bg-win-dark/80 z-40 glass-panel flex items-center justify-between px-4 lg:px-6">
     <div class="flex items-center gap-3">
-      <button id="btn-mobile-menu" type="button" class="lg:hidden p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition" aria-label="Menü">
+      <button id="btn-mobile-menu" type="button" class="lg:hidden p-2 text-slate-400 hover:text-white rounded-lg hover:bg-win-hover transition" aria-label="Menü">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
       <div class="flex items-center gap-3 cursor-pointer" id="btn-logo">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center font-extrabold text-white text-lg shadow-lg shadow-brand-500/30">P</div>
+        <div class="w-9 h-9 rounded-lg bg-win-500 flex items-center justify-center font-extrabold text-white text-lg shadow-md shadow-win-500/20">P</div>
         <div>
           <div class="flex items-center gap-2">
             <span class="font-extrabold text-base tracking-tight text-white">PDaaS</span>
-            <span class="text-[10px] font-bold uppercase tracking-wider bg-brand-500/20 text-brand-400 px-2 py-0.5 rounded-full border border-brand-500/30">v14 API</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-win-500/20 text-win-100 px-2 py-0.5 rounded border border-win-500/30">v14 API</span>
           </div>
           <p class="text-xs text-slate-400 font-medium" data-i18n="portal_alt">Parametrik Veri Servisi Portalı</p>
         </div>
       </div>
 
-      <nav class="hidden lg:flex items-center gap-1 ml-4">
-        <a href="index.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-800 border border-slate-700">Portal</a>
-        <a href="urunler.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition">Ürün Arama</a>
-        <a href="kurator.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition">Küratör</a>
+      <!-- Sayfa Bağlantıları -->
+      <nav class="hidden lg:flex items-center gap-1 ml-6">
+        <a href="index.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-win-card border border-win-border" data-i18n="nav_portal">Portal</a>
+        <a href="urunler.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-win-hover transition" data-i18n="nav_products">Ürün Arama</a>
+        <a href="kurator.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-win-hover transition" data-i18n="nav_curator">Küratör</a>
       </nav>
     </div>
 
@@ -145,33 +75,28 @@ html.light .j-punct { color: #64748b; }
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         <span data-i18n="system_active">Sistem Aktif</span>
       </div>
-      <button id="btn-theme-toggle" type="button" class="p-2 text-slate-400 hover:text-white rounded-xl hover:bg-slate-800 border border-transparent hover:border-slate-700 transition" title="Theme">
-        <svg id="theme-icon-dark" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-        <svg id="theme-icon-light" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-      </button>
-      <div class="flex items-center bg-slate-800 p-1 rounded-xl border border-slate-700/60 text-xs font-semibold">
-        <button id="lang-tr" type="button" class="px-2.5 py-1 rounded-lg bg-brand-600 text-white transition">TR</button>
-        <button id="lang-en" type="button" class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition">EN</button>
+      <div class="flex items-center bg-win-card p-1 rounded-lg border border-win-border text-xs font-semibold">
+        <button id="lang-tr" type="button" class="px-2.5 py-1 rounded bg-win-500 text-white transition">TR</button>
+        <button id="lang-en" type="button" class="px-2.5 py-1 rounded text-slate-400 hover:text-white transition">EN</button>
       </div>
     </div>
   </header>
 
-  <!-- MAIN WRAP (min-h-0 kritik: flex child'ların düzgün küçülmesi için) -->
+  <!-- MAIN WRAP -->
   <div class="flex-1 flex overflow-hidden relative min-h-0">
 
-    <!-- SIDEBAR: kendi içinde scroll, sabit yükseklik -->
-    <aside id="sidebar" class="w-80 lg:w-[22rem] flex-none bg-slate-900 border-r border-slate-800 flex flex-col fixed lg:static inset-y-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
-      <!-- Sabit üst başlık + arama -->
-      <div class="p-4 border-b border-slate-800 space-y-3 flex-none">
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="w-80 lg:w-[22rem] flex-none bg-win-dark border-r border-win-border flex flex-col fixed lg:static inset-y-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
+      <div class="p-4 border-b border-win-border space-y-3 flex-none">
         <div class="flex items-center justify-between">
           <h2 class="text-sm font-bold tracking-tight text-white uppercase flex items-center gap-2">
-            <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            <svg class="w-4 h-4 text-win-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
             <span data-i18n="catalog_title">Veri Kataloğu</span>
           </h2>
-          <span id="catalog-count-badge" class="px-2 py-0.5 text-[11px] font-semibold bg-slate-800 text-slate-300 rounded-md border border-slate-700">0</span>
+          <span id="catalog-count-badge" class="px-2 py-0.5 text-[11px] font-semibold bg-win-card text-slate-300 rounded border border-win-border">0</span>
         </div>
         <div class="relative">
-          <input type="text" id="input-catalog-search" data-i18n-placeholder="catalog_search" placeholder="Bakanlık, kurum veya veri ara..." class="w-full h-9 pl-9 pr-8 text-xs bg-slate-800/80 text-white rounded-xl border border-slate-700/70 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition placeholder-slate-500">
+          <input type="text" id="input-catalog-search" data-i18n-placeholder="catalog_search" placeholder="Bakanlık, kurum veya veri ara..." class="w-full h-9 pl-9 pr-8 text-xs bg-win-card text-white rounded-lg border border-win-border focus:outline-none focus:border-win-500 transition placeholder-slate-500">
           <svg class="w-4 h-4 text-slate-500 absolute left-2.5 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           <button id="btn-clear-search" type="button" class="hidden absolute right-2.5 top-2.5 text-slate-500 hover:text-white">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -179,38 +104,38 @@ html.light .j-punct { color: #64748b; }
         </div>
       </div>
 
-      <!-- AĞAÇ: sadece bu kısım scroll olur -->
       <div id="catalog-tree-container" class="flex-1 overflow-y-auto overscroll-contain p-3 space-y-2 min-h-0">
         <div class="p-8 text-center text-slate-500 text-xs">
-          <div class="inline-block w-6 h-6 border-2 border-brand-500 border-t-transparent rounded-full animate-spin mb-2"></div>
+          <div class="inline-block w-6 h-6 border-2 border-win-500 border-t-transparent rounded-full animate-spin mb-2"></div>
           <p data-i18n="catalog_loading">Katalog yükleniyor...</p>
         </div>
       </div>
 
-      <!-- Sabit alt bilgi -->
-      <div class="p-3 border-t border-slate-800 bg-slate-900/50 text-[11px] text-slate-500 flex items-center justify-between flex-none">
+      <div class="p-3 border-t border-win-border bg-win-card/50 text-[11px] text-slate-500 flex items-center justify-between flex-none">
         <span>REST JSON API</span>
         <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> <span data-i18n="live_connection">Canlı Bağlantı</span></span>
       </div>
     </aside>
 
-    <div id="mobile-overlay" class="fixed inset-0 bg-slate-950/70 z-20 hidden lg:hidden glass-panel"></div>
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/70 z-20 hidden lg:hidden glass-panel"></div>
 
-    <!-- MAIN: kendi içinde scroll -->
-    <main id="main-content" class="flex-1 overflow-y-auto overscroll-contain bg-slate-950/50 flex flex-col min-h-0">
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="flex-1 overflow-y-auto overscroll-contain bg-win-base flex flex-col min-h-0">
+      
+      <!-- Boş Durum -->
       <div id="view-empty-state" class="flex-1 flex flex-col items-center justify-center p-8 text-center max-w-lg mx-auto">
-        <div class="w-20 h-20 rounded-3xl bg-gradient-to-tr from-brand-600/20 to-slate-800 border border-brand-500/20 text-brand-400 flex items-center justify-center text-3xl mb-6 shadow-2xl shadow-brand-500/10">⚡</div>
+        <div class="w-20 h-20 rounded-2xl bg-win-card border border-win-border text-win-500 flex items-center justify-center text-3xl mb-6 shadow-xl">⚡</div>
         <h2 class="text-2xl font-bold text-white tracking-tight mb-2" data-i18n="empty_title">Veri Seti veya Servis Seçin</h2>
         <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="empty_desc">Sol taraftaki katalog ağacından bir Bakanlık veya Kurum seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz.</p>
         <div class="grid grid-cols-2 gap-3 w-full text-left text-xs text-slate-300">
-          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-3">
+          <div class="p-3 rounded-lg bg-win-card border border-win-border flex items-start gap-3">
             <span class="text-base">📊</span>
             <div>
               <strong class="block text-white font-semibold mb-0.5" data-i18n="empty_card1_t">Veri Önizleme</strong>
               <span data-i18n="empty_card1_d">Tablo görünümü ile doğrudan canlı veri kayıtları.</span>
             </div>
           </div>
-          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-3">
+          <div class="p-3 rounded-lg bg-win-card border border-win-border flex items-start gap-3">
             <span class="text-base">💻</span>
             <div>
               <strong class="block text-white font-semibold mb-0.5" data-i18n="empty_card2_t">Hazır Kodlar</strong>
@@ -220,34 +145,35 @@ html.light .j-punct { color: #64748b; }
         </div>
       </div>
 
+      <!-- Servis Detay Görünümü -->
       <div id="view-service-detail" class="hidden flex-1 p-4 lg:p-8 max-w-6xl w-full mx-auto space-y-6">
         <nav class="flex items-center gap-2 text-xs text-slate-400">
           <button id="btn-bc-home" type="button" class="hover:text-white transition" data-i18n="bc_home">Katalog</button>
           <span>/</span>
           <span id="bc-ministry" class="text-slate-300 font-medium">—</span>
           <span>/</span>
-          <span id="bc-service" class="text-brand-400 font-semibold truncate">—</span>
+          <span id="bc-service" class="text-win-100 font-semibold truncate">—</span>
         </nav>
 
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-800">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-win-border">
           <div class="space-y-1">
             <div class="flex items-center gap-2">
-              <span id="service-ministry-badge" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 text-xs font-semibold border border-slate-700">—</span>
-              <span id="service-records-count" class="px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-400 text-xs font-semibold border border-brand-500/20">0</span>
-              <span id="service-type-badge" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-400 text-[10px] font-mono border border-slate-700">—</span>
+              <span id="service-ministry-badge" class="px-2.5 py-0.5 rounded bg-win-card text-slate-300 text-xs font-semibold border border-win-border">—</span>
+              <span id="service-records-count" class="px-2.5 py-0.5 rounded bg-win-500/20 text-win-100 text-xs font-semibold border border-win-500/30">0</span>
+              <span id="service-type-badge" class="px-2.5 py-0.5 rounded bg-win-card text-slate-400 text-[10px] font-mono border border-win-border">—</span>
             </div>
             <h1 id="service-title" class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight">—</h1>
             <p id="service-desc" class="text-sm text-slate-400">—</p>
           </div>
           <div class="flex items-center gap-2">
-            <button id="btn-run-query" type="button" class="px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold shadow-lg shadow-brand-500/25 flex items-center gap-2 transition transform active:scale-95">
+            <button id="btn-run-query" type="button" class="px-4 py-2 rounded-lg bg-win-500 hover:bg-win-600 text-white text-xs font-bold shadow-md flex items-center gap-2 transition">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
               <span data-i18n="run_query">Yenile</span>
             </button>
           </div>
         </div>
 
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl space-y-2">
+        <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-lg space-y-2">
           <div class="flex items-center justify-between text-xs font-bold text-slate-400 uppercase tracking-wider">
             <span class="flex items-center gap-2">
               <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-mono">GET</span>
@@ -256,129 +182,19 @@ html.light .j-punct { color: #64748b; }
             <span id="service-last-update" class="text-[11px] font-normal text-slate-500">—</span>
           </div>
           <div class="flex items-center gap-2">
-            <div class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 font-mono text-xs text-brand-300 overflow-x-auto whitespace-nowrap" id="endpoint-url-text">—</div>
-            <button id="btn-copy-url" type="button" class="px-3.5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold rounded-xl border border-slate-700 flex items-center gap-1.5 transition flex-none">
+            <div class="flex-1 bg-win-base border border-win-border rounded-lg px-4 py-2.5 font-mono text-xs text-win-100 overflow-x-auto whitespace-nowrap" id="endpoint-url-text">—</div>
+            <button id="btn-copy-url" type="button" class="px-3.5 py-2.5 bg-win-hover text-white text-xs font-semibold rounded-lg border border-win-border flex items-center gap-1.5 transition flex-none">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
               <span data-i18n="copy">Kopyala</span>
             </button>
-          </div>
-        </div>
-
-        <div class="space-y-4">
-          <div class="flex items-center gap-2 border-b border-slate-800 overflow-x-auto" role="tablist">
-            <button class="tab-btn px-4 py-2.5 text-xs font-bold border-b-2 border-brand-500 text-brand-400 flex items-center gap-2 transition whitespace-nowrap active" data-tab="tab-table">
-              <span>📊</span> <span data-i18n="tab_table">Veri Tablosu</span>
-              <span id="tab-badge-table" class="px-1.5 py-0.5 rounded-full bg-brand-500/20 text-[10px]">0</span>
-            </button>
-            <button class="tab-btn px-4 py-2.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap" data-tab="tab-code">
-              <span>⚡</span> <span data-i18n="tab_code">Bağlantı Kodları</span>
-            </button>
-            <button class="tab-btn px-4 py-2.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap" data-tab="tab-json">
-              <span>🖥️</span> <span data-i18n="tab_json">JSON Konsolu</span>
-            </button>
-            <button class="tab-btn px-4 py-2.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap" data-tab="tab-docs">
-              <span>📖</span> <span data-i18n="tab_docs">Şema Dokümantasyonu</span>
-            </button>
-          </div>
-
-          <!-- TABLE -->
-          <div id="tab-table" class="tab-panel space-y-3">
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-900 p-3 rounded-xl border border-slate-800 text-xs">
-              <div class="relative w-full sm:w-64">
-                <input type="text" id="input-table-filter" data-i18n-placeholder="table_filter" placeholder="Tabloda filtrele..." class="w-full h-8 pl-8 pr-3 bg-slate-950 text-white rounded-lg border border-slate-800 focus:outline-none focus:border-brand-500 text-xs">
-                <svg class="w-3.5 h-3.5 text-slate-500 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-              </div>
-              <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
-                <button id="btn-export-csv" type="button" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700 flex items-center gap-1.5 font-medium transition">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                  <span>CSV</span>
-                </button>
-                <button id="btn-export-json" type="button" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700 flex items-center gap-1.5 font-medium transition">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                  <span>JSON</span>
-                </button>
-              </div>
-            </div>
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
-              <div class="overflow-x-auto max-h-[480px]">
-                <table class="w-full text-left text-xs text-slate-300 border-collapse" id="data-table">
-                  <thead class="bg-slate-800/80 sticky top-0 backdrop-blur border-b border-slate-700 text-slate-400 font-bold uppercase tracking-wider">
-                    <tr id="table-head-row"><th class="p-3">#</th></tr>
-                  </thead>
-                  <tbody id="table-body-rows" class="divide-y divide-slate-800/60 font-mono"></tbody>
-                </table>
-              </div>
-              <div class="p-3 bg-slate-900 border-t border-slate-800 text-slate-400 text-[11px] flex items-center justify-between">
-                <span id="table-pagination-info">—</span>
-                <span data-i18n="table_paging">İlk 100 kayıt gösteriliyor</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- CODE -->
-          <div id="tab-code" class="tab-panel hidden space-y-4">
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
-              <div class="flex items-center justify-between bg-slate-950 px-4 py-2.5 border-b border-slate-800">
-                <div class="flex items-center gap-1 overflow-x-auto" id="code-lang-selector">
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded-lg text-xs font-bold bg-brand-600 text-white transition" data-lang="curl">cURL</button>
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition" data-lang="python">Python</button>
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition" data-lang="js">JavaScript</button>
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition" data-lang="go">Go</button>
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition" data-lang="php">PHP</button>
-                </div>
-                <button id="btn-copy-code" type="button" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-lg border border-slate-700 transition" data-i18n="copy">Kopyala</button>
-              </div>
-              <pre class="p-5 font-mono text-xs text-emerald-400 bg-slate-950 overflow-x-auto leading-relaxed" id="code-snippet-box"></pre>
-            </div>
-          </div>
-
-          <!-- JSON -->
-          <div id="tab-json" class="tab-panel hidden space-y-3">
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden font-mono shadow-2xl">
-              <div class="bg-slate-900 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                  <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
-                  <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-                  <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-                  <span class="text-xs text-slate-400 ml-2 font-sans font-semibold" id="json-status-label">HTTP 200</span>
-                </div>
-                <div class="flex items-center gap-3 text-xs text-slate-400 font-sans">
-                  <span id="json-response-time" class="text-emerald-400 font-mono">—</span>
-                  <button id="btn-copy-json" type="button" class="hover:text-white text-xs underline" data-i18n="copy_payload">Payload'ı Kopyala</button>
-                </div>
-              </div>
-              <pre class="p-5 text-xs text-slate-200 overflow-auto max-h-[500px] leading-relaxed" id="json-console-output"></pre>
-            </div>
-          </div>
-
-          <!-- DOCS -->
-          <div id="tab-docs" class="tab-panel hidden space-y-4">
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
-              <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                <span data-i18n="docs_title">Veri Alanları ve Veri Tipleri</span>
-              </h3>
-              <div class="overflow-x-auto">
-                <table class="w-full text-left text-xs text-slate-300">
-                  <thead class="bg-slate-800 text-slate-400 font-bold uppercase">
-                    <tr>
-                      <th class="p-3 rounded-l-lg" data-i18n="docs_field">Alan Adı</th>
-                      <th class="p-3" data-i18n="docs_type">Veri Tipi</th>
-                      <th class="p-3" data-i18n="docs_example">Örnek</th>
-                      <th class="p-3 rounded-r-lg" data-i18n="docs_desc">Açıklama</th>
-                    </tr>
-                  </thead>
-                  <tbody id="docs-schema-tbody" class="divide-y divide-slate-800 font-mono"></tbody>
-                </table>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </main>
   </div>
 
-  <div id="toast-notification" class="fixed bottom-6 right-6 bg-slate-800 text-white border border-slate-700 px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 z-50 pointer-events-none">
+  <!-- Toast Bildirimi -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 bg-win-card text-white border border-win-border px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 z-50 pointer-events-none">
     <div id="toast-icon" class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">✓</div>
     <div>
       <h4 id="toast-title" class="text-xs font-bold">OK</h4>
@@ -386,26 +202,13 @@ html.light .j-punct { color: #64748b; }
     </div>
   </div>
 
-  <div id="modal-quick-search" class="fixed inset-0 bg-slate-950/80 glass-panel z-50 flex items-start justify-center pt-20 px-4 hidden">
-    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-xl w-full shadow-2xl overflow-hidden space-y-2">
-      <div class="p-4 border-b border-slate-800 flex items-center gap-3">
-        <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-        <input type="text" id="modal-search-input" data-i18n-placeholder="quick_search_ph" placeholder="Servis ara..." class="flex-1 bg-transparent text-sm text-white focus:outline-none placeholder-slate-500 font-medium">
-        <kbd class="px-2 py-1 text-[10px] font-mono bg-slate-800 text-slate-400 rounded border border-slate-700">ESC</kbd>
-      </div>
-      <div id="modal-search-results" class="max-h-80 overflow-y-auto p-2 space-y-1"></div>
-    </div>
-  </div>
-
   <script>
-  // =================================================================
-  // DİL SÖZLÜĞÜ
-  // =================================================================
   const UI = {
     tr: {
       portal_alt: "Parametrik Veri Servisi Portalı",
-      quick_search: "Tüm parametrik servislerde ara...",
-      quick_search_ph: "Servis veya veri adı yazın...",
+      nav_portal: "Portal",
+      nav_products: "Ürün Arama",
+      nav_curator: "Küratör",
       system_active: "Sistem Aktif",
       catalog_title: "Veri Kataloğu",
       catalog_search: "Bakanlık, kurum veya veri ara...",
@@ -421,37 +224,13 @@ html.light .j-punct { color: #64748b; }
       run_query: "Yenile",
       endpoint_label: "API Uç Noktası",
       copy: "Kopyala",
-      copy_payload: "Payload'ı Kopyala",
-      tab_table: "Veri Tablosu",
-      tab_code: "Bağlantı Kodları",
-      tab_json: "JSON Konsolu",
-      tab_docs: "Şema Dokümantasyonu",
-      table_filter: "Tabloda filtrele...",
-      table_paging: "İlk 100 kayıt gösteriliyor",
-      docs_title: "Veri Alanları ve Veri Tipleri",
-      docs_field: "Alan Adı",
-      docs_type: "Veri Tipi",
-      docs_example: "Örnek",
-      docs_desc: "Açıklama",
-      records: "Kayıt",
-      services: "Servis",
-      loading_data: "Veriler yükleniyor...",
       load_error: "Veri alınamadı. Endpoint yanıt vermedi.",
-      filtered: "filtrelendi",
-      filtered_none: "Filtreye uygun kayıt bulunamadı",
-      no_records: "Kayıt bulunamadı",
-      copied: "Kopyalandı",
-      copied_url: "Endpoint adresi kopyalandı",
-      copied_code: "Hazır kod kopyalandı",
-      copied_json: "JSON payload kopyalandı",
-      error_copy: "Kopyalanamadı",
-      no_service: "Bu kategoride eşleşen servis bulunamadı",
-      no_matches: "Eşleşen servis bulunamadı. Farklı bir arama deneyin.",
     },
     en: {
       portal_alt: "Parametric Data Service Portal",
-      quick_search: "Search all parametric services...",
-      quick_search_ph: "Type service or dataset name...",
+      nav_portal: "Portal",
+      nav_products: "Product Search",
+      nav_curator: "Curator",
       system_active: "System Active",
       catalog_title: "Data Catalog",
       catalog_search: "Search ministry, institution or data...",
@@ -467,753 +246,88 @@ html.light .j-punct { color: #64748b; }
       run_query: "Refresh",
       endpoint_label: "API Endpoint",
       copy: "Copy",
-      copy_payload: "Copy Payload",
-      tab_table: "Data Table",
-      tab_code: "Code Samples",
-      tab_json: "JSON Console",
-      tab_docs: "Schema Docs",
-      table_filter: "Filter table...",
-      table_paging: "Showing first 100 records",
-      docs_title: "Fields and Data Types",
-      docs_field: "Field",
-      docs_type: "Data Type",
-      docs_example: "Example",
-      docs_desc: "Description",
-      records: "Records",
-      services: "Services",
-      loading_data: "Loading data...",
       load_error: "Could not fetch data. Endpoint did not respond.",
-      filtered: "filtered",
-      filtered_none: "No records match the filter",
-      no_records: "No records found",
-      copied: "Copied",
-      copied_url: "Endpoint URL copied",
-      copied_code: "Code snippet copied",
-      copied_json: "JSON payload copied",
-      error_copy: "Copy failed",
-      no_service: "No matching service in this category",
-      no_matches: "No service found. Try a different search.",
     }
-  };
-
-  const TIP_SOZLUK = {
-    tr: { liste:'Liste', agac:'Ağaç', harita:'Harita', tablo:'Tablo' },
-    en: { liste:'List',  agac:'Tree', harita:'Map',    tablo:'Table' }
-  };
-
-  const ALAN_ETIKET_TR = {
-    kod:'Kod', ust_kod:'Üst Kod', seviye:'Seviye', seviye_adi:'Seviye Adı',
-    sira:'Sıra', ad_tr:'Ad (TR)', ad_en:'Ad (EN)',
-    tanim_tr:'Tanım (TR)', tanim_en:'Tanım (EN)',
-    aciklama_tr:'Açıklama (TR)', aciklama_en:'Açıklama (EN)',
-    kategori:'Kategori', oran:'Oran', oran_binde:'Binde Oran',
-    matrah_alt_sinir_tl:'Matrah Alt (₺)', matrah_ust_sinir_tl:'Matrah Üst (₺)',
-    sabit_vergi_tl:'Sabit Vergi (₺)', olcu_birimi:'Ölçü Birimi',
-    para_birimi:'Para Birimi', periyot:'Periyot', tip:'Tip', liste:'Liste',
-    kaynak:'Kaynak', gecerlilik:'Geçerlilik', deger:'Değer',
-    gtip_prefix:'GTİP Öneki', cpc_prefix:'CPC Öneki', nace_prefix:'NACE Öneki',
-    isco_prefix:'ISCO Öneki', kdv_kodu:'KDV Kodu', otv_kodu:'ÖTV Kodu',
-    oncelik:'Öncelik', aciklama:'Açıklama', ad:'Ad', islem:'İşlem',
-  };
-  const ALAN_ETIKET_EN = {
-    kod:'Code', ust_kod:'Parent Code', seviye:'Level', seviye_adi:'Level Name',
-    sira:'Order', ad_tr:'Name (TR)', ad_en:'Name (EN)',
-    tanim_tr:'Description (TR)', tanim_en:'Description (EN)',
-    aciklama_tr:'Explanation (TR)', aciklama_en:'Explanation (EN)',
-    kategori:'Category', oran:'Rate', oran_binde:'Rate (per mille)',
-    matrah_alt_sinir_tl:'Base Min (₺)', matrah_ust_sinir_tl:'Base Max (₺)',
-    sabit_vergi_tl:'Fixed Tax (₺)', olcu_birimi:'Unit',
-    para_birimi:'Currency', periyot:'Period', tip:'Type', liste:'Schedule',
-    kaynak:'Source', gecerlilik:'Validity', deger:'Value',
-    gtip_prefix:'HS Prefix', cpc_prefix:'CPC Prefix', nace_prefix:'NACE Prefix',
-    isco_prefix:'ISCO Prefix', kdv_kodu:'VAT Code', otv_kodu:'SCT Code',
-    oncelik:'Priority', aciklama:'Explanation', ad:'Name', islem:'Operation',
-  };
-
-  const SCHEMA_ACIKLAMA_TR = {
-    kod:'Benzersiz kod / kod kimliği',
-    ust_kod:'Üst kategori kodu (ağaç bağlantısı)',
-    seviye:'Hiyerarşi seviyesi (1=kök)',
-    seviye_adi:'Seviye adı (bölüm, fasıl, grup...)',
-    sira:'Görüntüleme sırası',
-    tanim_tr:'Türkçe tanım',
-    tanim_en:'İngilizce tanım',
-    ad_tr:'Türkçe ad',
-    ad_en:'İngilizce ad',
-    aciklama_tr:'Türkçe açıklama',
-    aciklama_en:'İngilizce açıklama',
-    oran:'Vergi oranı (ondalık)',
-    oran_binde:'Binde oran',
-    olcu_birimi:'Ölçü birimi',
-    para_birimi:'Para birimi (ISO 4217)',
-    matrah_alt_sinir_tl:'Matrah alt sınırı (₺)',
-    matrah_ust_sinir_tl:'Matrah üst sınırı (₺)',
-    sabit_vergi_tl:'Sabit vergi tutarı (₺)',
-    kategori:'Kategori etiketi',
-    periyot:'Dönem (aylık, yıllık, sabit)',
-    tip:'Veri yapısı tipi',
-    liste:'Liste numarası',
-    kaynak:'Kaynak referansı',
-    deger:'Sayısal değer',
-  };
-  const SCHEMA_ACIKLAMA_EN = {
-    kod:'Unique code identifier',
-    ust_kod:'Parent category code (tree link)',
-    seviye:'Hierarchy level (1=root)',
-    seviye_adi:'Level name (section, chapter, group...)',
-    sira:'Display order',
-    tanim_tr:'Turkish description',
-    tanim_en:'English description',
-    ad_tr:'Turkish name',
-    ad_en:'English name',
-    aciklama_tr:'Turkish explanation',
-    aciklama_en:'English explanation',
-    oran:'Tax rate (decimal)',
-    oran_binde:'Rate per mille',
-    olcu_birimi:'Unit of measure',
-    para_birimi:'Currency (ISO 4217)',
-    matrah_alt_sinir_tl:'Tax base lower limit (TRY)',
-    matrah_ust_sinir_tl:'Tax base upper limit (TRY)',
-    sabit_vergi_tl:'Fixed tax amount (TRY)',
-    kategori:'Category label',
-    periyot:'Period (monthly, annual, fixed)',
-    tip:'Data structure type',
-    liste:'Schedule number',
-    kaynak:'Source reference',
-    deger:'Numeric value',
   };
 
   let DIL = 'tr';
-
   function t(k){ return (UI[DIL] && UI[DIL][k]) || k; }
-
-  function alanSec(obj, temelAd){
-    if(!obj) return '';
-    const en = obj[temelAd + '_en'];
-    const tr = obj[temelAd + '_tr'] || obj[temelAd];
-    if(DIL === 'en') return en || tr || '';
-    return tr || en || '';
-  }
-
-  function tipEtiket(tip){
-    if(!tip) return '—';
-    const anahtar = String(tip).toLowerCase();
-    return (TIP_SOZLUK[DIL] && TIP_SOZLUK[DIL][anahtar]) || tip;
-  }
-
-  function alanEtiket(anahtar){
-    const sozluk = DIL === 'tr' ? ALAN_ETIKET_TR : ALAN_ETIKET_EN;
-    if(sozluk[anahtar]) return sozluk[anahtar];
-    return anahtar.replace(/_/g,' ').replace(/\b\w/g, h => h.toLocaleUpperCase(DIL==='tr'?'tr-TR':'en-US'));
-  }
-
-  const kacis = s => String(s ?? '').replace(/[&<>"']/g, c => (
-    {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]
-  ));
+  const kacis = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
   function dilUygula(){
     document.documentElement.lang = DIL;
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      el.textContent = t(el.dataset.i18n);
-    });
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-      el.placeholder = t(el.dataset.i18nPlaceholder);
-    });
-    const trBtn = $('lang-tr');
-    const enBtn = $('lang-en');
+    document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { el.placeholder = t(el.dataset.i18nPlaceholder); });
+    const trBtn = $('lang-tr'), enBtn =$('lang-en');
     if(DIL === 'tr'){
-      trBtn.className = 'px-2.5 py-1 rounded-lg bg-brand-600 text-white transition';
-      enBtn.className = 'px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition';
+      trBtn.className = 'px-2.5 py-1 rounded bg-win-500 text-white transition';
+      enBtn.className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white transition';
     }else{
-      enBtn.className = 'px-2.5 py-1 rounded-lg bg-brand-600 text-white transition';
-      trBtn.className = 'px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition';
+      enBtn.className = 'px-2.5 py-1 rounded bg-win-500 text-white transition';
+      trBtn.className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white transition';
     }
-    try{ localStorage.setItem('pdaas_dil', DIL); }catch(e){}
   }
 
-  function dilDegistir(yeni){
-    if(yeni === DIL) return;
-    DIL = yeni;
-    dilUygula();
-
-    if(currentService){
-      servisSecUI(currentService);
-      renderTableData();
-      renderCodeSnippets();
-      renderDocsSchema();
-    }
-    renderCatalogTree($('input-catalog-search').value);
-  }
-
-  // =================================================================
-  // STATE
-  // =================================================================
   let KATALOG = [];
-  let currentService = null;
-  let currentData = [];
-  let currentFilteredData = [];
-  let activeCodeLang = 'curl';
-  let currentRawBody = null;
-
+  let currentService = null, currentData = [];
   const $ = id => document.getElementById(id);
 
-  function bakanlikIkon(ad){
-    const a = (ad || '').toLocaleLowerCase('tr-TR');
-    if(a.includes('mali') || a.includes('hazine') || a.includes('vergi')) return '💰';
-    if(a.includes('ticaret') || a.includes('gümrük')) return '🚢';
-    if(a.includes('içişleri') || a.includes('nüfus')) return '🪪';
-    if(a.includes('sağlık')) return '🩺';
-    if(a.includes('eğitim') || a.includes('milli')) return '🎓';
-    if(a.includes('çalışma') || a.includes('sosyal') || a.includes('sgk') || a.includes('csgb')) return '🤝';
-    if(a.includes('tarım') || a.includes('orman')) return '🌾';
-    if(a.includes('tüik') || a.includes('istatistik') || a.includes('tuik')) return '📊';
-    if(a.includes('çevre') || a.includes('şehir')) return '🌿';
-    if(a.includes('enerji') || a.includes('etkb')) return '⚡';
-    return '🏛️';
+  function openMobileSidebar(){
+    $('sidebar').classList.remove('-translate-x-full');$('mobile-overlay').classList.remove('hidden');
+  }
+  function closeMobileSidebar(){
+    $('sidebar').classList.add('-translate-x-full');$('mobile-overlay').classList.add('hidden');
   }
 
-  function showToast(title, message, isError = false){
-    const toast = $('toast-notification');
-    $('toast-title').textContent = title;
-    $('toast-message').textContent = message;
-    const toastIcon = $('toast-icon');
-    if(isError){
-      toastIcon.className = "w-7 h-7 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center font-bold text-sm";
-      toastIcon.textContent = "✕";
-    }else{
-      toastIcon.className = "w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm";
-      toastIcon.textContent = "✓";
-    }
-    toast.classList.remove('translate-y-20','opacity-0','pointer-events-none');
-    setTimeout(() => toast.classList.add('translate-y-20','opacity-0','pointer-events-none'), 2500);
-  }
-
-  function copyToClipboard(text, successMsg){
-    if(navigator.clipboard && window.isSecureContext){
-      navigator.clipboard.writeText(text).then(() => showToast(t('copied'), successMsg));
-    }else{
-      const ta = document.createElement('textarea');
-      ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
-      document.body.appendChild(ta); ta.select();
-      try{
-        document.execCommand('copy');
-        showToast(t('copied'), successMsg);
-      }catch(err){ showToast(t('error_copy'), '', true); }
-      document.body.removeChild(ta);
-    }
-  }
-
-  // =================================================================
-  // KATALOG
-  // =================================================================
   async function katalogYukle(){
-    $('catalog-tree-container').innerHTML = `
-      <div class="p-8 text-center text-slate-500 text-xs">
-        <div class="inline-block w-6 h-6 border-2 border-brand-500 border-t-transparent rounded-full animate-spin mb-2"></div>
-        <p>${t('catalog_loading')}</p>
-      </div>`;
     try{
-      const r = await fetch('/api/v1/katalog', { headers: { Accept: 'application/json' } });
-      if(!r.ok) throw new Error('HTTP ' + r.status);
+      const r = await fetch('/api/v1/katalog');
       const body = await r.json();
       KATALOG = body.servisler || [];
       renderCatalogTree();
     }catch(e){
-      console.error('[PDaaS] katalog yüklenemedi:', e);
-      $('catalog-tree-container').innerHTML = `
-        <div class="p-6 text-center text-rose-400 text-xs">
-          <p class="font-bold mb-1">${t('load_error')}</p>
-          <p class="text-slate-500">${e.message}</p>
-        </div>`;
-      $('catalog-count-badge').textContent = '0';
+      $('catalog-tree-container').innerHTML = `<div class="p-6 text-center text-rose-400 text-xs">${t('load_error')}</div>`;
     }
   }
 
-  function renderCatalogTree(filterQuery = ''){
+  function renderCatalogTree(){
     const container = $('catalog-tree-container');
-    const q = (filterQuery || '').toLocaleLowerCase('tr-TR').trim();
-
     const gruplar = new Map();
     for(const sv of KATALOG){
-      const anahtar = sv.bakanlik;
-      if(!gruplar.has(anahtar)){
-        gruplar.set(anahtar, {
-          id: anahtar,
-          adi: sv.bakanlik_adi || anahtar,
-          adi_en: sv.bakanlik_adi_en,
-          ikon: bakanlikIkon(sv.bakanlik_adi || ''),
-          servisler: []
-        });
-      }
-      gruplar.get(anahtar).servisler.push(sv);
+      if(!gruplar.has(sv.bakanlik)) gruplar.set(sv.bakanlik, { adi: sv.bakanlik_adi, servisler: [] });
+      gruplar.get(sv.bakanlik).servisler.push(sv);
     }
-
-    let totalServices = 0;
     let html = '';
-
-    for(const grup of gruplar.values()){
-      const grupAdi = DIL === 'en' ? (grup.adi_en || grup.adi) : grup.adi;
-      const eslesen = grup.servisler.filter(s => {
-        if(!q) return true;
-        const sAdi = (DIL === 'en' ? (s.servis_adi_en || s.servis_adi) : s.servis_adi) || '';
-        return sAdi.toLocaleLowerCase('tr-TR').includes(q)
-            || (s.endpoint || '').toLocaleLowerCase('tr-TR').includes(q)
-            || grupAdi.toLocaleLowerCase('tr-TR').includes(q);
-      });
-      if(!eslesen.length) continue;
-      totalServices += eslesen.length;
-      const isOpen = q.length > 0;
-
+    for(const [k, grup] of gruplar.entries()){
       html += `
-        <div class="bg-slate-900/80 rounded-xl border border-slate-800/80 overflow-hidden text-xs transition">
-          <button type="button" class="group-header w-full px-3 py-2.5 flex items-center justify-between text-left hover:bg-slate-800/60 transition" data-group="${grup.id}">
-            <div class="flex items-center gap-2.5 min-w-0">
-              <span class="text-base">${grup.ikon}</span>
-              <div class="truncate">
-                <strong class="block text-slate-200 font-semibold truncate">${kacis(grupAdi)}</strong>
-                <span class="text-[10px] text-slate-500 font-medium">${eslesen.length} ${t('services')}</span>
-              </div>
-            </div>
-            <svg class="w-4 h-4 text-slate-500 transform transition-transform group-arrow ${isOpen ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="group-services ${isOpen ? '' : 'hidden'} border-t border-slate-800/60 divide-y divide-slate-800/40 bg-slate-950/40">
-            ${eslesen.map(s => {
-              const sAdi = DIL === 'en' ? (s.servis_adi_en || s.servis_adi) : s.servis_adi;
-              const aktif = currentService && currentService.servis_kodu === s.servis_kodu && currentService.bakanlik === s.bakanlik;
-              return `
-                <button type="button" class="service-item-btn w-full px-3 py-2 pl-9 flex items-center justify-between text-left hover:bg-brand-600/10 hover:text-brand-300 transition text-slate-400 ${aktif ? 'bg-brand-600/20 text-brand-300 font-semibold border-l-2 border-brand-500' : ''}" data-endpoint="${s.endpoint}">
-                  <span class="truncate pr-2">${kacis(sAdi)}</span>
-                  <span class="px-1.5 py-0.5 text-[9px] font-mono bg-slate-800 text-slate-400 rounded">${(s.kayit_sayisi ?? 0).toLocaleString(DIL==='tr'?'tr-TR':'en-US')}</span>
-                </button>
-              `;
-            }).join('')}
+        <div class="bg-win-card rounded-lg border border-win-border overflow-hidden text-xs mb-2">
+          <div class="px-3 py-2.5 font-semibold text-slate-200 border-b border-win-border bg-win-dark flex justify-between">
+            <span>${kacis(grup.adi)}</span><span>${grup.servisler.length}</span>
           </div>
-        </div>
-      `;
+          <div class="p-1 space-y-1">
+            ${grup.servisler.map(s => `<button type="button" class="w-full text-left px-2 py-1.5 rounded hover:bg-win-hover text-slate-400 hover:text-white truncate" onclick="servisSec('${s.endpoint}'); closeMobileSidebar();">${kacis(s.servis_adi)}</button>`).join('')}
+          </div>
+        </div>`;
     }
-
-    if(!totalServices){
-      html = `<div class="p-6 text-center text-slate-500 text-xs"><p class="font-bold text-slate-400 mb-1">${t('no_matches')}</p></div>`;
-    }
-
     container.innerHTML = html;
-    $('catalog-count-badge').textContent = `${totalServices} ${t('services')}`;
-
-    container.querySelectorAll('.group-header').forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.nextElementSibling.classList.toggle('hidden');
-        btn.querySelector('.group-arrow').classList.toggle('rotate-180');
-      });
-    });
-    container.querySelectorAll('.service-item-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        servisSec(btn.dataset.endpoint);
-        closeMobileSidebar();
-      });
-    });
   }
 
-  // =================================================================
-  // SERVİS SEÇ + UI
-  // =================================================================
-  function servisSecUI(sv){
-    if(!sv) return;
-    const grupAdi   = DIL === 'en' ? (sv.bakanlik_adi_en || sv.bakanlik_adi) : sv.bakanlik_adi;
-    const servisAdi = DIL === 'en' ? (sv.servis_adi_en   || sv.servis_adi)   : sv.servis_adi;
-    const kaynakAd  = DIL === 'en' ? (sv.kaynak_en || sv.kaynak || grupAdi) : (sv.kaynak || grupAdi);
-
-    $('bc-ministry').textContent = grupAdi;
-    $('bc-service').textContent  = servisAdi;
-    $('service-ministry-badge').textContent = grupAdi;
-    $('service-records-count').textContent = (sv.kayit_sayisi ?? 0).toLocaleString(DIL==='tr'?'tr-TR':'en-US') + ' ' + t('records');
-    $('service-type-badge').textContent = tipEtiket(sv.tip);
-    $('service-title').textContent = servisAdi;
-    $('service-desc').textContent  = kaynakAd;
-    $('service-last-update').textContent = sv.surum ? ('v' + sv.surum) : '—';
-    $('endpoint-url-text').textContent = window.location.origin + sv.endpoint;
-  }
-
-  function servisSec(endpoint){
-    const sv = KATALOG.find(s => s.endpoint === endpoint);
-    if(!sv) return;
-    currentService = sv;
-    $('view-empty-state').classList.add('hidden');
-    $('view-service-detail').classList.remove('hidden');
-    servisSecUI(sv);
-    renderCatalogTree($('input-catalog-search').value);
-    servisDetayYukle(endpoint);
-    // Main scroll'u en üste al
-    $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  async function servisDetayYukle(endpoint){
-    $('table-body-rows').innerHTML = `
-      <tr><td colspan="10" class="p-6 text-center text-slate-500">
-        <div class="inline-block w-5 h-5 border-2 border-brand-500 border-t-transparent rounded-full animate-spin"></div>
-        <p class="mt-2">${t('loading_data')}</p>
-      </td></tr>`;
-    const t0 = performance.now();
-    try{
-      const r = await fetch(endpoint, { headers: { Accept: 'application/json' } });
-      const sure = Math.round(performance.now() - t0);
-      if(!r.ok){
-        $('json-status-label').textContent = `HTTP ${r.status}`;
-        $('table-body-rows').innerHTML = `<tr><td colspan="10" class="p-6 text-center text-rose-400">${t('load_error')} (HTTP ${r.status})</td></tr>`;
-        return;
-      }
-      const body = await r.json();
-      currentRawBody = body;
-      currentData = Array.isArray(body.kayitlar) ? body.kayitlar : [];
-      currentFilteredData = [...currentData];
-      $('json-status-label').textContent = `HTTP ${r.status}`;
-      $('json-response-time').textContent = `${sure} ms`;
-      $('service-records-count').textContent = currentData.length.toLocaleString(DIL==='tr'?'tr-TR':'en-US') + ' ' + t('records');
-      renderTableData();
-      renderCodeSnippets();
-      renderJsonConsole();
-      renderDocsSchema();
-    }catch(e){
-      console.error('[PDaaS] detay hatası:', e);
-      $('table-body-rows').innerHTML = `<tr><td colspan="10" class="p-6 text-center text-rose-400">${t('load_error')}</td></tr>`;
-      $('json-status-label').textContent = 'ERROR';
-    }
-  }
-
-  // =================================================================
-  // TABLO
-  // =================================================================
-  function renderTableData(){
-    const tbody = $('table-body-rows');
-    const theadRow = $('table-head-row');
-    const filterVal = ($('input-table-filter').value || '').toLocaleLowerCase('tr-TR');
-
-    if(!currentData.length){
-      tbody.innerHTML = `<tr><td colspan="10" class="p-6 text-center text-slate-500">${t('no_records')}</td></tr>`;
-      $('tab-badge-table').textContent = '0';
-      $('table-pagination-info').textContent = `0 / 0`;
-      return;
-    }
-
-    currentFilteredData = currentData.filter(row => {
-      return Object.values(row).some(v => String(v ?? '').toLocaleLowerCase('tr-TR').includes(filterVal));
-    });
-
-    const keys = Object.keys(currentData[0]);
-
-    theadRow.innerHTML = `<th class="p-3 text-slate-400 font-bold border-r border-slate-700/50">#</th>` +
-      keys.map(k => `<th class="p-3 text-slate-300 font-bold tracking-wider whitespace-nowrap">${kacis(alanEtiket(k))}</th>`).join('');
-
-    const gosterim = currentFilteredData.slice(0, 100);
-
-    if(!gosterim.length){
-      tbody.innerHTML = `<tr><td colspan="${keys.length+1}" class="p-6 text-center text-slate-500">${t('filtered_none')}</td></tr>`;
-    }else{
-      tbody.innerHTML = gosterim.map((row, idx) => `
-        <tr class="hover:bg-slate-800/40 transition">
-          <td class="p-3 text-slate-500 border-r border-slate-800/80 font-sans">${idx + 1}</td>
-          ${keys.map(k => {
-            const val = row[k];
-            let cell = '';
-            if(val === null || val === undefined || val === ''){
-              cell = `<span class="text-slate-600 italic">—</span>`;
-            }else if(typeof val === 'boolean'){
-              cell = val
-                ? `<span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-sans font-bold border border-emerald-500/20">true</span>`
-                : `<span class="px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-400 text-[10px] font-sans font-bold border border-rose-500/20">false</span>`;
-            }else if(typeof val === 'number'){
-              cell = `<span class="text-amber-300">${val.toLocaleString(DIL==='tr'?'tr-TR':'en-US')}</span>`;
-            }else if(typeof val === 'object'){
-              cell = `<span class="text-slate-500 text-[11px]">${Array.isArray(val) ? '['+val.length+' öğe]' : '{…}'}</span>`;
-            }else{
-              const str = String(val);
-              const goster = str.length > 80 ? str.slice(0, 80) + '…' : str;
-              cell = `<span class="text-slate-300" title="${kacis(str)}">${kacis(goster)}</span>`;
-            }
-            return `<td class="p-3 align-top">${cell}</td>`;
-          }).join('')}
-        </tr>
-      `).join('');
-    }
-
-    $('tab-badge-table').textContent = currentFilteredData.length;
-    $('table-pagination-info').textContent = `${gosterim.length} / ${currentData.length} ${t('filtered')}`;
-  }
-
-  // =================================================================
-  // CODE SNIPPETS
-  // =================================================================
-  function renderCodeSnippets(){
+  async function servisSec(endpoint){
+    currentService = KATALOG.find(s => s.endpoint === endpoint);
     if(!currentService) return;
-    const url = window.location.origin + currentService.endpoint;
-    const snippets = {
-      curl: `curl -X GET "${url}" \\\n  -H "Accept: application/json" \\\n  -H "Accept-Encoding: gzip"`,
-      python: `import requests\n\nurl = "${url}"\nheaders = {"Accept": "application/json"}\n\nresponse = requests.get(url, headers=headers, timeout=15)\nresponse.raise_for_status()\nveri = response.json()\n\nkayitlar = veri.get("kayitlar", [])\nprint(f"Toplam: {len(kayitlar)}")\nfor k in kayitlar[:5]:\n    print(k.get("kod"), "-", k.get("tanim_tr"))`,
-      js: `async function fetchData() {\n  const res = await fetch("${url}", {\n    headers: { "Accept": "application/json" }\n  });\n  if (!res.ok) throw new Error("HTTP " + res.status);\n  const { kayitlar = [], toplam } = await res.json();\n  console.log("Toplam:", toplam);\n  console.table(kayitlar.slice(0, 10));\n}\n\nfetchData().catch(console.error);`,
-      go: `package main\n\nimport (\n\t"encoding/json"\n\t"fmt"\n\t"io"\n\t"net/http"\n\t"time"\n)\n\nfunc main() {\n\turl := "${url}"\n\tclient := &http.Client{Timeout: 15 * time.Second}\n\treq, _ := http.NewRequest("GET", url, nil)\n\treq.Header.Set("Accept", "application/json")\n\n\tresp, err := client.Do(req)\n\tif err != nil { panic(err) }\n\tdefer resp.Body.Close()\n\n\tbody, _ := io.ReadAll(resp.Body)\n\tvar veri map[string]interface{}\n\tjson.Unmarshal(body, &veri)\n\tfmt.Println("Toplam:", veri["toplam"])\n}`,
-      php: `<?php\n$url = "${url}";\n$opts = [\n    "http" => [\n        "method" => "GET",\n        "header" => "Accept: application/json\\r\\n"\n    ]\n];\n$ctx = stream_context_create($opts);\n$resp = file_get_contents($url, false, $ctx);\n$veri = json_decode($resp, true);\n\necho "Toplam: " . $veri["toplam"] . " kayıt\\n";\nprint_r(array_slice($veri["kayitlar"], 0, 3));`
-    };
-    $('code-snippet-box').textContent = snippets[activeCodeLang] || snippets.curl;
+    $('view-empty-state').classList.add('hidden');
+    $('view-service-detail').classList.remove('hidden');$('bc-service').textContent = currentService.servis_adi;
+    $('service-title').textContent = currentService.servis_adi;
+    $('endpoint-url-text').textContent = window.location.origin + endpoint;
   }
 
-  // =================================================================
-  // JSON
-  // =================================================================
-  function highlightJson(obj){
-    const json = JSON.stringify(obj, null, 2);
-    if(json === undefined) return '';
-    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, match => {
-      let cls = 'j-num';
-      if(/^"/.test(match)){ cls = /:$/.test(match) ? 'j-key' : 'j-str'; }
-      else if(/true|false/.test(match)){ cls = 'j-kw'; }
-      else if(/null/.test(match)){ cls = 'j-kw'; }
-      return `<span class="${cls}">${match}</span>`;
-    });
-  }
-
-  function renderJsonConsole(){
-    if(!currentRawBody) return;
-    $('json-console-output').innerHTML = highlightJson(currentRawBody);
-  }
-
-  // =================================================================
-  // DOCS
-  // =================================================================
-  function renderDocsSchema(){
-    if(!currentData.length){
-      $('docs-schema-tbody').innerHTML = `<tr><td colspan="4" class="p-6 text-center text-slate-500">${t('no_records')}</td></tr>`;
-      return;
-    }
-    const ornek = currentData[0];
-    const sozluk = DIL === 'tr' ? SCHEMA_ACIKLAMA_TR : SCHEMA_ACIKLAMA_EN;
-
-    $('docs-schema-tbody').innerHTML = Object.keys(ornek).map(key => {
-      const val = ornek[key];
-      let tip = typeof val;
-      if(Array.isArray(val)) tip = 'array';
-      else if(val === null) tip = 'null';
-
-      let ornekStr = '';
-      if(val === null || val === undefined) ornekStr = 'null';
-      else if(typeof val === 'object') ornekStr = Array.isArray(val) ? `[${val.length}]` : '{...}';
-      else ornekStr = String(val).slice(0, 40);
-
-      const aciklama = sozluk[key] || '—';
-
-      return `
-        <tr class="hover:bg-slate-800/40 transition">
-          <td class="p-3 text-brand-300 font-semibold">${kacis(key)}</td>
-          <td class="p-3"><span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">${tip}</span></td>
-          <td class="p-3 text-slate-400 text-[11px]">${kacis(ornekStr)}</td>
-          <td class="p-3 text-slate-400 font-sans">${aciklama}</td>
-        </tr>
-      `;
-    }).join('');
-  }
-
-  // =================================================================
-  // SEKMELER
-  // =================================================================
-  function setupTabs(){
-    document.querySelectorAll('.tab-btn').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.tab-btn').forEach(t => {
-          t.classList.remove('border-brand-500','text-brand-400','active');
-          t.classList.add('border-transparent','text-slate-400');
-        });
-        tab.classList.add('border-brand-500','text-brand-400','active');
-        tab.classList.remove('border-transparent','text-slate-400');
-        const target = tab.dataset.tab;
-        document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
-        $(target).classList.remove('hidden');
-      });
-    });
-    document.querySelectorAll('.code-lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.code-lang-btn').forEach(b => {
-          b.classList.remove('bg-brand-600','text-white');
-          b.classList.add('text-slate-400');
-        });
-        btn.classList.add('bg-brand-600','text-white');
-        btn.classList.remove('text-slate-400');
-        activeCodeLang = btn.dataset.lang;
-        renderCodeSnippets();
-      });
-    });
-  }
-
-  function openMobileSidebar(){
-    $('sidebar').classList.remove('-translate-x-full');
-    $('mobile-overlay').classList.remove('hidden');
-  }
-  function closeMobileSidebar(){
-    $('sidebar').classList.add('-translate-x-full');
-    $('mobile-overlay').classList.add('hidden');
-  }
-
-  // =================================================================
-  // BAŞLAT
-  // =================================================================
   window.addEventListener('DOMContentLoaded', () => {
-    const url = new URLSearchParams(location.search).get('lang');
-    if(url && ['tr','en'].includes(url)) DIL = url;
-    else {
-      try{
-        const k = localStorage.getItem('pdaas_dil');
-        if(k && ['tr','en'].includes(k)) DIL = k;
-      }catch(e){}
-    }
     dilUygula();
-
-    setupTabs();
-
-    $('btn-mobile-menu').addEventListener('click', openMobileSidebar);
-    $('mobile-overlay').addEventListener('click', closeMobileSidebar);
-
-    const searchInput = $('input-catalog-search');
-    const clearBtn = $('btn-clear-search');
-    searchInput.addEventListener('input', e => {
-      const v = e.target.value;
-      if(v) clearBtn.classList.remove('hidden'); else clearBtn.classList.add('hidden');
-      renderCatalogTree(v);
-    });
-    clearBtn.addEventListener('click', () => {
-      searchInput.value = ''; clearBtn.classList.add('hidden'); renderCatalogTree('');
-    });
-
-    $('input-table-filter').addEventListener('input', renderTableData);
-
-    $('btn-copy-url').addEventListener('click', () => {
-      if(currentService) copyToClipboard($('endpoint-url-text').textContent, t('copied_url'));
-    });
-    $('btn-copy-code').addEventListener('click', () => {
-      copyToClipboard($('code-snippet-box').textContent, t('copied_code'));
-    });
-    $('btn-copy-json').addEventListener('click', () => {
-      if(currentRawBody) copyToClipboard(JSON.stringify(currentRawBody, null, 2), t('copied_json'));
-    });
-
-    $('btn-run-query').addEventListener('click', () => {
-      if(currentService) servisDetayYukle(currentService.endpoint);
-    });
-
-    $('btn-bc-home').addEventListener('click', () => {
-      $('view-empty-state').classList.remove('hidden');
-      $('view-service-detail').classList.add('hidden');
-      currentService = null;
-      renderCatalogTree($('input-catalog-search').value);
-      $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    $('btn-logo').addEventListener('click', () => {
-      $('view-empty-state').classList.remove('hidden');
-      $('view-service-detail').classList.add('hidden');
-      currentService = null;
-      renderCatalogTree($('input-catalog-search').value);
-      $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    $('btn-export-json').addEventListener('click', () => {
-      if(!currentData.length) return;
-      const blob = new Blob([JSON.stringify(currentData, null, 2)], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${currentService.servis_kodu}-data.json`;
-      a.click();
-      showToast('✓', t('copied_json'));
-    });
-    $('btn-export-csv').addEventListener('click', () => {
-      if(!currentData.length) return;
-      const keys = Object.keys(currentData[0]);
-      const rows = [keys.join(',')];
-      currentData.forEach(row => {
-        rows.push(keys.map(k => `"${String(row[k] ?? '').replace(/"/g,'""')}"`).join(','));
-      });
-      const blob = new Blob([rows.join('\n')], { type: 'text/csv;charset=utf-8;' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${currentService.servis_kodu}-data.csv`;
-      a.click();
-      showToast('✓', t('copied_json'));
-    });
-
-    const modalSearch = $('modal-quick-search');
-    const modalInput = $('modal-search-input');
-    const modalResults = $('modal-search-results');
-
-    function openModalSearch(){
-      modalSearch.classList.remove('hidden');
-      modalInput.value = '';
-      modalInput.focus();
-      renderModalSearchResults('');
-    }
-    function closeModalSearch(){ modalSearch.classList.add('hidden'); }
-
-    $('btn-quick-search').addEventListener('click', openModalSearch);
-    window.addEventListener('keydown', e => {
-      if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){ e.preventDefault(); openModalSearch(); }
-      if(e.key === 'Escape') closeModalSearch();
-    });
-    modalSearch.addEventListener('click', e => { if(e.target === modalSearch) closeModalSearch(); });
-
-    function renderModalSearchResults(q){
-      const ql = (q || '').toLocaleLowerCase('tr-TR');
-      const results = KATALOG.filter(s => {
-        const sAdi = (DIL === 'en' ? (s.servis_adi_en || s.servis_adi) : s.servis_adi) || '';
-        return !ql
-          || sAdi.toLocaleLowerCase('tr-TR').includes(ql)
-          || (s.endpoint || '').includes(ql)
-          || (s.bakanlik_adi || '').toLocaleLowerCase('tr-TR').includes(ql);
-      }).slice(0, 30);
-
-      modalResults.innerHTML = results.map(r => {
-        const sAdi = DIL === 'en' ? (r.servis_adi_en || r.servis_adi) : r.servis_adi;
-        const bAdi = DIL === 'en' ? (r.bakanlik_adi_en || r.bakanlik_adi) : r.bakanlik_adi;
-        return `
-          <button type="button" class="w-full p-3 rounded-xl bg-slate-800/50 hover:bg-brand-600/20 hover:border-brand-500/40 border border-slate-700/50 flex items-center justify-between text-left transition group" data-endpoint="${r.endpoint}">
-            <div class="flex items-center gap-3">
-              <span class="text-xl">${bakanlikIkon(bAdi)}</span>
-              <div>
-                <strong class="block text-xs font-semibold text-white group-hover:text-brand-300">${kacis(sAdi)}</strong>
-                <span class="text-[10px] text-slate-400">${kacis(bAdi)} • ${r.endpoint}</span>
-              </div>
-            </div>
-            <span class="text-xs text-brand-400 font-semibold font-mono">↵</span>
-          </button>
-        `;
-      }).join('') || `<div class="p-6 text-center text-slate-500 text-xs">${t('no_matches')}</div>`;
-
-      modalResults.querySelectorAll('button').forEach(btn => {
-        btn.addEventListener('click', () => {
-          servisSec(btn.dataset.endpoint);
-          closeModalSearch();
-        });
-      });
-    }
-    modalInput.addEventListener('input', e => renderModalSearchResults(e.target.value));
-
-    let isDark = true;
-    $('btn-theme-toggle').addEventListener('click', () => {
-      isDark = !isDark;
-      if(isDark){
-        document.documentElement.classList.remove('light');
-        document.documentElement.classList.add('dark');
-        $('theme-icon-dark').classList.remove('hidden');
-        $('theme-icon-light').classList.add('hidden');
-        $('app-body').className = "bg-slate-900 text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200";
-      }else{
-        document.documentElement.classList.remove('dark');
-        document.documentElement.classList.add('light');
-        $('theme-icon-dark').classList.add('hidden');
-        $('theme-icon-light').classList.remove('hidden');
-        $('app-body').className = "bg-slate-100 text-slate-800 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200";
-      }
-    });
-
-    $('lang-tr').addEventListener('click', () => dilDegistir('tr'));
-    $('lang-en').addEventListener('click', () => dilDegistir('en'));
-
     katalogYukle();
+
+    $('btn-mobile-menu').addEventListener('click', openMobileSidebar);$('mobile-overlay').addEventListener('click', closeMobileSidebar);
+
+    $('lang-tr').addEventListener('click', () => { DIL = 'tr'; dilUygula(); });$('lang-en').addEventListener('click', () => { DIL = 'en'; dilUygula(); });
   });
   </script>
 </body>
