@@ -1,14 +1,3 @@
-"""
-PDaaS API — Parametric Data as a Service
-Otomatik servis keşfi: ham/ altındaki her JSON kendi meta bloğuyla
-hangi bakanlığa ait olduğunu ve servis kodunu bildirir.
-
-Performance v14:
-- GZip sıkıştırma (JSON %85-90 küçülür)
-- Bellek içi JSON cache (lru_cache) — disk I/O yok
-- HTTP Cache-Control başlıkları (tarayıcı önbelleği)
-- Çift dilli meta alanları (bakanlik_adi_en, servis_adi_en, kaynak_en)
-"""
 from fastapi import FastAPI, HTTPException, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
@@ -266,9 +255,6 @@ def _servis_bul(bakanlik: str, servis_kodu: str) -> dict:
 # ═══════════════════════════════════════════════════════════════
 # HTML SAYFALARI
 # ═══════════════════════════════════════════════════════════════
-# ═══════════════════════════════════════════════════════════════
-# HTML SAYFALARI — uzantısız + uzantılı alias
-# ═══════════════════════════════════════════════════════════════
 def _html_serve(dosya_adi: str, response: Response = None):
     """HTML sayfasını güvenli şekilde döner; 404'te bilgi verir."""
     yol = KOK / dosya_adi
@@ -293,16 +279,41 @@ def ana_sayfa_kisa(response: Response):
 def ana_sayfa_html(response: Response):
     return _html_serve("index.html", response)
 
-
 # ─── Ürün Arama ───
-@app.get("/urunler", include_in_schema=False)
+@app.get("/urunhizmetara", include_in_schema=False)
 def urunler_sayfasi(response: Response):
     return _html_serve("urunler.html", response)
 
-@app.get("/urunler.html", include_in_schema=False)
+@app.get("/urunhizmetara.html", include_in_schema=False)
 def urunler_sayfasi_html(response: Response):
     return _html_serve("urunler.html", response)
 
+# ─── Ürün karti ───
+@app.get("/urunhizmetkarti", include_in_schema=False)
+def urunler_sayfasi(response: Response):
+    return _html_serve("urunler.html", response)
+
+@app.get("/urunhizmetkarti.html", include_in_schema=False)
+def urunler_sayfasi_html(response: Response):
+    return _html_serve("urunler.html", response)
+
+# ─── Personel ───
+@app.get("/personel", include_in_schema=False)
+def urunler_sayfasi(response: Response):
+    return _html_serve("urunler.html", response)
+
+@app.get("/personel.html", include_in_schema=False)
+def urunler_sayfasi_html(response: Response):
+    return _html_serve("urunler.html", response)
+
+# ─── muhtasar ───
+@app.get("/muhtasar", include_in_schema=False)
+def urunler_sayfasi(response: Response):
+    return _html_serve("urunler.html", response)
+
+@app.get("/muhtasar.html", include_in_schema=False)
+def urunler_sayfasi_html(response: Response):
+    return _html_serve("urunler.html", response)
 
 # ─── Küratör ───
 @app.get("/kurator", include_in_schema=False)
@@ -319,7 +330,6 @@ def kurator_sayfasi_html(response: Response):
 @app.get("/health")
 def health():
     return {"status": "healthy", "build": BUILD_VERSION}
-
 
 @app.get("/api/v1/katalog")
 def katalog_listesi(response: Response):
