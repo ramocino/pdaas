@@ -18,170 +18,106 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            brand: { 50:'#eef2ff',100:'#e0e7ff',500:'#6366f1',600:'#4f46e5',700:'#4338ca',900:'#312e81' }
+            win: {
+              50:  '#e6f2ff', 100: '#cce5ff', 200: '#99ccff', 300: '#66b3ff',
+              400: '#4cc2ff', 500: '#0067c0', 600: '#005fb8', 700: '#00458c',
+              base:   '#202020', dark:   '#1c1c1c', card:   '#272727',
+              hover:  '#2d2d2d', active: '#333333', border: '#383838',
+            }
           }
         }
       }
     }
   </script>
   <style>
-    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
     ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: rgba(156, 163, 175, 0.3); border-radius: 99px; }
-    ::-webkit-scrollbar-thumb:hover { background: rgba(156, 163, 175, 0.5); }
-    .glass-panel { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-    .j-key { color: #38bdf8; font-weight: 500; }
-    .j-str { color: #a5f3fc; }
-    .j-num { color: #fbbf24; }
-    .j-kw  { color: #f472b6; font-weight: 600; }
-    .j-punct { color: #94a3b8; }
-    .light .j-key { color: #0284c7; }
-    .light .j-str { color: #0f766e; }
-    .light .j-num { color: #d97706; }
-    .light .j-kw  { color: #db2777; }
-    .light .j-punct { color: #64748b; }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.10);
+      border-radius: 4px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.22);
+      background-clip: content-box;
+    }
+    .mica-panel {
+      backdrop-filter: blur(30px) saturate(180%);
+      -webkit-backdrop-filter: blur(30px) saturate(180%);
+    }
+    .j-key { color: #4cc2ff; font-weight: 500; }
+    .j-str { color: #9cdcfe; }
+    .j-num { color: #b5cea8; }
+    .j-kw  { color: #c586c0; font-weight: 600; }
+    .j-punct { color: #808080; }
 
-    /* Sidebar scrollbar özel (ince, koyu) */
     #catalog-tree-container::-webkit-scrollbar { width: 6px; }
-    #catalog-tree-container::-webkit-scrollbar-thumb { background: rgba(99,102,241,.25); border-radius: 99px; }
-    #catalog-tree-container::-webkit-scrollbar-thumb:hover { background: rgba(99,102,241,.5); }
-
-html.light body {
-  background-color: #f1f5f9 !important;
-  color: #0f172a !important;
-}
-
-html.light .bg-slate-900,
-html.light .bg-slate-900\/80,
-html.light .bg-slate-900\/50 { background-color: #ffffff !important; }
-
-html.light .bg-slate-950,
-html.light .bg-slate-950\/50,
-html.light .bg-slate-950\/40,
-html.light .bg-slate-950\/80 { background-color: #f8fafc !important; }
-
-html.light .bg-slate-800,
-html.light .bg-slate-800\/50,
-html.light .bg-slate-800\/60,
-html.light .bg-slate-800\/80 { background-color: #e2e8f0 !important; }
-
-html.light .bg-slate-700\/50 { background-color: #cbd5e1 !important; }
-
-html.light .border-slate-800,
-html.light .border-slate-800\/80,
-html.light .border-slate-800\/60,
-html.light .border-slate-800\/40,
-html.light .border-slate-700,
-html.light .border-slate-700\/70,
-html.light .border-slate-700\/60,
-html.light .border-slate-700\/50 { border-color: #cbd5e1 !important; }
-
-html.light .text-white      { color: #0f172a !important; }
-html.light .text-slate-100  { color: #0f172a !important; }
-html.light .text-slate-200  { color: #1e293b !important; }
-html.light .text-slate-300  { color: #334155 !important; }
-html.light .text-slate-400  { color: #64748b !important; }
-html.light .text-slate-500  { color: #94a3b8 !important; }
-html.light .text-slate-600  { color: #94a3b8 !important; }
-html.light .text-brand-300  { color: #4f46e5 !important; }
-html.light .text-brand-400  { color: #4f46e5 !important; }
-
-html.light .bg-brand-600\/20,
-html.light .bg-brand-500\/20 { background-color: rgba(99,102,241,.15) !important; }
-html.light .bg-brand-600\/10 { background-color: rgba(99,102,241,.08) !important; }
-
-html.light .bg-emerald-500\/10 { background-color: rgba(16,185,129,.1) !important; }
-html.light .bg-rose-500\/10    { background-color: rgba(244,63,94,.1) !important; }
-html.light .bg-rose-500\/20    { background-color: rgba(244,63,94,.15) !important; }
-
-html.light .hover\:bg-slate-800:hover,
-html.light .hover\:bg-slate-800\/60:hover,
-html.light .hover\:bg-slate-700:hover { background-color: #e2e8f0 !important; }
-
-html.light .hover\:bg-brand-600\/10:hover,
-html.light .hover\:bg-brand-600\/20:hover { background-color: rgba(99,102,241,.12) !important; }
-
-html.light .hover\:text-white:hover    { color: #0f172a !important; }
-html.light .hover\:text-slate-200:hover { color: #334155 !important; }
-html.light .hover\:border-slate-600:hover { border-color: #94a3b8 !important; }
-
-html.light .placeholder-slate-500::placeholder { color: #94a3b8 !important; }
-
-html.light .j-key   { color: #0284c7; }
-html.light .j-str   { color: #0f766e; }
-html.light .j-num   { color: #d97706; }
-html.light .j-kw    { color: #db2777; }
-html.light .j-punct { color: #64748b; }
+    #catalog-tree-container::-webkit-scrollbar-thumb {
+      background: rgba(76,194,255,.18);
+      border-radius: 99px;
+    }
+    #catalog-tree-container::-webkit-scrollbar-thumb:hover {
+      background: rgba(76,194,255,.35);
+    }
+    *:focus-visible {
+      outline: 2px solid #4cc2ff;
+      outline-offset: 1px;
+      border-radius: 4px;
+    }
   </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200" id="app-body">
+<body class="bg-win-base text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-win-500 selection:text-white" id="app-body">
 
-  <!-- HEADER (sabit, scroll olmaz) -->
-  <header class="h-16 flex-none border-b border-slate-800 bg-slate-900/80 z-40 glass-panel flex items-center justify-between px-4 lg:px-6">
+  <!-- HEADER -->
+  <header class="h-16 flex-none border-b border-win-border bg-win-dark/80 z-40 mica-panel flex items-center justify-between px-4 lg:px-6">
     <div class="flex items-center gap-3">
-      <button id="btn-mobile-menu" type="button" class="lg:hidden p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition" aria-label="Menü">
+      <button id="btn-mobile-menu" type="button" class="lg:hidden p-2 text-slate-400 hover:text-white rounded-md hover:bg-win-hover transition" aria-label="Menü">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
       <div class="flex items-center gap-3 cursor-pointer" id="btn-logo">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center font-extrabold text-white text-lg shadow-lg shadow-brand-500/30">P</div>
+        <div class="w-9 h-9 rounded-md bg-win-500 flex items-center justify-center font-bold text-white text-lg">P</div>
         <div>
           <div class="flex items-center gap-2">
-            <span class="font-extrabold text-base tracking-tight text-white">PDaaS</span>
-            <span class="text-[10px] font-bold uppercase tracking-wider bg-brand-500/20 text-brand-400 px-2 py-0.5 rounded-full border border-brand-500/30">v14 API</span>
+            <span class="font-bold text-base tracking-tight text-white">PDaaS</span>
+            <span class="text-[10px] font-semibold uppercase tracking-wider bg-win-500/20 text-win-400 px-2 py-0.5 rounded border border-win-500/30">v14 API</span>
           </div>
           <p class="text-xs text-slate-400 font-medium" data-i18n="portal_alt">Parametrik Veri Servisi Portalı</p>
         </div>
       </div>
 
       <nav class="hidden lg:flex items-center gap-1 ml-4">
-        <a href="index.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-800 border border-slate-700">Portal</a>
-        <a href="urunler.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition">Ürün Arama</a>
-        <a href="kurator.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition">Küratör</a>
+        <a href="index.html" class="px-3 py-1.5 rounded-md text-xs font-semibold text-white bg-win-hover border border-win-border">Portal</a>
+        <a href="urunler.html" class="px-3 py-1.5 rounded-md text-xs font-semibold text-slate-400 hover:text-white hover:bg-win-hover transition">Ürün Arama</a>
+        <a href="kurator.html" class="px-3 py-1.5 rounded-md text-xs font-semibold text-slate-400 hover:text-white hover:bg-win-hover transition">Küratör</a>
       </nav>
     </div>
 
-    <div class="hidden md:flex items-center flex-1 max-w-md mx-8">
-      <button id="btn-quick-search" type="button" class="w-full flex items-center justify-between px-3.5 py-2 rounded-xl bg-slate-800/60 border border-slate-700/60 text-slate-400 text-xs hover:border-slate-600 hover:bg-slate-800 transition group">
-        <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-slate-400 group-hover:text-brand-400 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-          <span class="text-slate-300" data-i18n="quick_search">Tüm parametrik servislerde ara...</span>
-        </span>
-        <kbd class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono bg-slate-700/50 text-slate-400 rounded border border-slate-600/50">CTRL + K</kbd>
-      </button>
-    </div>
-
     <div class="flex items-center gap-3">
-      <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
+      <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         <span data-i18n="system_active">Sistem Aktif</span>
       </div>
-      <button id="btn-theme-toggle" type="button" class="p-2 text-slate-400 hover:text-white rounded-xl hover:bg-slate-800 border border-transparent hover:border-slate-700 transition" title="Theme">
-        <svg id="theme-icon-dark" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-        <svg id="theme-icon-light" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-      </button>
-      <div class="flex items-center bg-slate-800 p-1 rounded-xl border border-slate-700/60 text-xs font-semibold">
-        <button id="lang-tr" type="button" class="px-2.5 py-1 rounded-lg bg-brand-600 text-white transition">TR</button>
-        <button id="lang-en" type="button" class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition">EN</button>
+      <div class="flex items-center bg-win-card p-1 rounded-md border border-win-border text-xs font-semibold">
+        <button id="lang-tr" type="button" class="px-2.5 py-1 rounded bg-win-500 text-white transition">TR</button>
+        <button id="lang-en" type="button" class="px-2.5 py-1 rounded text-slate-400 hover:text-white transition">EN</button>
       </div>
     </div>
   </header>
 
-  <!-- MAIN WRAP (min-h-0 kritik: flex child'ların düzgün küçülmesi için) -->
   <div class="flex-1 flex overflow-hidden relative min-h-0">
-
-    <!-- SIDEBAR: kendi içinde scroll, sabit yükseklik -->
-    <aside id="sidebar" class="w-80 lg:w-[22rem] flex-none bg-slate-900 border-r border-slate-800 flex flex-col fixed lg:static inset-y-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
-      <!-- Sabit üst başlık + arama -->
-      <div class="p-4 border-b border-slate-800 space-y-3 flex-none">
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="w-80 lg:w-[22rem] flex-none bg-win-dark border-r border-win-border flex flex-col fixed lg:static inset-y-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
+      <div class="p-4 border-b border-win-border space-y-3 flex-none">
         <div class="flex items-center justify-between">
-          <h2 class="text-sm font-bold tracking-tight text-white uppercase flex items-center gap-2">
-            <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+          <h2 class="text-sm font-semibold tracking-tight text-white uppercase flex items-center gap-2">
+            <svg class="w-4 h-4 text-win-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
             <span data-i18n="catalog_title">Veri Kataloğu</span>
           </h2>
-          <span id="catalog-count-badge" class="px-2 py-0.5 text-[11px] font-semibold bg-slate-800 text-slate-300 rounded-md border border-slate-700">0</span>
+          <span id="catalog-count-badge" class="px-2 py-0.5 text-[11px] font-semibold bg-win-card text-slate-300 rounded border border-win-border">0</span>
         </div>
         <div class="relative">
-          <input type="text" id="input-catalog-search" data-i18n-placeholder="catalog_search" placeholder="Bakanlık, kurum veya veri ara..." class="w-full h-9 pl-9 pr-8 text-xs bg-slate-800/80 text-white rounded-xl border border-slate-700/70 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition placeholder-slate-500">
+          <input type="text" id="input-catalog-search" data-i18n-placeholder="catalog_search" placeholder="Bakanlık, kurum veya veri ara..." class="w-full h-9 pl-9 pr-8 text-xs bg-win-card text-white rounded-md border border-win-border focus:outline-none focus:border-win-500 focus:ring-1 focus:ring-win-500 transition placeholder-slate-500">
           <svg class="w-4 h-4 text-slate-500 absolute left-2.5 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           <button id="btn-clear-search" type="button" class="hidden absolute right-2.5 top-2.5 text-slate-500 hover:text-white">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -189,38 +125,35 @@ html.light .j-punct { color: #64748b; }
         </div>
       </div>
 
-      <!-- AĞAÇ: sadece bu kısım scroll olur -->
       <div id="catalog-tree-container" class="flex-1 overflow-y-auto overscroll-contain p-3 space-y-2 min-h-0">
         <div class="p-8 text-center text-slate-500 text-xs">
-          <div class="inline-block w-6 h-6 border-2 border-brand-500 border-t-transparent rounded-full animate-spin mb-2"></div>
+          <div class="inline-block w-6 h-6 border-2 border-win-500 border-t-transparent rounded-full animate-spin mb-2"></div>
           <p data-i18n="catalog_loading">Katalog yükleniyor...</p>
         </div>
       </div>
 
-      <!-- Sabit alt bilgi -->
-      <div class="p-3 border-t border-slate-800 bg-slate-900/50 text-[11px] text-slate-500 flex items-center justify-between flex-none">
+      <div class="p-3 border-t border-win-border bg-win-dark/50 text-[11px] text-slate-500 flex items-center justify-between flex-none">
         <span>REST JSON API</span>
         <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> <span data-i18n="live_connection">Canlı Bağlantı</span></span>
       </div>
     </aside>
 
-    <div id="mobile-overlay" class="fixed inset-0 bg-slate-950/70 z-20 hidden lg:hidden glass-panel"></div>
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/60 z-20 hidden lg:hidden mica-panel"></div>
 
-    <!-- MAIN: kendi içinde scroll -->
-    <main id="main-content" class="flex-1 overflow-y-auto overscroll-contain bg-slate-950/50 flex flex-col min-h-0">
+    <main id="main-content" class="flex-1 overflow-y-auto overscroll-contain bg-win-base flex flex-col min-h-0">
       <div id="view-empty-state" class="flex-1 flex flex-col items-center justify-center p-8 text-center max-w-lg mx-auto">
-        <div class="w-20 h-20 rounded-3xl bg-gradient-to-tr from-brand-600/20 to-slate-800 border border-brand-500/20 text-brand-400 flex items-center justify-center text-3xl mb-6 shadow-2xl shadow-brand-500/10">⚡</div>
+        <div class="w-20 h-20 rounded-lg bg-win-card border border-win-border text-win-400 flex items-center justify-center text-3xl mb-6">⚡</div>
         <h2 class="text-2xl font-bold text-white tracking-tight mb-2" data-i18n="empty_title">Veri Seti veya Servis Seçin</h2>
         <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="empty_desc">Sol taraftaki katalog ağacından bir Bakanlık veya Kurum seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz.</p>
         <div class="grid grid-cols-2 gap-3 w-full text-left text-xs text-slate-300">
-          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-3">
+          <div class="p-3 rounded-md bg-win-card border border-win-border flex items-start gap-3">
             <span class="text-base">📊</span>
             <div>
               <strong class="block text-white font-semibold mb-0.5" data-i18n="empty_card1_t">Veri Önizleme</strong>
               <span data-i18n="empty_card1_d">Tablo görünümü ile doğrudan canlı veri kayıtları.</span>
             </div>
           </div>
-          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-3">
+          <div class="p-3 rounded-md bg-win-card border border-win-border flex items-start gap-3">
             <span class="text-base">💻</span>
             <div>
               <strong class="block text-white font-semibold mb-0.5" data-i18n="empty_card2_t">Hazır Kodlar</strong>
@@ -236,29 +169,29 @@ html.light .j-punct { color: #64748b; }
           <span>/</span>
           <span id="bc-ministry" class="text-slate-300 font-medium">—</span>
           <span>/</span>
-          <span id="bc-service" class="text-brand-400 font-semibold truncate">—</span>
+          <span id="bc-service" class="text-win-400 font-semibold truncate">—</span>
         </nav>
 
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-800">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-win-border">
           <div class="space-y-1">
             <div class="flex items-center gap-2">
-              <span id="service-ministry-badge" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 text-xs font-semibold border border-slate-700">—</span>
-              <span id="service-records-count" class="px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-400 text-xs font-semibold border border-brand-500/20">0</span>
-              <span id="service-type-badge" class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-400 text-[10px] font-mono border border-slate-700">—</span>
+              <span id="service-ministry-badge" class="px-2.5 py-0.5 rounded bg-win-card text-slate-300 text-xs font-semibold border border-win-border">—</span>
+              <span id="service-records-count" class="px-2.5 py-0.5 rounded bg-win-500/10 text-win-400 text-xs font-semibold border border-win-500/20">0</span>
+              <span id="service-type-badge" class="px-2.5 py-0.5 rounded bg-win-card text-slate-400 text-[10px] font-mono border border-win-border">—</span>
             </div>
-            <h1 id="service-title" class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight">—</h1>
+            <h1 id="service-title" class="text-2xl lg:text-3xl font-bold text-white tracking-tight">—</h1>
             <p id="service-desc" class="text-sm text-slate-400">—</p>
           </div>
           <div class="flex items-center gap-2">
-            <button id="btn-run-query" type="button" class="px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold shadow-lg shadow-brand-500/25 flex items-center gap-2 transition transform active:scale-95">
+            <button id="btn-run-query" type="button" class="px-4 py-2 rounded-md bg-win-500 hover:bg-win-600 text-white text-xs font-semibold flex items-center gap-2 transition active:scale-[0.98]">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
               <span data-i18n="run_query">Yenile</span>
             </button>
           </div>
         </div>
 
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl space-y-2">
-          <div class="flex items-center justify-between text-xs font-bold text-slate-400 uppercase tracking-wider">
+        <div class="bg-win-card border border-win-border rounded-lg p-4 space-y-2">
+          <div class="flex items-center justify-between text-xs font-semibold text-slate-400 uppercase tracking-wider">
             <span class="flex items-center gap-2">
               <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-mono">GET</span>
               <span data-i18n="endpoint_label">API Uç Noktası</span>
@@ -266,8 +199,8 @@ html.light .j-punct { color: #64748b; }
             <span id="service-last-update" class="text-[11px] font-normal text-slate-500">—</span>
           </div>
           <div class="flex items-center gap-2">
-            <div class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 font-mono text-xs text-brand-300 overflow-x-auto whitespace-nowrap" id="endpoint-url-text">—</div>
-            <button id="btn-copy-url" type="button" class="px-3.5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold rounded-xl border border-slate-700 flex items-center gap-1.5 transition flex-none">
+            <div class="flex-1 bg-win-base border border-win-border rounded-md px-4 py-2.5 font-mono text-xs text-win-400 overflow-x-auto whitespace-nowrap" id="endpoint-url-text">—</div>
+            <button id="btn-copy-url" type="button" class="px-3.5 py-2.5 bg-win-hover hover:bg-win-active text-white text-xs font-semibold rounded-md border border-win-border flex items-center gap-1.5 transition flex-none">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
               <span data-i18n="copy">Kopyala</span>
             </button>
@@ -275,77 +208,78 @@ html.light .j-punct { color: #64748b; }
         </div>
 
         <div class="space-y-4">
-          <div class="flex items-center gap-2 border-b border-slate-800 overflow-x-auto" role="tablist">
-            <button class="tab-btn px-4 py-2.5 text-xs font-bold border-b-2 border-brand-500 text-brand-400 flex items-center gap-2 transition whitespace-nowrap active" data-tab="tab-table">
+          <div class="flex items-center gap-2 border-b border-win-border overflow-x-auto" role="tablist">
+            <button class="tab-btn px-4 py-2.5 text-xs font-semibold border-b-2 border-win-500 text-win-400 flex items-center gap-2 transition whitespace-nowrap active" data-tab="tab-table">
               <span>📊</span> <span data-i18n="tab_table">Veri Tablosu</span>
-              <span id="tab-badge-table" class="px-1.5 py-0.5 rounded-full bg-brand-500/20 text-[10px]">0</span>
+              <span id="tab-badge-table" class="px-1.5 py-0.5 rounded bg-win-500/20 text-[10px] text-win-400">0</span>
             </button>
-            <button class="tab-btn px-4 py-2.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap" data-tab="tab-code">
+            <button class="tab-btn px-4 py-2.5 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap" data-tab="tab-code">
               <span>⚡</span> <span data-i18n="tab_code">Bağlantı Kodları</span>
             </button>
-            <button class="tab-btn px-4 py-2.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap" data-tab="tab-json">
+            <button class="tab-btn px-4 py-2.5 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap" data-tab="tab-json">
               <span>🖥️</span> <span data-i18n="tab_json">JSON Konsolu</span>
             </button>
-            <button class="tab-btn px-4 py-2.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap" data-tab="tab-docs">
+            <button class="tab-btn px-4 py-2.5 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap" data-tab="tab-docs">
               <span>📖</span> <span data-i18n="tab_docs">Şema Dokümantasyonu</span>
             </button>
           </div>
 
           <!-- TABLE -->
           <div id="tab-table" class="tab-panel space-y-3">
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-900 p-3 rounded-xl border border-slate-800 text-xs">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-win-card p-3 rounded-lg border border-win-border text-xs">
               <div class="relative w-full sm:w-64">
-                <input type="text" id="input-table-filter" data-i18n-placeholder="table_filter" placeholder="Tabloda filtrele..." class="w-full h-8 pl-8 pr-3 bg-slate-950 text-white rounded-lg border border-slate-800 focus:outline-none focus:border-brand-500 text-xs">
+                <input type="text" id="input-table-filter" data-i18n-placeholder="table_filter" placeholder="Tabloda filtrele..." class="w-full h-8 pl-8 pr-3 bg-win-base text-white rounded-md border border-win-border focus:outline-none focus:border-win-500 text-xs">
                 <svg class="w-3.5 h-3.5 text-slate-500 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
               </div>
               <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
-                <button id="btn-export-csv" type="button" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700 flex items-center gap-1.5 font-medium transition">
+                <button id="btn-export-csv" type="button" class="px-3 py-1.5 bg-win-hover hover:bg-win-active text-slate-300 rounded-md border border-win-border flex items-center gap-1.5 font-medium transition">
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                   <span>CSV</span>
                 </button>
-                <button id="btn-export-json" type="button" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700 flex items-center gap-1.5 font-medium transition">
+                <button id="btn-export-json" type="button" class="px-3 py-1.5 bg-win-hover hover:bg-win-active text-slate-300 rounded-md border border-win-border flex items-center gap-1.5 font-medium transition">
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                   <span>JSON</span>
                 </button>
               </div>
             </div>
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
+            <div class="bg-win-card border border-win-border rounded-lg overflow-hidden">
               <div class="overflow-x-auto max-h-[480px]">
                 <table class="w-full text-left text-xs text-slate-300 border-collapse" id="data-table">
-                  <thead class="bg-slate-800/80 sticky top-0 backdrop-blur border-b border-slate-700 text-slate-400 font-bold uppercase tracking-wider">
+                  <thead class="bg-win-hover sticky top-0 backdrop-blur border-b border-win-border text-slate-400 font-semibold uppercase tracking-wider">
                     <tr id="table-head-row"><th class="p-3">#</th></tr>
                   </thead>
-                  <tbody id="table-body-rows" class="divide-y divide-slate-800/60 font-mono"></tbody>
+                  <tbody id="table-body-rows" class="divide-y divide-win-border/60 font-mono"></tbody>
                 </table>
               </div>
-              <div class="p-3 bg-slate-900 border-t border-slate-800 text-slate-400 text-[11px] flex items-center justify-between">
+              <!-- ⬇️ YENİ: Sayfalama altlığı -->
+              <div class="p-3 bg-win-card border-t border-win-border text-slate-400 text-[11px] flex flex-col sm:flex-row items-center justify-between gap-3">
                 <span id="table-pagination-info">—</span>
-                <span data-i18n="table_paging">İlk 100 kayıt gösteriliyor</span>
+                <div id="table-pagination-controls" class="flex items-center gap-1 flex-wrap"></div>
               </div>
             </div>
           </div>
 
           <!-- CODE -->
           <div id="tab-code" class="tab-panel hidden space-y-4">
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
-              <div class="flex items-center justify-between bg-slate-950 px-4 py-2.5 border-b border-slate-800">
+            <div class="bg-win-card border border-win-border rounded-lg overflow-hidden">
+              <div class="flex items-center justify-between bg-win-base px-4 py-2.5 border-b border-win-border">
                 <div class="flex items-center gap-1 overflow-x-auto" id="code-lang-selector">
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded-lg text-xs font-bold bg-brand-600 text-white transition" data-lang="curl">cURL</button>
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition" data-lang="python">Python</button>
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition" data-lang="js">JavaScript</button>
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition" data-lang="go">Go</button>
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition" data-lang="php">PHP</button>
+                  <button type="button" class="code-lang-btn px-3 py-1 rounded text-xs font-semibold bg-win-500 text-white transition" data-lang="curl">cURL</button>
+                  <button type="button" class="code-lang-btn px-3 py-1 rounded text-xs font-semibold text-slate-400 hover:text-white transition" data-lang="python">Python</button>
+                  <button type="button" class="code-lang-btn px-3 py-1 rounded text-xs font-semibold text-slate-400 hover:text-white transition" data-lang="js">JavaScript</button>
+                  <button type="button" class="code-lang-btn px-3 py-1 rounded text-xs font-semibold text-slate-400 hover:text-white transition" data-lang="go">Go</button>
+                  <button type="button" class="code-lang-btn px-3 py-1 rounded text-xs font-semibold text-slate-400 hover:text-white transition" data-lang="php">PHP</button>
                 </div>
-                <button id="btn-copy-code" type="button" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-lg border border-slate-700 transition" data-i18n="copy">Kopyala</button>
+                <button id="btn-copy-code" type="button" class="px-3 py-1 bg-win-hover hover:bg-win-active text-slate-200 text-xs font-semibold rounded border border-win-border transition" data-i18n="copy">Kopyala</button>
               </div>
-              <pre class="p-5 font-mono text-xs text-emerald-400 bg-slate-950 overflow-x-auto leading-relaxed" id="code-snippet-box"></pre>
+              <pre class="p-5 font-mono text-xs text-emerald-400 bg-win-base overflow-x-auto leading-relaxed" id="code-snippet-box"></pre>
             </div>
           </div>
 
           <!-- JSON -->
           <div id="tab-json" class="tab-panel hidden space-y-3">
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden font-mono shadow-2xl">
-              <div class="bg-slate-900 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between">
+            <div class="bg-win-base border border-win-border rounded-lg overflow-hidden font-mono">
+              <div class="bg-win-card px-4 py-2.5 border-b border-win-border flex items-center justify-between">
                 <div class="flex items-center gap-2">
                   <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
                   <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
@@ -363,22 +297,22 @@ html.light .j-punct { color: #64748b; }
 
           <!-- DOCS -->
           <div id="tab-docs" class="tab-panel hidden space-y-4">
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
-              <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <div class="bg-win-card border border-win-border rounded-lg p-5 space-y-4">
+              <h3 class="text-sm font-semibold text-white uppercase tracking-wider flex items-center gap-2">
+                <svg class="w-4 h-4 text-win-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                 <span data-i18n="docs_title">Veri Alanları ve Veri Tipleri</span>
               </h3>
               <div class="overflow-x-auto">
                 <table class="w-full text-left text-xs text-slate-300">
-                  <thead class="bg-slate-800 text-slate-400 font-bold uppercase">
+                  <thead class="bg-win-hover text-slate-400 font-semibold uppercase">
                     <tr>
-                      <th class="p-3 rounded-l-lg" data-i18n="docs_field">Alan Adı</th>
+                      <th class="p-3 rounded-l" data-i18n="docs_field">Alan Adı</th>
                       <th class="p-3" data-i18n="docs_type">Veri Tipi</th>
                       <th class="p-3" data-i18n="docs_example">Örnek</th>
-                      <th class="p-3 rounded-r-lg" data-i18n="docs_desc">Açıklama</th>
+                      <th class="p-3 rounded-r" data-i18n="docs_desc">Açıklama</th>
                     </tr>
                   </thead>
-                  <tbody id="docs-schema-tbody" class="divide-y divide-slate-800 font-mono"></tbody>
+                  <tbody id="docs-schema-tbody" class="divide-y divide-win-border font-mono"></tbody>
                 </table>
               </div>
             </div>
@@ -388,7 +322,7 @@ html.light .j-punct { color: #64748b; }
     </main>
   </div>
 
-  <div id="toast-notification" class="fixed bottom-6 right-6 bg-slate-800 text-white border border-slate-700 px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 z-50 pointer-events-none">
+  <div id="toast-notification" class="fixed bottom-6 right-6 bg-win-card text-white border border-win-border px-4 py-3 rounded-lg flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 z-50 pointer-events-none mica-panel">
     <div id="toast-icon" class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">✓</div>
     <div>
       <h4 id="toast-title" class="text-xs font-bold">OK</h4>
@@ -396,26 +330,35 @@ html.light .j-punct { color: #64748b; }
     </div>
   </div>
 
-  <div id="modal-quick-search" class="fixed inset-0 bg-slate-950/80 glass-panel z-50 flex items-start justify-center pt-20 px-4 hidden">
-    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-xl w-full shadow-2xl overflow-hidden space-y-2">
-      <div class="p-4 border-b border-slate-800 flex items-center gap-3">
-        <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-        <input type="text" id="modal-search-input" data-i18n-placeholder="quick_search_ph" placeholder="Servis ara..." class="flex-1 bg-transparent text-sm text-white focus:outline-none placeholder-slate-500 font-medium">
-        <kbd class="px-2 py-1 text-[10px] font-mono bg-slate-800 text-slate-400 rounded border border-slate-700">ESC</kbd>
-      </div>
-      <div id="modal-search-results" class="max-h-80 overflow-y-auto p-2 space-y-1"></div>
-    </div>
-  </div>
-
   <script>
+  // =================================================================
+  // ⚙️ MERKEZİ KONFİGÜRASYON
+  // =================================================================
+  const CONFIG = {
+    API_BASE_URL: 'https://pdaas.onrender.com',   // ← Canlıya geçince 'https://pdaas.com.tr'
+    KATALOG_ENDPOINT: '/api/v1/katalog',
+    LANG_STORAGE_KEY: 'pdaas_dil',
+    PAGE_SIZE: 100,                               // ⬅️ Sayfa başına kayıt
+  };
+
+  function apiUrl(path){
+    const base = CONFIG.API_BASE_URL.replace(/\/+$/, '');
+    const p = (path || '').startsWith('/') ? path : '/' + (path || '');
+    return base + p;
+  }
+  async function apiFetch(path, options = {}){
+    return fetch(apiUrl(path), {
+      ...options,
+      headers: { 'Accept': 'application/json', ...(options.headers || {}) }
+    });
+  }
+
   // =================================================================
   // DİL SÖZLÜĞÜ
   // =================================================================
   const UI = {
     tr: {
       portal_alt: "Parametrik Veri Servisi Portalı",
-      quick_search: "Tüm parametrik servislerde ara...",
-      quick_search_ph: "Servis veya veri adı yazın...",
       system_active: "Sistem Aktif",
       catalog_title: "Veri Kataloğu",
       catalog_search: "Bakanlık, kurum veya veri ara...",
@@ -438,6 +381,10 @@ html.light .j-punct { color: #64748b; }
       tab_docs: "Şema Dokümantasyonu",
       table_filter: "Tabloda filtrele...",
       table_paging: "İlk 100 kayıt gösteriliyor",
+      page_label: "kayıt • Sayfa",
+      page_of: "/",
+      prev_page: "Önceki sayfa",
+      next_page: "Sonraki sayfa",
       docs_title: "Veri Alanları ve Veri Tipleri",
       docs_field: "Alan Adı",
       docs_type: "Veri Tipi",
@@ -460,8 +407,6 @@ html.light .j-punct { color: #64748b; }
     },
     en: {
       portal_alt: "Parametric Data Service Portal",
-      quick_search: "Search all parametric services...",
-      quick_search_ph: "Type service or dataset name...",
       system_active: "System Active",
       catalog_title: "Data Catalog",
       catalog_search: "Search ministry, institution or data...",
@@ -484,6 +429,10 @@ html.light .j-punct { color: #64748b; }
       tab_docs: "Schema Docs",
       table_filter: "Filter table...",
       table_paging: "Showing first 100 records",
+      page_label: "records • Page",
+      page_of: "/",
+      prev_page: "Previous page",
+      next_page: "Next page",
       docs_title: "Fields and Data Types",
       docs_field: "Field",
       docs_type: "Data Type",
@@ -546,25 +495,18 @@ html.light .j-punct { color: #64748b; }
     seviye:'Hiyerarşi seviyesi (1=kök)',
     seviye_adi:'Seviye adı (bölüm, fasıl, grup...)',
     sira:'Görüntüleme sırası',
-    tanim_tr:'Türkçe tanım',
-    tanim_en:'İngilizce tanım',
-    ad_tr:'Türkçe ad',
-    ad_en:'İngilizce ad',
-    aciklama_tr:'Türkçe açıklama',
-    aciklama_en:'İngilizce açıklama',
-    oran:'Vergi oranı (ondalık)',
-    oran_binde:'Binde oran',
-    olcu_birimi:'Ölçü birimi',
-    para_birimi:'Para birimi (ISO 4217)',
+    tanim_tr:'Türkçe tanım', tanim_en:'İngilizce tanım',
+    ad_tr:'Türkçe ad', ad_en:'İngilizce ad',
+    aciklama_tr:'Türkçe açıklama', aciklama_en:'İngilizce açıklama',
+    oran:'Vergi oranı (ondalık)', oran_binde:'Binde oran',
+    olcu_birimi:'Ölçü birimi', para_birimi:'Para birimi (ISO 4217)',
     matrah_alt_sinir_tl:'Matrah alt sınırı (₺)',
     matrah_ust_sinir_tl:'Matrah üst sınırı (₺)',
     sabit_vergi_tl:'Sabit vergi tutarı (₺)',
     kategori:'Kategori etiketi',
     periyot:'Dönem (aylık, yıllık, sabit)',
-    tip:'Veri yapısı tipi',
-    liste:'Liste numarası',
-    kaynak:'Kaynak referansı',
-    deger:'Sayısal değer',
+    tip:'Veri yapısı tipi', liste:'Liste numarası',
+    kaynak:'Kaynak referansı', deger:'Sayısal değer',
   };
   const SCHEMA_ACIKLAMA_EN = {
     kod:'Unique code identifier',
@@ -572,38 +514,23 @@ html.light .j-punct { color: #64748b; }
     seviye:'Hierarchy level (1=root)',
     seviye_adi:'Level name (section, chapter, group...)',
     sira:'Display order',
-    tanim_tr:'Turkish description',
-    tanim_en:'English description',
-    ad_tr:'Turkish name',
-    ad_en:'English name',
-    aciklama_tr:'Turkish explanation',
-    aciklama_en:'English explanation',
-    oran:'Tax rate (decimal)',
-    oran_binde:'Rate per mille',
-    olcu_birimi:'Unit of measure',
-    para_birimi:'Currency (ISO 4217)',
+    tanim_tr:'Turkish description', tanim_en:'English description',
+    ad_tr:'Turkish name', ad_en:'English name',
+    aciklama_tr:'Turkish explanation', aciklama_en:'English explanation',
+    oran:'Tax rate (decimal)', oran_binde:'Rate per mille',
+    olcu_birimi:'Unit of measure', para_birimi:'Currency (ISO 4217)',
     matrah_alt_sinir_tl:'Tax base lower limit (TRY)',
     matrah_ust_sinir_tl:'Tax base upper limit (TRY)',
     sabit_vergi_tl:'Fixed tax amount (TRY)',
     kategori:'Category label',
     periyot:'Period (monthly, annual, fixed)',
-    tip:'Data structure type',
-    liste:'Schedule number',
-    kaynak:'Source reference',
-    deger:'Numeric value',
+    tip:'Data structure type', liste:'Schedule number',
+    kaynak:'Source reference', deger:'Numeric value',
   };
 
   let DIL = 'tr';
 
   function t(k){ return (UI[DIL] && UI[DIL][k]) || k; }
-
-  function alanSec(obj, temelAd){
-    if(!obj) return '';
-    const en = obj[temelAd + '_en'];
-    const tr = obj[temelAd + '_tr'] || obj[temelAd];
-    if(DIL === 'en') return en || tr || '';
-    return tr || en || '';
-  }
 
   function tipEtiket(tip){
     if(!tip) return '—';
@@ -632,13 +559,13 @@ html.light .j-punct { color: #64748b; }
     const trBtn = $('lang-tr');
     const enBtn = $('lang-en');
     if(DIL === 'tr'){
-      trBtn.className = 'px-2.5 py-1 rounded-lg bg-brand-600 text-white transition';
-      enBtn.className = 'px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition';
+      trBtn.className = 'px-2.5 py-1 rounded bg-win-500 text-white transition';
+      enBtn.className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white transition';
     }else{
-      enBtn.className = 'px-2.5 py-1 rounded-lg bg-brand-600 text-white transition';
-      trBtn.className = 'px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition';
+      enBtn.className = 'px-2.5 py-1 rounded bg-win-500 text-white transition';
+      trBtn.className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white transition';
     }
-    try{ localStorage.setItem('pdaas_dil', DIL); }catch(e){}
+    try{ localStorage.setItem(CONFIG.LANG_STORAGE_KEY, DIL); }catch(e){}
   }
 
   function dilDegistir(yeni){
@@ -664,6 +591,7 @@ html.light .j-punct { color: #64748b; }
   let currentFilteredData = [];
   let activeCodeLang = 'curl';
   let currentRawBody = null;
+  let currentPage = 1;                             // ⬅️ YENİ
 
   const $ = id => document.getElementById(id);
 
@@ -719,11 +647,11 @@ html.light .j-punct { color: #64748b; }
   async function katalogYukle(){
     $('catalog-tree-container').innerHTML = `
       <div class="p-8 text-center text-slate-500 text-xs">
-        <div class="inline-block w-6 h-6 border-2 border-brand-500 border-t-transparent rounded-full animate-spin mb-2"></div>
+        <div class="inline-block w-6 h-6 border-2 border-win-500 border-t-transparent rounded-full animate-spin mb-2"></div>
         <p>${t('catalog_loading')}</p>
       </div>`;
     try{
-      const r = await fetch('/api/v1/katalog', { headers: { Accept: 'application/json' } });
+      const r = await apiFetch(CONFIG.KATALOG_ENDPOINT);
       if(!r.ok) throw new Error('HTTP ' + r.status);
       const body = await r.json();
       KATALOG = body.servisler || [];
@@ -775,8 +703,8 @@ html.light .j-punct { color: #64748b; }
       const isOpen = q.length > 0;
 
       html += `
-        <div class="bg-slate-900/80 rounded-xl border border-slate-800/80 overflow-hidden text-xs transition">
-          <button type="button" class="group-header w-full px-3 py-2.5 flex items-center justify-between text-left hover:bg-slate-800/60 transition" data-group="${grup.id}">
+        <div class="bg-win-card rounded-md border border-win-border overflow-hidden text-xs transition">
+          <button type="button" class="group-header w-full px-3 py-2.5 flex items-center justify-between text-left hover:bg-win-hover transition" data-group="${grup.id}">
             <div class="flex items-center gap-2.5 min-w-0">
               <span class="text-base">${grup.ikon}</span>
               <div class="truncate">
@@ -786,14 +714,14 @@ html.light .j-punct { color: #64748b; }
             </div>
             <svg class="w-4 h-4 text-slate-500 transform transition-transform group-arrow ${isOpen ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
-          <div class="group-services ${isOpen ? '' : 'hidden'} border-t border-slate-800/60 divide-y divide-slate-800/40 bg-slate-950/40">
+          <div class="group-services ${isOpen ? '' : 'hidden'} border-t border-win-border divide-y divide-win-border/40 bg-win-base/40">
             ${eslesen.map(s => {
               const sAdi = DIL === 'en' ? (s.servis_adi_en || s.servis_adi) : s.servis_adi;
               const aktif = currentService && currentService.servis_kodu === s.servis_kodu && currentService.bakanlik === s.bakanlik;
               return `
-                <button type="button" class="service-item-btn w-full px-3 py-2 pl-9 flex items-center justify-between text-left hover:bg-brand-600/10 hover:text-brand-300 transition text-slate-400 ${aktif ? 'bg-brand-600/20 text-brand-300 font-semibold border-l-2 border-brand-500' : ''}" data-endpoint="${s.endpoint}">
+                <button type="button" class="service-item-btn w-full px-3 py-2 pl-9 flex items-center justify-between text-left hover:bg-win-500/10 hover:text-win-400 transition text-slate-400 ${aktif ? 'bg-win-500/20 text-win-400 font-semibold border-l-2 border-win-500' : ''}" data-endpoint="${s.endpoint}">
                   <span class="truncate pr-2">${kacis(sAdi)}</span>
-                  <span class="px-1.5 py-0.5 text-[9px] font-mono bg-slate-800 text-slate-400 rounded">${(s.kayit_sayisi ?? 0).toLocaleString(DIL==='tr'?'tr-TR':'en-US')}</span>
+                  <span class="px-1.5 py-0.5 text-[9px] font-mono bg-win-hover text-slate-400 rounded">${(s.kayit_sayisi ?? 0).toLocaleString(DIL==='tr'?'tr-TR':'en-US')}</span>
                 </button>
               `;
             }).join('')}
@@ -840,31 +768,31 @@ html.light .j-punct { color: #64748b; }
     $('service-title').textContent = servisAdi;
     $('service-desc').textContent  = kaynakAd;
     $('service-last-update').textContent = sv.surum ? ('v' + sv.surum) : '—';
-    $('endpoint-url-text').textContent = window.location.origin + sv.endpoint;
+    $('endpoint-url-text').textContent = apiUrl(sv.endpoint);
   }
 
   function servisSec(endpoint){
     const sv = KATALOG.find(s => s.endpoint === endpoint);
     if(!sv) return;
     currentService = sv;
+    currentPage = 1;                                // ⬅️ YENİ: yeni serviste başa dön
     $('view-empty-state').classList.add('hidden');
     $('view-service-detail').classList.remove('hidden');
     servisSecUI(sv);
     renderCatalogTree($('input-catalog-search').value);
     servisDetayYukle(endpoint);
-    // Main scroll'u en üste al
     $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   async function servisDetayYukle(endpoint){
     $('table-body-rows').innerHTML = `
       <tr><td colspan="10" class="p-6 text-center text-slate-500">
-        <div class="inline-block w-5 h-5 border-2 border-brand-500 border-t-transparent rounded-full animate-spin"></div>
+        <div class="inline-block w-5 h-5 border-2 border-win-500 border-t-transparent rounded-full animate-spin"></div>
         <p class="mt-2">${t('loading_data')}</p>
       </td></tr>`;
     const t0 = performance.now();
     try{
-      const r = await fetch(endpoint, { headers: { Accept: 'application/json' } });
+      const r = await apiFetch(endpoint);
       const sure = Math.round(performance.now() - t0);
       if(!r.ok){
         $('json-status-label').textContent = `HTTP ${r.status}`;
@@ -875,6 +803,7 @@ html.light .j-punct { color: #64748b; }
       currentRawBody = body;
       currentData = Array.isArray(body.kayitlar) ? body.kayitlar : [];
       currentFilteredData = [...currentData];
+      currentPage = 1;                              // ⬅️ YENİ: veri yenilenince başa dön
       $('json-status-label').textContent = `HTTP ${r.status}`;
       $('json-response-time').textContent = `${sure} ms`;
       $('service-records-count').textContent = currentData.length.toLocaleString(DIL==='tr'?'tr-TR':'en-US') + ' ' + t('records');
@@ -890,7 +819,7 @@ html.light .j-punct { color: #64748b; }
   }
 
   // =================================================================
-  // TABLO
+  // TABLO + SAYFALAMA
   // =================================================================
   function renderTableData(){
     const tbody = $('table-body-rows');
@@ -901,6 +830,7 @@ html.light .j-punct { color: #64748b; }
       tbody.innerHTML = `<tr><td colspan="10" class="p-6 text-center text-slate-500">${t('no_records')}</td></tr>`;
       $('tab-badge-table').textContent = '0';
       $('table-pagination-info').textContent = `0 / 0`;
+      $('table-pagination-controls').innerHTML = '';
       return;
     }
 
@@ -910,17 +840,25 @@ html.light .j-punct { color: #64748b; }
 
     const keys = Object.keys(currentData[0]);
 
-    theadRow.innerHTML = `<th class="p-3 text-slate-400 font-bold border-r border-slate-700/50">#</th>` +
-      keys.map(k => `<th class="p-3 text-slate-300 font-bold tracking-wider whitespace-nowrap">${kacis(alanEtiket(k))}</th>`).join('');
+    theadRow.innerHTML = `<th class="p-3 text-slate-400 font-semibold border-r border-win-border/50">#</th>` +
+      keys.map(k => `<th class="p-3 text-slate-300 font-semibold tracking-wider whitespace-nowrap">${kacis(alanEtiket(k))}</th>`).join('');
 
-    const gosterim = currentFilteredData.slice(0, 100);
+    // ⬇️ SAYFALAMA HESABI
+    const totalPages = Math.max(1, Math.ceil(currentFilteredData.length / CONFIG.PAGE_SIZE));
+    if(currentPage > totalPages) currentPage = totalPages;
+    if(currentPage < 1) currentPage = 1;
+
+    const startIdx = (currentPage - 1) * CONFIG.PAGE_SIZE;
+    const gosterim = currentFilteredData.slice(startIdx, startIdx + CONFIG.PAGE_SIZE);
 
     if(!gosterim.length){
       tbody.innerHTML = `<tr><td colspan="${keys.length+1}" class="p-6 text-center text-slate-500">${t('filtered_none')}</td></tr>`;
     }else{
-      tbody.innerHTML = gosterim.map((row, idx) => `
-        <tr class="hover:bg-slate-800/40 transition">
-          <td class="p-3 text-slate-500 border-r border-slate-800/80 font-sans">${idx + 1}</td>
+      tbody.innerHTML = gosterim.map((row, idx) => {
+        const globalNo = startIdx + idx + 1;    // ⬅️ Global satır numarası
+        return `
+        <tr class="hover:bg-win-hover/50 transition">
+          <td class="p-3 text-slate-500 border-r border-win-border/60 font-sans">${globalNo}</td>
           ${keys.map(k => {
             const val = row[k];
             let cell = '';
@@ -928,8 +866,8 @@ html.light .j-punct { color: #64748b; }
               cell = `<span class="text-slate-600 italic">—</span>`;
             }else if(typeof val === 'boolean'){
               cell = val
-                ? `<span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-sans font-bold border border-emerald-500/20">true</span>`
-                : `<span class="px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-400 text-[10px] font-sans font-bold border border-rose-500/20">false</span>`;
+                ? `<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-sans font-bold border border-emerald-500/20">true</span>`
+                : `<span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 text-[10px] font-sans font-bold border border-rose-500/20">false</span>`;
             }else if(typeof val === 'number'){
               cell = `<span class="text-amber-300">${val.toLocaleString(DIL==='tr'?'tr-TR':'en-US')}</span>`;
             }else if(typeof val === 'object'){
@@ -942,11 +880,120 @@ html.light .j-punct { color: #64748b; }
             return `<td class="p-3 align-top">${cell}</td>`;
           }).join('')}
         </tr>
-      `).join('');
+      `}).join('');
     }
 
     $('tab-badge-table').textContent = currentFilteredData.length;
-    $('table-pagination-info').textContent = `${gosterim.length} / ${currentData.length} ${t('filtered')}`;
+
+    // Bilgi metni: "1523 kayıt • Sayfa 3 / 16" + filtreliyse belirt
+    const filtrelendi = currentFilteredData.length !== currentData.length ? ` (${t('filtered')})` : '';
+    $('table-pagination-info').textContent =
+      `${currentFilteredData.length.toLocaleString(DIL==='tr'?'tr-TR':'en-US')} ${t('page_label')} ${currentPage} ${t('page_of')} ${totalPages}${filtrelendi}`;
+
+    // Sayfa butonlarını çiz
+    renderPagination(totalPages);
+  }
+
+  // -----------------------------------------------------------------
+  // Sayfa numaralarını akıllı hesapla: 1 … 4 5 6 … 20
+  // -----------------------------------------------------------------
+  function sayfaNumaralari(current, total){
+    const delta = 1;                     // aktif sayfanın etrafında kaç komşu
+    const range = [];
+    const sonuc = [];
+
+    for(let i = Math.max(2, current - delta); i <= Math.min(total - 1, current + delta); i++){
+      range.push(i);
+    }
+    if(current - delta > 2) range.unshift('...left');
+    if(current + delta < total - 1) range.push('...right');
+
+    sonuc.push(1);
+    sonuc.push(...range);
+    if(total > 1) sonuc.push(total);
+
+    return sonuc;
+  }
+
+  // -----------------------------------------------------------------
+  // Sayfalama kontrollerini DOM'a bas
+  // -----------------------------------------------------------------
+  function renderPagination(totalPages){
+    const container = $('table-pagination-controls');
+    if(totalPages <= 1){ container.innerHTML = ''; return; }
+
+    const pages = sayfaNumaralari(currentPage, totalPages);
+    let html = '';
+
+    // Önceki
+    const prevDisabled = currentPage === 1;
+    html += `
+      <button type="button" data-page="${currentPage - 1}" ${prevDisabled ? 'disabled' : ''}
+        title="${t('prev_page')}"
+        class="min-w-[30px] h-7 px-2 rounded border text-xs font-semibold transition
+          ${prevDisabled
+            ? 'border-win-border/50 text-slate-600 cursor-not-allowed'
+            : 'border-win-border text-slate-300 hover:bg-win-hover hover:text-white'}">
+        ‹
+      </button>`;
+
+    // Sayfa numaraları
+    for(const p of pages){
+      if(typeof p === 'string' && p.startsWith('...')){
+        html += `<span class="px-1 text-slate-500 select-none">…</span>`;
+        continue;
+      }
+      const aktif = p === currentPage;
+      html += `
+        <button type="button" data-page="${p}"
+          class="min-w-[30px] h-7 px-2 rounded border text-xs font-semibold transition
+            ${aktif
+              ? 'bg-win-500 text-white border-win-500'
+              : 'border-win-border text-slate-300 hover:bg-win-hover hover:text-white'}">
+          ${p}
+        </button>`;
+    }
+
+    // Sonraki
+    const nextDisabled = currentPage === totalPages;
+    html += `
+      <button type="button" data-page="${currentPage + 1}" ${nextDisabled ? 'disabled' : ''}
+        title="${t('next_page')}"
+        class="min-w-[30px] h-7 px-2 rounded border text-xs font-semibold transition
+          ${nextDisabled
+            ? 'border-win-border/50 text-slate-600 cursor-not-allowed'
+            : 'border-win-border text-slate-300 hover:bg-win-hover hover:text-white'}">
+        ›
+      </button>`;
+
+    container.innerHTML = html;
+
+    // Tüm butonlara event listener (aktif/pasif/ok/sayı hepsi data-page taşıyor)
+    container.querySelectorAll('button[data-page]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if(btn.disabled) return;
+        const p = parseInt(btn.dataset.page, 10);
+        if(!isNaN(p)) gitSayfa(p);
+      });
+    });
+  }
+
+  // -----------------------------------------------------------------
+  // Sayfa değiştir
+  // -----------------------------------------------------------------
+  function gitSayfa(p){
+    const totalPages = Math.max(1, Math.ceil(currentFilteredData.length / CONFIG.PAGE_SIZE));
+    if(p < 1 || p > totalPages) return;
+    currentPage = p;
+    renderTableData();
+
+    // Tabloyu görünür alana kaydır (yumuşak)
+    const tabloBasligi = $('data-table');
+    if(tabloBasligi){
+      const main = $('main-content');
+      const top = tabloBasligi.getBoundingClientRect().top + main.scrollTop - 80;
+      main.scrollTo({ top, behavior: 'smooth' });
+    }
   }
 
   // =================================================================
@@ -954,7 +1001,7 @@ html.light .j-punct { color: #64748b; }
   // =================================================================
   function renderCodeSnippets(){
     if(!currentService) return;
-    const url = window.location.origin + currentService.endpoint;
+    const url = apiUrl(currentService.endpoint);
     const snippets = {
       curl: `curl -X GET "${url}" \\\n  -H "Accept: application/json" \\\n  -H "Accept-Encoding: gzip"`,
       python: `import requests\n\nurl = "${url}"\nheaders = {"Accept": "application/json"}\n\nresponse = requests.get(url, headers=headers, timeout=15)\nresponse.raise_for_status()\nveri = response.json()\n\nkayitlar = veri.get("kayitlar", [])\nprint(f"Toplam: {len(kayitlar)}")\nfor k in kayitlar[:5]:\n    print(k.get("kod"), "-", k.get("tanim_tr"))`,
@@ -1010,9 +1057,9 @@ html.light .j-punct { color: #64748b; }
       const aciklama = sozluk[key] || '—';
 
       return `
-        <tr class="hover:bg-slate-800/40 transition">
-          <td class="p-3 text-brand-300 font-semibold">${kacis(key)}</td>
-          <td class="p-3"><span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">${tip}</span></td>
+        <tr class="hover:bg-win-hover/50 transition">
+          <td class="p-3 text-win-400 font-semibold">${kacis(key)}</td>
+          <td class="p-3"><span class="px-2 py-0.5 rounded bg-win-hover text-slate-300 border border-win-border">${tip}</span></td>
           <td class="p-3 text-slate-400 text-[11px]">${kacis(ornekStr)}</td>
           <td class="p-3 text-slate-400 font-sans">${aciklama}</td>
         </tr>
@@ -1027,10 +1074,10 @@ html.light .j-punct { color: #64748b; }
     document.querySelectorAll('.tab-btn').forEach(tab => {
       tab.addEventListener('click', () => {
         document.querySelectorAll('.tab-btn').forEach(t => {
-          t.classList.remove('border-brand-500','text-brand-400','active');
+          t.classList.remove('border-win-500','text-win-400','active');
           t.classList.add('border-transparent','text-slate-400');
         });
-        tab.classList.add('border-brand-500','text-brand-400','active');
+        tab.classList.add('border-win-500','text-win-400','active');
         tab.classList.remove('border-transparent','text-slate-400');
         const target = tab.dataset.tab;
         document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
@@ -1040,10 +1087,10 @@ html.light .j-punct { color: #64748b; }
     document.querySelectorAll('.code-lang-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.code-lang-btn').forEach(b => {
-          b.classList.remove('bg-brand-600','text-white');
+          b.classList.remove('bg-win-500','text-white');
           b.classList.add('text-slate-400');
         });
-        btn.classList.add('bg-brand-600','text-white');
+        btn.classList.add('bg-win-500','text-white');
         btn.classList.remove('text-slate-400');
         activeCodeLang = btn.dataset.lang;
         renderCodeSnippets();
@@ -1068,7 +1115,7 @@ html.light .j-punct { color: #64748b; }
     if(url && ['tr','en'].includes(url)) DIL = url;
     else {
       try{
-        const k = localStorage.getItem('pdaas_dil');
+        const k = localStorage.getItem(CONFIG.LANG_STORAGE_KEY);
         if(k && ['tr','en'].includes(k)) DIL = k;
       }catch(e){}
     }
@@ -1090,7 +1137,11 @@ html.light .j-punct { color: #64748b; }
       searchInput.value = ''; clearBtn.classList.add('hidden'); renderCatalogTree('');
     });
 
-    $('input-table-filter').addEventListener('input', renderTableData);
+    // ⬇️ Filtre değişince sayfa 1'e dön
+    $('input-table-filter').addEventListener('input', () => {
+      currentPage = 1;
+      renderTableData();
+    });
 
     $('btn-copy-url').addEventListener('click', () => {
       if(currentService) copyToClipboard($('endpoint-url-text').textContent, t('copied_url'));
@@ -1110,6 +1161,7 @@ html.light .j-punct { color: #64748b; }
       $('view-empty-state').classList.remove('hidden');
       $('view-service-detail').classList.add('hidden');
       currentService = null;
+      currentPage = 1;
       renderCatalogTree($('input-catalog-search').value);
       $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
     });
@@ -1117,6 +1169,7 @@ html.light .j-punct { color: #64748b; }
       $('view-empty-state').classList.remove('hidden');
       $('view-service-detail').classList.add('hidden');
       currentService = null;
+      currentPage = 1;
       renderCatalogTree($('input-catalog-search').value);
       $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
     });
@@ -1145,79 +1198,6 @@ html.light .j-punct { color: #64748b; }
       a.download = `${currentService.servis_kodu}-data.csv`;
       a.click();
       showToast('✓', t('copied_json'));
-    });
-
-    const modalSearch = $('modal-quick-search');
-    const modalInput = $('modal-search-input');
-    const modalResults = $('modal-search-results');
-
-    function openModalSearch(){
-      modalSearch.classList.remove('hidden');
-      modalInput.value = '';
-      modalInput.focus();
-      renderModalSearchResults('');
-    }
-    function closeModalSearch(){ modalSearch.classList.add('hidden'); }
-
-    $('btn-quick-search').addEventListener('click', openModalSearch);
-    window.addEventListener('keydown', e => {
-      if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){ e.preventDefault(); openModalSearch(); }
-      if(e.key === 'Escape') closeModalSearch();
-    });
-    modalSearch.addEventListener('click', e => { if(e.target === modalSearch) closeModalSearch(); });
-
-    function renderModalSearchResults(q){
-      const ql = (q || '').toLocaleLowerCase('tr-TR');
-      const results = KATALOG.filter(s => {
-        const sAdi = (DIL === 'en' ? (s.servis_adi_en || s.servis_adi) : s.servis_adi) || '';
-        return !ql
-          || sAdi.toLocaleLowerCase('tr-TR').includes(ql)
-          || (s.endpoint || '').includes(ql)
-          || (s.bakanlik_adi || '').toLocaleLowerCase('tr-TR').includes(ql);
-      }).slice(0, 30);
-
-      modalResults.innerHTML = results.map(r => {
-        const sAdi = DIL === 'en' ? (r.servis_adi_en || r.servis_adi) : r.servis_adi;
-        const bAdi = DIL === 'en' ? (r.bakanlik_adi_en || r.bakanlik_adi) : r.bakanlik_adi;
-        return `
-          <button type="button" class="w-full p-3 rounded-xl bg-slate-800/50 hover:bg-brand-600/20 hover:border-brand-500/40 border border-slate-700/50 flex items-center justify-between text-left transition group" data-endpoint="${r.endpoint}">
-            <div class="flex items-center gap-3">
-              <span class="text-xl">${bakanlikIkon(bAdi)}</span>
-              <div>
-                <strong class="block text-xs font-semibold text-white group-hover:text-brand-300">${kacis(sAdi)}</strong>
-                <span class="text-[10px] text-slate-400">${kacis(bAdi)} • ${r.endpoint}</span>
-              </div>
-            </div>
-            <span class="text-xs text-brand-400 font-semibold font-mono">↵</span>
-          </button>
-        `;
-      }).join('') || `<div class="p-6 text-center text-slate-500 text-xs">${t('no_matches')}</div>`;
-
-      modalResults.querySelectorAll('button').forEach(btn => {
-        btn.addEventListener('click', () => {
-          servisSec(btn.dataset.endpoint);
-          closeModalSearch();
-        });
-      });
-    }
-    modalInput.addEventListener('input', e => renderModalSearchResults(e.target.value));
-
-    let isDark = true;
-    $('btn-theme-toggle').addEventListener('click', () => {
-      isDark = !isDark;
-      if(isDark){
-        document.documentElement.classList.remove('light');
-        document.documentElement.classList.add('dark');
-        $('theme-icon-dark').classList.remove('hidden');
-        $('theme-icon-light').classList.add('hidden');
-        $('app-body').className = "bg-slate-900 text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200";
-      }else{
-        document.documentElement.classList.remove('dark');
-        document.documentElement.classList.add('light');
-        $('theme-icon-dark').classList.add('hidden');
-        $('theme-icon-light').classList.remove('hidden');
-        $('app-body').className = "bg-slate-100 text-slate-800 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200";
-      }
     });
 
     $('lang-tr').addEventListener('click', () => dilDegistir('tr'));

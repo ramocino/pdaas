@@ -53,10 +53,17 @@
   .tree-row[data-lvl="6"] { padding-left: 96px; }
   .tree-row[data-lvl="7"] { padding-left: 112px; }
 
-  .etiket-hs   { background:rgba(30,58,138,0.4); color:#93c5fd; border:1px solid rgba(59,130,246,0.3); }
-  .etiket-isco { background:rgba(131,24,67,0.4); color:#f9a8d4; border:1px solid rgba(244,114,182,0.3); }
-  .etiket-cpc  { background:rgba(120,53,15,0.4); color:#fcd34d; border:1px solid rgba(245,158,11,0.3); }
-  .etiket-nace { background:rgba(6,78,59,0.4); color:#6ee7b7; border:1px solid rgba(52,211,153,0.3); }
+  .etiket-hs   { background:rgba(0,103,192,0.2); color:#66b3ff; border:1px solid rgba(0,103,192,0.4); }
+  .etiket-isco { background:rgba(219,39,119,0.15); color:#f9a8d4; border:1px solid rgba(219,39,119,0.3); }
+  .etiket-cpc  { background:rgba(217,119,6,0.15); color:#fcd34d; border:1px solid rgba(217,119,6,0.3); }
+  .etiket-nace { background:rgba(5,150,105,0.15); color:#6ee7b7; border:1px solid rgba(5,150,105,0.3); }
+
+  /* Modal giriş animasyonu */
+  @keyframes modalIn {
+    from { opacity: 0; transform: translateY(16px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .modal-anim { animation: modalIn 0.22s cubic-bezier(0.16, 1, 0.3, 1); }
 </style>
 </head>
 <body class="bg-win-base text-slate-100 font-sans min-h-screen flex flex-col antialiased selection:bg-win-500 selection:text-white" id="app-body">
@@ -143,23 +150,56 @@
       </div>
     </div>
 
-    <!-- YÜKLENİYOR İDİKATÖRÜ (INTRINSIZ KAYDIRMA İÇİN) -->
+    <!-- YÜKLENİYOR İDİKATÖRÜ -->
     <div id="yukleniyor-spinner" class="hidden py-6 text-center">
       <div class="inline-block w-6 h-6 border-2 border-win-500 border-t-transparent rounded-full animate-spin"></div>
     </div>
-
-    <!-- DETAY PANELİ -->
-    <div id="detay-kap" class="hidden"></div>
 
   </main>
 
   <!-- YUKARI GİT BUTONU -->
   <button id="btn-scroll-top" type="button" aria-label="Yukarı git"
-    class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-xl bg-win-500 hover:bg-win-600 text-white shadow-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
+    class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-xl bg-win-500 hover:bg-win-600 text-white shadow-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 19V5m-7 7l7-7 7 7"/></svg>
   </button>
 
+  <!-- ⬇️ DETAY MODAL (yeni) -->
+  <div id="detay-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+    <div id="detay-overlay" class="absolute inset-0 bg-black/70 glass-panel"></div>
+    <div id="detay-icerik" class="relative max-w-3xl w-full max-h-[90vh] overflow-y-auto modal-anim"></div>
+  </div>
+
   <script>
+  // =================================================================
+  // ⚙️ MERKEZİ KONFİGÜRASYON — index.html ile aynı yapı
+  // =================================================================
+  // Canlıya geçince SADECE buradaki API_BASE_URL'i değiştir:
+  //   'https://pdaas.onrender.com'  →  'https://pdaas.com.tr'
+  // =================================================================
+  const CONFIG = {
+    API_BASE_URL: 'https://pdaas.onrender.com',   // ← BURASI
+    LANG_STORAGE_KEY: 'pdaas_dil',
+  };
+
+  function apiUrl(path){
+    const base = CONFIG.API_BASE_URL.replace(/\/+$/, '');
+    const p = (path || '').startsWith('/') ? path : '/' + (path || '');
+    return base + p;
+  }
+
+  async function apiFetch(path, options = {}){
+    return fetch(apiUrl(path), {
+      ...options,
+      headers: {
+        'Accept': 'application/json',
+        ...(options.headers || {})
+      }
+    });
+  }
+
+  // =================================================================
+  // DİL SÖZLÜĞÜ
+  // =================================================================
   const UI = {
     en: {
       marka_alt: "GTİP · ISCO · CPC · NACE → VAT & SCT",
@@ -230,7 +270,6 @@
   function kayitAdi(k){
     return alanSec(k, 'tanim') || alanSec(k, 'ad') || '—';
   }
-
   function aciklamaAdi(o){ return alanSec(o, 'aciklama'); }
 
   const $ = id => document.getElementById(id);
@@ -244,7 +283,7 @@
     document.documentElement.lang = DIL;
     document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { el.placeholder = t(el.dataset.i18nPlaceholder); });
-    const trBtn = $('lang-tr'), enBtn =$('lang-en');
+    const trBtn = $('lang-tr'), enBtn = $('lang-en');
     if(DIL === 'tr'){
       trBtn.className = 'px-2.5 py-1 rounded bg-win-500 text-white transition';
       enBtn.className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white transition';
@@ -252,12 +291,14 @@
       enBtn.className = 'px-2.5 py-1 rounded bg-win-500 text-white transition';
       trBtn.className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white transition';
     }
+    try{ localStorage.setItem(CONFIG.LANG_STORAGE_KEY, DIL); }catch(e){}
   }
 
   function dilDegistir(yeni){
     if(yeni === DIL) return;
     DIL = yeni;
     dilUygula();
+    detayKapat();          // dil değişince modal'ı kapat (içerik eski dilde kalmasın)
     aramayiBaslat();
   }
 
@@ -269,10 +310,10 @@
   };
   let KDV_DATA = null, OTV_DATA = null, AKTIF_FILTRE = 'hepsi', TUM_SONUCLAR = [], GORUNEN_LIMIT = 100;
 
+  // Merkezi apiFetch üzerinden fetch
   async function fetchJSON(yol){
     try{
-      const tamUrl = yol.startsWith('http') ? yol : 'https://pdaas.com.tr' + yol;
-      const r = await fetch(tamUrl, { headers:{Accept:'application/json'} });
+      const r = await apiFetch(yol);
       if(!r.ok) return { ok:false };
       return { ok:true, data: await r.json() };
     }catch(e){ return { ok:false }; }
@@ -311,8 +352,10 @@
   }
 
   function sayilariGuncelle(){
-    $('sayi-gtip').textContent  = sayi(VERI.gtip.kayitlar.length);$('sayi-isco').textContent  = sayi(VERI.isco.kayitlar.length);
-    $('sayi-cpc').textContent   = sayi(VERI.cpc.kayitlar.length);$('sayi-nace').textContent  = sayi(VERI.nace.kayitlar.length);
+    $('sayi-gtip').textContent = sayi(VERI.gtip.kayitlar.length);
+    $('sayi-isco').textContent = sayi(VERI.isco.kayitlar.length);
+    $('sayi-cpc').textContent  = sayi(VERI.cpc.kayitlar.length);
+    $('sayi-nace').textContent = sayi(VERI.nace.kayitlar.length);
   }
 
   function gtipZinciri(kod){
@@ -388,7 +431,7 @@
         const ad = tr_lower(kayitAdi(k));
         if(kod.includes(sorgu) || ad.includes(sorgu)){
           eslesenKodlar.push(kod);
-          if(eslesenKodlar.length > 3000) break; // Performans emniyeti
+          if(eslesenKodlar.length > 3000) break;
         }
       }
       tumSonuclar.push(...agacKur(kaynakTip, veri.kayitlar, eslesenKodlar));
@@ -401,13 +444,11 @@
     const k = KDV_DATA.kayitlar.find(x => x.kod === kdvKodu);
     return k ? k.oran : 0.20;
   }
-
   function kdvAd(kdvKodu){
     if(!KDV_DATA?.kayitlar) return kdvKodu;
     const k = KDV_DATA.kayitlar.find(x => x.kod === kdvKodu);
     return k ? (aciklamaAdi(k) || kdvKodu) : kdvKodu;
   }
-
   function otvBul(gtipKod, arananMetin = ''){
     if(!gtipKod && !arananMetin) return null;
     const gt = kodTemiz(gtipKod);
@@ -510,7 +551,6 @@
     }
     alan.innerHTML = html;
 
-    // Daha fazla varsa spinner göster
     if(GORUNEN_LIMIT < TUM_SONUCLAR.length){
       $('yukleniyor-spinner').classList.remove('hidden');
     } else {
@@ -520,11 +560,14 @@
 
   function aramayiBaslat(){
     const q = $('arama').value.trim();
-    GORUNEN_LIMIT = 100; // İlk yüklemede 100 kayıt
+    GORUNEN_LIMIT = 100;
     TUM_SONUCLAR = kaynaklariTara(q, AKTIF_FILTRE);
     sonuclariCiz();
   }
 
+  // =================================================================
+  // DETAY MODAL
+  // =================================================================
   function detayGoster(s){
     const { kaynak, kayit } = s;
     const kod = normKod(kayit.kod);
@@ -535,17 +578,16 @@
     const kdvAciklama = kayit.kdv_kodu ? kdvAd(kayit.kdv_kodu) : 'Standart Oran (%20)';
     const otv = kaynak === 'gtip' ? otvBul(kod, ad) : null;
 
-    const kap = $('detay-kap');
-    kap.classList.remove('hidden');
-    kap.innerHTML = `
-      <div class="bg-win-card border border-win-border rounded-xl shadow-2xl overflow-hidden mt-6">
-        <div class="p-5 border-b border-win-border flex items-start justify-between gap-4">
-          <div>
+    const icerik = $('detay-icerik');
+    icerik.innerHTML = `
+      <div class="bg-win-card border border-win-border rounded-xl shadow-2xl overflow-hidden">
+        <div class="p-5 border-b border-win-border flex items-start justify-between gap-4 bg-win-dark">
+          <div class="min-w-0">
             <span class="${KAYNAK_SINIF[kaynak]} px-2 py-0.5 rounded text-[10px] font-bold tracking-wider">${KAYNAK_ETIKET[kaynak]}</span>
             <code class="text-xs font-mono text-win-100 bg-win-500/10 px-2 py-0.5 rounded border border-win-500/20 ml-2">${kacis(kod)}</code>
             <h2 class="text-xl font-extrabold text-white tracking-tight mt-2">${kacis(ad)}</h2>
           </div>
-          <button id="kapat-btn" class="flex-none w-9 h-9 rounded-lg bg-win-dark hover:bg-rose-500/20 hover:text-rose-400 text-slate-400 flex items-center justify-center transition">✕</button>
+          <button id="kapat-btn" type="button" title="${t('kapat')}" class="flex-none w-9 h-9 rounded-lg bg-win-dark hover:bg-rose-500/20 hover:text-rose-400 text-slate-400 flex items-center justify-center transition">✕</button>
         </div>
 
         <div class="p-5 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -568,16 +610,37 @@
         </div>
       </div>`;
 
-    $('kapat-btn').addEventListener('click', () => kap.classList.add('hidden'));
-    kap.scrollIntoView({ behavior:'smooth', block:'start' });
+    const modal = $('detay-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+
+    $('kapat-btn').addEventListener('click', detayKapat);
   }
 
+  function detayKapat(){
+    const modal = $('detay-modal');
+    if(!modal) return;
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  // Overlay ve ESC ile kapatma
+  $('detay-overlay').addEventListener('click', detayKapat);
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape') detayKapat();
+  });
+
+  // =================================================================
+  // OLAY DİNLEYİCİLERİ
+  // =================================================================
   let aramaZaman;
   $('arama').addEventListener('input', () => {
     clearTimeout(aramaZaman);
     aramaZaman = setTimeout(() => {
       aramayiBaslat();
-      $('detay-kap').classList.add('hidden');
+      detayKapat();
     }, 250);
   });
 
@@ -599,23 +662,26 @@
     btn.classList.remove('bg-win-dark','text-slate-300');
     AKTIF_FILTRE = btn.dataset.tip;
     aramayiBaslat();
-    $('detay-kap').classList.add('hidden');
+    detayKapat();
   });
 
-  $('lang-tr').addEventListener('click', () => dilDegistir('tr'));$('lang-en').addEventListener('click', () => dilDegistir('en'));
+  $('lang-tr').addEventListener('click', () => dilDegistir('tr'));
+  $('lang-en').addEventListener('click', () => dilDegistir('en'));
 
-  // Sonsuz Kaydırma (Infinite Scroll) ve Yukarı Git Butonu
+  // Sonsuz Kaydırma + Yukarı Git Butonu
   const scrollTopBtn = $('btn-scroll-top');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
+    // Modal açıkken scroll olayını yoksay
+    if(!$('detay-modal').classList.contains('hidden')) return;
+
+    if(window.scrollY > 300){
       scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
     } else {
       scrollTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
     }
 
-    // Sayfa sonuna gelindiğinde sonraki 100 kaydı yükle
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
-      if (GORUNEN_LIMIT < TUM_SONUCLAR.length) {
+    if((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500){
+      if(GORUNEN_LIMIT < TUM_SONUCLAR.length){
         GORUNEN_LIMIT += 100;
         sonuclariCiz();
       }
@@ -625,6 +691,14 @@
   scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // =================================================================
+  // BAŞLAT
+  // =================================================================
+  try{
+    const k = localStorage.getItem(CONFIG.LANG_STORAGE_KEY);
+    if(k && ['tr','en'].includes(k)) DIL = k;
+  }catch(e){}
 
   dilUygula();
   tumVeriYukle();
