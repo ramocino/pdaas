@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDaaS — Parametrik Veri Servisi Portalı</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            win: {
+              50: '#e6f2ff',
+              100: '#cce5ff',
+              500: '#0067c0',
+              600: '#005fb8',
+              700: '#00458c',
+              dark: '#202020',
+              card: '#2b2b2b',
+              hover: '#3a3a3a',
+              border: '#383838',
+              base: '#191919',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 99px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.3); }
+    .glass-panel { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+  </style>
+</head>
+<body class="bg-win-base text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-win-500 selection:text-white transition-colors duration-200" id="app-body">
+
+  <!-- HEADER -->
+  <header class="h-16 flex-none border-b border-win-border bg-win-dark/80 z-40 glass-panel flex items-center justify-between px-4 lg:px-6">
+    <div class="flex items-center gap-3">
+      <button id="btn-mobile-menu" type="button" class="lg:hidden p-2 text-slate-400 hover:text-white rounded-lg hover:bg-win-hover transition" aria-label="Menü">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <div class="flex items-center gap-3 cursor-pointer" id="btn-logo">
+        <div class="w-9 h-9 rounded-lg bg-win-500 flex items-center justify-center font-extrabold text-white text-lg shadow-md shadow-win-500/20">P</div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-base tracking-tight text-white">PDaaS</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-win-500/20 text-win-100 px-2 py-0.5 rounded border border-win-500/30">v14 API</span>
+          </div>
+          <p class="text-xs text-slate-400 font-medium" data-i18n="portal_alt">Parametrik Veri Servisi Portalı</p>
+        </div>
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-1 ml-6">
+        <a href="index.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-win-card border border-win-border" data-i18n="nav_portal">Portal</a>
+        <a href="urunler.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-win-hover transition" data-i18n="nav_products">Ürün Arama</a>
+        <a href="kurator.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-win-hover transition" data-i18n="nav_curator">Küratör</a>
+      </nav>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span data-i18n="system_active">Sistem Aktif</span>
+      </div>
+      <div class="flex items-center bg-win-card p-1 rounded-lg border border-win-border text-xs font-semibold">
+        <button id="lang-tr" type="button" class="px-2.5 py-1 rounded bg-win-500 text-white transition">TR</button>
+        <button id="lang-en" type="button" class="px-2.5 py-1 rounded text-slate-400 hover:text-white transition">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WRAP -->
+  <div class="flex-1 flex overflow-hidden relative min-h-0">
+
+    <!-- SIDEBAR (AKORDİYON MENÜ) -->
+    <aside id="sidebar" class="w-80 lg:w-[22rem] flex-none bg-win-dark border-r border-win-border flex flex-col fixed lg:static inset-y-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
+      <div class="p-4 border-b border-win-border space-y-3 flex-none">
+        <div class="flex items-center justify-between">
+          <h2 class="text-sm font-bold tracking-tight text-white uppercase flex items-center gap-2">
+            <svg class="w-4 h-4 text-win-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            <span data-i18n="catalog_title">Veri Kataloğu</span>
+          </h2>
+          <span id="catalog-count-badge" class="px-2 py-0.5 text-[11px] font-semibold bg-win-card text-slate-300 rounded border border-win-border">0</span>
+        </div>
+      </div>
+
+      <div id="catalog-tree-container" class="flex-1 overflow-y-auto overscroll-contain p-3 space-y-2 min-h-0">
+        <div class="p-8 text-center text-slate-500 text-xs">
+          <div class="inline-block w-6 h-6 border-2 border-win-500 border-t-transparent rounded-full animate-spin mb-2"></div>
+          <p data-i18n="catalog_loading">Katalog yükleniyor...</p>
+        </div>
+      </div>
+    </aside>
+
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/70 z-20 hidden lg:hidden glass-panel"></div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="flex-1 overflow-y-auto overscroll-contain bg-win-base flex flex-col min-h-0">
+      
+      <!-- Boş Durum -->
+      <div id="view-empty-state" class="flex-1 flex flex-col items-center justify-center p-8 text-center max-w-lg mx-auto">
+        <div class="w-20 h-20 rounded-2xl bg-win-card border border-win-border text-win-500 flex items-center justify-center text-3xl mb-6 shadow-xl">⚡</div>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-2" data-i18n="empty_title">Veri Seti veya Servis Seçin</h2>
+        <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="empty_desc">Sol taraftaki akordiyon menüden bir Bakanlık veya Kurum seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz.</p>
+      </div>
+
+      <!-- Servis Detay Görünümü -->
+      <div id="view-service-detail" class="hidden flex-1 p-4 lg:p-8 max-w-6xl w-full mx-auto space-y-6">
+        <nav class="flex items-center gap-2 text-xs text-slate-400">
+          <button id="btn-bc-home" type="button" class="hover:text-white transition" data-i18n="bc_home">Katalog</button>
+          <span>/</span>
+          <span id="bc-ministry" class="text-slate-300 font-medium">—</span>
+          <span>/</span>
+          <span id="bc-service" class="text-win-100 font-semibold truncate">—</span>
+        </nav>
+
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-win-border">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span id="service-ministry-badge" class="px-2.5 py-0.5 rounded bg-win-card text-slate-300 text-xs font-semibold border border-win-border">—</span>
+              <span id="service-records-count" class="px-2.5 py-0.5 rounded bg-win-500/20 text-win-100 text-xs font-semibold border border-win-500/30">0</span>
+            </div>
+            <h1 id="service-title" class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight">—</h1>
+            <p id="service-desc" class="text-sm text-slate-400">—</p>
+          </div>
+          <button id="btn-run-query" type="button" class="px-4 py-2 rounded-lg bg-win-500 hover:bg-win-600 text-white text-xs font-bold shadow-md flex items-center gap-2 transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span data-i18n="run_query">Yenile</span>
+          </button>
+        </div>
+
+        <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-lg space-y-2">
+          <div class="flex items-center justify-between text-xs font-bold text-slate-400 uppercase tracking-wider">
+            <span class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-mono">GET</span>
+              <span data-i18n="endpoint_label">API Uç Noktası</span>
+            </span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="flex-1 bg-win-base border border-win-border rounded-lg px-4 py-2.5 font-mono text-xs text-win-100 overflow-x-auto whitespace-nowrap" id="endpoint-url-text">—</div>
+            <button id="btn-copy-url" type="button" class="px-3.5 py-2.5 bg-win-hover text-white text-xs font-semibold rounded-lg border border-win-border flex items-center gap-1.5 transition flex-none" data-i18n="copy">Kopyala</button>
+          </div>
+        </div>
+
+        <!-- HAZIR KOD ÖRNEKLERİ SEKMELERİ -->
+        <div class="bg-win-card border border-win-border rounded-xl overflow-hidden shadow-xl">
+          <div class="flex items-center border-b border-win-border bg-win-dark px-4 gap-2">
+            <button type="button" class="tab-btn px-3 py-2 text-xs font-bold text-white border-b-2 border-win-500" data-lang="curl">cURL</button>
+            <button type="button" class="tab-btn px-3 py-2 text-xs font-bold text-slate-400 hover:text-white" data-lang="python">Python</button>
+            <button type="button" class="tab-btn px-3 py-2 text-xs font-bold text-slate-400 hover:text-white" data-lang="js">JavaScript</button>
+          </div>
+          <div class="p-4 bg-win-base font-mono text-xs text-slate-300 overflow-x-auto">
+            <pre id="code-snippet-box">curl -X GET "https://pdaas.com.tr/api/v1/..." -H "Accept: application/json"</pre>
+          </div>
+        </div>
+
+        <!-- VERİ ÖNİZLEME TABLOSU -->
+        <div class="bg-win-card border border-win-border rounded-xl overflow-hidden shadow-xl">
+          <div class="px-4 py-3 border-b border-win-border bg-win-dark flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-300 uppercase tracking-wider" data-i18n="table_title">Canlı Veri Tablosu Önizlemesi</span>
+            <span id="table-row-count" class="text-[11px] text-slate-400">0 kayıt</span>
+          </div>
+          <div class="overflow-x-auto max-h-96">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-win-base border-b border-win-border text-slate-400 uppercase font-mono text-[10px] sticky top-0">
+                <tr>
+                  <th class="p-3" data-i18n="th_code">Kod</th>
+                  <th class="p-3" data-i18n="th_name">Ad / Açıklama</th>
+                  <th class="p-3" data-i18n="th_detail">Detay / KDV</th>
+                </tr>
+              </thead>
+              <tbody id="data-table-body" class="divide-y divide-win-border/60">
+                <tr><td colspan="3" class="p-8 text-center text-slate-500" data-i18n="catalog_loading">Veri yükleniyor...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+  const UI = {
+    tr: {
+      portal_alt: "Parametrik Veri Servisi Portalı",
+      nav_portal: "Portal",
+      nav_products: "Ürün Arama",
+      nav_curator: "Küratör",
+      system_active: "Sistem Aktif",
+      catalog_title: "Veri Kataloğu",
+      catalog_loading: "Katalog yükleniyor...",
+      empty_title: "Veri Seti veya Servis Seçin",
+      empty_desc: "Sol taraftaki akordiyon menüden bir Bakanlık veya Kurum seçerek, altındaki API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz.",
+      bc_home: "Katalog",
+      run_query: "Yenile",
+      endpoint_label: "API Uç Noktası",
+      copy: "Kopyala",
+      table_title: "Canlı Veri Tablosu Önizlemesi",
+      th_code: "Kod",
+      th_name: "Ad / Açıklama",
+      th_detail: "Detay / KDV",
+      load_error: "Katalog yüklenemedi.",
+    },
+    en: {
+      portal_alt: "Parametric Data Service Portal",
+      nav_portal: "Portal",
+      nav_products: "Product Search",
+      nav_curator: "Curator",
+      system_active: "System Active",
+      catalog_title: "Data Catalog",
+      catalog_loading: "Loading catalog...",
+      empty_title: "Select a Dataset or Service",
+      empty_desc: "Choose a Ministry or Institution from the accordion menu on the left to inspect its API endpoints, data tables and code samples.",
+      bc_home: "Catalog",
+      run_query: "Refresh",
+      endpoint_label: "API Endpoint",
+      copy: "Copy",
+      table_title: "Live Data Table Preview",
+      th_code: "Code",
+      th_name: "Name / Description",
+      th_detail: "Detail / VAT",
+      load_error: "Could not load catalog.",
+    }
+  };
+
+  let DIL = 'tr';
+  function t(k){ return (UI[DIL] && UI[DIL][k]) || k; }
+  const kacis = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  function dilUygula(){
+    document.documentElement.lang = DIL;
+    document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
+    const trBtn = $('lang-tr'), enBtn =$('lang-en');
+    if(DIL === 'tr'){
+      trBtn.className = 'px-2.5 py-1 rounded bg-win-500 text-white transition';
+      enBtn.className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white transition';
+    }else{
+      enBtn.className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white transition';
+      trBtn.className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white transition';
+    }
+    if(currentService) servisDetayGuncelle();
+  }
+
+  let KATALOG = [];
+  let currentService = null, currentData = [];
+  const $ = id => document.getElementById(id);
+
+  function openMobileSidebar(){ $('sidebar').classList.remove('-translate-x-full');$('mobile-overlay').classList.remove('hidden'); }
+  function closeMobileSidebar(){ $('sidebar').classList.add('-translate-x-full');$('mobile-overlay').classList.add('hidden'); }
+
+  async function katalogYukle(){
+    try{
+      const r = await fetch('https://pdaas.onrender.com/api/v1/katalog', { headers: { Accept: 'application/json' } });
+      if(!r.ok) throw new Error('HTTP ' + r.status);
+      const body = await r.json();
+      KATALOG = body.servisler || [];
+      renderCatalogTree();
+    }catch(e){
+      console.error('[PDaaS] katalog yüklenemedi:', e);
+      $('catalog-tree-container').innerHTML = `<div class="p-6 text-center text-rose-400 text-xs">${t('load_error')}</div>`;
+    }
+  }
+
+  function renderCatalogTree(){
+    const container = $('catalog-tree-container');
+    const gruplar = new Map();
+    for(const sv of KATALOG){
+      const bakanlikAdi = DIL === 'en' ? (sv.bakanlik_adi_en || sv.bakanlik_adi) : sv.bakanlik_adi;
+      if(!gruplar.has(sv.bakanlik)) gruplar.set(sv.bakanlik, { adi: bakanlikAdi, servisler: [] });
+      gruplar.get(sv.bakanlik).servisler.push(sv);
+    }
+    let html = '';
+    let index = 0;
+    for(const [k, grup] of gruplar.entries()){
+      const accordionId = `grup-icerik-${index}`;
+      const chevronId = `chevron-${index}`;
+      html += `
+        <div class="bg-win-card rounded-lg border border-win-border overflow-hidden text-xs mb-2">
+          <button type="button" class="w-full px-3 py-2.5 font-semibold text-slate-200 border-b border-win-border bg-win-dark flex justify-between items-center hover:bg-win-hover transition" onclick="toggleAccordion('${accordionId}', '${chevronId}')">
+            <span>${kacis(grup.adi)}</span>
+            <div class="flex items-center gap-2">
+              <span class="px-1.5 py-0.5 rounded bg-win-base text-slate-400 text-[10px]">${grup.servisler.length}</span>
+              <svg id="${chevronId}" class="w-4 h-4 text-slate-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+          </button>
+          <div id="${accordionId}" class="p-1 space-y-1 hidden">
+            ${grup.servisler.map(s => {
+              const servisAdi = DIL === 'en' ? (s.servis_adi_en || s.servis_adi) : s.servis_adi;
+              return `<button type="button" class="w-full text-left px-2 py-1.5 rounded hover:bg-win-hover text-slate-400 hover:text-white truncate" onclick="servisSec('${s.endpoint}'); closeMobileSidebar();">${kacis(servisAdi)}</button>`;
+            }).join('')}
+          </div>
+        </div>`;
+      index++;
+    }
+    container.innerHTML = html;
+    $('catalog-count-badge').textContent = KATALOG.length;
+  }
+
+  function toggleAccordion(contentId, chevronId){
+    const content = $(contentId);
+    const chevron = $(chevronId);
+    if(content.classList.contains('hidden')){
+      content.classList.remove('hidden');
+      chevron.classList.add('rotate-180');
+    } else {
+      content.classList.add('hidden');
+      chevron.classList.remove('rotate-180');
+    }
+  }
+
+  async function servisSec(endpoint){
+    currentService = KATALOG.find(s => s.endpoint === endpoint);
+    if(!currentService) return;
+    servisDetayGuncelle();
+  }
+
+  async function servisDetayGuncelle(){
+    if(!currentService) return;
+    $('view-empty-state').classList.add('hidden');$('view-service-detail').classList.remove('hidden');
+
+    const bakanlik = DIL === 'en' ? (currentService.bakanlik_adi_en || currentService.bakanlik_adi) : currentService.bakanlik_adi;
+    const servisAdi = DIL === 'en' ? (currentService.servis_adi_en || currentService.servis_adi) : currentService.servis_adi;
+    const servisAciklama = DIL === 'en' ? (currentService.aciklama_en || currentService.aciklama) : currentService.aciklama;
+
+    $('bc-ministry').textContent = bakanlik;
+    $('bc-service').textContent = servisAdi;
+    $('service-ministry-badge').textContent = bakanlik;
+    $('service-title').textContent = servisAdi;
+    $('service-desc').textContent = servisAciklama;
+    $('endpoint-url-text').textContent = 'https://pdaas.com.tr' + currentService.endpoint;
+
+    kodOrnekleriGuncelle('curl');
+
+    const tbody = $('data-table-body');
+    tbody.innerHTML = `<tr><td colspan="3" class="p-8 text-center text-slate-400">${t('catalog_loading')}</td></tr>`;
+
+    try{
+      const r = await fetch('https://pdaas.com.tr' + currentService.endpoint, { headers: { Accept: 'application/json' } });
+      if(!r.ok) throw new Error('HTTP ' + r.status);
+      const data = await r.json();
+      currentData = data.kayitlar || data.kurallar || [];
+      $('service-records-count').textContent = currentData.length + ' kayıt';
+      $('table-row-count').textContent = currentData.length + ' kayıt';
+
+      if(!currentData.length){
+        tbody.innerHTML = `<tr><td colspan="3" class="p-8 text-center text-slate-500">Bu serviste kayıt bulunamadı.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = currentData.slice(0, 100).map(k => {
+        const kod = kacis(k.kod || '—');
+        const ad = kacis(DIL === 'en' ? (k.tanim_en || k.ad_en || k.aciklama_en || k.tanim || k.ad || '—') : (k.tanim_tr || k.ad_tr || k.aciklama_tr || k.tanim || k.ad || '—'));
+        const detay = kacis(k.kdv_kodu || k.kategori || k.vergi_tipi || '—');
+        return `<tr class="hover:bg-win-hover/50 transition">
+          <td class="p-3 font-mono text-win-100">${kod}</td>
+          <td class="p-3 font-medium text-white">${ad}</td>
+          <td class="p-3 text-slate-400">${detay}</td>
+        </tr>`;
+      }).join('');
+    }catch(e){
+      tbody.innerHTML = `<tr><td colspan="3" class="p-8 text-center text-rose-400">Veri yüklenirken hata oluştu: ${e.message}</td></tr>`;
+    }
+  }
+
+  function kodOrnekleriGuncelle(lang){
+    const url = 'https://pdaas.com.tr' + currentService.endpoint;
+    let snippet = '';
+    if(lang === 'curl') snippet = `curl -X GET "${url}" -H "Accept: application/json"`;
+    else if(lang === 'python') snippet = `import requests\n\nurl = "${url}"\nres = requests.get(url, headers={"Accept": "application/json"})\nprint(res.json())`;
+    else if(lang === 'js') snippet = `fetch("${url}", { headers: { "Accept": "application/json" } })\n  .then(res => res.json())\n  .then(data => console.log(data));`;
+    $('code-snippet-box').textContent = snippet;
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    dilUygula();
+    katalogYukle();
+    $('btn-mobile-menu').addEventListener('click', openMobileSidebar);$('mobile-overlay').addEventListener('click', closeMobileSidebar);
+    $('btn-run-query').addEventListener('click', () => { if(currentService) servisDetayGuncelle(); });$('btn-copy-url').addEventListener('click', () => {
+      navigator.clipboard.writeText($('endpoint-url-text').textContent);
+      alert('Endpoint kopyalandı!');
+    });
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('text-white','border-b-2','border-win-500'); b.classList.add('text-slate-400'); });
+        e.target.classList.add('text-white','border-b-2','border-win-500');
+        e.target.classList.remove('text-slate-400');
+        kodOrnekleriGuncelle(e.target.dataset.lang);
+      });
+    });
+
+    $('lang-tr').addEventListener('click', () => { DIL = 'tr'; dilUygula(); renderCatalogTree(); });$('lang-en').addEventListener('click', () => { DIL = 'en'; dilUygula(); renderCatalogTree(); });
+  });
+  </script>
+</body>
+</html>
