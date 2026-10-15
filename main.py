@@ -365,14 +365,74 @@ def servis_ozet(bakanlik: str, servis_kodu: str, response: Response):
     try:
         k = _servis_bul(bakanlik, servis_kodu)
 
+        response.headers["Cache-Control"] = "public, max-age=3600, stale-while-revalidate=86400"
+        response.headers["Vary"] = "Accept-Encoding"
+
+        tip = k.get("tip", "").lower()
+
+        # ═══════════════════════════════════════════════════════
+        # HARİTA TİPİ: {gruplar, kurallar} tam yapısını koru
+        # (gtip-ozel-izin-belge, gtip-randiman, cpc-ozel-izin-belge, vb.)
+        # ═══════════════════════════════════════════════════════
+        if tip == "harita":
+            tum_gruplar = {}
+            tum_kurallar = []
+            for d in k["dosyalar"]:
+                v = _json_oku(d["yol"])
+                if not v:
+                    continue
+                if isinstance(v.get("gruplar"), dict):
+                    tum_gruplar.update(v["gruplar"])
+                if isinstance(v.get("kurallar"), list):
+                    tum_kurallar.extend(v["kurallar"])
+
+            _metrik_kaydet((time.perf_counter() - t0) * 1000)
+
+            return {
+                **_ortak_meta(k),
+                "tip": "harita",
+                "join": k["join"],
+                "toplam": len(tum_kurallar),
+                "gruplar": tum_gruplar,
+                "kurallar": tum_kurallar,
+            }
+
+        # ═══════════════════════════════════════════════════════
+        # SÖZLÜK TİPİ: {kurumlar: {...}, tipler: {...}} yapısını koru
+        # (kurumlar.json, ileride eklenecek diğer sözlükler)
+        # ═══════════════════════════════════════════════════════
+        if tip == "sozluk":
+            birlestirilmis = {}
+            for d in k["dosyalar"]:
+                v = _json_oku(d["yol"])
+                if not v or not isinstance(v, dict):
+                    continue
+                for anahtar, deger in v.items():
+                    if anahtar == "meta":
+                        continue
+                    if isinstance(deger, dict) and anahtar in birlestirilmis:
+                        birlestirilmis[anahtar].update(deger)
+                    else:
+                        birlestirilmis[anahtar] = deger
+
+            _metrik_kaydet((time.perf_counter() - t0) * 1000)
+
+            return {
+                **_ortak_meta(k),
+                "tip": "sozluk",
+                "join": k["join"],
+                **birlestirilmis,
+            }
+
+        # ═══════════════════════════════════════════════════════
+        # LİSTE / AĞAÇ TİPİ: mevcut davranış (kayitlar array'i)
+        # (gtip-kodlari, kdv-oranlari, nace-kodlari, vb.)
+        # ═══════════════════════════════════════════════════════
         tum = []
         for d in k["dosyalar"]:
             v = _json_oku(d["yol"])
             if v:
                 tum.extend(_kayitlari_al(v))
-
-        response.headers["Cache-Control"] = "public, max-age=3600, stale-while-revalidate=86400"
-        response.headers["Vary"] = "Accept-Encoding"
 
         _metrik_kaydet((time.perf_counter() - t0) * 1000)
 
@@ -383,6 +443,7 @@ def servis_ozet(bakanlik: str, servis_kodu: str, response: Response):
             "toplam": len(tum),
             "kayitlar": tum,
         }
+
     except HTTPException as he:
         raise he
     except Exception as e:
