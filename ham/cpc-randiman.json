@@ -1,0 +1,449 @@
+{
+  "meta": {
+    "servis_kodu": "cpc-randiman",
+    "servis_adi": "CPC Bazlı Hizmet Verimliliği ve Randıman Göstergeleri",
+    "servis_adi_en": "CPC-based Service Productivity and Efficiency Indicators",
+    "veri_tipi": "cok_kurumlu_harita",
+    "tip": "harita",
+    "join": "cpc_prefix",
+    "kapsam": ["hizmet"],
+    "bakanlik": null,
+    "bakanlik_adi": null,
+    "bakanlik_adi_en": null,
+    "birim": null,
+    "birim_en": null,
+    "yayinci": "PDaaS — Çok Kurumlu Konsolide Veri",
+    "yayinci_en": "PDaaS — Multi-Agency Consolidated Data",
+    "konsorsiyum": true,
+    "kurumlar_ref": "/api/v1/meta/kurumlar.json",
+    "surum": "2026.10.15",
+    "dosya_surumu": "1.0.0",
+    "schema_surumu": "1.1.0",
+    "onceki_surum": null,
+    "guncelleme": "2026-10-15",
+    "kaynak": "TOBB Kapasite Raporu Standartları · TSE Hizmet Standartları · Kalkınma Ajansları Sektör Raporları · Dünya Bankası Hizmet Verimliliği Metrikleri",
+    "kaynak_en": "TOBB Capacity Report Standards · TSE Service Standards · Development Agency Sector Reports · World Bank Service Productivity Metrics",
+    "resmi_gazete": null,
+    "mevzuat_ref": [
+      { "tur": "yonetmelik", "ad_tr": "TOBB Muamelat Yönetmeliği — Kapasite Raporu Düzenleme Esasları" }
+    ],
+    "yayin_durumu": "yayinda",
+    "katman": "ham",
+    "zaman_bazli": false,
+    "gecerlilik_baslangic": null,
+    "gecerlilik_bitis": null,
+    "checksum": null
+  },
+
+  "gruplar": {
+    "konaklama":        { "ad_tr": "Konaklama Hizmetleri", "ad_en": "Accommodation Services", "renk": "pink", "ikon": "🏨" },
+    "yeme_icme":        { "ad_tr": "Yeme-İçme Hizmetleri", "ad_en": "Food & Beverage Services", "renk": "orange", "ikon": "🍽️" },
+    "ulastirma":        { "ad_tr": "Ulaştırma ve Lojistik", "ad_en": "Transport and Logistics", "renk": "amber", "ikon": "🚚" },
+    "insaat_muhendislik": { "ad_tr": "İnşaat ve Mühendislik Hizmetleri", "ad_en": "Construction and Engineering Services", "renk": "stone", "ikon": "📐" },
+    "bilisim":          { "ad_tr": "Bilişim ve Telekomünikasyon", "ad_en": "IT and Telecommunications", "renk": "violet", "ikon": "💻" },
+    "egitim":           { "ad_tr": "Eğitim Hizmetleri", "ad_en": "Education Services", "renk": "sky", "ikon": "🎓" },
+    "saglik":           { "ad_tr": "Sağlık ve Sosyal Hizmetler", "ad_en": "Health and Social Services", "renk": "rose", "ikon": "🏥" },
+    "profesyonel":      { "ad_tr": "Profesyonel ve Teknik Hizmetler", "ad_en": "Professional and Technical Services", "renk": "win", "ikon": "💼" }
+  },
+
+  "kurallar": [
+    {
+      "kod": "RND-KONAKLAMA",
+      "grup": "konaklama",
+      "oncelik": 100,
+      "cpc_prefix": ["63"],
+      "hizmet_grubu": "Konaklama Hizmetleri",
+      "aciklama_tr": "Otel, motel, pansiyon ve benzeri konaklama hizmetleri",
+      "aciklama_en": "Hotel, motel, hostel and similar accommodation services",
+      "mevzuat_ref": [
+        { "tur": "yonetmelik", "ad_tr": "Turizm İşletmelerinin Belgelendirilmesine ve Niteliklerine İlişkin Yönetmelik" }
+      ],
+      "verimlilik_gostergeleri": [
+        {
+          "kod": "VERIM-DOLULUK-OTEL",
+          "gosterge": "Yatak Doluluk Oranı",
+          "cpc_prefix": "631",
+          "hedef_deger": 0.72,
+          "alt_sinir": 0.55,
+          "ust_sinir": 0.90,
+          "birim": "dolu yatak / toplam yatak",
+          "kaynak_kod": "ktb",
+          "aciklama_tr": "Turizm işletme belgeli otellerde ortalama yatak doluluk oranı %72'dir.",
+          "aciklama_en": "Average bed occupancy rate in certified hotels is 72%."
+        },
+        {
+          "kod": "VERIM-ODA-DOLULUK",
+          "gosterge": "Oda Doluluk Oranı",
+          "cpc_prefix": "631",
+          "hedef_deger": 0.68,
+          "alt_sinir": 0.50,
+          "ust_sinir": 0.88,
+          "birim": "dolu oda / toplam oda",
+          "kaynak_kod": "ktb",
+          "aciklama_tr": "Otel oda doluluk oranı sektör ortalaması %68'dir.",
+          "aciklama_en": "Hotel room occupancy sector average is 68%."
+        },
+        {
+          "kod": "VERIM-MISAFIR-MEMNUNIYET",
+          "gosterge": "Misafir Memnuniyet Skoru",
+          "cpc_prefix": "631",
+          "hedef_deger": 0.85,
+          "alt_sinir": 0.70,
+          "ust_sinir": 0.98,
+          "birim": "memnun misafir / toplam misafir",
+          "kaynak_kod": "ktb",
+          "aciklama_tr": "Konaklama hizmetlerinde misafir memnuniyet hedefi %85'tir.",
+          "aciklama_en": "Guest satisfaction target in accommodation is 85%."
+        }
+      ]
+    },
+
+    {
+      "kod": "RND-YEME-ICME",
+      "grup": "yeme_icme",
+      "oncelik": 95,
+      "cpc_prefix": ["63"],
+      "hizmet_grubu": "Yeme-İçme Hizmetleri",
+      "aciklama_tr": "Restoran, kafe, catering ve toplu yemek hizmetleri",
+      "aciklama_en": "Restaurant, cafe, catering and mass food services",
+      "verimlilik_gostergeleri": [
+        {
+          "kod": "VERIM-MASA-DEVIR",
+          "gosterge": "Masa Devir Hızı",
+          "cpc_prefix": "633",
+          "hedef_deger": 4.0,
+          "alt_sinir": 2.0,
+          "ust_sinir": 8.0,
+          "birim": "müşteri / masa / gün",
+          "kaynak_kod": "tobb",
+          "aciklama_tr": "Restoranlarda günlük masa devir hızı ortalama 4'tür.",
+          "aciklama_en": "Average daily table turnover in restaurants is 4."
+        },
+        {
+          "kod": "VERIM-YIYECEK-MALIYET",
+          "gosterge": "Yiyecek Maliyet Oranı",
+          "cpc_prefix": "633",
+          "hedef_deger": 0.32,
+          "alt_sinir": 0.25,
+          "ust_sinir": 0.45,
+          "birim": "yiyecek maliyeti / toplam ciro",
+          "kaynak_kod": "tobb",
+          "aciklama_tr": "Yeme-içme işletmelerinde yiyecek maliyet oranı hedefi %32'dir.",
+          "aciklama_en": "Target food cost ratio in food & beverage is 32%."
+        },
+        {
+          "kod": "VERIM-ATIK-ORANI",
+          "gosterge": "Gıda Atık Oranı",
+          "cpc_prefix": "633",
+          "hedef_deger": 0.10,
+          "alt_sinir": 0.05,
+          "ust_sinir": 0.20,
+          "birim": "atık / toplam üretim",
+          "kaynak_kod": "tobb",
+          "aciklama_tr": "Mutfakta gıda atık oranı ortalama %10'dur.",
+          "aciklama_en": "Average food waste ratio in kitchens is 10%."
+        }
+      ]
+    },
+
+    {
+      "kod": "RND-ULASTIRMA",
+      "grup": "ulastirma",
+      "oncelik": 90,
+      "cpc_prefix": ["71","72","73","74"],
+      "hizmet_grubu": "Ulaştırma ve Lojistik",
+      "aciklama_tr": "Karayolu, denizyolu, havayolu taşımacılığı ve lojistik hizmetleri",
+      "aciklama_en": "Road, sea, air transport and logistics services",
+      "mevzuat_ref": [
+        { "tur": "kanun", "no": "4925", "ad_tr": "Karayolu Taşıma Kanunu" }
+      ],
+      "verimlilik_gostergeleri": [
+        {
+          "kod": "VERIM-ARAC-DOLULUK",
+          "gosterge": "Araç Doluluk Oranı",
+          "cpc_prefix": "712",
+          "hedef_deger": 0.75,
+          "alt_sinir": 0.55,
+          "ust_sinir": 0.95,
+          "birim": "yük / kapasite",
+          "kaynak_kod": "ulastirma",
+          "aciklama_tr": "Karayolu taşımacılığında ortalama araç doluluk oranı %75'tir.",
+          "aciklama_en": "Average vehicle load factor in road transport is 75%."
+        },
+        {
+          "kod": "VERIM-ZAMANINDA-TESLIM",
+          "gosterge": "Zamanında Teslim Oranı",
+          "cpc_prefix": "712",
+          "hedef_deger": 0.95,
+          "alt_sinir": 0.85,
+          "ust_sinir": 0.99,
+          "birim": "zamanında teslim / toplam teslim",
+          "kaynak_kod": "ulastirma",
+          "aciklama_tr": "Lojistik hizmetlerde zamanında teslim oranı hedefi %95'tir.",
+          "aciklama_en": "On-time delivery target in logistics is 95%."
+        },
+        {
+          "kod": "VERIM-YAKIT-VERIMLILIK",
+          "gosterge": "Yakıt Verimliliği",
+          "cpc_prefix": "712",
+          "hedef_deger": 0.35,
+          "alt_sinir": 0.25,
+          "ust_sinir": 0.50,
+          "birim": "litre / 100 km / ton",
+          "kaynak_kod": "ulastirma",
+          "aciklama_tr": "Karayolu taşımacılığında yakıt verimliliği ortalama 0,35 lt/100km/ton'dur.",
+          "aciklama_en": "Average fuel efficiency in road transport is 0.35 L/100km/ton."
+        }
+      ]
+    },
+
+    {
+      "kod": "RND-INSAAT-MUHENDISLIK",
+      "grup": "insaat_muhendislik",
+      "oncelik": 85,
+      "cpc_prefix": ["51","52"],
+      "hizmet_grubu": "İnşaat ve Mühendislik Hizmetleri",
+      "aciklama_tr": "İnşaat, mimarlık, mühendislik ve teknik müşavirlik hizmetleri",
+      "aciklama_en": "Construction, architectural, engineering and technical consultancy services",
+      "verimlilik_gostergeleri": [
+        {
+          "kod": "VERIM-MAKINE-RANDIMAN",
+          "gosterge": "Makine Randımanı",
+          "cpc_prefix": "532",
+          "hedef_deger": 0.80,
+          "alt_sinir": 0.60,
+          "ust_sinir": 0.90,
+          "birim": "gerçek kapasite / teorik kapasite",
+          "kaynak_kod": "tobb",
+          "aciklama_tr": "İnşaat makinelerinde randıman: otomatik %80, yarı otomatik %60, manuel %40'tır (Kapasite Raporu standartları).",
+          "aciklama_en": "Construction machinery efficiency: automatic 80%, semi-automatic 60%, manual 40%."
+        },
+        {
+          "kod": "VERIM-PROJE-TAMAMLAMA",
+          "gosterge": "Proje Zamanında Tamamlama Oranı",
+          "cpc_prefix": "532",
+          "hedef_deger": 0.85,
+          "alt_sinir": 0.70,
+          "ust_sinir": 0.95,
+          "birim": "zamanında tamamlanan / toplam proje",
+          "kaynak_kod": "tobb",
+          "aciklama_tr": "İnşaat projelerinde zamanında tamamlama oranı hedefi %85'tir.",
+          "aciklama_en": "On-time project completion target in construction is 85%."
+        },
+        {
+          "kod": "VERIM-ISG-KAZA-ORANI",
+          "gosterge": "İSG Kaza Sıklık Oranı",
+          "cpc_prefix": "532",
+          "hedef_deger": 0.02,
+          "alt_sinir": 0.005,
+          "ust_sinir": 0.05,
+          "birim": "kaza / çalışan / yıl",
+          "kaynak_kod": "tobb",
+          "aciklama_tr": "İnşaat sektöründe kaza sıklık oranı hedefi %2'dir.",
+          "aciklama_en": "Construction sector accident frequency rate target is 2%."
+        }
+      ]
+    },
+
+    {
+      "kod": "RND-BILISIM",
+      "grup": "bilisim",
+      "oncelik": 80,
+      "cpc_prefix": ["84"],
+      "hizmet_grubu": "Bilişim ve Telekomünikasyon",
+      "aciklama_tr": "Yazılım, veri işleme, telekomünikasyon ve çağrı merkezi hizmetleri",
+      "aciklama_en": "Software, data processing, telecommunications and call center services",
+      "mevzuat_ref": [
+        { "tur": "kanun", "no": "5809", "ad_tr": "Elektronik Haberleşme Kanunu" }
+      ],
+      "verimlilik_gostergeleri": [
+        {
+          "kod": "VERIM-CAGRIDAN-CAGRI",
+          "gosterge": "Çağrı Merkezi Çözüm Oranı (First Call Resolution)",
+          "cpc_prefix": "841",
+          "hedef_deger": 0.80,
+          "alt_sinir": 0.65,
+          "ust_sinir": 0.92,
+          "birim": "ilk çağrıda çözülen / toplam çağrı",
+          "kaynak_kod": "btk",
+          "aciklama_tr": "Çağrı merkezlerinde ilk çağrıda çözüm oranı hedefi %80'dir.",
+          "aciklama_en": "First call resolution target in call centers is 80%."
+        },
+        {
+          "kod": "VERIM-ORT-ISLEM-SURESI",
+          "gosterge": "Ortalama İşlem Süresi (AHT)",
+          "cpc_prefix": "841",
+          "hedef_deger": 300,
+          "alt_sinir": 180,
+          "ust_sinir": 600,
+          "birim": "saniye / çağrı",
+          "kaynak_kod": "btk",
+          "aciklama_tr": "Çağrı merkezlerinde ortalama işlem süresi 300 saniyedir.",
+          "aciklama_en": "Average handle time in call centers is 300 seconds."
+        },
+        {
+          "kod": "VERIM-YAZILIM-HATA",
+          "gosterge": "Yazılım Hata Yoğunluğu",
+          "cpc_prefix": "842",
+          "hedef_deger": 1.5,
+          "alt_sinir": 0.5,
+          "ust_sinir": 5.0,
+          "birim": "hata / 1000 satır kod",
+          "kaynak_kod": "tobb",
+          "aciklama_tr": "Yazılım geliştirmede hata yoğunluğu hedefi 1,5 hata/1000 satırdır.",
+          "aciklama_en": "Software defect density target is 1.5 bugs/1000 LOC."
+        }
+      ]
+    },
+
+    {
+      "kod": "RND-EGITIM",
+      "grup": "egitim",
+      "oncelik": 75,
+      "cpc_prefix": ["92"],
+      "hizmet_grubu": "Eğitim Hizmetleri",
+      "aciklama_tr": "Özel okul, kurs, etüt merkezi ve eğitim hizmetleri",
+      "aciklama_en": "Private school, course, study center and education services",
+      "mevzuat_ref": [
+        { "tur": "yonetmelik", "ad_tr": "Özel Öğretim Kurumları Yönetmeliği" }
+      ],
+      "verimlilik_gostergeleri": [
+        {
+          "kod": "VERIM-SINIF-DOLULUK",
+          "gosterge": "Sınıf Doluluk Oranı",
+          "cpc_prefix": "921",
+          "hedef_deger": 0.85,
+          "alt_sinir": 0.65,
+          "ust_sinir": 0.98,
+          "birim": "öğrenci / kontenjan",
+          "kaynak_kod": "meb",
+          "aciklama_tr": "Özel öğretim kurumlarında sınıf doluluk oranı hedefi %85'tir.",
+          "aciklama_en": "Classroom occupancy target in private education is 85%."
+        },
+        {
+          "kod": "VERIM-OGRENCI-BASARI",
+          "gosterge": "Öğrenci Başarı Oranı",
+          "cpc_prefix": "921",
+          "hedef_deger": 0.80,
+          "alt_sinir": 0.60,
+          "ust_sinir": 0.95,
+          "birim": "başarılı öğrenci / toplam",
+          "kaynak_kod": "meb",
+          "aciklama_tr": "Eğitim hizmetlerinde öğrenci başarı oranı hedefi %80'dir.",
+          "aciklama_en": "Student success rate target in education is 80%."
+        },
+        {
+          "kod": "VERIM-OGRETMEN-OGRENCI",
+          "gosterge": "Öğretmen Başına Öğrenci Sayısı",
+          "cpc_prefix": "921",
+          "hedef_deger": 20,
+          "alt_sinir": 10,
+          "ust_sinir": 35,
+          "birim": "öğrenci / öğretmen",
+          "kaynak_kod": "meb",
+          "aciklama_tr": "İdeal öğretmen başına öğrenci sayısı 20'dir.",
+          "aciklama_en": "Ideal student-teacher ratio is 20."
+        }
+      ]
+    },
+
+    {
+      "kod": "RND-SAGLIK",
+      "grup": "saglik",
+      "oncelik": 70,
+      "cpc_prefix": ["93"],
+      "hizmet_grubu": "Sağlık ve Sosyal Hizmetler",
+      "aciklama_tr": "Hastane, poliklinik, laboratuvar ve sosyal hizmetler",
+      "aciklama_en": "Hospital, polyclinic, laboratory and social services",
+      "mevzuat_ref": [
+        { "tur": "kanun", "no": "3359", "ad_tr": "Sağlık Hizmetleri Temel Kanunu" }
+      ],
+      "verimlilik_gostergeleri": [
+        {
+          "kod": "VERIM-YATAK-DOLULUK",
+          "gosterge": "Yatak Doluluk Oranı",
+          "cpc_prefix": "931",
+          "hedef_deger": 0.75,
+          "alt_sinir": 0.55,
+          "ust_sinir": 0.92,
+          "birim": "dolu yatak / toplam yatak",
+          "kaynak_kod": "saglik",
+          "aciklama_tr": "Hastanelerde ortalama yatak doluluk oranı %75'tir.",
+          "aciklama_en": "Average bed occupancy rate in hospitals is 75%."
+        },
+        {
+          "kod": "VERIM-HASTA-MEMNUNIYET",
+          "gosterge": "Hasta Memnuniyet Skoru",
+          "cpc_prefix": "931",
+          "hedef_deger": 0.88,
+          "alt_sinir": 0.72,
+          "ust_sinir": 0.98,
+          "birim": "memnun hasta / toplam hasta",
+          "kaynak_kod": "saglik",
+          "aciklama_tr": "Sağlık hizmetlerinde hasta memnuniyeti hedefi %88'dir.",
+          "aciklama_en": "Patient satisfaction target in health services is 88%."
+        },
+        {
+          "kod": "VERIM-TIBBI-HATA",
+          "gosterge": "Tıbbi Hata Oranı",
+          "cpc_prefix": "931",
+          "hedef_deger": 0.005,
+          "alt_sinir": 0.001,
+          "ust_sinir": 0.02,
+          "birim": "hata / müdahale",
+          "kaynak_kod": "saglik",
+          "aciklama_tr": "Sağlık hizmetlerinde tıbbi hata oranı hedefi %0,5'tir.",
+          "aciklama_en": "Medical error rate target in health services is 0.5%."
+        }
+      ]
+    },
+
+    {
+      "kod": "RND-PROFESYONEL",
+      "grup": "profesyonel",
+      "oncelik": 65,
+      "cpc_prefix": ["82","83","89"],
+      "hizmet_grubu": "Profesyonel ve Teknik Hizmetler",
+      "aciklama_tr": "Hukuk, muhasebe, danışmanlık, mühendislik ve diğer profesyonel hizmetler",
+      "aciklama_en": "Legal, accounting, consulting, engineering and other professional services",
+      "verimlilik_gostergeleri": [
+        {
+          "kod": "VERIM-FATURALANABILIR-SAAT",
+          "gosterge": "Faturalanabilir Saat Oranı",
+          "cpc_prefix": "821",
+          "hedef_deger": 0.70,
+          "alt_sinir": 0.55,
+          "ust_sinir": 0.85,
+          "birim": "faturalanabilir saat / toplam çalışma saati",
+          "kaynak_kod": "tobb",
+          "aciklama_tr": "Profesyonel hizmetlerde faturalanabilir saat oranı hedefi %70'tir.",
+          "aciklama_en": "Billable hour ratio target in professional services is 70%."
+        },
+        {
+          "kod": "VERIM-MUSTERI-ELDE-TUTMA",
+          "gosterge": "Müşteri Elde Tutma Oranı",
+          "cpc_prefix": "821",
+          "hedef_deger": 0.90,
+          "alt_sinir": 0.75,
+          "ust_sinir": 0.98,
+          "birim": "elde tutulan müşteri / toplam müşteri",
+          "kaynak_kod": "tobb",
+          "aciklama_tr": "Profesyonel hizmetlerde müşteri elde tutma oranı hedefi %90'dır.",
+          "aciklama_en": "Client retention rate target in professional services is 90%."
+        },
+        {
+          "kod": "VERIM-PROJE-KARLILIK",
+          "gosterge": "Proje Kârlılık Oranı",
+          "cpc_prefix": "821",
+          "hedef_deger": 0.25,
+          "alt_sinir": 0.10,
+          "ust_sinir": 0.45,
+          "birim": "net kâr / proje geliri",
+          "kaynak_kod": "tobb",
+          "aciklama_tr": "Profesyonel hizmet projelerinde kârlılık oranı hedefi %25'tir.",
+          "aciklama_en": "Project profitability target in professional services is 25%."
+        }
+      ]
+    }
+  ]
+}

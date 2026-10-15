@@ -1,0 +1,337 @@
+{
+  "meta": {
+    "servis_kodu": "gtip-ozel-izin-belge",
+    "servis_adi": "GTİP Bazlı Özel İzin ve Belge Haritası",
+    "servis_adi_en": "GTİP-based Permit and Document Map",
+    "veri_tipi": "cok_kurumlu_harita",
+    "tip": "harita",
+    "join": "gtip_prefix",
+    "kapsam": ["urun", "hizmet"],
+    "bakanlik": null,
+    "bakanlik_adi": null,
+    "bakanlik_adi_en": null,
+    "birim": null,
+    "birim_en": null,
+    "yayinci": "PDaaS — Çok Kurumlu Konsolide Veri",
+    "yayinci_en": "PDaaS — Multi-Agency Consolidated Data",
+    "konsorsiyum": true,
+    "kurumlar_ref": "/api/v1/meta/kurumlar.json",
+    "surum": "2026.10.15",
+    "dosya_surumu": "1.0.0",
+    "schema_surumu": "1.1.0",
+    "onceki_surum": null,
+    "guncelleme": "2026-10-15",
+    "kaynak": "GİB · Tarım ve Orman Bakanlığı · Sağlık Bakanlığı (TİTCK) · Çevre Bakanlığı · TSE · MAPEG · TAD",
+    "kaynak_en": "GİB · Ministry of Agriculture · Ministry of Health (TITCK) · Ministry of Environment · TSE · MAPEG · TAD",
+    "resmi_gazete": null,
+    "mevzuat_ref": [],
+    "yayin_durumu": "yayinda",
+    "katman": "ham",
+    "zaman_bazli": false,
+    "gecerlilik_baslangic": null,
+    "gecerlilik_bitis": null,
+    "checksum": null
+  },
+
+  "gruplar": {
+    "gida":       { "ad_tr": "Gıda Ürünleri",              "ad_en": "Food Products",              "renk": "emerald", "ikon": "🍎" },
+    "kozmetik":   { "ad_tr": "Kozmetik ve Kişisel Bakım",  "ad_en": "Cosmetics & Personal Care",  "renk": "pink",    "ikon": "💄" },
+    "kimyasal":   { "ad_tr": "Kimyasal ve Teknik Ürünler", "ad_en": "Chemicals & Technical",      "renk": "amber",   "ikon": "🧪" },
+    "maden":      { "ad_tr": "Maden ve Kömür Ürünleri",    "ad_en": "Mining & Coal Products",     "renk": "stone",   "ikon": "⛏️" },
+    "ilac":       { "ad_tr": "İlaç ve Tıbbi Cihaz",        "ad_en": "Pharmaceuticals & Medical",  "renk": "sky",     "ikon": "💊" },
+    "tekstil":    { "ad_tr": "Tekstil ve Konfeksiyon",     "ad_en": "Textiles & Apparel",         "renk": "violet",  "ikon": "👕" },
+    "elektrikli": { "ad_tr": "Elektrikli ve Elektronik",   "ad_en": "Electrical & Electronics",   "renk": "yellow",  "ikon": "🔌" }
+  },
+
+  "kurallar": [
+    {
+      "kod": "BELGE-GIDA-GENEL",
+      "grup": "gida",
+      "oncelik": 100,
+      "gtip_prefix": ["02","03","04","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21"],
+      "aciklama_tr": "Tarım ve işlenmiş gıda ürünleri (alkol/tütün hariç)",
+      "aciklama_en": "Agricultural and processed food products (excl. alcohol/tobacco)",
+      "mevzuat_ref": [
+        { "tur": "kanun", "no": "5996", "ad_tr": "Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu" }
+      ],
+      "belgeler": [
+        {
+          "kod": "GIDA-SICIL",
+          "ad_tr": "Gıda İşletme Kayıt Belgesi / Gıda Sicil Belgesi",
+          "ad_en": "Food Business Registration Certificate",
+          "kurum_kod": "tarim",
+          "seviye": "zorunlu",
+          "kosul_tr": "Perakende veya toplu tüketim faaliyeti yapılıyorsa",
+          "gecerlilik_gun": null,
+          "harc_tl": null,
+          "link": "https://www.tarimorman.gov.tr"
+        },
+        {
+          "kod": "GIDA-URETIM-IZIN",
+          "ad_tr": "Gıda Üretim İzni / Onay Belgesi",
+          "ad_en": "Food Production Permit / Approval",
+          "kurum_kod": "tarim",
+          "seviye": "kosullu",
+          "kosul_tr": "Üretim yapılacaksa zorunlu",
+          "link": "https://www.tarimorman.gov.tr"
+        },
+        {
+          "kod": "HIJYEN-EGITIM",
+          "ad_tr": "Hijyen Eğitimi Belgesi",
+          "ad_en": "Hygiene Training Certificate",
+          "kurum_kod": "meb",
+          "seviye": "zorunlu",
+          "kosul_tr": "Gıda ile temas eden tüm personel için",
+          "gecerlilik_gun": 1825,
+          "link": "https://www.meb.gov.tr"
+        },
+        {
+          "kod": "GIDA-KODEKS-ETIKET",
+          "ad_tr": "Gıda Kodeksi Uygunluk ve Etiketleme",
+          "ad_en": "Food Codex Compliance and Labelling",
+          "kurum_kod": "tarim",
+          "seviye": "zorunlu",
+          "kosul_tr": "İçerik, menşei ve saklama koşulları etikette yer almalıdır",
+          "link": "https://www.tarimorman.gov.tr"
+        }
+      ]
+    },
+
+    {
+      "kod": "BELGE-KOZMETIK",
+      "grup": "kozmetik",
+      "oncelik": 90,
+      "gtip_prefix": ["3303","3304","3305","3306","3307","3401","3402","3406","3407"],
+      "aciklama_tr": "Kozmetik, parfümeri, kişisel bakım ürünleri",
+      "aciklama_en": "Cosmetics, perfumery, personal care products",
+      "mevzuat_ref": [
+        { "tur": "yonetmelik", "ad_tr": "Kozmetik Ürünler Yönetmeliği" }
+      ],
+      "belgeler": [
+        {
+          "kod": "KOZMETIK-UTS",
+          "ad_tr": "ÜTS (Ürün Takip Sistemi) Bildirimi",
+          "ad_en": "ÜTS Notification",
+          "kurum_kod": "titck",
+          "seviye": "zorunlu",
+          "kosul_tr": "Piyasaya arz öncesi zorunlu bildirim",
+          "link": "https://utsuygulama.saglik.gov.tr"
+        },
+        {
+          "kod": "KOZMETIK-PIF",
+          "ad_tr": "Ürün Bilgi Dosyası (PIF)",
+          "ad_en": "Product Information File (PIF)",
+          "kurum_kod": "titck",
+          "seviye": "zorunlu",
+          "kosul_tr": "Ürün sahibi veya ithalatçı tarafından bulundurulmalı",
+          "link": "https://www.titck.gov.tr"
+        },
+        {
+          "kod": "KOZMETIK-URUN-GUVENLIK",
+          "ad_tr": "Ürün Güvenlik Raporu",
+          "ad_en": "Safety Assessment Report",
+          "kurum_kod": "titck",
+          "seviye": "zorunlu",
+          "kosul_tr": "Toksikolojik değerlendirme raporu",
+          "link": "https://www.titck.gov.tr"
+        },
+        {
+          "kod": "KOZMETIK-INCI",
+          "ad_tr": "INCI İçerik Listesi ve Fonksiyon Bilgisi",
+          "ad_en": "INCI Ingredients and Function Info",
+          "kurum_kod": "titck",
+          "seviye": "zorunlu",
+          "kosul_tr": "Etiket üzerinde uluslararası içerik adları yer almalıdır",
+          "link": "https://www.titck.gov.tr"
+        }
+      ]
+    },
+
+    {
+      "kod": "BELGE-KIMYASAL",
+      "grup": "kimyasal",
+      "oncelik": 80,
+      "gtip_prefix": ["28","29","31","32","33","34","35","36","37","38","39","40"],
+      "aciklama_tr": "Kimyasal maddeler ve teknik ürünler",
+      "aciklama_en": "Chemical substances and technical products",
+      "mevzuat_ref": [
+        { "tur": "yonetmelik", "ad_tr": "Kimyasalların Kaydı, Değerlendirilmesi, İzni ve Kısıtlanması Hakkında Yönetmelik (SEA)" }
+      ],
+      "belgeler": [
+        {
+          "kod": "KIMYASAL-MSDS",
+          "ad_tr": "Güvenlik Bilgi Formu (MSDS/SDS)",
+          "ad_en": "Safety Data Sheet (MSDS/SDS)",
+          "kurum_kod": "uretici",
+          "seviye": "zorunlu",
+          "kosul_tr": "CLP/SEA yönetmeliğine uygun Türkçe form",
+          "link": "https://www.cea.gov.tr"
+        },
+        {
+          "kod": "KIMYASAL-SEA-BILDIRIM",
+          "ad_tr": "SEA Bildirimi",
+          "ad_en": "SEA Notification",
+          "kurum_kod": "cevre",
+          "seviye": "kosullu",
+          "kosul_tr": "Yıllık 1 ton üzeri üretim/ithalat için",
+          "link": "https://www.cea.gov.tr"
+        },
+        {
+          "kod": "KIMYASAL-CLP-ETIKET",
+          "ad_tr": "CLP Etiketleme ve Ambalajlama",
+          "ad_en": "CLP Labelling and Packaging",
+          "kurum_kod": "cevre",
+          "seviye": "zorunlu",
+          "kosul_tr": "Tehlike piktogramları ve uyarı ifadeleri",
+          "link": "https://www.cea.gov.tr"
+        },
+        {
+          "kod": "KIMYASAL-ATIK",
+          "ad_tr": "Tehlikeli Atık Beyanı",
+          "ad_en": "Hazardous Waste Declaration",
+          "kurum_kod": "cevre",
+          "seviye": "kosullu",
+          "kosul_tr": "Üretim sürecinde tehlikeli atık oluşuyorsa",
+          "link": "https://www.cea.gov.tr"
+        }
+      ]
+    },
+
+    {
+      "kod": "BELGE-MADEN",
+      "grup": "maden",
+      "oncelik": 150,
+      "gtip_prefix": ["25","26","27"],
+      "aciklama_tr": "Maden ve kömür ürünleri",
+      "aciklama_en": "Mining and coal products",
+      "mevzuat_ref": [
+        { "tur": "kanun", "no": "3213", "ad_tr": "Maden Kanunu" }
+      ],
+      "belgeler": [
+        {
+          "kod": "MADEN-RUHSAT",
+          "ad_tr": "Maden İşletme Ruhsatı",
+          "ad_en": "Mining Operation License",
+          "kurum_kod": "mapeg",
+          "seviye": "zorunlu",
+          "kosul_tr": "İşletme izni için zorunlu",
+          "gecerlilik_gun": null,
+          "link": "https://www.mapeg.gov.tr"
+        },
+        {
+          "kod": "CED-RAPORU",
+          "ad_tr": "ÇED Raporu / ÇED Görüşü",
+          "ad_en": "Environmental Impact Assessment Report",
+          "kurum_kod": "cevre",
+          "seviye": "kosullu",
+          "kosul_tr": "Belirli büyüklükteki işletmeler için",
+          "link": "https://ced.csb.gov.tr"
+        },
+        {
+          "kod": "ISG-YETKILI",
+          "ad_tr": "İSG Yetkili Kişi / İş Güvenliği Uzmanı",
+          "ad_en": "OHS Officer / Safety Specialist",
+          "kurum_kod": "isggm",
+          "seviye": "zorunlu",
+          "kosul_tr": "6331 Sayılı İSG Kanunu gereği"
+        },
+        {
+          "kod": "MADEN-ARAMA-RUHSAT",
+          "ad_tr": "Maden Arama Ruhsatı",
+          "ad_en": "Mining Exploration License",
+          "kurum_kod": "mapeg",
+          "seviye": "kosullu",
+          "kosul_tr": "Arama faaliyeti yapılacaksa"
+        }
+      ]
+    },
+
+    {
+      "kod": "BELGE-ALKOL",
+      "grup": "gida",
+      "oncelik": 200,
+      "gtip_prefix": ["2203","2204","2205","2206","2208"],
+      "aciklama_tr": "Alkollü içecekler — özel izin gerektirir",
+      "aciklama_en": "Alcoholic beverages — special permit required",
+      "mevzuat_ref": [
+        { "tur": "kanun", "no": "4250", "ad_tr": "Tütün, Tütün Mamulleri ve Alkollü İçkilerin Satış ve Sunum Usul ve Esasları Hakkında Kanun" }
+      ],
+      "belgeler": [
+        {
+          "kod": "TAPDK-ALKOL",
+          "ad_tr": "Alkollü İçki Satış İzin Belgesi",
+          "ad_en": "Alcohol Sales Permit",
+          "kurum_kod": "tad",
+          "seviye": "zorunlu",
+          "kosul_tr": "Satış veya üretim için zorunlu",
+          "link": "https://www.tarimorman.gov.tr/TAD"
+        },
+        {
+          "kod": "GIDA-SICIL",
+          "ad_tr": "Gıda İşletme Kayıt Belgesi",
+          "ad_en": "Food Business Registration",
+          "kurum_kod": "tarim",
+          "seviye": "zorunlu",
+          "kosul_tr": "Genel gıda mevzuatı",
+          "link": "https://www.tarimorman.gov.tr"
+        },
+        {
+          "kod": "OTV-III-TESCIL",
+          "ad_tr": "ÖTV III Sayılı Liste Tescili",
+          "ad_en": "SCT List III Registration",
+          "kurum_kod": "gib",
+          "seviye": "zorunlu",
+          "kosul_tr": "ÖTV mükellefiyeti",
+          "link": "https://www.gib.gov.tr"
+        },
+        {
+          "kod": "BANDROL",
+          "ad_tr": "Bandrollü Ürün Zorunluluğu",
+          "ad_en": "Bandrole Requirement",
+          "kurum_kod": "tad",
+          "seviye": "zorunlu",
+          "kosul_tr": "Tütün ve alkol ürünleri için",
+          "link": "https://www.tarimorman.gov.tr/TAD"
+        }
+      ]
+    },
+
+    {
+      "kod": "BELGE-TUTUN",
+      "grup": "gida",
+      "oncelik": 210,
+      "gtip_prefix": ["2402","2403"],
+      "aciklama_tr": "Tütün mamulleri — özel izin",
+      "aciklama_en": "Tobacco products — special permit",
+      "mevzuat_ref": [
+        { "tur": "kanun", "no": "4733", "ad_tr": "Tütün ve Alkol Piyasası Düzenleme Kurumu Teşkilat ve Görevleri Hakkında Kanun" }
+      ],
+      "belgeler": [
+        {
+          "kod": "TUTUN-URETIM",
+          "ad_tr": "Tütün Mamulü Üretim İzin Belgesi",
+          "ad_en": "Tobacco Production Permit",
+          "kurum_kod": "tad",
+          "seviye": "zorunlu",
+          "kosul_tr": "Üretim için zorunlu"
+        },
+        {
+          "kod": "TUTUN-ETIKET",
+          "ad_tr": "Sağlık Uyarı Etiketleri",
+          "ad_en": "Health Warning Labels",
+          "kurum_kod": "tad",
+          "seviye": "zorunlu",
+          "kosul_tr": "Ambalaj üzerinde zorunlu uyarılar"
+        },
+        {
+          "kod": "OTV-III-TESCIL",
+          "ad_tr": "ÖTV III Sayılı Liste Tescili",
+          "ad_en": "SCT List III Registration",
+          "kurum_kod": "gib",
+          "seviye": "zorunlu",
+          "kosul_tr": "ÖTV mükellefiyeti"
+        }
+      ]
+    }
+  ]
+}
