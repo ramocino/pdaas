@@ -8,57 +8,40 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="assets/pdaas-tailwind.js"></script>
   <link rel="stylesheet" href="assets/pdaas.css">
 </head>
 
-<body
-  class="bg-win-base text-slate-100 font-sans min-h-screen flex flex-col antialiased selection:bg-win-500 selection:text-white">
+<body class="bg-win-base text-slate-100 font-sans min-h-screen flex flex-col antialiased selection:bg-win-500 selection:text-white">
 
   <div id="pdaas-header"></div>
 
-  <main class="flex-1 px-4 lg:px-8 pt-3 pb-8 flex flex-col gap-4 max-w-6xl mx-auto w-full" id="main-content">
+    <main class="flex-1 px-4 lg:px-8 pt-3 pb-8 flex flex-col gap-4 max-w-6xl mx-auto w-full" id="main-content">
     <div id="durum-alani" class="hidden"></div>
 
     <div class="bg-win-card border border-win-border rounded-xl shadow-xl overflow-hidden sticky top-20 z-30 glass-panel">
       <div class="p-4 space-y-4">
         <div class="relative">
-          <svg class="w-5 h-5 text-slate-500 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          <svg class="w-5 h-5 text-slate-500 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
           </svg>
-          <input type="text" id="arama"
-            class="w-full h-12 pl-12 pr-4 bg-win-base border border-win-border rounded-lg text-white text-sm font-medium focus:outline-none focus:border-win-500 transition placeholder-slate-500"
-            data-i18n-placeholder="arama_yer" placeholder="Ürün adı, GTİP, ISCO, CPC veya NACE kodu yazın…"
-            autocomplete="off" autofocus>
+          <input type="text" id="arama" class="w-full h-12 pl-12 pr-4 bg-win-base border border-win-border rounded-lg text-white text-sm font-medium focus:outline-none focus:border-win-500 transition placeholder-slate-500" data-i18n-placeholder="arama_yer" placeholder="Ürün adı, GTİP, ISCO, CPC veya NACE kodu yazın…" autocomplete="off" autofocus>
         </div>
 
         <div class="flex flex-wrap items-center gap-2" id="filtreler">
-          <button class="cip aktif px-3 py-1.5 rounded text-xs font-bold transition bg-win-500 text-white"
-            data-tip="hepsi" data-i18n="filtre_hepsi">Tümü</button>
-          <button
-            class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5"
-            data-tip="gtip">
+          <button class="cip aktif px-3 py-1.5 rounded text-xs font-bold transition bg-win-500 text-white" data-tip="hepsi" data-i18n="filtre_hepsi">Tümü</button>
+          <button class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5" data-tip="gtip">
             <span>📦 GTİP</span> <span class="px-1.5 py-0.5 text-[10px] bg-win-base rounded" id="sayi-gtip">0</span>
           </button>
-          <button
-            class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5"
-            data-tip="cpc">
+          <button class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5" data-tip="cpc">
             <span>⚙️ CPC</span> <span class="px-1.5 py-0.5 text-[10px] bg-win-base rounded" id="sayi-cpc">0</span>
           </button>
-          <button
-            class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5"
-            data-tip="nace">
+          <button class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5" data-tip="nace">
             <span>🏭 NACE</span> <span class="px-1.5 py-0.5 text-[10px] bg-win-base rounded" id="sayi-nace">0</span>
           </button>
-          <button
-            class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5"
-            data-tip="isco">
+          <button class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5" data-tip="isco">
             <span>👤 ISCO</span> <span class="px-1.5 py-0.5 text-[10px] bg-win-base rounded" id="sayi-isco">0</span>
           </button>
         </div>
@@ -69,12 +52,9 @@
 
     <div id="sonuc-alani" class="space-y-4">
       <div class="flex-1 flex flex-col items-center justify-center py-16 text-center max-w-lg mx-auto">
-        <div
-          class="w-20 h-20 rounded-2xl bg-win-card border border-win-border text-win-500 flex items-center justify-center text-3xl mb-6 shadow-xl">
-          ⚡</div>
+        <div class="w-20 h-20 rounded-2xl bg-win-card border border-win-border text-win-500 flex items-center justify-center text-3xl mb-6 shadow-xl">⚡</div>
         <h2 class="text-2xl font-bold text-white tracking-tight mb-2" data-i18n="bos_baslik">Aramaya başlayın</h2>
-        <p class="text-sm text-slate-400 leading-relaxed" data-i18n="bos_aciklama">Hiyerarşik ağaç görünümü için bir
-          ürün adı veya kod yazın ya da bir filtre seçin.</p>
+        <p class="text-sm text-slate-400 leading-relaxed" data-i18n="bos_aciklama">Hiyerarşik ağaç görünümü için bir ürün adı veya kod yazın ya da bir filtre seçin.</p>
       </div>
     </div>
 
@@ -83,10 +63,9 @@
     </div>
   </main>
 
-  <button id="btn-scroll-top" type="button" aria-label="Yukarı git"
-    class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-xl bg-win-500 hover:bg-win-600 text-white shadow-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
+  <button id="btn-scroll-top" type="button" aria-label="Yukarı git" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-xl bg-win-500 hover:bg-win-600 text-white shadow-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 19V5m-7 7l7-7 7 7" />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 19V5m-7 7l7-7 7 7"/>
     </svg>
   </button>
 
@@ -168,16 +147,16 @@
 
     // ─── Sabitler ───
     const KAYNAK_ETIKET = { gtip: 'GTİP', isco: 'ISCO', cpc: 'CPC', nace: 'NACE' };
-    const KAYNAK_SINIF = { gtip: 'etiket-hs', isco: 'etiket-isco', cpc: 'etiket-cpc', nace: 'etiket-nace' };
-    const KAYNAK_IKON = { gtip: '📦', cpc: '⚙️', nace: '🏭', isco: '👤' };
+    const KAYNAK_SINIF  = { gtip: 'etiket-hs', isco: 'etiket-isco', cpc: 'etiket-cpc', nace: 'etiket-nace' };
+    const KAYNAK_IKON   = { gtip: '📦', cpc: '⚙️', nace: '🏭', isco: '👤' };
 
     const VERGI_KAYNAKLARI = new Set(['gtip', 'cpc']);
-    const OTV_KAYNAKLARI = new Set(['gtip']);
+    const OTV_KAYNAKLARI   = new Set(['gtip']);
 
     const VERI = {
       gtip: { kayitlar: [], yuklendi: false },
       isco: { kayitlar: [], yuklendi: false },
-      cpc: { kayitlar: [], yuklendi: false },
+      cpc:  { kayitlar: [], yuklendi: false },
       nace: { kayitlar: [], yuklendi: false }
     };
     let KDV_DATA = null, OTV_DATA = null, AKTIF_FILTRE = 'hepsi', TUM_SONUCLAR = [], GORUNEN_LIMIT = 100;
@@ -202,10 +181,10 @@
       const gorevler = {
         gtip: ['/api/v1/ham/gtip-kodlari.json'],
         isco: ['/api/v1/ham/isco-kodlari.json'],
-        cpc: ['/api/v1/ham/cpc-kodlari.json'],
+        cpc:  ['/api/v1/ham/cpc-kodlari.json'],
         nace: ['/api/v1/ham/nace-kodlari.json'],
-        kdv: ['/api/v1/ham/kdv-oranlari.json'],
-        otv: ['/api/v1/ham/otv-oranlari.json']
+        kdv:  ['/api/v1/ham/kdv-oranlari.json'],
+        otv:  ['/api/v1/ham/otv-oranlari.json']
       };
 
       for (const k of Object.keys(gorevler)) {
@@ -288,7 +267,7 @@
       const kaynaklar = [];
       if (filtre === 'hepsi' || filtre === 'gtip') kaynaklar.push(['gtip', VERI.gtip]);
       if (filtre === 'hepsi' || filtre === 'isco') kaynaklar.push(['isco', VERI.isco]);
-      if (filtre === 'hepsi' || filtre === 'cpc') kaynaklar.push(['cpc', VERI.cpc]);
+      if (filtre === 'hepsi' || filtre === 'cpc')  kaynaklar.push(['cpc',  VERI.cpc]);
       if (filtre === 'hepsi' || filtre === 'nace') kaynaklar.push(['nace', VERI.nace]);
 
       const tumSonuclar = [];
@@ -397,31 +376,31 @@
             </div>
             <div class="divide-y divide-win-border/60">
               ${g.map(s => {
-          const globalIdx = TUM_SONUCLAR.indexOf(s);
-          const ad = kayitAdi(s.kayit);
-          const kod = normKod(s.kayit.kod);
-          const eslesme = s.eslesme;
-          const opak = eslesme ? 'text-slate-100 font-semibold bg-win-dark/40' : 'text-slate-400 opacity-60';
+                const globalIdx = TUM_SONUCLAR.indexOf(s);
+                const ad = kayitAdi(s.kayit);
+                const kod = normKod(s.kayit.kod);
+                const eslesme = s.eslesme;
+                const opak = eslesme ? 'text-slate-100 font-semibold bg-win-dark/40' : 'text-slate-400 opacity-60';
 
-          let kdvCell = `<span class="text-slate-600 text-xs">—</span>`;
-          if (kaynakKdvVar) {
-            const oran = s.kayit.kdv_kodu ? oranBul(s.kayit.kdv_kodu) : 0.20;
-            kdvCell = `<span class="px-2 py-0.5 rounded-full bg-win-500/10 text-win-100 border border-win-500/20 text-[10px] font-bold whitespace-nowrap">%${(oran * 100).toFixed(0)}</span>`;
-          }
-          let otvCell = `<span class="text-slate-600 text-xs">—</span>`;
-          if (kaynakOtvVar) {
-            const otv = otvBul(kod, ad);
-            otvCell = otv
-              ? `<span class="px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20 text-[10px] font-bold whitespace-nowrap">%${(otv.oran * 100).toFixed(0)}</span>`
-              : `<span class="text-slate-500 text-[10px]">${kacis(t('otv_muaf'))}</span>`;
-          }
-          const vergiAlanlari = (kdvKolonu || otvKolonu) ? `
+                let kdvCell = `<span class="text-slate-600 text-xs">—</span>`;
+                if (kaynakKdvVar) {
+                  const oran = s.kayit.kdv_kodu ? oranBul(s.kayit.kdv_kodu) : 0.20;
+                  kdvCell = `<span class="px-2 py-0.5 rounded-full bg-win-500/10 text-win-100 border border-win-500/20 text-[10px] font-bold whitespace-nowrap">%${(oran * 100).toFixed(0)}</span>`;
+                }
+                let otvCell = `<span class="text-slate-600 text-xs">—</span>`;
+                if (kaynakOtvVar) {
+                  const otv = otvBul(kod, ad);
+                  otvCell = otv
+                    ? `<span class="px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20 text-[10px] font-bold whitespace-nowrap">%${(otv.oran * 100).toFixed(0)}</span>`
+                    : `<span class="text-slate-500 text-[10px]">${kacis(t('otv_muaf'))}</span>`;
+                }
+                const vergiAlanlari = (kdvKolonu || otvKolonu) ? `
                   <div class="flex-none flex items-center gap-1.5">
                     ${kdvKolonu ? `<span class="w-[52px] text-center ${!kaynakKdvVar ? 'opacity-40' : ''}">${kdvCell}</span>` : ''}
                     ${otvKolonu ? `<span class="w-[52px] text-center ${!kaynakOtvVar ? 'opacity-40' : ''}">${otvCell}</span>` : ''}
                   </div>` : '';
 
-          return `
+                return `
                   <div class="px-4 py-3 hover:bg-win-hover transition cursor-pointer flex items-center justify-between gap-3 kart-tikla ${opak}" data-idx="${globalIdx}">
                     <div class="min-w-0 flex items-center gap-3 flex-1">
                       <span class="text-base flex-none" title="${KAYNAK_ETIKET[kaynak]}">${KAYNAK_IKON[kaynak]}</span>
@@ -430,7 +409,7 @@
                     </div>
                     ${vergiAlanlari}
                   </div>`;
-        }).join('')}
+              }).join('')}
             </div>
           </div>`;
       }
@@ -578,5 +557,4 @@
     tumVeriYukle();
   </script>
 </body>
-
 </html>
