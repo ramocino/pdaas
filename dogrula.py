@@ -24,7 +24,12 @@ import re
 import sys
 from pathlib import Path
 
-from jsonschema import Draft202012Validator
+from importlib import import_module
+
+try:
+    Draft202012Validator = import_module("jsonschema").Draft202012Validator
+except ModuleNotFoundError:
+    Draft202012Validator = None
 
 KATMANLAR = ("ham", "konsolide")
 KATALOG_SEMA = "pdaas-katalog-1.0.0.json"
@@ -428,6 +433,10 @@ def isle(yol, katman, kok, rapor, onbellek):
 
 
 def main():
+    if Draft202012Validator is None:
+        print("Gereksinim eksik: pip install jsonschema", file=sys.stderr)
+        return 1
+
     ap = argparse.ArgumentParser(description="PDaaS yayın klasörü doğrulama/hazırlama")
     ap.add_argument("kok", nargs="?", default="api/v1")
     ap.add_argument("--hazirla", action="store_true", help="hatasızsa checksum, surumler/ kopyası ve katalog.json üret")
