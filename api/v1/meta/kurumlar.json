@@ -1,75 +1,123 @@
 {
+  "meta": {
+    "servis_kodu": "kurumlar",
+    "servis_adi": "PDaaS Kurum Referans Sözlüğü",
+    "servis_adi_en": "PDaaS Institution Reference Dictionary",
+    "surum": "2026.10.15",
+    "dosya_surumu": "1.0.0",
+    "guncelleme": "2026-10-15",
+    "yayinci": "PDaaS — Merkezi Referans Veri",
+    "kapsam": ["ulusal", "yerel", "uluslararasi"],
+    "aciklama_tr": "Tüm PDaaS veri dosyalarında geçen kurum/kuruluş kodları. Her modül bu sözlüğü referans alır.",
+    "aciklama_en": "Institution codes used across all PDaaS data files. Every module references this dictionary."
+  },
+
+  "kategoriler": {
+    "bakanliklar":       { "ad_tr": "Bakanlıklar",                 "ad_en": "Ministries" },
+    "baskanliklar":      { "ad_tr": "Başkanlıklar / Genel Müdürlükler", "ad_en": "Presidencies / Directorates" },
+    "kamu_kurumlari":    { "ad_tr": "Kamu Kurumları",              "ad_en": "Public Institutions" },
+    "konfederasyonlar":  { "ad_tr": "Konfederasyonlar",            "ad_en": "Confederations" },
+    "odalar":            { "ad_tr": "Meslek / Ticaret Odaları",    "ad_en": "Professional / Trade Chambers" },
+    "mesleki_birlikler": { "ad_tr": "Mesleki Birlikler",           "ad_en": "Professional Unions" },
+    "yerel_yonetim":     { "ad_tr": "Yerel Yönetimler",            "ad_en": "Local Governments" },
+    "ozel_sektor":       { "ad_tr": "Özel Sektör",                 "ad_en": "Private Sector" },
+    "uluslararasi":      { "ad_tr": "Uluslararası Kuruluşlar",     "ad_en": "International Organizations" },
+    "kalkinma_ajanslari":{ "ad_tr": "Kalkınma Ajansları",          "ad_en": "Development Agencies" }
+  },
+
   "kurumlar": [
-    {
-      "kod": "tb",
-      "ad": {
-        "tr": "Ticaret Bakanlığı",
-        "en": "Ministry of Trade"
-      }
-    },
-        {
-      "kod": "csgb",
-      "ad": {
-        "tr": "T.C. Çalışma ve Sosyal Güvenlik Bakanlığı",
-        "en": "Union of Chambers and Commodity Exchanges of Türkiye"
-      }
-    },
-    
-    {
-      "kod": "tobb",
-      "ad": {
-        "tr": "Türkiye Odalar ve Borsalar Birliği",
-        "en": "Union of Chambers and Commodity Exchanges of Türkiye"
-      }
-    },
-    {
-      "kod": "ticaret-odalari",
-      "ad": {
-        "tr": "Ticaret Odaları",
-        "en": "Chambers of Commerce"
-      }
-    },
-    {
-      "kod": "sanayi-odalari",
-      "ad": {
-        "tr": "Sanayi Odaları",
-        "en": "Chambers of Industry"
-      }
-    },
-    {
-      "kod": "gib",
-      "ad": {
-        "tr": "Gelir İdaresi Başkanlığı",
-        "en": "Revenue Administration"
-      }
-    },
-    {
-      "kod": "hvmb",
-      "ad": {
-        "tr": "T.C. Hazine ve Maliye Bakanlığı",
-        "en": "Republic of Türkiye Ministry of Treasury and Finance"
-      }
-    },
-    {
-      "kod": "tuik",
-      "ad": {
-        "tr": "Türkiye İstatistik Kurumu",
-        "en": "Turkish Statistical Institute"
-      }
-    },
-    {
-      "kod": "tarim",
-      "ad": {
-        "tr": "Tarım ve Orman Bakanlığı",
-        "en": "Ministry of Agriculture and Forestry"
-      }
-    },
-    {
-      "kod": "kuzey-anadolu-kalkinma-ajansi",
-      "ad": {
-        "tr": "Kuzey Anadolu Kalkınma Ajansı",
-        "en": "North Anatolia Development Agency"
-      }
-    }
+
+    { "kod": "tarim",         "ad": { "tr": "Tarım ve Orman Bakanlığı",                          "en": "Ministry of Agriculture and Forestry" },         "kisa": "TOB",   "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "web": "https://www.tarimorman.gov.tr" },
+    { "kod": "tb",            "ad": { "tr": "Ticaret Bakanlığı",                                 "en": "Ministry of Trade" },                            "kisa": "TB",    "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "web": "https://www.ticaret.gov.tr" },
+    { "kod": "ticaret",       "ad": { "tr": "Ticaret Bakanlığı",                                 "en": "Ministry of Trade" },                            "kisa": "TB",    "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "ayni_kurum": "tb",     "web": "https://www.ticaret.gov.tr" },
+    { "kod": "hvmb",          "ad": { "tr": "T.C. Hazine ve Maliye Bakanlığı",                   "en": "Republic of Türkiye Ministry of Treasury and Finance" }, "kisa": "HMB", "kategori": "bakanliklar", "tip": "bakanlik",   "kapsam": "ulusal",  "web": "https://www.hmb.gov.tr" },
+    { "kod": "hazine",        "ad": { "tr": "Hazine ve Maliye Bakanlığı",                        "en": "Ministry of Treasury and Finance" },             "kisa": "HMB",   "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "ayni_kurum": "hvmb",   "web": "https://www.hmb.gov.tr" },
+    { "kod": "saglik",        "ad": { "tr": "Sağlık Bakanlığı",                                  "en": "Ministry of Health" },                           "kisa": "SB",    "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "web": "https://www.saglik.gov.tr" },
+    { "kod": "csgb",          "ad": { "tr": "Çalışma ve Sosyal Güvenlik Bakanlığı",              "en": "Ministry of Labour and Social Security" },       "kisa": "ÇSGB",  "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "web": "https://www.csgb.gov.tr" },
+    { "kod": "cevre",         "ad": { "tr": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",  "en": "Ministry of Environment, Urbanization and Climate Change" }, "kisa": "ÇŞB", "kategori": "bakanliklar", "tip": "bakanlik", "kapsam": "ulusal", "web": "https://www.csb.gov.tr" },
+    { "kod": "sanayi",        "ad": { "tr": "Sanayi ve Teknoloji Bakanlığı",                     "en": "Ministry of Industry and Technology" },          "kisa": "STB",   "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "web": "https://www.sanayi.gov.tr" },
+    { "kod": "ulastirma",     "ad": { "tr": "Ulaştırma ve Altyapı Bakanlığı",                    "en": "Ministry of Transport and Infrastructure" },     "kisa": "UAB",   "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "web": "https://www.uab.gov.tr" },
+    { "kod": "ktb",           "ad": { "tr": "Kültür ve Turizm Bakanlığı",                        "en": "Ministry of Culture and Tourism" },              "kisa": "KTB",   "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "web": "https://www.ktb.gov.tr" },
+    { "kod": "meb",           "ad": { "tr": "Millî Eğitim Bakanlığı",                            "en": "Ministry of National Education" },               "kisa": "MEB",   "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "web": "https://www.meb.gov.tr" },
+    { "kod": "enerji",        "ad": { "tr": "Enerji ve Tabii Kaynaklar Bakanlığı",               "en": "Ministry of Energy and Natural Resources" },     "kisa": "ETKB",  "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "web": "https://www.enerji.gov.tr" },
+    { "kod": "icisleri",      "ad": { "tr": "İçişleri Bakanlığı",                                "en": "Ministry of Interior" },                         "kisa": "İB",    "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "web": "https://www.icisleri.gov.tr" },
+    { "kod": "aile",          "ad": { "tr": "Aile ve Sosyal Hizmetler Bakanlığı",                "en": "Ministry of Family and Social Services" },       "kisa": "ASHB",  "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "web": "https://www.aile.gov.tr" },
+    { "kod": "genclik_spor",  "ad": { "tr": "Gençlik ve Spor Bakanlığı",                         "en": "Ministry of Youth and Sports" },                 "kisa": "GSB",   "kategori": "bakanliklar",   "tip": "bakanlik",   "kapsam": "ulusal",        "web": "https://www.gsb.gov.tr" },
+
+    { "kod": "gib",           "ad": { "tr": "Gelir İdaresi Başkanlığı",                          "en": "Revenue Administration" },                       "kisa": "GİB",   "kategori": "baskanliklar",  "tip": "baskanlik",  "kapsam": "ulusal",        "ust_kurulus": "hvmb",   "web": "https://www.gib.gov.tr" },
+    { "kod": "mapeg",         "ad": { "tr": "Maden ve Petrol İşleri Genel Müdürlüğü",            "en": "General Directorate of Mining and Petroleum Affairs" }, "kisa": "MAPEG", "kategori": "baskanliklar", "tip": "baskanlik", "kapsam": "ulusal", "ust_kurulus": "enerji", "web": "https://www.mapeg.gov.tr" },
+    { "kod": "tad",           "ad": { "tr": "Tütün ve Alkol Dairesi Başkanlığı",                 "en": "Tobacco and Alcohol Department" },               "kisa": "TAD",   "kategori": "baskanliklar",  "tip": "baskanlik",  "kapsam": "ulusal",        "ust_kurulus": "tarim",  "web": "https://www.tarimorman.gov.tr/TAD" },
+    { "kod": "isggm",         "ad": { "tr": "İş Sağlığı ve Güvenliği Genel Müdürlüğü",           "en": "General Directorate of Occupational Health and Safety" }, "kisa": "İSGGM", "kategori": "baskanliklar", "tip": "baskanlik", "kapsam": "ulusal", "ust_kurulus": "csgb", "web": "https://www.csgb.gov.tr" },
+    { "kod": "titck",         "ad": { "tr": "Türkiye İlaç ve Tıbbi Cihaz Kurumu",                "en": "Turkish Medicines and Medical Devices Agency" }, "kisa": "TİTCK", "kategori": "baskanliklar",  "tip": "baskanlik",  "kapsam": "ulusal",        "ust_kurulus": "saglik", "web": "https://www.titck.gov.tr" },
+    { "kod": "hsk",           "ad": { "tr": "Halk Sağlığı Genel Müdürlüğü",                      "en": "General Directorate of Public Health" },         "kisa": "HSGM",  "kategori": "baskanliklar",  "tip": "baskanlik",  "kapsam": "ulusal",        "ust_kurulus": "saglik" },
+    { "kod": "tuketici",      "ad": { "tr": "Tüketicinin Korunması ve Piyasa Gözetimi Genel Müdürlüğü", "en": "General Directorate of Consumer Protection and Market Surveillance" }, "kisa": "TKPGM", "kategori": "baskanliklar", "tip": "baskanlik", "kapsam": "ulusal", "ust_kurulus": "tb" },
+    { "kod": "kvkk",          "ad": { "tr": "Kişisel Verileri Koruma Kurumu",                    "en": "Personal Data Protection Authority" },           "kisa": "KVKK",  "kategori": "baskanliklar",  "tip": "baskanlik",  "kapsam": "ulusal",        "web": "https://www.kvkk.gov.tr" },
+    { "kod": "btk",           "ad": { "tr": "Bilgi Teknolojileri ve İletişim Kurumu",            "en": "Information and Communication Technologies Authority" }, "kisa": "BTK", "kategori": "baskanliklar", "tip": "baskanlik", "kapsam": "ulusal", "web": "https://www.btk.gov.tr" },
+    { "kod": "bddk",          "ad": { "tr": "Bankacılık Düzenleme ve Denetleme Kurumu",          "en": "Banking Regulation and Supervision Agency" },    "kisa": "BDDK",  "kategori": "baskanliklar",  "tip": "baskanlik",  "kapsam": "ulusal",        "web": "https://www.bddk.org.tr" },
+    { "kod": "spk",           "ad": { "tr": "Sermaye Piyasası Kurulu",                           "en": "Capital Markets Board" },                        "kisa": "SPK",   "kategori": "baskanliklar",  "tip": "baskanlik",  "kapsam": "ulusal",        "web": "https://www.spk.gov.tr" },
+    { "kod": "rekabet",       "ad": { "tr": "Rekabet Kurumu",                                    "en": "Competition Authority" },                        "kisa": "RK",    "kategori": "baskanliklar",  "tip": "baskanlik",  "kapsam": "ulusal",        "web": "https://www.rekabet.gov.tr" },
+    { "kod": "gumruk",        "ad": { "tr": "Gümrükler Genel Müdürlüğü",                         "en": "General Directorate of Customs" },               "kisa": "GGM",   "kategori": "baskanliklar",  "tip": "baskanlik",  "kapsam": "ulusal",        "ust_kurulus": "tb",     "web": "https://www.ticaret.gov.tr" },
+
+    { "kod": "tuik",          "ad": { "tr": "Türkiye İstatistik Kurumu",                         "en": "Turkish Statistical Institute" },                "kisa": "TÜİK",  "kategori": "kamu_kurumlari","tip": "kurum",      "kapsam": "ulusal",        "web": "https://www.tuik.gov.tr" },
+    { "kod": "tse",           "ad": { "tr": "Türk Standartları Enstitüsü",                       "en": "Turkish Standards Institution" },                "kisa": "TSE",   "kategori": "kamu_kurumlari","tip": "kurum",      "kapsam": "ulusal",        "web": "https://www.tse.org.tr" },
+    { "kod": "myk",           "ad": { "tr": "Mesleki Yeterlilik Kurumu",                         "en": "Vocational Qualifications Authority" },          "kisa": "MYK",   "kategori": "kamu_kurumlari","tip": "kurum",      "kapsam": "ulusal",        "ust_kurulus": "csgb",   "web": "https://www.myk.gov.tr" },
+    { "kod": "sgk",           "ad": { "tr": "Sosyal Güvenlik Kurumu",                            "en": "Social Security Institution" },                  "kisa": "SGK",   "kategori": "kamu_kurumlari","tip": "kurum",      "kapsam": "ulusal",        "ust_kurulus": "csgb",   "web": "https://www.sgk.gov.tr" },
+    { "kod": "yok",           "ad": { "tr": "Yükseköğretim Kurulu",                              "en": "Council of Higher Education" },                  "kisa": "YÖK",   "kategori": "kamu_kurumlari","tip": "kurum",      "kapsam": "ulusal",        "web": "https://www.yok.gov.tr" },
+    { "kod": "hazine_m",      "ad": { "tr": "Hazine Müsteşarlığı",                               "en": "Undersecretariat of Treasury" },                 "kisa": "HM",    "kategori": "kamu_kurumlari","tip": "kurum",      "kapsam": "ulusal",        "ust_kurulus": "hvmb" },
+    { "kod": "kik",           "ad": { "tr": "Kamu İhale Kurumu",                                 "en": "Public Procurement Authority" },                 "kisa": "KİK",   "kategori": "kamu_kurumlari","tip": "kurum",      "kapsam": "ulusal",        "web": "https://www.kik.gov.tr" },
+    { "kod": "tika",          "ad": { "tr": "Türk İşbirliği ve Koordinasyon Ajansı Başkanlığı",  "en": "Turkish Cooperation and Coordination Agency" },  "kisa": "TİKA",  "kategori": "kamu_kurumlari","tip": "kurum",      "kapsam": "ulusal",        "web": "https://www.tika.gov.tr" },
+    { "kod": "turkak",        "ad": { "tr": "Türk Akreditasyon Kurumu",                          "en": "Turkish Accreditation Agency" },                 "kisa": "TÜRKAK","kategori": "kamu_kurumlari","tip": "kurum",      "kapsam": "ulusal",        "web": "https://www.turkak.org.tr" },
+
+    { "kod": "tobb",          "ad": { "tr": "Türkiye Odalar ve Borsalar Birliği",                "en": "Union of Chambers and Commodity Exchanges of Türkiye" }, "kisa": "TOBB", "kategori": "konfederasyonlar", "tip": "konfederasyon", "kapsam": "ulusal", "web": "https://www.tobb.org.tr" },
+    { "kod": "tesk",          "ad": { "tr": "Türkiye Esnaf ve Sanatkârları Konfederasyonu",      "en": "Confederation of Turkish Tradesmen and Craftsmen" }, "kisa": "TESK", "kategori": "konfederasyonlar", "tip": "konfederasyon", "kapsam": "ulusal", "web": "https://www.tesk.org.tr" },
+    { "kod": "hak_is",        "ad": { "tr": "Hak-İş Konfederasyonu",                             "en": "Hak-İş Confederation" },                         "kisa": "Hak-İş","kategori": "konfederasyonlar", "tip": "konfederasyon", "kapsam": "ulusal", "web": "https://www.hakis.org.tr" },
+    { "kod": "turk_is",       "ad": { "tr": "Türk-İş Konfederasyonu",                            "en": "Türk-İş Confederation" },                        "kisa": "Türk-İş","kategori": "konfederasyonlar","tip": "konfederasyon", "kapsam": "ulusal", "web": "https://www.turkis.org.tr" },
+    { "kod": "dis_k",         "ad": { "tr": "DİSK Konfederasyonu",                               "en": "DİSK Confederation" },                           "kisa": "DİSK",  "kategori": "konfederasyonlar", "tip": "konfederasyon", "kapsam": "ulusal", "web": "https://disk.org.tr" },
+
+    { "kod": "ticaret_odasi",       "ad": { "tr": "Yetkili Ticaret Odası",                       "en": "Relevant Chamber of Commerce" },                 "kategori": "odalar",   "tip": "oda",     "kapsam": "yerel",     "ust_kurulus": "tobb" },
+    { "kod": "sanayi_odasi",        "ad": { "tr": "Yetkili Sanayi Odası",                        "en": "Relevant Chamber of Industry" },                 "kategori": "odalar",   "tip": "oda",     "kapsam": "yerel",     "ust_kurulus": "tobb" },
+    { "kod": "ticaret_borsasi",     "ad": { "tr": "İlgili Ticaret Borsası",                      "en": "Relevant Commodity Exchange" },                  "kategori": "odalar",   "tip": "borsa",   "kapsam": "yerel",     "ust_kurulus": "tobb" },
+    { "kod": "esnaf_odasi",         "ad": { "tr": "İlgili Esnaf ve Sanatkârlar Odası",           "en": "Relevant Tradesmen and Craftsmen Chamber" },     "kategori": "odalar",   "tip": "oda",     "kapsam": "yerel",     "ust_kurulus": "tesk" },
+    { "kod": "deniz_ticaret_odasi", "ad": { "tr": "Deniz Ticaret Odası",                         "en": "Chamber of Shipping" },                          "kategori": "odalar",   "tip": "oda",     "kapsam": "ulusal",    "ust_kurulus": "tobb",  "web": "https://www.denizticaretodasi.org.tr" },
+    { "kod": "sanayi_ticaret_odasi","ad": { "tr": "Sanayi ve Ticaret Odası",                     "en": "Chamber of Industry and Commerce" },             "kategori": "odalar",   "tip": "oda",     "kapsam": "yerel",     "ust_kurulus": "tobb" },
+    { "kod": "ticaret-odalari",     "ad": { "tr": "Ticaret Odaları (genel)",                     "en": "Chambers of Commerce (generic)" },               "kategori": "odalar",   "tip": "oda",     "kapsam": "yerel" },
+    { "kod": "sanayi-odalari",      "ad": { "tr": "Sanayi Odaları (genel)",                      "en": "Chambers of Industry (generic)" },               "kategori": "odalar",   "tip": "oda",     "kapsam": "yerel" },
+
+    { "kod": "tmmob",          "ad": { "tr": "Türk Mühendis ve Mimar Odaları Birliği",           "en": "Union of Chambers of Turkish Engineers and Architects" }, "kisa": "TMMOB", "kategori": "mesleki_birlikler", "tip": "birlik", "kapsam": "ulusal", "web": "https://www.tmmob.org.tr" },
+    { "kod": "ttb",            "ad": { "tr": "Türk Tabipleri Birliği",                           "en": "Turkish Medical Association" },                  "kisa": "TTB",   "kategori": "mesleki_birlikler", "tip": "birlik", "kapsam": "ulusal", "web": "https://www.ttb.org.tr" },
+    { "kod": "turmob",         "ad": { "tr": "Türkiye Serbest Muhasebeci Mali Müşavirler ve Yeminli Mali Müşavirler Odaları Birliği", "en": "Union of Chambers of Certified Public Accountants" }, "kisa": "TÜRMOB", "kategori": "mesleki_birlikler", "tip": "birlik", "kapsam": "ulusal", "web": "https://www.turmob.org.tr" },
+    { "kod": "barolar",        "ad": { "tr": "Türkiye Barolar Birliği",                          "en": "Union of Turkish Bar Associations" },            "kisa": "TBB",   "kategori": "mesleki_birlikler", "tip": "birlik", "kapsam": "ulusal", "web": "https://www.barobirlik.org.tr" },
+    { "kod": "teb",            "ad": { "tr": "Türk Eczacıları Birliği",                          "en": "Turkish Pharmacists' Association" },             "kisa": "TEB",   "kategori": "mesleki_birlikler", "tip": "birlik", "kapsam": "ulusal", "web": "https://www.teb.org.tr" },
+    { "kod": "tdb",            "ad": { "tr": "Türk Dişhekimleri Birliği",                        "en": "Turkish Dental Association" },                   "kisa": "TDB",   "kategori": "mesleki_birlikler", "tip": "birlik", "kapsam": "ulusal", "web": "https://www.tdb.org.tr" },
+    { "kod": "tvhb",           "ad": { "tr": "Türk Veteriner Hekimleri Birliği",                 "en": "Turkish Veterinary Medical Association" },       "kisa": "TVHB",  "kategori": "mesleki_birlikler", "tip": "birlik", "kapsam": "ulusal", "web": "https://www.tvhb.org.tr" },
+    { "kod": "tmmob_mimarlar", "ad": { "tr": "Mimarlar Odası",                                   "en": "Chamber of Architects" },                        "kisa": "MO",    "kategori": "mesleki_birlikler", "tip": "birlik", "kapsam": "ulusal", "ust_kurulus": "tmmob", "web": "https://www.mimarlarodasi.org.tr" },
+    { "kod": "tmmob_imo",      "ad": { "tr": "İnşaat Mühendisleri Odası",                        "en": "Chamber of Civil Engineers" },                   "kisa": "İMO",   "kategori": "mesleki_birlikler", "tip": "birlik", "kapsam": "ulusal", "ust_kurulus": "tmmob", "web": "https://www.imo.org.tr" },
+    { "kod": "tmmob_mmo",      "ad": { "tr": "Makina Mühendisleri Odası",                        "en": "Chamber of Mechanical Engineers" },              "kisa": "MMO",   "kategori": "mesleki_birlikler", "tip": "birlik", "kapsam": "ulusal", "ust_kurulus": "tmmob", "web": "https://www.mmo.org.tr" },
+    { "kod": "tmmob_emo",      "ad": { "tr": "Elektrik Mühendisleri Odası",                      "en": "Chamber of Electrical Engineers" },              "kisa": "EMO",   "kategori": "mesleki_birlikler", "tip": "birlik", "kapsam": "ulusal", "ust_kurulus": "tmmob", "web": "https://www.emo.org.tr" },
+
+    { "kod": "belediye",        "ad": { "tr": "Yetkili Belediye",                                "en": "Competent Municipality" },                       "kategori": "yerel_yonetim", "tip": "yerel", "kapsam": "yerel" },
+    { "kod": "buyuksehir",      "ad": { "tr": "Büyükşehir Belediyesi",                           "en": "Metropolitan Municipality" },                    "kategori": "yerel_yonetim", "tip": "yerel", "kapsam": "yerel" },
+    { "kod": "il_ozel_idaresi", "ad": { "tr": "İl Özel İdaresi",                                 "en": "Provincial Special Administration" },            "kategori": "yerel_yonetim", "tip": "yerel", "kapsam": "yerel" },
+    { "kod": "itfaiye",         "ad": { "tr": "İtfaiye Müdürlüğü",                               "en": "Fire Department" },                              "kategori": "yerel_yonetim", "tip": "yerel", "kapsam": "yerel" },
+    { "kod": "kaymakamlik",     "ad": { "tr": "Kaymakamlık",                                     "en": "District Governorship" },                        "kategori": "yerel_yonetim", "tip": "yerel", "kapsam": "yerel" },
+    { "kod": "valilik",         "ad": { "tr": "Valilik",                                         "en": "Provincial Governorship" },                      "kategori": "yerel_yonetim", "tip": "yerel", "kapsam": "yerel" },
+
+    { "kod": "uretici",         "ad": { "tr": "Üretici / İmalatçı",                              "en": "Manufacturer" },                                 "kategori": "ozel_sektor", "tip": "ozel", "kapsam": "yerel" },
+    { "kod": "ithalatci",       "ad": { "tr": "İthalatçı",                                       "en": "Importer" },                                     "kategori": "ozel_sektor", "tip": "ozel", "kapsam": "yerel" },
+    { "kod": "yetkili_servis",  "ad": { "tr": "Yetkili Servis",                                  "en": "Authorized Service" },                           "kategori": "ozel_sektor", "tip": "ozel", "kapsam": "yerel" },
+    { "kod": "laboratuvar",     "ad": { "tr": "Akredite Laboratuvar",                            "en": "Accredited Laboratory" },                        "kategori": "ozel_sektor", "tip": "ozel", "kapsam": "ulusal", "ust_kurulus": "turkak" },
+    { "kod": "muhendislik_buro", "ad": { "tr": "Serbest Mühendislik Bürosu",                     "en": "Freelance Engineering Office" },                 "kategori": "ozel_sektor", "tip": "ozel", "kapsam": "yerel" },
+
+    { "kod": "ab",             "ad": { "tr": "Avrupa Birliği",                                   "en": "European Union" },                               "kisa": "AB",       "kategori": "uluslararasi", "tip": "uluslararasi", "kapsam": "uluslararasi", "web": "https://europa.eu" },
+    { "kod": "iso",            "ad": { "tr": "Uluslararası Standardizasyon Örgütü",              "en": "International Organization for Standardization" }, "kisa": "ISO",    "kategori": "uluslararasi", "tip": "uluslararasi", "kapsam": "uluslararasi", "web": "https://www.iso.org" },
+    { "kod": "iec",            "ad": { "tr": "Uluslararası Elektroteknik Komisyonu",             "en": "International Electrotechnical Commission" },    "kisa": "IEC",      "kategori": "uluslararasi", "tip": "uluslararasi", "kapsam": "uluslararasi", "web": "https://www.iec.ch" },
+    { "kod": "who",            "ad": { "tr": "Dünya Sağlık Örgütü",                              "en": "World Health Organization" },                    "kisa": "WHO",      "kategori": "uluslararasi", "tip": "uluslararasi", "kapsam": "uluslararasi", "web": "https://www.who.int" },
+    { "kod": "fao",            "ad": { "tr": "Birleşmiş Milletler Gıda ve Tarım Örgütü",         "en": "Food and Agriculture Organization" },            "kisa": "FAO",      "kategori": "uluslararasi", "tip": "uluslararasi", "kapsam": "uluslararasi", "web": "https://www.fao.org" },
+    { "kod": "codex",          "ad": { "tr": "Kodeks Alimentarius Komisyonu",                    "en": "Codex Alimentarius Commission" },                "kisa": "Codex",    "kategori": "uluslararasi", "tip": "uluslararasi", "kapsam": "uluslararasi", "web": "https://www.fao.org/fao-who-codexalimentarius" },
+    { "kod": "echa",           "ad": { "tr": "Avrupa Kimyasallar Ajansı",                        "en": "European Chemicals Agency" },                    "kisa": "ECHA",     "kategori": "uluslararasi", "tip": "uluslararasi", "kapsam": "uluslararasi", "web": "https://echa.europa.eu" },
+    { "kod": "ilo",            "ad": { "tr": "Uluslararası Çalışma Örgütü",                      "en": "International Labour Organization" },            "kisa": "ILO",      "kategori": "uluslararasi", "tip": "uluslararasi", "kapsam": "uluslararasi", "web": "https://www.ilo.org" },
+
+    { "kod": "kuzey-anadolu-kalkinma-ajansi", "ad": { "tr": "Kuzey Anadolu Kalkınma Ajansı",     "en": "North Anatolia Development Agency" },            "kisa": "KUZKA",    "kategori": "kalkinma_ajanslari", "tip": "kurum", "kapsam": "yerel" }
+
   ]
 }
