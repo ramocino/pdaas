@@ -33,114 +33,206 @@
     }
   </script>
   <style>
-    ::-webkit-scrollbar { width: 8px; height: 8px; }
-    ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.10); border-radius: 4px; border: 2px solid transparent; background-clip: content-box; }
-    ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.22); background-clip: content-box; }
-    .mica-panel { backdrop-filter: blur(30px) saturate(180%); -webkit-backdrop-filter: blur(30px) saturate(180%); }
-    .j-key { color: #4cc2ff; font-weight: 500; }
-    .j-str { color: #9cdcfe; }
-    .j-num { color: #b5cea8; }
-    .j-kw { color: #c586c0; font-weight: 600; }
-    .j-punct { color: #808080; }
-    #catalog-tree-container::-webkit-scrollbar { width: 6px; }
-    #catalog-tree-container::-webkit-scrollbar-thumb { background: rgba(76, 194, 255, .18); border-radius: 99px; }
-    #catalog-tree-container::-webkit-scrollbar-thumb:hover { background: rgba(76, 194, 255, .35); }
-    *:focus-visible { outline: 2px solid #4cc2ff; outline-offset: 1px; border-radius: 4px; }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.10);
+      border-radius: 4px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.22);
+      background-clip: content-box;
+    }
+
+    .mica-panel {
+      backdrop-filter: blur(30px) saturate(180%);
+      -webkit-backdrop-filter: blur(30px) saturate(180%);
+    }
+
+    .j-key {
+      color: #4cc2ff;
+      font-weight: 500;
+    }
+
+    .j-str {
+      color: #9cdcfe;
+    }
+
+    .j-num {
+      color: #b5cea8;
+    }
+
+    .j-kw {
+      color: #c586c0;
+      font-weight: 600;
+    }
+
+    .j-punct {
+      color: #808080;
+    }
+
+    #catalog-tree-container::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    #catalog-tree-container::-webkit-scrollbar-thumb {
+      background: rgba(76, 194, 255, .18);
+      border-radius: 99px;
+    }
+
+    #catalog-tree-container::-webkit-scrollbar-thumb:hover {
+      background: rgba(76, 194, 255, .35);
+    }
+
+    *:focus-visible {
+      outline: 2px solid #4cc2ff;
+      outline-offset: 1px;
+      border-radius: 4px;
+    }
   </style>
 </head>
 
-<body class="bg-win-base text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-win-500 selection:text-white" id="app-body">
+<body
+  class="bg-win-base text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-win-500 selection:text-white"
+  id="app-body">
 
   <!-- HEADER -->
-  <header class="h-16 flex-none border-b border-win-border bg-win-dark/80 z-40 mica-panel flex items-center justify-between px-4 lg:px-6">
+  <header
+    class="h-16 flex-none border-b border-win-border bg-win-dark/80 z-40 mica-panel flex items-center justify-between px-4 lg:px-6">
     <div class="flex items-center gap-3">
-      <button id="btn-mobile-menu" type="button" class="lg:hidden p-2 text-slate-400 hover:text-white rounded-md hover:bg-win-hover transition" aria-label="Menü">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      <button id="btn-mobile-menu" type="button"
+        class="lg:hidden p-2 text-slate-400 hover:text-white rounded-md hover:bg-win-hover transition"
+        aria-label="Menü">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
       </button>
       <div class="flex items-center gap-3 cursor-pointer" id="btn-logo">
         <div class="w-9 h-9 rounded-md bg-win-500 flex items-center justify-center font-bold text-white text-lg">P</div>
         <div>
           <div class="flex items-center gap-2">
             <span class="font-bold text-base tracking-tight text-white">PDaaS</span>
-            <span class="text-[10px] font-semibold uppercase tracking-wider bg-win-500/20 text-win-400 px-2 py-0.5 rounded border border-win-500/30">v1 API</span>
+            <span
+              class="text-[10px] font-semibold uppercase tracking-wider bg-win-500/20 text-win-400 px-2 py-0.5 rounded border border-win-500/30">v1
+              API</span>
           </div>
           <p class="text-xs text-slate-400 font-medium" data-i18n="portal_alt">Parametrik Veri Servisi Portalı</p>
         </div>
       </div>
 
       <nav class="hidden lg:flex items-center gap-1 ml-4">
-        <a href="index.html" class="px-3 py-1.5 rounded-md text-xs font-semibold text-white bg-win-hover border border-win-border" data-i18n="nav_portal">Portal</a>
+        <a href="index.html"
+          class="px-3 py-1.5 rounded-md text-xs font-semibold text-white bg-win-hover border border-win-border"
+          data-i18n="nav_portal">Portal</a>
       </nav>
     </div>
 
     <div class="flex items-center gap-3">
-      <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
+      <div
+        class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         <span data-i18n="system_active">Sistem Aktif</span>
       </div>
       <div class="flex items-center bg-win-card p-1 rounded-md border border-win-border text-xs font-semibold">
         <button id="lang-tr" type="button" class="px-2.5 py-1 rounded bg-win-500 text-white transition">TR</button>
-        <button id="lang-en" type="button" class="px-2.5 py-1 rounded text-slate-400 hover:text-white transition">EN</button>
+        <button id="lang-en" type="button"
+          class="px-2.5 py-1 rounded text-slate-400 hover:text-white transition">EN</button>
       </div>
     </div>
   </header>
 
   <div class="flex-1 flex overflow-hidden relative min-h-0">
     <!-- SIDEBAR -->
-    <aside id="sidebar" class="w-80 lg:w-[22rem] flex-none bg-win-dark border-r border-win-border flex flex-col fixed lg:static top-16 bottom-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
+    <aside id="sidebar"
+      class="w-80 lg:w-[22rem] flex-none bg-win-dark border-r border-win-border flex flex-col fixed lg:static top-16 bottom-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
       <div class="p-4 border-b border-win-border space-y-3 flex-none">
         <div class="flex items-center justify-between">
           <h2 class="text-sm font-semibold tracking-tight text-white uppercase flex items-center gap-2">
-            <svg class="w-4 h-4 text-win-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+            <svg class="w-4 h-4 text-win-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+            </svg>
             <span data-i18n="catalog_title">Veri Kataloğu</span>
           </h2>
-          <span id="catalog-count-badge" class="px-2 py-0.5 text-[11px] font-semibold bg-win-card text-slate-300 rounded border border-win-border">0</span>
+          <span id="catalog-count-badge"
+            class="px-2 py-0.5 text-[11px] font-semibold bg-win-card text-slate-300 rounded border border-win-border">0</span>
         </div>
         <div class="relative">
-          <input type="text" id="input-catalog-search" data-i18n-placeholder="catalog_search" placeholder="Veri seti ara..." class="w-full h-9 pl-9 pr-8 text-xs bg-win-card text-white rounded-md border border-win-border focus:outline-none focus:border-win-500 focus:ring-1 focus:ring-win-500 transition placeholder-slate-500">
-          <svg class="w-4 h-4 text-slate-500 absolute left-2.5 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-          <button id="btn-clear-search" type="button" class="hidden absolute right-2.5 top-2.5 text-slate-500 hover:text-white">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          <input type="text" id="input-catalog-search" data-i18n-placeholder="catalog_search"
+            placeholder="Veri seti ara..."
+            class="w-full h-9 pl-9 pr-8 text-xs bg-win-card text-white rounded-md border border-win-border focus:outline-none focus:border-win-500 focus:ring-1 focus:ring-win-500 transition placeholder-slate-500">
+          <svg class="w-4 h-4 text-slate-500 absolute left-2.5 top-2.5 pointer-events-none" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <button id="btn-clear-search" type="button"
+            class="hidden absolute right-2.5 top-2.5 text-slate-500 hover:text-white">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
         </div>
       </div>
 
       <div id="catalog-tree-container" class="flex-1 overflow-y-auto overscroll-contain p-3 space-y-2 min-h-0">
         <div class="p-8 text-center text-slate-500 text-xs">
-          <div class="inline-block w-6 h-6 border-2 border-win-500 border-t-transparent rounded-full animate-spin mb-2"></div>
+          <div class="inline-block w-6 h-6 border-2 border-win-500 border-t-transparent rounded-full animate-spin mb-2">
+          </div>
           <p data-i18n="catalog_loading">Katalog yükleniyor...</p>
         </div>
       </div>
 
-      <div class="p-3 border-t border-win-border bg-win-dark/50 text-[11px] text-slate-500 flex items-center justify-between flex-none">
+      <div
+        class="p-3 border-t border-win-border bg-win-dark/50 text-[11px] text-slate-500 flex items-center justify-between flex-none">
         <span>REST JSON API</span>
-        <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> <span data-i18n="live_connection">Canlı Bağlantı</span></span>
+        <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> <span
+            data-i18n="live_connection">Canlı Bağlantı</span></span>
       </div>
     </aside>
 
     <div id="mobile-overlay" class="fixed inset-0 bg-black/60 z-20 hidden lg:hidden mica-panel"></div>
 
     <main id="main-content" class="flex-1 overflow-y-auto overscroll-contain bg-win-base flex flex-col min-h-0">
-      <div id="view-empty-state" class="flex-1 flex flex-col items-center justify-center p-8 text-center max-w-lg mx-auto">
-        <div class="w-20 h-20 rounded-lg bg-win-card border border-win-border text-win-400 flex items-center justify-center text-3xl mb-6">⚡</div>
-        <h2 class="text-2xl font-bold text-white tracking-tight mb-2" data-i18n="empty_title">Veri Seti veya Servis Seçin</h2>
-        <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="empty_desc">Sol taraftaki katalog ağacından bir veri seti seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz.</p>
+      <div id="view-empty-state"
+        class="flex-1 flex flex-col items-center justify-center p-8 text-center max-w-lg mx-auto">
+        <div
+          class="w-20 h-20 rounded-lg bg-win-card border border-win-border text-win-400 flex items-center justify-center text-3xl mb-6">
+          ⚡</div>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-2" data-i18n="empty_title">Veri Seti veya Servis
+          Seçin</h2>
+        <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="empty_desc">Sol taraftaki katalog ağacından
+          bir veri seti seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod
+          örneklerini inceleyebilirsiniz.</p>
         <div class="grid grid-cols-2 gap-3 w-full text-left text-xs text-slate-300">
           <div class="p-3 rounded-md bg-win-card border border-win-border flex items-start gap-3">
             <span class="text-base">📊</span>
-            <div><strong class="block text-white font-semibold mb-0.5" data-i18n="empty_card1_t">Veri Önizleme</strong><span data-i18n="empty_card1_d">Tablo görünümü ile doğrudan canlı veri kayıtları.</span></div>
+            <div><strong class="block text-white font-semibold mb-0.5" data-i18n="empty_card1_t">Veri
+                Önizleme</strong><span data-i18n="empty_card1_d">Tablo görünümü ile doğrudan canlı veri
+                kayıtları.</span></div>
           </div>
           <div class="p-3 rounded-md bg-win-card border border-win-border flex items-start gap-3">
             <span class="text-base">💻</span>
-            <div><strong class="block text-white font-semibold mb-0.5" data-i18n="empty_card2_t">Hazır Kodlar</strong><span data-i18n="empty_card2_d">cURL, Python, JS, Go & PHP entegrasyonu.</span></div>
+            <div><strong class="block text-white font-semibold mb-0.5" data-i18n="empty_card2_t">Hazır
+                Kodlar</strong><span data-i18n="empty_card2_d">cURL, Python, JS, Go & PHP entegrasyonu.</span></div>
           </div>
         </div>
       </div>
 
       <div id="view-service-detail" class="hidden flex-1 p-4 lg:p-8 max-w-6xl w-full mx-auto space-y-6">
         <nav class="flex items-center gap-2 text-xs text-slate-400">
-          <button id="btn-bc-home" type="button" class="hover:text-white transition" data-i18n="bc_home">Katalog</button>
+          <button id="btn-bc-home" type="button" class="hover:text-white transition"
+            data-i18n="bc_home">Katalog</button>
           <span>/</span>
           <span id="bc-ministry" class="text-slate-300 font-medium">—</span>
           <span>/</span>
@@ -150,16 +242,22 @@
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-win-border">
           <div class="space-y-1">
             <div class="flex items-center gap-2">
-              <span id="service-ministry-badge" class="px-2.5 py-0.5 rounded bg-win-card text-slate-300 text-xs font-semibold border border-win-border">—</span>
-              <span id="service-records-count" class="px-2.5 py-0.5 rounded bg-win-500/10 text-win-400 text-xs font-semibold border border-win-500/20">0</span>
-              <span id="service-type-badge" class="px-2.5 py-0.5 rounded bg-win-card text-slate-400 text-[10px] font-mono border border-win-border">—</span>
+              <span id="service-ministry-badge"
+                class="px-2.5 py-0.5 rounded bg-win-card text-slate-300 text-xs font-semibold border border-win-border">—</span>
+              <span id="service-records-count"
+                class="px-2.5 py-0.5 rounded bg-win-500/10 text-win-400 text-xs font-semibold border border-win-500/20">0</span>
+              <span id="service-type-badge"
+                class="px-2.5 py-0.5 rounded bg-win-card text-slate-400 text-[10px] font-mono border border-win-border">—</span>
             </div>
             <h1 id="service-title" class="text-2xl lg:text-3xl font-bold text-white tracking-tight">—</h1>
             <p id="service-desc" class="text-sm text-slate-400">—</p>
           </div>
           <div class="flex items-center gap-2">
-            <button id="btn-run-query" type="button" class="px-4 py-2 rounded-md bg-win-500 hover:bg-win-600 text-white text-xs font-semibold flex items-center gap-2 transition active:scale-[0.98]">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+            <button id="btn-run-query" type="button"
+              class="px-4 py-2 rounded-md bg-win-500 hover:bg-win-600 text-white text-xs font-semibold flex items-center gap-2 transition active:scale-[0.98]">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
               <span data-i18n="run_query">Yenile</span>
             </button>
           </div>
@@ -168,15 +266,22 @@
         <div class="bg-win-card border border-win-border rounded-lg p-4 space-y-2">
           <div class="flex items-center justify-between text-xs font-semibold text-slate-400 uppercase tracking-wider">
             <span class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-mono">GET</span>
+              <span
+                class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-mono">GET</span>
               <span data-i18n="endpoint_label">API Uç Noktası</span>
             </span>
             <span id="service-last-update" class="text-[11px] font-normal text-slate-500">—</span>
           </div>
           <div class="flex items-center gap-2">
-            <div class="flex-1 bg-win-base border border-win-border rounded-md px-4 py-2.5 font-mono text-xs text-win-400 overflow-x-auto whitespace-nowrap" id="endpoint-url-text">—</div>
-            <button id="btn-copy-url" type="button" class="px-3.5 py-2.5 bg-win-hover hover:bg-win-active text-white text-xs font-semibold rounded-md border border-win-border flex items-center gap-1.5 transition flex-none">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+            <div
+              class="flex-1 bg-win-base border border-win-border rounded-md px-4 py-2.5 font-mono text-xs text-win-400 overflow-x-auto whitespace-nowrap"
+              id="endpoint-url-text">—</div>
+            <button id="btn-copy-url" type="button"
+              class="px-3.5 py-2.5 bg-win-hover hover:bg-win-active text-white text-xs font-semibold rounded-md border border-win-border flex items-center gap-1.5 transition flex-none">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
               <span data-i18n="copy">Kopyala</span>
             </button>
           </div>
@@ -184,35 +289,58 @@
 
         <div class="space-y-4">
           <div class="flex items-center gap-2 border-b border-win-border overflow-x-auto" role="tablist">
-            <button class="tab-btn px-4 py-2.5 text-xs font-semibold border-b-2 border-win-500 text-win-400 flex items-center gap-2 transition whitespace-nowrap active" data-tab="tab-table">
+            <button
+              class="tab-btn px-4 py-2.5 text-xs font-semibold border-b-2 border-win-500 text-win-400 flex items-center gap-2 transition whitespace-nowrap active"
+              data-tab="tab-table">
               <span>📊</span> <span data-i18n="tab_table">Veri Tablosu</span>
               <span id="tab-badge-table" class="px-1.5 py-0.5 rounded bg-win-500/20 text-[10px] text-win-400">0</span>
             </button>
-            <button class="tab-btn px-4 py-2.5 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap" data-tab="tab-code">
+            <button
+              class="tab-btn px-4 py-2.5 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap"
+              data-tab="tab-code">
               <span>⚡</span> <span data-i18n="tab_code">Bağlantı Kodları</span>
             </button>
-            <button class="tab-btn px-4 py-2.5 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap" data-tab="tab-json">
+            <button
+              class="tab-btn px-4 py-2.5 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap"
+              data-tab="tab-json">
               <span>🖥️</span> <span data-i18n="tab_json">JSON Konsolu</span>
             </button>
-            <button class="tab-btn px-4 py-2.5 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap" data-tab="tab-docs">
+            <button
+              class="tab-btn px-4 py-2.5 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition whitespace-nowrap"
+              data-tab="tab-docs">
               <span>📖</span> <span data-i18n="tab_docs">Şema Dokümantasyonu</span>
             </button>
           </div>
 
           <!-- TABLE -->
           <div id="tab-table" class="tab-panel space-y-3">
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-win-card p-3 rounded-lg border border-win-border text-xs">
+            <div
+              class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-win-card p-3 rounded-lg border border-win-border text-xs">
               <div class="relative w-full sm:w-64">
-                <input type="text" id="input-table-filter" data-i18n-placeholder="table_filter" placeholder="Tabloda filtrele..." class="w-full h-8 pl-8 pr-3 bg-win-base text-white rounded-md border border-win-border focus:outline-none focus:border-win-500 text-xs">
-                <svg class="w-3.5 h-3.5 text-slate-500 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                <input type="text" id="input-table-filter" data-i18n-placeholder="table_filter"
+                  placeholder="Tabloda filtrele..."
+                  class="w-full h-8 pl-8 pr-3 bg-win-base text-white rounded-md border border-win-border focus:outline-none focus:border-win-500 text-xs">
+                <svg class="w-3.5 h-3.5 text-slate-500 absolute left-2.5 top-2.5" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
               </div>
               <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
-                <button id="btn-export-csv" type="button" class="px-3 py-1.5 bg-win-hover hover:bg-win-active text-slate-300 rounded-md border border-win-border flex items-center gap-1.5 font-medium transition">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                <button id="btn-export-csv" type="button"
+                  class="px-3 py-1.5 bg-win-hover hover:bg-win-active text-slate-300 rounded-md border border-win-border flex items-center gap-1.5 font-medium transition">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
                   <span>CSV</span>
                 </button>
-                <button id="btn-export-json" type="button" class="px-3 py-1.5 bg-win-hover hover:bg-win-active text-slate-300 rounded-md border border-win-border flex items-center gap-1.5 font-medium transition">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                <button id="btn-export-json" type="button"
+                  class="px-3 py-1.5 bg-win-hover hover:bg-win-active text-slate-300 rounded-md border border-win-border flex items-center gap-1.5 font-medium transition">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
                   <span>JSON</span>
                 </button>
               </div>
@@ -220,13 +348,17 @@
             <div class="bg-win-card border border-win-border rounded-lg overflow-hidden">
               <div class="overflow-x-auto max-h-[480px]">
                 <table class="w-full text-left text-xs text-slate-300 border-collapse" id="data-table">
-                  <thead class="bg-win-hover sticky top-0 backdrop-blur border-b border-win-border text-slate-400 font-semibold uppercase tracking-wider">
-                    <tr id="table-head-row"><th class="p-3">#</th></tr>
+                  <thead
+                    class="bg-win-hover sticky top-0 backdrop-blur border-b border-win-border text-slate-400 font-semibold uppercase tracking-wider">
+                    <tr id="table-head-row">
+                      <th class="p-3">#</th>
+                    </tr>
                   </thead>
                   <tbody id="table-body-rows" class="divide-y divide-win-border/60 font-mono"></tbody>
                 </table>
               </div>
-              <div class="p-3 bg-win-card border-t border-win-border text-slate-400 text-[11px] flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div
+                class="p-3 bg-win-card border-t border-win-border text-slate-400 text-[11px] flex flex-col sm:flex-row items-center justify-between gap-3">
                 <span id="table-pagination-info">—</span>
                 <div id="table-pagination-controls" class="flex items-center gap-1 flex-wrap"></div>
               </div>
@@ -238,15 +370,28 @@
             <div class="bg-win-card border border-win-border rounded-lg overflow-hidden">
               <div class="flex items-center justify-between bg-win-base px-4 py-2.5 border-b border-win-border">
                 <div class="flex items-center gap-1 overflow-x-auto" id="code-lang-selector">
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded text-xs font-semibold bg-win-500 text-white transition" data-lang="curl">cURL</button>
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded text-xs font-semibold text-slate-400 hover:text-white transition" data-lang="python">Python</button>
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded text-xs font-semibold text-slate-400 hover:text-white transition" data-lang="js">JavaScript</button>
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded text-xs font-semibold text-slate-400 hover:text-white transition" data-lang="go">Go</button>
-                  <button type="button" class="code-lang-btn px-3 py-1 rounded text-xs font-semibold text-slate-400 hover:text-white transition" data-lang="php">PHP</button>
+                  <button type="button"
+                    class="code-lang-btn px-3 py-1 rounded text-xs font-semibold bg-win-500 text-white transition"
+                    data-lang="curl">cURL</button>
+                  <button type="button"
+                    class="code-lang-btn px-3 py-1 rounded text-xs font-semibold text-slate-400 hover:text-white transition"
+                    data-lang="python">Python</button>
+                  <button type="button"
+                    class="code-lang-btn px-3 py-1 rounded text-xs font-semibold text-slate-400 hover:text-white transition"
+                    data-lang="js">JavaScript</button>
+                  <button type="button"
+                    class="code-lang-btn px-3 py-1 rounded text-xs font-semibold text-slate-400 hover:text-white transition"
+                    data-lang="go">Go</button>
+                  <button type="button"
+                    class="code-lang-btn px-3 py-1 rounded text-xs font-semibold text-slate-400 hover:text-white transition"
+                    data-lang="php">PHP</button>
                 </div>
-                <button id="btn-copy-code" type="button" class="px-3 py-1 bg-win-hover hover:bg-win-active text-slate-200 text-xs font-semibold rounded border border-win-border transition" data-i18n="copy">Kopyala</button>
+                <button id="btn-copy-code" type="button"
+                  class="px-3 py-1 bg-win-hover hover:bg-win-active text-slate-200 text-xs font-semibold rounded border border-win-border transition"
+                  data-i18n="copy">Kopyala</button>
               </div>
-              <pre class="p-5 font-mono text-xs text-emerald-400 bg-win-base overflow-x-auto leading-relaxed" id="code-snippet-box"></pre>
+              <pre class="p-5 font-mono text-xs text-emerald-400 bg-win-base overflow-x-auto leading-relaxed"
+                id="code-snippet-box"></pre>
             </div>
           </div>
 
@@ -258,14 +403,17 @@
                   <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
                   <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
                   <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-                  <span class="text-xs text-slate-400 ml-2 font-sans font-semibold" id="json-status-label">HTTP 200</span>
+                  <span class="text-xs text-slate-400 ml-2 font-sans font-semibold" id="json-status-label">HTTP
+                    200</span>
                 </div>
                 <div class="flex items-center gap-3 text-xs text-slate-400 font-sans">
                   <span id="json-response-time" class="text-emerald-400 font-mono">—</span>
-                  <button id="btn-copy-json" type="button" class="hover:text-white text-xs underline" data-i18n="copy_payload">Payload'ı Kopyala</button>
+                  <button id="btn-copy-json" type="button" class="hover:text-white text-xs underline"
+                    data-i18n="copy_payload">Payload'ı Kopyala</button>
                 </div>
               </div>
-              <pre class="p-5 text-xs text-slate-200 overflow-auto max-h-[500px] leading-relaxed" id="json-console-output"></pre>
+              <pre class="p-5 text-xs text-slate-200 overflow-auto max-h-[500px] leading-relaxed"
+                id="json-console-output"></pre>
             </div>
           </div>
 
@@ -273,7 +421,10 @@
           <div id="tab-docs" class="tab-panel hidden space-y-4">
             <div class="bg-win-card border border-win-border rounded-lg p-5 space-y-4">
               <h3 class="text-sm font-semibold text-white uppercase tracking-wider flex items-center gap-2">
-                <svg class="w-4 h-4 text-win-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                <svg class="w-4 h-4 text-win-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
                 <span data-i18n="docs_title">Veri Alanları ve Veri Tipleri</span>
               </h3>
               <div class="overflow-x-auto">
@@ -306,8 +457,11 @@
     </main>
   </div>
 
-  <div id="toast-notification" class="fixed bottom-6 right-6 bg-win-card text-white border border-win-border px-4 py-3 rounded-lg flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 z-50 pointer-events-none mica-panel">
-    <div id="toast-icon" class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">✓</div>
+  <div id="toast-notification"
+    class="fixed bottom-6 right-6 bg-win-card text-white border border-win-border px-4 py-3 rounded-lg flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 z-50 pointer-events-none mica-panel">
+    <div id="toast-icon"
+      class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">
+      ✓</div>
     <div>
       <h4 id="toast-title" class="text-xs font-bold">OK</h4>
       <p id="toast-message" class="text-[11px] text-slate-400">—</p>
@@ -454,16 +608,16 @@
 
     // Kod sistemleri için görsel haritalama
     const KOD_SISTEMI_MAP = {
-      'gtip':  { ad: 'GTİP Kodları',         ikon: '🚢' },
-      'cpc':   { ad: 'CPC Kodları',          ikon: '📊' },
-      'nace':  { ad: 'NACE Kodları',         ikon: '🏭' },
-      'isco':  { ad: 'ISCO Kodları',         ikon: '🤝' },
-      'sgk':   { ad: 'SGK Verileri',         ikon: '🩺' },
-      'csgb':  { ad: 'ÇSGB Verileri',        ikon: '💼' },
-      'gib':   { ad: 'GİB Vergi Tarifeleri', ikon: '🧾' },
-      'hvmb':  { ad: 'HMB Verileri',         ikon: '💰' },
-      'tuik':  { ad: 'TÜİK Verileri',        ikon: '📈' },
-      'diger': { ad: 'Diğer Veriler',        ikon: '🏛️' }
+      'gtip': { ad: { tr: 'GTİP Kodları', en: 'GTİP Codes' }, ikon: '🚢' },
+      'cpc': { ad: { tr: 'CPC Kodları', en: 'CPC Codes' }, ikon: '📊' },
+      'nace': { ad: { tr: 'NACE Kodları', en: 'NACE Codes' }, ikon: '🏭' },
+      'isco': { ad: { tr: 'ISCO Kodları', en: 'ISCO Codes' }, ikon: '🤝' },
+      'sgk': { ad: { tr: 'SGK Verileri', en: 'SGK Data' }, ikon: '🩺' },
+      'csgb': { ad: { tr: 'ÇSGB Verileri', en: 'MoLSS Data' }, ikon: '💼' },
+      'gib': { ad: { tr: 'GİB Vergi Tarifeleri', en: 'RA Tax Tariffs' }, ikon: '🧾' },
+      'hvmb': { ad: { tr: 'HMB Verileri', en: 'MoF Data' }, ikon: '💰' },
+      'tuik': { ad: { tr: 'TÜİK Verileri', en: 'TurkStat Data' }, ikon: '📈' },
+      'diger': { ad: { tr: 'Diğer Veriler', en: 'Other Data' }, ikon: '🏛️' }
     };
 
     const ALAN_ETIKET_TR = {
@@ -585,6 +739,11 @@
       return anahtar.replace(/_/g, ' ').replace(/\b\w/g, h => h.toLocaleUpperCase(DIL === 'tr' ? 'tr-TR' : 'en-US'));
     }
 
+    function grupEtiket(anahtar) {
+      const g = KOD_SISTEMI_MAP[anahtar] || KOD_SISTEMI_MAP['diger'];
+      return DIL === 'tr' ? g.ad.tr : g.ad.en;
+    }
+
     const kacis = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
     function dilUygula() {
@@ -682,7 +841,7 @@
           const mapBilgi = KOD_SISTEMI_MAP[anahtar] || KOD_SISTEMI_MAP['diger'];
           gruplar.set(anahtar, {
             id: anahtar,
-            adi: mapBilgi.ad,
+            adi: DIL === 'tr' ? mapBilgi.ad.tr : mapBilgi.ad.en,
             ikon: mapBilgi.ikon,
             servisler: []
           });
@@ -720,16 +879,16 @@
           </button>
           <div class="group-services ${isOpen ? '' : 'hidden'} border-t border-win-border divide-y divide-win-border/40 bg-win-base/40">
             ${eslesen.map(s => {
-              const sAdi = DIL === 'en' ? (s.ad.en || s.ad.tr) : s.ad.tr;
-              const aktif = currentService && currentService.kod === s.kod;
-              const url = s.katmanlar?.ham?.url || '#';
-              return `
+          const sAdi = DIL === 'en' ? (s.ad.en || s.ad.tr) : s.ad.tr;
+          const aktif = currentService && currentService.kod === s.kod;
+          const url = s.katmanlar?.ham?.url || '#';
+          return `
                 <button type="button" class="service-item-btn w-full px-3 py-2 pl-9 flex items-center justify-between text-left hover:bg-win-500/10 hover:text-win-400 transition text-slate-400 ${aktif ? 'bg-win-500/20 text-win-400 font-semibold border-l-2 border-win-500' : ''}" data-endpoint="${url}">
                   <span class="truncate pr-2">${kacis(sAdi)}</span>
                   <span class="px-1.5 py-0.5 text-[9px] font-mono bg-win-hover text-slate-400 rounded">${s.katmanlar?.ham?.son || '—'}</span>
                 </button>
               `;
-            }).join('')}
+        }).join('')}
           </div>
         </div>
       `;
