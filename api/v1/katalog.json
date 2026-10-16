@@ -122,6 +122,40 @@
       }
     },
     {
+      "kod": "kdv-oranlari",
+      "ad": {
+        "tr": "KDV Oranları ve Listeleri",
+        "en": "VAT Rates and Lists"
+      },
+      "tip": "liste",
+      "kod_sistemi": "gib",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/api/v1/ham/kdv-oranlari.json",
+          "surumler_url": "/api/v1/ham/surumler/kdv-oranlari/",
+          "checksum": "1b3072876dad0784613a9b6756a19c46ce9e644af916323845ca26624e35b9a8"
+        }
+      }
+    },
+    {
+      "kod": "kurumlar-vergisi-oranlari",
+      "ad": {
+        "tr": "Kurumlar Vergisi Oranları",
+        "en": "Corporate Income Tax Rates"
+      },
+      "tip": "liste",
+      "kod_sistemi": "gib",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/api/v1/ham/kurumlar-vergisi-oranlari.json",
+          "surumler_url": "/api/v1/ham/surumler/kurumlar-vergisi-oranlari/",
+          "checksum": "ecdb83c5e2180369e968386e88a989386fb6dcc9b06772232d44fc496731cb55"
+        }
+      }
+    },
+    {
       "kod": "nace-kodlari",
       "ad": {
         "tr": "NACE Kodları",
@@ -135,6 +169,23 @@
           "url": "/api/v1/ham/nace-kodlari.json",
           "surumler_url": "/api/v1/ham/surumler/nace-kodlari/",
           "checksum": "75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        }
+      }
+    },
+    {
+      "kod": "sgk-aylik-gun-sayisi-kurallari",
+      "ad": {
+        "tr": "Aylık Gün Sayısı Hesaplama Kuralları",
+        "en": "Monthly Day Count Calculation Rules"
+      },
+      "tip": "liste",
+      "kod_sistemi": "sgk",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/api/v1/ham/sgk-aylik-gun-sayisi-kurallari.json",
+          "surumler_url": "/api/v1/ham/surumler/sgk-aylik-gun-sayisi-kurallari/",
+          "checksum": "b385f9328e1866110ac5ead1481b52c3f5baff14fab2a87493b2608ef459f8e0"
         }
       }
     },
@@ -203,6 +254,91 @@
           "url": "/api/v1/ham/sgk-isten-ayrilis-nedenleri.json",
           "surumler_url": "/api/v1/ham/surumler/sgk-isten-ayrilis-nedenleri/",
           "checksum": "69e17017cf1c83b6ee3bcd4fb713a49247ec6093e0924356e6ab1d917a964a16"
+        }
+      }
+    },
+    {
+      "kod": "sgk-meslek-kodlari",
+      "ad": {
+        "tr": "SGK Meslek Kodları",
+        "en": "SGK Occupation Codes"
+      },
+      "tip": "liste",
+      "kod_sistemi": "sgk",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/api/v1/ham/sgk-meslek-kodlari.json",
+          "surumler_url": "/api/v1/ham/surumler/sgk-meslek-kodlari/",
+          "checksum": "bb74641eb149502557cb8c47d0adc1f7c3a4803c6709a7559fe47bde653a7a2b"
+        }
+      }
+    },
+    {
+      "kod": "sgk-nakil-nedenleri",
+      "ad": {
+        "tr": "Sigortalı Nakil Nedenleri",
+        "en": "Insured Transfer Reasons"
+      },
+      "tip": "liste",
+      "kod_sistemi": "sgk",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/api/v1/ham/sgk-nakil-nedenleri.json",
+          "surumler_url": "/api/v1/ham/surumler/sgk-nakil-nedenleri/",
+          "checksum": "64c07dba52f594ee3c833f9642cc366514f7172f1a759c9b63ced64a480cd865"
+        }
+      }
+    },
+    {
+      "kod": "sgk-ogrenim-durumu",
+      "ad": {
+        "tr": "Öğrenim Durumu Kodları",
+        "en": "Educational Attainment Codes"
+      },
+      "tip": "liste",
+      "kod_sistemi": "diger",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/api/v1/ham/sgk-ogrenim-durumu.json",
+          "surumler_url": "/api/v1/ham/surumler/sgk-ogrenim-durumu/",
+          "checksum": "b5bf1604042ea06153fa554e089c5a319f0e8f23a2ea2a97358f937bc0f9319f"
+        }
+      }
+    },
+    {
+      "kod": "sgk-sigorta-kollari",
+      "ad": {
+        "tr": "Sigorta Kolları ve Sigortalılık Statüleri",
+        "en": "Insurance Branches and Insured Statuses"
+      },
+      "tip": "liste",
+      "kod_sistemi": "sgk",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/api/v1/ham/sgk-sigorta-kollari.json",
+          "surumler_url": "/api/v1/ham/surumler/sgk-sigorta-kollari/",
+          "checksum": "829f22e172ff7dc9d23a0ab777432843e380a31324b581523e348bbdefd76185"
+        }
+      }
+    },
+    {
+      "kod": "sgk-tesvik-kodlari",
+      "ad": {
+        "tr": "Sosyal Güvenlik Prim Teşvik Kodları",
+        "en": "Social Security Premium Incentive Codes"
+      },
+      "tip": "liste",
+      "kod_sistemi": "sgk",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/api/v1/ham/sgk-tesvik-kodlari.json",
+          "surumler_url": "/api/v1/ham/surumler/sgk-tesvik-kodlari/",
+          "checksum": "51292f816436885c0c7c81fc21feba9520fade7f33990caf62752a336229b596"
         }
       }
     }
