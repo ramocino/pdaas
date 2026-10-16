@@ -83,9 +83,6 @@
   </div>
 
   <script type="module">
-    // ============================================================
-    // ORTAK MODÜLLER
-    // ============================================================
     import { CONFIG, apiUrl, apiFetch } from './assets/pdaas-config.js';
     import { $, kacis, sayi, normKod, kodTemiz, tr_lower } from './assets/pdaas-utils.js';
     import { t, dilBaslat, dilUygula, alanSec, kayitAdi, UI, getDil } from './assets/pdaas-i18n.js';
@@ -94,7 +91,7 @@
     const dil = () => getDil();
 
     // ============================================================
-    // SAYFAYA ÖZEL i18n ANAHTARLARI
+    // i18n ANAHTARLARI
     // ============================================================
     Object.assign(UI.tr, {
       sayfa_baslik: "Ürün & Hizmet Kartı",
@@ -112,7 +109,6 @@
       agac_gorunumu: "ağaç görünümü",
       baglam_not: "Soluk satırlar bağlam · Koyu satırlar arama eşleşmesi",
       kod_baslik: "Kodları",
-      kart_baslik: "Kayıt Kartı",
       gerekce_baslik: "Karar Gerekçesi",
       guven: "Güven Skoru",
       kapat: "Kapat",
@@ -155,40 +151,25 @@
       seviye: "Hiyerarşi Seviyesi",
       seviye_adi: "Seviye Adı",
       ust_kod: "Üst Kod",
-      kalite_1: "Kalite Parametresi 1",
-      kalite_2: "Kalite Parametresi 2",
-      kalite_3: "Kalite Parametresi 3",
       zorunlu_standart: "Zorunlu Standart Kodu",
       tolerans: "Tolerans / Sapma Limiti (%)",
       tehlike_sinifi: "Tehlike Sınıfı",
       zorunlu_sigorta: "Zorunlu Sigorta",
       gorev_tanimi: "Görev Tanımı",
       beceri_seviyesi: "Beceri Seviyesi",
-      yasal_dayanak_urun: "Yasal Dayanak (Ürün)",
-      yasal_dayanak_hizmet: "Yasal Dayanak (Hizmet)",
-      yasal_dayanak_vergi: "Yasal Dayanak (Vergi)",
-      yasal_dayanak_gumruk: "Yasal Dayanak (Gümrük)",
-      yasal_dayanak_faaliyet: "Yasal Dayanak (Faaliyet)",
-      yasal_dayanak_meslek: "Yasal Dayanak (Meslek)",
       belge_baslik: "Zorunlu Belgeler ve İzinler",
       belge_yok: "Bu kayıt için tanımlanmış belge bulunamadı",
       belge_zorunlu: "ZORUNLU",
       belge_kosullu: "KOŞULLU",
       belge_opsiyonel: "OPSİYONEL",
       randiman_baslik: "Fire ve Randıman Oranları",
-      randiman_yok: "Bu kayıt için randıman verisi bulunamadı",
       randiman_oran: "Randıman",
       fire_oran: "Fire",
       verimlilik_baslik: "Hizmet Verimlilik Göstergeleri",
-      verimlilik_yok: "Bu kayıt için verimlilik verisi bulunamadı",
       hedef_deger: "Hedef",
-      alt_sinir: "Alt Sınır",
-      ust_sinir: "Üst Sınır",
       iliskili: "İlişkili Kodlar",
       iliskili_yok: "Bu kayıtla ilişkili başka kod bulunamadı",
       iliskili_tikla: "Bu koda git",
-      meta_kod: "Kod",
-      meta_ad: "Ad",
       vergi_disi_aciklama: "Sektör/meslek kodu — KDV/ÖTV konusu değildir",
       filtre_notu_urun: "Ürün kayıtları (GTİP): KDV ve ÖTV gösterilir.",
       filtre_notu_hizmet: "Hizmet kayıtları (CPC): KDV gösterilir; ÖTV uygulanmaz.",
@@ -198,8 +179,6 @@
       kurum_ticaret: "Ticaret Bakanlığı",
       kurum_gib: "GİB",
       kurum_tse: "TSE",
-      kurum_cevre: "Çevre Bakanlığı",
-      kurum_enerji: "Enerji Bakanlığı",
       kurum_calisma: "Çalışma Bakanlığı",
       kurum_tobb: "TOBB",
       kurum_seddk: "SEDDK",
@@ -222,7 +201,6 @@
       agac_gorunumu: "tree view",
       baglam_not: "Faded rows are context · Highlighted rows are matches",
       kod_baslik: "Codes",
-      kart_baslik: "Record Card",
       gerekce_baslik: "Decision Reasoning",
       guven: "Confidence",
       kapat: "Close",
@@ -265,40 +243,25 @@
       seviye: "Hierarchy Level",
       seviye_adi: "Level Name",
       ust_kod: "Parent Code",
-      kalite_1: "Quality Parameter 1",
-      kalite_2: "Quality Parameter 2",
-      kalite_3: "Quality Parameter 3",
       zorunlu_standart: "Mandatory Standard Code",
       tolerans: "Tolerance / Deviation Limit (%)",
       tehlike_sinifi: "Hazard Class",
       zorunlu_sigorta: "Mandatory Insurance",
       gorev_tanimi: "Task Description",
       beceri_seviyesi: "Skill Level",
-      yasal_dayanak_urun: "Legal Basis (Product)",
-      yasal_dayanak_hizmet: "Legal Basis (Service)",
-      yasal_dayanak_vergi: "Legal Basis (Tax)",
-      yasal_dayanak_gumruk: "Legal Basis (Customs)",
-      yasal_dayanak_faaliyet: "Legal Basis (Business)",
-      yasal_dayanak_meslek: "Legal Basis (Occupation)",
       belge_baslik: "Mandatory Documents and Permits",
       belge_yok: "No documents defined for this record",
       belge_zorunlu: "MANDATORY",
       belge_kosullu: "CONDITIONAL",
       belge_opsiyonel: "OPTIONAL",
       randiman_baslik: "Shrinkage and Yield Rates",
-      randiman_yok: "No yield data found for this record",
       randiman_oran: "Yield",
       fire_oran: "Shrinkage",
       verimlilik_baslik: "Service Productivity Indicators",
-      verimlilik_yok: "No productivity data found for this record",
       hedef_deger: "Target",
-      alt_sinir: "Lower Limit",
-      ust_sinir: "Upper Limit",
       iliskili: "Related Codes",
       iliskili_yok: "No related codes found",
       iliskili_tikla: "Go to this code",
-      meta_kod: "Code",
-      meta_ad: "Name",
       vergi_disi_aciklama: "Sector/occupation code — not subject to VAT/SCT",
       filtre_notu_urun: "Product records (GTİP): VAT and SCT are shown.",
       filtre_notu_hizmet: "Service records (CPC): VAT is shown; SCT does not apply.",
@@ -308,8 +271,6 @@
       kurum_ticaret: "Ministry of Trade",
       kurum_gib: "Revenue Administration",
       kurum_tse: "Turkish Standards Institution",
-      kurum_cevre: "Ministry of Environment",
-      kurum_enerji: "Ministry of Energy",
       kurum_calisma: "Ministry of Labour",
       kurum_tobb: "TOBB",
       kurum_seddk: "SEDDK",
@@ -655,7 +616,7 @@
     }
 
     // ============================================================
-    // ARAMA + LİSTE (urunhizmetara ile aynı)
+    // ARAMA + LİSTE
     // ============================================================
     function gtipZinciri(kod) {
       const tk = kodTemiz(kod);
@@ -857,7 +818,6 @@
       SECILI = s;
       const { kaynak, kayit } = s;
 
-      // Modalı hemen aç, ek veriler yüklensin
       const modal = $('detay-modal');
       $('detay-icerik').innerHTML = `
         <div class="bg-win-card border border-win-border rounded-xl shadow-2xl overflow-hidden">
@@ -874,16 +834,13 @@
       document.body.style.overflow = 'hidden';
       $('kapat-btn')?.addEventListener('click', detayKapat);
 
-      // Ek verileri yükle
       await ekVeriYukle(kaynak);
       const iliskili = iliskiliKodlarBul(kaynak, kayit);
 
-      // Kart içeriğini üret
       const kartHtml = kartUret(s, iliskili);
       $('detay-icerik').innerHTML = kartHtml;
       $('kapat-btn')?.addEventListener('click', detayKapat);
 
-      // İlişkili kodlara tıklama
       document.querySelectorAll('#detay-icerik .iliskili-tikla').forEach(el => {
         el.addEventListener('click', () => {
           const k = el.dataset.kaynak;
@@ -902,17 +859,16 @@
       document.body.style.overflow = '';
     }
 
+    // ============================================================
+    // KART ÜRETİMİ
+    // ============================================================
     function kartUret(secim, iliskili) {
       const { kaynak, kayit } = secim;
       const kod = normKod(kayit.kod);
-      const ad = kayitAdi(kayit);
       const kartTip = KART_TIPI[kaynak];
       const satirlar = [];
 
-      satirlar.push({ alan: `${KAYNAK_IKON[kaynak]} ${t(kartTip.baslikKey)}`, deger: t(kartTip.descKey), kurum: '', vurgu: 'baslik', _kaynak: kaynak });
-      satirlar.push({ alan: t('meta_kod'), deger: kod, kurum: '', vurgu: 'kod' });
-      satirlar.push({ alan: t('meta_ad'), deger: ad, kurum: '', vurgu: 'ad' });
-
+      // Sadece "Standart Alan Adı" başlığı ile başla — Kod/Ad/Fiziki mal satırları kaldırıldı
       satirlar.push({ tip: 'baslik', metin: t('alan_adi') });
       satirlar.push(...kaynakBazliAlanlar(secim, iliskili));
 
@@ -1022,7 +978,6 @@
               <span class="text-base">${KAYNAK_IKON[kaynak]}</span>
               <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-[11px] font-bold tracking-wider border ${KAYNAK_SINIF[kaynak]}">${t(kartTip.baslikKey)}</span>
               <code class="text-xs font-mono text-win-100 bg-win-500/10 px-2 py-0.5 rounded border border-win-500/20">${kacis(kod)}</code>
-              <span class="text-[10px] text-slate-500 italic">${t(kartTip.descKey)}</span>
             </div>
             <button id="kapat-btn" type="button" title="${t('kapat')}" class="flex-none w-9 h-9 rounded-lg bg-win-dark hover:bg-rose-500/20 hover:text-rose-400 text-slate-400 flex items-center justify-center transition">✕</button>
           </div>
@@ -1035,6 +990,9 @@
         </div>`;
     }
 
+    // ============================================================
+    // KAYNAK BAZLI ALANLAR (yeni düzen)
+    // ============================================================
     function kaynakBazliAlanlar(secim, iliskili) {
       const { kaynak, kayit } = secim;
       const kod = normKod(kayit.kod);
@@ -1042,32 +1000,51 @@
       const adEN = kayit.tanim_en || kayit.ad_en || kayit.tanim || '';
       const satirlar = [];
 
+      // İlişkili NACE kaydını bul (varsa)
+      const naceGrup = iliskili.find(g => g.kaynak === 'nace');
+      const naceKayit = naceGrup && naceGrup.kayitlar.length ? naceGrup.kayitlar[0] : null;
+      const naceKod = naceKayit ? normKod(naceKayit.kod) : '';
+      const naceTR = naceKayit ? (naceKayit.tanim_tr || naceKayit.ad_tr || naceKayit.tanim || '') : '';
+      const naceEN = naceKayit ? (naceKayit.tanim_en || naceKayit.ad_en || naceKayit.tanim || '') : '';
+
       if (kaynak === 'gtip') {
-        let naceKod = null;
-        const ilN = iliskili.find(g => g.kaynak === 'nace');
-        if (ilN && ilN.kayitlar.length) naceKod = normKod(ilN.kayitlar[0].kod);
-        satirlar.push({ alan: t('gtip_kod'), deger: kod, kurum: `${t('kurum_ticaret')} / ${t('kurum_tuik')}` });
-        satirlar.push({ alan: t('nace_kod'), deger: naceKod || '', kurum: t('kurum_tuik') });
+        // 1) GTİP Kodu — yeşil vurgulu
+        satirlar.push({ alan: t('gtip_kod'), deger: kod, kurum: `${t('kurum_ticaret')} / ${t('kurum_tuik')}`, vurgu: 'kod' });
+        // 2) Ürün Adı (TR)
         satirlar.push({ alan: t('urun_ad_tr'), deger: adTR, kurum: t('kurum_ticaret') });
+        // 3) Ürün Adı (EN)
         satirlar.push({ alan: t('urun_ad_en'), deger: adEN, kurum: t('kurum_ticaret') });
-        satirlar.push({ alan: t('olcu_birimi'), deger: kayit.olcu_birimi || '', kurum: t('kurum_ticaret') });
+        // 4) NACE Kodu — yeşil vurgulu (varsa)
+        if (naceKod) {
+          satirlar.push({ alan: t('nace_kod'), deger: naceKod, kurum: t('kurum_tuik'), vurgu: 'kod' });
+          satirlar.push({ alan: t('faaliyet_ad_tr'), deger: naceTR, kurum: t('kurum_tuik') });
+          satirlar.push({ alan: t('faaliyet_ad_en'), deger: naceEN, kurum: t('kurum_tuik') });
+        }
+        // Ek alanlar
+        if (kayit.olcu_birimi) satirlar.push({ alan: t('olcu_birimi'), deger: kayit.olcu_birimi, kurum: t('kurum_ticaret') });
         if (kayit.standart_kodu || kayit.zorunlu_standart) satirlar.push({ alan: t('zorunlu_standart'), deger: kayit.standart_kodu || kayit.zorunlu_standart, kurum: t('kurum_tse') });
       }
+
       if (kaynak === 'cpc') {
-        let naceKod = null;
-        const ilN = iliskili.find(g => g.kaynak === 'nace');
-        if (ilN && ilN.kayitlar.length) naceKod = normKod(ilN.kayitlar[0].kod);
-        satirlar.push({ alan: t('cpc_kod'), deger: kod, kurum: t('kurum_tuik') });
-        satirlar.push({ alan: t('nace_kod'), deger: naceKod || '', kurum: t('kurum_tuik') });
+        // 1) CPC Kodu — yeşil vurgulu
+        satirlar.push({ alan: t('cpc_kod'), deger: kod, kurum: t('kurum_tuik'), vurgu: 'kod' });
+        // 2) Hizmet Adı (TR/EN)
         satirlar.push({ alan: t('hizmet_ad_tr'), deger: adTR, kurum: t('kurum_ticaret') });
         satirlar.push({ alan: t('hizmet_ad_en'), deger: adEN, kurum: t('kurum_ticaret') });
+        // 3) NACE Kodu — yeşil vurgulu (varsa)
+        if (naceKod) {
+          satirlar.push({ alan: t('nace_kod'), deger: naceKod, kurum: t('kurum_tuik'), vurgu: 'kod' });
+          satirlar.push({ alan: t('faaliyet_ad_tr'), deger: naceTR, kurum: t('kurum_tuik') });
+          satirlar.push({ alan: t('faaliyet_ad_en'), deger: naceEN, kurum: t('kurum_tuik') });
+        }
         if (kayit.olcu_birimi) satirlar.push({ alan: t('olcu_birimi'), deger: kayit.olcu_birimi, kurum: t('kurum_tuik') });
         if (kayit.tolerans || kayit.sapma_limiti) satirlar.push({ alan: t('tolerans'), deger: kayit.tolerans || kayit.sapma_limiti, kurum: t('kurum_tobb') });
         if (kayit.tehlike_sinifi) satirlar.push({ alan: t('tehlike_sinifi'), deger: kayit.tehlike_sinifi, kurum: t('kurum_calisma') });
         if (kayit.zorunlu_sigorta) satirlar.push({ alan: t('zorunlu_sigorta'), deger: kayit.zorunlu_sigorta, kurum: t('kurum_seddk') });
       }
+
       if (kaynak === 'nace') {
-        satirlar.push({ alan: t('nace_kod'), deger: kod, kurum: t('kurum_tuik') });
+        satirlar.push({ alan: t('nace_kod'), deger: kod, kurum: t('kurum_tuik'), vurgu: 'kod' });
         satirlar.push({ alan: t('faaliyet_ad_tr'), deger: adTR, kurum: t('kurum_tuik') });
         satirlar.push({ alan: t('faaliyet_ad_en'), deger: adEN, kurum: t('kurum_tuik') });
         if (kayit.seviye) satirlar.push({ alan: t('seviye'), deger: kayit.seviye, kurum: t('kurum_tuik') });
@@ -1075,8 +1052,9 @@
         if (kayit.ust_kod) satirlar.push({ alan: t('ust_kod'), deger: kayit.ust_kod, kurum: t('kurum_tuik') });
         if (kayit.tehlike_sinifi) satirlar.push({ alan: t('tehlike_sinifi'), deger: kayit.tehlike_sinifi, kurum: `${t('kurum_calisma')} / ${t('kurum_isg')}` });
       }
+
       if (kaynak === 'isco') {
-        satirlar.push({ alan: t('isco_kod'), deger: kod, kurum: `${t('kurum_tuik')} / ${t('kurum_calisma')}` });
+        satirlar.push({ alan: t('isco_kod'), deger: kod, kurum: `${t('kurum_tuik')} / ${t('kurum_calisma')}`, vurgu: 'kod' });
         satirlar.push({ alan: t('meslek_ad_tr'), deger: adTR, kurum: t('kurum_calisma') });
         satirlar.push({ alan: t('meslek_ad_en'), deger: adEN, kurum: t('kurum_calisma') });
         if (kayit.seviye) satirlar.push({ alan: t('seviye'), deger: kayit.seviye, kurum: t('kurum_tuik') });
@@ -1085,6 +1063,7 @@
         if (kayit.gorev_tanimi) satirlar.push({ alan: t('gorev_tanimi'), deger: kayit.gorev_tanimi, kurum: t('kurum_calisma') });
         if (kayit.beceri_seviyesi) satirlar.push({ alan: t('beceri_seviyesi'), deger: kayit.beceri_seviyesi, kurum: t('kurum_tuik') });
       }
+
       return satirlar;
     }
 
@@ -1095,28 +1074,17 @@
             <td colspan="3" class="px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-win-400">${kacis(s.metin)}</td>
           </tr>`;
         }
-        const bosMu = !s.deger || s.deger === t('belirtilmemis') || s.deger === '';
+        const bosMu = !s.deger || s.deger === '' || s.deger === '—';
 
-        if (s.vurgu === 'baslik') {
-          return `<tr class="bg-win-dark/30">
-            <td class="px-4 py-3 align-top">
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-[11px] font-bold tracking-wider border ${KAYNAK_SINIF[s._kaynak || 'gtip']}">${kacis(s.alan)}</span>
-            </td>
-            <td class="px-4 py-3 align-top text-[11px] text-slate-500 italic" colspan="2">${kacis(s.deger)}</td>
-          </tr>`;
-        }
         if (s.vurgu === 'kod') {
-          return `<tr class="bg-win-dark/20">
-            <td class="px-4 py-2.5 align-top text-slate-400 text-xs font-semibold">${kacis(s.alan)}</td>
-            <td class="px-4 py-2.5 align-top font-mono text-sm text-win-300 font-bold" colspan="2">${kacis(s.deger)}</td>
+          // Kod satırı — yeşil vurgulu, 3 sütun (kod, kurum gösterilir)
+          return `<tr class="bg-win-dark/20 hover:bg-win-hover/40 transition">
+            <td class="px-4 py-3 align-top text-slate-400 text-xs font-semibold whitespace-nowrap">${kacis(s.alan)}</td>
+            <td class="px-4 py-3 align-top font-mono text-base text-emerald-300 font-bold">${kacis(s.deger)}</td>
+            <td class="px-4 py-3 align-top text-[11px] text-slate-500">${kacis(s.kurum || '')}</td>
           </tr>`;
         }
-        if (s.vurgu === 'ad') {
-          return `<tr class="bg-win-dark/20 border-b border-win-border">
-            <td class="px-4 py-3 align-top text-slate-400 text-xs font-semibold">${kacis(s.alan)}</td>
-            <td class="px-4 py-3 align-top text-white font-bold text-base leading-snug" colspan="2">${kacis(s.deger)}</td>
-          </tr>`;
-        }
+
         const degerClass = s.vurgu === 'kdv' ? 'text-win-100 font-bold'
                          : s.vurgu === 'otv' ? 'text-rose-400 font-bold'
                          : s.vurgu === 'muaf' ? 'text-emerald-400 font-semibold'
