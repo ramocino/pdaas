@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "$schema": "https://.../schema/pdaas-meta-1.3.0.json",
+    "schema_surumu": "1.3.0",
+    "servis": {
+      "kod": "gtip-kodlari",
+      "ad": {
+        "tr": "GTİP Kodları",
+        "en": "Turkish Customs Tariff Codes (GTİP)"
+      }
+    },
+    "yayinci": {
+      "kod": "tb",
+      "ad": {
+        "tr": "T.C. Ticaret Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Trade"
+      },
+      "birim": {
+        "tr": "Gümrükler Genel Müdürlüğü",
+        "en": "General Directorate of Customs"
+      },
+      "konsorsiyum": false,
+      "kurumlar": [
+        "tb"
+      ]
+    },
+    "katman": "ham",
+    "yapi": {
+      "tip": "agac",
+      "kod_sistemi": "gtip",
+      "join": {
+        "alan": "kod",
+        "yontem": "tam"
+      },
+      "kapsam": [
+        "urun"
+      ]
+    },
+    "surum": {
+      "surum": "2026.01.01",
+      "dosya_surumu": "1.0.0",
+      "onceki": "2024.01.01",
+      "guncelleme": "2026-01-01"
+    },
+    "zaman": {
+      "zaman_bazli": false,
+      "gecerlilik_baslangic": null,
+      "gecerlilik_bitis": null
+    },
+    "kaynaklar": [
+      {
+        "kod": "tb-gtc",
+        "ad": {
+          "tr": "İstatistik Pozisyonlarına Bölünmüş Türk Gümrük Tarife Cetveli (Armonize Sistem esaslı)",
+          "en": "Turkish Customs Tariff Schedule divided into statistical positions (Harmonized System based)"
+        },
+        "tur": "tarife_cetveli",
+        "kurum_kod": "tb",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "cumhurbaskani_karari",
+        "karar_sayisi": "3350",
+        "ad": {
+          "tr": "İthalat Rejimi Kararı",
+          "en": "Import Regime Decree"
+        },
+        "resmi_gazete": null
+      }
+    ],
+    "yayin_durumu": "yayinda",
+    "checksum": {
+      "algoritma": "sha256",
+      "deger": "0dec51eb4cdb7b7dadd963e22d17fead7353e419e2c53064ec990acd7f62d354",
+      "kapsam": "kayitlar"
+    },
+    "uretim": null,
+    "parca": {
+      "tur": "fasil",
+      "kod": "77",
+      "bolum_kod": "XV",
+      "ana_dosya": "../../gtip-kodlari.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "77",
+      "ust_kod": "XV",
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 24338,
+      "yaprak": true,
+      "tanim_tr": "İleride kullanılabilir,yeri muhafaza edilecek",
+      "tanim_en": "It can be used in the future; its location will be preserved.",
+      "olcu_birimi": null
+    }
+  ]
+}

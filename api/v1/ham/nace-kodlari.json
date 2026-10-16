@@ -1,0 +1,865 @@
+{
+  "meta": {
+    "$schema": "https://pdaas.com.tr/api/v1/meta/schema/pdaas-meta-1.3.0.json",
+    "schema_surumu": "1.3.0",
+    "servis": {
+      "kod": "nace-kodlari",
+      "ad": {
+        "tr": "NACE Kodları",
+        "en": "NACE Codes"
+      }
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "NACE Komisyonu",
+        "en": "NACE Committee"
+      },
+      "konsorsiyum": false,
+      "kurumlar": [
+        "hvmb",
+        "tuik"
+      ]
+    },
+    "katman": "ham",
+    "yapi": {
+      "tip": "agac",
+      "kod_sistemi": "nace",
+      "join": {
+        "alan": "kod",
+        "yontem": "tam"
+      },
+      "kapsam": [
+        "faaliyet"
+      ]
+    },
+    "surum": {
+      "surum": "2026.01.01",
+      "dosya_surumu": "1.0.0",
+      "onceki": "2024.01.01",
+      "guncelleme": "2026-01-01"
+    },
+    "zaman": {
+      "zaman_bazli": false,
+      "gecerlilik_baslangic": null,
+      "gecerlilik_bitis": null
+    },
+    "kaynaklar": [
+      {
+        "kod": "tuik-nace",
+        "ad": {
+          "tr": "NACE Rev.2.1 — Avrupa Topluluğunda Ekonomik Faaliyetlerin İstatistiki Sınıflaması (Türkiye ulusal uyarlaması, TÜİK)",
+          "en": "NACE Rev.2.1 — Statistical Classification of Economic Activities in the European Community (Turkish national adaptation, TurkStat)"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "ab_duzenlemesi",
+        "ad": {
+          "tr": "NACE Rev.2.1 (2023/137 sayılı AB düzenlemesi)",
+          "en": "NACE Rev.2.1 (EU Regulation No. 2023/137)"
+        },
+        "resmi_gazete": null
+      }
+    ],
+    "yayin_durumu": "yayinda",
+    "checksum": {
+      "algoritma": "sha256",
+      "deger": "ef7167256b48b39bca185c179eb3f36126b53fd4c72cba6176a9df17620150bd",
+      "kapsam": "kayitlar"
+    },
+    "uretim": null
+  },
+  "kayitlar": [
+    {
+      "kod": "01",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 1,
+      "yaprak": true,
+      "tanim_tr": "Tarım, bahçe ve bostan ürünler",
+      "tanim_en": "Agricultural, garden and vegetable products",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "02",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 2,
+      "yaprak": true,
+      "tanim_tr": "Canlı hayvanlar ve hayvansal ürünler (et hariç)",
+      "tanim_en": "Live animals and animal products (excluding meat)",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "03",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 3,
+      "yaprak": true,
+      "tanim_tr": "Ormancılık ve tomrukçuluk ürünleri",
+      "tanim_en": "Forestry and logging products",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "04",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 4,
+      "yaprak": true,
+      "tanim_tr": "Balık ve diğer balık ürünleri",
+      "tanim_en": "Fish and other fish products",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "11",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 5,
+      "yaprak": true,
+      "tanim_tr": "Kömür ve linyit; turba",
+      "tanim_en": "Coal and lignite; peat",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "12",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 6,
+      "yaprak": true,
+      "tanim_tr": "Ham petrol ve doğal gaz",
+      "tanim_en": "Crude oil and natural gas",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "13",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 7,
+      "yaprak": true,
+      "tanim_tr": "Uranyum ve toryum cevherleri ve konsantreleri",
+      "tanim_en": "Uranium and thorium ores and concentrates",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "14",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 8,
+      "yaprak": true,
+      "tanim_tr": "Metal cevherleri",
+      "tanim_en": "Metal ores",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "15",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 9,
+      "yaprak": true,
+      "tanim_tr": "Taş, kum ve kil",
+      "tanim_en": "Stone, sand, and clay",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "16",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 10,
+      "yaprak": true,
+      "tanim_tr": "Diğer mineraller",
+      "tanim_en": "Other minerals",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "17",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 11,
+      "yaprak": true,
+      "tanim_tr": "Elektrik, kasaba gazı, buhar ve sıcak su",
+      "tanim_en": "Electricity, town gas, steam and hot water.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "18",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 12,
+      "yaprak": true,
+      "tanim_tr": "Doğal su",
+      "tanim_en": "Natural water",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "21",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 13,
+      "yaprak": true,
+      "tanim_tr": "Et, balık, meyveler, sebzeler, sıvı ve katı yağlar",
+      "tanim_en": "Meat, fish, fruits, vegetables, liquid and solid fats",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "22",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 14,
+      "yaprak": true,
+      "tanim_tr": "Süt ürünleri ve yumurta ürünleri",
+      "tanim_en": "Dairy products and egg products",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "23",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 15,
+      "yaprak": true,
+      "tanim_tr": "Tahıl ürünleri, nişasta ve nişasta ürünleri; diğer gıda ürünleri",
+      "tanim_en": "Cereal products, starch and starch products; other food products",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "24",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 16,
+      "yaprak": true,
+      "tanim_tr": "İçecekler",
+      "tanim_en": "Beverages",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "25",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 17,
+      "yaprak": true,
+      "tanim_tr": "Tütün ürünleri",
+      "tanim_en": "Tobacco products",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "26",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 18,
+      "yaprak": true,
+      "tanim_tr": "İplik ve dikiş ipliği; dokuma ve taftelenmiş tekstil kumaşları",
+      "tanim_en": "Yarn and sewing thread; woven and tufted textile fabrics.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "27",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 19,
+      "yaprak": true,
+      "tanim_tr": "Giysi haricindeki tekstil ürünleri",
+      "tanim_en": "Textile products other than clothing",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "28",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 20,
+      "yaprak": true,
+      "tanim_tr": "Örgü veya tığ işi kumaşlar; giyim eşyası",
+      "tanim_en": "Knitted or crocheted fabrics; clothing items.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "29",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 21,
+      "yaprak": true,
+      "tanim_tr": "Deri ve deri ürünleri; ayakkabı",
+      "tanim_en": "Leather and leather products; footwear",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "31",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 22,
+      "yaprak": true,
+      "tanim_tr": "Ahşap, mantar, hasır ve örgü malzemesinden (saz, saman vb.) ürünler",
+      "tanim_en": "Products made from wood, cork, wicker, and woven materials (reed, straw, etc.).",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "32",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 23,
+      "yaprak": true,
+      "tanim_tr": "Kağıt hamuru, kağıt ve kağıt ürünleri; basılı malzemeler ve ilgili eşyalar",
+      "tanim_en": "Pulp, paper and paper products; printed materials and related articles.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "33",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 24,
+      "yaprak": true,
+      "tanim_tr": "Kok fırını ürünleri; rafine petrol ürünleri; nükleer yakıt",
+      "tanim_en": "Coke products; refined petroleum products; nuclear fuel",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "34",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 25,
+      "yaprak": true,
+      "tanim_tr": "Temel kimyasallar",
+      "tanim_en": "Basic chemicals",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "35",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 26,
+      "yaprak": true,
+      "tanim_tr": "Diğer kimyasal ürünler; insan yapımı elyaflar",
+      "tanim_en": "Other chemical products; man-made fibers",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "36",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 27,
+      "yaprak": true,
+      "tanim_tr": "Kauçuk ve plastik ürünler",
+      "tanim_en": "Rubber and plastic products",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "37",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 28,
+      "yaprak": true,
+      "tanim_tr": "Başka yerde sınıflandırılmamış cam ve cam ürünleri ile metal olmayan ürünler",
+      "tanim_en": "Glass and glass products and non-metallic products not classified elsewhere.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "38",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 29,
+      "yaprak": true,
+      "tanim_tr": "Mobilya; başka yerde sınıflandırılmamış diğer taşınabilir eşyalar",
+      "tanim_en": "Furniture; other movable articles not classified elsewhere.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "39",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 30,
+      "yaprak": true,
+      "tanim_tr": "Atık veya artık",
+      "tanim_en": "Waste or residue",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "41",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 31,
+      "yaprak": true,
+      "tanim_tr": "Ana metaller",
+      "tanim_en": "Main metals",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "42",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 32,
+      "yaprak": true,
+      "tanim_tr": "Fabrikasyon metal ürünler, makine ve ekipmanlar hariç",
+      "tanim_en": "Fabricated metal products, excluding machinery and equipment.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "43",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 33,
+      "yaprak": true,
+      "tanim_tr": "Genel amaçlı makineler",
+      "tanim_en": "General purpose machines",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "44",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 34,
+      "yaprak": true,
+      "tanim_tr": "Özel amaçlı makineler",
+      "tanim_en": "Special purpose machines",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "45",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 35,
+      "yaprak": true,
+      "tanim_tr": "Büro, muhasebe ve hesaplama makineleri",
+      "tanim_en": "Office, accounting and calculating machines.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "46",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 36,
+      "yaprak": true,
+      "tanim_tr": "Elektrikli makine ve cihazlar",
+      "tanim_en": "Electrical machines and devices",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "47",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 37,
+      "yaprak": true,
+      "tanim_tr": "Radyo, televizyon ve iletişim ekipman ve cihazları",
+      "tanim_en": "Radio, television and communication equipment and devices",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "48",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 38,
+      "yaprak": true,
+      "tanim_tr": "Tıbbi cihazlar, hassa ve optik aletler, kol ve cep saatleri ile duvar ve masa saatleri",
+      "tanim_en": "Medical devices, precision and optical instruments, wristwatches, pocket watches, and wall and table clocks.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "49",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 39,
+      "yaprak": true,
+      "tanim_tr": "Taşıma ekipmanları",
+      "tanim_en": "Transportation equipment",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "53",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 40,
+      "yaprak": true,
+      "tanim_tr": "İnşaat",
+      "tanim_en": "Building",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "54",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 41,
+      "yaprak": true,
+      "tanim_tr": "İnşaat hizmetleri",
+      "tanim_en": "Construction services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "61",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 42,
+      "yaprak": true,
+      "tanim_tr": "Toptan satış hizmetleri",
+      "tanim_en": "Wholesale services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "62",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 43,
+      "yaprak": true,
+      "tanim_tr": "Perakende satış hizmetleri",
+      "tanim_en": "Retail sales services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "63",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 44,
+      "yaprak": true,
+      "tanim_tr": "Konaklama, gıda ve içecek hizmetleri",
+      "tanim_en": "Accommodation, food and beverage services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "64",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 45,
+      "yaprak": true,
+      "tanim_tr": "Yolcu taşıma hizmetleri",
+      "tanim_en": "Passenger transportation services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "65",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 46,
+      "yaprak": true,
+      "tanim_tr": "Yük taşımacılığı hizmetleri",
+      "tanim_en": "Freight transportation services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "66",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 47,
+      "yaprak": true,
+      "tanim_tr": "Taşımacılık araçları kiralama hizmetleri, şoförü ile birlikte",
+      "tanim_en": "Transportation vehicle rental services, including driver.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "67",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 48,
+      "yaprak": true,
+      "tanim_tr": "Taşımacılık destekleme hizmetleri",
+      "tanim_en": "Transportation support services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "68",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 49,
+      "yaprak": true,
+      "tanim_tr": "Posta ve kurye hizmetleri",
+      "tanim_en": "Postal and courier services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "69",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 50,
+      "yaprak": true,
+      "tanim_tr": "Elektrik, gaz ve su dağıtım hizmetleri (kendi hesabına)",
+      "tanim_en": "Electricity, gas and water distribution services (at his/her own expense)",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "71",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 51,
+      "yaprak": true,
+      "tanim_tr": "Finans ve ilgili hizmetler",
+      "tanim_en": "Finance and related services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "72",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 52,
+      "yaprak": true,
+      "tanim_tr": "Gayrimenkul hizmetleri",
+      "tanim_en": "Real estate services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "73",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 53,
+      "yaprak": true,
+      "tanim_tr": "Leasing veya kiralama hizmetleri, operatörü olmaksızın",
+      "tanim_en": "Leasing or rental services, without an operator",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "81",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 54,
+      "yaprak": true,
+      "tanim_tr": "Araştırma ve deneysel geliştirme hizmetleri,",
+      "tanim_en": "Research and experimental development services,",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "82",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 55,
+      "yaprak": true,
+      "tanim_tr": "Hukuki hizmetler ve muhasebe hizmetleri",
+      "tanim_en": "Legal services and accounting services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "83",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 56,
+      "yaprak": true,
+      "tanim_tr": "Diğe profesyonel, teknik ve işletme hizmetleri",
+      "tanim_en": "Other professional, technical and operational services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "84",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 57,
+      "yaprak": true,
+      "tanim_tr": "Telekomünikasyon, yayıncılık ve bilgi tedarik hizmetleri",
+      "tanim_en": "Telecommunications, broadcasting and information supply services.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "85",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 58,
+      "yaprak": true,
+      "tanim_tr": "Destek hizmetleri",
+      "tanim_en": "Support services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "86",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 59,
+      "yaprak": true,
+      "tanim_tr": "Tarım, avcılık, ormancılık, balıkçılık, madencilik ile elektrik, su ve gaz dağıtımı ile ilgili destek hizmetleri",
+      "tanim_en": "Support services related to agriculture, hunting, forestry, fishing, mining, and electricity, water, and gas distribution.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "87",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 60,
+      "yaprak": true,
+      "tanim_tr": "Bakım, onarım ve kurulum (inşaat hariç) hizmetleri",
+      "tanim_en": "Maintenance, repair and installation (excluding construction) services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "88",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 61,
+      "yaprak": true,
+      "tanim_tr": "İmalat sanayi hizmet faaliyetleri ( başkalarına ait kaynaklar üzerinde işlem yapma)",
+      "tanim_en": "Manufacturing industry service activities (operating on resources belonging to others)",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "89",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 62,
+      "yaprak": true,
+      "tanim_tr": "Diğer imalat hizmetleri; yayımcılık, basım ve çoğaltma hizmetleri; malzeme kurtarma hizmetleri",
+      "tanim_en": "Other manufacturing services; publishing, printing and reproduction services; material recovery services.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "91",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 63,
+      "yaprak": true,
+      "tanim_tr": "Bir bütün olarak topluma yönelik idari ve diğer hizmetler; zorunlu sosyal güvenlik hizmetleri",
+      "tanim_en": "Administrative and other services for society as a whole; compulsory social security services.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "92",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 64,
+      "yaprak": true,
+      "tanim_tr": "Eğitim hizmetleri",
+      "tanim_en": "Educational services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "93",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 65,
+      "yaprak": true,
+      "tanim_tr": "İnsan sağlığı ve sosyal bakım hizmetleri",
+      "tanim_en": "Human health and social care services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "94",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 66,
+      "yaprak": true,
+      "tanim_tr": "Kanalizasyon ve atık toplama, işleme ve bertarafı ve diğer çevre koruma hizmetleri",
+      "tanim_en": "Sewerage and waste collection, processing and disposal, and other environmental protection services.",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "95",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 67,
+      "yaprak": true,
+      "tanim_tr": "Üye olunan kuruluşların hizmetleri",
+      "tanim_en": "Services of member organizations",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "96",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 68,
+      "yaprak": true,
+      "tanim_tr": "Eğlence, kültür ve spor faaliyetleri",
+      "tanim_en": "Entertainment, cultural and sports activities",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "97",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 69,
+      "yaprak": true,
+      "tanim_tr": "Diğer hizmetler",
+      "tanim_en": "Other services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "98",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 70,
+      "yaprak": true,
+      "tanim_tr": "Eviçi hizmetler",
+      "tanim_en": "Domestic services",
+      "olcu_birimi": null
+    },
+    {
+      "kod": "99",
+      "ust_kod": null,
+      "seviye": 2,
+      "seviye_adi": "fasil",
+      "sira": 71,
+      "yaprak": true,
+      "tanim_tr": "Uluslararası örgütler ve temsilcilikler tarafından sağlanan hizmetler",
+      "tanim_en": "Services provided by international organizations and representations",
+      "olcu_birimi": null
+    }
+  ]
+}
