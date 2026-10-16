@@ -91,7 +91,7 @@
     const dil = () => getDil();
 
     // ============================================================
-    // i18n ANAHTARLARI
+    // i18n
     // ============================================================
     Object.assign(UI.tr, {
       sayfa_baslik: "Ürün & Hizmet Kartı",
@@ -301,12 +301,40 @@
     const VERGI_KAYNAKLARI = new Set(['gtip', 'cpc']);
     const OTV_KAYNAKLARI   = new Set(['gtip']);
 
+    // ============================================================
+    // STOP WORDS — eşleştirmeye katılmayacak genel/vasıf kelimeleri
+    // "yeni", "eski", "kullanılmış" gibi sıfatlar bir ürünün ana
+    // kimliğini taşımadığı için hariç tutuluyor.
+    // ============================================================
     const STOP_WORDS = new Set([
-      've', 'ile', 'için', 'bir', 'bu', 'şu', 'veya', 'diğer', 'çok', 'az',
-      'göre', 'dahil', 'hariç', 'olmayan', 'olmak', 'üzere',
+      // Türkçe bağlaç/edat
+      've', 'ile', 'için', 'bir', 'bu', 'şu', 'veya', 'göre', 'dahil', 'hariç',
+      'olmayan', 'olmak', 'üzere', 'ait', 'ilişkin', 'yönelik', 'gibi', 'kadar',
+      // Türkçe sıfat/vasıf
+      'yeni', 'eski', 'kullanılmış', 'kullanılmamış', 'orijinal', 'sadece',
+      'diğer', 'çok', 'az', 'büyük', 'küçük', 'hafif', 'ağır', 'uzun', 'kısa',
+      'ince', 'kalın', 'sert', 'yumuşak', 'sıvı', 'katı', 'kuru', 'yaş',
+      'taze', 'doğal', 'yapay', 'suni', 'sentetik', 'saf', 'karışık',
+      'imal', 'edilmiş', 'yapılmış', 'imalatı', 'yapımı', 'üretimi',
+      // İngilizce
       'the', 'and', 'for', 'a', 'an', 'of', 'to', 'in', 'on', 'or', 'with',
-      'other', 'than', 'not', 'including', 'excluding'
+      'other', 'than', 'not', 'including', 'excluding', 'new', 'old', 'used',
     ]);
+
+    // Türkçe metni kelimelere ayır
+    function kelimelereAyir(metin) {
+      return String(metin || '')
+        .toLocaleLowerCase('tr-TR')
+        .split(/[^\p{L}\p{N}]+/u)
+        .map(w => w.trim())
+        .filter(w => w.length >= 4 && !STOP_WORDS.has(w) && !/^\d+$/.test(w));
+    }
+
+    function kelimeSeti(metin) {
+      const set = new Set();
+      for (const w of kelimelereAyir(metin)) set.add(w);
+      return set;
+    }
 
     // ============================================================
     // VERİ KAYNAKLARI
@@ -594,18 +622,24 @@
       return sonuclar;
     }
 
+    // ============================================================
+    // İLİŞKİLİ KODLAR — TAM KELİME EŞLEŞMESİ
+    // ============================================================
     function iliskiliKodlarBul(secilenKaynak, secilenKayit) {
-      const ad = tr_lower(kayitAdi(secilenKayit));
-      const kelimeler = ad.split(/[\s,;()/\-.]+/).map(w => w.trim())
-        .filter(w => w.length >= 4 && !/^\d+$/.test(w) && !STOP_WORDS.has(w));
+      const kelimeler = kelimelereAyir(kayitAdi(secilenKayit));
       if (!kelimeler.length) return [];
+
       const kaynaklar = ['gtip', 'cpc', 'nace', 'isco'].filter(k => k !== secilenKaynak);
       const sonuc = [];
+
       for (const k of kaynaklar) {
         const eslesenler = [];
         for (const r of VERI[k].kayitlar) {
-          const rAd = tr_lower(kayitAdi(r));
-          if (kelimeler.some(w => rAd.includes(w))) {
+          const hedefSet = kelimeSeti(kayitAdi(r));
+          // En az 2 anlamlı kelime eşleşmeli VEYA 1 tane ama minimum 5 karakterli olmalı
+          const ortak = kelimeler.filter(w => hedefSet.has(w));
+          const anlamli = ortak.filter(w => w.length >= 5);
+          if (ortak.length >= 2 || anlamli.length >= 1) {
             eslesenler.push(r);
             if (eslesenler.length >= 3) break;
           }
@@ -812,7 +846,7 @@
     }
 
     // ============================================================
-    // MODAL — KART
+    // MODAL
     // ============================================================
     async function detayGoster(s) {
       SECILI = s;
@@ -859,17 +893,13 @@
       document.body.style.overflow = '';
     }
 
-    // ============================================================
-    // KART ÜRETİMİ
-    // ============================================================
     function kartUret(secim, iliskili) {
       const { kaynak, kayit } = secim;
       const kod = normKod(kayit.kod);
       const kartTip = KART_TIPI[kaynak];
       const satirlar = [];
 
-      // Sadece "Standart Alan Adı" başlığı ile başla — Kod/Ad/Fiziki mal satırları kaldırıldı
-      satirlar.push({ tip: 'baslik', metin: t('alan_adi') });
+      // "alan_adi" başlığı KALDIRILDI — tablo zaten kendi başlığını taşıyor
       satirlar.push(...kaynakBazliAlanlar(secim, iliskili));
 
       // VERGİ
@@ -990,9 +1020,6 @@
         </div>`;
     }
 
-    // ============================================================
-    // KAYNAK BAZLI ALANLAR (yeni düzen)
-    // ============================================================
     function kaynakBazliAlanlar(secim, iliskili) {
       const { kaynak, kayit } = secim;
       const kod = normKod(kayit.kod);
@@ -1000,7 +1027,6 @@
       const adEN = kayit.tanim_en || kayit.ad_en || kayit.tanim || '';
       const satirlar = [];
 
-      // İlişkili NACE kaydını bul (varsa)
       const naceGrup = iliskili.find(g => g.kaynak === 'nace');
       const naceKayit = naceGrup && naceGrup.kayitlar.length ? naceGrup.kayitlar[0] : null;
       const naceKod = naceKayit ? normKod(naceKayit.kod) : '';
@@ -1008,30 +1034,22 @@
       const naceEN = naceKayit ? (naceKayit.tanim_en || naceKayit.ad_en || naceKayit.tanim || '') : '';
 
       if (kaynak === 'gtip') {
-        // 1) GTİP Kodu — yeşil vurgulu
         satirlar.push({ alan: t('gtip_kod'), deger: kod, kurum: `${t('kurum_ticaret')} / ${t('kurum_tuik')}`, vurgu: 'kod' });
-        // 2) Ürün Adı (TR)
         satirlar.push({ alan: t('urun_ad_tr'), deger: adTR, kurum: t('kurum_ticaret') });
-        // 3) Ürün Adı (EN)
         satirlar.push({ alan: t('urun_ad_en'), deger: adEN, kurum: t('kurum_ticaret') });
-        // 4) NACE Kodu — yeşil vurgulu (varsa)
         if (naceKod) {
           satirlar.push({ alan: t('nace_kod'), deger: naceKod, kurum: t('kurum_tuik'), vurgu: 'kod' });
           satirlar.push({ alan: t('faaliyet_ad_tr'), deger: naceTR, kurum: t('kurum_tuik') });
           satirlar.push({ alan: t('faaliyet_ad_en'), deger: naceEN, kurum: t('kurum_tuik') });
         }
-        // Ek alanlar
         if (kayit.olcu_birimi) satirlar.push({ alan: t('olcu_birimi'), deger: kayit.olcu_birimi, kurum: t('kurum_ticaret') });
         if (kayit.standart_kodu || kayit.zorunlu_standart) satirlar.push({ alan: t('zorunlu_standart'), deger: kayit.standart_kodu || kayit.zorunlu_standart, kurum: t('kurum_tse') });
       }
 
       if (kaynak === 'cpc') {
-        // 1) CPC Kodu — yeşil vurgulu
         satirlar.push({ alan: t('cpc_kod'), deger: kod, kurum: t('kurum_tuik'), vurgu: 'kod' });
-        // 2) Hizmet Adı (TR/EN)
         satirlar.push({ alan: t('hizmet_ad_tr'), deger: adTR, kurum: t('kurum_ticaret') });
         satirlar.push({ alan: t('hizmet_ad_en'), deger: adEN, kurum: t('kurum_ticaret') });
-        // 3) NACE Kodu — yeşil vurgulu (varsa)
         if (naceKod) {
           satirlar.push({ alan: t('nace_kod'), deger: naceKod, kurum: t('kurum_tuik'), vurgu: 'kod' });
           satirlar.push({ alan: t('faaliyet_ad_tr'), deger: naceTR, kurum: t('kurum_tuik') });
@@ -1077,7 +1095,6 @@
         const bosMu = !s.deger || s.deger === '' || s.deger === '—';
 
         if (s.vurgu === 'kod') {
-          // Kod satırı — yeşil vurgulu, 3 sütun (kod, kurum gösterilir)
           return `<tr class="bg-win-dark/20 hover:bg-win-hover/40 transition">
             <td class="px-4 py-3 align-top text-slate-400 text-xs font-semibold whitespace-nowrap">${kacis(s.alan)}</td>
             <td class="px-4 py-3 align-top font-mono text-base text-emerald-300 font-bold">${kacis(s.deger)}</td>
