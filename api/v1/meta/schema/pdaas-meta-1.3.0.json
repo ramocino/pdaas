@@ -53,7 +53,7 @@
       "required": ["tip", "kod_sistemi", "join", "kapsam"],
       "properties": {
         "tip": { "enum": ["agac", "harita", "liste"] },
-        "kod_sistemi": { "enum": ["gtip", "cpc", "nace", "isco", "sgk", "diger"] },
+        "kod_sistemi": { "enum": ["gtip", "cpc", "nace", "isco", "sgk", "csgb", "gib", "hvmb", "diger"] },
         "join": {
           "type": "object",
           "additionalProperties": false,
@@ -67,7 +67,7 @@
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,
-          "items": { "enum": ["urun", "hizmet", "faaliyet", "meslek", "sosyal_guvenlik"] }
+          "items": { "enum": ["urun", "hizmet", "faaliyet", "meslek", "sosyal_guvenlik", "vergi", "calisma", "ucret", "ticaret", "damga_vergisi"] }
         }
       }
     },
