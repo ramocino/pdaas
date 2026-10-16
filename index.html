@@ -309,7 +309,7 @@
     // ⚙️ MERKEZİ KONFİGÜRASYON (Yeni yapıya göre güncellendi)
     // =================================================================
     const CONFIG = {
-      API_BASE_URL: '', // Göreceli yol kullan (Render'da kök dizinden çalışır)
+      API_BASE_URL: window.location.origin, // Göreceli yol kullan (Render'da kök dizinden çalışır)
       KATALOG_ENDPOINT: '/api/v1/katalog.json', // Yeni katalog dosya yolu
       LANG_STORAGE_KEY: 'pdaas_dil',
       PAGE_SIZE: 100,
