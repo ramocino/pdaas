@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "$schema": "https://pdaas.com.tr/api/v1/meta/schema/pdaas-meta-1.3.0.json",
+    "schema_surumu": "1.3.0",
+    "servis": {
+      "kod": "kdv-tevkifat-oranlari",
+      "ad": {
+        "tr": "KDV Tevkifat Oranları",
+        "en": "VAT Withholding Rates"
+      }
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "konsorsiyum": false,
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "katman": "ham",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gib",
+      "join": {
+        "alan": "kod",
+        "yontem": "tam"
+      },
+      "kapsam": [
+        "vergi"
+      ]
+    },
+    "surum": {
+      "surum": "2026.01.01",
+      "dosya_surumu": "1.0.0",
+      "onceki": null,
+      "guncelleme": "2026-01-01"
+    },
+    "zaman": {
+      "zaman_bazli": true,
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-tevkifat",
+        "ad": {
+          "tr": "KDV Genel Uygulama Tebliği — Tevkifat oranları (Seri No: 1, ilgili bölümler)",
+          "en": "VAT General Implementation Communiqué — Withholding rates (Serial No: 1, relevant sections)"
+        },
+        "tur": "genel_teblig",
+        "kurum_kod": "gib",
+        "url": null,
+        "resmi_gazete": "29425",
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-kdv-tevkifat-rehber",
+        "ad": {
+          "tr": "KDV Tevkifat Uygulaması Rehberi",
+          "en": "VAT Withholding Application Guide"
+        },
+        "tur": "rehber",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": null,
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "genel_teblig",
+        "ad": {
+          "tr": "Katma Değer Vergisi Genel Uygulama Tebliği (Seri No: 1)",
+          "en": "Value Added Tax General Implementation Communiqué (Serial No: 1)"
+        },
+        "resmi_gazete": "29425",
+        "tarih": "2015-07-23"
+      }
+    ],
+    "yayin_durumu": "yayinda",
+    "checksum": {
+      "algoritma": "sha256",
+      "deger": "f14fadd384ce07009f3bf86c368d0ab6eb520569ba0b6f37ff1e5c31fc4075df",
+      "kapsam": "kayitlar"
+    },
+    "uretim": null
+  },
+  "kayitlar": [
+    {
+      "kod": "TEV-01",
+      "ad_tr": "Yapım işleri ve hafriyat",
+      "ad_en": "Construction works and excavation",
+      "oran": 0.4,
+      "oran_kesir": "4/10",
+      "kategori": "yapim_isleri",
+      "kanun_dayanagi_tr": "KDV Genel Uygulama Tebliği — I/C-2.1.3.2",
+      "kanun_dayanagi_en": "VAT General Implementation Communiqué — I/C-2.1.3.2"
+    },
+    {
+      "kod": "TEV-02",
+      "ad_tr": "Temizlik, bahçe bakım hizmetleri",
+      "ad_en": "Cleaning and landscaping services",
+      "oran": 0.9,
+      "oran_kesir": "9/10",
+      "kategori": "temizlik",
+      "kanun_dayanagi_tr": "KDV Genel Uygulama Tebliği — I/C-2.1.3.3",
+      "kanun_dayanagi_en": "VAT General Implementation Communiqué — I/C-2.1.3.3"
+    },
+    {
+      "kod": "TEV-03",
+      "ad_tr": "Makine, teçhizat bakım onarım",
+      "ad_en": "Machinery and equipment maintenance",
+      "oran": 0.7,
+      "oran_kesir": "7/10",
+      "kategori": "bakim_onarim",
+      "kanun_dayanagi_tr": "KDV Genel Uygulama Tebliği — I/C-2.1.3.2",
+      "kanun_dayanagi_en": "VAT General Implementation Communiqué — I/C-2.1.3.2"
+    },
+    {
+      "kod": "TEV-04",
+      "ad_tr": "Yemek servis hizmetleri",
+      "ad_en": "Catering services",
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "kategori": "yemek_servisi",
+      "kanun_dayanagi_tr": "KDV Genel Uygulama Tebliği — I/C-2.1.3.3",
+      "kanun_dayanagi_en": "VAT General Implementation Communiqué — I/C-2.1.3.3"
+    },
+    {
+      "kod": "TEV-05",
+      "ad_tr": "Yolcu taşımacılığı",
+      "ad_en": "Passenger transport",
+      "oran": 0.2,
+      "oran_kesir": "2/10",
+      "kategori": "yolcu_tasima",
+      "kanun_dayanagi_tr": "KDV Genel Uygulama Tebliği — I/C-2.1.3.3",
+      "kanun_dayanagi_en": "VAT General Implementation Communiqué — I/C-2.1.3.3"
+    },
+    {
+      "kod": "TEV-06",
+      "ad_tr": "Konaklama hizmetleri",
+      "ad_en": "Accommodation services",
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "kategori": "konaklama",
+      "kanun_dayanagi_tr": "KDV Genel Uygulama Tebliği — I/C-2.1.3.3",
+      "kanun_dayanagi_en": "VAT General Implementation Communiqué — I/C-2.1.3.3"
+    },
+    {
+      "kod": "TEV-07",
+      "ad_tr": "Danışmanlık hizmetleri",
+      "ad_en": "Consultancy services",
+      "oran": 0.9,
+      "oran_kesir": "9/10",
+      "kategori": "danismanlik",
+      "kanun_dayanagi_tr": "KDV Genel Uygulama Tebliği — I/C-2.1.3.3",
+      "kanun_dayanagi_en": "VAT General Implementation Communiqué — I/C-2.1.3.3"
+    }
+  ],
+  "notlar_tr": [
+    "KDV tevkifatı, 3065 sayılı KDV Kanunu'nun 9. maddesi uyarınca, belirli mal ve hizmet teslimlerinde alıcının vergi sorumlusu sıfatıyla KDV'yi beyan edip ödemesi uygulamasıdır.",
+    "Tevkifat oranları; KDV Genel Uygulama Tebliği'nde belirlenmiş olup '4/10', '7/10', '9/10' gibi kesirlerle ifade edilir. Ondalık karşılıkları sırasıyla 0.40, 0.70, 0.90'dır.",
+    "Tevkifat, yalnızca Tebliğ'de belirlenen alıcı grupları (kamu kurumları, vergi mükellefleri vb.) tarafından uygulanır; her alıcı tevkifat yapmaz.",
+    "Yapım işlerinde tevkifat oranı ayrıca Tebliğ'in ilgili bölümlerinde düzenlenmiştir; belediyeler ve diğer kamu kurumları ile yapılan işlerde farklılık gösterebilir.",
+    "Tevkifat oranları zaman içinde değişebilir; uygulamada güncel Genel Tebliğ ve sirkülerler takip edilmelidir.",
+    "Bu liste bilgilendirme amaçlıdır; resmî işlemler için GİB yayınları esas alınmalıdır."
+  ],
+  "notlar_en": [
+    "VAT withholding is the practice, under Article 9 of VAT Law No. 3065, whereby the buyer declares and pays the VAT as the tax responsible party in certain deliveries of goods and services.",
+    "Withholding rates are set out in the VAT General Implementation Communiqué and expressed as fractions such as '4/10', '7/10', '9/10'. Their decimal equivalents are 0.40, 0.70, 0.90 respectively.",
+    "Withholding is applied only by buyer groups specified in the Communiqué (public institutions, taxpayers, etc.); not every buyer withholds.",
+    "In construction works, the withholding rate is regulated in the relevant sections of the Communiqué; it may differ for works carried out with municipalities and other public institutions.",
+    "Withholding rates may change over time; current General Communiqués and circulars must be followed in practice.",
+    "This list is for informational purposes; GİB publications should be taken as the basis for official transactions."
+  ]
+}

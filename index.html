@@ -291,6 +291,16 @@
               </div>
             </div>
           </div>
+
+          <!-- NOTLAR -->
+          <div id="service-notlar" class="hidden bg-win-card border border-win-border rounded-lg p-4 space-y-2">
+            <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+              <span>📝</span>
+              <span data-i18n="notlar_title">Bilgi Notları</span>
+            </h3>
+            <ul id="notlar-list" class="text-xs text-slate-300 space-y-1.5 list-disc list-inside leading-relaxed"></ul>
+          </div>
+
         </div>
       </div>
     </main>
@@ -306,11 +316,11 @@
 
   <script>
     // =================================================================
-    // ⚙️ MERKEZİ KONFİGÜRASYON (Yeni yapıya göre güncellendi)
+    // ⚙️ MERKEZİ KONFİGÜRASYON
     // =================================================================
     const CONFIG = {
-      API_BASE_URL: window.location.origin, // Göreceli yol kullan (Render'da kök dizinden çalışır)
-      KATALOG_ENDPOINT: '/api/v1/katalog.json', // Yeni katalog dosya yolu
+      API_BASE_URL: window.location.origin,
+      KATALOG_ENDPOINT: '/api/v1/katalog.json',
       LANG_STORAGE_KEY: 'pdaas_dil',
       PAGE_SIZE: 100,
     };
@@ -333,7 +343,7 @@
     const UI = {
       tr: {
         portal_alt: "Parametrik Veri Servisi Portalı",
-        nav_portal:"Portal",
+        nav_portal: "Portal",
         system_active: "Sistem Aktif",
         catalog_title: "Veri Kataloğu",
         catalog_search: "Veri seti ara...",
@@ -379,10 +389,13 @@
         error_copy: "Kopyalanamadı",
         no_service: "Bu kategoride eşleşen servis bulunamadı",
         no_matches: "Eşleşen veri seti bulunamadı. Farklı bir arama deneyin.",
+        notlar_title: "Bilgi Notları",
+        nested_fields: "alan",
+        nested_items: "öğe",
       },
       en: {
         portal_alt: "Parametric Data Service Portal",
-        nav_portal:"Portal",
+        nav_portal: "Portal",
         system_active: "System Active",
         catalog_title: "Data Catalog",
         catalog_search: "Search dataset...",
@@ -428,6 +441,9 @@
         error_copy: "Copy failed",
         no_service: "No matching service in this category",
         no_matches: "No dataset found. Try a different search.",
+        notlar_title: "Information Notes",
+        nested_fields: "fields",
+        nested_items: "items",
       }
     };
 
@@ -438,66 +454,118 @@
 
     // Kod sistemleri için görsel haritalama
     const KOD_SISTEMI_MAP = {
-      'gtip': { ad: 'GTİP Kodları', ikon: '🚢' },
-      'cpc': { ad: 'CPC Kodları', ikon: '📊' },
-      'nace': { ad: 'NACE Kodları', ikon: '🏭' },
-      'isco': { ad: 'ISCO Kodları', ikon: '🤝' },
-      'sgk': { ad: 'SGK Verileri', ikon: '🩺' },
-      'diger': { ad: 'Diğer Veriler', ikon: '🏛️' }
+      'gtip':  { ad: 'GTİP Kodları',         ikon: '🚢' },
+      'cpc':   { ad: 'CPC Kodları',          ikon: '📊' },
+      'nace':  { ad: 'NACE Kodları',         ikon: '🏭' },
+      'isco':  { ad: 'ISCO Kodları',         ikon: '🤝' },
+      'sgk':   { ad: 'SGK Verileri',         ikon: '🩺' },
+      'csgb':  { ad: 'ÇSGB Verileri',        ikon: '💼' },
+      'gib':   { ad: 'GİB Vergi Tarifeleri', ikon: '🧾' },
+      'hvmb':  { ad: 'HMB Verileri',         ikon: '💰' },
+      'tuik':  { ad: 'TÜİK Verileri',        ikon: '📈' },
+      'diger': { ad: 'Diğer Veriler',        ikon: '🏛️' }
     };
 
     const ALAN_ETIKET_TR = {
       kod: 'Kod', ust_kod: 'Üst Kod', seviye: 'Seviye', seviye_adi: 'Seviye Adı',
-      sira: 'Sıra', ad_tr: 'Ad (TR)', ad_en: 'Ad (EN)',
+      sira: 'Sıra', yaprak: 'Yaprak', ad_tr: 'Ad (TR)', ad_en: 'Ad (EN)',
       tanim_tr: 'Tanım (TR)', tanim_en: 'Tanım (EN)',
       aciklama_tr: 'Açıklama (TR)', aciklama_en: 'Açıklama (EN)',
       kategori: 'Kategori', oran: 'Oran', oran_binde: 'Binde Oran',
       matrah_alt_sinir_tl: 'Matrah Alt (₺)', matrah_ust_sinir_tl: 'Matrah Üst (₺)',
       sabit_vergi_tl: 'Sabit Vergi (₺)', olcu_birimi: 'Ölçü Birimi',
       para_birimi: 'Para Birimi', periyot: 'Periyot', tip: 'Tip', liste: 'Liste',
-      kaynak: 'Kaynak', gecerlilik: 'Geçerlilik', deger: 'Değer',
+      kaynak: 'Kaynak', gecerlilik: 'Geçerlilik', deger: 'Değer', birim: 'Birim',
       gtip_prefix: 'GTİP Öneki', cpc_prefix: 'CPC Öneki', nace_prefix: 'NACE Öneki',
       isco_prefix: 'ISCO Öneki', kdv_kodu: 'KDV Kodu', otv_kodu: 'ÖTV Kodu',
       oncelik: 'Öncelik', aciklama: 'Açıklama', ad: 'Ad', islem: 'İşlem',
+      dayanak_tr: 'Dayanak (TR)', dayanak_en: 'Dayanak (EN)',
+      kanun_dayanagi_tr: 'Kanun Dayanağı (TR)', kanun_dayanagi_en: 'Kanun Dayanağı (EN)',
+      matrah_tr: 'Matrah (TR)', matrah_en: 'Matrah (EN)',
+      kapsam_tr: 'Kapsam (TR)', kapsam_en: 'Kapsam (EN)',
+      vergi_tipi: 'Vergi Tipi', vergi_tipi_en: 'Vergi Tipi (EN)',
+      maktu_tutar_tl: 'Maktu Tutar (₺)', asgari_maktu: 'Asgari Maktu', maktu: 'Maktu',
+      kdv_orani: 'KDV Oranı', mevzuat: 'Mevzuat', mevzuat_en: 'Mevzuat (EN)',
+      guncel_oranlar: 'Güncel Oranlar', matrah_dilimleri: 'Matrah Dilimleri',
+      max_matrah: 'Azami Matrah', min_matrah: 'Asgari Matrah',
+      mal_ismi_tr: 'Mal İsmi (TR)', mal_ismi_en: 'Mal İsmi (EN)', gtip: 'GTİP',
+      ornekler_tr: 'Örnekler (TR)', ornekler_en: 'Örnekler (EN)',
+      islem_tr: 'İşlem (TR)', islem_en: 'İşlem (EN)',
+      bilesenler: 'Bileşenler',
+      myo_isci_pay: 'MYÖ İşçi Payı', gss_isci_pay: 'GSS İşçi Payı',
+      gecerlilik_baslangic: 'Geçerlilik Başlangıcı', gecerlilik_bitis: 'Geçerlilik Bitişi',
     };
     const ALAN_ETIKET_EN = {
       kod: 'Code', ust_kod: 'Parent Code', seviye: 'Level', seviye_adi: 'Level Name',
-      sira: 'Order', ad_tr: 'Name (TR)', ad_en: 'Name (EN)',
+      sira: 'Order', yaprak: 'Leaf', ad_tr: 'Name (TR)', ad_en: 'Name (EN)',
       tanim_tr: 'Description (TR)', tanim_en: 'Description (EN)',
       aciklama_tr: 'Explanation (TR)', aciklama_en: 'Explanation (EN)',
       kategori: 'Category', oran: 'Rate', oran_binde: 'Rate (per mille)',
       matrah_alt_sinir_tl: 'Base Min (₺)', matrah_ust_sinir_tl: 'Base Max (₺)',
       sabit_vergi_tl: 'Fixed Tax (₺)', olcu_birimi: 'Unit',
       para_birimi: 'Currency', periyot: 'Period', tip: 'Type', liste: 'Schedule',
-      kaynak: 'Source', gecerlilik: 'Validity', deger: 'Value',
+      kaynak: 'Source', gecerlilik: 'Validity', deger: 'Value', birim: 'Unit',
       gtip_prefix: 'HS Prefix', cpc_prefix: 'CPC Prefix', nace_prefix: 'NACE Prefix',
       isco_prefix: 'ISCO Prefix', kdv_kodu: 'VAT Code', otv_kodu: 'SCT Code',
       oncelik: 'Priority', aciklama: 'Explanation', ad: 'Name', islem: 'Operation',
+      dayanak_tr: 'Legal Basis (TR)', dayanak_en: 'Legal Basis (EN)',
+      kanun_dayanagi_tr: 'Legal Reference (TR)', kanun_dayanagi_en: 'Legal Reference (EN)',
+      matrah_tr: 'Tax Base (TR)', matrah_en: 'Tax Base (EN)',
+      kapsam_tr: 'Scope (TR)', kapsam_en: 'Scope (EN)',
+      vergi_tipi: 'Tax Type', vergi_tipi_en: 'Tax Type (EN)',
+      maktu_tutar_tl: 'Fixed Amount (₺)', asgari_maktu: 'Min. Fixed', maktu: 'Fixed',
+      kdv_orani: 'VAT Rate', mevzuat: 'Legislation', mevzuat_en: 'Legislation (EN)',
+      guncel_oranlar: 'Current Rates', matrah_dilimleri: 'Base Brackets',
+      max_matrah: 'Max Base', min_matrah: 'Min Base',
+      mal_ismi_tr: 'Product Name (TR)', mal_ismi_en: 'Product Name (EN)', gtip: 'HS Code',
+      ornekler_tr: 'Examples (TR)', ornekler_en: 'Examples (EN)',
+      islem_tr: 'Transaction (TR)', islem_en: 'Transaction (EN)',
+      bilesenler: 'Components',
+      myo_isci_pay: 'DPI Employee Share', gss_isci_pay: 'GHI Employee Share',
+      gecerlilik_baslangic: 'Validity Start', gecerlilik_bitis: 'Validity End',
     };
 
     const SCHEMA_ACIKLAMA_TR = {
       kod: 'Benzersiz kod / kod kimliği', ust_kod: 'Üst kategori kodu (ağaç bağlantısı)',
       seviye: 'Hiyerarşi seviyesi (1=kök)', seviye_adi: 'Seviye adı (bölüm, fasıl, grup...)',
-      sira: 'Görüntüleme sırası', tanim_tr: 'Türkçe tanım', tanim_en: 'İngilizce tanım',
+      sira: 'Görüntüleme sırası', yaprak: 'Alt kaydı olmayan uç kayıt',
+      tanim_tr: 'Türkçe tanım', tanim_en: 'İngilizce tanım',
       ad_tr: 'Türkçe ad', ad_en: 'İngilizce ad', aciklama_tr: 'Türkçe açıklama',
       aciklama_en: 'İngilizce açıklama', oran: 'Vergi oranı (ondalık)', oran_binde: 'Binde oran',
       olcu_birimi: 'Ölçü birimi', para_birimi: 'Para birimi (ISO 4217)',
       matrah_alt_sinir_tl: 'Matrah alt sınırı (₺)', matrah_ust_sinir_tl: 'Matrah üst sınırı (₺)',
       sabit_vergi_tl: 'Sabit vergi tutarı (₺)', kategori: 'Kategori etiketi',
       periyot: 'Dönem (aylık, yıllık, sabit)', tip: 'Veri yapısı tipi', liste: 'Liste numarası',
-      kaynak: 'Kaynak referansı', deger: 'Sayısal değer',
+      kaynak: 'Kaynak referansı', deger: 'Sayısal değer', birim: 'Ölçü birimi',
+      dayanak_tr: 'Yasal dayanak (TR)', dayanak_en: 'Yasal dayanak (EN)',
+      kanun_dayanagi_tr: 'Kanun maddesi referansı (TR)', kanun_dayanagi_en: 'Kanun maddesi referansı (EN)',
+      matrah_tr: 'Vergi matrahı tanımı (TR)', matrah_en: 'Vergi matrahı tanımı (EN)',
+      kapsam_tr: 'Kapsam açıklaması (TR)', kapsam_en: 'Kapsam açıklaması (EN)',
+      vergi_tipi: 'Vergi tipi (maktu, oran, karma)', maktu_tutar_tl: 'Sabit vergi tutarı (₺)',
+      bilesenler: 'Alt bileşenler (hesaplama kırılımı)',
+      guncel_oranlar: 'Güncel oran listesi', matrah_dilimleri: 'Kademeli matrah dilimleri',
+      gecerlilik_baslangic: 'Geçerliliğin başladığı tarih', gecerlilik_bitis: 'Geçerliliğin bittiği tarih',
     };
     const SCHEMA_ACIKLAMA_EN = {
       kod: 'Unique code identifier', ust_kod: 'Parent category code (tree link)',
       seviye: 'Hierarchy level (1=root)', seviye_adi: 'Level name (section, chapter, group...)',
-      sira: 'Display order', tanim_tr: 'Turkish description', tanim_en: 'English description',
+      sira: 'Display order', yaprak: 'Leaf node without children',
+      tanim_tr: 'Turkish description', tanim_en: 'English description',
       ad_tr: 'Turkish name', ad_en: 'English name', aciklama_tr: 'Turkish explanation',
       aciklama_en: 'English explanation', oran: 'Tax rate (decimal)', oran_binde: 'Rate per mille',
       olcu_birimi: 'Unit of measure', para_birimi: 'Currency (ISO 4217)',
       matrah_alt_sinir_tl: 'Tax base lower limit (TRY)', matrah_ust_sinir_tl: 'Tax base upper limit (TRY)',
       sabit_vergi_tl: 'Fixed tax amount (TRY)', kategori: 'Category label',
       periyot: 'Period (monthly, annual, fixed)', tip: 'Data structure type', liste: 'Schedule number',
-      kaynak: 'Source reference', deger: 'Numeric value',
+      kaynak: 'Source reference', deger: 'Numeric value', birim: 'Unit of measure',
+      dayanak_tr: 'Legal basis (TR)', dayanak_en: 'Legal basis (EN)',
+      kanun_dayanagi_tr: 'Law article reference (TR)', kanun_dayanagi_en: 'Law article reference (EN)',
+      matrah_tr: 'Tax base definition (TR)', matrah_en: 'Tax base definition (EN)',
+      kapsam_tr: 'Scope description (TR)', kapsam_en: 'Scope description (EN)',
+      vergi_tipi: 'Tax type (fixed, rate, mixed)', maktu_tutar_tl: 'Fixed tax amount (TRY)',
+      bilesenler: 'Sub-components (calculation breakdown)',
+      guncel_oranlar: 'Current rate list', matrah_dilimleri: 'Progressive base brackets',
+      gecerlilik_baslangic: 'Validity start date', gecerlilik_bitis: 'Validity end date',
     };
 
     let DIL = 'tr';
@@ -539,7 +607,9 @@
       DIL = yeni; dilUygula();
       if (currentService) {
         servisSecUI(currentService);
-        renderTableData(); renderCodeSnippets(); renderDocsSchema();
+        renderTableData(); renderCodeSnippets();
+        if (currentRawBody) renderNotlar(currentRawBody);
+        renderDocsSchema();
       }
       renderCatalogTree($('input-catalog-search').value);
     }
@@ -605,7 +675,6 @@
       const container = $('catalog-tree-container');
       const q = (filterQuery || '').toLocaleLowerCase('tr-TR').trim();
 
-      // Yeni yapıya göre gruplama: kod_sistemi
       const gruplar = new Map();
       for (const sv of KATALOG) {
         const anahtar = sv.kod_sistemi || 'diger';
@@ -706,7 +775,7 @@
       $('service-title').textContent = servisAdi;
       $('service-desc').textContent = sv.kod;
       $('service-last-update').textContent = `v${versiyon}`;
-      
+
       const url = sv.katmanlar?.ham?.url || '';
       $('endpoint-url-text').textContent = apiUrl(url);
     }
@@ -743,7 +812,7 @@
         $('json-status-label').textContent = `HTTP ${r.status}`;
         $('json-response-time').textContent = `${sure} ms`;
         $('service-records-count').textContent = currentData.length.toLocaleString(DIL === 'tr' ? 'tr-TR' : 'en-US') + ' ' + t('records');
-        renderTableData(); renderCodeSnippets(); renderJsonConsole(); renderDocsSchema();
+        renderTableData(); renderCodeSnippets(); renderJsonConsole(); renderDocsSchema(); renderNotlar(body);
       } catch (e) {
         console.error('[PDaaS] detay hatası:', e);
         $('table-body-rows').innerHTML = `<tr><td colspan="10" class="p-6 text-center text-rose-400">${t('load_error')}</td></tr>`;
@@ -754,6 +823,21 @@
     // =================================================================
     // TABLO + SAYFALAMA
     // =================================================================
+    function icNesneOzet(val) {
+      if (Array.isArray(val)) {
+        const n = val.length;
+        if (n > 0 && typeof val[0] === 'object' && val[0] !== null) {
+          const ilk = Object.entries(val[0]).slice(0, 2)
+            .map(([k, v]) => `${k}: ${String(v).slice(0, 20)}`).join(' · ');
+          return { label: `[${n} ${t('nested_items')}] ${ilk}`, title: JSON.stringify(val, null, 2) };
+        }
+        return { label: `[${n} ${t('nested_items')}]`, title: JSON.stringify(val, null, 2) };
+      }
+      const keys = Object.keys(val);
+      const ozet = keys.slice(0, 3).map(k => `${k}: ${String(val[k]).slice(0, 20)}`).join(' · ');
+      return { label: `{${keys.length} ${t('nested_fields')}} ${ozet}`, title: JSON.stringify(val, null, 2) };
+    }
+
     function renderTableData() {
       const tbody = $('table-body-rows');
       const theadRow = $('table-head-row');
@@ -794,7 +878,10 @@
             else if (typeof val === 'boolean') {
               cell = val ? `<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-sans font-bold border border-emerald-500/20">true</span>` : `<span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 text-[10px] font-sans font-bold border border-rose-500/20">false</span>`;
             } else if (typeof val === 'number') { cell = `<span class="text-amber-300">${val.toLocaleString(DIL === 'tr' ? 'tr-TR' : 'en-US')}</span>`; }
-            else if (typeof val === 'object') { cell = `<span class="text-slate-500 text-[11px]">${Array.isArray(val) ? '[' + val.length + ' öğe]' : '{…}'}</span>`; }
+            else if (typeof val === 'object') {
+              const ic = icNesneOzet(val);
+              cell = `<span class="text-slate-500 text-[11px]" title="${kacis(ic.title)}">${kacis(ic.label)}</span>`;
+            }
             else {
               const str = String(val); const goster = str.length > 80 ? str.slice(0, 80) + '…' : str;
               cell = `<span class="text-slate-300" title="${kacis(str)}">${kacis(goster)}</span>`;
@@ -921,6 +1008,22 @@
           <td class="p-3 text-slate-400 font-sans">${aciklama}</td>
         </tr>`;
       }).join('');
+    }
+
+    // =================================================================
+    // NOTLAR
+    // =================================================================
+    function renderNotlar(body) {
+      const notlar = DIL === 'tr' ? (body.notlar_tr || []) : (body.notlar_en || []);
+      const kutu = $('service-notlar');
+      const liste = $('notlar-list');
+      if (!notlar || !notlar.length) {
+        kutu.classList.add('hidden');
+        liste.innerHTML = '';
+        return;
+      }
+      liste.innerHTML = notlar.map(n => `<li>${kacis(n)}</li>`).join('');
+      kutu.classList.remove('hidden');
     }
 
     // =================================================================
