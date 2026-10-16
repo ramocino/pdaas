@@ -765,12 +765,12 @@
       if (yeni === DIL) return;
       DIL = yeni; dilUygula();
       if (currentService) {
-        servisSecUI(currentService);
+        servisSecUI(currentService);   // ← breadcrumb + badge
         renderTableData(); renderCodeSnippets();
         if (currentRawBody) renderNotlar(currentRawBody);
         renderDocsSchema();
       }
-      renderCatalogTree($('input-catalog-search').value);
+      renderCatalogTree($('input-catalog-search').value);   // ← sol menü
     }
 
     // =================================================================
@@ -922,7 +922,7 @@
     // =================================================================
     function servisSecUI(sv) {
       if (!sv) return;
-      const grupAdi = KOD_SISTEMI_MAP[sv.kod_sistemi]?.ad || 'Diğer';
+      const grupAdi = grupEtiket(sv.kod_sistemi);
       const servisAdi = DIL === 'en' ? (sv.ad.en || sv.ad.tr) : sv.ad.tr;
       const versiyon = sv.katmanlar?.ham?.son || '—';
 
