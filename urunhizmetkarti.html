@@ -8,59 +8,24 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="assets/pdaas-tailwind.js"></script>
   <link rel="stylesheet" href="assets/pdaas.css">
 
   <style>
-    #dropdown::-webkit-scrollbar {
-      width: 6px;
-    }
+    #dropdown::-webkit-scrollbar { width: 6px; }
+    #dropdown::-webkit-scrollbar-thumb { background: rgba(76, 194, 255, .22); border-radius: 99px; }
 
-    #dropdown::-webkit-scrollbar-thumb {
-      background: rgba(76, 194, 255, .22);
-      border-radius: 99px;
-    }
+    @keyframes dropIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+    .drop-anim { animation: dropIn 0.16s cubic-bezier(0.16, 1, 0.3, 1); }
 
-    @keyframes dropIn {
-      from {
-        opacity: 0;
-        transform: translateY(-4px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .drop-anim {
-      animation: dropIn 0.16s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    @keyframes tabloIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .tablo-anim {
-      animation: tabloIn 0.24s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+    @keyframes tabloIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .tablo-anim { animation: tabloIn 0.24s cubic-bezier(0.16, 1, 0.3, 1); }
   </style>
 </head>
 
-<body
-  class="bg-win-base text-slate-100 font-sans min-h-screen flex flex-col antialiased selection:bg-win-500 selection:text-white">
+<body class="bg-win-base text-slate-100 font-sans min-h-screen flex flex-col antialiased selection:bg-win-500 selection:text-white">
 
   <div id="pdaas-header"></div>
 
@@ -75,48 +40,33 @@
 
     <div class="bg-win-card border border-win-border rounded-xl shadow-xl p-4 relative z-30">
       <div class="relative">
-        <svg class="w-5 h-5 text-slate-500 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" fill="none"
-          stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        <svg class="w-5 h-5 text-slate-500 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
         </svg>
         <input type="text" id="arama"
           class="w-full h-12 pl-12 pr-10 bg-win-base border border-win-border rounded-lg text-white text-sm font-medium focus:outline-none focus:border-win-500 transition placeholder-slate-500"
           data-i18n-placeholder="arama_yer" autocomplete="off" autofocus>
-        <button id="btn-dropdown-temizle" type="button"
-          class="hidden absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded text-slate-500 hover:text-white hover:bg-win-hover transition flex items-center justify-center">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+        <button id="btn-dropdown-temizle" type="button" class="hidden absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded text-slate-500 hover:text-white hover:bg-win-hover transition flex items-center justify-center">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
 
-        <div id="dropdown"
-          class="hidden absolute top-full left-0 right-0 mt-2 max-h-[420px] overflow-y-auto bg-win-card border border-win-border rounded-lg shadow-2xl drop-anim">
+        <div id="dropdown" class="hidden absolute top-full left-0 right-0 mt-2 max-h-[420px] overflow-y-auto bg-win-card border border-win-border rounded-lg shadow-2xl drop-anim">
           <div id="dropdown-icerik" class="p-1"></div>
         </div>
       </div>
 
       <div class="flex flex-wrap items-center gap-2 mt-3" id="filtreler">
-        <button class="cip aktif px-3 py-1.5 rounded text-xs font-bold transition bg-win-500 text-white"
-          data-tip="hepsi" data-i18n="filtre_hepsi"></button>
-        <button
-          class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5"
-          data-tip="gtip">
+        <button class="cip aktif px-3 py-1.5 rounded text-xs font-bold transition bg-win-500 text-white" data-tip="hepsi" data-i18n="filtre_hepsi"></button>
+        <button class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5" data-tip="gtip">
           <span>📦 GTİP</span> <span class="px-1.5 py-0.5 text-[10px] bg-win-base rounded" id="sayi-gtip">0</span>
         </button>
-        <button
-          class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5"
-          data-tip="cpc">
+        <button class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5" data-tip="cpc">
           <span>⚙️ CPC</span> <span class="px-1.5 py-0.5 text-[10px] bg-win-base rounded" id="sayi-cpc">0</span>
         </button>
-        <button
-          class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5"
-          data-tip="nace">
+        <button class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5" data-tip="nace">
           <span>🏭 NACE</span> <span class="px-1.5 py-0.5 text-[10px] bg-win-base rounded" id="sayi-nace">0</span>
         </button>
-        <button
-          class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5"
-          data-tip="isco">
+        <button class="cip px-3 py-1.5 rounded text-xs font-bold transition bg-win-dark text-slate-300 hover:bg-win-hover border border-win-border flex items-center gap-1.5" data-tip="isco">
           <span>👤 ISCO</span> <span class="px-1.5 py-0.5 text-[10px] bg-win-base rounded" id="sayi-isco">0</span>
         </button>
       </div>
@@ -127,9 +77,7 @@
     </div>
 
     <div id="bos-durum" class="flex flex-col items-center justify-center py-16 text-center max-w-lg mx-auto">
-      <div
-        class="w-20 h-20 rounded-2xl bg-win-card border border-win-border text-win-500 flex items-center justify-center text-3xl mb-5 shadow-xl">
-        📋</div>
+      <div class="w-20 h-20 rounded-2xl bg-win-card border border-win-border text-win-500 flex items-center justify-center text-3xl mb-5 shadow-xl">📋</div>
       <h2 class="text-xl font-bold text-white mb-2" data-i18n="bos_baslik"></h2>
       <p class="text-sm text-slate-400 leading-relaxed" data-i18n="bos_aciklama"></p>
     </div>
@@ -138,9 +86,7 @@
 
   <button id="btn-scroll-top" type="button" aria-label="Yukarı git"
     class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-xl bg-win-500 hover:bg-win-600 text-white shadow-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 19V5m-7 7l7-7 7 7" />
-    </svg>
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 19V5m-7 7l7-7 7 7"/></svg>
   </button>
 
   <script type="module">
@@ -149,8 +95,11 @@
     // ============================================================
     import { CONFIG, apiUrl, apiFetch } from './assets/pdaas-config.js';
     import { $, kacis, tr_lower, normKod, kodTemiz } from './assets/pdaas-utils.js';
-    import { t, dilBaslat, dilUygula, dilDegistir, alanSec, kayitAdi, UI } from './assets/pdaas-i18n.js';
+    import { t, dilBaslat, dilUygula, dilDegistir, alanSec, kayitAdi, UI, getDil } from './assets/pdaas-i18n.js';
     import { renderLayout } from './assets/pdaas-layout.js';
+
+    // ─── Kısayol: dil (DIL değişkeni artık i18n.js içinde) ───
+    const dil = () => getDil();
 
     // ============================================================
     // SAYFAYA ÖZEL i18n ANAHTARLARI
@@ -397,16 +346,16 @@
     const KAYNAK_IKON = { gtip: '📦', cpc: '⚙️', nace: '🏭', isco: '👤' };
     const KAYNAK_SINIF = {
       gtip: 'bg-win-500/20 text-win-300 border-win-500/40',
-      cpc: 'bg-amber-500/15 text-amber-300 border-amber-500/30',
+      cpc:  'bg-amber-500/15 text-amber-300 border-amber-500/30',
       nace: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30',
       isco: 'bg-pink-500/15 text-pink-300 border-pink-500/30',
     };
 
     const KART_TIPI = {
-      gtip: { tip: 'urun', baslikKey: 'kart_urun', descKey: 'kart_urun_desc', kdvVar: true, otvVar: true, belgeVar: true, randimanVar: true },
-      cpc: { tip: 'hizmet', baslikKey: 'kart_hizmet', descKey: 'kart_hizmet_desc', kdvVar: true, otvVar: false, belgeVar: true, randimanVar: true },
+      gtip: { tip: 'urun',     baslikKey: 'kart_urun',     descKey: 'kart_urun_desc',     kdvVar: true,  otvVar: true,  belgeVar: true, randimanVar: true  },
+      cpc:  { tip: 'hizmet',   baslikKey: 'kart_hizmet',   descKey: 'kart_hizmet_desc',   kdvVar: true,  otvVar: false, belgeVar: true, randimanVar: true  },
       nace: { tip: 'faaliyet', baslikKey: 'kart_faaliyet', descKey: 'kart_faaliyet_desc', kdvVar: false, otvVar: false, belgeVar: true, randimanVar: false },
-      isco: { tip: 'meslek', baslikKey: 'kart_meslek', descKey: 'kart_meslek_desc', kdvVar: false, otvVar: false, belgeVar: true, randimanVar: false },
+      isco: { tip: 'meslek',   baslikKey: 'kart_meslek',   descKey: 'kart_meslek_desc',   kdvVar: false, otvVar: false, belgeVar: true, randimanVar: false },
     };
 
     const STOP_WORDS = new Set([
@@ -421,7 +370,7 @@
     // ============================================================
     const VERI = {
       gtip: { kayitlar: [], yuklendi: false, kaynak: '/api/v1/ham/gtip-kodlari.json' },
-      cpc: { kayitlar: [], yuklendi: false, kaynak: '/api/v1/ham/cpc-kodlari.json' },
+      cpc:  { kayitlar: [], yuklendi: false, kaynak: '/api/v1/ham/cpc-kodlari.json' },
       nace: { kayitlar: [], yuklendi: false, kaynak: '/api/v1/ham/nace-kodlari.json' },
       isco: { kayitlar: [], yuklendi: false, kaynak: '/api/v1/ham/isco-kodlari.json' },
     };
@@ -446,19 +395,17 @@
     const EK_VERI = {
       kurumlar: null,
       gtip: { belge: null, randiman: null },
-      cpc: { belge: null, randiman: null },
+      cpc:  { belge: null, randiman: null },
       nace: { belge: null, randiman: null },
       isco: { belge: null, randiman: null },
     };
 
-    // ============================================================
-    // TEVKİFAT — CPC prefix → kategori haritası
-    // ============================================================
     const TEVKIFAT_KATEGORI_MAP = {
       '54': 'yapim_isleri',
       '83': 'danismanlik',
       '87': 'temizlik',
       '63': 'konaklama',
+      '64': 'yolcu_tasima',
       '65': 'yolcu_tasima',
     };
 
@@ -498,7 +445,7 @@
       if (!EK_VERI[kaynak]) return;
       const harita = {
         gtip: { belge: EK_KAYNAK.gtipBelge, randiman: EK_KAYNAK.gtipRandiman },
-        cpc: { belge: EK_KAYNAK.cpcBelge, randiman: EK_KAYNAK.cpcRandiman },
+        cpc:  { belge: EK_KAYNAK.cpcBelge,  randiman: EK_KAYNAK.cpcRandiman },
         nace: { belge: EK_KAYNAK.naceBelge, randiman: null },
         isco: { belge: EK_KAYNAK.iscoBelge, randiman: null },
       };
@@ -535,11 +482,11 @@
         ]);
 
         if (gtipR) { VERI.gtip.kayitlar = gtipR.kayitlar || []; VERI.gtip.yuklendi = true; }
-        if (cpcR) { VERI.cpc.kayitlar = cpcR.kayitlar || []; VERI.cpc.yuklendi = true; }
+        if (cpcR)  { VERI.cpc.kayitlar  = cpcR.kayitlar  || []; VERI.cpc.yuklendi  = true; }
         if (naceR) { VERI.nace.kayitlar = naceR.kayitlar || []; VERI.nace.yuklendi = true; }
         if (iscoR) { VERI.isco.kayitlar = iscoR.kayitlar || []; VERI.isco.yuklendi = true; }
-        if (kdvR) KDV_DATA = kdvR;
-        if (otvR) OTV_DATA = otvR;
+        if (kdvR)  KDV_DATA = kdvR;
+        if (otvR)  OTV_DATA = otvR;
         if (tevkifatR) TEVKIFAT_DATA = tevkifatR;
 
         kurumlariYukle();
@@ -575,19 +522,17 @@
       if (!kurum_kod) return '—';
       if (EK_VERI.kurumlar && EK_VERI.kurumlar[kurum_kod]) {
         const k = EK_VERI.kurumlar[kurum_kod];
-        return DIL === 'en' ? (k.ad_en || k.ad_tr) : (k.ad_tr || k.ad_en);
+        return dil() === 'en' ? (k.ad_en || k.ad_tr) : (k.ad_tr || k.ad_en);
       }
       return kurum_kod;
     }
 
-    // ─── KDV: kayıt kodundan direkt oran bulma (basit) ───
     function oranBul(kdvKodu) {
       if (!KDV_DATA?.kayitlar) return 0.20;
       const k = KDV_DATA.kayitlar.find(x => x.kod === kdvKodu);
       return k ? k.oran : 0.20;
     }
 
-    // ─── KDV: liste tabanlı prefix eşleştirme (asıl kullanılan) ───
     function kdvBul(gtipKodu, cpcKodu) {
       if (!KDV_DATA?.listeler) return null;
 
@@ -600,7 +545,6 @@
         if (!liste?.kategoriler) continue;
 
         for (const kat of liste.kategoriler) {
-          // GTİP prefix kontrolü
           if (gt && kat.gtip_prefix) {
             for (const p of kat.gtip_prefix) {
               if (gt.startsWith(kodTemiz(p))) {
@@ -608,12 +552,11 @@
                   oran: liste.kdv_orani,
                   liste: lk,
                   kategori: kat.kod,
-                  aciklama: DIL === 'en' ? (kat.ad_en || kat.ad_tr) : kat.ad_tr
+                  aciklama: dil() === 'en' ? (kat.ad_en || kat.ad_tr) : kat.ad_tr
                 };
               }
             }
           }
-          // CPC prefix kontrolü
           if (cp && kat.cpc_prefix) {
             for (const p of kat.cpc_prefix) {
               if (cp.startsWith(kodTemiz(p))) {
@@ -621,7 +564,7 @@
                   oran: liste.kdv_orani,
                   liste: lk,
                   kategori: kat.kod,
-                  aciklama: DIL === 'en' ? (kat.ad_en || kat.ad_tr) : kat.ad_tr
+                  aciklama: dil() === 'en' ? (kat.ad_en || kat.ad_tr) : kat.ad_tr
                 };
               }
             }
@@ -631,7 +574,6 @@
       return null;
     }
 
-    // ─── ÖTV ───
     function otvBul(gtipKod) {
       if (!gtipKod || !OTV_DATA?.kayitlar) return null;
       const gt = kodTemiz(gtipKod);
@@ -650,14 +592,12 @@
       return null;
     }
 
-    // ─── Tevkifat ───
     function tevkifatBul(cpcKodu, gtipKodu) {
       if (!TEVKIFAT_DATA?.kayitlar) return null;
 
       const cp = cpcKodu ? kodTemiz(cpcKodu) : '';
       const gt = gtipKodu ? kodTemiz(gtipKodu) : '';
 
-      // 1) CPC prefix ile dene
       if (cp) {
         for (const [prefix, kategori] of Object.entries(TEVKIFAT_KATEGORI_MAP)) {
           if (cp.startsWith(prefix)) {
@@ -667,7 +607,6 @@
         }
       }
 
-      // 2) GTİP ile (nadir; yapım işleri için)
       if (gt && gt.startsWith('99')) {
         const kayit = TEVKIFAT_DATA.kayitlar.find(k => k.kategori === 'yapim_isleri');
         if (kayit) return kayit;
@@ -676,7 +615,6 @@
       return null;
     }
 
-    // ─── Belgeler ───
     function belgeleriBul(kaynak, kod) {
       const dosya = EK_VERI[kaynak]?.belge;
       if (!dosya?.kurallar?.length) return [];
@@ -716,7 +654,6 @@
       return belgeler;
     }
 
-    // ─── Randıman ───
     function randimanBul(kaynak, kod) {
       const dosya = EK_VERI[kaynak]?.randiman;
       if (!dosya?.kurallar?.length) return [];
@@ -929,12 +866,10 @@
       const kartTip = KART_TIPI[kaynak];
       const satirlar = [];
 
-      // Başlık
       satirlar.push({ alan: `${KAYNAK_IKON[kaynak]} ${t(kartTip.baslikKey)}`, deger: t(kartTip.descKey), kurum: '', vurgu: 'baslik', _kaynak: kaynak });
       satirlar.push({ alan: t('meta_kod'), deger: kod, kurum: '', vurgu: 'kod' });
       satirlar.push({ alan: t('meta_ad'), deger: ad, kurum: '', vurgu: 'ad' });
 
-      // Standart alanlar
       satirlar.push({ tip: 'baslik', metin: `${t(kartTip.baslikKey)} — ${t('alan_adi')}` });
       satirlar.push(...kaynakBazliAlanlar(secim, iliskili));
 
@@ -942,13 +877,12 @@
       if (kartTip.kdvVar || kartTip.otvVar) {
         satirlar.push({ tip: 'baslik', metin: t('vergi') });
 
-        // ── KDV ──
+        // KDV
         if (kartTip.kdvVar) {
           let kdvSonuc = null;
           let kdvKaynakTipi = 'default';
 
           if (kayit.kdv_kodu) {
-            // Kaydın kendi kdv_kodu alanı varsa direkt onu kullan
             const oran = oranBul(kayit.kdv_kodu);
             const k = KDV_DATA?.kayitlar?.find(x => x.kod === kayit.kdv_kodu);
             kdvSonuc = {
@@ -972,7 +906,7 @@
 
           const kdvAciklamaMetin = kdvKaynakTipi === 'liste'
             ? `${kdvSonuc.liste}. ${t('kdv_listesi')} — ${kdvSonuc.aciklama}`
-            : (kdvKaynakTipi === 'kod' ? kdvSonuc.aciklama : kdvSonuc.aciklama);
+            : kdvSonuc.aciklama;
 
           satirlar.push({
             alan: t('kdv_orani'),
@@ -982,11 +916,11 @@
           });
         }
 
-        // ── ÖTV ──
+        // ÖTV
         if (kartTip.otvVar) {
           const otv = otvBul(kod);
           if (otv) {
-            const otvAd = DIL === 'en' ? (otv.ad_en || otv.ad_tr || '') : (otv.ad_tr || '');
+            const otvAd = dil() === 'en' ? (otv.ad_en || otv.ad_tr || '') : (otv.ad_tr || '');
             satirlar.push({
               alan: t('otv_orani'),
               deger: `%${(otv.oran * 100).toFixed(0)}`,
@@ -1002,7 +936,6 @@
             });
           }
         } else if (kartTip.kdvVar) {
-          // CPC → ÖTV uygulanmaz
           satirlar.push({
             alan: t('otv_orani'),
             deger: t('otv_yok'),
@@ -1011,12 +944,12 @@
           });
         }
 
-        // ── Tevkifat (yalnızca CPC / hizmet) ──
+        // Tevkifat
         if (kaynak === 'cpc') {
           const tev = tevkifatBul(kod, null);
           if (tev) {
             const oranYuzde = `%${(tev.oran * 100).toFixed(0)}`;
-            const tevAd = DIL === 'en' ? (tev.ad_en || tev.ad_tr) : tev.ad_tr;
+            const tevAd = dil() === 'en' ? (tev.ad_en || tev.ad_tr) : tev.ad_tr;
             satirlar.push({
               alan: t('kdv_tevkifat_oran'),
               deger: oranYuzde,
@@ -1026,7 +959,6 @@
           }
         }
 
-        // ── Tevkifat kodu (kayıtta doğrudan varsa) ──
         if (kayit.kdv_tevkifat_kodu || kayit.tevkifat_kodu) {
           satirlar.push({
             alan: t('kdv_tevkifat_kod'),
@@ -1036,7 +968,7 @@
         }
       }
 
-      // Randıman / verimlilik
+      // Randıman
       if (kartTip.randimanVar) {
         const kurallar = randimanBul(kaynak, kod);
         if (kurallar.length) {
@@ -1075,9 +1007,9 @@
         } else {
           for (const b of belgeler) {
             const seviyeEtiket = b.seviye === 'zorunlu' ? t('belge_zorunlu') : b.seviye === 'kosullu' ? t('belge_kosullu') : t('belge_opsiyonel');
-            const adMetin = DIL === 'en' ? (b.ad_en || b.ad_tr) : b.ad_tr;
+            const adMetin = dil() === 'en' ? (b.ad_en || b.ad_tr) : b.ad_tr;
             const kurumAd = kurumAdi(b.kurum_kod) || b.kurum || '—';
-            const aciklama = DIL === 'en' ? (b.kosul_en || b.kosul_tr) : b.kosul_tr;
+            const aciklama = dil() === 'en' ? (b.kosul_en || b.kosul_tr) : b.kosul_tr;
             satirlar.push({
               alan: `${adMetin} [${seviyeEtiket}]`,
               deger: aciklama || '—',
@@ -1191,9 +1123,9 @@
         }
 
         const degerClass = s.vurgu === 'kdv' ? 'text-win-100 font-bold'
-          : s.vurgu === 'otv' ? 'text-rose-400 font-bold'
-            : s.vurgu === 'muaf' ? 'text-emerald-400 font-semibold'
-              : 'text-slate-100';
+                         : s.vurgu === 'otv' ? 'text-rose-400 font-bold'
+                         : s.vurgu === 'muaf' ? 'text-emerald-400 font-semibold'
+                         : 'text-slate-100';
         const degerGoster = bosMu ? '—' : s.deger;
 
         return `<tr class="hover:bg-win-hover/40 transition">
@@ -1237,8 +1169,8 @@
             🔗 ${t('iliskili')}
           </div>
           ${iliskili.map(grup => {
-        const kartTip = KART_TIPI[grup.kaynak];
-        return `
+            const kartTip = KART_TIPI[grup.kaynak];
+            return `
               <div class="mb-3 last:mb-0">
                 <div class="flex items-center gap-2 mb-2 flex-wrap">
                   <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-bold tracking-wider border ${KAYNAK_SINIF[grup.kaynak]}">
@@ -1249,18 +1181,18 @@
                 </div>
                 <div class="space-y-1">
                   ${grup.kayitlar.map(r => {
-          const rKod = normKod(r.kod);
-          const rAd = kayitAdiKisa(r);
-          return `
+                    const rKod = normKod(r.kod);
+                    const rAd = kayitAdiKisa(r);
+                    return `
                       <div class="flex items-center gap-2 bg-win-base border border-win-border rounded px-3 py-2 hover:bg-win-hover hover:border-win-500/40 transition cursor-pointer iliskili-tikla" title="${t('iliskili_tikla')}" data-kaynak="${grup.kaynak}" data-kod="${kacis(rKod)}">
                         <code class="text-[11px] font-mono text-win-100 whitespace-nowrap">${kacis(rKod)}</code>
                         <span class="text-xs text-slate-300 truncate flex-1">${kacis(rAd)}</span>
                         <span class="text-[10px] text-win-400">→</span>
                       </div>`;
-        }).join('')}
+                  }).join('')}
                 </div>
               </div>`;
-      }).join('')}
+          }).join('')}
         </div>`;
     }
 
@@ -1313,7 +1245,6 @@
       if (e.key === 'Escape') dropdownKapat();
     });
 
-    // Scroll-top
     const scrollTopBtn = $('btn-scroll-top');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
@@ -1327,5 +1258,4 @@
     tumVeriyiYukle();
   </script>
 </body>
-
 </html>
