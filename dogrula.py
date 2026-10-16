@@ -2,9 +2,12 @@
 """PDaaS yayın klasörü doğrulama ve hazırlama aracı.
 
 Kullanım:
-    python3 dogrula.py [KOK]                  # yalnızca denetler (varsayılan KOK: api/v1)
-    python3 dogrula.py [KOK] --hazirla        # hatasızsa checksum yazar, surumler/ kopyasını
-                                              # ve katalog.json dosyasını üretir
+    python dogrula.py                    # api/v1'i bulur; doğrular + hazırlar
+    python dogrula.py --sadece-dogrula   # yalnızca denetler, hiçbir dosya yazmaz
+    python dogrula.py --kok baska/yol    # farklı bir kök klasörde çalışır
+
+VS Code'da Run (▷) düğmesine basmak yeterlidir: api/v1'i kendi konumundan
+bulur ve her şeyi (doğrulama + checksum + surumler/ arşivi + katalog.json) yapar.
 
 Beklenen klasör yapısı:
     KOK/ham/<servis>.json            KOK/ham/surumler/<servis>/<surum>.json
@@ -12,7 +15,7 @@ Beklenen klasör yapısı:
     KOK/meta/schema/pdaas-meta-<schema_surumu>.json
     KOK/meta/schema/pdaas-katalog-1.0.0.json
     KOK/meta/kurumlar.json           (isteğe bağlı; kurum kodlarını denetlemek için)
-    KOK/katalog.json                 (--hazirla üretir)
+    KOK/katalog.json                 (hazırlama sırasında üretilir)
 
 Çıkış kodu: hata varsa 1, yoksa 0. Uyarılar çıkış kodunu etkilemez.
 Gereksinim: pip install jsonschema
@@ -30,6 +33,16 @@ try:
     Draft202012Validator = import_module("jsonschema").Draft202012Validator
 except ModuleNotFoundError:
     Draft202012Validator = None
+
+
+# ─── YENİ: yayın sürümü (tek yerden yönetim) ────────────────────
+#   None  → her JSON'un kendi meta.surum.surum alanı kullanılır
+#   "..." → tüm servisler bu sürümle yayınlanır; dosyadaki alan ezilir
+# Servis bazlı kontrol için sözlük de kullanabilirsiniz:
+#   YAYIN_SURUMU = {"nace-kodlari": "2026.04.01", "cpc-kodlari": "2026.04.01"}
+YAYIN_SURUMU = None
+# ────────────────────────────────────────────────────────────────
+
 
 KATMANLAR = ("ham", "konsolide")
 KATALOG_SEMA = "pdaas-katalog-1.0.0.json"
@@ -111,7 +124,7 @@ def kontrol_agac(doc, ad, rapor):
             rapor.hata(ad, f"yinelenen kod: {kod}")
             continue
         by_kod[kod] = k
-    atlayan = []  # üst kaydı bir seviye atlayanlar (ör. 12 haneli kodun altında 10 haneli ara kayıt yok)
+    atlayan = []
     for kod, k in by_kod.items():
         ust, sev = k.get("ust_kod"), k.get("seviye")
         if ust is None:
@@ -183,7 +196,7 @@ def kontrol_harita(doc, meta, ad, rapor):
     kurumlar = set(meta["yayinci"].get("kurumlar", []))
     join_alan = meta["yapi"]["join"]["alan"]
     gorulen_kodlar = set()
-    prefixler = []  # (prefix, oncelik, kural kodu)
+    prefixler = []
 
     def benzersiz(kod, nerede):
         if kod in gorulen_kodlar:
@@ -259,7 +272,7 @@ def kontrol_checksum(doc, meta, ad, rapor):
     h = ozet(veri)
     deger = meta["checksum"]["deger"]
     if deger is None:
-        rapor.uyari(ad, "checksum.deger boş (--hazirla ile üretilecek)")
+        rapor.uyari(ad, "checksum.deger boş (hazırlama ile üretilecek)")
     elif deger != h:
         rapor.hata(ad, f"checksum uyuşmuyor (dosyada {deger[:12]}…, hesaplanan {h[:12]}…)")
     return h
@@ -273,7 +286,7 @@ def kontrol_surumler(kok, katman, doc, meta, ad, h, rapor):
     servis, surum = meta["servis"]["kod"], meta["surum"]["surum"]
     yol = surum_yolu(kok, katman, servis, surum)
     if not yol.exists():
-        rapor.uyari(ad, f"sürüm kopyası yok: {yol.relative_to(kok)} (--hazirla üretir)")
+        rapor.uyari(ad, f"sürüm kopyası yok: {yol.relative_to(kok)} (hazırlama üretir)")
         return
     eski = yukle(yol, rapor, str(yol.relative_to(kok)))
     if eski is None:
@@ -369,7 +382,7 @@ def katalog_uret(bilgiler, url_on_ek):
 def kontrol_katalog(kok, bilgiler, onbellek, rapor):
     yol = kok / "katalog.json"
     if not yol.exists():
-        rapor.uyari("katalog.json", "dosya yok (--hazirla üretir)")
+        rapor.uyari("katalog.json", "dosya yok (hazırlama üretir)")
         return
     kat = yukle(yol, rapor, "katalog.json")
     if kat is None:
@@ -393,6 +406,23 @@ def kontrol_katalog(kok, bilgiler, onbellek, rapor):
 
 # ---------------------------------------------------------------- ana akış
 
+def surum_uygula(meta, ad, rapor):
+    """YAYIN_SURUMU doluysa meta.surum.surum'u onunla değiştirir (servis bazlı sözlük desteklenir)."""
+    if not YAYIN_SURUMU:
+        return
+    servis_kod = meta.get("servis", {}).get("kod")
+    if isinstance(YAYIN_SURUMU, dict):
+        yeni = YAYIN_SURUMU.get(servis_kod)
+    else:
+        yeni = YAYIN_SURUMU
+    if not yeni:
+        return
+    mevcut = meta.get("surum", {}).get("surum")
+    if mevcut and mevcut != yeni:
+        rapor.uyari(ad, f"dosyadaki sürüm ({mevcut}) ile YAYIN_SURUMU ({yeni}) farklı; {yeni} yazılacak")
+    meta.setdefault("surum", {})["surum"] = yeni
+
+
 def isle(yol, katman, kok, rapor, onbellek):
     ad = f"{katman}/{yol.name}"
     doc = yukle(yol, rapor, ad)
@@ -402,6 +432,11 @@ def isle(yol, katman, kok, rapor, onbellek):
         rapor.hata(ad, "kökte 'meta' nesnesi yok")
         return None
     meta = doc["meta"]
+
+    # ─── YENİ: global sürüm sabiti uygula ───
+    surum_uygula(meta, ad, rapor)
+    # ────────────────────────────────────────
+
     sv = meta.get("schema_surumu")
     sema = sema_yukle(kok, f"pdaas-meta-{sv}.json", onbellek, rapor)
     if sema is None:
@@ -432,18 +467,33 @@ def isle(yol, katman, kok, rapor, onbellek):
     return {"yol": yol, "katman": katman, "doc": doc, "meta": meta, "hash": h, "ad": ad}
 
 
+def varsayilan_kok():
+    """dogrula.py'nin bulunduğu klasörün altındaki api/v1."""
+    return Path(__file__).resolve().parent / "api" / "v1"
+
+
 def main():
     if Draft202012Validator is None:
         print("Gereksinim eksik: pip install jsonschema", file=sys.stderr)
         return 1
 
-    ap = argparse.ArgumentParser(description="PDaaS yayın klasörü doğrulama/hazırlama")
-    ap.add_argument("kok", nargs="?", default="api/v1")
-    ap.add_argument("--hazirla", action="store_true", help="hatasızsa checksum, surumler/ kopyası ve katalog.json üret")
+    ap = argparse.ArgumentParser(description="PDaaS yayın klasörü doğrulama + hazırlama")
+    ap.add_argument("--kok", default=None, help="kök klasör (varsayılan: dogrula.py'nin yanındaki api/v1)")
+    # ─── YENİ: --hazirla artık VARSAYILAN; --sadece-dogrula ile kapatılır ───
+    ap.add_argument("--hazirla", dest="hazirla", action="store_true", default=True,
+                    help="(varsayılan) checksum, surumler/ kopyası ve katalog.json üret")
+    ap.add_argument("--sadece-dogrula", dest="hazirla", action="store_false",
+                    help="hiçbir dosya yazma; yalnızca denetle")
+    # ────────────────────────────────────────────────────────────────────────
     ap.add_argument("--url-on-ek", default="/api/v1")
     args = ap.parse_args()
 
-    kok = Path(args.kok)
+    kok = Path(args.kok).expanduser().resolve() if args.kok else varsayilan_kok()
+    print(f"Kök klasör: {kok}")
+    if not kok.is_dir():
+        print(f"HATA: kök klasör yok: {kok}", file=sys.stderr)
+        return 1
+
     rapor = Rapor()
     onbellek = {}
     bilgiler = []
@@ -478,7 +528,7 @@ def main():
             yaz(b["yol"], b["doc"])
             yaz(surum_yolu(kok, b["katman"], b["meta"]["servis"]["kod"], b["meta"]["surum"]["surum"]), b["doc"])
         yaz(kok / "katalog.json", katalog_uret(bilgiler, args.url_on_ek))
-        print(f"{len(bilgiler)} dosya hazırlandı; checksum, surumler/ ve katalog.json yazıldı.")
+        print(f"\n{len(bilgiler)} dosya hazırlandı; checksum, surumler/ ve katalog.json yazıldı.\n")
         rapor2 = Rapor()
         return main_dogrulama_ozeti(kok, rapor2)
 
@@ -487,7 +537,7 @@ def main():
 
 
 def main_dogrulama_ozeti(kok, rapor):
-    """--hazirla sonrası aynı klasörü yeniden denetle."""
+    """Hazırlama sonrası aynı klasörü yeniden denetle."""
     onbellek, bilgiler = {}, []
     for katman in KATMANLAR:
         klasor = kok / katman
