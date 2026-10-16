@@ -1,58 +1,91 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://pdaas.com.tr/api/v1/meta/schema/pdaas-katalog-1.0.0.json",
-  "title": "PDaaS katalog.json (şema 1.0.0)",
-  "description": "Tüm servislerin, katmanlarının ve son sürümlerinin tek giriş noktası.",
-  "type": "object",
-  "additionalProperties": false,
-  "required": ["schema_surumu", "guncelleme", "servisler"],
-  "properties": {
-    "$schema": { "type": "string" },
-    "schema_surumu": { "const": "1.0.0" },
-    "guncelleme": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-    "servisler": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["kod", "ad", "tip", "kod_sistemi", "katmanlar"],
-        "properties": {
-          "kod": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
-          "ad": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": ["tr"],
-            "properties": {
-              "tr": { "type": "string", "minLength": 1 },
-              "en": { "type": ["string", "null"] }
-            }
-          },
-          "tip": { "enum": ["agac", "harita", "liste"] },
-          "kod_sistemi": { "enum": ["gtip", "cpc", "nace", "isco", "sgk", "diger"] },
-          "katmanlar": {
-            "type": "object",
-            "additionalProperties": false,
-            "minProperties": 1,
-            "properties": {
-              "ham": { "$ref": "#/$defs/katman_kaydi" },
-              "konsolide": { "$ref": "#/$defs/katman_kaydi" }
-            }
-          }
+  "schema_surumu": "1.0.0",
+  "guncelleme": "2026-01-01",
+  "servisler": [
+    {
+      "kod": "cpc-kodlari",
+      "ad": {
+        "tr": "CPC Kodları",
+        "en": "CPC Codes"
+      },
+      "tip": "agac",
+      "kod_sistemi": "cpc",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/api/v1/ham/cpc-kodlari.json",
+          "surumler_url": "/api/v1/ham/surumler/cpc-kodlari/",
+          "checksum": "4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        }
+      }
+    },
+    {
+      "kod": "gtip-kodlari",
+      "ad": {
+        "tr": "GTİP Kodları",
+        "en": "Turkish Customs Tariff Codes (GTİP)"
+      },
+      "tip": "agac",
+      "kod_sistemi": "gtip",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/api/v1/ham/gtip-kodlari.json",
+          "surumler_url": "/api/v1/ham/surumler/gtip-kodlari/",
+          "checksum": "32bf2c692aeee78de0b389e1460a335a4e039d29eb9c268b8ade35fc968f7869"
+        }
+      }
+    },
+    {
+      "kod": "isco-kodlari",
+      "ad": {
+        "tr": "ISCO Kodları",
+        "en": "ISCO Codes"
+      },
+      "tip": "agac",
+      "kod_sistemi": "isco",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/api/v1/ham/isco-kodlari.json",
+          "surumler_url": "/api/v1/ham/surumler/isco-kodlari/",
+          "checksum": "7c6cdca0d5590ec41600a99eee578cad647fa80a43be76d831d1353d61dbc932"
+        }
+      }
+    },
+    {
+      "kod": "nace-kodlari",
+      "ad": {
+        "tr": "NACE Kodları",
+        "en": "NACE Codes"
+      },
+      "tip": "agac",
+      "kod_sistemi": "nace",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/api/v1/ham/nace-kodlari.json",
+          "surumler_url": "/api/v1/ham/surumler/nace-kodlari/",
+          "checksum": "b8efca5c8c275c02c22e21d9e8186f13f92a123f64ea841aad69457cbc0b41cf"
+        }
+      }
+    },
+    {
+      "kod": "sgk-belge-turleri",
+      "ad": {
+        "tr": "SGK Belge Tür Kodları",
+        "en": "SGK Document Type Codes"
+      },
+      "tip": "liste",
+      "kod_sistemi": "sgk",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/api/v1/ham/sgk-belge-turleri.json",
+          "surumler_url": "/api/v1/ham/surumler/sgk-belge-turleri/",
+          "checksum": "5a7515aa6893afa859944e07fcbf960b2e4e39add12bbac71cd612c3cf6aef7a"
         }
       }
     }
-  },
-  "$defs": {
-    "katman_kaydi": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["son", "url", "surumler_url", "checksum"],
-      "properties": {
-        "son": { "type": "string", "pattern": "^\\d{4}\\.\\d{2}\\.\\d{2}(\\.\\d+)?$" },
-        "url": { "type": "string", "pattern": "^/" },
-        "surumler_url": { "type": "string", "pattern": "^/" },
-        "checksum": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
-      }
-    }
-  }
+  ]
 }
