@@ -1,0 +1,572 @@
+{
+  "meta": {
+    "schema_surumu": "2.0.0",
+    "servis": {
+      "kod": "gtip-tevkifat",
+      "ad": {
+        "tr": "GTİP Tevkifat Eşleşmesi",
+        "en": "GTIP Withholding Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:7aa227c89cd8bb208b1d76c635451e395fb4bb40a195527ab998364e94c1ddef"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T13:37:51.711552+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "21",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "210111001000",
+      "tanim_tr": "Kahve hülasası, esansı ve konsantreleri; toz halinde",
+      "tanim_en": "Coffee extracts, essences, and concentrates; in powder form.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210111009000",
+      "tanim_tr": "Kahve hülasası, esansı ve konsantreleri; toz halinde olanlar HARİÇ",
+      "tanim_en": "Coffee extracts, essences, and concentrates; EXCEPT those in powder form.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210112921000",
+      "tanim_tr": "Esası kahve hülasası, esansı ve konsantresi olan müstahzarlar; katı süt yağı < %1.5, süt proteinleri <%2.5, sakkaroz/izoglikoz.<%5, nişasta/glikoz <%5",
+      "tanim_en": "Preparations based on coffee extract, essence and concentrate; containing solid milk fat < ​​1.5%, milk proteins < 2.5%, sucrose/isoglucose < 5%, starch/glucose < 5%",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210112929000",
+      "tanim_tr": "Esası kahve hülasası, esansı ve konsantresi olan diğer müstahzarlar",
+      "tanim_en": "Other preparations whose main components are coffee extract, essence, and concentrate.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210112981000",
+      "tanim_tr": "Kahve esaslı müstahzarlar; katı süt yağı < %1.5, süt proteinleri <%2.5, sakkaroz/izoglikoz.<%5, nişasta/glikoz <%5",
+      "tanim_en": "Coffee-based preparations; solid milk fat < ​​1.5%, milk proteins < 2.5%, sucrose/isoglucose < 5%, starch/glucose < 5%",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210112989000",
+      "tanim_tr": "Kahve esaslı diğer müstahzarlar",
+      "tanim_en": "Other coffee-based preparations",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210120200011",
+      "tanim_tr": "Çay ve Paraguay çayı hülasası",
+      "tanim_en": "Tea and Paraguayan tea extract",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210120200019",
+      "tanim_tr": "Çay ve Paraguay çayı esans ve konsantreleri",
+      "tanim_en": "Tea and Paraguayan tea essences and concentrates",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210120920000",
+      "tanim_tr": "Esası çay ve maté hülasası, esansı ve konsantresi olan müstahzarlar",
+      "tanim_en": "Preparations whose basis is tea and maté extract, essence and concentrate.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210120980000",
+      "tanim_tr": "Çay ve Paraguay çayı esaslı diğer müstahzarlar",
+      "tanim_en": "Tea and other preparations based on Paraguayan tea.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210130110000",
+      "tanim_tr": "Kavrulmuş hindiba",
+      "tanim_en": "Roasted chicory",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210130190000",
+      "tanim_tr": "Kavrulmuş kahve yerine kullanılan diğer maddeler",
+      "tanim_en": "Other substances used as a substitute for roasted coffee",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210130910000",
+      "tanim_tr": "Kavrulmuş hindibadan elde edilenler hülasa, esans ve konsantreler",
+      "tanim_en": "Extracts, essences, and concentrates obtained from roasted chicory.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210130990000",
+      "tanim_tr": "Kavrulmuş kahve yerine kullanılan maddelerden hülasa, esans ve konsantreler",
+      "tanim_en": "Extracts, essences, and concentrates of substances used as substitutes for roasted coffee.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210210100000",
+      "tanim_tr": "Kültür mayaları (canlı)",
+      "tanim_en": "Cultured yeasts (live)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210210310000",
+      "tanim_tr": "Ekmekçi mayası (canlı); kuru olanlar",
+      "tanim_en": "Baker's yeast (live); dry varieties",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210210390000",
+      "tanim_tr": "Ekmekçi mayası (canlı); kuru olanlar HARİÇ",
+      "tanim_en": "Baker's yeast (live); EXCEPT for dry yeast.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210210901000",
+      "tanim_tr": "Bira mayası (canlı)",
+      "tanim_en": "Brewer's yeast (live)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210210909000",
+      "tanim_tr": "Mayalar (canlı); kültür, ekmekçi ve bira mayaları HARİÇ",
+      "tanim_en": "Yeasts (living); EXCLUDING cultured, baker's and brewer's yeasts.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210220111000",
+      "tanim_tr": "Cansız bira mayası; tablet, küp veya benzeri şekillerde, ambalajda net <= 1 kg",
+      "tanim_en": "Inactive brewer's yeast; in tablet, cube or similar form, packaged net <= 1 kg.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210220119000",
+      "tanim_tr": "Cansız mayalar (cansız bira mayası HARİÇ); tablet, küp veya benzeri şekillerde, ambalajda net <= 1 kg",
+      "tanim_en": "Deactivated yeasts (EXCEPT deactivated brewer's yeast); in tablet, cube or similar form, in packaging net <= 1 kg.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210220191000",
+      "tanim_tr": "Cansız bira mayası; tablet, küp veya benzeri şekillerde, ambalajda net <= 1 kg olanlar HARİÇ",
+      "tanim_en": "Deactivated brewer's yeast; in tablet, cube or similar form, EXCEPT those with a net weight of <= 1 kg in the package.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210220199000",
+      "tanim_tr": "Cansız mayalar (bira mayası HARİÇ); tablet, küp veya benzeri şekillerde, ambalajda net <= 1 kg olanlar HARİÇ",
+      "tanim_en": "Inactive yeasts (EXCEPT brewer's yeast); in tablet, cube or similar form, EXCEPT those with a net weight of less than 1 kg in the package.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210220901000",
+      "tanim_tr": "Tek hücreli algler",
+      "tanim_en": "Single-celled algae",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210220909000",
+      "tanim_tr": "Tek hücreli diğer mikroorganizmalar",
+      "tanim_en": "Other single-celled microorganisms",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210230000000",
+      "tanim_tr": "Hazırlanmış kabartma tozları",
+      "tanim_en": "Prepared baking powders",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210310000000",
+      "tanim_tr": "Soya sosu",
+      "tanim_en": "Soy sauce",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210320000000",
+      "tanim_tr": "Domates ketçapı ve diğer domates sosları",
+      "tanim_en": "Tomato ketchup and other tomato sauces",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210330100011",
+      "tanim_tr": "Hardal unu ve irmiği; net ağırlığı <= 1 kg",
+      "tanim_en": "Mustard flour and semolina; net weight <= 1 kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210330100012",
+      "tanim_tr": "Hardal unu ve irmiği; net ağırlığı > 1 kg",
+      "tanim_en": "Mustard flour and semolina; net weight > 1 kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210330900000",
+      "tanim_tr": "Hazır hardal",
+      "tanim_en": "Ready-made mustard",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210390100000",
+      "tanim_tr": "Mango çeşnisi (sıvı halde)",
+      "tanim_en": "Mango flavoring (in liquid form)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210390300000",
+      "tanim_tr": "Diğer soslar ve müstahzarları, çeşni ve lezzet verici diğer karışımlar; % 44,2 =<alkol derecesi<% 49,2, şekerli, baharatlı, kaplarda net <= 0.5 litre",
+      "tanim_en": "Other sauces and preparations, other seasonings and flavoring mixtures; 44.2% alcohol content <49.2%, sweetened, spiced, net weight in containers <= 0.5 liters.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210390900011",
+      "tanim_tr": "Acı biber sosu",
+      "tanim_en": "Hot pepper sauce",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210390900012",
+      "tanim_tr": "Çemen",
+      "tanim_en": "Fenugreek",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210390900013",
+      "tanim_tr": "Harissa sosu",
+      "tanim_en": "Harissa sauce",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210390900018",
+      "tanim_tr": "Diğer soslar ve müstahzarları, çeşni ve lezzet verici diğer karışımlar",
+      "tanim_en": "Other sauces and preparations, other seasonings and flavoring mixtures.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210410000011",
+      "tanim_tr": "Et suyu tabletleri",
+      "tanim_en": "Broth tablets",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210410000012",
+      "tanim_tr": "Çorbalar",
+      "tanim_en": "Soups",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210410000019",
+      "tanim_tr": "Et suyu müstahzarları (tabletler HARİÇ)",
+      "tanim_en": "Broth preparations (EXCEPT tablets)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210420000000",
+      "tanim_tr": "Karışım halindeki homojenize gıda müstahzarları",
+      "tanim_en": "Homogenized food preparations in mixed form",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210500101000",
+      "tanim_tr": "Dondurma ve yenilen diğer buzlar; kakao içeren, katı süt yağı < % 3",
+      "tanim_en": "Ice cream and other edible ice products; containing cocoa, solid milk fat < ​​3%.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210500109000",
+      "tanim_tr": "Dondurma ve yenilen diğer buzlar; kakao içermeyen, katı süt yağı < % 3",
+      "tanim_en": "Ice cream and other edible ice products; cocoa-free, solid milk fat < ​​3%.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210500911000",
+      "tanim_tr": "Dondurma ve yenilen diğer buzlar; kakao içeren, %3 <= katı süt yağı < %7",
+      "tanim_en": "Ice cream and other edible ice products; containing cocoa, 3% <= solid milk fat < ​​7%.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210500919000",
+      "tanim_tr": "Dondurma ve yenilen diğer buzlar; kakao içermeyen, %3 <= katı süt yağı < %7",
+      "tanim_en": "Ice cream and other edible ice products; cocoa-free, 3% <= solid milk fat < ​​7%",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210500991000",
+      "tanim_tr": "Dondurma ve yenilen diğer buzlar; kakao içeren, katı süt yağı >= %7",
+      "tanim_en": "Ice cream and other edible ice products; containing cocoa, solid milk fat >= 7%.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210500999000",
+      "tanim_tr": "Dondurma ve yenilen diğer buzlar; kakao içermeyen, katı süt yağı >= %7",
+      "tanim_en": "Ice cream and other edible ice products; cocoa-free, solid milk fat >= 7%.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210610200011",
+      "tanim_tr": "Proteinli diyet mamaları; katı süt yağı < %1.5, sakkaroz veya izoglikoz < %5, glikoz veya nişasta < %5",
+      "tanim_en": "Protein-rich diet formulas contain: solid milk fat < ​​1.5%, sucrose or isoglucose < 5%, glucose or starch < 5%.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210610200019",
+      "tanim_tr": "Proteinli diğer gıda müstahzarları; katı süt yağı < %1.5, sakkaroz veya izoglikoz < %5, glikoz veya nişasta < %5",
+      "tanim_en": "Other protein-containing food preparations; solid milk fat < ​​1.5%, sucrose or isoglucose < 5%, glucose or starch < 5%",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210610800011",
+      "tanim_tr": "Proteinli diyet mamaları; katı süt yağı >= %1.5, sakkaroz veya izoglikoz >= %5, glikoz veya nişasta >= %5",
+      "tanim_en": "Protein-rich diet formulas contain: solid milk fat >= 1.5%, sucrose or isoglucose >= 5%, glucose or starch >= 5%",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210610800019",
+      "tanim_tr": "Proteinli diğer gıda müstahzarları; katı süt yağı >= %1.5, sakkaroz veya izoglikoz >= %5, glikoz veya nişasta >= %5",
+      "tanim_en": "Other protein-containing food preparations; solid milk fat >= 1.5%, sucrose or isoglucose >= 5%, glucose or starch >= 5%",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210690200000",
+      "tanim_tr": "Bileşik alkol müstahzarları (içki imalinde kullanılan koku veren maddeler esaslı olanlar hariç)",
+      "tanim_en": "Compound alcohol preparations (excluding those based on flavoring agents used in the manufacture of alcoholic beverages)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210690300000",
+      "tanim_tr": "İzoglikoz şurupları; aromalandırılmış veya renklendirilmiş",
+      "tanim_en": "Isoglucose syrups; flavored or colored.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210690510000",
+      "tanim_tr": "Laktoz şurubu; aromalandırılmış veya renklendirilmiş",
+      "tanim_en": "Lactose syrup; flavored or colored",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210690550000",
+      "tanim_tr": "Glikoz şurubu ve malto dekstrin şurubu; aromalandırılmış veya renklendirilmiş",
+      "tanim_en": "Glucose syrup and maltodextrin syrup; flavored or colored.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210690590000",
+      "tanim_tr": "Aromalandırılmış veya renklendirilmiş diğer şeker şurupları",
+      "tanim_en": "Other flavored or colored sugar syrups",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210690920000",
+      "tanim_tr": "Diğer gıda müstahzarları; katı süt yağı < %1.5, sakkaroz veya izoglikoz < %5, glikoz veya nişasta < %5",
+      "tanim_en": "Other food preparations; solid milk fat < ​​1.5%, sucrose or isoglucose < 5%, glucose or starch < 5%",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210690980014",
+      "tanim_tr": "Jöleler; katı süt yağı >= %1.5, sakkaroz veya izoglikoz >= %5, glikoz veya nişasta >= %5",
+      "tanim_en": "Jellies; solid milk fat >= 1.5%, sucrose or isoglucose >= 5%, glucose or starch >= 5%",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210690980015",
+      "tanim_tr": "Emülgatörler; katı süt yağı >= %1.5, sakkaroz veya izoglikoz >= %5, glikoz veya nişasta >= %5",
+      "tanim_en": "Emulsifiers; solid milk fat >= 1.5%, sucrose or isoglucose >= 5%, glucose or starch >= 5%",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210690980016",
+      "tanim_tr": "Diğer diyet mamaları; katı süt yağı >= %1.5, sakkaroz veya izoglikoz >= %5, glikoz veya nişasta >= %5",
+      "tanim_en": "Other dietary formulas contain: solid milk fat >= 1.5%, sucrose or isoglucose >= 5%, glucose or starch >= 5%",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "210690980019",
+      "tanim_tr": "Tarifenin başka yerinde bulunmayan diğer gıda müstahzarları; katı süt yağı >= %1.5, sakkaroz veya izoglikoz >= %5, glikoz veya nişasta >= %5",
+      "tanim_en": "Other food preparations not specified elsewhere in the tariff; solid milk fat >= 1.5%, sucrose or isoglucose >= 5%, glucose or starch >= 5%",
+      "grup": "tevkifat_yok",
+      "oran": null
+    }
+  ]
+}

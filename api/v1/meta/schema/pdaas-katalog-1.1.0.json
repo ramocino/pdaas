@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdaas.com.tr/api/v1/meta/schema/pdaas-katalog-1.1.0.json",
+  "title": "PDaaS katalog.json (şema 1.1.0)",
+  "description": "Tüm servislerin, katmanlarının ve son sürümlerinin tek giriş noktası.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_surumu", "guncelleme", "servisler"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_surumu": { "const": "1.1.0" },
+    "guncelleme": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "servisler": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kod", "ad", "tip", "kod_sistemi", "katmanlar"],
+        "properties": {
+          "kod": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "ad": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["tr"],
+            "properties": {
+              "tr": { "type": "string", "minLength": 1 },
+              "en": { "type": ["string", "null"] }
+            }
+          },
+          "tip": { "enum": ["agac", "harita", "liste", "kural-seti"] },
+          "kod_sistemi": { "enum": ["gtip", "cpc", "nace", "isco", "sgk", "csgb", "gib", "hvmb", "tuik", "diger"] },
+          "katmanlar": {
+            "type": "object",
+            "additionalProperties": false,
+            "minProperties": 1,
+            "properties": {
+              "ham": { "$ref": "#/$defs/katman_kaydi" },
+              "konsolide": { "$ref": "#/$defs/katman_kaydi" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "katman_kaydi": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["son", "url", "surumler_url", "checksum"],
+      "properties": {
+        "son": { "type": "string", "pattern": "^\\d{4}\\.\\d{2}\\.\\d{2}(\\.\\d+)?$" },
+        "url": { "type": "string", "pattern": "^/" },
+        "surumler_url": { "type": "string", "pattern": "^/" },
+        "checksum": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    }
+  }
+}

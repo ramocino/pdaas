@@ -1,0 +1,887 @@
+{
+  "meta": {
+    "schema_surumu": "2.0.0",
+    "servis": {
+      "kod": "gtip-kdv",
+      "ad": {
+        "tr": "GTİP KDV Eşleşmesi",
+        "en": "GTIP VAT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:7aa227c89cd8bb208b1d76c635451e395fb4bb40a195527ab998364e94c1ddef"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T13:37:51.711552+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "96",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "960110000000",
+      "tanim_tr": "İşlenmiş fildişi ve fildişinden eşya",
+      "tanim_en": "Worked ivory and ivory artifacts.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960190000000",
+      "tanim_tr": "İşlenmiş kemik, bağa, boynuz, çatallı boynuz, mercan, sedef ve yontulmaya elverişli diğer hayvansal maddeler ve bu maddelerden eşya",
+      "tanim_en": "Processed bone, tortoiseshell, horn, antler, coral, mother-of-pearl and other animal materials suitable for carving, and articles made from these materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960200001000",
+      "tanim_tr": "Jelatin kapsüller",
+      "tanim_en": "Gelatin capsules",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960200009014",
+      "tanim_tr": "İşlenmiş lületaşı ve mamulleri",
+      "tanim_en": "Processed meerschaum and its products",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960200009018",
+      "tanim_tr": "Yontulabilir diğer maddeler ve bunlardan eşya, kalıba dökülmek/yontulmak suretiyle yapılan diğer eşya, sertleştirilmemiş jelatin ve bundan diğer eşya",
+      "tanim_en": "Other malleable materials and articles thereof, other articles made by casting/shaping, ungreased gelatin and other articles thereof",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960310000000",
+      "tanim_tr": "Çalılardan veya bağlanmış demetler halinde diğer bitkisel maddelerden süpürgeler (saplı veya sapsız)",
+      "tanim_en": "Brooms made from bushes or other plant materials in bundles (with or without handles)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960321000011",
+      "tanim_tr": "Arayüz fırçaları (dişler için)",
+      "tanim_en": "Interdental brushes (for teeth)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960321000012",
+      "tanim_tr": "Elektrikli diş fırçalarına ait başlıklar",
+      "tanim_en": "Heads for electric toothbrushes",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960321000019",
+      "tanim_tr": "Diş fırçaları (takma damak fırçaları DAHİL, arayüz fırçaları HARİÇ)",
+      "tanim_en": "Toothbrushes (including denture brushes, excluding interdental brushes)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960329300000",
+      "tanim_tr": "Saç fırçaları",
+      "tanim_en": "Hair brushes",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960329800000",
+      "tanim_tr": "Traş, kirpik, tırnak için fırçalar ve insan üzerinde kullanılan diğer tuvalet fırçaları (cihazların aksamını teşkil eden fırçalar dahil)",
+      "tanim_en": "Shaving, eyelash, and nail brushes, and other toilet brushes used on humans (including brushes that form parts of appliances)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960330100000",
+      "tanim_tr": "Resim fırçaları ve yazı fırçaları",
+      "tanim_en": "Paint brushes and writing brushes",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960330900000",
+      "tanim_tr": "Kozmetik ürünlerinin tatbikinde kullanılan fırçalar",
+      "tanim_en": "Brushes used for applying cosmetic products.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960340100000",
+      "tanim_tr": "Boya, badana, vernik yapma ve benzeri işlerde kullanılan fırçalar (9603.30 alt pozisyonundaki fırçalar hariç)",
+      "tanim_en": "Brushes used for painting, whitewashing, varnishing and similar work (excluding brushes of subheading 9603.30)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960340900000",
+      "tanim_tr": "Boya pedleri ve ruloları",
+      "tanim_en": "Paint pads and rollers",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960350001000",
+      "tanim_tr": "Makinelerin aksamını oluşturan fırçalar",
+      "tanim_en": "Brushes that make up the components of machines",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960350009000",
+      "tanim_tr": "Cihaz ve taşıtların aksamını oluşturan diğer fırçalar",
+      "tanim_en": "Other brushes that make up the components of devices and vehicles.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960390100011",
+      "tanim_tr": "Elle kullanılan mekanik yer süpürgeleri (motorsuz)",
+      "tanim_en": "Hand-operated mechanical floor sweepers (non-motorized)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960390100015",
+      "tanim_tr": "Elle kullanılan mekanik yer süpürgeleri (motorsuz) için aksam ve parçalar",
+      "tanim_en": "Parts and accessories for hand-operated mechanical floor sweepers (non-motorized).",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960390911000",
+      "tanim_tr": "Tüyden toz süpürgeleri",
+      "tanim_en": "Dust sweepers made of feathers",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960390919011",
+      "tanim_tr": "Yol süpürme fırçaları",
+      "tanim_en": "Road sweeping brushes",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960390919019",
+      "tanim_tr": "Ev tipi diğer fırçalar (ayakkabı ve elbise fırçaları dahil), ev tipi diğer süpürgeler, hayvanların bakımı için fırçalar",
+      "tanim_en": "Other household brushes (including shoe and coat brushes), other household brooms, brushes for pet grooming.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960390990000",
+      "tanim_tr": "Paspaslar, kauçuktan vb. maddelerden çekçekler, süpürge ve fırça imali için hazırlanmış düğüm ve tutamlar",
+      "tanim_en": "Knots and tufts prepared for making mops, squeegees made of rubber or similar materials, brooms, and brushes.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960400000000",
+      "tanim_tr": "EI kalburları ve el elekleri",
+      "tanim_en": "Hand sieves and hand strainers",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960500001000",
+      "tanim_tr": "İnsanların seyahatlerinde kullandıkları tuvalet takımları",
+      "tanim_en": "Toiletries that people use when traveling.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960500002000",
+      "tanim_tr": "İnsanların seyahatlerinde kullandıkları elbise temizleme setleri",
+      "tanim_en": "Clothing cleaning kits that people use when traveling.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960500009000",
+      "tanim_tr": "İnsanların seyahatlerinde kullandıkları diğer tuvalet malzemesi, dikiş malzemesi, ayakkabılarını temizlemekte kullandıkları malzemeler",
+      "tanim_en": "Other toiletries that people use while traveling, sewing supplies, and materials they use to clean their shoes.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960610000000",
+      "tanim_tr": "Çıtçıtlar ve bunların aksamı",
+      "tanim_en": "Snap fasteners and their components.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960621000000",
+      "tanim_tr": "Plastik maddelerden düğmeler; dokumaya elverişli maddelerle kaplanmamış",
+      "tanim_en": "Buttons made of plastic materials; not coated with textile-suitable materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960622000000",
+      "tanim_tr": "Adi metallerden düğmeler; dokumaya elverişli maddelerle kaplanmamış",
+      "tanim_en": "Buttons made of base metals; not coated with textile materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960629000000",
+      "tanim_tr": "Diğer düğmeler",
+      "tanim_en": "Other buttons",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960630000000",
+      "tanim_tr": "Düğme formları, düğmelerin diğer aksamı ve düğme taslakları",
+      "tanim_en": "Button forms, other button components, and button templates.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960711000000",
+      "tanim_tr": "Kayarak işleyen fermuarlar; dişleri adi metallerden olanlar",
+      "tanim_en": "Sliding zippers; those with teeth made of base metal.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960719000011",
+      "tanim_tr": "Kayarak işleyen fermuarlar; dişleri plastiklerden olanlar",
+      "tanim_en": "Sliding zippers; those with plastic teeth.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960719000019",
+      "tanim_tr": "Kayarak işleyen fermuarlar; dişleri adi metallerden ve plastiklerden olanlar HARİÇ",
+      "tanim_en": "Sliding zippers; EXCEPT those with teeth made of base metals and plastics.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960720100000",
+      "tanim_tr": "Kayarak işleyen fermuarların aksam ve parçaları; adi metallerden olanlar",
+      "tanim_en": "Components and parts of sliding zippers; those made of base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960720900000",
+      "tanim_tr": "Kayarak işleyen fermuarların aksam ve parçaları; adi metallerden olanlar HARİÇ",
+      "tanim_en": "Parts and components of sliding zippers; EXCEPT those made of base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960810101000",
+      "tanim_tr": "Sıvı mürekkepli bilyalı kalemler; plastik maddelerden olanlar",
+      "tanim_en": "Liquid ink ballpoint pens; those made of plastic materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960810109000",
+      "tanim_tr": "Sıvı mürekkepli bilyalı kalemler; plastik maddelerden olanlar HARİÇ",
+      "tanim_en": "Ballpoint pens with liquid ink; EXCEPT those made of plastic.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960810920000",
+      "tanim_tr": "Değiştirilebilen kartuşlu bilyalı kalemler",
+      "tanim_en": "Ballpoint pens with replaceable cartridges",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960810990000",
+      "tanim_tr": "Bilyalı diğer kalemler",
+      "tanim_en": "Other ballpoint pens",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960820001000",
+      "tanim_tr": "Keçe uçlu veya diğer gözenek uçlu yazı ve işaret kalemleri; plastik maddelerden olanlar",
+      "tanim_en": "Felt-tipped or other porous-tipped writing and marking pens; those made of plastic materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960820009000",
+      "tanim_tr": "Keçe uçlu veya diğer gözenek uçlu yazı ve işaret kalemleri; plastik maddelerden olanlar HARİÇ",
+      "tanim_en": "Felt-tipped or other porous-tipped writing and marking pens; EXCEPT those made of plastic materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960830001000",
+      "tanim_tr": "Mürekkepli kalemler, stilolar ve diğer kalemler; plastik maddelerden olanlar",
+      "tanim_en": "Ink pens, styluses, and other pens; those made of plastic materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960830009000",
+      "tanim_tr": "Mürekkepli kalemler, stilolar ve diğer kalemler; plastik maddelerden olanlar HARİÇ",
+      "tanim_en": "Ink pens, styluses and other pens; EXCEPT those made of plastic materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960840001000",
+      "tanim_tr": "Dolma kurşun kalemler; plastik maddelerden olanlar",
+      "tanim_en": "Fountain pencils; those made of plastic.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960840009000",
+      "tanim_tr": "Dolma kurşun kalemler; plastik maddelerden olanlar HARİÇ",
+      "tanim_en": "Fountain pencils; EXCEPT those made of plastic.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960850001000",
+      "tanim_tr": "9608.10 ila 9608.40 alt pozisyonlarındaki plastik maddelerden olan kalemlerin iki veya daha fazlasını içeren setler",
+      "tanim_en": "Sets containing two or more pencils made of plastic materials falling under subheadings 9608.10 to 9608.40.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960850009011",
+      "tanim_tr": "9608.10 ila 9608.40'taki gövde kapakları kıymetli metallerden veya kıymetli metallerle kaplama metallerden kalemlerin iki/daha fazlasını içeren setler",
+      "tanim_en": "Sets containing two or more pens with body caps made of precious metals or metals plated with precious metals, as specified in 9608.10 to 9608.40.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960850009019",
+      "tanim_tr": "9608.10 ila 9608.40 alt pozisyonlarındaki diğer kalemlerin iki veya daha fazlasını içeren setler",
+      "tanim_en": "Sets containing two or more of other items in subheadings 9608.10 to 9608.40",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960860000000",
+      "tanim_tr": "Bilyalı kalemlerin yedek uçları (bir bilyalı uç ve mürekkep rezervuarı kapsayan)",
+      "tanim_en": "Replacement leads for ballpoint pens (including a ballpoint nib and ink reservoir)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960891000000",
+      "tanim_tr": "Yazı kalemi uçları ve damakları",
+      "tanim_en": "Pen nibs and feeds",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960899000000",
+      "tanim_tr": "96.08 pozisyonunda yer alan kalemler için diğer aksam ve parçalar",
+      "tanim_en": "Other parts and accessories for items falling under heading 96.08.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960910100000",
+      "tanim_tr": "Kurşun kalemler (96.08 pozisyonundakiler HARİÇ) ve kurşun boya kalemleri (bir kılıfa yerleştirilmiş uçları ile birlikte); kurşunları grafitten olanlar",
+      "tanim_en": "Pencils (excluding those in heading 96.08) and colored pencils (with their leads fitted in a sheath); those with graphite leads.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960910900000",
+      "tanim_tr": "Kurşun kalemler (96.08 poz. HARİÇ) ve kurşun boya kalemleri (bir kılıfa yerleştirilmiş uçları ile birlikte); kurşunları grafitten olanlar HARİÇ",
+      "tanim_en": "Pencils (EXCEPT item 96.08) and colored pencils (with their leads in a case); EXCEPT those with graphite leads.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960920000000",
+      "tanim_tr": "Siyah veya renkli kurşun kalem kurşunları",
+      "tanim_en": "Black or colored pencil leads",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960990100000",
+      "tanim_tr": "Pasteller ve kömür kalemler",
+      "tanim_en": "Pastels and charcoal pencils",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "960990900000",
+      "tanim_tr": "Yazı veya çizim tebeşirleri ve terzi tebeşirleri",
+      "tanim_en": "Writing or drawing chalks and tailor's chalks",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961000000000",
+      "tanim_tr": "Kayağan taşından \"arduvaz\" veya diğer maddelerden yazı veya resim tahtaları (çerçeveli olsun olmasın)",
+      "tanim_en": "Writing or drawing boards (with or without frames) made of slate or other materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961100000000",
+      "tanim_tr": "Elle kullanılan tarih damgaları, kaşeler, numaratörler, pul damgaları, vb. eşya, elle kullanılan kumpaslar ve kumpas içeren takımlar",
+      "tanim_en": "Hand-operated date stamps, seals, numbering devices, stamp stamps, etc., hand-operated calipers and caliper sets.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961210101000",
+      "tanim_tr": "Makina veya cihazlar için mürekkep veya boyayıcı maddeler emdirilmiş şeritler; plastikten olanlar",
+      "tanim_en": "Strips impregnated with ink or dyes for machinery or equipment; those made of plastic.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961210109000",
+      "tanim_tr": "Mürekkepli veya iz bırakacak şekilde başka surette hazırlanmış diğer şeritler; plastikten olanlar",
+      "tanim_en": "Inked or otherwise prepared strips that leave marks; those made of plastic.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961210200000",
+      "tanim_tr": "Daktilo, bilgisayar ve diğer makinalarla kullanılan, plastik veya metal kartuşlara konulmuş, sentetik ve suni liflerden şeritler; genişliği < 30 mm",
+      "tanim_en": "Strips of synthetic or artificial fibers, enclosed in plastic or metal cartridges, used in typewriters, computers, and other machines; width < 30 mm.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961210801000",
+      "tanim_tr": "Makina veya cihazlar için mürekkep veya boyayıcı maddeler emdirilmiş diğer şeritler",
+      "tanim_en": "Ink or dye-impregnated strips for machinery or equipment.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961210809000",
+      "tanim_tr": "Mürekkepli veya iz bırakacak şekilde başka surette hazırlanmış diğer şeritler",
+      "tanim_en": "Inked or other strips prepared in a way that will leave a mark",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961220000000",
+      "tanim_tr": "Istampalar",
+      "tanim_en": "Stamps",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961310000000",
+      "tanim_tr": "Tekrar doldurulamayan gazlı cep çakmakları",
+      "tanim_en": "Non-refillable gas pocket lighters",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961320000011",
+      "tanim_tr": "Doldurulabilen gazlı cep çakmakları; ateşleme sistemi elektrikli olanlar",
+      "tanim_en": "Refillable gas pocket lighters; those with an electric ignition system.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961320000019",
+      "tanim_tr": "Doldurulabilen gazlı cep çakmakları; ateşleme sistemi elektrikli olanlar HARİÇ",
+      "tanim_en": "Refillable gas pocket lighters; EXCEPT those with an electric ignition system.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961380000011",
+      "tanim_tr": "Ateşleyiciler",
+      "tanim_en": "Igniters",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961380000012",
+      "tanim_tr": "Masa çakmakları",
+      "tanim_en": "Table lighters",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961380000019",
+      "tanim_tr": "Diğer çakmaklar",
+      "tanim_en": "Other lighters",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961390000011",
+      "tanim_tr": "Çakmak ve ateşleyiciler için plastikten gaz hazneleri",
+      "tanim_en": "Plastic gas tanks for lighters and igniters.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961390000019",
+      "tanim_tr": "Çakmak ve diğer ateşleyiciler için aksam ve parçalar; plastikten gaz hazneleri HARİÇ",
+      "tanim_en": "Parts and accessories for lighters and other igniters; EXCLUDING plastic gas containers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961400100000",
+      "tanim_tr": "Pipo imaline mahsus kabaca kesilmiş ağaç ve kökler",
+      "tanim_en": "Roughly cut wood and roots suitable for pipe making.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961400900000",
+      "tanim_tr": "Pipolar (pipo lüleleri dahil), puro ve sigara ağızlıkları ve bunların aksam ve parçaları; pipo imaline mahsus kabaca kesilmiş ağaç ve kökler HARİÇ",
+      "tanim_en": "Pipes (including pipe bowls), cigar and cigarette holders and their parts and accessories; EXCLUDING roughly cut wood and roots intended for pipe making.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961511000000",
+      "tanim_tr": "Saç tarakları, süs tarakları, saç tokaları ve benzeri eşya; sertleştirilmiş kauçuktan veya plastikten olanlar",
+      "tanim_en": "Hair combs, ornamental combs, hairpins and similar items; those made of hardened rubber or plastic.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961519000000",
+      "tanim_tr": "Saç tarakları, süs tarakları, saç tokaları ve benzeri eşya; sertleştirilmiş kauçuktan veya plastikten olanlar HARİÇ",
+      "tanim_en": "Hair combs, ornamental combs, hairpins and similar items; EXCEPT those made of hardened rubber or plastic.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961590001000",
+      "tanim_tr": "Kıvırma pensleri, saç firketeleri, bigudiler vb. ve 96.15 pozisyonunda yer alan tüm eşyalar için aksam ve parçalar; plastikten olanlar",
+      "tanim_en": "Parts and accessories for curling pliers, hairpins, curlers, etc., and all articles falling under heading 96.15; those made of plastic.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961590002000",
+      "tanim_tr": "Kıvırma pensleri, saç firketeleri, bigudiler vb. ve 96.15 pozisyonunda yer alan tüm eşyalar için aksam ve parçalar; demir veya çelikten olanlar",
+      "tanim_en": "Parts and accessories for curling pliers, hairpins, curlers, etc., and all articles falling under heading 96.15; those made of iron or steel.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961590009000",
+      "tanim_tr": "Kıvırma pensleri, saç firketeleri, bigudiler vb. ve 96.15 pozisyonunda yer alan tüm eşyalar için aksam ve parçalar; diğer maddelerden olanlar",
+      "tanim_en": "Parts and accessories for curling pliers, hairpins, curlers, etc., and all articles falling under heading 96.15; those made of other materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961610100000",
+      "tanim_tr": "Parfüm spreyleri ve benzeri tuvalet spreyleri",
+      "tanim_en": "Perfume sprays and similar toilet sprays",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961610900000",
+      "tanim_tr": "Parfüm spreyleri ve benzeri tuvalet spreyleri için püskürtme mekanizmaları ve püskürtme başları",
+      "tanim_en": "Spray mechanisms and spray nozzles for perfume sprays and similar toilet sprays.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961620000000",
+      "tanim_tr": "Kozmetik ürünlerinin veya tuvalet müstahzarlarının kullanılmasına mahsus büyük ve küçük ponponlar",
+      "tanim_en": "Large and small puffs for use with cosmetic products or toiletries.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961700000012",
+      "tanim_tr": "Termoslar ve diğer vakumlu kaplar (tamamlanmış)",
+      "tanim_en": "Thermoses and other vacuum containers (completed)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961700000018",
+      "tanim_tr": "Termoslar ve diğer vakumlu kaplar için aksam ve parçalar (camdan iç gövdeler hariç)",
+      "tanim_en": "Parts and accessories for thermoses and other vacuum containers (excluding glass inner bodies)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961800000000",
+      "tanim_tr": "Terzi mankenleri ve diğer mankenler, vitrinler için otomatlar ve diğer hareketli tablolar",
+      "tanim_en": "Tailor's mannequins and other mannequins, vending machines and other moving pictures for shop windows.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900301000",
+      "tanim_tr": "Hijyenik havlular, tamponlar ve benzeri hijyenik eşya; dokumaya elverişli sentetik veya suni liflerden yapılmış vatkadan olanlar",
+      "tanim_en": "Hygienic towels, tampons and similar hygienic articles; those made from wadding of synthetic or artificial fibers suitable for weaving.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900309000",
+      "tanim_tr": "Hijyenik havlular, tamponlar ve benzeri hijyenik eşya; dokumaya elverişli diğer maddelerden yapılmış vatkadan olanlar",
+      "tanim_en": "Hygienic towels, tampons and similar hygienic articles; those made of wadding of other textile materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900401000",
+      "tanim_tr": "Hijyenik havlular, tamponlar ve benzeri hijyenik eşya; dokumaya elverişli diğer maddelerden örme olanlar",
+      "tanim_en": "Hygienic towels, tampons and similar hygienic articles; knitted items made from other textile materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900409000",
+      "tanim_tr": "Hijyenik havlular, tamponlar ve benzeri hijyenik eşya; dokumaya elverişli diğer maddelerden olanlar (örme HARİÇ)",
+      "tanim_en": "Hygienic towels, tampons and similar hygienic articles; those made of other textile materials (EXCEPT knitted ones)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900501000",
+      "tanim_tr": "Bebek bezleri ve benzeri hijyenik eşya; dokumaya elverişli diğer maddelerden örme olanlar",
+      "tanim_en": "Diapers and similar hygienic articles; knitted items made from other textile materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900509000",
+      "tanim_tr": "Bebek bezleri ve benzeri hijyenik eşya; dokumaya elverişli diğer maddelerden olanlar (örme HARİÇ)",
+      "tanim_en": "Diapers and similar hygienic articles; those made of other textile materials (EXCEPT knitted materials)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900711000",
+      "tanim_tr": "Hijyenik havlular; kağıt hamurundan, kağıttan, selüloz vatka veya selüloz liflerden olanlar",
+      "tanim_en": "Hygienic towels are those made from paper pulp, paper, cellulose wadding, or cellulose fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900719000",
+      "tanim_tr": "Hijyenik havlular; dokumaya elverişli maddelerden, kağıt hamurundan, kağıttan, selüloz vatka veya selüloz liflerden olanlar HARİÇ",
+      "tanim_en": "Hygienic towels; EXCEPT those made from textile materials, pulp, paper, cellulose wadding or cellulose fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900751000",
+      "tanim_tr": "Tamponlar; kağıt hamurundan, kağıttan, selüloz vatka veya selüloz liflerden olanlar",
+      "tanim_en": "Tampons can be made from paper pulp, paper, cellulose wadding, or cellulose fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900759000",
+      "tanim_tr": "Tamponlar; dokumaya elverişli maddelerden, kağıt hamurundan, kağıttan, selüloz vatka veya selüloz liflerden olanlar HARİÇ",
+      "tanim_en": "Tampons; EXCEPT those made from textile materials, pulp, paper, cellulose wadding or cellulose fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900791000",
+      "tanim_tr": "Hijyenik diğer eşya; kağıt hamurundan, kağıttan, selüloz vatka veya selüloz liflerden olanlar",
+      "tanim_en": "Other hygienic articles; those made from pulp, paper, cellulose wadding or cellulose fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900799000",
+      "tanim_tr": "Hijyenik diğer eşya; dokumaya elverişli maddelerden, kağıt hamurundan, kağıttan, selüloz vatka veya selüloz liflerden olanlar HARİÇ",
+      "tanim_en": "Other hygienic articles; EXCEPT those made of textile materials, pulp, paper, cellulose wadding or cellulose fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900811000",
+      "tanim_tr": "Bebek bezleri; kağıt hamurundan, kağıttan, selüloz vatka veya selüloz liflerden olanlar",
+      "tanim_en": "Diapers are made from paper pulp, paper, cellulose wadding, or cellulose fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900819000",
+      "tanim_tr": "Bebek bezleri; dokumaya elverişli maddelerden, kağıt hamurundan, kağıttan, selüloz vatka veya selüloz liflerden olanlar HARİÇ",
+      "tanim_en": "Diapers; EXCEPT those made from textile materials, pulp, paper, cellulose wadding or cellulose fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900891000",
+      "tanim_tr": "Hijyenik diğer eşya (inkontinans bakım ürünleri, vb.); kağıt hamurundan, kağıttan, selüloz vatka veya selüloz liflerden olanlar",
+      "tanim_en": "Other hygienic articles (incontinence care products, etc.); those made from pulp, paper, cellulose wadding or cellulose fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "961900899000",
+      "tanim_tr": "Hijyenik diğer eşya (inkontinans bakım ürünleri, vb.); diğer maddelerden olanlar",
+      "tanim_en": "Other hygienic articles (incontinence care products, etc.); those made from other materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "962000100000",
+      "tanim_tr": "Monopod, bipod, tripod ve benzeri eşyalar; kameralar, projektörler ve 90. fasıldaki diğer aletlerle kullanılan türde olanlar",
+      "tanim_en": "Monopods, bipods, tripods and similar items; those used with cameras, projectors and other equipment in Chapter 90.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "962000910000",
+      "tanim_tr": "Plastik veya aluminyumdan monopod, bipod, tripod ve benzeri eşyalar; kamera, projektör ve 90. fasıldaki diğer aletlerle kullanılan türde olanlar HARİÇ",
+      "tanim_en": "Monopods, bipods, tripods and similar items of plastic or aluminum; EXCEPT those used with cameras, projectors and other equipment in Chapter 90.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "962000990000",
+      "tanim_tr": "Diğer maddelerden monopod, bipod, tripod ve benzeri eşyalar; kamera, projektör ve 90. fasıldaki diğer aletlerle kullanılan türde olanlar HARİÇ",
+      "tanim_en": "Monopods, bipods, tripods and similar items of other materials; EXCEPT those used with cameras, projectors and other instruments in Chapter 90.",
+      "grup": "genel",
+      "oran": 0.2
+    }
+  ]
+}

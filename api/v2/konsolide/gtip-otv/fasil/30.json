@@ -1,0 +1,782 @@
+{
+  "meta": {
+    "schema_surumu": "2.0.0",
+    "servis": {
+      "kod": "gtip-otv",
+      "ad": {
+        "tr": "GTİP ÖTV Eşleşmesi",
+        "en": "GTIP SCT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:7aa227c89cd8bb208b1d76c635451e395fb4bb40a195527ab998364e94c1ddef"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T13:37:51.711552+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "30",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "300120100000",
+      "tanim_tr": "Tedavide kullanılan insan menşeli kurutulmuş guddelerin veya diğer organların veya bunların salgılarının hülasaları",
+      "tanim_en": "Extracts of dried human glands or other organs or their secretions used in treatment.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300120900000",
+      "tanim_tr": "Tedavide kullanılan hayvan menşeli kurutulmuş guddelerin veya diğer organların veya bunların salgılarının hülasaları",
+      "tanim_en": "Extracts of dried glands or other organs of animal origin, or their secretions, used in treatment.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300190200000",
+      "tanim_tr": "Tedavide kullanılan insan menşeli kurutulmuş guddeler ve diğer organlar, heparin ve tuzları, insan menşeli diğer maddeler",
+      "tanim_en": "Human-derived dried glands and other organs used in treatment, heparin and its salts, and other human-derived substances.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300190910000",
+      "tanim_tr": "Heparin ve tuzları",
+      "tanim_en": "Heparin and its salts",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300190981000",
+      "tanim_tr": "Tedavide kullanılan hayvan menşeli kurutulmuş guddeler ve diğer organlar (toz haline getirilmiş)",
+      "tanim_en": "Dried animal glands and other organs (in powder form) used in treatment.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300190989000",
+      "tanim_tr": "Tedavide kullanılan hayvan menşeli kurutulmuş guddeler ve diğer organlar (toz haline getirilmiş olanlar HARİÇ), hayvan menşeli diğer maddeler",
+      "tanim_en": "Dried animal glands and other organs (EXCEPT those in powdered form), and other animal-derived substances used in treatment.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300212000011",
+      "tanim_tr": "Yılan serumu",
+      "tanim_en": "Snake serum",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300212000012",
+      "tanim_tr": "Aglutinan serumları",
+      "tanim_en": "Agglutinant serums",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300212000013",
+      "tanim_tr": "Gamma-globulin",
+      "tanim_en": "Gamma-globulin",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300212000019",
+      "tanim_tr": "Diğer antiserumlar",
+      "tanim_en": "Other antisera",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300212000021",
+      "tanim_tr": "Hemoglobin",
+      "tanim_en": "Hemoglobin",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300212000022",
+      "tanim_tr": "Kan globulinleri",
+      "tanim_en": "Blood globulins",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300212000023",
+      "tanim_tr": "Serum globulinleri",
+      "tanim_en": "Serum globulins",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300212000029",
+      "tanim_tr": "Kan fraksiyonlarının diğerleri",
+      "tanim_en": "Other blood fractions",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300213000000",
+      "tanim_tr": "Karışım olmayan bağışıklık ürünleri; dozlandırılmamış veya perakende satışa uygun şekilde ambalajlanmamış veya hazırlanmamış",
+      "tanim_en": "Non-mixed immunization products; undosed or not packaged or prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300214000000",
+      "tanim_tr": "Karışım halinde bağışıklık ürünleri; dozlandırılmamış veya perakende satışa uygun şekilde ambalajlanmamış veya hazırlanmamış",
+      "tanim_en": "Immune products in mixture form; not dosed or packaged or prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300215000000",
+      "tanim_tr": "Dozlandırılmış veya perakende satışa uygun şekilde ambalajlanmış veya hazırlanmış bağışıklık ürünleri",
+      "tanim_en": "Immune products that are dosed or packaged or prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300241100000",
+      "tanim_tr": "İnsanlar için SARS ve ilişkili koronavirüs \"SARS-CoV türleri\" aşıları",
+      "tanim_en": "SARS and related coronavirus \"SARS-CoV strains\" vaccines for humans.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300241901000",
+      "tanim_tr": "Çocuk felci aşıları",
+      "tanim_en": "Polio vaccines",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300241902011",
+      "tanim_tr": "Kızamık aşısı",
+      "tanim_en": "Measles vaccine",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300241902012",
+      "tanim_tr": "Kabakulak aşısı",
+      "tanim_en": "Mumps vaccine",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300241902013",
+      "tanim_tr": "BCG aşısı",
+      "tanim_en": "BCG vaccine",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300241902014",
+      "tanim_tr": "Karma aşı (DBT)",
+      "tanim_en": "Combination vaccine (DBT)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300241902015",
+      "tanim_tr": "Kolera aşısı",
+      "tanim_en": "Cholera vaccine",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300241902016",
+      "tanim_tr": "Tifo aşısı",
+      "tanim_en": "Typhoid vaccine",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300241902019",
+      "tanim_tr": "İnsanlar için kullanılan diğer aşılar",
+      "tanim_en": "Other vaccines used for humans",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300242000000",
+      "tanim_tr": "Veterinerlikte kullanılan aşılar",
+      "tanim_en": "Vaccines used in veterinary medicine",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300249000000",
+      "tanim_tr": "Toksinler, mikroorganizma kültürleri (mayalar hariç) ve benzeri ürünler; insanlar için ve veterinerlikte kullanılan aşılar HARİÇ",
+      "tanim_en": "Toxins, microorganism cultures (excluding yeasts) and similar products; EXCLUDING vaccines for human and veterinary use.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300251000000",
+      "tanim_tr": "Hücre tedavisi için hücre kültürleri (değiştirilmiş olsun olmasın)",
+      "tanim_en": "Cell cultures (modified or not) for cell therapy",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300259000000",
+      "tanim_tr": "Hücre kültürleri (değiştirilmiş olsun olmasın); hücre tedavisi için olanlar HARİÇ",
+      "tanim_en": "Cell cultures (modified or not); EXCEPT those for cell therapy.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300290100000",
+      "tanim_tr": "İnsan kanı",
+      "tanim_en": "Human blood",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300290300000",
+      "tanim_tr": "Tedavide, korunmada veya teşhiste kullanılmak üzere hazırlanmış hayvan kanı",
+      "tanim_en": "Animal blood prepared for use in treatment, prevention, or diagnosis.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300310000000",
+      "tanim_tr": "Penisilanik asit bünyeli penisilinler ve türevleri veya streptomisinIer ve türevlerini içerenler (dozlandırılmamış veya perakende satış için olmayan)",
+      "tanim_en": "Penicillins and derivatives containing penicillins with penicillanic acid or streptomycins and derivatives (not for undosed or retail sale)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300320000000",
+      "tanim_tr": "Tedavide veya korunmada kullanılmak üzere birbirleriyle karıştırılmış antibiyotik içeren ilaçlar (dozlandırılmamış veya perakende satış için olmayan)",
+      "tanim_en": "Antibiotic-containing medicines mixed together for use in treatment or prevention (undosed or not for retail sale)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300331000000",
+      "tanim_tr": "Tedavide veya korunmada kullanılmak üzere birbirleriyle karıştırılmış insülin içeren ilaçlar (dozlandırılmamış veya perakende satış için olmayan)",
+      "tanim_en": "Insulin-containing medicines mixed together for use in treatment or prevention (undosed or not for retail sale)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300339000000",
+      "tanim_tr": "Hormonları veya 29.37 pozisyonundaki diğer ürünleri içeren (antibiyotikler HARİÇ) diğer ilaçlar (dozlandırılmamış veya perakende satış için olmayan)",
+      "tanim_en": "Other medicines (excluding antibiotics) containing hormones or other products of heading 29.37 (undosed or not for retail sale)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300341000000",
+      "tanim_tr": "Efedrin ve tuzlarını içeren ilaçlar; dozlandırılmamış veya perakende satış için ambalajlanmamış",
+      "tanim_en": "Medicines containing ephedrine and its salts; undosed or unpackaged for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300342000000",
+      "tanim_tr": "Psödoefedrin (INN) ve tuzlarını içeren ilaçlar; dozlandırılmamış veya perakende satış için ambalajlanmamış",
+      "tanim_en": "Medicines containing pseudoephedrine (INN) and its salts; undosed or unpackaged for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300343000000",
+      "tanim_tr": "Norefedrin ve tuzlarını içeren ilaçlar; dozlandırılmamış veya perakende satış için ambalajlanmamış",
+      "tanim_en": "Medicines containing norephedrine and its salts; undosed or unpackaged for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300349000000",
+      "tanim_tr": "Alkaloidleri veya bunların türevlerini içeren diğer ilaçlar; dozlandırılmamış veya perakende satış için ambalajlanmamış",
+      "tanim_en": "Other medicines containing alkaloids or their derivatives; undosed or unpackaged for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300360000000",
+      "tanim_tr": "Anti-sıtma aktif maddelerini (Faslın 2 no.lu alt pozisyon notu) içeren ilaçlar; dozlandırılmamış veya perakende olmayan",
+      "tanim_en": "Medicines containing anti-malarial active substances (Note to subheading 2 of the chapter); undosed or not retailed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300390000000",
+      "tanim_tr": "Tedavide/korunmada kullanılmak üzere birbirleriyle karıştırılmış diğer ilaçlar (dozlandırılmamış veya perakende satış için ambalajlanmamış)",
+      "tanim_en": "Other medicines mixed together for therapeutic/preventive use (undosed or not packaged for retail sale)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300410000000",
+      "tanim_tr": "Penisilanik asit bünyeli penisilinler veya türevleri, streptomisinler veya türevlerini içeren ilaçlar (dozlandırılmış veya perakende satış için)",
+      "tanim_en": "Penicillins or derivatives containing penicillins with penicillanic acid, streptomycins or derivatives (for dosage or retail sale)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300420000000",
+      "tanim_tr": "Antibiyotikleri içeren ilaçlar (dozlandırılmış veya perakende satış için ambalajlanmış)",
+      "tanim_en": "Medicines containing antibiotics (in doses or packaged for retail sale)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300431000000",
+      "tanim_tr": "İnsülin içeren ilaçlar (dozlandırılmış veya perakende satış için ambalajlanmış)",
+      "tanim_en": "Medicines containing insulin (in doses or packaged for retail sale)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300432000000",
+      "tanim_tr": "Böbreküstü bezi hormonlarını, türevlerini ve yapısal benzerlerini içeren ilaçlar; dozlandırılmış veya perakende için ambalajlanmış",
+      "tanim_en": "Medicines containing adrenal gland hormones, their derivatives and structural analogues; dosed or packaged for retail.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300439000000",
+      "tanim_tr": "Hormonları veya 29.37 pozisyonundaki diğer ürünleri içeren ve hormon olarak kullanılan (antibiyotik değil) ilaçlar (dozlandırılmış veya perakende)",
+      "tanim_en": "Medicines containing hormones or other products of heading 29.37 and used as hormones (not antibiotics) (in doses or retail)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300441000000",
+      "tanim_tr": "Efedrin ve tuzlarını içeren ilaçlar; dozlandırılmış veya perakende satış için ambalajlanmış",
+      "tanim_en": "Medicines containing ephedrine and its salts; in dosed or retail packaged form.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300442000000",
+      "tanim_tr": "Psödoefedrin (INN) ve tuzlarını içeren ilaçlar; dozlandırılmış veya perakende satış için ambalajlanmış",
+      "tanim_en": "Medicines containing pseudoephedrine (INN) and its salts; in dosed or retail packaged form.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300443000000",
+      "tanim_tr": "Norefedrin ve tuzlarını içeren ilaçlar; dozlandırılmış veya perakende satış için ambalajlanmış",
+      "tanim_en": "Medicines containing norephedrine and its salts; in dosed or retail packaged form.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300449000000",
+      "tanim_tr": "Alkaloidleri veya türevlerini içeren diğer ilaçlar; dozlandırılmış veya perakende satış için ambalajlanmış",
+      "tanim_en": "Other medicines containing alkaloids or their derivatives; dosed or packaged for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300450000000",
+      "tanim_tr": "Vitaminleri veya 29.36 Pozisyonundaki diğer ürünleri içeren diğer ilaçlar (dozlandırılmış veya perakende satış için ambalajlanmış)",
+      "tanim_en": "Other medicines containing vitamins or other products of heading 29.36 (in doses or packaged for retail sale)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300460000000",
+      "tanim_tr": "Anti-sıtma aktif maddelerini (Faslın 2 no.lu alt pozisyon notu) içeren ilaçlar; dozlandırılmış veya perakende satış için ambalajlanmış",
+      "tanim_en": "Medicines containing anti-malarial active substances (Note to subheading 2 of the chapter); in dosed or retail packaged form.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300490000011",
+      "tanim_tr": "Onkolojik ilaçlar; dozlandırılmış veya perakende satış için ambalajlanmış",
+      "tanim_en": "Oncological drugs; dosed or packaged for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300490000012",
+      "tanim_tr": "Hematolojik ilaçlar; dozlandırılmış veya perakende satış için ambalajlanmış",
+      "tanim_en": "Hematological drugs; dosed or packaged for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300490000019",
+      "tanim_tr": "Tedavide veya korunmada kullanılmak üzere karışık olan veya karışık olmayan diğer ilaçlar; dozlandırılmış veya perakende satış için ambalajlanmış",
+      "tanim_en": "Other medicines, mixed or unmixed, intended for use in treatment or prevention; dosed or packaged for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300510000000",
+      "tanim_tr": "Tıpta, cerrahide, dişçilikte veya veterinerlikte kullanılan yapışkan sargılar ve yapışkan tabakası olan diğer maddeler",
+      "tanim_en": "Adhesive dressings and other materials with an adhesive layer used in medicine, surgery, dentistry, or veterinary medicine.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300590100011",
+      "tanim_tr": "Tıpta, cerrahide, dişçilikte/veterinerlikte kullanılan vatka ve vatkadan mamul eşya (hidrofil pamuktan)",
+      "tanim_en": "Wadding and wadding products (made from hydrophilic cotton) used in medicine, surgery, dentistry/veterinary medicine.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300590100019",
+      "tanim_tr": "Tıpta, cerrahide, dişçilikte/veterinerlikte kullanılan vatka ve vatkadan mamul eşya (hidrofil pamuktan olanlar HARİÇ))",
+      "tanim_en": "Wadding and wadding articles used in medicine, surgery, dentistry/veterinary medicine (EXCEPT those made of hydrophilic cotton))",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300590310011",
+      "tanim_tr": "Tıpta, cerrahide, dişçilikte/veterinerlikte kullanılan gaz bezleri (tekstil maddelerden mamül)",
+      "tanim_en": "Gauze bandages (made from textile materials) used in medicine, surgery, dentistry/veterinary medicine.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300590310012",
+      "tanim_tr": "Tıpta, cerrahide, dişçilikte/veterinerlikte kullanılan tıbbi gaz kompresler (tekstil maddelerden mamül)",
+      "tanim_en": "Medical gauze compresses (made from textile materials) used in medicine, surgery, dentistry/veterinary medicine.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300590310019",
+      "tanim_tr": "Tıpta, cerrahide, dişçilikte/veterinerlikte kullanılan gazlı diğer eşya (tekstil maddelerden mamül)",
+      "tanim_en": "Other gauze products used in medicine, surgery, dentistry/veterinary medicine (made of textile materials)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300590500011",
+      "tanim_tr": "Alçılı sargı bezi (tekstil maddelerinden)",
+      "tanim_en": "Plaster bandage (made of textile materials)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300590500012",
+      "tanim_tr": "Tıbbi üçgen sargı (tekstil maddelerinden)",
+      "tanim_en": "Medical triangular bandage (made of textile materials)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300590500019",
+      "tanim_tr": "Tekstil maddelerinden yapılmış diğer sargı bezleri, bandaj, sparadlar, vb.",
+      "tanim_en": "Other bandages, dressings, wraps, etc., made from textile materials.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300590991000",
+      "tanim_tr": "Tıbbi muşamba ve tafta angle (tekstil maddelerden mamül olanlar HARİÇ)",
+      "tanim_en": "Medical oilcloth and taffeta angle (EXCEPT those made from textile materials)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300590999000",
+      "tanim_tr": "Tıp, cerrahi, dişçilikte kullanılan diğer eczacılık maddeleri (tekstil maddelerden mamül olanlar HARİÇ)",
+      "tanim_en": "Other pharmaceutical substances used in medicine, surgery, and dentistry (excluding those made from textile materials)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300610100000",
+      "tanim_tr": "Cerrahi dikişler için steril katgütler",
+      "tanim_en": "Sterile catgut for surgical sutures.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300610301000",
+      "tanim_tr": "Cerrahi ve dişçilikte kullanılan steril yapışmayı önleyiciler (plastiklerden olanlar)",
+      "tanim_en": "Sterile anti-adhesion agents (made of plastic) used in surgery and dentistry.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300610302000",
+      "tanim_tr": "Cerrahi ve dişçilikte kullanılan steril yapışmayı önleyiciler (örme mensucattan olanlar)",
+      "tanim_en": "Sterile anti-adhesion agents used in surgery and dentistry (those made of knitted fabric)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300610309000",
+      "tanim_tr": "Cerrahi ve dişçilikte kullanılan steril yapışmayı önleyiciler (plastiklerden ve örme mensucattan olanlar HARİÇ)",
+      "tanim_en": "Sterile anti-adhesion agents used in surgery and dentistry (EXCEPT those made of plastics and knitted fabrics)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300610901011",
+      "tanim_tr": "Plastikten cerrahi ve dişçilikte kullanılan emici steril hemostatlar",
+      "tanim_en": "Suction sterile hemostats made of plastic for surgical and dental use.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300610901012",
+      "tanim_tr": "Plastikten cerrahi poliamid iplik",
+      "tanim_en": "Surgical polyamide thread made of plastic.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300610901013",
+      "tanim_tr": "Plastikten cerrahi poliglaktin iplik",
+      "tanim_en": "Surgical polyglactin thread from plastic",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300610901019",
+      "tanim_tr": "Plastikten cerrahide ve dişçilikte kullanılan diğer malzemeler",
+      "tanim_en": "Other plastic materials used in surgery and dentistry.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300610902011",
+      "tanim_tr": "Örme mensucattan cerrahi ve dişçilikte kullanılan emici steril hemostatlar",
+      "tanim_en": "Absorbent sterile hemostats made from knitted fabrics for use in surgery and dentistry.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300610902019",
+      "tanim_tr": "Örme mensucattan cerrahide ve dişçilikte kullanılan diğer malzemeler",
+      "tanim_en": "Knitted fabrics and other materials used in surgery and dentistry.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300610909011",
+      "tanim_tr": "Diğer maddelerden cerrahi ve dişçilikte kullanılan emici steril hemostatlar",
+      "tanim_en": "Other materials include suction sterile hemostats used in surgery and dentistry.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300610909012",
+      "tanim_tr": "Cerrahi paslanmaz çelik tel",
+      "tanim_en": "Surgical stainless steel wire",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300610909019",
+      "tanim_tr": "Diğer maddelerden cerrahide ve dişçilikte kullanılan diğer malzemeler",
+      "tanim_en": "Other materials used in surgery and dentistry.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300630000011",
+      "tanim_tr": "Hastaya tatbik edilmek üzere hazırlanmış teşhis reaktifleri",
+      "tanim_en": "Diagnostic reagents prepared for administration to the patient",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300630000012",
+      "tanim_tr": "Radyografi muayeneleri için X ışınlarını geçirmeyen müstahzarlar",
+      "tanim_en": "Preparations that block X-rays for radiographic examinations.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300640000012",
+      "tanim_tr": "Çinko-fosfat siman (dişçilikte kullanılan dolgu malzemesi)",
+      "tanim_en": "Zinc-phosphate cement (dental filling material)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300640000013",
+      "tanim_tr": "Kemiklerin tedavisinde kullanılan çimentolar, sentetik kemik greftleri",
+      "tanim_en": "Cements used in bone treatment, synthetic bone grafts.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300640000018",
+      "tanim_tr": "Diğer dişçi çimentosu ve diğer diş dolgu maddeleri",
+      "tanim_en": "Other dental cement and other dental filling materials",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300650000000",
+      "tanim_tr": "İlk yardım kutuları ve setleri",
+      "tanim_en": "First aid kits and sets",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300660000000",
+      "tanim_tr": "Esası hormon, 29.37 pozisyonunun diğer ürünler veya spermisit olan gebeliği önleyici kimyasal müstahzarlar",
+      "tanim_en": "Chemical preparations for preventing pregnancy, the basis of which is hormone, other products of position 29.37 or spermicide.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300670000000",
+      "tanim_tr": "Tıpta veya veterinerlikte, cerrahi operasyonlar ya da fiziksel muayeneler için jel müstahzarları",
+      "tanim_en": "In medicine or veterinary medicine, gel preparations for surgical operations or physical examinations.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300691000000",
+      "tanim_tr": "Ostomi kullanımlara mahsus olduğu tanımlanabilen aletler",
+      "tanim_en": "Instruments that can be defined as being specific to ostomy use.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300692000000",
+      "tanim_tr": "Eczacılık ürünleri döküntüleri",
+      "tanim_en": "Pharmaceutical product spills",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "300693000000",
+      "tanim_tr": "Tanınmış klinik çalışmalarda kullanılmak üzere plasebolar ve kör (veya çift kör) klinik deney kitleri (ölçülü dozlarda)",
+      "tanim_en": "Placebos and blind (or double-blind) clinical trial kits (in measured doses) for use in well-known clinical trials.",
+      "grup": "otv_yok",
+      "oran": null
+    }
+  ]
+}

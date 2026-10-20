@@ -1,0 +1,1594 @@
+{
+  "meta": {
+    "schema_surumu": "2.0.0",
+    "servis": {
+      "kod": "gtip-otv",
+      "ad": {
+        "tr": "GTİP ÖTV Eşleşmesi",
+        "en": "GTIP SCT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:7aa227c89cd8bb208b1d76c635451e395fb4bb40a195527ab998364e94c1ddef"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T13:37:51.711552+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "04",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "040110100000",
+      "tanim_tr": "Süt ve krema; katı yağ <= %1, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen, hazır ambalajda <= 2 Lt",
+      "tanim_en": "Milk and cream; fat <= 1%, not concentrated, no added sugar or other sweeteners, ready-packaged <= 2 liters",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040110900000",
+      "tanim_tr": "Süt ve krema; katı yağ <= %1, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen (hazır ambalajda <= 2 Lt olanlar HARİÇ)",
+      "tanim_en": "Milk and cream; fat <= 1%, not concentrated, no added sugar or other sweeteners (EXCEPT those in pre-packaged containers <= 2 liters)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040120110000",
+      "tanim_tr": "Süt ve krema; %1 < katı yağ <= %3, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen, hazır ambalajda <= 2 Lt",
+      "tanim_en": "Milk and cream; 1% < solid fat <= 3%, not concentrated, no added sugar or other sweeteners, ready-packaged <= 2 liters",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040120190000",
+      "tanim_tr": "Süt ve krema; %1 < katı yağ <= %3, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen (hazır ambalajda <= 2 Lt olanlar HARİÇ)",
+      "tanim_en": "Milk and cream; 1% < solid fat <= 3%, not concentrated, without added sugar or other sweeteners (EXCEPT those in pre-packaged containers <= 2 liters)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040120910000",
+      "tanim_tr": "Süt ve krema; %3 < katı yağ <= %6, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen, hazır ambalajda <= 2 Lt",
+      "tanim_en": "Milk and cream; 3% < solid fat <= 6%, not concentrated, no added sugar or other sweeteners, ready-packaged <= 2 liters",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040120990000",
+      "tanim_tr": "Süt ve krema; %3 < katı yağ <= %6, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen (hazır ambalajda <= 2 Lt olanlar HARİÇ)",
+      "tanim_en": "Milk and cream; 3% < solid fat <= 6%, not concentrated, without added sugar or other sweeteners (EXCEPT those in pre-packaged containers <= 2 liters)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040140100011",
+      "tanim_tr": "Süt; %6 < katı yağ <= %10, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen, hazır ambalajda <= 2 Lt",
+      "tanim_en": "Milk; 6% < fat <= 10%, not concentrated, no added sugar or other sweeteners, ready-to-eat packaging <= 2 liters",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040140100012",
+      "tanim_tr": "Krema; %6 < katı yağ <= %10, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen, hazır ambalajda <= 2 Lt",
+      "tanim_en": "Cream; 6% < solid fat <= 10%, unconcentrated, no added sugar or other sweeteners, ready-to-use packaging <= 2 liters",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040140900011",
+      "tanim_tr": "Süt; %6 < katı yağ <= %10, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen (hazır ambalajda <= 2 Lt olanlar HARİÇ)",
+      "tanim_en": "Milk; 6% < 10% solid fat, not concentrated, without added sugar or other sweeteners (EXCEPT those in pre-packaged containers <= 2 liters)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040140900012",
+      "tanim_tr": "Krema; %6 < katı yağ <= %10, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen (hazır ambalajda <= 2 Lt olanlar HARİÇ)",
+      "tanim_en": "Cream; 6% < solid fat <= 10%, not concentrated, without added sugar or other sweeteners (EXCEPT those in pre-packaged containers <= 2 Lt)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040150110000",
+      "tanim_tr": "Süt ve krema; %10 < katı yağ <= %21, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen, hazır ambalajda <= 2 Lt",
+      "tanim_en": "Milk and cream; 10% < fat <= 21%, not concentrated, no added sugar or other sweeteners, ready-packaged <= 2 liters",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040150190000",
+      "tanim_tr": "Süt ve krema; %10 < katı yağ <= %21, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen (hazır ambalajda <= 2 Lt olanlar HARİÇ)",
+      "tanim_en": "Milk and cream; 10% < 21% solid fat, not concentrated, no added sugar or other sweeteners (EXCEPT those in pre-packaged containers <= 2 liters)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040150310000",
+      "tanim_tr": "Süt ve krema; %21 < katı yağ <= %45, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen, hazır ambalajda <= 2 Lt",
+      "tanim_en": "Milk and cream; 21% < fat <= 45%, unconcentrated, no added sugar or other sweeteners, ready-to-use packaging <= 2 liters",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040150390000",
+      "tanim_tr": "Süt ve krema; %21 < katı yağ <= %45, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen (hazır ambalajda <= 2 Lt olanlar HARİÇ)",
+      "tanim_en": "Milk and cream; 21% < solid fat <= 45%, not concentrated, no added sugar or other sweeteners (EXCEPT those in pre-packaged containers <= 2 liters)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040150910000",
+      "tanim_tr": "Süt ve krema; katı yağ > %45, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen, hazır ambalajda <= 2 Lt",
+      "tanim_en": "Milk and cream; fat content > 45%, not concentrated, no added sugar or other sweeteners, ready-to-use packaging <= 2 liters",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040150990000",
+      "tanim_tr": "Süt ve krema; katı yağ > %45, konsantre edilmemiş, ilave şeker veya diğer tatlandırıcı madde içermeyen (hazır ambalajda <= 2 Lt olanlar HARİÇ)",
+      "tanim_en": "Milk and cream; solid fat > 45%, not concentrated, without added sugar or other sweeteners (EXCEPT those in pre-packaged containers <= 2 liters)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040210110000",
+      "tanim_tr": "Süt ve krema (toz, granül veya diğer katı şekillerde); katı yağ <= %1.5, konsantre, ilave şeker-tatlandırıcı içermeyen, hazır ambalajda <= 2.5 Kg",
+      "tanim_en": "Milk and cream (in powder, granular or other solid forms); solid fat <= 1.5%, concentrated, no added sugar or sweeteners, ready-packaged <= 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040210190000",
+      "tanim_tr": "Süt ve krema (toz, granül veya diğer katı şekillerde); katı yağ <= %1.5, konsantre, ilave şeker-tatlandırıcı içermeyen, hazır ambalajda > 2.5 Kg",
+      "tanim_en": "Milk and cream (in powder, granular or other solid forms); solid fat <= 1.5%, concentrated, no added sugar or sweeteners, in pre-packaged form > 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040210910000",
+      "tanim_tr": "Süt ve krema (toz, granül veya diğer katı şekillerde); katı yağ <= %1.5, konsantre edilmiş, ilave şeker-tatlandırıcı içeren, hazır ambalajda <= 2.5 Kg",
+      "tanim_en": "Milk and cream (in powder, granular or other solid forms); solid fat <= 1.5%, concentrated, containing added sugar/sweetener, in pre-packaged form <= 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040210990000",
+      "tanim_tr": "Süt ve krema (toz, granül veya diğer katı şekillerde); katı yağ <= %1.5, konsantre edilmiş, ilave şeker-tatlandırıcı içeren, hazır ambalajda > 2.5 Kg",
+      "tanim_en": "Milk and cream (in powder, granular or other solid forms); solid fat <= 1.5%, concentrated, containing added sugar/sweetener, in pre-packaged > 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040221110000",
+      "tanim_tr": "Süt ve krema (toz, granül veya diğer katı); %1.5< katı yağ <= %27, konsantre edilmiş, ilave şeker-tatlandırıcı içermeyen, hazır ambalajda <= 2.5 Kg",
+      "tanim_en": "Milk and cream (powder, granules or other solids); 1.5% < solid fat <= 27%, concentrated, no added sugar or sweeteners, ready-packaged <= 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040221180000",
+      "tanim_tr": "Süt ve krema (toz, granül veya diğer katı); %1.5< katı yağ <= %27, konsantre edilmiş, ilave şeker-tatlandırıcı içermeyen, hazır ambalajda > 2.5 Kg",
+      "tanim_en": "Milk and cream (powder, granules or other solids); 1.5% < solid fat <= 27%, concentrated, no added sugar or sweeteners, ready-packaged > 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040221910000",
+      "tanim_tr": "Süt ve krema (toz, granül veya diğer katı); katı yağ > %27, konsantre edilmiş, ilave şeker-tatlandırıcı içermeyen, hazır ambalajda <= 2.5 Kg",
+      "tanim_en": "Milk and cream (powder, granules or other solids); solid fat > 27%, concentrated, no added sugar or sweeteners, ready-packaged <= 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040221990000",
+      "tanim_tr": "Süt ve krema (toz, granül veya diğer katı); katı yağ > %27, konsantre edilmiş, ilave şeker-tatlandırıcı içermeyen, hazır ambalajda > 2.5 Kg",
+      "tanim_en": "Milk and cream (powder, granules or other solids); solid fat > 27%, concentrated, no added sugar or sweeteners, ready-packaged > 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040229110000",
+      "tanim_tr": "Süt çocukları için özel sütler (toz, granül veya diğer katı); %1.5 < katı yağ <= %27, konsantre, ilave şeker-tatlandırıcı içeren, ambalajda <= 500Gr",
+      "tanim_en": "Special milks for infants (powder, granules or other solids); 1.5% < solid fat <= 27%, concentrate, containing added sugar/sweetener, in packages <= 500g.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040229150000",
+      "tanim_tr": "Diğer süt ve krema (toz, granül veya diğer katı); %1.5 < katı yağ <= %27, konsantre edilmiş, ilave şeker-tatlandırıcı içeren, hazır ambalajda <=2.5 Kg",
+      "tanim_en": "Other milk and cream (powder, granules or other solids); 1.5% < solid fat <= 27%, concentrated, containing added sugar/sweetener, in pre-packaged form <= 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040229190000",
+      "tanim_tr": "Diğer süt ve krema (toz, granül veya diğer katı); %1.5 < katı yağ <= %27, konsantre edilmiş, ilave şeker-tatlandırıcı içeren, hazır ambalajda > 2.5 Kg",
+      "tanim_en": "Other milk and cream (powder, granules or other solids); 1.5% < solid fat <= 27%, concentrated, containing added sugar/sweeteners, in pre-packaged form > 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040229910000",
+      "tanim_tr": "Süt ve krema (toz, granül veya diğer katı şekillerde); katı yağ > %27, konsantre edilmiş, ilave şeker-tatlandırıcı içeren, hazır ambalajda <= 2.5 Kg",
+      "tanim_en": "Milk and cream (in powder, granular or other solid forms); solid fat > 27%, concentrated, containing added sugar/sweetener, in pre-packaged form <= 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040229990000",
+      "tanim_tr": "Süt ve krema (toz, granül veya diğer katı şekillerde); katı yağ > %27, konsantre edilmiş, ilave şeker-tatlandırıcı içeren, hazır ambalajda > 2.5 Kg",
+      "tanim_en": "Milk and cream (in powder, granular or other solid forms); solid fat > 27%, concentrated, containing added sugar/sweetener, in pre-packaged form > 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040291100000",
+      "tanim_tr": "Süt ve krema (katı şekillerde olanlar HARİÇ); katı yağ <= %8, konsantre edilmiş, ilave şeker-tatlandırıcı içermeyen",
+      "tanim_en": "Milk and cream (EXCEPT those in solid forms); fat <= 8%, concentrated, without added sugar or sweeteners.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040291300000",
+      "tanim_tr": "Süt ve krema (katı şekillerde olanlar HARİÇ); %8 < katı yağ <= %10, konsantre edilmiş, ilave şeker-tatlandırıcı içermeyen",
+      "tanim_en": "Milk and cream (EXCEPT those in solid forms); 8% < fat <= 10%, concentrated, without added sugar or sweeteners.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040291510000",
+      "tanim_tr": "Süt ve krema (katı şekillerde olanlar HARİÇ); %10 < katı yağ <= %45, konsantre edilmiş, ilave şeker-tatlandırıcı içermeyen, hazır ambalajda <= 2.5 Kg",
+      "tanim_en": "Milk and cream (EXCEPT solid forms); 10% < fat <= 45%, concentrated, no added sugar or sweeteners, ready-packaged <= 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040291590000",
+      "tanim_tr": "Süt ve krema (katı şekillerde olanlar HARİÇ); %10 < katı yağ <= %45, konsantre edilmiş, ilave şeker-tatlandırıcı içermeyen, hazır ambalajda > 2.5 Kg",
+      "tanim_en": "Milk and cream (EXCEPT solid forms); 10% < fat <= 45%, concentrated, no added sugar or sweeteners, ready-packaged > 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040291910000",
+      "tanim_tr": "Süt ve krema (katı şekillerde olanlar HARİÇ); katı yağ > %45, konsantre edilmiş, ilave şeker-tatlandırıcı içermeyen, hazır ambalajda <= 2.5 Kg",
+      "tanim_en": "Milk and cream (EXCEPT those in solid forms); solid fat > 45%, concentrated, no added sugar or sweeteners, ready-packaged <= 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040291990000",
+      "tanim_tr": "Süt ve krema (katı şekillerde olanlar HARİÇ); katı yağ > %45, konsantre edilmiş, ilave şeker-tatlandırıcı içermeyen, hazır ambalajda > 2.5 Kg",
+      "tanim_en": "Milk and cream (EXCEPT solid forms); fat content > 45%, concentrated, no added sugar or sweeteners, pre-packaged > 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040299100000",
+      "tanim_tr": "Süt ve krema (katı şekillerde olanlar HARİÇ); katı yağ <= %9.5, konsantre edilmiş, ilave şeker veya tatlandırıcı içerenler",
+      "tanim_en": "Milk and cream (EXCEPT those in solid forms); with fat <= 9.5%, concentrated, containing added sugar or sweeteners.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040299310000",
+      "tanim_tr": "Süt ve krema (katı şekillerde olanlar HARİÇ); %9.5 < katı yağ <= %45, konsantre, ilave şeker veya tatlandırıcı içerenler, hazır ambalajda <= 2.5 Kg",
+      "tanim_en": "Milk and cream (EXCEPT those in solid forms); 9.5% < solid fat <= 45%, concentrated, containing added sugar or sweeteners, in pre-packaged form <= 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040299390000",
+      "tanim_tr": "Süt ve krema (katı şekillerde olanlar HARİÇ); %9.5 < katı yağ <= %45, konsantre, ilave şeker veya tatlandırıcı içerenler, hazır ambalajda > 2.5 Kg",
+      "tanim_en": "Milk and cream (EXCEPT those in solid forms); 9.5% < solid fat <= 45%, concentrated, containing added sugar or sweeteners, in pre-packaged > 2.5 kg",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040299910000",
+      "tanim_tr": "Süt ve krema (katı şekillerde olanlar HARİÇ); katı yağ > %45, konsantre, ilave şeker veya tatlandırıcı içerenler, hazır ambalajda <= 2.5 Kg",
+      "tanim_en": "Milk and cream (EXCEPT those in solid forms); those containing >45% fat, concentrate, added sugar or sweeteners, in pre-packaged form <= 2.5 kg.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040299990000",
+      "tanim_tr": "Süt ve krema (katı şekillerde olanlar HARİÇ); katı yağ > %45, konsantre, ilave şeker veya tatlandırıcı içerenler, hazır ambalajda > 2.5 Kg",
+      "tanim_en": "Milk and cream (EXCEPT those in solid forms); those containing >45% fat, concentrate, added sugar or sweeteners, in pre-packaged containers > 2.5 kg.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320110011",
+      "tanim_tr": "Yoğurt; katı yağ oranı <= % 3, aromalandırılmamış, ilave şeker/tatlandırıcı, meyva, kakao, çikolata, baharat, kahve, biltki veya hububat içermeyen",
+      "tanim_en": "Yogurt; with a solid fat content of <= 3%, unflavored, and free of added sugar/sweeteners, fruit, cocoa, chocolate, spices, coffee, herbs, or grains.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320110012",
+      "tanim_tr": "Ayran; katı yağ oranı <= % 3, aromalandırılmamış, ilave şeker/tatlandırıcı, meyva, kakao, çikolata, baharat, kahve, biltki veya hububat içermeyen",
+      "tanim_en": "Ayran; contains less than 3% solid fat, is unflavored, and does not contain added sugar/sweeteners, fruit, cocoa, chocolate, spices, coffee, herbs or grains.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320130000",
+      "tanim_tr": "Yoğurt; %3 < katı yağ oranı <= %6, aromalandırılmamış, ilave şeker/tatlandırıcı, meyva, kakao, çikolata, baharat, kahve, biltki veya hububat içermeyen",
+      "tanim_en": "Yogurt; 3% < solid fat content <= 6%, unflavored, free of added sugar/sweeteners, fruit, cocoa, chocolate, spices, coffee, herbs or grains.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320190000",
+      "tanim_tr": "Yoğurt; katı yağ oranı > % 6, aromalandırılmamış, ilave şeker/tatlandırıcı, meyva, kakao, çikolata, baharat, kahve, biltki veya hububat içermeyen",
+      "tanim_en": "Yogurt; with a solid fat content > 6%, unflavored, and free of added sugar/sweeteners, fruit, cocoa, chocolate, spices, coffee, herbs or grains.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320310011",
+      "tanim_tr": "Yoğurt; katı yağ oranı<=%3, ilave şeker/tatlandırıcı içeren, aromalandırılmamış, meyva, kakao, çikolata, baharat, kahve, biltki veya hububat içermeyen",
+      "tanim_en": "Yogurt; with a solid fat content of <=3%, containing no added sugar/sweeteners, unflavored, and free of fruit, cocoa, chocolate, spices, coffee, herbs, or grains.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320310012",
+      "tanim_tr": "Ayran; katı yağ oranı <=%3, ilave şeker/tatlandırıcı içeren, aromalandırılmamış, meyva, kakao, çikolata, baharat, kahve, biltki veya hububat içermeyen",
+      "tanim_en": "Ayran is a yogurt-based drink with a solid fat content of <=3%, containing no added sugar/sweeteners, unflavored, and free of fruit, cocoa, chocolate, spices, coffee, herbs, or grains.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320330000",
+      "tanim_tr": "Yoğurt; %3< yağ oranı <=%6, ilave şeker/tatlandırıcı içeren, aromalandırılmamış, meyva, kakao, çikolata, baharat, kahve, biltki veya hububat içermeyen",
+      "tanim_en": "Yogurt; 3% fat <= 6%, containing no added sugar/sweeteners, unflavored, and free of fruit, cocoa, chocolate, spices, coffee, herbs or grains.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320390000",
+      "tanim_tr": "Yoğurt; katı yağ oranı >%6, ilave şeker/tatlandırıcı içeren, aromalandırılmamış, meyva, kakao, çikolata, baharat, kahve, biltki veya hububat içermeyen",
+      "tanim_en": "Yogurt; with a solid fat content >6%, containing no added sugar/sweeteners, unflavored, and free of fruit, cocoa, chocolate, spices, coffee, herbs or grains.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320410000",
+      "tanim_tr": "Yoğurt; katı süt yağ < % 1,5, sukroz/izoglikoz < % 5, glikoz/nişasta < % 5, kakao, çikolata, baharat, kahve, biltki, hububat veya ekmekçi mam. içeren",
+      "tanim_en": "Yogurt; containing solid milk fat < ​​1.5%, sucrose/isoglucose < 5%, glucose/starch < 5%, cocoa, chocolate, spices, coffee, herbs, cereals or bakery products.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320490000",
+      "tanim_tr": "Diğer yoğurt; kakao, çikolata, baharat, kahve veya kahve hülasası, bitki, bitki parçaları, hububat veya ekmekçi mamulleri içeren",
+      "tanim_en": "Other yogurts contain cocoa, chocolate, spices, coffee or coffee extract, herbs, plant parts, cereals, or bakery products.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320510000",
+      "tanim_tr": "Yoğurt; toz, granül veya diğer katı şekillerde, katı süt yağı oranı <= % 1,5, aromalandırılmış veya meyve, sert kabuklu meyve veya kakao içeren",
+      "tanim_en": "Yogurt; in powder, granule or other solid form, with a solid milk fat content <= 1.5%, flavored or containing fruit, nuts or cocoa.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320530000",
+      "tanim_tr": "Yoğurt; toz, granül veya diğer katı şekillerde, % 1,5 < katı süt yağı oranı <= % 27, aromalandırılmış veya meyve, sert kabuklu meyve veya kakao içeren",
+      "tanim_en": "Yogurt; in powder, granule or other solid form, with 1.5% < solid milk fat content <= 27%, flavored or containing fruit, nuts or cocoa.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320590000",
+      "tanim_tr": "Yoğurt; toz, granül veya diğer katı şekillerde, katı süt yağı oranı > % 27, aromalandırılmış veya meyve, sert kabuklu meyve veya kakao içeren",
+      "tanim_en": "Yogurt; in powder, granule or other solid form, with a solid milk fat content > 27%, flavored or containing fruit, nuts or cocoa.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320910000",
+      "tanim_tr": "Diğer yoğurt; katı süt yağı oranı <= % 3, aromalandırılmış veya meyve, sert kabuklu meyve veya kakao içeren",
+      "tanim_en": "Other yogurts; those with a solid milk fat content <= 3%, flavored or containing fruit, nuts or cocoa.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320930000",
+      "tanim_tr": "Diğer yoğurt; % 3 < katı süt yağı oranı <= % 6, aromalandırılmış veya meyve, sert kabuklu meyve veya kakao içeren",
+      "tanim_en": "Other yogurts; 3% < solid milk fat content <= 6%, flavored or containing fruit, nuts or cocoa.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040320990000",
+      "tanim_tr": "Diğer yoğurt; katı süt yağı oranı > % 6, aromalandırılmış veya meyve, sert kabuklu meyve veya kakao içeren",
+      "tanim_en": "Other yogurts; those with a solid milk fat content > 6%, flavored or containing fruit, nuts or cocoa.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390110000",
+      "tanim_tr": "Yayıkaltı, pıhtılaştırılmış süt ve krema, kefir (toz granül veya diğer katı halde); ilave şeker veya tatlandırıcı içermeyen, katı yağ <= % 1.5",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir (in powder, granule or other solid form); without added sugar or sweetener, solid fat <= 1.5%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390130000",
+      "tanim_tr": "Yayıkaltı, pıhtılaştırılmış süt ve krema, kefir (toz granül veya diğer katı halde); ilave şeker veya tatlandırıcı içermeyen, %1.5 < katı yağ <= % 27",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir (in powder, granule or other solid form); without added sugar or sweetener, 1.5% < solid fat <= 27%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390190000",
+      "tanim_tr": "Yayıkaltı, pıhtılaştırılmış süt ve krema, kefir (toz granül veya diğer katı halde); ilave şeker veya tatlandırıcı içermeyen, katı yağ > % 27",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir (in powder, granule or other solid form); without added sugar or sweeteners, solid fat > 27%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390310000",
+      "tanim_tr": "Yayıkaltı, pıhtılaştırılmış süt ve krema, kefir (toz granül veya diğer katı halde); ilave şeker veya tatlandırıcı içeren, katı yağ <= % 1.5",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir (in powder, granule or other solid form); containing added sugar or sweetener, solid fat <= 1.5%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390330000",
+      "tanim_tr": "Yayıkaltı, pıhtılaştırılmış süt ve krema, kefir (toz granül veya diğer katı halde); ilave şeker veya tatlandırıcı içeren, %1.5 < katı yağ <= % 27",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir (in powder, granule or other solid form); containing added sugar or sweetener, 1.5% < solid fat <= 27%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390390000",
+      "tanim_tr": "Yayıkaltı, pıhtılaştırılmış süt ve krema, kefir (toz granül veya diğer katı halde); ilave şeker veya tatlandırıcı içeren, katı yağ > % 27",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir (in powder, granule or other solid form); containing added sugar or sweetener, solid fat > 27%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390510000",
+      "tanim_tr": "Yayıkaltı, pıhtılaştırılmış süt ve krema, kefir (katı halde olmayan); ilave şeker veya tatlandırıcı içermeyen, katı yağ <= % 3",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir (not in solid form); without added sugar or sweeteners, solid fat <= 3%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390530000",
+      "tanim_tr": "Yayıkaltı, pıhtılaştırılmış süt ve krema, kefir (katı halde olmayan); ilave şeker veya tatlandırıcı içermeyen, %3 < katı yağ <= % 6",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir (not in solid form); without added sugar or sweeteners, 3% < solid fat <= 6%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390590000",
+      "tanim_tr": "Yayıkaltı, pıhtılaştırılmış süt ve krema, kefir (katı halde olmayan); ilave şeker veya tatlandırıcı içermeyen, katı yağ > % 6",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir (not in solid form); no added sugar or sweetener, solid fat > 6%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390610000",
+      "tanim_tr": "Yayıkaltı, pıhtılaştırılmış süt ve krema, kefir (katı halde olmayan); ilave şeker veya tatlandırıcı içeren, katı yağ <= % 3",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir (not in solid form); containing added sugar or sweetener, solid fat <= 3%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390630000",
+      "tanim_tr": "Yayıkaltı, pıhtılaştırılmış süt ve krema, kefir (katı halde olmayan); ilave şeker veya tatlandırıcı içeren, %3 < katı yağ <= % 6",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir (not in solid form); containing added sugar or sweetener, 3% < solid fat <= 6%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390690000",
+      "tanim_tr": "Yayıkaltı, pıhtılaştırılmış süt ve krema, kefir (katı halde olmayan); ilave şeker veya tatlandırıcı içeren, katı yağ > % 6",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir (not in solid form); containing added sugar or sweetener, solid fat > 6%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390710000",
+      "tanim_tr": "YayıkaItı, pıhtılaştırılmış süt ve krema, kefir, vb. (yoğurt HARİÇ); katı şekillerde, katı süt yağı oranı <= %1,5, aromalandırılmış/meyve/kakao içeren",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir, etc. (EXCEPT yogurt); in solid forms, with solid milk fat content <= 1.5%, flavored/fruit/cocoa-containing",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390730000",
+      "tanim_tr": "YayıkaItı, pıhtılaştırılmış süt ve krema, kefir, vb. (yoğurt HARİÇ); katı şekillerde, %1,5 < katı süt yağı <= %27, aromalandırılmış/meyve/kakao içeren",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir, etc. (EXCEPT yogurt); in solid forms, 1.5% < solid milk fat <= 27%, flavored/fruit/cocoa-containing",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390790000",
+      "tanim_tr": "YayıkaItı, pıhtılaştırılmış süt ve krema, kefir, vb. (yoğurt HARİÇ); katı şekillerde, katı süt yağı oranı > % 27, aromalandırılmış/meyve/kakao içeren",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir, etc. (EXCEPT yogurt); in solid forms, with solid milk fat content > 27%, flavored/fruit/cocoa flavored.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390910000",
+      "tanim_tr": "YayıkaItı, pıhtılaştırılmış süt ve krema, kefir, vb. (yoğurt, katı şekillerde olanlar HARİÇ); katı süt yağı <=%3, aromalandırılmış/meyve//kakao içeren",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir, etc. (EXCEPT yogurt in solid forms); solid milk fat <=3%, flavored/fruit/cocoa-containing",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390930000",
+      "tanim_tr": "YayıkaItı, pıhtılaştırılmış süt ve krema, kefir, vb. (yoğurt ve katı şekillerde HARİÇ); %3 < katı süt yağı <= % 6, aromalandırılmış/meyve/kakao içeren",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir, etc. (EXCEPT yogurt and solid forms); 3% < solid milk fat <= 6%, flavored/fruit/cocoa flavored.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040390990000",
+      "tanim_tr": "YayıkaItı, pıhtılaştırılmış süt ve krema, kefir, vb. (yoğurt, katı şekillerde olanlar HARİÇ); katı süt yağı > % 6, aromalandırılmış/meyve/kakao içeren",
+      "tanim_en": "Buttermilk, coagulated milk and cream, kefir, etc. (EXCEPT yogurt in solid forms); solid milk fat > 6%, flavored/fruit/cocoa flavored.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410020000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde); ilave şeker/tatlandırıcı içermeyen, protein oranı <= %15, katı yağ <= %1.5",
+      "tanim_en": "Whey and modified whey (in solid form); no added sugar/sweeteners, protein content <= 15%, solid fat <= 1.5%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410040000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde); ilave şeker/tatlandırıcı içermeyen, protein oranı <= %15, % 1.5 < katı yağ <= %27",
+      "tanim_en": "Whey and modified whey (in solid form); no added sugar/sweeteners, protein <= 15%, 1.5% < fat <= 27%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410060000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde); ilave şeker/tatlandırıcı içermeyen, protein oranı <= %15, katı yağ > %27",
+      "tanim_en": "Whey and modified whey (in solid form); no added sugar/sweeteners, protein content <= 15%, solid fat > 27%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410120000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde); ilave şeker/tatlandırıcı içermeyen, protein oranı > %15, katı yağ <= %1.5",
+      "tanim_en": "Whey and modified whey (in solid form); no added sugar/sweeteners, protein content > 15%, solid fat <= 1.5%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410140000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde); ilave şeker/tatlandırıcı içermeyen, protein oranı > %15, % 1.5 < katı yağ <= %27",
+      "tanim_en": "Whey and modified whey (in solid form); no added sugar/sweeteners, protein content > 15%, 1.5% < fat <= 27%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410160000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde); ilave şeker/tatlandırıcı içermeyen, protein oranı > %15, katı yağ > %27",
+      "tanim_en": "Whey and modified whey (in solid form); no added sugar/sweeteners, protein content > 15%, solid fat > 27%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410260000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde); ilave şeker/tatlandırıcı içeren, protein oranı <= %15, katı yağ <= %1.5",
+      "tanim_en": "Whey and modified whey (in solid form); containing added sugar/sweetener, protein content <= 15%, solid fat <= 1.5%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410280000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde); ilave şeker/tatlandırıcı içeren, protein oranı <= %15, % 1.5 < katı yağ <= %27",
+      "tanim_en": "Whey and modified whey (in solid form); containing added sugar/sweeteners, protein <= 15%, 1.5% < fat <= 27%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410320000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde); ilave şeker/tatlandırıcı içeren, protein oranı <= %15, katı yağ > %27",
+      "tanim_en": "Whey and modified whey (in solid form); containing added sugar/sweeteners, protein content <= 15%, solid fat > 27%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410340000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde); ilave şeker/tatlandırıcı içeren, protein oranı > %15, katı yağ <= %1.5",
+      "tanim_en": "Whey and modified whey (in solid form); containing added sugar/sweeteners, protein content > 15%, solid fat <= 1.5%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410360000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde); ilave şeker/tatlandırıcı içeren, protein oranı > %15, % 1.5 < katı yağ <= %27",
+      "tanim_en": "Whey and modified whey (in solid form); containing added sugar/sweeteners, protein content > 15%, 1.5% < fat <= 27%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410380000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde); ilave şeker/tatlandırıcı içeren, protein oranı > %15, katı yağ > %27",
+      "tanim_en": "Whey and modified whey (in solid form); containing added sugar/sweeteners, protein content > 15%, solid fat > 27%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410480000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde olmayan); ilave şeker/tatlandırıcı içermeyen, protein <= %15, katı yağ <= %1.5",
+      "tanim_en": "Whey and modified whey (non-solid); no added sugar/sweeteners, protein <= 15%, fat <= 1.5%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410520000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde olmayan); ilave şeker/tatlandırıcı içermeyen, protein <= %15, %1.5 < katı yağ <= %27",
+      "tanim_en": "Whey and modified whey (non-solid); no added sugar/sweeteners, protein <= 15%, 1.5% < fat <= 27%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410540000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde olmayan); ilave şeker/tatlandırıcı içermeyen, protein <= %15, katı yağ > %27",
+      "tanim_en": "Whey and modified whey (non-solid); no added sugar/sweeteners, protein <= 15%, saturated fat > 27%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410560000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde olmayan); ilave şeker/tatlandırıcı içermeyen, protein > %15, katı yağ <= %1.5",
+      "tanim_en": "Whey and modified whey (non-solid); no added sugar/sweeteners, protein > 15%, fat <= 1.5%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410580000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde olmayan); ilave şeker/tatlandırıcı içermeyen, protein > %15, %1.5 < katı yağ <= %27",
+      "tanim_en": "Whey and modified whey (non-solid); no added sugar/sweeteners, protein > 15%, 1.5% < fat <= 27%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410620000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde olmayan); ilave şeker/tatlandırıcı içermeyen, protein > %15, katı yağ > %27",
+      "tanim_en": "Whey and modified whey (non-solid); no added sugar/sweeteners, protein > 15%, saturated fat > 27%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410720000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde olmayan); ilave şeker/tatlandırıcı içeren, protein <= %15, katı yağ <= %1.5",
+      "tanim_en": "Whey and modified whey (non-solid); containing added sugar/sweetener, protein <= 15%, fat <= 1.5%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410740000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde olmayan); ilave şeker/tatlandırıcı içeren, protein <= %15, %1.5 < katı yağ <= %27",
+      "tanim_en": "Whey and modified whey (non-solid); containing added sugar/sweetener, protein <= 15%, 1.5% < fat <= 27%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410760000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde olmayan); ilave şeker/tatlandırıcı içeren, protein <= %15, katı yağ > %27",
+      "tanim_en": "Whey and modified whey (non-solid); containing added sugar/sweeteners, protein <= 15%, saturated fat > 27%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410780000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde olmayan); ilave şeker/tatlandırıcı içeren, protein > %15, katı yağ <= %1.5",
+      "tanim_en": "Whey and modified whey (non-solid); containing added sugar/sweeteners, protein > 15%, fat <= 1.5%.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410820000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde olmayan); ilave şeker/tatlandırıcı içeren, protein > %15, %1.5 < katı yağ <= %27",
+      "tanim_en": "Whey and modified whey (non-solid); containing added sugar/sweetener, protein > 15%, 1.5% < fat <= 27%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040410840000",
+      "tanim_tr": "Peynir altı suyu ve modifiye edilmiş peynir altı suyu (katı halde olmayan); ilave şeker/tatlandırıcı içeren, protein > %15, katı yağ > %27",
+      "tanim_en": "Whey and modified whey (non-solid); containing added sugar/sweeteners, protein > 15%, saturated fat > 27%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040490210000",
+      "tanim_tr": "Diğer tabii süt ürünleri (katı yağ =<%1, 5, ilave şeker ve tatlandırıcı içermeyen)",
+      "tanim_en": "Other natural dairy products (solid fat = <1.5%, free of added sugar and sweeteners)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040490230000",
+      "tanim_tr": "Diğer tabii süt ürünleri (% 1, 5<katı yağ =<% 27, ilave şeker ve tatlandırıcı içermeyen)",
+      "tanim_en": "Other natural dairy products (1.5% < solid fat = <27%, no added sugar or sweeteners)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040490290000",
+      "tanim_tr": "Diğer tabii süt ürünleri (katı yağ >%27, ilave şeker ve tatlandırıcı içermeyen)",
+      "tanim_en": "Other natural dairy products (soil fat >27%, free of added sugar and sweeteners)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040490810000",
+      "tanim_tr": "Diğer tabii süt ürünleri; katı yağ =<%1, 5, ilave şeker ve tatlandırıcı içeren",
+      "tanim_en": "Other natural dairy products; containing solid fat =<1.5%, added sugar and sweeteners.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040490830000",
+      "tanim_tr": "Diğer tabii süt ürünleri (%1, 5 <katı yağ=<% 27, ilave şeker ve tatlandırıcı içeren)",
+      "tanim_en": "Other natural dairy products (1.5% <fat=<27%, containing added sugar and sweeteners)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040490890000",
+      "tanim_tr": "Diğer tabii süt ürünleri (katı yağ >% 27, ilave şeker ve tatlandırıcı içeren)",
+      "tanim_en": "Other natural dairy products (containing solid fat >27%, added sugar and sweeteners)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040510110000",
+      "tanim_tr": "Tereyağı (tabii, katı yağ =<%85, ambalajlı =<1 kg)",
+      "tanim_en": "Butter (natural, solid fat =<85%, packaged =<1 kg)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040510190000",
+      "tanim_tr": "Tereyağı (tabii, katı yağ =<%85, diğer)",
+      "tanim_en": "Butter (of course, solid fat =<85%, other)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040510300000",
+      "tanim_tr": "Tereyağı (rekombine, katı yağ =<%85)",
+      "tanim_en": "Butter (recombined, solid fat =<85%)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040510500000",
+      "tanim_tr": "Tereyağı (peynir altı suyundan elde edilen, katı yağ =<%85)",
+      "tanim_en": "Butter (obtained from whey, solid fat =<85%)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040510900000",
+      "tanim_tr": "Tereyağı (diğer)",
+      "tanim_en": "Butter (other)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040520100000",
+      "tanim_tr": "Sürülerek yenilen süt ürünleri (% 39 =<katı yağ <% 60)",
+      "tanim_en": "Dairy products that are spreadable (39% = <60% solid fat)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040520300000",
+      "tanim_tr": "Sürülerek yenilen süt ürünleri (% 60 =<katı yağ <% 75)",
+      "tanim_en": "Dairy products that are spreadable (60% = <75% solid fat)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040520900000",
+      "tanim_tr": "Sürülerek yenilen süt ürünleri (% 75 =<katı yağ <% 80)",
+      "tanim_en": "Dairy products that are spreadable (75% = < 80% solid fat)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040590100000",
+      "tanim_tr": "Sütten elde edilen diğer yağlar (katı yağ =>% 99, 3 su =<% 0, 5)",
+      "tanim_en": "Other fats obtained from milk (solid fat => 99.3%, water =< 0.5%)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040590900000",
+      "tanim_tr": "Sütten elde edilen diğer katı ve sıvı yağlar",
+      "tanim_en": "Other solid and liquid fats derived from milk",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040610300000",
+      "tanim_tr": "Mozerella peyniri (sıvı içinde olsun olmasın); içerdiği katı yağ oranı ağırlık itibariyle <= %40",
+      "tanim_en": "Mozzarella cheese (whether in liquid or not); its solid fat content is <= 40% by weight.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040610500011",
+      "tanim_tr": "Taze peynir (katı yağ oranı =<% 40)",
+      "tanim_en": "Fresh cheese (solid fat content =<40%)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040610500012",
+      "tanim_tr": "Çökelek (katı yağ oranı =<% 40)",
+      "tanim_en": "Cottage cheese (solid fat content =<40%)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040610500013",
+      "tanim_tr": "Lor (katı yağ oranı =<% 40)",
+      "tanim_en": "Lor (solid fat content =<40%)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040610500018",
+      "tanim_tr": "Taze diğer peynirler (olgunlaştırılmamış veya preslenmemiş) ve pıhtılaştırılmış diğer ürünler (katı yağ oranı =<% 40)",
+      "tanim_en": "Fresh other cheeses (unripened or unpressed) and other coagulated products (solid fat content =<40%)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040610800000",
+      "tanim_tr": "Pıhtılaştırılmış diğer taze süt ürünleri (katı yağ >% 40)",
+      "tanim_en": "Other coagulated fresh dairy products (solid fat >40%)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040620001000",
+      "tanim_tr": "Gravyer peyniri; rendelenmiş veya toz haline getirilmiş",
+      "tanim_en": "Gruyere cheese; grated or powdered",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040620002000",
+      "tanim_tr": "Çester, parmezan, Dutch (Felemenk) ve benzeri peynirler; rendelenmiş veya toz haline getirilmiş",
+      "tanim_en": "Chester, Parmesan, Dutch and similar cheeses; grated or powdered.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040620009000",
+      "tanim_tr": "Diğer peynirler; rendelenmiş veya toz haline getirilmiş",
+      "tanim_en": "Other cheeses; grated or powdered",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040630100000",
+      "tanim_tr": "Eritme peynir; üretiminde Emmentaler, Gravyer ve Appenzell peynirlerinin kullanıldığı ve Glarus otlu peyniri katkılı, katı yağ <= % 56 (perakende)",
+      "tanim_en": "Processed cheese; made using Emmentaler, Gruyere and Appenzell cheeses and enriched with Glarus herb cheese, solid fat <= 56% (retail)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040630310000",
+      "tanim_tr": "Diğer eritme peynirler; katı yağ <= % 36, kuru maddedeki yağ oranı <= %48",
+      "tanim_en": "Other processed cheeses; solid fat <= 36%, fat content in dry matter <= 48%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040630390000",
+      "tanim_tr": "Diğer eritme peynirler; katı yağ <= % 36, kuru maddedeki yağ oranı > %48",
+      "tanim_en": "Other processed cheeses; solid fat <= 36%, fat content in dry matter > 48%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040630900000",
+      "tanim_tr": "Diğer eritme peynirler; katı yağ >36",
+      "tanim_en": "Other processed cheeses; solid fat >36",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040640100000",
+      "tanim_tr": "Rokfor peyniri",
+      "tanim_en": "Roquefort cheese",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040640500000",
+      "tanim_tr": "Gorgonzola peyniri",
+      "tanim_en": "Gorgonzola cheese",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040640900000",
+      "tanim_tr": "Mavi küflü diğer peynirler ve Penicillium roqueforti ile elde edilen küf içeren diğer peynirler",
+      "tanim_en": "Other cheeses with blue mold and other cheeses containing mold obtained from Penicillium roqueforti",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690010000",
+      "tanim_tr": "İşlenecek peynirler",
+      "tanim_en": "Cheeses to be processed",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690130000",
+      "tanim_tr": "Emmentaler peyniri",
+      "tanim_en": "Emmentaler cheese",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690150011",
+      "tanim_tr": "Gravyer peyniri",
+      "tanim_en": "Gruyere cheese",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690150012",
+      "tanim_tr": "Sbrinz peyniri",
+      "tanim_en": "Sbrinz cheese",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690170000",
+      "tanim_tr": "Bergkaese, appenzell peynirleri",
+      "tanim_en": "Bergkaese, Appenzell cheeses",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690180000",
+      "tanim_tr": "Fromage Fribourgeois (fribourg peyniri), Vacherin Mont d'or ve téte de Moine peynirleri",
+      "tanim_en": "Fromage Fribourgeois (fribourg cheese), Vacherin Mont d'or and téte de Moine cheeses",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690210000",
+      "tanim_tr": "Çedar peyniri",
+      "tanim_en": "Cheddar cheese",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690230000",
+      "tanim_tr": "Edam peyniri",
+      "tanim_en": "Edam cheese",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690250000",
+      "tanim_tr": "Tilsit peyniri",
+      "tanim_en": "Tilsit cheese",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690290000",
+      "tanim_tr": "Kaşkaval (kaşar peyniri)",
+      "tanim_en": "Kashkaval (cheddar cheese)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690320011",
+      "tanim_tr": "Tulum peyniri (feta türü); koyun veya manda sütünden olanlar (salamura içeren kaplarda veya koyun ve keçi derisinden tulumlarda)",
+      "tanim_en": "Tulum cheese (feta type); those made from sheep or buffalo milk (supplied in brine containers or in sheep and goat skin bags)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690320012",
+      "tanim_tr": "Beyaz peynir (feta türü); koyun veya manda sütünden olanlar (salamura içeren kaplarda veya koyun ve keçi derisinden tulumlarda)",
+      "tanim_en": "White cheese (feta type); those made from sheep or buffalo milk (in containers containing brine or in bags made of sheep and goat skins)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690320091",
+      "tanim_tr": "Tulum peynirlerinin (feta türü) diğerleri",
+      "tanim_en": "Other types of Tulum cheese (feta type)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690320092",
+      "tanim_tr": "Beya peynirlerin (feta türü) diğerleri",
+      "tanim_en": "Other types of white cheese (feta type)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690350000",
+      "tanim_tr": "Kefalo - tyri peyniri",
+      "tanim_en": "Kefalo - Tyri cheese",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690370000",
+      "tanim_tr": "Finlandiya peyniri",
+      "tanim_en": "Finnish cheese",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690390000",
+      "tanim_tr": "Jarlsberg peyniri",
+      "tanim_en": "Jarlsberg cheese",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690500000",
+      "tanim_tr": "Diğer peynirler; koyun veya manda sütünden yapılan ve salamura içeren kaplarda veya koyun veya keçi derisinden yapılan tulumlar içerisinde bulunanlar",
+      "tanim_en": "Other cheeses include those made from sheep's or buffalo milk and kept in brine containers or in bags made from sheep or goat skin.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690610000",
+      "tanim_tr": "Grana padano, parmigiano reggiano peynirleri; katı yağ =<% 40, su =<%47",
+      "tanim_en": "Grana Padano, Parmigiano Reggiano cheeses; solid fat =<40%, water =<47%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690630000",
+      "tanim_tr": "Fiore sardo, pecorino peynirleri; katı yağ =<% 40, su =<% 47",
+      "tanim_en": "Fiore sardo, pecorino cheeses; solid fat =<40%, water =<47%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690690000",
+      "tanim_tr": "Diğer peynirler; katı yağ =<% 40, su =<% 47",
+      "tanim_en": "Other cheeses; solid fat =<40%, water =<47%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690730000",
+      "tanim_tr": "Provolone peyniri; katı yağ =<%40, % 47 <su = <%72",
+      "tanim_en": "Provolone cheese; solid fat = <40%, 47% <water = <72%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690740000",
+      "tanim_tr": "Maasdam peyniri; katı yağ oranı =< % 40, %47< su oranı =< % 72",
+      "tanim_en": "Maasdam cheese; solid fat content =< 40%, water content =< 72%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690750000",
+      "tanim_tr": "Asiago, caciocavallo, montasio, ragusano peynirleri; katı yağ=<%40, %47<su=<%72",
+      "tanim_en": "Asiago, caciocavallo, montasio, ragusano cheeses; fat=<40%, 47%<water=<72%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690760000",
+      "tanim_tr": "Danbo, fontal, fontina, fynbo, havarti, maribo, samsö peynirleri; yağ=<%40, %47<su=<%72",
+      "tanim_en": "Danbo, fontal, fontina, fynbo, havarti, maribo, samsö cheeses; fat=<40%, 47%<water=<72%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690780000",
+      "tanim_tr": "Gouda peyniri; katı yağ =<%40, % 47 <su = <%72",
+      "tanim_en": "Gouda cheese; solid fat = <40%, 47% <water = <72%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690790000",
+      "tanim_tr": "Esrom, italico, kemhem, saint nectaire, saint paulin, taleggio penirleri; yağ=<%40, %47<su=<%72",
+      "tanim_en": "Esrom, italico, kemhem, saint nectaire, saint paulin, taleggio pens; fat=<40%, 47%<water=<72%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690810000",
+      "tanim_tr": "Cantal, cheshire, wensleydale, lancashire, double gloucester, blamey, colby, monterey peynirleri; yağ=<%40, %47<su=<%72",
+      "tanim_en": "Cantal, Cheshire, Wensleydale, Lancashire, Double Gloucester, Blaney, Colby, Monterey cheeses; fat=<40%, 47%<water=<72%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690820000",
+      "tanim_tr": "Camembert peyniri; katı yağ =<%40, %47<su = <%72",
+      "tanim_en": "Camembert cheese; solid fat = <40%, 47% < water = <72%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690840000",
+      "tanim_tr": "Brie peyniri; katı yağ=<%40, %47<su =<%72",
+      "tanim_en": "Brie cheese; solid fat = <40%, 47% < water = <72%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690850000",
+      "tanim_tr": "Kefalograviera, kasseri peynirleri; katı yağ =<% 40, %47<su = <% 72",
+      "tanim_en": "Kefalograviera, Kasseri cheeses; solid fat = <40%, 47% <water = <72%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690860000",
+      "tanim_tr": "Diğer peynirler; katı yağ =<% 40, %47 <su = <% 52",
+      "tanim_en": "Other cheeses; solid fat = <40%, 47% <water = <52%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690890000",
+      "tanim_tr": "Diğer peynirler; katı yağ oranı =< % 40, %50 < su oranı <= % 62",
+      "tanim_en": "Other cheeses; solid fat content =< 40%, < 50%, water content <= 62%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690920000",
+      "tanim_tr": "Diğer peynirler; katı yağ oranı =< % 40, %62 < su oranı <= % 72",
+      "tanim_en": "Other cheeses; solid fat content =< 40%, < 62%, water content <= 72%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690930000",
+      "tanim_tr": "Diğer peynirler; katı yağ =<% 40, su >%72",
+      "tanim_en": "Other cheeses; solid fat =<40%, water >72%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690990011",
+      "tanim_tr": "Cester, Parmezan, Felemenk, vb. peynirler; katı yağ >% 40",
+      "tanim_en": "Chester, Parmesan, Dutch, etc. cheeses; solid fat >40%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690990012",
+      "tanim_tr": "Dil peyniri; katı yağ >% 40",
+      "tanim_en": "Tongue cheese; solid fat >40%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040690990019",
+      "tanim_tr": "Diğer peynirler; katı yağ >% 40",
+      "tanim_en": "Other cheeses; solid fat >40%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040711001011",
+      "tanim_tr": "Damızlık tavuk (Gallus domesticus türü) yumurtaları; yumurtasından yararlanılacak tavukların ebeveynleri için olanlar, kuluçkalık",
+      "tanim_en": "Broodstock hen (Gallus domesticus species) eggs; those intended for the parents of hens from which eggs will be used, incubators.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040711001012",
+      "tanim_tr": "Damızlık tavuk (Gallus domesticus türü) yumurtaları; etinden yararlanılacak tavukların ebeveynleri için olanlar, kuluçkalık",
+      "tanim_en": "Eggs of breeding hens (Gallus domesticus species); those intended for the parents of hens whose meat will be used, and hatching eggs.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040711001019",
+      "tanim_tr": "Damızlık tavuk (Gallus domesticus türü) yumurtaları; yumurtasından veya etinden yararlanılacak tavukların ebeveynleri için olanlar HARİÇ, kuluçkalık",
+      "tanim_en": "Eggs of broodstock hens (Gallus domesticus species); EXCEPT those intended for the parents of hens from which eggs or meat will be used, for hatching.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040711009011",
+      "tanim_tr": "Damızlık olmayan tavuk (Gallus domesticus türü) yumurtaları; yumurtasından yararlanılacak tavuklar için olanlar, kuluçkalık",
+      "tanim_en": "Eggs from non-breeding hens (Gallus domesticus species); those intended for hens whose eggs will be used, and those for hatching.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040711009012",
+      "tanim_tr": "Damızlık olmayan tavuk (Gallus domesticus türü) yumurtaları; etinden yararlanılacak tavuklar için olanlar, kuluçkalık",
+      "tanim_en": "Eggs from non-breeding hens (Gallus domesticus species); those intended for hens whose meat will be used, and those for hatching.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040711009019",
+      "tanim_tr": "Damızlık olmayan tavuk (Gallus domesticus türü) yumurtaları; yumurtasından veya etinden yararlanılacak tavuklar için olanlar HARİÇ, kuluçkalık",
+      "tanim_en": "Eggs of non-breeding hens (Gallus domesticus species); EXCEPT those intended for hens from which eggs or meat will be used, for hatching.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040719111011",
+      "tanim_tr": "Hindi yumurtaları; kuluçkalık, damızlık",
+      "tanim_en": "Turkey eggs; for hatching, for breeding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040719111019",
+      "tanim_tr": "Kaz yumurtaları; kuluçkalık, damızlık",
+      "tanim_en": "Goose eggs; for hatching, for breeding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040719119011",
+      "tanim_tr": "Hindi yumurtaları; kuluçkalık fakat damızlık olmayan",
+      "tanim_en": "Turkey eggs; for hatching but not for breeding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040719119019",
+      "tanim_tr": "Kaz yumurtaları; kuluçkalık fakat damızlık olmayan",
+      "tanim_en": "Goose eggs; for incubation but not for breeding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040719190011",
+      "tanim_tr": "Tavuk, hindi ve kaz dışındaki kümes hayvanlarının yumurtaları; kuluçkalık, damızlık",
+      "tanim_en": "Eggs of poultry other than chickens, turkeys, and geese; for hatching, breeding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040719190019",
+      "tanim_tr": "Tavuk, hindi ve kaz dışındaki kümes hayvanlarının yumurtaları; kuluçkalık fakat damızlık olmayan",
+      "tanim_en": "Eggs of poultry other than chickens, turkeys, and geese; hatching eggs but not breeding eggs.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040719901011",
+      "tanim_tr": "Devekuşu yumurtaları (kümes hayvanı olmayan); kuluçkalık, damızlık",
+      "tanim_en": "Ostrich eggs (non-poultry); for hatching, breeding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040719901019",
+      "tanim_tr": "Diğer kuşların yumurtaları; kuluçkalık, damızlık",
+      "tanim_en": "Eggs of other birds; incubators, breeding stock.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040719909011",
+      "tanim_tr": "Devekuşu yumurtaları; kuluçkalık fakat damızlık olmayan",
+      "tanim_en": "Ostrich eggs; incubation only, not breeding stock.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040719909019",
+      "tanim_tr": "Diğer kuşların yumurtaları; kuluçkalık; kuluçkalık fakat damızlık olmayan",
+      "tanim_en": "Eggs of other birds; incubators; incubators but not for breeding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040721000000",
+      "tanim_tr": "Tavuk yumurtaları (taze) (Gallus domesticus türü); kuluçkalık olmayan, damızlık olmayan",
+      "tanim_en": "Chicken eggs (fresh) (Gallus domesticus species); non-hatching, non-breeding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040729100000",
+      "tanim_tr": "Tavuk (Gallus domesticus türü) haricinde kalan kümes hayvanlarının yumurtaları (taze); kuluçkalık olmayan, damızlık olmayan",
+      "tanim_en": "Eggs of poultry other than chickens (Gallus domesticus species) (fresh); non-hatching, non-breeding eggs.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040729900000",
+      "tanim_tr": "Kümes hayvanı olmayan kuşların taze yumurtaları; kuluçkalık olmayan, damızlık olmayan",
+      "tanim_en": "Fresh eggs from non-poultry birds; non-hatching, non-breeding eggs.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040790100000",
+      "tanim_tr": "Kümes hayvanlarının kabuklu yumurtaları; dayanıklı hale getirilmiş veya pişirilmiş",
+      "tanim_en": "Poultry eggs in shells; preserved or cooked",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040790900000",
+      "tanim_tr": "Kümes hayvanı olmayan kuşların kabuklu yumurtaları; dayanıklı hale getirilmiş veya pişirilmiş",
+      "tanim_en": "Eggs from non-poultry birds in their shells; preserved or cooked.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040811200000",
+      "tanim_tr": "Kuş ve kümes hayvanlarının yumurta sarıları (kurutulmuş); İnsan gıdası olarak kullanılmaya elverişli olmayanlar",
+      "tanim_en": "Dried egg yolks of birds and poultry; those unsuitable for human consumption.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040811800000",
+      "tanim_tr": "Kuş ve kümes hayvanlarının yumurta sarıları (kurutulmuş); İnsan gıdası olarak kullanılmaya elverişli olanlar",
+      "tanim_en": "Dried egg yolks of birds and poultry; those suitable for human consumption.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040819200000",
+      "tanim_tr": "Kuş ve kümes hayvanlarının yumurta sarıları (kurutulmuş HARİÇ); İnsan gıdası olarak kullanılmaya elverişli olmayanlar",
+      "tanim_en": "Egg yolks of birds and poultry (EXCEPT dried); those unsuitable for human consumption.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040819810000",
+      "tanim_tr": "Kuş ve kümes hayvanlarının yumurta sarıları (sıvı halde); İnsan gıdası olarak kullanılmaya elverişli olmayanlar",
+      "tanim_en": "Egg yolks of birds and poultry (in liquid form); those unsuitable for human consumption.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040819890000",
+      "tanim_tr": "Kuş ve kümes hayvanlarının yumurta sarıları (dondurulmuş); İnsan gıdası olarak kullanılmaya elverişli olanlar",
+      "tanim_en": "Egg yolks of birds and poultry (frozen); those suitable for human consumption.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040891200000",
+      "tanim_tr": "Kuş ve kümes hayvanlarının kabuksuz diğer yumurtaları (kurutulmuş); İnsan gıdası olarak kullanılmaya elverişli olmayanlar",
+      "tanim_en": "Other shell-less eggs of birds and poultry (dried); those unsuitable for human consumption.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040891800000",
+      "tanim_tr": "Kuş ve kümes hayvanlarının kabuksuz diğer yumurtaları (kurutulmuş); İnsan gıdası olarak kullanılmaya elverişli olalar",
+      "tanim_en": "Other shell-less eggs of birds and poultry (dried); suitable for human consumption.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040899200000",
+      "tanim_tr": "Kuş ve kümes hayvanlarının kabuksuz diğer yumurtaları; İnsan gıdası olarak kullanılmaya elverişli olmayanlar",
+      "tanim_en": "Eggs of birds and poultry (without shells); those unsuitable for human consumption.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040899800000",
+      "tanim_tr": "Kuş ve kümes hayvanlarının kabuksuz diğer yumurtaları; İnsan gıdası olarak kullanılmaya elverişli olanlar",
+      "tanim_en": "Other shell-less eggs of birds and poultry; those suitable for human consumption.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040900000011",
+      "tanim_tr": "Tabii bal; petek",
+      "tanim_en": "Natural honey; honeycomb",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "040900000012",
+      "tanim_tr": "Tabii bal; süzme",
+      "tanim_en": "Natural honey; strained.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "041010100000",
+      "tanim_tr": "Böcek menşeli yenilenebilen ürünler (un ve kaba un HARİÇ); taze, soğutulmuş veya dondurulmuş",
+      "tanim_en": "Renewable products of insect origin (EXCEPT flour and coarse flour); fresh, chilled or frozen.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "041010910000",
+      "tanim_tr": "Böcek menşeli yenilebilen un ve kaba unlar",
+      "tanim_en": "Edible flours and coarse flours of insect origin",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "041010990000",
+      "tanim_tr": "Böcek menşeli yenilenebilen ürünler; taze, soğutulmuş veya dondurulmuş ürünler ile un ve kaba unlar HARİÇ",
+      "tanim_en": "Renewable products of insect origin; EXCLUDING fresh, chilled or frozen products, and flours and coarse flours.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "041090000011",
+      "tanim_tr": "Kaplumbağa yumurtaları",
+      "tanim_en": "Turtle eggs",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "041090000012",
+      "tanim_tr": "Salyangoz kabuğu unu",
+      "tanim_en": "Snail shell meal",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "041090000013",
+      "tanim_tr": "Arı sütü",
+      "tanim_en": "Royal jelly",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "041090000019",
+      "tanim_tr": "Tarifenin başka yerinde belirtilmeyen veya yer almayan hayvansal menşeli yenilen diğer ürünler",
+      "tanim_en": "Other edible animal products not specified or included elsewhere in the tariff.",
+      "grup": "otv_yok",
+      "oran": null
+    }
+  ]
+}

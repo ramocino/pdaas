@@ -433,8 +433,8 @@
 
     // ─── Sabitler ───
     const TIP_SOZLUK = {
-      tr: { liste: 'Liste', agac: 'Ağaç', harita: 'Harita', tablo: 'Tablo' },
-      en: { liste: 'List', agac: 'Tree', harita: 'Map', tablo: 'Table' }
+      tr: { liste: 'Liste', agac: 'Ağaç', harita: 'Harita', tablo: 'Tablo', 'kural-seti': 'Kural Seti' },
+      en: { liste: 'List', agac: 'Tree', harita: 'Map', tablo: 'Table', 'kural-seti': 'Rule Set' }
     };
 
     const KOD_SISTEMI_MAP = {
@@ -478,6 +478,7 @@
       bilesenler: 'Bileşenler',
       myo_isci_pay: 'MYÖ İşçi Payı', gss_isci_pay: 'GSS İşçi Payı',
       gecerlilik_baslangic: 'Geçerlilik Başlangıcı', gecerlilik_bitis: 'Geçerlilik Bitişi',
+      kdv: 'KDV Bilgisi', otv: 'ÖTV Bilgisi', tevkifat: 'Tevkifat Bilgisi', randiman: 'Randıman Bilgisi'
     };
     const ALAN_ETIKET_EN = {
       kod: 'Code', ust_kod: 'Parent Code', seviye: 'Level', seviye_adi: 'Level Name',
@@ -507,6 +508,7 @@
       bilesenler: 'Components',
       myo_isci_pay: 'DPI Employee Share', gss_isci_pay: 'GHI Employee Share',
       gecerlilik_baslangic: 'Validity Start', gecerlilik_bitis: 'Validity End',
+      kdv: 'VAT Data', otv: 'SCT Data', tevkifat: 'Withholding Data', randiman: 'Yield Data'
     };
 
     function tipEtiket(tip) {
@@ -604,11 +606,16 @@
             ${eslesen.map(s => {
           const sAdi = document.documentElement.lang === 'en' ? (s.ad.en || s.ad.tr) : s.ad.tr;
           const aktif = currentService && currentService.kod === s.kod;
-          const url = s.katmanlar?.ham?.url || '#';
+          
+          // Katman tespiti: ham > konsolide > kurallar
+          const katmanKey = s.katmanlar?.ham ? 'ham' : (s.katmanlar?.konsolide ? 'konsolide' : 'kurallar');
+          const url = s.katmanlar?.[katmanKey]?.url || '#';
+          const versiyon = s.katmanlar?.[katmanKey]?.son || '—';
+
           return `
-                <button type="button" class="service-item-btn w-full px-3 py-2 pl-9 flex items-center justify-between text-left hover:bg-win-500/10 hover:text-win-400 transition text-slate-400 ${aktif ? 'bg-win-500/20 text-win-400 font-semibold border-l-2 border-win-500' : ''}" data-endpoint="${url}">
+                <button type="button" class="service-item-btn w-full px-3 py-2 pl-9 flex items-center justify-between text-left hover:bg-win-500/10 hover:text-win-400 transition text-slate-400 ${aktif ? 'bg-win-500/20 text-win-400 font-semibold border-l-2 border-win-500' : ''}" data-endpoint="${url}" data-katman="${katmanKey}">
                   <span class="truncate pr-2">${kacis(sAdi)}</span>
-                  <span class="px-1.5 py-0.5 text-[9px] font-mono bg-win-hover text-slate-400 rounded">${s.katmanlar?.ham?.son || '—'}</span>
+                  <span class="px-1.5 py-0.5 text-[9px] font-mono bg-win-hover text-slate-400 rounded">${versiyon}</span>
                 </button>
               `;
         }).join('')}
@@ -632,44 +639,52 @@
       container.querySelectorAll('.service-item-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const endpoint = btn.dataset.endpoint;
-          const sv = KATALOG.find(s => s.katmanlar?.ham?.url === endpoint);
-          if (sv) servisSec(sv);
+          const katman = btn.dataset.katman;
+          const sv = KATALOG.find(s => s.katmanlar?.[katman]?.url === endpoint);
+          if (sv) servisSec(sv, katman);
           closeMobileSidebar();
         });
       });
     }
 
     // ─── Servis seç ───
-    function servisSecUI(sv) {
+    function servisSecUI(sv, katmanKey) {
       if (!sv) return;
       const grupAdi = grupEtiket(sv.kod_sistemi);
       const servisAdi = document.documentElement.lang === 'en' ? (sv.ad.en || sv.ad.tr) : sv.ad.tr;
-      const versiyon = sv.katmanlar?.ham?.son || '—';
+      
+      const katmanBilgi = sv.katmanlar?.[katmanKey] || {};
+      const versiyon = katmanBilgi.son || '—';
+      const katmanEtiket = { ham: 'Ham', konsolide: 'Konsolide', kurallar: 'Kurallar' }[katmanKey] || katmanKey;
 
       $('bc-ministry').textContent = grupAdi;
       $('bc-service').textContent = servisAdi;
-      $('service-ministry-badge').textContent = grupAdi;
+      $('service-ministry-badge').textContent = `${grupAdi} (${katmanEtiket})`;
       $('service-records-count').textContent = `v${versiyon}`;
       $('service-type-badge').textContent = tipEtiket(sv.tip);
       $('service-title').textContent = servisAdi;
       $('service-desc').textContent = sv.kod;
       $('service-last-update').textContent = `v${versiyon}`;
 
-      const url = sv.katmanlar?.ham?.url || '';
-      $('endpoint-url-text').textContent = apiUrl(url);
+      $('endpoint-url-text').textContent = apiUrl(katmanBilgi.url || '');
     }
 
-    function servisSec(sv) {
+    function servisSec(sv, katmanKey = 'ham') {
       if (!sv) return;
       currentService = sv;
+      currentKatman = katmanKey;
       currentPage = 1;
       $('view-empty-state').classList.add('hidden');
       $('view-service-detail').classList.remove('hidden');
-      servisSecUI(sv);
+      servisSecUI(sv, katmanKey);
       renderCatalogTree($('input-catalog-search').value);
-      servisDetayYukle(sv.katmanlar?.ham?.url);
+      
+      const endpoint = sv.katmanlar?.[katmanKey]?.url;
+      servisDetayYukle(endpoint);
       $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    let currentKatman = 'ham';
 
     async function servisDetayYukle(endpoint) {
       if (!endpoint) return;
@@ -685,12 +700,23 @@
         }
         const body = await r.json();
         currentRawBody = body;
-        currentData = Array.isArray(body.kayitlar) ? body.kayitlar : [];
+        
+        // Yeni yapıya göre veriyi ayıkla (kayitlar veya fasillar veya kurallar)
+        currentData = Array.isArray(body.kayitlar) ? body.kayitlar : 
+                      (Array.isArray(body.fasillar) ? body.fasillar : 
+                      (Array.isArray(body.kurallar) ? body.kurallar : []));
+                      
+        if (!currentData.length && body.gruplar) {
+           // Eğer kurallar yoksa gruplar dict'ini array'e çevirebiliriz
+           currentData = Object.entries(body.gruplar).map(([k, v]) => ({ kod: k, ...v }));
+        }
+
         currentFilteredData = [...currentData];
         currentPage = 1;
         $('json-status-label').textContent = `HTTP ${r.status}`;
         $('json-response-time').textContent = `${sure} ms`;
         $('service-records-count').textContent = currentData.length.toLocaleString(document.documentElement.lang === 'en' ? 'en-US' : 'tr-TR') + ' ' + t('records');
+        
         renderTableData(); renderCodeSnippets(); renderJsonConsole(); renderDocsSchema(); renderNotlar(body);
       } catch (e) {
         console.error('[PDaaS] detay hatası:', e);
@@ -800,7 +826,8 @@
     // ─── Kod örnekleri ───
     function renderCodeSnippets() {
       if (!currentService) return;
-      const url = apiUrl(currentService.katmanlar?.ham?.url || '');
+      const katmanBilgi = currentService.katmanlar?.[currentKatman] || {};
+      const url = apiUrl(katmanBilgi.url || '');
       const snippets = {
         curl: `curl -X GET "${url}" \\\n  -H "Accept: application/json" \\\n  -H "Accept-Encoding: gzip"`,
         python: `import requests\n\nurl = "${url}"\nheaders = {"Accept": "application/json"}\n\nresponse = requests.get(url, headers=headers, timeout=15)\nresponse.raise_for_status()\nveri = response.json()\n\nkayitlar = veri.get("kayitlar", [])\nprint(f"Toplam: {len(kayitlar)}")\nfor k in kayitlar[:5]:\n    print(k.get("kod"), "-", k.get("tanim_tr"))`,
@@ -878,6 +905,8 @@
       bilesenler: 'Alt bileşenler (hesaplama kırılımı)',
       guncel_oranlar: 'Güncel oran listesi', matrah_dilimleri: 'Kademeli matrah dilimleri',
       gecerlilik_baslangic: 'Geçerliliğin başladığı tarih', gecerlilik_bitis: 'Geçerliliğin bittiği tarih',
+      kdv: 'KDV bilgisi', otv: 'ÖTV bilgisi', tevkifat: 'Tevkifat bilgisi', randiman: 'Randıman bilgisi',
+      kayit_sayisi: 'Bu gruptaki toplam kayıt sayısı', dosya: 'Parça dosya yolu'
     };
     const SCHEMA_ACIKLAMA_EN = {
       kod: 'Unique code identifier', ust_kod: 'Parent category code (tree link)',
@@ -899,6 +928,8 @@
       bilesenler: 'Sub-components (calculation breakdown)',
       guncel_oranlar: 'Current rate list', matrah_dilimleri: 'Progressive base brackets',
       gecerlilik_baslangic: 'Validity start date', gecerlilik_bitis: 'Validity end date',
+      kdv: 'VAT data', otv: 'SCT data', tevkifat: 'Withholding data', randiman: 'Yield data',
+      kayit_sayisi: 'Total record count in this group', dosya: 'Part file path'
     };
 
     // ─── Notlar ───
@@ -950,7 +981,7 @@
     // ─── Olaylar ───
     document.addEventListener('pdaas:dil', () => {
       if (currentService) {
-        servisSecUI(currentService);
+        servisSecUI(currentService, currentKatman);
         renderTableData(); renderCodeSnippets();
         if (currentRawBody) renderNotlar(currentRawBody);
         renderDocsSchema();
@@ -976,7 +1007,12 @@
     $('btn-copy-url').addEventListener('click', () => { if (currentService) copyToClipboard($('endpoint-url-text').textContent, t('copied_url')); });
     $('btn-copy-code').addEventListener('click', () => { copyToClipboard($('code-snippet-box').textContent, t('copied_code')); });
     $('btn-copy-json').addEventListener('click', () => { if (currentRawBody) copyToClipboard(JSON.stringify(currentRawBody, null, 2), t('copied_json')); });
-    $('btn-run-query').addEventListener('click', () => { if (currentService) servisDetayYukle(currentService.katmanlar?.ham?.url); });
+    $('btn-run-query').addEventListener('click', () => { 
+      if (currentService) {
+        const endpoint = currentService.katmanlar?.[currentKatman]?.url;
+        servisDetayYukle(endpoint);
+      }
+    });
 
     $('btn-bc-home').addEventListener('click', () => {
       $('view-empty-state').classList.remove('hidden'); $('view-service-detail').classList.add('hidden');
@@ -993,13 +1029,9 @@
     $('btn-export-csv').addEventListener('click', () => {
       if (!currentData.length) return;
       const keys = Object.keys(currentData[0]);
-
-      // Türkçe Excel için: BOM + ';' ayırıcı + CRLF satır sonu
       const AYIRICI = ';';
-
       const hucre = v => {
         const s = String(v ?? '');
-        // Ayırıcı, tırnak veya satır sonu içeriyorsa tırnakla sar
         if (s.includes(AYIRICI) || s.includes('"') || s.includes('\n') || s.includes('\r')) {
           return '"' + s.replace(/"/g, '""') + '"';
         }
@@ -1010,10 +1042,7 @@
       currentData.forEach(row => {
         satirlar.push(keys.map(k => hucre(row[k])).join(AYIRICI));
       });
-
-      // \uFEFF = UTF-8 BOM → Excel Türkçe karakterleri doğru okur
       const csv = '\uFEFF' + satirlar.join('\r\n');
-
       const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');

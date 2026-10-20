@@ -38,10 +38,10 @@
       ]
     },
     "surum": {
-      "surum": "2026.01.01",
-      "dosya_surumu": "1.0.0",
-      "onceki": null,
-      "guncelleme": "2026-01-01"
+      "surum": "2026.01.02",
+      "dosya_surumu": "1.2.0",
+      "onceki": "2026.01.01",
+      "guncelleme": "2026-01-02"
     },
     "zaman": {
       "zaman_bazli": true,
@@ -52,21 +52,10 @@
       {
         "kod": "gib-otv-listeleri",
         "ad": {
-          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
-          "en": "Lists (I), (II), (III) and (IV) annexed to Special Consumption Tax Law No. 4760"
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
         },
         "tur": "kanun_eki_liste",
-        "kurum_kod": "gib",
-        "url": null,
-        "erisim_tarihi": null
-      },
-      {
-        "kod": "gib-otv-genel-teblig",
-        "ad": {
-          "tr": "ÖTV Genel Uygulama Tebliği (Seri No: 1) ve güncel had/oran tebliğleri",
-          "en": "SCT General Implementation Communiqué (Serial No: 1) and current threshold/rate communiqués"
-        },
-        "tur": "genel_teblig",
         "kurum_kod": "gib",
         "url": null,
         "erisim_tarihi": null
@@ -82,21 +71,12 @@
         "madde": null,
         "resmi_gazete": "24783",
         "tarih": "2002-06-12"
-      },
-      {
-        "tur": "genel_teblig",
-        "ad": {
-          "tr": "Özel Tüketim Vergisi Genel Uygulama Tebliği (Seri No: 1)",
-          "en": "Special Consumption Tax General Implementation Communiqué (Serial No: 1)"
-        },
-        "resmi_gazete": null,
-        "tarih": null
       }
     ],
     "yayin_durumu": "yayinda",
     "checksum": {
       "algoritma": "sha256",
-      "deger": "cfc3c549a0ad1b52f72482123eb504fa915a345d7864d6ac83376240e06eff30",
+      "deger": "7aa227c89cd8bb208b1d76c635451e395fb4bb40a195527ab998364e94c1ddef",
       "kapsam": "kayitlar"
     },
     "uretim": null
@@ -107,12 +87,11 @@
       "liste": "I",
       "ad_tr": "Akaryakıt Ürünleri",
       "ad_en": "Fuel Products",
-      "gtip_prefix": [
-        "2710"
-      ],
       "vergi_tipi": "maktu",
+      "para_birimi": "TRY",
       "birim_tr": "Litre",
       "birim_en": "Litre",
+      "not_tr": "Maktu tutarlar GİB tarafından güncel tebliğlerle dinamik ilan edilir.",
       "ornekler_tr": [
         "Benzin",
         "Motorin",
@@ -131,10 +110,8 @@
       "liste": "I",
       "ad_tr": "LPG ve Doğal Gaz",
       "ad_en": "LPG and Natural Gas",
-      "gtip_prefix": [
-        "2711"
-      ],
       "vergi_tipi": "maktu",
+      "para_birimi": "TRY",
       "birim_tr": "Kg / m³",
       "birim_en": "Kg / m³",
       "ornekler_tr": [
@@ -155,11 +132,8 @@
       "liste": "I",
       "ad_tr": "Solventler",
       "ad_en": "Solvents",
-      "gtip_prefix": [
-        "2902",
-        "2905"
-      ],
       "vergi_tipi": "maktu",
+      "para_birimi": "TRY",
       "birim_tr": "Litre",
       "birim_en": "Litre",
       "ornekler_tr": [
@@ -176,330 +150,23 @@
     {
       "kod": "OTV-II-A",
       "liste": "II",
-      "ad_tr": "Otomobiller (1600 cm³'e kadar)",
-      "ad_en": "Passenger Cars (up to 1600 cc)",
-      "gtip_prefix": [
-        "8703"
-      ],
+      "ad_tr": "Otomobiller ve Diğer Taşıtlar (1600 cm³'e kadar)",
+      "ad_en": "Passenger Cars and Other Vehicles (up to 1600 cc)",
       "vergi_tipi": "oran",
       "matrah_dilimleri": [
         {
-          "max_matrah": 85000,
-          "oran": 0.45
+          "oran": 0.45,
+          "aciklama": "En alt ÖTV matrah segmenti"
         },
         {
-          "min_matrah": 85000,
-          "max_matrah": 130000,
-          "oran": 0.5
+          "oran": 0.5,
+          "aciklama": "Orta ÖTV matrah segmenti"
         },
         {
-          "min_matrah": 130000,
-          "oran": 0.8
+          "oran": 0.8,
+          "aciklama": "Standart üst ÖTV matrah segmenti"
         }
-      ]
-    },
-    {
-      "kod": "OTV-II-B",
-      "liste": "II",
-      "ad_tr": "Otomobiller (1600-2000 cm³)",
-      "ad_en": "Passenger Cars (1600-2000 cc)",
-      "gtip_prefix": [
-        "8703"
-      ],
-      "vergi_tipi": "oran",
-      "matrah_dilimleri": [
-        {
-          "max_matrah": 135000,
-          "oran": 0.5
-        },
-        {
-          "min_matrah": 135000,
-          "max_matrah": 170000,
-          "oran": 0.8
-        },
-        {
-          "min_matrah": 170000,
-          "oran": 1.3
-        }
-      ]
-    },
-    {
-      "kod": "OTV-II-C",
-      "liste": "II",
-      "ad_tr": "Otomobiller (2000 cm³ üzeri)",
-      "ad_en": "Passenger Cars (over 2000 cc)",
-      "gtip_prefix": [
-        "8703"
-      ],
-      "vergi_tipi": "oran",
-      "matrah_dilimleri": [
-        {
-          "max_matrah": 170000,
-          "oran": 1.3
-        },
-        {
-          "min_matrah": 170000,
-          "oran": 2.2
-        }
-      ]
-    },
-    {
-      "kod": "OTV-II-D",
-      "liste": "II",
-      "ad_tr": "Elektrikli Otomobiller",
-      "ad_en": "Electric Passenger Cars",
-      "gtip_prefix": [
-        "8703"
-      ],
-      "vergi_tipi": "oran",
-      "matrah_dilimleri": [
-        {
-          "max_matrah": 1250000,
-          "oran": 0.25
-        },
-        {
-          "min_matrah": 1250000,
-          "oran": 0.6
-        }
-      ]
-    },
-    {
-      "kod": "OTV-II-E",
-      "liste": "II",
-      "ad_tr": "Motosikletler",
-      "ad_en": "Motorcycles",
-      "gtip_prefix": [
-        "8711"
-      ],
-      "vergi_tipi": "oran",
-      "matrah_dilimleri": [
-        {
-          "max_matrah": 50000,
-          "oran": 0.37
-        },
-        {
-          "min_matrah": 50000,
-          "oran": 0.6
-        }
-      ]
-    },
-    {
-      "kod": "OTV-III-A",
-      "liste": "III",
-      "ad_tr": "Alkollü İçecekler",
-      "ad_en": "Alcoholic Beverages",
-      "gtip_prefix": [
-        "2203",
-        "2204",
-        "2205",
-        "2206",
-        "2208"
-      ],
-      "vergi_tipi": "karma",
-      "ornekler_tr": [
-        "Bira",
-        "Şarap",
-        "Rakı",
-        "Viski",
-        "Votka"
-      ],
-      "ornekler_en": [
-        "Beer",
-        "Wine",
-        "Raki",
-        "Whisky",
-        "Vodka"
-      ]
-    },
-    {
-      "kod": "OTV-III-B",
-      "liste": "III",
-      "ad_tr": "Tütün Mamulleri",
-      "ad_en": "Tobacco Products",
-      "gtip_prefix": [
-        "2402",
-        "2403"
-      ],
-      "vergi_tipi": "karma",
-      "ornekler_tr": [
-        "Sigara",
-        "Puro",
-        "Sigarillo",
-        "Enfiye",
-        "Çiğneme tütünü"
-      ],
-      "ornekler_en": [
-        "Cigarettes",
-        "Cigars",
-        "Cigarillos",
-        "Snuff",
-        "Chewing tobacco"
-      ],
-      "guncel_oranlar": [
-        {
-          "gtip": "2402.20",
-          "mal_ismi_tr": "Tütün içeren sigaralar",
-          "mal_ismi_en": "Cigarettes containing tobacco",
-          "oran": 0.42,
-          "asgari_maktu": 2.2953,
-          "maktu": 23.7404
-        },
-        {
-          "gtip": "2403.99.10.00.00",
-          "mal_ismi_tr": "Enfiye ve çiğnemeye mahsus tütün",
-          "mal_ismi_en": "Snuff and chewing tobacco",
-          "oran": 0.42,
-          "asgari_maktu": 2.2953,
-          "maktu": 23.7404
-        }
-      ]
-    },
-    {
-      "kod": "OTV-IV-A",
-      "liste": "IV",
-      "ad_tr": "Kürk ve Mücevher",
-      "ad_en": "Fur and Jewellery",
-      "gtip_prefix": [
-        "4303",
-        "7113",
-        "7114"
-      ],
-      "vergi_tipi": "oran",
-      "oran": 0.2,
-      "ornekler_tr": [
-        "Kürk giysi",
-        "Altın takı",
-        "Pırlanta",
-        "Mücevher"
-      ],
-      "ornekler_en": [
-        "Fur garment",
-        "Gold jewellery",
-        "Diamond",
-        "Jewellery"
-      ]
-    },
-    {
-      "kod": "OTV-IV-B",
-      "liste": "IV",
-      "ad_tr": "Bazı Elektrikli Ev Aletleri",
-      "ad_en": "Certain Electrical Household Appliances",
-      "gtip_prefix": [
-        "8418",
-        "8450",
-        "8508",
-        "8516"
-      ],
-      "vergi_tipi": "oran",
-      "oran": 0.065,
-      "ornekler_tr": [
-        "Buzdolabı",
-        "Çamaşır makinesi",
-        "Elektrikli süpürge",
-        "Mikrodalga fırın"
-      ],
-      "ornekler_en": [
-        "Refrigerator",
-        "Washing machine",
-        "Vacuum cleaner",
-        "Microwave oven"
-      ]
-    },
-    {
-      "kod": "OTV-IV-C",
-      "liste": "IV",
-      "ad_tr": "Uçak ve Helikopter",
-      "ad_en": "Aircraft and Helicopters",
-      "gtip_prefix": [
-        "8802"
-      ],
-      "vergi_tipi": "oran",
-      "oran": 0.2,
-      "ornekler_tr": [
-        "Uçak",
-        "Helikopter",
-        "Planör"
-      ],
-      "ornekler_en": [
-        "Aircraft",
-        "Helicopter",
-        "Glider"
-      ]
-    },
-    {
-      "kod": "OTV-IV-D",
-      "liste": "IV",
-      "ad_tr": "Yat ve Tekneler",
-      "ad_en": "Yachts and Boats",
-      "gtip_prefix": [
-        "8903"
-      ],
-      "vergi_tipi": "oran",
-      "oran": 0.2,
-      "ornekler_tr": [
-        "Yat",
-        "Tekne",
-        "Sürat teknesi"
-      ],
-      "ornekler_en": [
-        "Yacht",
-        "Boat",
-        "Speedboat"
       ]
     }
-  ],
-  "listeler": {
-    "I": {
-      "ad_tr": "I Sayılı Liste (Petrol Ürünleri, Doğal Gaz, Solventler)",
-      "ad_en": "List I (Petroleum Products, Natural Gas, Solvents)",
-      "kapsam_tr": "Akaryakıt, LPG, doğal gaz, solvent ve türevleri",
-      "kapsam_en": "Fuel, LPG, natural gas, solvents and derivatives",
-      "vergi_tipi": "maktu",
-      "vergi_tipi_en": "fixed amount"
-    },
-    "II": {
-      "ad_tr": "II Sayılı Liste (Motorlu Taşıtlar)",
-      "ad_en": "List II (Motor Vehicles)",
-      "kapsam_tr": "Otomobil, minibüs, kamyonet, motosiklet, uçak, helikopter, yat",
-      "kapsam_en": "Cars, minibuses, vans, motorcycles, aircraft, helicopters, yachts",
-      "vergi_tipi": "oran",
-      "vergi_tipi_en": "rate"
-    },
-    "III": {
-      "ad_tr": "III Sayılı Liste (Alkollü İçecekler ve Tütün Mamulleri)",
-      "ad_en": "List III (Alcoholic Beverages and Tobacco Products)",
-      "kapsam_tr": "Alkol, bira, şarap, sigara, puro, tütün",
-      "kapsam_en": "Spirits, beer, wine, cigarettes, cigars, tobacco",
-      "vergi_tipi": "karma",
-      "vergi_tipi_en": "mixed"
-    },
-    "IV": {
-      "ad_tr": "IV Sayılı Liste (Lüks Ürünler)",
-      "ad_en": "List IV (Luxury Goods)",
-      "kapsam_tr": "Kürk, mücevher, bazı dayanıklı tüketim malları, uçak, helikopter, yat",
-      "kapsam_en": "Fur, jewellery, certain durable consumer goods, aircraft, helicopters, yachts",
-      "vergi_tipi": "oran",
-      "vergi_tipi_en": "rate"
-    }
-  },
-  "notlar_tr": [
-    "ÖTV oranları; 4760 sayılı Özel Tüketim Vergisi Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listelerde belirlenmiştir.",
-    "(I) sayılı liste maktu (sabit tutar) esaslıdır; litre veya kg/m³ başına belirli bir tutar alınır.",
-    "(II), (III) ve (IV) sayılı listelerde oran veya karma (oran + maktu) yöntem uygulanır.",
-    "Otomobil ÖTV oranları motor silindir hacmi ve matrah dilimlerine göre kademeli olarak artar.",
-    "Elektrikli otomobillerde motor gücü (kW) ve matrah dilimlerine göre farklı oranlar uygulanır; tablodaki oranlar genel gösterge niteliğindedir.",
-    "Tütün mamullerinde ÖTV, perakende satış fiyatı üzerinden oran + asgari maktu vergi yöntemiyle hesaplanır.",
-    "Güncel oran ve tutarlar; Hazine ve Maliye Bakanlığı tarafından yayımlanan tebliğlerle her yıl güncellenebilir.",
-    "Bu tablo bilgilendirme amaçlıdır; resmî işlemler için GİB yayınları esas alınmalıdır."
-  ],
-  "notlar_en": [
-    "SCT rates are set out in Lists (I), (II), (III) and (IV) annexed to Special Consumption Tax Law No. 4760.",
-    "List (I) is based on a fixed amount; a fixed amount is charged per litre or per kg/m³.",
-    "Lists (II), (III) and (IV) apply the rate or mixed (rate + fixed amount) method.",
-    "Automobile SCT rates increase progressively based on engine displacement and tax base brackets.",
-    "For electric cars, different rates apply depending on motor power (kW) and tax base brackets; the rates in the table are for general reference.",
-    "For tobacco products, SCT is calculated using the rate + minimum fixed tax method on the retail sale price.",
-    "Current rates and amounts may be updated annually through communiqués published by the Ministry of Treasury and Finance.",
-    "This table is for informational purposes; GİB publications should be taken as the basis for official transactions."
   ]
 }

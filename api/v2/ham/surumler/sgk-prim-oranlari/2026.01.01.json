@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "schema_surumu": "2.0.0",
+    "servis": {
+      "kod": "sgk-prim-oranlari",
+      "ad": {
+        "tr": "SGK Prim Oranları",
+        "en": "SGK Contribution Rates"
+      }
+    },
+    "katman": "ham",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "sgk",
+      "kapsam": [
+        "sosyal_guvenlik"
+      ]
+    },
+    "surum": "2026.01.01",
+    "guncelleme": "2026-01-01",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": true,
+      "baslangic": "2026-01-01",
+      "bitis": "2026-12-31"
+    },
+    "yayinci": {
+      "kod": "csgb",
+      "ad": {
+        "tr": "T.C. Çalışma ve Sosyal Güvenlik Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Labour and Social Security"
+      },
+      "birim": {
+        "tr": "Sosyal Güvenlik Kurumu",
+        "en": "Social Security Institution"
+      },
+      "kurumlar": [
+        "csgb",
+        "sgk"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "sgk-5510-madde-81",
+        "ad": {
+          "tr": "5510 sayılı Kanun Madde 81 — Prim oranları ve devlet katkısı",
+          "en": "Law No. 5510, Article 81 — Contribution rates and state contribution"
+        },
+        "tur": "kanun_maddesi",
+        "kurum_kod": "sgk",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "sgk-7566-kanun",
+        "ad": {
+          "tr": "7566 sayılı Kanun — 5510 sayılı Kanun'da değişiklik",
+          "en": "Law No. 7566 — Amendments to Law No. 5510"
+        },
+        "tur": "kanun",
+        "kurum_kod": "sgk",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu",
+          "en": "Social Insurance and Universal Health Insurance Law No. 5510"
+        },
+        "madde": "81",
+        "resmi_gazete": "26200",
+        "tarih": "2006-06-16"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4447 sayılı İşsizlik Sigortası Kanunu",
+          "en": "Unemployment Insurance Law No. 4447"
+        },
+        "resmi_gazete": "23441",
+        "tarih": "1999-08-25"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "7566 sayılı Kanun",
+          "en": "Law No. 7566"
+        }
+      }
+    ],
+    "checksum": "sha256:b502308998adf83a486e7a3621a80423719fb0825eca2de5cf4ef01cdae86d22"
+  },
+  "kayitlar": [
+    {
+      "kod": "sgk_isci_primi",
+      "ad_tr": "SGK İşçi Payı (MYÖ + GSS)",
+      "ad_en": "Social Security Employee Contribution (DPI + GHI)",
+      "oran": 14.0,
+      "birim": "%",
+      "aciklama_tr": "Malullük, Yaşlılık ve Ölüm Sigortası (%9) + Genel Sağlık Sigortası (%5)",
+      "aciklama_en": "Disability, Old-Age and Death Insurance (9%) + General Health Insurance (5%)",
+      "bilesenler": {
+        "myo_isci_pay": 9.0,
+        "gss_isci_pay": 5.0
+      },
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null,
+      "periyot": "sabit"
+    },
+    {
+      "kod": "issizlik_isci_primi",
+      "ad_tr": "İşsizlik Sigortası İşçi Payı",
+      "ad_en": "Unemployment Insurance Employee Contribution",
+      "oran": 1.0,
+      "birim": "%",
+      "aciklama_tr": "4447 Sayılı Kanun gereği işçi payı",
+      "aciklama_en": "Employee contribution under Law No. 4447",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null,
+      "periyot": "sabit"
+    },
+    {
+      "kod": "toplam_isci_primi",
+      "ad_tr": "Toplam İşçi Payı",
+      "ad_en": "Total Employee Contribution",
+      "oran": 15.0,
+      "birim": "%",
+      "aciklama_tr": "SGK İşçi Payı (%14) + İşsizlik İşçi Payı (%1)",
+      "aciklama_en": "Social Security Employee (14%) + Unemployment Employee (1%)",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    },
+    {
+      "kod": "sgk_isveren_primi_myo",
+      "ad_tr": "MYÖ İşveren Payı (Malullük-Yaşlılık-Ölüm)",
+      "ad_en": "DPI Employer Contribution (Disability-Old-Age-Death)",
+      "oran": 12.0,
+      "birim": "%",
+      "aciklama_tr": "2026 itibarıyla %11'den %12'ye yükseltilmiştir (7566 Sayılı Kanun)",
+      "aciklama_en": "Raised from 11% to 12% as of 2026 (Law No. 7566)",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null,
+      "notlar_tr": "Önceki yıl %11 idi. 1 puan artış yapılmıştır.",
+      "notlar_en": "Was 11% in the previous year. Increased by 1 percentage point."
+    },
+    {
+      "kod": "sgk_isveren_primi_gss",
+      "ad_tr": "GSS İşveren Payı (Genel Sağlık Sigortası)",
+      "ad_en": "GHI Employer Contribution (General Health Insurance)",
+      "oran": 7.5,
+      "birim": "%",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    },
+    {
+      "kod": "sgk_isveren_primi_kvsk",
+      "ad_tr": "KVSK İşveren Payı (Kısa Vadeli Sigorta Kolları)",
+      "ad_en": "STIB Employer Contribution (Short-Term Insurance Branches)",
+      "oran": 2.25,
+      "birim": "%",
+      "aciklama_tr": "İş kazası, meslek hastalığı, hastalık ve analık sigortası",
+      "aciklama_en": "Work accident, occupational disease, sickness and maternity insurance",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    },
+    {
+      "kod": "issizlik_isveren_primi",
+      "ad_tr": "İşsizlik Sigortası İşveren Payı",
+      "ad_en": "Unemployment Insurance Employer Contribution",
+      "oran": 2.0,
+      "birim": "%",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    },
+    {
+      "kod": "toplam_isveren_primi_tesviksiz",
+      "ad_tr": "Toplam İşveren Payı (Teşviksiz)",
+      "ad_en": "Total Employer Contribution (No Incentive)",
+      "oran": 23.75,
+      "birim": "%",
+      "aciklama_tr": "MYÖ (%12) + GSS (%7,5) + KVSK (%2,25) + İşsizlik (%2)",
+      "aciklama_en": "DPI (12%) + GHI (7.5%) + STIB (2.25%) + Unemployment (2%)",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    },
+    {
+      "kod": "toplam_isveren_primi_imalat_5puan",
+      "ad_tr": "Toplam İşveren Payı (İmalat - 5 Puan İndirimli)",
+      "ad_en": "Total Employer Contribution (Manufacturing - 5-Point Reduction)",
+      "oran": 18.75,
+      "birim": "%",
+      "aciklama_tr": "İmalat sektöründe 5 puanlık Hazine indirimi uygulanmış hali",
+      "aciklama_en": "Manufacturing sector with 5-point Treasury reduction applied",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null,
+      "notlar_tr": "Teşviksiz %23,75 - 5 puan = %18,75",
+      "notlar_en": "23.75% without incentive − 5 points = 18.75%"
+    },
+    {
+      "kod": "toplam_isveren_primi_diger_2puan",
+      "ad_tr": "Toplam İşveren Payı (İmalat Dışı - 2 Puan İndirimli)",
+      "ad_en": "Total Employer Contribution (Non-Manufacturing - 2-Point Reduction)",
+      "oran": 21.75,
+      "birim": "%",
+      "aciklama_tr": "İmalat dışı sektörlerde 2 puanlık Hazine indirimi uygulanmış hali",
+      "aciklama_en": "Non-manufacturing sectors with 2-point Treasury reduction applied",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null,
+      "notlar_tr": "2025'te 4 puan olan indirim, 2026'da 2 puana düşürülmüştür.",
+      "notlar_en": "The 4-point reduction in 2025 was reduced to 2 points in 2026."
+    },
+    {
+      "kod": "toplam_isveren_primi_5puanli_imalat",
+      "ad_tr": "Toplam İşveren Payı (5 Puanlık İndirimli - İmalat)",
+      "ad_en": "Total Employer Contribution (5-Point Reduction - Manufacturing)",
+      "oran": 18.75,
+      "birim": "%",
+      "aciklama_tr": "5510/81-i kapsamında 5 puanlık indirim (imalat sektörü)",
+      "aciklama_en": "5-point reduction under Article 81/i of Law No. 5510 (manufacturing)",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    },
+    {
+      "kod": "toplam_prim_orani",
+      "ad_tr": "Toplam Prim Oranı (İşçi + İşveren, Teşviksiz)",
+      "ad_en": "Total Premium Rate (Employee + Employer, No Incentive)",
+      "oran": 38.75,
+      "birim": "%",
+      "aciklama_tr": "İşçi %15 + İşveren %23,75",
+      "aciklama_en": "Employee 15% + Employer 23.75%",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": null
+    }
+  ],
+  "notlar_tr": [
+    "7566 Sayılı Kanun ile 5510 Sayılı Kanun'un 81. maddesinde değişiklik yapılmıştır.",
+    "MYÖ (Malullük-Yaşlılık-Ölüm) işveren payı 01.01.2026'dan itibaren %11'den %12'ye yükseltilmiştir.",
+    "İmalat dışı sektörlerde uygulanan 4 puanlık prim indirimi 2 puana düşürülmüştür.",
+    "İmalat sektöründe 5 puanlık indirim devam etmektedir.",
+    "GSS işveren payı %7,50, KVSK işveren payı %2,25 olarak sabit kalmıştır.",
+    "İşsizlik sigortası oranlarında (işçi %1, işveren %2) değişiklik yoktur.",
+    "Teşviksiz toplam oran 2025'te %37,75 iken 2026'da %38,75'e yükselmiştir.",
+    "5 puanlık indirim (5510/81-i) tüm işverenler için geçerlidir.",
+    "Bu veriler 1 Ocak 2026 - 31 Aralık 2026 dönemi için geçerlidir."
+  ],
+  "notlar_en": [
+    "Article 81 of Law No. 5510 was amended by Law No. 7566.",
+    "The DPI (Disability-Old-Age-Death) employer contribution was raised from 11% to 12% as of 01.01.2026.",
+    "The 4-point premium reduction applied to non-manufacturing sectors was reduced to 2 points.",
+    "The 5-point reduction continues to apply in the manufacturing sector.",
+    "GHI employer contribution remains at 7.50% and STIB employer contribution remains at 2.25%.",
+    "There is no change in unemployment insurance rates (employee 1%, employer 2%).",
+    "The total rate without incentive rose from 37.75% in 2025 to 38.75% in 2026.",
+    "The 5-point reduction (5510/81-i) applies to all employers.",
+    "These data are valid for the period 1 January 2026 – 31 December 2026."
+  ]
+}

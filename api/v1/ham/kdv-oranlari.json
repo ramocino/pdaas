@@ -39,7 +39,7 @@
     },
     "surum": {
       "surum": "2026.01.02",
-      "dosya_surumu": "1.0.0",
+      "dosya_surumu": "1.2.0",
       "onceki": "2026.01.01",
       "guncelleme": "2026-01-02"
     },
@@ -81,28 +81,19 @@
         "karar_sayisi": "2007/13033",
         "resmi_gazete": "26786",
         "tarih": "2008-01-12"
-      },
-      {
-        "tur": "genel_teblig",
-        "ad": {
-          "tr": "KDV Genel Uygulama Tebliği",
-          "en": "VAT General Implementation Communiqué"
-        },
-        "resmi_gazete": "29425",
-        "tarih": "2015-07-23"
       }
     ],
     "yayin_durumu": "yayinda",
     "checksum": {
       "algoritma": "sha256",
-      "deger": "1b3072876dad0784613a9b6756a19c46ce9e644af916323845ca26624e35b9a8",
+      "deger": "9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e",
       "kapsam": "kayitlar"
     },
     "uretim": null
   },
   "kayitlar": [
     {
-      "kod": "KDV-01",
+      "kod": "genel",
       "ad_tr": "Genel Oran",
       "ad_en": "Standard Rate",
       "oran": 0.2,
@@ -113,431 +104,283 @@
       "kapsam_en": "All goods and services not covered by special rates"
     },
     {
-      "kod": "KDV-10",
-      "ad_tr": "İndirimli Oran (II Sayılı Liste)",
-      "ad_en": "Reduced Rate (List II)",
-      "oran": 0.1,
-      "kategori": "indirimli",
-      "kanun_dayanagi": "2007/13033 s. BKK eki (II) sayılı liste",
-      "kanun_dayanagi_en": "Council of Ministers Decision No. 2007/13033, List (II)"
-    },
-    {
-      "kod": "KDV-01D",
-      "ad_tr": "Düşük Oran (I Sayılı Liste)",
-      "ad_en": "Low Rate (List I)",
+      "kod": "I",
+      "ad_tr": "I Sayılı Liste (KDV %1)",
+      "ad_en": "List I (VAT 1%)",
       "oran": 0.01,
       "kategori": "indirimli",
       "kanun_dayanagi": "2007/13033 s. BKK eki (I) sayılı liste",
       "kanun_dayanagi_en": "Council of Ministers Decision No. 2007/13033, List (I)"
     },
     {
-      "kod": "KDV-00",
-      "ad_tr": "Sıfır Oran",
-      "ad_en": "Zero Rate",
-      "oran": 0.0,
-      "kategori": "sifir",
-      "kanun_dayanagi": "KDV Kanunu md.11-13",
-      "kanun_dayanagi_en": "VAT Law, Articles 11-13",
-      "kapsam_tr": "İhracat, transit taşımacılık, diplomatik istisnalar",
-      "kapsam_en": "Exports, transit transport, diplomatic exemptions"
-    },
-    {
-      "kod": "KDV-MUAF",
-      "ad_tr": "KDV'den İstisna",
-      "ad_en": "VAT Exempt",
-      "oran": null,
-      "kategori": "istisna",
-      "kanun_dayanagi": "KDV Kanunu md.17",
-      "kanun_dayanagi_en": "VAT Law, Article 17",
-      "kapsam_tr": "Finansal hizmetler, sosyal ve askeri amaçlı teslimler",
-      "kapsam_en": "Financial services, social and military-purpose supplies"
-    }
-  ],
-  "listeler": {
-    "I": {
-      "ad_tr": "I Sayılı Liste (KDV %1)",
-      "ad_en": "List I (VAT 1%)",
-      "kdv_orani": 0.01,
-      "mevzuat": "2007/13033 s. BKK eki (I) sayılı liste",
-      "mevzuat_en": "Council of Ministers Decision No. 2007/13033, List (I)",
-      "kategoriler": [
-        {
-          "kod": "I-A",
-          "ad_tr": "Temel Gıda Maddeleri",
-          "ad_en": "Basic Foodstuffs",
-          "gtip_prefix": [
-            "01",
-            "02",
-            "03",
-            "04",
-            "07",
-            "08",
-            "10",
-            "11"
-          ],
-          "cpc_prefix": [
-            "01",
-            "02",
-            "21",
-            "23",
-            "24"
-          ],
-          "ornekler_tr": [
-            "Ekmek",
-            "Un",
-            "Bulgur",
-            "Pirinç",
-            "Makarna",
-            "Süt",
-            "Yoğurt",
-            "Peynir",
-            "Yumurta",
-            "Taze sebze",
-            "Taze meyve",
-            "Kırmızı et",
-            "Beyaz et",
-            "Balık",
-            "Bakliyat"
-          ],
-          "ornekler_en": [
-            "Bread",
-            "Flour",
-            "Bulgur",
-            "Rice",
-            "Pasta",
-            "Milk",
-            "Yoghurt",
-            "Cheese",
-            "Eggs",
-            "Fresh vegetables",
-            "Fresh fruit",
-            "Red meat",
-            "White meat",
-            "Fish",
-            "Legumes"
-          ]
-        },
-        {
-          "kod": "I-B",
-          "ad_tr": "Kültürel Ürünler",
-          "ad_en": "Cultural Products",
-          "gtip_prefix": [
-            "49"
-          ],
-          "cpc_prefix": [
-            "32"
-          ],
-          "ornekler_tr": [
-            "Kitap",
-            "Dergi",
-            "Gazete",
-            "Broşür"
-          ],
-          "ornekler_en": [
-            "Books",
-            "Magazines",
-            "Newspapers",
-            "Brochures"
-          ]
-        },
-        {
-          "kod": "I-C",
-          "ad_tr": "Eğitim ve Sağlık Hizmetleri",
-          "ad_en": "Education and Health Services",
-          "cpc_prefix": [
-            "92"
-          ],
-          "ornekler_tr": [
-            "Eğitim hizmetleri",
-            "Öğretim hizmetleri"
-          ],
-          "ornekler_en": [
-            "Education services",
-            "Teaching services"
-          ]
-        },
-        {
-          "kod": "I-D",
-          "ad_tr": "Tarımsal Ürün Teslimleri",
-          "ad_en": "Agricultural Product Deliveries",
-          "gtip_prefix": [
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14"
-          ],
-          "cpc_prefix": [
-            "01",
-            "02",
-            "03",
-            "04"
-          ],
-          "ornekler_tr": [
-            "Buğday",
-            "Arpa",
-            "Mısır",
-            "Pamuk",
-            "Tütün",
-            "Şeker pancarı",
-            "Canlı hayvan",
-            "Balık"
-          ],
-          "ornekler_en": [
-            "Wheat",
-            "Barley",
-            "Maize",
-            "Cotton",
-            "Tobacco",
-            "Sugar beet",
-            "Live animals",
-            "Fish"
-          ]
-        },
-        {
-          "kod": "I-E",
-          "ad_tr": "Konut Teslimleri (Net 150 m²'ye kadar, ilk teslim)",
-          "ad_en": "Residential Deliveries (up to 150 m² net, first delivery)",
-          "cpc_prefix": [
-            "53"
-          ],
-          "ornekler_tr": [
-            "Konut",
-            "Daire",
-            "Villa"
-          ],
-          "ornekler_en": [
-            "Housing",
-            "Apartment",
-            "Villa"
-          ]
-        }
-      ]
-    },
-    "II": {
+      "kod": "II",
       "ad_tr": "II Sayılı Liste (KDV %10)",
       "ad_en": "List II (VAT 10%)",
-      "kdv_orani": 0.1,
-      "mevzuat": "2007/13033 s. BKK eki (II) sayılı liste",
-      "mevzuat_en": "Council of Ministers Decision No. 2007/13033, List (II)",
-      "kategoriler": [
-        {
-          "kod": "II-A",
-          "ad_tr": "Tekstil ve Hazır Giyim",
-          "ad_en": "Textiles and Apparel",
-          "gtip_prefix": [
-            "50",
-            "51",
-            "52",
-            "53",
-            "54",
-            "55",
-            "56",
-            "57",
-            "58",
-            "59",
-            "60",
-            "61",
-            "62",
-            "63"
-          ],
-          "cpc_prefix": [
-            "26",
-            "27",
-            "28"
-          ],
-          "ornekler_tr": [
-            "Kumaş",
-            "Gömlek",
-            "Pantolon",
-            "Elbise",
-            "Çorap",
-            "İç giyim",
-            "Ayakkabı",
-            "Deri ürünler"
-          ],
-          "ornekler_en": [
-            "Fabric",
-            "Shirt",
-            "Trousers",
-            "Dress",
-            "Socks",
-            "Underwear",
-            "Footwear",
-            "Leather goods"
-          ]
-        },
-        {
-          "kod": "II-B",
-          "ad_tr": "İşlenmiş Gıda Ürünleri",
-          "ad_en": "Processed Food Products",
-          "gtip_prefix": [
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22"
-          ],
-          "cpc_prefix": [
-            "21",
-            "23",
-            "24"
-          ],
-          "ornekler_tr": [
-            "Konserve",
-            "Dondurulmuş gıda",
-            "İşlenmiş et",
-            "Peynir",
-            "Zeytinyağı",
-            "Şekerleme",
-            "Çikolata"
-          ],
-          "ornekler_en": [
-            "Canned food",
-            "Frozen food",
-            "Processed meat",
-            "Cheese",
-            "Olive oil",
-            "Confectionery",
-            "Chocolate"
-          ]
-        },
-        {
-          "kod": "II-C",
-          "ad_tr": "Mobilya ve Ev Eşyaları",
-          "ad_en": "Furniture and Household Goods",
-          "gtip_prefix": [
-            "94"
-          ],
-          "cpc_prefix": [
-            "38"
-          ],
-          "ornekler_tr": [
-            "Mobilya",
-            "Yatak",
-            "Aydınlatma",
-            "Ev tekstili",
-            "Halı"
-          ],
-          "ornekler_en": [
-            "Furniture",
-            "Beds",
-            "Lighting",
-            "Home textiles",
-            "Carpets"
-          ]
-        },
-        {
-          "kod": "II-D",
-          "ad_tr": "Yiyecek-İçecek Hizmetleri",
-          "ad_en": "Food and Beverage Services",
-          "cpc_prefix": [
-            "63"
-          ],
-          "ornekler_tr": [
-            "Restoran hizmetleri",
-            "Lokanta hizmetleri",
-            "Kafe hizmetleri",
-            "Catering hizmetleri"
-          ],
-          "ornekler_en": [
-            "Restaurant services",
-            "Dining services",
-            "Café services",
-            "Catering services"
-          ]
-        },
-        {
-          "kod": "II-E",
-          "ad_tr": "Konaklama Hizmetleri",
-          "ad_en": "Accommodation Services",
-          "cpc_prefix": [
-            "63"
-          ],
-          "ornekler_tr": [
-            "Otel",
-            "Motel",
-            "Pansiyon",
-            "Tatil köyü",
-            "Kamp alanı"
-          ],
-          "ornekler_en": [
-            "Hotel",
-            "Motel",
-            "Guesthouse",
-            "Holiday village",
-            "Camping site"
-          ]
-        },
-        {
-          "kod": "II-F",
-          "ad_tr": "Sağlık Hizmetleri",
-          "ad_en": "Health Services",
-          "cpc_prefix": [
-            "93"
-          ],
-          "ornekler_tr": [
-            "Özel hastane hizmetleri",
-            "Poliklinik hizmetleri",
-            "Dişçilik hizmetleri"
-          ],
-          "ornekler_en": [
-            "Private hospital services",
-            "Polyclinic services",
-            "Dental services"
-          ]
-        },
-        {
-          "kod": "II-G",
-          "ad_tr": "Ulaştırma Hizmetleri",
-          "ad_en": "Transport Services",
-          "cpc_prefix": [
-            "64",
-            "65"
-          ],
-          "ornekler_tr": [
-            "Yolcu taşımacılığı",
-            "Şehirlerarası otobüs",
-            "Havayolu yolcu taşımacılığı"
-          ],
-          "ornekler_en": [
-            "Passenger transport",
-            "Intercity bus",
-            "Air passenger transport"
-          ]
-        },
-        {
-          "kod": "II-H",
-          "ad_tr": "Eğlence ve Kültür Hizmetleri",
-          "ad_en": "Entertainment and Cultural Services",
-          "cpc_prefix": [
-            "96"
-          ],
-          "ornekler_tr": [
-            "Sinema",
-            "Tiyatro",
-            "Konser",
-            "Müze"
-          ],
-          "ornekler_en": [
-            "Cinema",
-            "Theatre",
-            "Concert",
-            "Museum"
-          ]
-        }
+      "oran": 0.1,
+      "kategori": "indirimli",
+      "kanun_dayanagi": "2007/13033 s. BKK eki (II) sayılı liste",
+      "kanun_dayanagi_en": "Council of Ministers Decision No. 2007/13033, List (II)"
+    },
+    {
+      "kod": "sifir",
+      "ad_tr": "Sıfır Oran ve İstisnalar",
+      "ad_en": "Zero Rate and Exemptions",
+      "oran": 0.0,
+      "kategori": "sifir",
+      "kanun_dayanagi": "KDV Kanunu md.11-13, md.17",
+      "kanun_dayanagi_en": "VAT Law, Articles 11-13, 17",
+      "kapsam_tr": "İhracat, transit taşımacılık, diplomatik, finansal ve sosyal istisnalar",
+      "kapsam_en": "Exports, transit transport, diplomatic, financial and social exemptions"
+    }
+  ],
+  "kategoriler": [
+    {
+      "kod": "I-A",
+      "liste": "I",
+      "ad_tr": "Temel Gıda Maddeleri",
+      "ad_en": "Basic Foodstuffs",
+      "ornekler_tr": [
+        "Ekmek",
+        "Un",
+        "Bulgur",
+        "Pirinç",
+        "Makarna",
+        "Süt",
+        "Yoğurt",
+        "Peynir",
+        "Yumurta",
+        "Taze sebze",
+        "Taze meyve",
+        "Kırmızı et",
+        "Beyaz et",
+        "Balık",
+        "Bakliyat"
+      ],
+      "ornekler_en": [
+        "Bread",
+        "Flour",
+        "Bulgur",
+        "Rice",
+        "Pasta",
+        "Milk",
+        "Yoghurt",
+        "Cheese",
+        "Eggs",
+        "Fresh vegetables",
+        "Fresh fruit",
+        "Red meat",
+        "White meat",
+        "Fish",
+        "Legumes"
+      ]
+    },
+    {
+      "kod": "I-B",
+      "liste": "I",
+      "ad_tr": "Kültürel Ürünler (Yayınlar)",
+      "ad_en": "Cultural Products (Publications)",
+      "ornekler_tr": [
+        "Kitap",
+        "Dergi",
+        "Gazete",
+        "Broşür"
+      ],
+      "ornekler_en": [
+        "Books",
+        "Magazines",
+        "Newspapers",
+        "Brochures"
+      ]
+    },
+    {
+      "kod": "I-D",
+      "liste": "I",
+      "ad_tr": "Tarımsal Ürün Teslimleri (Toptan ve hammadde)",
+      "ad_en": "Agricultural Product Deliveries",
+      "ornekler_tr": [
+        "Buğday",
+        "Arpa",
+        "Mısır",
+        "Pamuk",
+        "Tütün",
+        "Şeker pancarı",
+        "Canlı hayvan"
+      ],
+      "ornekler_en": [
+        "Wheat",
+        "Barley",
+        "Maize",
+        "Cotton",
+        "Tobacco",
+        "Sugar beet",
+        "Live animals"
+      ]
+    },
+    {
+      "kod": "I-E",
+      "liste": "I",
+      "ad_tr": "Konut Teslimleri (Net 150 m²'ye kadar, ilk teslim)",
+      "ad_en": "Residential Deliveries (up to 150 m² net, first delivery)",
+      "ornekler_tr": [
+        "Konut",
+        "Daire"
+      ],
+      "ornekler_en": [
+        "Housing",
+        "Apartment"
+      ]
+    },
+    {
+      "kod": "II-A",
+      "liste": "II",
+      "ad_tr": "Tekstil ve Hazır Giyim",
+      "ad_en": "Textiles and Apparel",
+      "ornekler_tr": [
+        "Kumaş",
+        "Gömlek",
+        "Pantolon",
+        "Elbise",
+        "Çorap",
+        "İç giyim",
+        "Ayakkabı"
+      ],
+      "ornekler_en": [
+        "Fabric",
+        "Shirt",
+        "Trousers",
+        "Dress",
+        "Socks",
+        "Underwear",
+        "Footwear"
+      ]
+    },
+    {
+      "kod": "II-B",
+      "liste": "II",
+      "ad_tr": "İşlenmiş Gıda Ürünleri (Lüks/İstisnai Olmayan)",
+      "ad_en": "Processed Food Products",
+      "ornekler_tr": [
+        "Konserve",
+        "Dondurulmuş gıda",
+        "İşlenmiş et",
+        "Zeytinyağı",
+        "Şekerleme",
+        "Çikolata"
+      ],
+      "ornekler_en": [
+        "Canned food",
+        "Frozen food",
+        "Processed meat",
+        "Olive oil",
+        "Confectionery",
+        "Chocolate"
+      ]
+    },
+    {
+      "kod": "II-C",
+      "liste": "II",
+      "ad_tr": "Mobilya ve Ev Eşyaları",
+      "ad_en": "Furniture and Household Goods",
+      "ornekler_tr": [
+        "Mobilya",
+        "Yatak",
+        "Aydınlatma",
+        "Ev tekstili",
+        "Halı"
+      ],
+      "ornekler_en": [
+        "Furniture",
+        "Beds",
+        "Lighting",
+        "Home textiles",
+        "Carpets"
+      ]
+    },
+    {
+      "kod": "II-D",
+      "liste": "II",
+      "ad_tr": "Yiyecek-İçecek Hizmetleri",
+      "ad_en": "Food and Beverage Services",
+      "ornekler_tr": [
+        "Restoran hizmetleri",
+        "Lokanta hizmetleri",
+        "Kafe hizmetleri",
+        "Catering hizmetleri"
+      ],
+      "ornekler_en": [
+        "Restaurant services",
+        "Dining services",
+        "Café services",
+        "Catering services"
+      ]
+    },
+    {
+      "kod": "II-E",
+      "liste": "II",
+      "ad_tr": "Konaklama Hizmetleri",
+      "ad_en": "Accommodation Services",
+      "ornekler_tr": [
+        "Otel",
+        "Motel",
+        "Pansiyon",
+        "Tatil köyü"
+      ],
+      "ornekler_en": [
+        "Hotel",
+        "Motel",
+        "Guesthouse",
+        "Holiday village"
+      ]
+    },
+    {
+      "kod": "II-F",
+      "liste": "II",
+      "ad_tr": "Sağlık Hizmetleri",
+      "ad_en": "Health Services",
+      "ornekler_tr": [
+        "Özel hastane hizmetleri",
+        "Poliklinik hizmetleri",
+        "Dişçilik hizmetleri"
+      ],
+      "ornekler_en": [
+        "Private hospital services",
+        "Polyclinic services",
+        "Dental services"
+      ]
+    },
+    {
+      "kod": "II-G",
+      "liste": "II",
+      "ad_tr": "Eğitim ve Öğretim Hizmetleri",
+      "ad_en": "Education Services",
+      "ornekler_tr": [
+        "Özel okul hizmetleri",
+        "Kurs ve üniversite eğitim hizmetleri"
+      ],
+      "ornekler_en": [
+        "Private school services",
+        "Course and university education services"
+      ]
+    },
+    {
+      "kod": "II-H",
+      "liste": "II",
+      "ad_tr": "Ulaştırma ve Kültür Hizmetleri",
+      "ad_en": "Transport and Cultural Services",
+      "ornekler_tr": [
+        "Yolcu taşımacılığı",
+        "Sinema",
+        "Tiyatro",
+        "Konser",
+        "Müze"
+      ],
+      "ornekler_en": [
+        "Passenger transport",
+        "Cinema",
+        "Theatre",
+        "Concert",
+        "Museum"
       ]
     }
-  }
+  ]
 }

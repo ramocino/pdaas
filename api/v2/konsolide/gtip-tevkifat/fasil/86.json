@@ -1,0 +1,446 @@
+{
+  "meta": {
+    "schema_surumu": "2.0.0",
+    "servis": {
+      "kod": "gtip-tevkifat",
+      "ad": {
+        "tr": "GTİP Tevkifat Eşleşmesi",
+        "en": "GTIP Withholding Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:7aa227c89cd8bb208b1d76c635451e395fb4bb40a195527ab998364e94c1ddef"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T13:37:51.711552+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "86",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "860110000000",
+      "tanim_tr": "Elektrik enerjisini dışarıdan alan lokomotifler",
+      "tanim_en": "Locomotives that receive electrical energy from an external source.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860120000000",
+      "tanim_tr": "Elektrik akümülatörlü lokomotifler",
+      "tanim_en": "Electric battery locomotives",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860210000000",
+      "tanim_tr": "Dizel elektrikli lokomotifler",
+      "tanim_en": "Diesel-electric locomotives",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860290000011",
+      "tanim_tr": "Dizel motorlu lokomotifler",
+      "tanim_en": "Diesel-powered locomotives",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860290000012",
+      "tanim_tr": "Buharlı lokomotifler",
+      "tanim_en": "Steam locomotives",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860290000013",
+      "tanim_tr": "Lokomotif tenderler",
+      "tanim_en": "Locomotive tenders",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860290000019",
+      "tanim_tr": "Diğer lokomotifler",
+      "tanim_en": "Other locomotives",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860310000000",
+      "tanim_tr": "Elektrik enerjisini dışarıdan alan kendinden hareketli demiryolu veya tramvay vagonları",
+      "tanim_en": "Self-propelled railway or tramway wagons that receive electrical energy from an external source.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860390000000",
+      "tanim_tr": "Kendinden hareketli diğer demiryolu veya tramvay vagonları",
+      "tanim_en": "Other self-propelled railway or tramway wagons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860400000011",
+      "tanim_tr": "Atölye vagonları",
+      "tanim_en": "Workshop wagons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860400000012",
+      "tanim_tr": "Vinçli vagonlar",
+      "tanim_en": "Crane-equipped wagons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860400000013",
+      "tanim_tr": "Balast sıkıştırıcılarıyla donatılmış vagonlar",
+      "tanim_en": "Wagons equipped with ballast compactors",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860400000014",
+      "tanim_tr": "Hat döşeyiciler",
+      "tanim_en": "Line Layers",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860400000015",
+      "tanim_tr": "Motorlu drezinler",
+      "tanim_en": "Motorized trailers",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860400000016",
+      "tanim_tr": "Motorsuz drezinler",
+      "tanim_en": "Non-motorized trailers",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860400000017",
+      "tanim_tr": "Demiryolları için kar küreme makineleri",
+      "tanim_en": "Snowplows for railways",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860400000019",
+      "tanim_tr": "Demiryolu veya tramvayların bakım veya servisine ait diğer taşıtlar",
+      "tanim_en": "Other vehicles used for the maintenance or servicing of railways or trams.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860500000011",
+      "tanim_tr": "Kendinden hareketli olmayan yolcu vagonları",
+      "tanim_en": "Non-self-propelled passenger carriages",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860500000019",
+      "tanim_tr": "Kendinden hareketli olmayan demiryolu bagaj furgonları, posta vagonları ve diğer özel amaçlı demiryolu ve tramvay vagonları",
+      "tanim_en": "Non-self-propelled railway baggage vans, mail wagons and other special purpose railway and tramway wagons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860610000000",
+      "tanim_tr": "Kendinden hareketli olmayan, yük taşımaya mahsus sarnıçlı vagonlar ve benzerleri",
+      "tanim_en": "Non-self-propelled tank wagons and similar vehicles used for transporting goods.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860630000000",
+      "tanim_tr": "Kendinden hareketli olmayan, yük taşımaya mahsus, kendinden boşaltma tertibatlı vagonlar",
+      "tanim_en": "Non-self-propelled, freight wagons equipped with self-unloading devices.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860691100000",
+      "tanim_tr": "Kendinden hareketli olmayan, yüksek radyoaktif maddelerin taşınması için özel olarak yapılmış vagonlar",
+      "tanim_en": "Non-self-propelled wagons specially designed for transporting highly radioactive materials.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860691800011",
+      "tanim_tr": "Kendinden hareketli olmayan yük taşımaya mahsus örtülü veya kapalı izoterm vagonlar",
+      "tanim_en": "Covered or enclosed isotherm wagons for transporting non-self-propelled cargo.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860691800012",
+      "tanim_tr": "Kendinden hareketli olmayan yük taşımaya mahsus örtülü veya kapalı frigorifik vagonlar",
+      "tanim_en": "Covered or enclosed refrigerated wagons designed for transporting goods that are not self-propelled.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860691800019",
+      "tanim_tr": "Kendinden hareketli olmayan yük taşımaya mahsus örtülü veya kapalı diğer vagonlar",
+      "tanim_en": "Other covered or enclosed wagons for transporting goods that are not self-propelled.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860692000000",
+      "tanim_tr": "Kendinden hareketli olmayan, yük taşımaya mahsus açık vagonlar; sabit kenarlı olup yüksekliği > 60 cm olanlar",
+      "tanim_en": "Open wagons for transporting goods, not self-propelled; with fixed sides and a height > 60 cm.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860699000000",
+      "tanim_tr": "Kendinden hareketli olmayan, yük taşımaya mahsus diğer demiryolu veya tramvay vagonları",
+      "tanim_en": "Other railway or tramway wagons that are not self-propelled and are intended for transporting goods.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860711000000",
+      "tanim_tr": "Çekici bojiler ve bissel bojiler",
+      "tanim_en": "Attractive bogies and bissel bogies",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860712000000",
+      "tanim_tr": "Diğer bojiler ve bissel bojiler",
+      "tanim_en": "Other bogies and bissel bogies",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860719100000",
+      "tanim_tr": "Demiryolu taşıtları veya tramvaylar için dingiller (monte edilmiş veya edilmemiş), tekerlekler ve bunların aksam ve parçaları",
+      "tanim_en": "Axles (mounted or unmounted), wheels and their parts and accessories for railway vehicles or trams.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860719900000",
+      "tanim_tr": "Demiryolu taşıtları veya tramvaylar için bojiler, bissel bojiler ve benzerlerinin aksam ve parçaları",
+      "tanim_en": "Bogie, biscuit bogies and similar parts and accessories for railway vehicles or trams.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860721100000",
+      "tanim_tr": "Demiryolu taşıtları veya tramvayları için havalı frenler ve bunların aksam ve parçaları; demir döküm ve çelik dökümden olanlar",
+      "tanim_en": "Air brakes and their parts and accessories for railway vehicles or trams; those made of cast iron and cast steel.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860721900000",
+      "tanim_tr": "Demiryolu taşıtları veya tramvayları için havalı frenler ve bunların aksam ve parçaları; dökme demir ve çelik dökümden olanlar HARİÇ",
+      "tanim_en": "Air brakes and their parts and accessories for railway vehicles or trams; EXCEPT those made of cast iron and steel casting.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860729000000",
+      "tanim_tr": "Demiryolu taşıtları veya tramvayları için diğer frenler ve bunların aksam ve parçaları",
+      "tanim_en": "Other brakes and their parts and accessories for railway vehicles or trams.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860730000000",
+      "tanim_tr": "Demiryolu taşıtları veya tramvayları için cer kancaları, diğer koşum takımları, müsademe tamponları ve bunların aksam ve parçaları",
+      "tanim_en": "Traction hooks, other harnesses, collision buffers and their parts and accessories for railway vehicles or trams.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860791100000",
+      "tanim_tr": "Lokomotiflere ait dingil kutuları ve bunların aksam ve parçaları",
+      "tanim_en": "Axle boxes and their components and parts for locomotives.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860791900000",
+      "tanim_tr": "Lokomotiflere ait diğer aksam ve parçalar",
+      "tanim_en": "Other components and parts of locomotives",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860799100000",
+      "tanim_tr": "Demiryolu taşıtlarının veya tramvayların dingil kutuları ve bunların aksam ve parçaları; lokomotiflere ait olanlar HARİÇ",
+      "tanim_en": "Axle boxes and parts thereof for railway vehicles or trams; EXCEPT those belonging to locomotives.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860799800000",
+      "tanim_tr": "Demiryolu taşıtları veya tramvaylar için diğer aksam ve parçalar",
+      "tanim_en": "Other parts and accessories for railway vehicles or trams.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860800001000",
+      "tanim_tr": "Demiryolu/tramvay hatları için sabit malzeme ve demiryolu, karayolu, liman vb. için işaret, emniyet/trafik kontrol-kumanda cihazları; elektrik motorlu",
+      "tanim_en": "Fixed equipment for railway/tram lines and signs, safety/traffic control devices for railways, roads, ports, etc.; electric motorized.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860800009000",
+      "tanim_tr": "Demiryolu/tramvay hatları için sabit diğer malzeme ve demiryolu, karayolu, liman vb. için diğer işaret, emniyet/trafik kontrol-kumanda cihaz ve aksamı",
+      "tanim_en": "Other fixed materials for railway/tram lines and other signs, safety/traffic control devices and components for railways, roads, ports, etc.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860900100000",
+      "tanim_tr": "Radyoaktif maddelerin taşınmasında kullanılan radyasyondan korunmak için kurşunla kaplanmış konteynırlar (EURATOM)",
+      "tanim_en": "Lead-lined containers used for radiation protection when transporting radioactive materials (EURATOM)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "860900900000",
+      "tanim_tr": "Bir veya daha fazla taşıma şekline göre özel olarak yapılmış ve donatılmış diğer konteynerler",
+      "tanim_en": "Other containers specifically designed and equipped for one or more modes of transport.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    }
+  ]
+}

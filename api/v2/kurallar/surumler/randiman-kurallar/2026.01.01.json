@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "schema_surumu": "2.0.0",
+    "servis": {
+      "kod": "randiman-kurallar",
+      "ad": {
+        "tr": "Randıman Eşleme Kuralları",
+        "en": "Yield Mapping Rules"
+      }
+    },
+    "katman": "kurallar",
+    "yapi": {
+      "tip": "kural-seti",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.01.01",
+    "guncelleme": "2026-01-01",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": true,
+      "baslangic": "2026-01-01",
+      "bitis": "2026-12-31"
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-otv-randiman",
+        "ad": {
+          "tr": "ÖTV Genel Tebliği — Randıman Oranları",
+          "en": "SCT General Communiqué — Yield Rates"
+        },
+        "tur": "genel_teblig",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu (md. 45)",
+          "en": "Special Consumption Tax Law No. 4760 (Art. 45)"
+        },
+        "madde": "45",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "checksum": "sha256:a79e0c4ed7da1df61a876ebc6685f761d1f2ebd5beae29e1a422b30159751fa1"
+  },
+  "gruplar": {
+    "gida_imalati": {
+      "ad_tr": "Gıda İmalatı",
+      "ad_en": "Food Manufacturing"
+    },
+    "tekstil": {
+      "ad_tr": "Tekstil",
+      "ad_en": "Textile"
+    },
+    "enerji": {
+      "ad_tr": "Enerji / Rafinasyon",
+      "ad_en": "Energy / Refining"
+    },
+    "metalurji": {
+      "ad_tr": "Metalurji",
+      "ad_en": "Metallurgy"
+    }
+  },
+  "kurallar": [
+    {
+      "kod": "gtip-bugday-un",
+      "grup": "gida_imalati",
+      "randiman_kodu": "bugday_un",
+      "oncelik": 50,
+      "girdi_prefixler": [
+        "1001"
+      ],
+      "cikti_prefixler": [
+        "1101"
+      ],
+      "aciklama_tr": "GTİP 1001 (buğday) → GTİP 1101 (buğday unu), randıman %78",
+      "aciklama_en": "GTIP 1001 (wheat) → GTIP 1101 (wheat flour), yield 78%"
+    },
+    {
+      "kod": "gtip-aycicek-yagi",
+      "grup": "gida_imalati",
+      "randiman_kodu": "aycicek_yagi",
+      "oncelik": 50,
+      "girdi_prefixler": [
+        "1206"
+      ],
+      "cikti_prefixler": [
+        "1512"
+      ],
+      "aciklama_tr": "GTİP 1206 (ayçiçeği tohumu) → GTİP 1512 (ayçiçek yağı), randıman %35",
+      "aciklama_en": "GTIP 1206 (sunflower seed) → GTIP 1512 (sunflower oil), yield 35%"
+    },
+    {
+      "kod": "gtip-seker-pancar",
+      "grup": "gida_imalati",
+      "randiman_kodu": "seker_pancar",
+      "oncelik": 50,
+      "girdi_prefixler": [
+        "1212"
+      ],
+      "cikti_prefixler": [
+        "1701"
+      ],
+      "aciklama_tr": "GTİP 1212 (şeker pancarı) → GTİP 1701 (şeker), randıman %16",
+      "aciklama_en": "GTIP 1212 (sugar beet) → GTIP 1701 (sugar), yield 16%"
+    },
+    {
+      "kod": "gtip-domates-salca",
+      "grup": "gida_imalati",
+      "randiman_kodu": "domates_salca",
+      "oncelik": 50,
+      "girdi_prefixler": [
+        "0702"
+      ],
+      "cikti_prefixler": [
+        "2002"
+      ],
+      "aciklama_tr": "GTİP 0702 (domates) → GTİP 2002 (salça), randıman %7",
+      "aciklama_en": "GTIP 0702 (tomato) → GTIP 2002 (tomato paste), yield 7%"
+    },
+    {
+      "kod": "gtip-ham-petrol-benzin",
+      "grup": "enerji",
+      "randiman_kodu": "ham_petrol_benzin",
+      "oncelik": 50,
+      "girdi_prefixler": [
+        "2709"
+      ],
+      "cikti_prefixler": [
+        "271012"
+      ],
+      "aciklama_tr": "GTİP 2709 (ham petrol) → GTİP 2710.12 (benzin), randıman %45",
+      "aciklama_en": "GTIP 2709 (crude oil) → GTIP 2710.12 (gasoline), yield 45%"
+    },
+    {
+      "kod": "gtip-pamuk-iplik",
+      "grup": "tekstil",
+      "randiman_kodu": "pamuk_iplik",
+      "oncelik": 50,
+      "girdi_prefixler": [
+        "5201"
+      ],
+      "cikti_prefixler": [
+        "5205"
+      ],
+      "aciklama_tr": "GTİP 5201 (pamuk) → GTİP 5205 (pamuk ipliği), randıman %85",
+      "aciklama_en": "GTIP 5201 (cotton) → GTIP 5205 (cotton yarn), yield 85%"
+    },
+    {
+      "kod": "gtip-tas-komur-kok",
+      "grup": "enerji",
+      "randiman_kodu": "tas-komur-kok",
+      "oncelik": 50,
+      "girdi_prefixler": [
+        "2701"
+      ],
+      "cikti_prefixler": [
+        "2704"
+      ],
+      "aciklama_tr": "GTİP 2701 (taş kömürü) → GTİP 2704 (kok kömürü), randıman %72",
+      "aciklama_en": "GTIP 2701 (bituminous coal) → GTIP 2704 (coke), yield 72%"
+    },
+    {
+      "kod": "gtip-demir-cevheri-pik",
+      "grup": "metalurji",
+      "randiman_kodu": "demir-cevheri-pik",
+      "oncelik": 50,
+      "girdi_prefixler": [
+        "2601"
+      ],
+      "cikti_prefixler": [
+        "7201"
+      ],
+      "aciklama_tr": "GTİP 2601 (demir cevheri) → GTİP 7201 (pik demir), randıman %58",
+      "aciklama_en": "GTIP 2601 (iron ore) → GTIP 7201 (pig iron), yield 58%"
+    }
+  ]
+}

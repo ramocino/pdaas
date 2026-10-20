@@ -1,0 +1,754 @@
+{
+  "meta": {
+    "schema_surumu": "2.0.0",
+    "servis": {
+      "kod": "gtip-kdv",
+      "ad": {
+        "tr": "GTİP KDV Eşleşmesi",
+        "en": "GTIP VAT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:7aa227c89cd8bb208b1d76c635451e395fb4bb40a195527ab998364e94c1ddef"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T13:37:51.711552+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "58",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "580110000000",
+      "tanim_tr": "Dokunmuş kadife, pelüş ve tırtıl mensucat; yünden veya ince hayvan kıllarından",
+      "tanim_en": "Woven velvet, plush and caterpillar fabrics; made from wool or fine animal hair.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580121001000",
+      "tanim_tr": "Kesilmemiş atkı iplikli kadife ve pelüş; pamuktan, fasonesiz",
+      "tanim_en": "Velvet and plush made from uncut weft yarn; cotton, unpatterned.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580121002000",
+      "tanim_tr": "Kesilmemiş atkı iplikli kadife ve pelüş; pamuktan, fasoneli",
+      "tanim_en": "Velvet and plush made from uncut weft yarn; cotton, tailored.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580122000000",
+      "tanim_tr": "Kesilmiş atkı iplikli (fitilli) kadife ve pelüş; pamuktan",
+      "tanim_en": "Cut weft yarn (corduroy) velvet and plush; made of cotton.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580123000000",
+      "tanim_tr": "Atkı iplikli diğer kadife ve pelüş; pamuktan",
+      "tanim_en": "Other velvet and plush fabrics made from warp yarn; made of cotton.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580126000000",
+      "tanim_tr": "Tırtıl mensucat; pamuktan",
+      "tanim_en": "Caterpillar textiles; made from cotton.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580127000000",
+      "tanim_tr": "Çözgü iplikli kadife ve pelüş; pamuktan",
+      "tanim_en": "Warp yarn velvet and plush; made of cotton.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580131000000",
+      "tanim_tr": "Kesilmemiş atkı iplikli kadife ve pelüş; sentetik ve suni liflerden",
+      "tanim_en": "Velvet and plush made from uncut weft yarns; synthetic and artificial fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580132000000",
+      "tanim_tr": "Kesilmiş atkı iplikli (fitilli) kadife ve pelüş; sentetik ve suni liflerden",
+      "tanim_en": "Cut weft yarn (corduroy) velvet and plush; made from synthetic and artificial fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580133000000",
+      "tanim_tr": "Atkı iplikli diğer kadife ve pelüş; sentetik ve suni liflerden",
+      "tanim_en": "Other velvet and plush fabrics made from warp yarn; synthetic and artificial fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580136000000",
+      "tanim_tr": "Tırtıl mensucat; sentetik ve suni liflerden",
+      "tanim_en": "Caterpillar fabrics; made from synthetic and artificial fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580137000000",
+      "tanim_tr": "Çözgü iplikli kadife ve pelüş; sentetik ve suni liflerden",
+      "tanim_en": "Warp yarn velvet and plush; made from synthetic and artificial fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580190100000",
+      "tanim_tr": "Dokunmuş kadife, pelüş ve tırtıl mensucat; ketenden",
+      "tanim_en": "Woven velvet, plush and silk fabrics; linen",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580190900011",
+      "tanim_tr": "Dokunmuş kadife, pelüş ve tırtıl mensucat; ipekten, buretten ve diğer ipek döküntülerinden",
+      "tanim_en": "Woven velvet, plush and catkin fabrics; made from silk, burrito and other silk wastes.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580190900012",
+      "tanim_tr": "Dokunmuş kadife, pelüş ve tırtıl mensucat; ramiden",
+      "tanim_en": "Woven velvet, plush and caterpillar fabrics; ramie.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580190900019",
+      "tanim_tr": "Dokunmuş kadife, pelüş ve tırtıl mensucat; dokumaya elverişli diğer maddelerden",
+      "tanim_en": "Woven velvet, plush and caterpillar fabrics; other materials suitable for weaving.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580210000000",
+      "tanim_tr": "Pamuktan havlu cinsi bukleli mensucat (58.06 pozisyonundaki kordelalar hariç)",
+      "tanim_en": "Terry cloth fabrics of cotton (excluding ribbons of heading 58.06)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580220000000",
+      "tanim_tr": "Havlu cinsi bukleli mensucat (58.06 pozisyonundaki kordelalar hariç); dokumaya elverişli maddelerden",
+      "tanim_en": "Terry cloth fabrics (excluding ribbons of heading 58.06); made from textile materials.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580230000000",
+      "tanim_tr": "Tufte edilmiş mensucat (57.03 pozisyonundaki eşyalar hariç)",
+      "tanim_en": "Tufted textiles (excluding items of heading 57.03)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580300100000",
+      "tanim_tr": "Gaz mensucat (58.06 pozisyonundaki kordelalar hariç); pamuktan",
+      "tanim_en": "Gauze fabrics (excluding ribbons of heading 58.06); made of cotton",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580300300000",
+      "tanim_tr": "Gaz mensucat (58.06 pozisyonundaki kordelalar hariç); ipekten ve ipek döküntüsünden",
+      "tanim_en": "Gauze fabrics (excluding ribbons of heading 58.06); of silk and silk waste",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580300901000",
+      "tanim_tr": "Gaz mensucat (58.06 pozisyonundaki kordelalar hariç); sentetik ve suni liflerden",
+      "tanim_en": "Gauze fabrics (excluding ribbons of heading 58.06); made from synthetic and artificial fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580300902000",
+      "tanim_tr": "Gaz mensucat (58.06 pozisyonundaki kordelalar hariç); keten veya ramiden",
+      "tanim_en": "Gauze fabrics (excluding ribbons of heading 58.06); linen or ramie.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580300903000",
+      "tanim_tr": "Gaz mensucat (58.06 pozisyonundaki kordelalar hariç); jütten",
+      "tanim_en": "Gauze fabrics (excluding ribbons of heading 58.06); jute",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580300904000",
+      "tanim_tr": "Gaz mensucat (58.06 pozisyonundaki kordelalar hariç); dokumaya elverişli diğer bitkisel liflerden",
+      "tanim_en": "Gauze fabrics (excluding ribbons of heading 58.06); from other textile vegetable fibers",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580300905000",
+      "tanim_tr": "Gaz mensucat (58.06 pozisyonundaki kordelalar hariç); kağıt ipliğinden",
+      "tanim_en": "Gauze fabrics (excluding ribbons of heading 58.06); made from paper yarn.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580300909000",
+      "tanim_tr": "Gaz mensucat (58.06 pozisyonundaki kordelalar hariç); diğer maddelerden",
+      "tanim_en": "Gauze fabrics (excluding ribbons of heading 58.06); other materials",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580410100000",
+      "tanim_tr": "Tüller ve diğer ağ mensucat (düz olanlar); dokunmuş, örme veya kroşe HARİÇ",
+      "tanim_en": "Tulle and other mesh fabrics (plain ones); excluding woven, knitted or crocheted.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580410901000",
+      "tanim_tr": "Tabii ipekten, suni liflerden veya pamuktan fasoneli bobino tüller; dokunmuş, örme veya kroşe HARİÇ",
+      "tanim_en": "Naturally, silk, synthetic fiber or cotton bobbin tulles; woven, knitted or crocheted, EXCEPT.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580410909000",
+      "tanim_tr": "Diğer fasoneli tüller ve ağ mensucat; dokunmuş, örme veya kroşe HARİÇ",
+      "tanim_en": "Other woven, knitted or crocheted tulles and nets, EXCEPT.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580421001000",
+      "tanim_tr": "Suni liflerden makina işi dantela (60.02 ila 60.06 pozisyonlarındaki mensucat hariç)",
+      "tanim_en": "Machine-made lace of synthetic fibers (excluding textiles in headings 60.02 to 60.06)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580421009000",
+      "tanim_tr": "Sentetik liflerden makina işi dantela (60.02 ila 60.06 pozisyonlarındaki mensucat hariç)",
+      "tanim_en": "Machine-made lace of synthetic fibers (excluding textiles in headings 60.02 to 60.06)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580429001000",
+      "tanim_tr": "Tabii ipekten makina işi dantela (60.02 ila 60.06 pozisyonlarındaki mensucat hariç)",
+      "tanim_en": "Machine-made lace of natural silk (excluding textiles in headings 60.02 to 60.06)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580429009011",
+      "tanim_tr": "Pamuktan makina işi dantela (60.02 ila 60.06 pozisyonlarındaki mensucat hariç)",
+      "tanim_en": "Machine-made lace of cotton (excluding textiles in headings 60.02 to 60.06)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580429009019",
+      "tanim_tr": "Dokumaya elverişli diğer maddelerden makina işi dantela (60.02 ila 60.06 pozisyonlarındaki mensucat hariç)",
+      "tanim_en": "Machine-made lace from other textile materials (excluding textiles in headings 60.02 to 60.06)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580430001011",
+      "tanim_tr": "Tabii ipekten el işi dantela (60.02 ila 60.06 pozisyonlarındaki mensucat hariç)",
+      "tanim_en": "Hand-crafted lace of natural silk (excluding textiles in headings 60.02 to 60.06)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580430001012",
+      "tanim_tr": "Suni liflerden el işi dantela (60.02 ila 60.06 pozisyonlarındaki mensucat hariç)",
+      "tanim_en": "Hand-made lace of artificial fibers (excluding textiles in headings 60.02 to 60.06)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580430009011",
+      "tanim_tr": "Pamuktan el işi dantela (60.02 ila 60.06 pozisyonlarındaki mensucat hariç)",
+      "tanim_en": "Hand-made lace of cotton (excluding textiles in headings 60.02 to 60.06)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580430009019",
+      "tanim_tr": "Dokumaya elverişli diğer maddelerden el işi dantela (60.02 ila 60.06 pozisyonlarındaki mensucat hariç)",
+      "tanim_en": "Hand-made lace from other textile materials (excluding textiles in headings 60.02 to 60.06)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580500000000",
+      "tanim_tr": "El ile dokunmuş duvar halıları (Gobelins, Flanders, Aubusson, Beauvais vb.) ile iğne işlemesi duvar halıları",
+      "tanim_en": "Hand-woven tapestries (Gobelins, Flanders, Aubusson, Beauvais, etc.) and needlepoint tapestries.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580610000011",
+      "tanim_tr": "Kordela; sentetik ve suni liflerden veya pamuktan yapılmış kadife, pelüş ve tırtıl mensucattan",
+      "tanim_en": "Ribbons are made from synthetic and artificial fibers, or from cotton, velvet, plush, and burlap fabrics.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580610000012",
+      "tanim_tr": "Kordela; ipekten, buretten veya diğer ipek döküntülerinden yapılmış kadife, pelüş ve tırtıl mensucattan",
+      "tanim_en": "Ribbon; velvet, plush and lint fabrics made from silk, burrito or other silk wastes.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580610000019",
+      "tanim_tr": "Kordela; dokumaya elverişli diğer maddelerden yapılmış kadife, pelüş ve tırtıl mensucattan",
+      "tanim_en": "Ribbons are made from velvet, plush, and caterpillar fabrics, as well as other materials suitable for weaving.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580620001000",
+      "tanim_tr": "Kordela; ağırlık itibariyle elastomerik veya kauçuk iplik >= %5, elastiki",
+      "tanim_en": "Ribbon; elastomeric or rubber yarn by weight >= 5%, elastic",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580620009000",
+      "tanim_tr": "Kordela; ağırlık itibariyle elastomerik veya kauçuk iplik >= %5, elastiki olmayan",
+      "tanim_en": "Ribbon; elastomeric or rubber yarn >= 5% by weight, non-elastic",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580631000000",
+      "tanim_tr": "Kordelalar; pamuktan",
+      "tanim_en": "Ribbons are made of cotton.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580632100011",
+      "tanim_tr": "Dar dokuma saten kordelalar; kenarlı olanlar",
+      "tanim_en": "Narrow woven satin ribbons; those with edges.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580632100019",
+      "tanim_tr": "Kordelalar; diğer sentetik ve suni liflerden, kenarlı olanlar",
+      "tanim_en": "Ribbons; those made from other synthetic and artificial fibers, with edges.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580632900011",
+      "tanim_tr": "Cırt bant (kordela); sentetik ve suni liflerden",
+      "tanim_en": "Velcro (or hook-and-loop fasteners); made from synthetic and artificial fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580632900019",
+      "tanim_tr": "Sentetik ve suni liflerden diğer kordelalar",
+      "tanim_en": "Other ribbons made from synthetic and artificial fibers.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580639000011",
+      "tanim_tr": "Kordelalar; jüt ve bitki iç kabuklarının dokumaya elverişli liflerinden",
+      "tanim_en": "Ribbons are made from jute and the woven fibers of plant bark.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580639000019",
+      "tanim_tr": "Kordelalar; dokumaya elverişli diğer maddelerden",
+      "tanim_en": "Ribbons are made from other materials suitable for weaving.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580640000011",
+      "tanim_tr": "Kordelalar (boldükler); paralel hale getirilip yapıştırılmış iplik veya liflerden atkı ipliksiz (jüt ve bitki iç kabuklarının dokunabilir liflerinden)",
+      "tanim_en": "Ribbons (bolduches); made of threads or fibers arranged parallel and glued together, without weft threads (from woven fibers of jute and plant bark).",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580640000019",
+      "tanim_tr": "Kordelalar (boldükler); paralel hale getirilip yapıştırılmış iplik veya liflerden atkı ipliksiz (dokunabilir diğer maddelerden)",
+      "tanim_en": "Ribbons (bolds); made of threads or fibers arranged parallel and glued together, without weft thread (or other woven materials)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580710100000",
+      "tanim_tr": "Etiketler, armalar ve benzeri eşya; dokunmuş, üzerine yazı ve motif dokunmuş, parça, şerit halinde veya şekline ya da ölçüsüne göre kesilmiş",
+      "tanim_en": "Labels, badges and similar items; woven, embroidered with writing and motifs, in pieces, strips or cut to shape or size.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580710900000",
+      "tanim_tr": "Etiketler, armalar ve benzeri eşya; dokunmuş, üzerine yazı ve motif dokunmamış, parça, şerit halinde veya şekline ya da ölçüsüne göre kesilmiş",
+      "tanim_en": "Labels, badges and similar items; woven, unwoven with writing and motifs, in pieces, strips or cut to shape or size.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580790101000",
+      "tanim_tr": "Etiketler, armalar ve benzeri eşya; keçeden, parça, şerit halinde veya şekline ya da ölçüsüne göre kesilmiş",
+      "tanim_en": "Labels, badges and similar items; made of felt, in pieces, strips or cut to size or shape.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580790102000",
+      "tanim_tr": "Etiketler, armalar ve benzeri eşya; dokunmamış diğer maddelerden, parça, şerit halinde veya şekline ya da ölçüsüne göre kesilmiş",
+      "tanim_en": "Labels, badges and similar items; made of other nonwoven materials, in pieces, strips or cut to shape or size.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580790900000",
+      "tanim_tr": "Diğer etiket ve armalar; parça, şerit halinde veya şekline ya da ölçüsüne göre kesilmiş",
+      "tanim_en": "Other labels and badges; in pieces, strips, or cut to shape or size.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580810001000",
+      "tanim_tr": "Parça halinde kordonlar; elastiki olanlar",
+      "tanim_en": "Cords in pieces; those with elasticity",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580810009000",
+      "tanim_tr": "Parça halinde kordonlar; elastiki olanlar HARİÇ",
+      "tanim_en": "Cords in pieces; EXCEPT those with elastic.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580890001000",
+      "tanim_tr": "İşleme yapılmamış şeritçi eşyası, vb. süs eşyası (örme veya kroşe hariç); saçaklar, ponponlar, vb. eşya; elastiki olanlar",
+      "tanim_en": "Unprocessed ribbon goods, etc. ornamental articles (excluding knitted or crocheted); fringes, pom-poms, etc.; those with elasticity.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580890009000",
+      "tanim_tr": "İşleme yapılmamış şeritçi eşyası, vb. süs eşyası (örme veya kroşe hariç); saçaklar, ponponlar, vb. eşya; elastiki olanlar HARİÇ",
+      "tanim_en": "Unprocessed ribbon goods, etc. ornamental articles (excluding knitted or crocheted); fringes, pom-poms, etc.; EXCEPT those with elasticity.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "580900000000",
+      "tanim_tr": "Metal ipliklerden ve metalize ipliklerden dokunmuş mensucat; giyim eşyasında, döşemecilikte vb. işlerde kullanılan",
+      "tanim_en": "Textiles woven from metallic and metallized yarns; used in clothing, upholstery, etc.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581010100000",
+      "tanim_tr": "Görülebilir zemini olmayan işlemeler; parça, şerit veya motif halinde, kıymeti > 35 euro/kg",
+      "tanim_en": "Embroideries without a visible background; in pieces, strips or motifs, value > 35 euros/kg",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581010900000",
+      "tanim_tr": "Görülebilir zemini olmayan işlemeler; parça, şerit veya motif halinde, kıymeti <= 35 euro/kg",
+      "tanim_en": "Embroideries without a visible background; in pieces, strips or motifs, value <= 35 euros/kg",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581091100000",
+      "tanim_tr": "Parça, şerit veya motif halinde diğer işlemeler; pamuktan, kıymeti >17.50 euro/kg.",
+      "tanim_en": "Other embroideries in pieces, strips or motifs; made of cotton, value >17.50 euro/kg.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581091900000",
+      "tanim_tr": "Parça, şerit veya motif halinde diğer işlemeler; pamuktan, kıymeti <=17.50 euro/kg.",
+      "tanim_en": "Other embroideries in the form of pieces, strips or motifs; made of cotton, value <=17.50 euro/kg.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581092100000",
+      "tanim_tr": "Parça, şerit veya motif halinde diğer işlemeler; suni ve sentetik liflerden, kıymeti > 17.50 euro/kg",
+      "tanim_en": "Other embroidery in pieces, strips or motifs; made of artificial and synthetic fibers, value > 17.50 euro/kg",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581092900000",
+      "tanim_tr": "Parça, şerit veya motif halinde diğer işlemeler; suni ve sentetik liflerden, kıymeti <= 17.50 euro/kg",
+      "tanim_en": "Other embroidery in pieces, strips or motifs; made of artificial and synthetic fibers, value <= 17.50 euro/kg",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581099100000",
+      "tanim_tr": "Parça, şerit veya motif halinde diğer işlemeler; dokumaya elverişli diğer maddeden, kıymeti > 17.50 euro/kg",
+      "tanim_en": "Other embroidery in the form of pieces, strips or motifs; of other textile material, value > 17.50 euro/kg",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581099900000",
+      "tanim_tr": "Parça, şerit veya motif halinde diğer işlemeler; dokumaya elverişli diğer maddeden, kıymeti <= 17.50 euro/kg",
+      "tanim_en": "Other embroidery in pieces, strips or motifs; of other textile material, value <= 17.50 euro/kg",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100000100",
+      "tanim_tr": "Kapitoneli mensucat (parça halinde); pamuktan örme tabakaların aralarına dolgu maddesi konularak dikilmesi veya birleştirilmesi ile yapılmış",
+      "tanim_en": "Quilted textiles (in pieces); made by sewing or joining knitted layers of cotton with filling material in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100000500",
+      "tanim_tr": "Kapitoneli mensucat (parça halinde); yün/kıllardan örme tabakaların aralarına dolgu maddesi konularak dikilmesi veya birleştirilmesi ile yapılmış",
+      "tanim_en": "Quilted fabric (in pieces); made by sewing or joining knitted layers of wool/hair with filling material in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100000700",
+      "tanim_tr": "Kapitoneli mensucat (parça halinde); taklit deriden örme tabakaların aralarına dolgu maddesi konularak dikilmesi veya birleştirilmesi ile yapılmış",
+      "tanim_en": "Quilted textiles (in pieces); made by sewing or joining knitted layers of imitation leather with padding in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100000900",
+      "tanim_tr": "Kapitoneli mensucat (parça halinde); diğer maddelerden örme tabakaların aralarına dolgu maddesi konularak dikilmesi veya birleştirilmesi ile yapılmış",
+      "tanim_en": "Quilted fabric (in pieces); made by sewing or joining knitted layers of other materials with filling material in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100001900",
+      "tanim_tr": "Kapitoneli diğer mensucat (parça halinde); örme tabakaların aralarına dolgu maddesi konularak dikilmesi veya birleştirilmesi ile yapılmış",
+      "tanim_en": "Other quilted textiles (in pieces); made by sewing or joining knitted layers with filling material in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100002100",
+      "tanim_tr": "Kapitoneli mensucat (parça halinde); pamuktan ağartılmış/beyazlatılmış tabakaların aralarına dolgu konularak dikilmesi/birleştirilmesi ile yapılmış",
+      "tanim_en": "Quilted fabric (in pieces); made by sewing/joining bleached/whitened cotton layers with filling in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100002900",
+      "tanim_tr": "Kapitoneli mensucat (parça halinde); pamuktan diğer tabakaların aralarına dolgu maddesi konularak dikilmesi veya birleştirilmesi ile yapılmış",
+      "tanim_en": "Quilted fabric (in pieces); made by sewing or joining layers of cotton with filling material in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100003000",
+      "tanim_tr": "Kapitoneli mensucat (parça halinde); sentetik filamentlerden tabakaların aralarına dolgu maddesi konularak dikilmesi veya birleştirilmesi ile yapılmış",
+      "tanim_en": "Quilted fabric (in pieces); made by sewing or joining layers of synthetic filaments with filler material in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100004000",
+      "tanim_tr": "Kapitoneli mensucat (parça halinde); suni filamentlerden tabakaların aralarına dolgu maddesi konularak dikilmesi veya birleştirilmesi ile yapılmış",
+      "tanim_en": "Quilted fabric (in pieces); made by sewing or joining layers of synthetic filaments with filler material in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100009100",
+      "tanim_tr": "Kapitoneli mensucat (parça halinde); yün/kıllardan diğer tabakaların aralarına dolgu maddesi konularak dikilmesi veya birleştirilmesi ile yapılmış",
+      "tanim_en": "Quilted fabric (in pieces); made by sewing or joining layers of wool/hair with filling material in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100009200",
+      "tanim_tr": "Kapitoneli mensucat (parça halinde); taklit deriden diğer tabakaların aralarına dolgu maddesi konularak dikilmesi veya birleştirilmesi ile yapılmış",
+      "tanim_en": "Quilted fabric (in pieces); made by sewing or joining layers of imitation leather with padding in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100009300",
+      "tanim_tr": "Kapitoneli mensucat (parça halinde); diğer maddelerden diğer tabakaların aralarına dolgu maddesi konularak dikilmesi veya birleştirilmesi ile yapılmış",
+      "tanim_en": "Quilted fabric (in pieces); made by sewing or joining layers of other materials together with filler material in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100009500",
+      "tanim_tr": "Kapitoneli mensucat (parça halinde); vatka/keçeden diğer tabakaların aralarına dolgu maddesi konularak dikilmesi veya birleştirilmesi ile yapılmış",
+      "tanim_en": "Quilted textiles (in pieces); made by sewing or joining layers of wadding/felt with padding in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100009600",
+      "tanim_tr": "Kapitoneli mensucat (parça halinde); dokunmamış/örülmemiş diğer tabakaların aralarına dolgu maddesi konularak dikilmesi/birleştirilmesi ile yapılmış",
+      "tanim_en": "Quilted textiles (in pieces); made by sewing/joining together non-woven/non-knitted layers with filler material in between.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "581100009900",
+      "tanim_tr": "Kapitoneli diğer mensucat (parça halinde); diğer tabakaların aralarına dolgu maddesi konularak dikilmesi veya birleştirilmesi ile yapılmış",
+      "tanim_en": "Other quilted textiles (in pieces); made by sewing or joining layers together with filler material in between.",
+      "grup": "genel",
+      "oran": 0.2
+    }
+  ]
+}

@@ -7,7 +7,7 @@ const NAV = [
   { href: 'urunhizmetkarti.html', key: 'nav_urunhizmetkarti' },
   { href: 'personel.html',        key: 'nav_personel' },
   { href: 'muhtasar.html',        key: 'nav_muhtasar' },
-  { href: 'kurator.html',         key: 'nav_curator' },
+  { href: 'konsolide.html',       key: "Konsolide", },
 ];
 
 export function renderLayout({ activePage = 'index.html' } = {}) {

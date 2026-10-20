@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "schema_surumu": "2.0.0",
+    "servis": {
+      "kod": "sgk-sigorta-kollari",
+      "ad": {
+        "tr": "Sigorta Kolları ve Sigortalılık Statüleri",
+        "en": "Insurance Branches and Insured Statuses"
+      }
+    },
+    "katman": "ham",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "sgk",
+      "kapsam": [
+        "sosyal_guvenlik"
+      ]
+    },
+    "surum": "2026.01.01",
+    "guncelleme": "2026-01-01",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "csgb",
+      "ad": {
+        "tr": "T.C. Çalışma ve Sosyal Güvenlik Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Labour and Social Security"
+      },
+      "birim": {
+        "tr": "Sosyal Güvenlik Kurumu",
+        "en": "Social Security Institution"
+      },
+      "kurumlar": [
+        "csgb",
+        "sgk"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "sgk-5510-kanun",
+        "ad": {
+          "tr": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu",
+          "en": "Social Insurance and Universal Health Insurance Law No. 5510"
+        },
+        "tur": "kanun",
+        "kurum_kod": "sgk",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu",
+          "en": "Social Insurance and Universal Health Insurance Law No. 5510"
+        },
+        "madde": "4",
+        "resmi_gazete": "26200",
+        "tarih": "2006-06-16"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4447 sayılı İşsizlik Sigortası Kanunu",
+          "en": "Unemployment Insurance Law No. 4447"
+        },
+        "resmi_gazete": "23441",
+        "tarih": "1999-08-25"
+      }
+    ]
+  },
+  "kayitlar": [
+    {
+      "kod": "4A",
+      "ad_tr": "4/a — Hizmet Akdiyle Çalışanlar (SSK)",
+      "ad_en": "4/a — Insured Persons under Service Contract (SSK)",
+      "tip": "statü",
+      "aciklama_tr": "Bir veya birden fazla işveren tarafından hizmet akdiyle çalıştırılan sigortalılar.",
+      "aciklama_en": "Insured persons employed under a service contract by one or more employers."
+    },
+    {
+      "kod": "4B",
+      "ad_tr": "4/b — Bağımsız Çalışanlar (Bağ-Kur)",
+      "ad_en": "4/b — Self-Employed (Bağ-Kur)",
+      "tip": "statü",
+      "aciklama_tr": "Kendi adına ve hesabına bağımsız çalışanlar ile tarımsal faaliyette bulunanlar.",
+      "aciklama_en": "Self-employed persons working on own name and account, including those in agricultural activity."
+    },
+    {
+      "kod": "4C",
+      "ad_tr": "4/c — Devlet Memurları (Emekli Sandığı)",
+      "ad_en": "4/c — Civil Servants (Emekli Sandığı)",
+      "tip": "statü",
+      "aciklama_tr": "Kamu idarelerinde memur statüsünde çalışanlar ile bunların emeklileri.",
+      "aciklama_en": "Persons working as civil servants in public administrations and their pensioners."
+    },
+    {
+      "kod": "SK-IK",
+      "ad_tr": "İş Kazası ve Meslek Hastalığı Sigortası",
+      "ad_en": "Work Accident and Occupational Disease Insurance",
+      "tip": "kısa_vadeli",
+      "ilgili_status": [
+        "4A",
+        "4B",
+        "4C"
+      ]
+    },
+    {
+      "kod": "SK-HA",
+      "ad_tr": "Hastalık Sigortası",
+      "ad_en": "Sickness Insurance",
+      "tip": "kısa_vadeli",
+      "ilgili_status": [
+        "4A",
+        "4C"
+      ]
+    },
+    {
+      "kod": "SK-AN",
+      "ad_tr": "Analık Sigortası",
+      "ad_en": "Maternity Insurance",
+      "tip": "kısa_vadeli",
+      "ilgili_status": [
+        "4A",
+        "4B",
+        "4C"
+      ]
+    },
+    {
+      "kod": "SK-MYO",
+      "ad_tr": "Malullük, Yaşlılık ve Ölüm Sigortası",
+      "ad_en": "Invalidity, Old-Age and Death Insurance",
+      "tip": "uzun_vadeli",
+      "ilgili_status": [
+        "4A",
+        "4B",
+        "4C"
+      ]
+    },
+    {
+      "kod": "SK-GSS",
+      "ad_tr": "Genel Sağlık Sigortası",
+      "ad_en": "Universal Health Insurance (GSS)",
+      "tip": "sağlık",
+      "ilgili_status": [
+        "4A",
+        "4B",
+        "4C"
+      ]
+    },
+    {
+      "kod": "SK-ISS",
+      "ad_tr": "İşsizlik Sigortası",
+      "ad_en": "Unemployment Insurance",
+      "tip": "işsizlik",
+      "ilgili_status": [
+        "4A"
+      ]
+    }
+  ],
+  "notlar_tr": [
+    "4/a, 4/b, 4/c sigortalılık statüleridir; sigorta kolları ise bu statüler altında sunulan teminat türleridir.",
+    "Kısa vadeli sigorta kolları: iş kazası-meslek hastalığı, hastalık, analık.",
+    "Uzun vadeli sigorta kolları: malullük, yaşlılık ve ölüm.",
+    "İşsizlik sigortası yalnızca 4/a kapsamında zorunludur; 4447 sayılı Kanun ile düzenlenir.",
+    "Genel Sağlık Sigortası (GSS), 5510 sayılı Kanun ile 2008'den itibaren tüm statülerde zorunlu hale gelmiştir."
+  ],
+  "notlar_en": [
+    "4/a, 4/b, 4/c are insured statuses; insurance branches are the coverage types offered under these statuses.",
+    "Short-term insurance branches: work accident-occupational disease, sickness, maternity.",
+    "Long-term insurance branches: invalidity, old-age and death.",
+    "Unemployment insurance is compulsory only under 4/a; regulated by Law No. 4447.",
+    "Universal Health Insurance (GSS) has been compulsory under all statuses since 2008 by Law No. 5510."
+  ]
+}

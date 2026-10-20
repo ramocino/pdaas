@@ -1,0 +1,859 @@
+{
+  "meta": {
+    "schema_surumu": "2.0.0",
+    "servis": {
+      "kod": "gtip-kdv",
+      "ad": {
+        "tr": "GTİP KDV Eşleşmesi",
+        "en": "GTIP VAT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:7aa227c89cd8bb208b1d76c635451e395fb4bb40a195527ab998364e94c1ddef"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T13:37:51.711552+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "01",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "010121000000",
+      "tanim_tr": "Atlar; damızlık olanlar",
+      "tanim_en": "Horses; those intended for breeding",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010129100000",
+      "tanim_tr": "Atlar; kesimlik olanlar",
+      "tanim_en": "Horses; those intended for slaughter.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010129900000",
+      "tanim_tr": "Atlar; damızlık ve kesimlik olanlar HARİÇ",
+      "tanim_en": "Horses; EXCEPT those intended for breeding and slaughter.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010130001000",
+      "tanim_tr": "Eşekler; damızlık olanlar",
+      "tanim_en": "Donkeys; those used for breeding",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010130009000",
+      "tanim_tr": "Eşekler; damızlık olanlar HARİÇ",
+      "tanim_en": "Donkeys; EXCEPT those used for breeding.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010190001000",
+      "tanim_tr": "Katırlar ve bardolar; damızlık olanlar",
+      "tanim_en": "Mules and hinnies; breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010190009000",
+      "tanim_tr": "Katırlar ve bardolar; damızlık olanlar HARİÇ",
+      "tanim_en": "Mules and hinnies; EXCEPT those used for breeding.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010221100000",
+      "tanim_tr": "Düveler (doğurmamış dişi sığırlar); damızlık olanlar",
+      "tanim_en": "Heifers (unbred female cattle); breeding stock",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010221300000",
+      "tanim_tr": "İnekler; damızlık olanlar",
+      "tanim_en": "Cows; those intended for breeding",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010221900000",
+      "tanim_tr": "Sığırlar (düveler ve inekler hariç); damızlık olanlar",
+      "tanim_en": "Cattle (excluding heifers and cows); breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229050000",
+      "tanim_tr": "Bibos veya Poephagus alt cinsine ait sığırlar; damızlık olanlar HARİÇ",
+      "tanim_en": "Cattle of the subgenus Bibos or Poepagus; EXCEPT those intended for breeding.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229100000",
+      "tanim_tr": "Sığırlar (Bibos veya Poephagus alt cinsine ait olanlar HARİÇ); ağırlık <= 80 kg FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Cattle (EXCEPT those belonging to the subgenera Bibos or Poephagus); weight <= 80 kg BUT EXCEPT those intended for breeding.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229210000",
+      "tanim_tr": "Sığırlar (Bibos veya Poephagus alt cinsine ait olanlar HARİÇ); 80 kg < ağırlık <= 160 kg, kesimlik olanlar",
+      "tanim_en": "Cattle (excluding those belonging to the subgenera Bibos or Poephagus); weighing <80 kg <= 160 kg, intended for slaughter.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229290000",
+      "tanim_tr": "Sığırlar (Bibos veya Poephagus alt cinsine ait olanlar HARİÇ); 80 kg < ağırlık <= 160 kg FAKAT damızlıklar ve kesimlik olanlar HARİÇ",
+      "tanim_en": "Cattle (excluding those belonging to the subgenera Bibos or Poephagus); weighing <80 kg <= 160 kg, BUT excluding breeding and slaughter animals.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229410000",
+      "tanim_tr": "Sığırlar (Bibos veya Poephagus alt cinsine ait olanlar HARİÇ); 160 kg < ağırlık <= 300 kg, kesimlik olanlar",
+      "tanim_en": "Cattle (excluding those belonging to the subgenera Bibos or Poephagus); weighing <160 kg to <= 300 kg, intended for slaughter.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229490000",
+      "tanim_tr": "Sığırlar (Bibos veya Poephagus alt cinsine ait olanlar HARİÇ); 160 kg < ağırlık <= 300 kg FAKAT damızlıklar ve kesimlik olanlar HARİÇ",
+      "tanim_en": "Cattle (excluding those belonging to the subgenus Bibos or Poephagus); weighing <160 kg to <= 300 kg, BUT excluding breeding and slaughter animals.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229510011",
+      "tanim_tr": "Düveler (doğurmamış dişi sığırlar) (Bibos veya Poephagus alt cinsine ait olanlar HARİÇ); kesimlik, ağırlık > 400 kg",
+      "tanim_en": "Heifers (non-calving female cattle) (EXCEPT those belonging to the subgenera Bibos or Poephagus); for slaughter, weight > 400 kg",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229510019",
+      "tanim_tr": "Düveler (doğurmamış dişi sığırlar) (Bibos veya Poephagus alt cinsine ait olanlar HARİÇ); kesimlik, 300kg < ağırlık <= 400 kg",
+      "tanim_en": "Heifers (non-calving female cattle) (EXCEPT those belonging to the subgenus Bibos or Poephagus); for slaughter, weighing <300 kg <= 400 kg",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229590000",
+      "tanim_tr": "Düveler (doğurmamış dişi sığırlar) (Bibos veya Poephagus alt cinsine ait olanlar HARİÇ); ağırlık > 300 kg, damızlıklar ve kesimlik olanlar HARİÇ",
+      "tanim_en": "Heifers (non-fertilized female cattle) (EXCEPT those belonging to the subgenus Bibos or Poephagus); weight > 300 kg, EXCEPT breeding and slaughter animals.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229610011",
+      "tanim_tr": "Dişi danalar (Bibos veya Poephagus alt cinsine ait olanlar HARİÇ); ağırlık > 400 kg, kesimlik olanlar",
+      "tanim_en": "Female calves (excluding those belonging to the subgenera Bibos or Poephagus); weight > 400 kg, intended for slaughter.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229610019",
+      "tanim_tr": "İnekler (Bibos veya Poephagus cinsleri HARİÇ); ağırlık > 300 kg, kesimlik olanlar FAKAT ağırlığı 400 kg'dan büyük kesimlik dişi danalar HARİÇ",
+      "tanim_en": "Cows (excluding Bibos or Poephagus breeds); weighing > 300 kg, intended for slaughter, BUT excluding slaughter calves weighing over 400 kg.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229690000",
+      "tanim_tr": "İnekler (Bibos veya Poephagus alt cinsine ait olanlar HARİÇ); ağırlık > 300 kg FAKAT damızlıklar ve kesimlik olanlar HARİÇ",
+      "tanim_en": "Cows (EXCEPT those belonging to the subgenera Bibos or Poephagus); weight > 300 kg BUT EXCEPT breeding and slaughter cows.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229910011",
+      "tanim_tr": "Erkek danalar (Bibos veya Poephagus alt cinsine ait olanlar HARİÇ); ağırlık > 400 kg, kesimlik olanlar",
+      "tanim_en": "Male calves (excluding those belonging to the subgenera Bibos or Poephagus); weighing > 400 kg, intended for slaughter.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229910019",
+      "tanim_tr": "Diğer sığırlar (Bibos veya Poephagus cinsleri HARİÇ); 300 kg <= ağırlık < 400kg, kesimlik FAKAT ağırlığı 400 kg'dan büyük kesimlik erkek danalar HARİÇ",
+      "tanim_en": "Other cattle (EXCEPT Bibos or Poephagus breeds); weighing <300 kg <= < 400 kg, slaughter-ready BUT slaughter-ready male calves weighing more than 400 kg are EXCEPT.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010229990000",
+      "tanim_tr": "Diğer sığırlar (Bibos veya Poephagus alt cinsine ait olanlar HARİÇ); ağırlık > 300 kg FAKAT damızlıklar ve kesimlik olanlar HARİÇ",
+      "tanim_en": "Other cattle (EXCEPT those belonging to the subgenera Bibos or Poephagus); weight > 300 kg BUT EXCEPT breeding and slaughter animals.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010231000000",
+      "tanim_tr": "Bufalo; damızlık olanlar",
+      "tanim_en": "Buffalo; those intended for breeding",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010239100000",
+      "tanim_tr": "Bufalo; evcil olanlar FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Buffalo; domesticated ones BUT EXCLUDING breeding ones.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010239900000",
+      "tanim_tr": "Bufalo; evcil ve damızlık olanlar HARİÇ",
+      "tanim_en": "Buffalo; EXCLUDING domesticated and breeding animals.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010290200000",
+      "tanim_tr": "Canlı diğer büyükbaş hayvanlar; damızlık olanlar",
+      "tanim_en": "Other live cattle; breeding stock",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010290910000",
+      "tanim_tr": "Canlı diğer büyükbaş hayvanlar; evcil olanlar FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Other live cattle; domesticated animals BUT EXCLUDING breeding animals.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010290990000",
+      "tanim_tr": "Canlı diğer büyükbaş hayvanlar; evcil olanlar ve damızlık olanlar HARİÇ",
+      "tanim_en": "Other live cattle; EXCLUDING domestic and breeding animals.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010310001000",
+      "tanim_tr": "Domuzlar; evcil damızlık olanlar",
+      "tanim_en": "Pigs; domesticated breeding stock",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010310009000",
+      "tanim_tr": "Domuzlar; damızlık olanlar FAKAT evcil damızlık olanlar HARİÇ",
+      "tanim_en": "Pigs; those intended for breeding, EXCEPT domesticated breeding pigs.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010391100000",
+      "tanim_tr": "Domuzlar; ağırlık < 50 kg, evcil olanlar FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Pigs; weight < 50 kg, domesticated BUT EXCLUDING breeding pigs.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010391900000",
+      "tanim_tr": "Domuzlar; ağırlık < 50 kg FAKAT evcil olanlar ve damızlık olanlar HARİÇ",
+      "tanim_en": "Pigs; weight < 50 kg, EXCLUDING domestic and breeding pigs.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010392110000",
+      "tanim_tr": "Domuzlar; ağırlık >=160 kg, evcil ve en az bir defa doğurmuş FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Pigs; weighing >=160 kg, domesticated and having given birth at least once, EXCLUDING those intended for breeding.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010392190000",
+      "tanim_tr": "Ağırlığı 50 kg'dan büyük damızlık olmayan evcil diğer domuzlar",
+      "tanim_en": "Other non-breeding domestic pigs weighing more than 50 kg",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010392900000",
+      "tanim_tr": "Diğer domuzlar; ağırlık >= 50 kg FAKAT evcil türler ve damızlık olanlar HARİÇ",
+      "tanim_en": "Other pigs; weight >= 50 kg BUT EXCLUDING domesticated breeds and breeding pigs.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010410100000",
+      "tanim_tr": "Koyunlar; damızlık olanlar",
+      "tanim_en": "Sheep; those intended for breeding.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010410300000",
+      "tanim_tr": "Kuzular; yaşı <= 1 FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Lambs; age <= 1 BUT excluding those intended for breeding.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010410800000",
+      "tanim_tr": "Koyunlar; kuzular ve damızlık olanlar HARİÇ",
+      "tanim_en": "Sheep; EXCEPT lambs and breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010420100000",
+      "tanim_tr": "Keçiler; damızlık olanlar",
+      "tanim_en": "Goats; those intended for breeding",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010420900013",
+      "tanim_tr": "Oğlaklar; damızlık olanlar HARİÇ",
+      "tanim_en": "Kids; EXCEPT those intended for breeding.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010420900018",
+      "tanim_tr": "Keçiler; oğlaklar ve damızlık olanlar HARİÇ",
+      "tanim_en": "Goats; EXCEPT kids and breeding goats.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010511110011",
+      "tanim_tr": "Tavuk civcivi (\"Gallus Domesticus\" türü); büyük ebeveyn ve ebeveyn, dişi, damızlık, etlik, ağırlık <= 185 gr",
+      "tanim_en": "Chicken chick (\"Gallus Domesticus\" species); grandparent and parent, female, breeding stock, broiler, weight <= 185 g",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010511110012",
+      "tanim_tr": "Tavuk civcivi (\"Gallus Domesticus\" türü); büyük ebeveyn ve ebeveyn, dişi, damızlık, yumurtacı, ağırlık <= 185 gr",
+      "tanim_en": "Chicken chick (\"Gallus Domesticus\" species); grandparent and parent, female, breeding stock, laying hen, weight <= 185 g",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010511190011",
+      "tanim_tr": "Tavuk civcivi (\"Gallus Domesticus\" türü); et için olanlar, büyük ebeveyn ve ebeveyn, dişi, ağırlık <= 185 gr (damızlık olanlar HARİÇ)",
+      "tanim_en": "Chicken chicks (\"Gallus Domesticus\" species); for meat, grandparent and parent, female, weight <= 185 g (EXCLUDING breeding chicks)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010511190012",
+      "tanim_tr": "Tavuk civcivi (\"Gallus Domesticus\" türü); yumurta için olanlar, büyük ebeveyn ve ebeveyn, dişi, ağırlık <= 185 gr (damızlık olanlar HARİÇ)",
+      "tanim_en": "Chicken chicks (\"Gallus Domesticus\" species); laying hens, grandparents and parent, female, weight <= 185 g (EXCLUDING breeding chicks)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010511190019",
+      "tanim_tr": "Tavuk civcivi (\"Gallus Domesticus\" türü); büyük ebeveyn ve ebeveyn, dişi, ağırlık <= 185 gr (et veya yumurta için olanlar ve damızlık olanlar HARİÇ)",
+      "tanim_en": "Chicken chick (\"Gallus Domesticus\" species); grandparent and parent, female, weight <= 185 g (EXCLUDING those for meat or eggs and those for breeding)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010511910011",
+      "tanim_tr": "Tavuk civcivi (\"Gallus Domesticus\" türü); et için olanlar, damızlık, ağırlık <= 185 gr (büyük ebeveyn ve ebeveyn dişi civcivler HARİÇ)",
+      "tanim_en": "Chicken chicks (\"Gallus Domesticus\" species); for meat, breeding stock, weight <= 185 gr (EXCLUDING grandparent and parent female chicks)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010511910012",
+      "tanim_tr": "Tavuk civcivi (\"Gallus Domesticus\" türü); yumurta için olanlar, damızlık, ağırlık <= 185 gr (büyük ebeveyn ve ebeveyn dişi civcivler HARİÇ)",
+      "tanim_en": "Chicken chicks (\"Gallus Domesticus\" species); for laying eggs, breeding stock, weight <= 185 gr (EXCLUDING parent and parent female chicks)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010511910019",
+      "tanim_tr": "Tavuk civcivi (\"Gallus Domesticus\" türü); damızlık, ağırlık <= 185 gr (et veya yumurta için olanlar, büyük ebeveyn ve ebeveyn dişi civcivler HARİÇ)",
+      "tanim_en": "Chicken chicks (\"Gallus Domesticus\" species); breeding stock, weight <= 185 g (excluding those intended for meat or eggs, and parent female chicks)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010511990011",
+      "tanim_tr": "Tavuk civcivi (\"Gallus Domesticus\" türü); et için olanlar, ağırlık <= 185 gr (damızlık olanlar, büyük ebeveyn ve ebeveyn dişi civcivler HARİÇ)",
+      "tanim_en": "Chicken chicks (\"Gallus Domesticus\" species); for meat, weight <= 185 gr (EXCLUDING breeding chicks, grandparent and parent female chicks)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010511990012",
+      "tanim_tr": "Tavuk civcivi (\"Gallus Domesticus\" türü); yumurta için olanlar, ağırlık <= 185 gr (damızlık olanlar, büyük ebeveyn ve ebeveyn dişi civcivler HARİÇ)",
+      "tanim_en": "Chicken chicks (\"Gallus Domesticus\" species); those for laying eggs, weight <= 185 gr (EXCLUDING breeding chicks, grandparent and parent female chicks)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010511990019",
+      "tanim_tr": "Tavuk civcivi (\"Gallus Domesticus\"); ağırlık <= 185 gr (et veya yumurta için olanlar, damızlık olanlar, büyük ebeveyn ve ebeveyn dişi civcivler HARİÇ)",
+      "tanim_en": "Chicken chicks (\"Gallus Domesticus\"); weight <= 185 g (excluding those intended for meat or eggs, breeding stock, and parent female chicks)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010512001011",
+      "tanim_tr": "Hindi civcivi; ağırlık <= 185gr, damızlık",
+      "tanim_en": "Turkey chick; weight <= 185g, breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010512001019",
+      "tanim_tr": "Hindiler; ağırlık <= 185gr, damızlık",
+      "tanim_en": "Turkeys; weight <= 185g, breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010512009000",
+      "tanim_tr": "Hindiler; ağırlık <= 185gr FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Turkeys; weight <= 185g BUT EXCLUDING breeding turkeys.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010513000011",
+      "tanim_tr": "Ördekler; ağırlık <= 185 gr, damızlık",
+      "tanim_en": "Ducks; weight <= 185 gr, breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010513000012",
+      "tanim_tr": "Ördekler; ağırlık <= 185 gr FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Ducks; weight <= 185 gr BUT EXCLUDING breeding ducks.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010514000011",
+      "tanim_tr": "Kazlar; ağırlık <= 185 gr, damızlık",
+      "tanim_en": "Geese; weight <= 185 gr, breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010514000012",
+      "tanim_tr": "Kazlar; ağırlık <= 185 gr FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Geese; weight <= 185 gr BUT EXCLUDING breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010515000011",
+      "tanim_tr": "Beç tavukları; ağırlık <= 185 gr, damızlık",
+      "tanim_en": "Guinea fowl; weight <= 185 gr, breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010515000012",
+      "tanim_tr": "Beç tavukları; ağırlık <= 185 gr (damızlık olanlar HARİÇ)",
+      "tanim_en": "Guinea fowl; weight <= 185 gr (excluding breeding stock)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010594001000",
+      "tanim_tr": "Tavuklar ve horozlar (Gallus Domesticus türü); ağırlık >185 gr, damızlık",
+      "tanim_en": "Chickens and roosters (Gallus Domesticus species); weight >185 g, breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010594009011",
+      "tanim_tr": "Tavuklar ve horozlar (Gallus Domesticus türü); et için olanlar, ağırlık >185 gr (damızlık olanlar HARİÇ)",
+      "tanim_en": "Chickens and roosters (Gallus Domesticus species); for meat, weight >185 g (EXCLUDING breeding stock)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010594009012",
+      "tanim_tr": "Tavuklar ve horozlar (Gallus Domesticus türü); yumurta için olanlar, ağırlık >185 gr (damızlık olanlar HARİÇ)",
+      "tanim_en": "Chickens and roosters (Gallus Domesticus species); those for egg production, weight >185 g (EXCLUDING breeding stock)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010594009019",
+      "tanim_tr": "Tavuklar ve horozlar (Gallus Domesticus türü); ağırlık >185 gr (et veya yumurta için olanlar ve damızlık olanlar HARİÇ)",
+      "tanim_en": "Chickens and roosters (Gallus Domesticus species); weight >185 g (EXCLUDING those for meat or eggs and breeding stock)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010599101000",
+      "tanim_tr": "Ördekler; ağırlık >185 gr, damızlık",
+      "tanim_en": "Ducks; weight >185 gr, breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010599109000",
+      "tanim_tr": "Ördekler; ağırlık >185 gr FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Ducks; weight >185 gr BUT EXCLUDING breeding ducks",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010599201000",
+      "tanim_tr": "Kazlar; ağırlık >185 gr, damızlık",
+      "tanim_en": "Geese; weight >185 gr, breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010599209000",
+      "tanim_tr": "Kazlar; ağırlık >185 gr FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Geese; weight >185 gr, EXCLUDING those intended for breeding.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010599301000",
+      "tanim_tr": "Hindiler; ağırlık >185 gr, damızlık",
+      "tanim_en": "Turkeys; weight >185 gr, breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010599309000",
+      "tanim_tr": "Hindiler; ağırlık >185 gr FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Turkeys; weight >185 gr BUT EXCLUDING breeding turkeys",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010599501000",
+      "tanim_tr": "Beç tavukları; ağırlık >185 gr, damızlık",
+      "tanim_en": "Guinea fowl; weight >185 gr, breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010599509000",
+      "tanim_tr": "Beç tavukları; ağırlık >185 gr FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Guinea fowl; weight >185 gr BUT EXCLUDING breeding stock",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010611000000",
+      "tanim_tr": "Maymunlar",
+      "tanim_en": "Monkeys",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010612000000",
+      "tanim_tr": "Balina, yunus, domuz balıkları, manati-deniz güzeli, deniz inekleri, fok, deniz aslanı ve deniz aygırları",
+      "tanim_en": "Whales, dolphins, porpoises, manatees, sea cows, seals, sea lions, and walruses",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010613000000",
+      "tanim_tr": "Develer ve diğer devegiller (Camelidae)",
+      "tanim_en": "Camels and other camel-like animals (Camelidae)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010614101000",
+      "tanim_tr": "Tavşanlar; evcil, damızlık",
+      "tanim_en": "Rabbits; domestic, breeding",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010614109000",
+      "tanim_tr": "Tavşanlar; evcil FAKAT damızlık olanlar HARİÇ",
+      "tanim_en": "Rabbits; domesticated BUT EXCLUDING breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010614900000",
+      "tanim_tr": "Tavşanlar; yabani",
+      "tanim_en": "Rabbits; wild",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010619001000",
+      "tanim_tr": "Kobaylar ve fareler",
+      "tanim_en": "Guinea pigs and mice",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010619009000",
+      "tanim_tr": "Canlı diğer memeli hayvanlar",
+      "tanim_en": "Other live mammals",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010620000011",
+      "tanim_tr": "Süs kaplumbağası (akvaryum için)",
+      "tanim_en": "Ornamental turtle (for aquarium)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010620000019",
+      "tanim_tr": "Diğer sürüngenler",
+      "tanim_en": "Other reptiles",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010631000000",
+      "tanim_tr": "Canlı yırtıcı kuşlar",
+      "tanim_en": "Live birds of prey",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010632000000",
+      "tanim_tr": "Papağanımsı kuşlar (papağanlar, muhabbetkuşları, makaolar ve kakadular dahil)",
+      "tanim_en": "Parrot-like birds (including parrots, budgies, macaws, and cockatoos)",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010633001000",
+      "tanim_tr": "Devekuşları ve emular (Dromaius novaehollandiae); damızlık olanlar",
+      "tanim_en": "Ostriches and emus (Dromaius novaehollandiae); breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010633009000",
+      "tanim_tr": "Devekuşları ve emular (Dromaius novaehollandiae); damızlık olanlar HARİÇ",
+      "tanim_en": "Ostriches and emus (Dromaius novaehollandiae); EXCEPT those used for breeding.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010639101000",
+      "tanim_tr": "Güvercinler; damızlık olanlar",
+      "tanim_en": "Pigeons; breeding stock",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010639109000",
+      "tanim_tr": "Güvercinler; damızlık olanlar HARİÇ",
+      "tanim_en": "Pigeons; EXCEPT those used for breeding.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010639801000",
+      "tanim_tr": "Canlı diğer kuşlar; damızlık olanlar",
+      "tanim_en": "Other live birds; breeding stock",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010639809000",
+      "tanim_tr": "Canlı diğer kuşlar; damızlık olanlar HARİÇ",
+      "tanim_en": "Other live birds; EXCEPT those used for breeding.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010641001000",
+      "tanim_tr": "Arılar; damızlık olanlar",
+      "tanim_en": "Bees; the breeding bees",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010641009000",
+      "tanim_tr": "Arılar; damızlık olanlar HARİÇ",
+      "tanim_en": "Bees; EXCEPT for breeding stock.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010649000011",
+      "tanim_tr": "Biyolojik mücadelede kullanılan parazit ve predatörler; böcek grubundakiler",
+      "tanim_en": "Parasites and predators used in biological control; those belonging to the insect group.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010649000019",
+      "tanim_tr": "Canlı diğer böcekler",
+      "tanim_en": "other live insects",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010690001000",
+      "tanim_tr": "Canlı diğer hayvanlar; damızlık",
+      "tanim_en": "Other live animals; breeding stock",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010690009011",
+      "tanim_tr": "Kurbağalar; canlı",
+      "tanim_en": "Frogs; alive",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010690009012",
+      "tanim_tr": "Biyolojik mücadelede kullanılan parazit ve predatörler; damızlık olanlar ve böcek grubundakiler HARİÇ",
+      "tanim_en": "Parasites and predators used in biological control; EXCLUDING breeding stock and insects.",
+      "grup": "I-D",
+      "oran": 0.01
+    },
+    {
+      "kod": "010690009019",
+      "tanim_tr": "Canlı diğer hayvanlar; damızlık olanlar HARİÇ",
+      "tanim_en": "Other live animals; EXCEPT those used for breeding.",
+      "grup": "I-D",
+      "oran": 0.01
+    }
+  ]
+}

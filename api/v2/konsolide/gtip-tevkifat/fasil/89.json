@@ -1,0 +1,488 @@
+{
+  "meta": {
+    "schema_surumu": "2.0.0",
+    "servis": {
+      "kod": "gtip-tevkifat",
+      "ad": {
+        "tr": "GTİP Tevkifat Eşleşmesi",
+        "en": "GTIP Withholding Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:7aa227c89cd8bb208b1d76c635451e395fb4bb40a195527ab998364e94c1ddef"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T13:37:51.711552+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "89",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "890000000000",
+      "tanim_tr": "Gemiler ve suda yüzen diğer taşıt ve araçlar",
+      "tanim_en": "Ships and other vessels and vehicles that float on water",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890110100011",
+      "tanim_tr": "Denizde seyretmeye mahsus gezinti gemileri; gros tonilato <= 18",
+      "tanim_en": "Cruise ships intended for sea travel; gross tonnage <= 18",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890110100059",
+      "tanim_tr": "Denizde seyretmeye mahsus yolcu gemileri, gezinti gemileri vb.deniz taşıtları ve her türlü feribotlar; gezinti gemileri GT <=18 HARİÇ",
+      "tanim_en": "Passenger ships, pleasure boats, and other marine vessels intended for navigation at sea, and all types of ferries; pleasure boats (excluding GT <=18)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890110900011",
+      "tanim_tr": "Diğer sularda seyretmeye mahsus yolcu gemileri ve gezinti gemileri",
+      "tanim_en": "Passenger ships and pleasure boats intended for navigation in other waters.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890110900019",
+      "tanim_tr": "Diğer sularda seyretmeye mahsus esasen insan taşımak üzere imal edilmiş diğer gemiler ve her türlü feribotlar",
+      "tanim_en": "Other vessels and ferries of all kinds, primarily manufactured for the transport of people and intended for navigation in other waters.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890120100000",
+      "tanim_tr": "Denizde seyretmeye mahsus sarnıçlı gemiler (tankerler)",
+      "tanim_en": "Tanker ships used for sailing at sea",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890120900000",
+      "tanim_tr": "Diğer sularda seyretmeye mahsus sarnıçlı gemiler (tankerler)",
+      "tanim_en": "Tankers (ships with tanks) used for navigating other waters",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890130100000",
+      "tanim_tr": "Denizde seyretmeye mahsus frigorifik deniz taşıtları (8901.20 alt pozisyonundakiler hariç)",
+      "tanim_en": "Refrigerated marine vessels intended for navigation at sea (excluding those in subheading 8901.20)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890130900000",
+      "tanim_tr": "Diğer sularda seyretmeye mahsus frigorifik taşıtlar (8901.20 alt pozisyonundakiler hariç)",
+      "tanim_en": "Refrigerated vehicles intended for navigation in other waters (excluding those in subheading 8901.20)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890190100000",
+      "tanim_tr": "Denizde seyretmeye mahsus yük taşımaya mahsus diğer deniz taşıtları ve hem insan hem de yük taşımaya mahsus diğer deniz taşıtları",
+      "tanim_en": "Other marine vessels intended for the carriage of cargo and for navigating at sea, and other marine vessels intended for the carriage of both people and cargo.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890190900000",
+      "tanim_tr": "Diğer sularda seyretmeye mahsus yük taşımaya mahsus diğer deniz taşıtları ve hem insan hem de yük taşımaya mahsus diğer deniz taşıtları",
+      "tanim_en": "Other marine vessels for the carriage of cargo and navigation in other waters, and other marine vessels for the carriage of both people and cargo.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890200100000",
+      "tanim_tr": "Denizde seyretmeye mahsus balıkçılık için deniz taşıtları, balıkçılık ürünlerinin işlenmesi, korunması ve konserve edilmesi için fabrika gemileri, vb.",
+      "tanim_en": "Marine vessels for fishing at sea, factory ships for processing, preserving and canning fishery products, etc.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890200900000",
+      "tanim_tr": "Diğer sularda seyretmeye mahsus balıkçılık için deniz taşıtları, balıkçılık ürünlerini işlemek, korumak ve konserve etmek için fabrika gemileri, vb.",
+      "tanim_en": "Other vessels for fishing in other waters, factory ships for processing, preserving and canning fishery products, etc.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890311000000",
+      "tanim_tr": "Şişirilebilir yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; motorlu veya takılabilir, yüksüz (net) ağırlığı (motor hariç) <= 100 kg",
+      "tanim_en": "Inflatable yachts and other recreational and sporting watercraft; with or without motor, unladen (net) weight (excluding motor) <= 100 kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890312000000",
+      "tanim_tr": "Şişirilebilir yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; bir motorla kullanılmak üzere tasarlanmamış ve yüksüz (net) ağırlığı <= 100 kg",
+      "tanim_en": "Inflatable yachts and other recreational and sporting watercraft; not designed to be used with a motor and with an unladen (net) weight <= 100 kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890319000000",
+      "tanim_tr": "Şişirilebilir diğer yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; yüksüz (net) ağırlığı 100 kg'ı geçenler",
+      "tanim_en": "Inflatable yachts and other recreational and sporting watercraft; those with an unladen (net) weight exceeding 100 kg.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890321000000",
+      "tanim_tr": "Yelkenli tekneler (yardımcı motoru olsun olmasın) (şişirilebilir olanlar HARİÇ); uzunluğu <= 7.5 m",
+      "tanim_en": "Sailing boats (with or without auxiliary engine) (EXCEPT inflatable ones); length <= 7.5 m",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890322100000",
+      "tanim_tr": "Denizde seyretmeye mahsus yelkenli tekneler (yardımcı motoru olsun olmasın) (şişirilebilir olanlar HARİÇ); 7.5 m < uzunluğu <= 24 m",
+      "tanim_en": "Sailing boats intended for cruising on the sea (with or without an auxiliary engine) (EXCEPT inflatable ones); 7.5 m < length <= 24 m",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890322900000",
+      "tanim_tr": "Deniz dışındaki sularda seyretmeye mahsus yelkenli tekneler (yardımcı motoru olsun olmasın) (şişirilebilir olanlar HARİÇ); 7.5 m < uzunluğu <= 24 m",
+      "tanim_en": "Sailing boats intended for navigation in waters other than the sea (whether or not equipped with an auxiliary motor) (EXCEPT inflatable ones); 7.5 m < length <= 24 m",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890323100000",
+      "tanim_tr": "Denizde seyretmeye mahsus yelkenli tekneler (yardımcı motoru olsun olmasın) (şişirilebilir olanlar HARİÇ); uzunluğu > 24 m",
+      "tanim_en": "Sailing boats intended for cruising on the sea (whether or not equipped with an auxiliary engine) (EXCEPT inflatable ones); length > 24 m",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890323900000",
+      "tanim_tr": "Deniz dışındaki sularda seyretmeye mahsus yelkenli tekneler (yardımcı motoru olsun olmasın) (şişirilebilir olanlar HARİÇ); uzunluğu > 24 m",
+      "tanim_en": "Sailing boats intended for navigation in waters other than the sea (whether or not equipped with an auxiliary engine) (EXCEPT inflatable boats); length > 24 m",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890331000000",
+      "tanim_tr": "Eğlence veya spor amaçlı motorbotlar (dıştan takma motoru olanlar HARİÇ) (şişirilebilir olanlar HARİÇ); uzunluğu <= 7.5 m",
+      "tanim_en": "Recreational or sport motorboats (excluding those with outboard motors) (excluding inflatable ones); length <= 7.5 m",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890332100000",
+      "tanim_tr": "Denizde seyretmeye eğlence veya spor amaçlı motorbotlar (dıştan takma motoru olanlar HARİÇ) (şişirilebilir olanlar HARİÇ); 7.5 m < uzunluğu <= 24 m",
+      "tanim_en": "Motorboats used for recreation or sport at sea (EXCEPT those with outboard motors) (EXCEPT inflatable ones); 7.5 m < length <= 24 m",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890332900000",
+      "tanim_tr": "Deniz dışındaki sularda seyretmeye mahsus eğlence veya spor amaçlı motorbotlar (dıştan takma motorlu ve şişirilebilir HARİÇ); 7.5 m < uzunluğu <= 24 m",
+      "tanim_en": "Motorboats intended for recreation or sporting purposes in waters other than the sea (EXCEPT those with outboard motors and inflatables); length < 7.5 m <= 24 m",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890333100000",
+      "tanim_tr": "Denizde seyretmeye mahsus eğlence veya spor amaçlı motorbotlar (dıştan takma motoru olanlar HARİÇ) (şişirilebilir olanlar HARİÇ); uzunluğu > 24 m",
+      "tanim_en": "Motorboats intended for recreation or sporting cruising at sea (EXCEPT those with outboard motors) (EXCEPT inflatable ones); length > 24 m",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890333900000",
+      "tanim_tr": "Deniz dışındaki sularda seyretmeye mahsus eğlence veya spor amaçlı motorbotlar (dıştan takma motorlu ve şişirilebilir olanlar HARİÇ); uzunluğu > 24 m",
+      "tanim_en": "Motorboats intended for recreation or sporting purposes in waters other than the sea (EXCEPT those with outboard motors and inflatables); length > 24 m",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890393100000",
+      "tanim_tr": "Diğer yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; uzunluğu <= 7.5 m ve birim ağırlığı <= 100 kg",
+      "tanim_en": "Other yachts and other recreational and sporting watercraft; with a length <= 7.5 m and a unit weight <= 100 kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890393900000",
+      "tanim_tr": "Diğer yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; uzunluğu <= 7.5 m ve birim ağırlığı > 100 kg",
+      "tanim_en": "Other yachts and other recreational and sporting watercraft; length <= 7.5 m and unit weight > 100 kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890399100011",
+      "tanim_tr": "Kürekli kayık ve kanolar; uzunluğu > 7.5 m ve birim ağırlığı <= 100 kg",
+      "tanim_en": "Rowboats and canoes; length > 7.5 m and unit weight <= 100 kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890399100019",
+      "tanim_tr": "Diğer yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; uzunluğu > 7.5 m ve birim ağırlığı <= 100 kg",
+      "tanim_en": "Other yachts and other recreational and sporting watercraft; length > 7.5 m and unit weight <= 100 kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890399990011",
+      "tanim_tr": "Kürekli kayık ve kanolar; uzunluğu > 7.5 m ve birim ağırlığı > 100 kg",
+      "tanim_en": "Rowboats and canoes; length > 7.5 m and unit weight > 100 kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890399990019",
+      "tanim_tr": "Diğer yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; uzunluğu > 7.5 m ve birim ağırlığı > 100 kg",
+      "tanim_en": "Other yachts and other recreational and sporting watercraft; length > 7.5 m and unit weight > 100 kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890400100000",
+      "tanim_tr": "Römorkörler",
+      "tanim_en": "Tugs",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890400910000",
+      "tanim_tr": "Denizde seyretmeye mahsus itici gemiler",
+      "tanim_en": "Propeller ships for navigation at sea",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890400990000",
+      "tanim_tr": "Diğer sularda seyretmeye mahsus itici gemiler",
+      "tanim_en": "Propeller ships for navigation in other waters",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890510100000",
+      "tanim_tr": "Denizde seyretmeye mahsus tarak gemileri",
+      "tanim_en": "Dredging vessels used for sailing at sea",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890510900000",
+      "tanim_tr": "Diğer sularda seyretmeye mahsus tarak gemileri",
+      "tanim_en": "Dredging vessels intended for navigation in other waters.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890520000000",
+      "tanim_tr": "Yüzer veya dalabilen sondaj ve üretim platformları",
+      "tanim_en": "Floating or submersible drilling and production platforms",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890590100000",
+      "tanim_tr": "Denizde seyretmeye mahsus fener, yangın söndürme gemileri, yüzer vinçler, vb. deniz taşıtları, ve yüzer havuzlar",
+      "tanim_en": "Lighthouses for navigation at sea, fire-fighting vessels, floating cranes, etc., marine vessels, and floating docks.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890590900000",
+      "tanim_tr": "Diğer sularda seyretmeye mahsus fener, yangın söndürme gemileri, yüzer vinçler, vb. deniz taşıtları ve yüzer havuzlar",
+      "tanim_en": "Other marine vessels and floating docks intended for navigation in other waters, such as lighthouses, fire-fighting vessels, floating cranes, etc.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890610000000",
+      "tanim_tr": "Savaş gemileri",
+      "tanim_en": "Warships",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890690100000",
+      "tanim_tr": "Denizde seyretmeye mahsus diğer deniz taşıtları (kurtarma gemileri dahil, kürekli olanlar hariç)",
+      "tanim_en": "Other marine vessels intended for navigation at sea (including rescue vessels, excluding those propelled by oars)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890690910000",
+      "tanim_tr": "Diğer sularda seyretmeye mahsus diğer deniz taşıtları (kurtarma gemileri dahil, kürekli olanlar hariç); birim ağırlığı <= 100 kg",
+      "tanim_en": "Other marine vessels intended for navigation in other waters (including rescue vessels, excluding those with oars); unit weight <= 100 kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890690990000",
+      "tanim_tr": "Diğer sularda seyretmeye mahsus diğer deniz taşıtları (kurtarma gemileri dahil, kürekli olanlar hariç); birim ağırlığı > 100 kg",
+      "tanim_en": "Other marine vessels intended for navigation in other waters (including rescue vessels, excluding those with oars); unit weight > 100 kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890710000000",
+      "tanim_tr": "Şişirilebilir sallar",
+      "tanim_en": "Inflatable rafts",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890790000011",
+      "tanim_tr": "Metalden diğer yüzer araçlar (tanklar, coffer-damlar, yükleme-boşaltma platformları, şamandıralar ve işaret kuleleri gibi)",
+      "tanim_en": "Other floating structures made of metal (such as tanks, cofferdams, loading and unloading platforms, buoys, and signal towers)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890790000016",
+      "tanim_tr": "Ahşap ve diğer maddelerden diğer yüzer araçlar (tanklar, coffer-damlar, yükleme-boşaltma platformları, şamandıralar ve işaret kuleleri gibi)",
+      "tanim_en": "Other floating structures made of wood and other materials (such as tanks, cofferdams, loading and unloading platforms, buoys and signal towers)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890800001000",
+      "tanim_tr": "Sökülecek deniz taşıtları",
+      "tanim_en": "Marine vessels to be dismantled",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "890800002000",
+      "tanim_tr": "Suda yüzen sökülecek diğer araçlar",
+      "tanim_en": "Other vehicles to be dismantled floating in the water.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    }
+  ]
+}
