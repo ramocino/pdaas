@@ -53,6 +53,18 @@
             </svg>
           </button>
         </div>
+        <!-- KATMAN FİLTRELERİ -->
+        <div class="flex items-center bg-win-base p-1 rounded-lg border border-win-border">
+          <button type="button" class="layer-filter-btn flex-1 py-1.5 text-[11px] font-semibold rounded-md transition bg-win-500 text-white shadow-sm" data-layer="ham">
+            Ham Veriler
+          </button>
+          <button type="button" class="layer-filter-btn flex-1 py-1.5 text-[11px] font-semibold rounded-md transition text-slate-400 hover:text-white" data-layer="kurallar">
+            Kurallar
+          </button>
+          <button type="button" class="layer-filter-btn flex-1 py-1.5 text-[11px] font-semibold rounded-md transition text-slate-400 hover:text-white" data-layer="konsolide">
+            Konsolide
+          </button>
+        </div>
       </div>
 
       <div id="catalog-tree-container" class="flex-1 overflow-y-auto overscroll-contain p-3 space-y-2 min-h-0">
@@ -538,6 +550,8 @@
     let activeCodeLang = 'curl';
     let currentRawBody = null;
     let currentPage = 1;
+    let activeLayerFilter = 'ham'; // Varsayılan olarak Ham Veriler seçili
+    let currentKatman = 'ham';
 
     // ─── Katalog ───
     async function katalogYukle() {
@@ -561,6 +575,11 @@
 
       const gruplar = new Map();
       for (const sv of KATALOG) {
+        // KATMAN FİLTRELERİ KONTROLÜ
+        if (activeLayerFilter !== 'all' && !sv.katmanlar?.[activeLayerFilter]) {
+          continue;
+        }
+
         const anahtar = sv.kod_sistemi || 'diger';
         if (!gruplar.has(anahtar)) {
           const mapBilgi = KOD_SISTEMI_MAP[anahtar] || KOD_SISTEMI_MAP['diger'];
@@ -607,8 +626,8 @@
           const sAdi = document.documentElement.lang === 'en' ? (s.ad.en || s.ad.tr) : s.ad.tr;
           const aktif = currentService && currentService.kod === s.kod;
           
-          // Katman tespiti: ham > konsolide > kurallar
-          const katmanKey = s.katmanlar?.ham ? 'ham' : (s.katmanlar?.konsolide ? 'konsolide' : 'kurallar');
+          // Katman tespiti: O anki filtreye göre URL ve sürüm al
+          const katmanKey = activeLayerFilter !== 'all' ? activeLayerFilter : (s.katmanlar?.ham ? 'ham' : (s.katmanlar?.konsolide ? 'konsolide' : 'kurallar'));
           const url = s.katmanlar?.[katmanKey]?.url || '#';
           const versiyon = s.katmanlar?.[katmanKey]?.son || '—';
 
@@ -683,8 +702,6 @@
       servisDetayYukle(endpoint);
       $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
     }
-
-    let currentKatman = 'ham';
 
     async function servisDetayYukle(endpoint) {
       if (!endpoint) return;
@@ -1050,6 +1067,25 @@
       a.download = `${currentService.kod}-data.csv`;
       a.click();
       showToast('✓', t('copied_json'));
+    });
+
+    // ─── Katman Filtre Butonları ───
+    document.querySelectorAll('.layer-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Tüm butonlardan aktif sınıfı kaldır
+        document.querySelectorAll('.layer-filter-btn').forEach(b => {
+          b.classList.remove('bg-win-500', 'text-white', 'shadow-sm');
+          b.classList.add('text-slate-400', 'hover:text-white');
+        });
+        
+        // Tıklanana aktif sınıfını ver
+        btn.classList.add('bg-win-500', 'text-white', 'shadow-sm');
+        btn.classList.remove('text-slate-400', 'hover:text-white');
+        
+        // Filtreyi güncelle ve ağacı yeniden çiz
+        activeLayerFilter = btn.dataset.layer;
+        renderCatalogTree($('input-catalog-search').value);
+      });
     });
 
     // ─── Başlat ───

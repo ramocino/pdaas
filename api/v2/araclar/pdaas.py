@@ -494,9 +494,16 @@ def katalog_uret(bilgiler):
             "tip": m["yapi"]["tip"], "kod_sistemi": m["yapi"]["kod_sistemi"],
             "katmanlar": {},
         })
+        dosya_adi = b["yol"].name
+        # Eğer dosya index.json ise (yani klasör yapısındaysa) URL'ye /index.json ekle
+        if dosya_adi == "index.json":
+            url = f"/{m['katman']}/{kod}/index.json"
+        else:
+            url = f"/{m['katman']}/{kod}.json"
+
         s["katmanlar"][m["katman"]] = {
             "son": m["surum"],
-            "url": f"/{m['katman']}/{kod}.json",
+            "url": url,
             "surumler_url": f"/{m['katman']}/surumler/{kod}/",
             "checksum": b["hash"],
         }
