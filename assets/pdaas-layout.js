@@ -3,7 +3,6 @@ import { dilDegistir } from './pdaas-i18n.js';
 
 const NAV = [
   { href: 'index.html',           key: 'nav_portal' },
-  { href: 'urunhizmetara.html',   key: 'nav_urunhizmetara' },
   { href: 'urunhizmetkarti.html', key: 'nav_urunhizmetkarti' },
   { href: 'personel.html',        key: 'nav_personel' },
   { href: 'muhtasar.html',        key: 'nav_muhtasar' },

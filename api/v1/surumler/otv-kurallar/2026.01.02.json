@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "otv-kurallar",
+      "ad": {
+        "tr": "ÖTV Eşleme Kuralları",
+        "en": "SCT Mapping Rules"
+      }
+    },
+    "katman": "kurallar",
+    "yapi": {
+      "tip": "kural-seti",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.01.02",
+    "guncelleme": "2026-01-02",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "checksum": "sha256:26b818daae21b878f12069df91b8bdb81df9dada97d28914f0722699f092f1da"
+  },
+  "gruplar": {
+    "OTV-I-A-Akaryakit": {
+      "ad_tr": "Akaryakıt Ürünleri (I/A Cetveli)",
+      "ad_en": "Fuel Products (List I/A)",
+      "oran_kodu": "OTV-I-A-Akaryakit"
+    },
+    "OTV-I-B-MadeniYagSolvent": {
+      "ad_tr": "Madeni Yağlar ve Solventler (I/B Cetveli)",
+      "ad_en": "Mineral Oils and Solvents (List I/B)",
+      "oran_kodu": "OTV-I-B-MadeniYagSolvent"
+    },
+    "OTV-II-BinekOtomobil": {
+      "ad_tr": "Binek Otomobiller (87.03)",
+      "ad_en": "Passenger Cars (87.03)",
+      "oran_kodu": "OTV-II-BinekOtomobil"
+    },
+    "OTV-II-TicariArac": {
+      "ad_tr": "Ticari Araçlar ve Diğer Taşıtlar",
+      "ad_en": "Commercial Vehicles and Other Motor Vehicles",
+      "oran_kodu": "OTV-II-TicariArac"
+    },
+    "OTV-III-TutunAlkol": {
+      "ad_tr": "Tütün Mamulleri ve Alkollü İçecekler (III)",
+      "ad_en": "Tobacco Products and Alcoholic Beverages (List III)",
+      "oran_kodu": "OTV-III-TutunAlkol"
+    },
+    "OTV-IV-BeyazEsya": {
+      "ad_tr": "Beyaz Eşya ve Küçük Ev Aletleri (IV)",
+      "ad_en": "White Goods and Small Appliances (List IV)",
+      "oran_kodu": "OTV-IV-BeyazEsya"
+    },
+    "OTV-IV-Elektronik": {
+      "ad_tr": "Elektronik Cihazlar (TV, Ses Sistemleri) (IV)",
+      "ad_en": "Electronic Devices (TV, Audio) (List IV)",
+      "oran_kodu": "OTV-IV-Elektronik"
+    },
+    "OTV-IV-Telefon": {
+      "ad_tr": "Cep Telefonları (IV)",
+      "ad_en": "Mobile Phones (List IV)",
+      "oran_kodu": "OTV-IV-Telefon"
+    },
+    "OTV-IV-Kameralar": {
+      "ad_tr": "Televizyon ve Dijital Kameralar (IV Cetveli)",
+      "ad_en": "Television and Digital Cameras (List IV)",
+      "oran_kodu": "OTV-IV-Kameralar"
+    },
+    "OTV-IV-LuksUrunler": {
+      "ad_tr": "Lüks Tüketim, Kürk, Kıymetli Taş ve Silahlar (IV)",
+      "ad_en": "Luxury Goods, Furs, Precious Stones and Weapons (List IV)",
+      "oran_kodu": "OTV-IV-LuksUrunler"
+    },
+    "otv_yok": {
+      "ad_tr": "ÖTV'ye Tabi Değil",
+      "ad_en": "Not Subject to SCT"
+    }
+  },
+  "kurallar": [
+    {
+      "kod": "gtip-otv-yok",
+      "grup": "otv_yok",
+      "oncelik": 1,
+      "prefixler": [],
+      "varsayilan": true,
+      "aciklama_tr": "Hiçbir ÖTV listesine girmeyen tüm GTİP kodları — ÖTV uygulanmaz",
+      "aciklama_en": "All GTIP codes not covered by any SCT list — no SCT applies"
+    },
+    {
+      "kod": "gtip-akaryakit-I-A",
+      "grup": "OTV-I-A-Akaryakit",
+      "oncelik": 60,
+      "prefixler": [
+        "271012",
+        "271019",
+        "271020",
+        "2711"
+      ],
+      "aciklama_tr": "Benzin, motorin, fuel-oil, jet yakıtı, LPG ve doğal gaz — ÖTV I/A Cetveli (Maktu Litre/Kg başına)",
+      "aciklama_en": "Gasoline, diesel, fuel oil, jet fuel, LPG and natural gas — SCT List I/A (fixed per litre/kg)"
+    },
+    {
+      "kod": "gtip-madeni-yag-solvent-I-B",
+      "grup": "OTV-I-B-MadeniYagSolvent",
+      "oncelik": 55,
+      "prefixler": [
+        "271011",
+        "2902",
+        "2905",
+        "2914",
+        "3814",
+        "2707"
+      ],
+      "aciklama_tr": "Solventler, tinerler, toluen, ksilen, metanol ve madeni yağlar — ÖTV I/B Cetveli (Maktu Litre/Kg başına)",
+      "aciklama_en": "Solvents, thinners, toluene, xylene, methanol and mineral oils — SCT List I/B (fixed per litre/kg)"
+    },
+    {
+      "kod": "gtip-otomobil-II",
+      "grup": "OTV-II-BinekOtomobil",
+      "oncelik": 60,
+      "prefixler": [
+        "8703"
+      ],
+      "aciklama_tr": "Binek otomobiller — ÖTV II Sayılı Liste (Matrah dilimine göre nispi oran + Asgari maktu)",
+      "aciklama_en": "Passenger cars — SCT List II (Proportional rate by tax base bracket)"
+    },
+    {
+      "kod": "gtip-ticari-arac-II",
+      "grup": "OTV-II-TicariArac",
+      "oncelik": 50,
+      "prefixler": [
+        "8701.20",
+        "8702",
+        "8704",
+        "8705",
+        "8709",
+        "8711",
+        "8716"
+      ],
+      "aciklama_tr": "Minibüs, otobüs, kamyonet, kamyon, çekici, motosiklet ve römorklar — ÖTV II Sayılı Liste",
+      "aciklama_en": "Minibuses, buses, vans, trucks, tractors, motorcycles and trailers — SCT List II"
+    },
+    {
+      "kod": "gtip-tutun-alkol-III",
+      "grup": "OTV-III-TutunAlkol",
+      "oncelik": 60,
+      "prefixler": [
+        "2402",
+        "2403",
+        "2203",
+        "2204",
+        "2205",
+        "2206",
+        "2207",
+        "2208"
+      ],
+      "aciklama_tr": "Sigaralar, purolar, sarma tütün, alkollü içecekler — ÖTV III (Kombine: Nispi + Asgari Maktu + Maktu)",
+      "aciklama_en": "Cigarettes, cigars, rolling tobacco, alcoholic beverages — SCT List III (Combined)"
+    },
+    {
+      "kod": "gtip-beyazesya-IV",
+      "grup": "OTV-IV-BeyazEsya",
+      "oncelik": 50,
+      "prefixler": [
+        "8415",
+        "8418",
+        "8422",
+        "8450",
+        "8451",
+        "8508",
+        "8509",
+        "8510",
+        "8516"
+      ],
+      "aciklama_tr": "Klimalar, buzdolapları, çamaşır/bulaşık makineleri, süpürgeler, tıraş makineleri — ÖTV IV Sayılı Liste",
+      "aciklama_en": "Air conditioners, refrigerators, washing/dish machines, vacuum cleaners, shavers — SCT List IV"
+    },
+    {
+      "kod": "gtip-elektronik-IV",
+      "grup": "OTV-IV-Elektronik",
+      "oncelik": 50,
+      "prefixler": [
+        "8528",
+        "8504"
+      ],
+      "aciklama_tr": "Televizyonlar, monitörler ve ses sistemleri — ÖTV IV Sayılı Liste",
+      "aciklama_en": "Televisions, monitors and audio systems — SCT List IV"
+    },
+    {
+      "kod": "gtip-telefon-IV",
+      "grup": "OTV-IV-Telefon",
+      "oncelik": 50,
+      "prefixler": [
+        "8517"
+      ],
+      "aciklama_tr": "Cep telefonları — ÖTV IV Sayılı Liste (Matrah Dilimli: %25 - %50)",
+      "aciklama_en": "Mobile phones — SCT List IV (Tax brackets: 25% - 50%)"
+    },
+    {
+      "kod": "gtip-kamera-IV",
+      "grup": "OTV-IV-Kameralar",
+      "oncelik": 55,
+      "prefixler": [
+        "85258011",
+        "85258019",
+        "85258030"
+      ],
+      "aciklama_tr": "Televizyon kameraları (3+ tüplü vb.) ve dijital kameralar — ÖTV IV Sayılı Liste",
+      "aciklama_en": "Television cameras (3+ tubes etc.) and digital cameras — SCT List IV"
+    },
+    {
+      "kod": "gtip-luks-esya-IV",
+      "grup": "OTV-IV-LuksUrunler",
+      "oncelik": 50,
+      "prefixler": [
+        "4302",
+        "4303",
+        "7113",
+        "7114",
+        "7116",
+        "9302",
+        "9303",
+        "9304",
+        "9503",
+        "9504",
+        "9506"
+      ],
+      "aciklama_tr": "Kürkler, kıymetli taş/maden eşyaları, av tüfekleri, oyun konsolları, spor ekipmanları — ÖTV IV Sayılı Liste",
+      "aciklama_en": "Furs, precious metal/stone articles, firearms, gaming consoles, sports equipment — SCT List IV"
+    }
+  ]
+}

@@ -1,0 +1,565 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-kdv",
+      "ad": {
+        "tr": "GTİP KDV Eşleşmesi",
+        "en": "GTIP VAT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "06",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "060110100000",
+      "tanim_tr": "Sümbül soğanı; dinlenme halinde",
+      "tanim_en": "Hyacinth bulbs; dormant",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060110200000",
+      "tanim_tr": "Nergis soğanı; dinlenme halinde",
+      "tanim_en": "Narcissus bulb; dormant",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060110300000",
+      "tanim_tr": "Lale soğanı; dinlenme halinde",
+      "tanim_en": "Tulip bulb; dormant",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060110400000",
+      "tanim_tr": "Glayöl soğanı; dinlenme halinde",
+      "tanim_en": "Gladiolus bulbs; at rest.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060110901000",
+      "tanim_tr": "Diğer çiçeklerin soğanı; dinlenme halinde",
+      "tanim_en": "The bulbs of other flowers; in a dormant state.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060110909000",
+      "tanim_tr": "Yumrular, yumrulu kökler, küçük soğanlar, sürgün başları ve rizomlar (dinlenme halinde)",
+      "tanim_en": "Tubers, tuberous roots, small bulbs, shoot heads, and rhizomes (dormant)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060120100011",
+      "tanim_tr": "Hindiba bitkisi; sürgün vermiş veya çiçeklenmiş",
+      "tanim_en": "Chicory plant; sprouted or in flower",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060120100012",
+      "tanim_tr": "Hindiba kökleri; sürgün vermiş veya çiçeklenmiş",
+      "tanim_en": "Chicory roots; sprouted or flowering",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060120300011",
+      "tanim_tr": "Orkide soğanı; sürgün vermiş veya çiçeklenmiş",
+      "tanim_en": "Orchid bulb; sprouted or flowering",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060120300012",
+      "tanim_tr": "Sümbül soğanı; sürgün vermiş veya çiçeklenmiş",
+      "tanim_en": "Hyacinth bulb; sprouted or in bloom",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060120300013",
+      "tanim_tr": "Nergis soğanı; sürgün vermiş veya çiçeklenmiş",
+      "tanim_en": "Daffodil bulb; sprouted or in bloom",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060120300014",
+      "tanim_tr": "Lale soğanı; sürgün vermiş veya çiçeklenmiş",
+      "tanim_en": "Tulip bulb; sprouted or in bloom",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060120901011",
+      "tanim_tr": "Glayöller; sürgün vermiş veya çiçeklenmiş",
+      "tanim_en": "Gladioli; in shoots or in bloom",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060120901019",
+      "tanim_tr": "Diğer çiçek soğanları; sürgün vermiş veya çiçeklenmiş",
+      "tanim_en": "Other flower bulbs; sprouted or in bloom",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060120909000",
+      "tanim_tr": "Diğer yumrular, yumrulu diğer kökler, küçük soğan, vb.; sürgün vermiş veya çiçeklenmi",
+      "tanim_en": "Other tubers, other tuberous roots, small bulbs, etc.; sprouted or flowering",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060210100000",
+      "tanim_tr": "Köklendirilmemiş asma çelikleri ve daldırmalar",
+      "tanim_en": "Unrooted vine cuttings and layerings",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060210900000",
+      "tanim_tr": "Diğer köklendirilmemiş çelik ve daldırmalar",
+      "tanim_en": "Other unrooted cuttings and layerings",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060220100000",
+      "tanim_tr": "Asma; aşılı veya köklendirilmiş",
+      "tanim_en": "Vine; grafted or rooted",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060220200000",
+      "tanim_tr": "Meyveleri veya sert kabuklu meyveleri yenilen canlı ağaçlar, çalılar; çıplak kökleriyle birlikte olanlar (asma HARİÇ)",
+      "tanim_en": "Live trees and shrubs whose fruits or nuts are edible; those with their bare roots (EXCEPT grapevines)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060220300000",
+      "tanim_tr": "Canlı narenciye fide ve ağaçları; çıplak kökleriyle birlikte olanlar HARİÇ",
+      "tanim_en": "Live citrus seedlings and trees; EXCEPT those with bare roots.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060220800011",
+      "tanim_tr": "Canlı kestane fide ve ağaçları; çıplak kökleriyle birlikte olanlar HARİÇ",
+      "tanim_en": "Live chestnut seedlings and trees; EXCEPT those with bare roots.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060220800012",
+      "tanim_tr": "Canlı fıstık çamı fide ve ağaçları; çıplak kökleriyle birlikte olanlar HARİÇ",
+      "tanim_en": "Live pine seedlings and trees; EXCEPT those with bare roots.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060220800019",
+      "tanim_tr": "Meyveleri veya sert kabuklu meyveleri yenilen canlı diğer ağaçlar, çalılar; çıplak kökleriyle birlikte olanlar HARİÇ",
+      "tanim_en": "Other living trees and shrubs whose fruits or nuts are edible; EXCEPT those with bare roots.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060230000000",
+      "tanim_tr": "Rododendronlar ve açelyalar; aşılı veya aşısız",
+      "tanim_en": "Rhododendrons and azaleas; grafted or ungrafted.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060240000000",
+      "tanim_tr": "Gül çelikleri, daldırmaları veya köklendirilmiş; aşılı veya aşısız",
+      "tanim_en": "Rose cuttings, layerings, or rooted plants; grafted or ungrafted.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290100000",
+      "tanim_tr": "Mantar miselleri",
+      "tanim_en": "Mushroom mycelia",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290200000",
+      "tanim_tr": "Ananas fidanı",
+      "tanim_en": "Pineapple seedling",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290300000",
+      "tanim_tr": "Sebze ve çilek fideleri",
+      "tanim_en": "Vegetable and strawberry seedlings",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290410011",
+      "tanim_tr": "Orman ağaçlarının köklendirilmiş çelikleri",
+      "tanim_en": "Rooted cuttings of forest trees",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290410012",
+      "tanim_tr": "Orman ağaçlarının köklendirilmiş fideleri",
+      "tanim_en": "Rooted seedlings of forest trees",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290410029",
+      "tanim_tr": "Canlı diğer orman ağaçları",
+      "tanim_en": "Other living forest trees",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290450011",
+      "tanim_tr": "Diğer ağaç ve çalıların köklendirilmiş çelikleri",
+      "tanim_en": "Rooted cuttings of other trees and shrubs",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290450012",
+      "tanim_tr": "Diğer ağaç ve çalıların köklendirilmiş fidanları",
+      "tanim_en": "Rooted seedlings of other trees and shrubs",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290460000",
+      "tanim_tr": "Canlı açıkhava ağaç ve çalıları (meyve ve orman ağaç/fide/çelikleri HARİÇ); çıplak kökleriyle birlikte olanlar",
+      "tanim_en": "Live outdoor trees and shrubs (EXCEPT fruit and forest tree/seedlings/cuttings); those with bare roots.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290470000",
+      "tanim_tr": "Kozalaklı ve yaprak dökmeyen açıkhava canlı ağaçları; çıplak kökleriyle birlikte olanlar HARİÇ",
+      "tanim_en": "Coniferous and evergreen outdoor living trees; EXCEPT those with bare roots.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290480000",
+      "tanim_tr": "Canlı açıkhava diğer ağaç ve çalıları; çıplak kökleriyle birlikte olanlar HARİÇ",
+      "tanim_en": "Other living outdoor trees and shrubs; EXCEPT those with bare roots.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290500000",
+      "tanim_tr": "Diğer açık hava bitkileri",
+      "tanim_en": "Other outdoor plants",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290700011",
+      "tanim_tr": "Oda bitkilerinin köklendirilmiş çelikleri (kaktüsler hariç)",
+      "tanim_en": "Rooted cuttings of houseplants (excluding cacti)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290700012",
+      "tanim_tr": "Oda bitkilerinin köklendirilmiş fidanları (kaktüsler hariç)",
+      "tanim_en": "Rooted seedlings of houseplants (excluding cacti)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290910000",
+      "tanim_tr": "Oda bitkileri; tomurcuklu/çiçek açmış çiçekler (kaktüsler hariç)",
+      "tanim_en": "Houseplants; budding/blooming flowers (excluding cacti)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060290990000",
+      "tanim_tr": "Diğer oda bitkileri",
+      "tanim_en": "Other houseplants",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060311000000",
+      "tanim_tr": "Güller (taze)",
+      "tanim_en": "Roses (fresh)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060312000000",
+      "tanim_tr": "Karanfiller (taze)",
+      "tanim_en": "Carnations (fresh)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060313000000",
+      "tanim_tr": "Orkideler (taze)",
+      "tanim_en": "Orchids (fresh)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060314000000",
+      "tanim_tr": "Krizantemler (taze)",
+      "tanim_en": "Chrysanthemums (fresh)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060315000000",
+      "tanim_tr": "Zambaklar (Lilium spp.) (taze)",
+      "tanim_en": "Lilies (Lilium spp.) (fresh)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060319100000",
+      "tanim_tr": "Glayöller (taze)",
+      "tanim_en": "Gladioli (fresh)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060319200000",
+      "tanim_tr": "Düğün çiçeği (taze)",
+      "tanim_en": "Wedding flowers (fresh)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060319700000",
+      "tanim_tr": "Buket yapmaya elverişli veya süs amacına uygun kesme diğer çiçek ve tomurcuklar (taze)",
+      "tanim_en": "Cut flowers and buds (fresh) suitable for bouquet making or ornamental purposes.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060390000000",
+      "tanim_tr": "Buket yapmaya elverişli/kesme çiçek ve tomurcuklar (diğer hallerde)",
+      "tanim_en": "Flowers and buds suitable for bouquet making/cut flowers (otherwise)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060420110000",
+      "tanim_tr": "Ren geyiği likeni (taze)",
+      "tanim_en": "Reindeer lichen (fresh)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060420190000",
+      "tanim_tr": "Diğer yosunlar ve likenler (taze)",
+      "tanim_en": "Other mosses and lichens (fresh)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060420200000",
+      "tanim_tr": "Noel ağaçları (taze)",
+      "tanim_en": "Christmas trees (fresh)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060420400000",
+      "tanim_tr": "İğne yapraklı ağaçların dalları (taze)",
+      "tanim_en": "Branches of coniferous trees (fresh)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060420900011",
+      "tanim_tr": "Şimşir dalı (taze)",
+      "tanim_en": "Boxwood branch (fresh)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060420900019",
+      "tanim_tr": "Buket yapmaya elverişli diğer bitki yaprakları ve dalları (taze)",
+      "tanim_en": "Other plant leaves and branches (fresh) suitable for making bouquets",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060490110000",
+      "tanim_tr": "Ren geyiği likeni (kuru)",
+      "tanim_en": "Reindeer lichen (dried)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060490190000",
+      "tanim_tr": "Diğer yosunlar ve likenler (kuru)",
+      "tanim_en": "Other mosses and lichens (dry)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060490910000",
+      "tanim_tr": "Buket yapmaya elverişli diğer bitki yaprakları ve dalları (sadece kurutulmuş)",
+      "tanim_en": "Other plant leaves and branches suitable for bouquet making (dried only)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "060490990000",
+      "tanim_tr": "Buket yapmaya elverişli diğer bitkilerin kuru yaprakları ve dalları (boyanmış/ağartılmış/emprenye edilmiş)",
+      "tanim_en": "Dried leaves and branches of other plants suitable for bouquet making (dyed/bleached/impregnated)",
+      "grup": "genel",
+      "oran": 0.2
+    }
+  ]
+}

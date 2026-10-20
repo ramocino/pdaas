@@ -1,0 +1,2582 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-tevkifat",
+      "ad": {
+        "tr": "GTİP Tevkifat Eşleşmesi",
+        "en": "GTIP Withholding Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:3025ccccd76b8a7045611d7481b6225c9ffd7132605e159076a34976ccd9b728"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T20:08:56.107114+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "87",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:6100cdaf08d2fe5f22464094877559d7635ded740ba13b3e3ff279d02c89f32b"
+  },
+  "kayitlar": [
+    {
+      "kod": "870000000000",
+      "tanim_tr": "Motorlu kara taşıtları, bunların aksam ve parçaları",
+      "tanim_en": "Motor vehicles, their parts and accessories.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870110000000",
+      "tanim_tr": "Tek akslı traktörler",
+      "tanim_en": "Single-axle tractors",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870121100000",
+      "tanim_tr": "Yarı römorkler için çekiciler; YENİ, sadece sıkıştırma ateşlemeli içten yanmalı pistonlu motorlu olanlar (dizel veya yarı dizel)",
+      "tanim_en": "Tractors for semi-trailers; NEW, only those with compression ignition internal combustion piston engines (diesel or semi-diesel)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870121900000",
+      "tanim_tr": "Yarı römorkler için çekiciler; KULLANILMIŞ, sadece sıkıştırma ateşlemeli içten yanmalı pistonlu motorlu olanlar (dizel veya yarı dizel)",
+      "tanim_en": "Tractors for semi-trailers; USED, only those with compression ignition internal combustion piston engines (diesel or semi-diesel)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870122100000",
+      "tanim_tr": "Yarı römorkler için çekiciler; YENİ, hem dizel veya yarı dizel hem de tahrik gücü veren elektrik motorlu olanlar",
+      "tanim_en": "Tractors for semi-trailers; NEW, with both diesel or semi-diesel and electric motors providing drive power.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870122900000",
+      "tanim_tr": "Yarı römorkler için çekiciler; KULLANILMIŞ, dizel veya yarı dizel hem de tahrik gücü veren elektrik motorlu olanlar",
+      "tanim_en": "Tractors for semi-trailers; USED, diesel or semi-diesel, or with an electric motor providing drive power.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870123100000",
+      "tanim_tr": "Yarı römorkler için çekiciler; YENİ, hem kıvılcım ateşlemeli içten yanmalı pistonlu motorlu hem de tahrik gücü veren elektrik motorlu olanlar",
+      "tanim_en": "Tractors for semi-trailers; NEW, available with both spark-ignition internal combustion piston engines and electric motors for drive power.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870123900000",
+      "tanim_tr": "Yarı römorkler için çekiciler; KULLANILMIŞ, hem kıvılcım ateşlemeli içten yanmalı pistonlu motorlu hem de tahrik gücü veren elektrik motorlu olanlar",
+      "tanim_en": "Tractors for semi-trailers; USED, with both spark-ignition internal combustion piston engines and electric motors providing drive power.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870124100000",
+      "tanim_tr": "Yarı römorkler için çekiciler; YENİ, sadece elektrik motorundan tahrikli olanlar",
+      "tanim_en": "Tractors for semi-trailers; NEW, electric motor driven only.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870124900000",
+      "tanim_tr": "Yarı römorkler için çekiciler; KULLANILMIŞ, sadece elektrik motorundan tahrikli olanlar",
+      "tanim_en": "Tractors for semi-trailers; USED, only those with electric motor drive.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870129000000",
+      "tanim_tr": "Sadece kıvılcım ateşlemeli içten yanmalı pistonlu motorlu, başka yerde belirtilmemiş yarı römorkler için çekiciler",
+      "tanim_en": "Tractors for semi-trailers, not otherwise specified, with spark-ignition internal combustion piston engines only.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870130000000",
+      "tanim_tr": "Paletli traktörler",
+      "tanim_en": "Tracked tractors",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870191100000",
+      "tanim_tr": "Diğer tekerlekli traktörler (8709 pozisyonuna giren traktörler hariç); motor gücü <= 18 kW olup zirai ve ormancılıkta kullanılanlar",
+      "tanim_en": "Other wheeled tractors (excluding tractors falling under heading 8709); those with an engine power <= 18 kW and used in agriculture and forestry.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870191900000",
+      "tanim_tr": "Diğer traktörler (8709 pozisyonuna giren traktörler hariç); motor gücü <= 18 kW olup zirai ve ormancılıkta kullanılanlar HARİÇ",
+      "tanim_en": "Other tractors (excluding tractors falling under heading 8709); those with engine power <= 18 kW and used in agriculture and forestry are EXCLUDED.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870192100000",
+      "tanim_tr": "Diğer tekerlekli traktörler (8709 pozisyonuna giren traktörler hariç); 18 kW < motor gücü <= 37 kW olup zirai ve ormancılıkta kullanılanlar",
+      "tanim_en": "Other wheeled tractors (excluding tractors falling under heading 8709); those with an engine power of 18 kW <= 37 kW and used in agriculture and forestry.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870192900000",
+      "tanim_tr": "Diğer traktörler (8709 pozisyonuna giren traktörler hariç); 18 kW < motor gücü <= 37 kW olup zirai ve ormancılıkta kullanılanlar HARİÇ",
+      "tanim_en": "Other tractors (excluding tractors falling under heading 8709); those with an engine power of 18 kW <= 37 kW and used in agriculture and forestry are EXCLUDED.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870193100000",
+      "tanim_tr": "Diğer tekerlekli traktörler (8709 pozisyonuna giren traktörler hariç); 37 kW < motor gücü <= 75 kW olup zirai ve ormancılıkta kullanılanlar",
+      "tanim_en": "Other wheeled tractors (excluding tractors falling under heading 8709); those with an engine power of 37 kW <= 75 kW and used in agriculture and forestry.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870193900000",
+      "tanim_tr": "Diğer traktörler (8709 pozisyonuna giren traktörler hariç); 37 kW < motor gücü <= 75 kW olup zirai ve ormancılıkta kullanılanlar HARİÇ",
+      "tanim_en": "Other tractors (excluding tractors falling under heading 8709); those with an engine power of 37 kW <= 75 kW and used in agriculture and forestry are EXCLUDED.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870194100000",
+      "tanim_tr": "Diğer tekerlekli traktörler (8709 pozisyonuna giren traktörler hariç); 75 kW < motor gücü <= 130 kW olup zirai ve ormancılıkta kullanılanlar",
+      "tanim_en": "Other wheeled tractors (excluding tractors falling under heading 8709); those with an engine power of 75 kW <= 130 kW and used in agriculture and forestry.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870194900000",
+      "tanim_tr": "Diğer traktörler (8709 pozisyonuna giren traktörler hariç); 75 kW < motor gücü <= 130 kW olup zirai ve ormancılıkta kullanılanlar HARİÇ",
+      "tanim_en": "Other tractors (excluding tractors falling under heading 8709); those with an engine power of 75 kW <= 130 kW and used in agriculture and forestry are EXCLUDED.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870195100000",
+      "tanim_tr": "Diğer tekerlekli traktörler (8709 pozisyonuna giren traktörler hariç); motor gücü > 130 kW olup zirai ve ormancılıkta kullanılanlar",
+      "tanim_en": "Other wheeled tractors (excluding tractors falling under heading 8709); those with engine power > 130 kW and used in agriculture and forestry.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870195900000",
+      "tanim_tr": "Diğer traktörler (8709 pozisyonuna giren traktörler hariç); motor gücü > 130 kW olup zirai ve ormancılıkta kullanılanlar HARİÇ",
+      "tanim_en": "Other tractors (excluding tractors falling under heading 8709); those with engine power > 130 kW and used in agriculture and forestry are EXCLUDED.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870210111100",
+      "tanim_tr": "Otobüs; YENİ, sadece dizel veya yarı dizel motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2500 cm3",
+      "tanim_en": "Bus; NEW, diesel or semi-diesel engine only, passenger capacity >= 10 people, cylinder volume > 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870210111200",
+      "tanim_tr": "Midibüs; YENİ, sadece dizel veya yarı dizel motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2500 cm3",
+      "tanim_en": "Midibus; NEW, diesel or semi-diesel engine only, passenger capacity >= 10 people, cylinder volume > 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870210111300",
+      "tanim_tr": "Minibüs; YENİ, sadece dizel veya yarı dizel motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2500 cm3",
+      "tanim_en": "Minibus; NEW, diesel or semi-diesel engine only, passenger capacity >= 10 people, cylinder volume > 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870210191100",
+      "tanim_tr": "Otobüs; KULLANILMIŞ, sadece dizel veya yarı dizel motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2500 cm3",
+      "tanim_en": "Bus; USED, diesel or semi-diesel engine only, passenger capacity >= 10 people, cylinder volume > 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870210191200",
+      "tanim_tr": "Midibüs; KULLANILMIŞ, sadece dizel veya yarı dizel motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2500 cm3",
+      "tanim_en": "Minibus; USED, diesel or semi-diesel engine only, passenger capacity >= 10 people, cylinder volume > 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870210191300",
+      "tanim_tr": "Minibüs; KULLANILMIŞ, sadece dizel veya yarı dizel motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2500 cm3",
+      "tanim_en": "Minibus; USED, diesel or semi-diesel engine only, passenger capacity >= 10 people, cylinder volume > 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870210911100",
+      "tanim_tr": "Otobüs; YENİ, sadece dizel veya yarı dizel motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi <= 2500 cm3",
+      "tanim_en": "Bus; NEW, diesel or semi-diesel engine only, passenger capacity >= 10 people, cylinder volume <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870210911200",
+      "tanim_tr": "Midibüs; YENİ, sadece dizel veya yarı dizel motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi <= 2500 cm3",
+      "tanim_en": "Midibus; NEW, diesel or semi-diesel engine only, passenger capacity >= 10 people, cylinder volume <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870210911300",
+      "tanim_tr": "Minibüs; YENİ, sadece dizel veya yarı dizel motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi <= 2500 cm3",
+      "tanim_en": "Minibus; NEW, diesel or semi-diesel engine only, passenger capacity >= 10 people, cylinder volume <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870210991100",
+      "tanim_tr": "Otobüs; KULLANILMIŞ, sadece dizel veya yarı dizel motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi <= 2500 cm3",
+      "tanim_en": "Bus; USED, diesel or semi-diesel engine only, passenger capacity >= 10 people, cylinder volume <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870210991200",
+      "tanim_tr": "Midibüs; KULLANILMIŞ, sadece dizel veya yarı dizel motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi <= 2500 cm3",
+      "tanim_en": "Minibus; USED, diesel or semi-diesel engine only, passenger capacity >= 10 people, cylinder volume <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870210991300",
+      "tanim_tr": "Minibüs; KULLANILMIŞ, sadece dizel veya yarı dizel motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi <= 2500 cm3",
+      "tanim_en": "Minibus; USED, diesel or semi-diesel engine only, passenger capacity >= 10 people, cylinder volume <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870220100000",
+      "tanim_tr": "Yolcu taşımaya mahsus taşıtlar; hem dizel/yarı dizel hem de tahrik gücü veren elektrik motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2500cm3",
+      "tanim_en": "Passenger transport vehicles; equipped with both diesel/semi-diesel and electric motors for propulsion, carrying capacity >= 10 people, and cylinder volume > 2500 cm3.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870220900000",
+      "tanim_tr": "Yolcu taşımaya mahsus taşıtlar; hem dizel/yarı dizel hem de tahrik gücü veren elektrik motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi <=2500cm3",
+      "tanim_en": "Passenger transport vehicles; equipped with both diesel/semi-diesel and electric motors for propulsion, with a carrying capacity >= 10 people and a cylinder volume <= 2500 cm3.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870230100000",
+      "tanim_tr": "Yolcu taşımaya mahsus taşıtlar; hem benzinli hem de tahrik gücü veren elektrik motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2800 cm3",
+      "tanim_en": "Passenger vehicles; equipped with both gasoline-powered and electric motors for propulsion, with a carrying capacity >= 10 people and a cylinder volume > 2800 cm3.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870230900000",
+      "tanim_tr": "Yolcu taşımaya mahsus taşıtlar; hem benzinli hem de tahrik gücü veren elektrik motorlu, taşıma kapasitesi >= 10 kişi, silindir hacmi <= 2800 cm3",
+      "tanim_en": "Passenger vehicles; equipped with both gasoline-powered and electric motors for propulsion, with a carrying capacity >= 10 people and a cylinder volume <= 2800 cm3.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870240000000",
+      "tanim_tr": "Yolcu taşımaya mahsus taşıtlar; sadece elektrik motorundan tahrikli; taşıma kapasitesi >=10 kişi",
+      "tanim_en": "Vehicles intended for passenger transport; powered solely by electric motors; carrying capacity >=10 people.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870290111100",
+      "tanim_tr": "Otobüs; YENİ, benzinli, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2800 cm3",
+      "tanim_en": "Bus; NEW, gasoline-powered, passenger capacity >= 10 people, cylinder volume > 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870290111200",
+      "tanim_tr": "Midibüs; YENİ, benzinli, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2800 cm3",
+      "tanim_en": "Minibus; NEW, gasoline-powered, passenger capacity >= 10 people, cylinder volume > 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870290111300",
+      "tanim_tr": "Minibüs; YENİ, benzinli, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2800 cm3",
+      "tanim_en": "Minibus; NEW, gasoline-powered, passenger capacity >= 10 people, cylinder volume > 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870290191100",
+      "tanim_tr": "Otobüs; KULLANILMIŞ, benzinli, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2800 cm3",
+      "tanim_en": "Bus; USED, gasoline-powered, passenger capacity >= 10 people, cylinder capacity > 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870290191200",
+      "tanim_tr": "Midibüs; KULLANILMIŞ, benzinli, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2800 cm3",
+      "tanim_en": "Minibus; USED, gasoline-powered, passenger capacity >= 10 people, cylinder volume > 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870290191300",
+      "tanim_tr": "Minibüs; KULLANILMIŞ, benzinli, taşıma kapasitesi >= 10 kişi, silindir hacmi > 2800 cm3",
+      "tanim_en": "Minibus; USED, gasoline-powered, passenger capacity >= 10 people, cylinder volume > 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870290311100",
+      "tanim_tr": "Otobüs; YENİ, benzinli, taşıma kapasitesi >= 10 kişi, silindir hacmi <= 2800 cm3",
+      "tanim_en": "Bus; NEW, gasoline-powered, passenger capacity >= 10 people, cylinder volume <= 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870290311200",
+      "tanim_tr": "Midibüs; YENİ, benzinli, taşıma kapasitesi >= 10 kişi, silindir hacmi <= 2800 cm3",
+      "tanim_en": "Minibus; NEW, gasoline-powered, passenger capacity >= 10 people, cylinder volume <= 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870290311300",
+      "tanim_tr": "Minibüs; YENİ, benzinli, taşıma kapasitesi >= 10 kişi, silindir hacmi <= 2800 cm3",
+      "tanim_en": "Minibus; NEW, gasoline-powered, passenger capacity >= 10 people, cylinder volume <= 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870290391100",
+      "tanim_tr": "Otobüs; KULLANILMIŞ, benzinli, taşıma kapasitesi >= 10 kişi, silindir hacmi <= 2800 cm3",
+      "tanim_en": "Bus; USED, gasoline-powered, passenger capacity >= 10 people, cylinder capacity <= 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870290391200",
+      "tanim_tr": "Midibüs; KULLANILMIŞ, benzinli, taşıma kapasitesi >= 10 kişi, silindir hacmi <= 2800 cm3",
+      "tanim_en": "Minibus; USED, gasoline-powered, passenger capacity >= 10 people, cylinder volume <= 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870290391300",
+      "tanim_tr": "Minibüs; KULLANILMIŞ, benzinli, taşıma kapasitesi >= 10 kişi, silindir hacmi <= 2800 cm3",
+      "tanim_en": "Minibus; USED, gasoline-powered, passenger capacity >= 10 people, cylinder volume <= 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870290900000",
+      "tanim_tr": "10 veya daha fazla kişi taşımaya mahsus (sürücü dahil) diğer motorlarla mücehhez taşıtlar",
+      "tanim_en": "Vehicles equipped with other engines designed to carry 10 or more people (including the driver).",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870310110000",
+      "tanim_tr": "İnsan taşımak üzere imal edilmiş kar üzerinde hareket eden taşıtlar; dizel, yarı dizel veya benzinli, taşıma kapasitesi < 10 kişi",
+      "tanim_en": "Vehicles manufactured for transporting people on snow; diesel, semi-diesel or gasoline powered, with a carrying capacity of less than 10 people.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870310180000",
+      "tanim_tr": "İnsan taşımak üzere imal edilmiş golf sahalarında kullanılan özel taşıtlar ve benzeri diğer taşıtlar; dizel, yarı dizel veya benzinli",
+      "tanim_en": "Special vehicles used on golf courses and other similar vehicles manufactured for transporting people; diesel, semi-diesel or gasoline powered.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870321101000",
+      "tanim_tr": "Binek otomobilleri; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, silindir hacmi <= 1000 cm3",
+      "tanim_en": "Passenger cars; NEW, petrol only, passenger capacity < 10 people, displacement <= 1000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870321109011",
+      "tanim_tr": "Ambulanslar; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, silindir hacmi <= 1000 cm3",
+      "tanim_en": "Ambulances; NEW, gasoline only, carrying capacity < 10 people, cylinder volume <= 1000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870321109019",
+      "tanim_tr": "İnsan taşımak üzere imal edilmiş motorlu diğer taşıtlar; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, silindir hacmi <= 1000 cm3",
+      "tanim_en": "Other motor vehicles manufactured for the carriage of people; NEW, gasoline only, carrying capacity < 10 people, displacement <= 1000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870321901000",
+      "tanim_tr": "Binek otomobilleri; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, silindir hacmi <= 1000 cm3",
+      "tanim_en": "Passenger cars; USED, gasoline only, carrying capacity < 10 people, cylinder capacity <= 1000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870321909011",
+      "tanim_tr": "Ambulanslar; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, silindir hacmi <= 1000 cm3",
+      "tanim_en": "Ambulances; USED, gasoline only, carrying capacity < 10 people, cylinder volume <= 1000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870321909019",
+      "tanim_tr": "İnsan taşımak üzere imal edilmiş motorlu diğer taşıtlar; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, silindir hacmi <= 1000 cm3",
+      "tanim_en": "Other motor vehicles manufactured for the transport of people; USED, gasoline only, carrying capacity < 10 people, displacement <= 1000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870322101000",
+      "tanim_tr": "Binek otomobilleri; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1000 cm3 < silindir hacmi <= 1500 cm3",
+      "tanim_en": "Passenger cars; NEW, petrol only, carrying capacity < 10 people, 1000 cm3 < cylinder volume <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870322109011",
+      "tanim_tr": "Ambulanslar; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1000 cm3 < silindir hacmi <= 1500 cm3",
+      "tanim_en": "Ambulances; NEW, gasoline only, carrying capacity < 10 people, 1000 cm3 < cylinder volume <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870322109012",
+      "tanim_tr": "Karavanlar; YENİ, sadece benzinli, 1000 cm3 < silindir hacmi <= 1500 cm3",
+      "tanim_en": "Caravans; NEW, petrol only, 1000 cm3 < cylinder volume <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870322109019",
+      "tanim_tr": "İnsan taşımaya mahsus motorlu diğer taşıtlar; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1000 cm3 < silindir hacmi <= 1500 cm3",
+      "tanim_en": "Other motor vehicles intended for the carriage of people; NEW, gasoline only, carrying capacity < 10 people, 1000 cm3 < cylinder volume <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870322901000",
+      "tanim_tr": "Binek otomobilleri; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1000 cm3 < silindir hacmi <= 1500 cm3",
+      "tanim_en": "Passenger cars; USED, gasoline only, carrying capacity < 10 people, 1000 cm3 < cylinder volume <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870322909011",
+      "tanim_tr": "Ambulanslar; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1000 cm3 < silindir hacmi <= 1500 cm3",
+      "tanim_en": "Ambulances; USED, gasoline only, carrying capacity < 10 people, 1000 cm3 < cylinder volume <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870322909012",
+      "tanim_tr": "Karavanlar; KULLANILMIŞ, sadece benzinli, 1000 cm3 < silindir hacmi <= 1500 cm3",
+      "tanim_en": "Caravans; USED, gasoline only, 1000 cm3 < cylinder volume <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870322909019",
+      "tanim_tr": "İnsan taşımaya mahsus motorlu diğer taşıtlar; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1000 cm3 < silindir hacmi <= 1500 cm3",
+      "tanim_en": "Other motor vehicles intended for transporting people; USED, gasoline only, carrying capacity < 10 people, 1000 cm3 < cylinder volume <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870323110000",
+      "tanim_tr": "Karavanlar; YENİ, sadece benzinli, 1500 cm3 < silindir hacmi <= 3000 cm3",
+      "tanim_en": "Caravans; NEW, petrol only, 1500 cm3 < cylinder volume <= 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870323191100",
+      "tanim_tr": "Binek otomobilleri; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1500 cm3 < silindir hacmi <= 1600 cm3",
+      "tanim_en": "Passenger cars; NEW, petrol only, passenger capacity < 10 people, 1500 cm3 < displacement <= 1600 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870323191200",
+      "tanim_tr": "Binek otomobilleri; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1600 cm3 < silindir hacmi <= 2000 cm3",
+      "tanim_en": "Passenger cars; NEW, petrol only, passenger capacity < 10 people, 1600 cm3 < displacement <= 2000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870323191300",
+      "tanim_tr": "Binek otomobilleri; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, 2000 cm3 < silindir hacmi <= 3000 cm3",
+      "tanim_en": "Passenger cars; NEW, petrol only, passenger capacity < 10 people, 2000 cm3 < displacement <= 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870323199011",
+      "tanim_tr": "Ambulanslar; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1500 cm3 < silindir hacmi <= 3000 cm3",
+      "tanim_en": "Ambulances; NEW, gasoline only, carrying capacity < 10 people, 1500 cm3 < cylinder volume <= 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870323199019",
+      "tanim_tr": "İnsan taşımaya mahsus motorlu diğer taşıtlar; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1500 cm3 < silindir hacmi <= 3000 cm3",
+      "tanim_en": "Other motor vehicles intended for the carriage of people; NEW, gasoline only, carrying capacity < 10 people, 1500 cm3 < cylinder volume <= 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870323901100",
+      "tanim_tr": "Binek otomobilleri; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1500 cm3 < silindir hacmi <= 1600 cm3",
+      "tanim_en": "Passenger cars; USED, gasoline only, carrying capacity < 10 people, 1500 cm3 < cylinder volume <= 1600 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870323901200",
+      "tanim_tr": "Binek otomobilleri; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1600 cm3 < silindir hacmi <= 2000 cm3",
+      "tanim_en": "Passenger cars; USED, gasoline only, carrying capacity < 10 people, 1600 cm3 < cylinder volume <= 2000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870323901300",
+      "tanim_tr": "Binek otomobilleri; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, 2000 cm3 < silindir hacmi <= 3000 cm3",
+      "tanim_en": "Passenger cars; USED, gasoline only, carrying capacity < 10 people, 2000 cm3 < cylinder volume <= 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870323909011",
+      "tanim_tr": "Ambulanslar; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1500 cm3 < silindir hacmi <= 3000 cm3",
+      "tanim_en": "Ambulances; USED, gasoline only, carrying capacity < 10 people, 1500 cm3 < cylinder volume <= 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870323909019",
+      "tanim_tr": "İnsan taşımaya mahsus motorlu diğer taşıtlar; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1500 cm3 < silindir hacmi <= 3000 cm3",
+      "tanim_en": "Other motor vehicles intended for transporting people; USED, gasoline only, carrying capacity < 10 people, 1500 cm3 < cylinder volume <= 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870324101000",
+      "tanim_tr": "Binek otomobilleri; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, silindir hacmi > 3000 cm3",
+      "tanim_en": "Passenger cars; NEW, petrol only, passenger capacity < 10 people, displacement > 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870324109011",
+      "tanim_tr": "Ambulanslar; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, silindir hacmi > 3000 cm3",
+      "tanim_en": "Ambulances; NEW, gasoline only, carrying capacity < 10 people, cylinder volume > 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870324109019",
+      "tanim_tr": "İnsan taşımaya mahsus motorlu diğer taşıtlar; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, silindir hacmi > 3000 cm3",
+      "tanim_en": "Other motor vehicles intended for the transport of people; NEW, gasoline only, passenger capacity < 10 people, displacement > 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870324901000",
+      "tanim_tr": "Binek otomobilleri; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, silindir hacmi > 3000 cm3",
+      "tanim_en": "Passenger cars; USED, gasoline only, carrying capacity < 10 people, cylinder capacity > 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870324909011",
+      "tanim_tr": "Ambulanslar; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, silindir hacmi > 3000 cm3",
+      "tanim_en": "Ambulances; USED, gasoline only, carrying capacity < 10 people, cylinder volume > 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870324909019",
+      "tanim_tr": "İnsan taşımaya mahsus motorlu diğer taşıtlar; KULLANILMIŞ, sadece benzinli, taşıma kapasitesi < 10 kişi, silindir hacmi > 3000 cm3",
+      "tanim_en": "Other motor vehicles intended for transporting people; USED, gasoline only, carrying capacity < 10 people, cylinder capacity > 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870331101000",
+      "tanim_tr": "Binek otomobilleri; YENİ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, silindir hacmi <= 1500 cm3",
+      "tanim_en": "Passenger cars; NEW, diesel/semi-diesel only, passenger capacity < 10 people, displacement <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870331109011",
+      "tanim_tr": "Ambulanslar; YENİ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, silindir hacmi <= 1500 cm3",
+      "tanim_en": "Ambulances; NEW, diesel/semi-diesel only, transport capacity < 10 people, cylinder volume <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870331109019",
+      "tanim_tr": "İnsan taşımaya mahsus motorlu diğer taşıtlar; YENİ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, silindir hacmi <= 1500 cm3",
+      "tanim_en": "Other motor vehicles intended for the carriage of people; NEW, diesel/semi-diesel only, carrying capacity < 10 people, displacement <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870331901000",
+      "tanim_tr": "Binek otomobilleri; KULLANILMIŞ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, silindir hacmi <= 1500 cm3",
+      "tanim_en": "Passenger cars; USED, diesel/semi-diesel only, carrying capacity < 10 people, cylinder capacity <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870331909011",
+      "tanim_tr": "Ambulanslar; KULLANILMIŞ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, silindir hacmi <= 1500 cm3",
+      "tanim_en": "Ambulances; USED, diesel/semi-diesel only, carrying capacity < 10 people, cylinder volume <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870331909019",
+      "tanim_tr": "İnsan taşımaya mahsus motorlu diğer taşıtlar; KULLANILMIŞ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, silindir hacmi <= 1500 cm3",
+      "tanim_en": "Other motor vehicles intended for the transport of people; USED, diesel/semi-diesel only, carrying capacity < 10 people, cylinder capacity <= 1500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870332110000",
+      "tanim_tr": "Karavanlar; YENİ, sadece dizel/yarı dizel, 1500 cm3 < silindir hacmi <= 2500 cm3",
+      "tanim_en": "Caravans; NEW, diesel/semi-diesel only, 1500 cm3 < cylinder volume <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870332191100",
+      "tanim_tr": "Binek otomobiller; YENİ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, 1500 cm3 < silindir hacmi <= 1600 cm3",
+      "tanim_en": "Passenger cars; NEW, diesel/semi-diesel only, passenger capacity < 10 people, 1500 cm3 < displacement <= 1600 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870332191200",
+      "tanim_tr": "Binek otomobiller; YENİ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, 1600 cm3 < silindir hacmi <= 2000 cm3",
+      "tanim_en": "Passenger cars; NEW, diesel/semi-diesel only, passenger capacity < 10 people, 1600 cm3 < displacement <= 2000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870332191300",
+      "tanim_tr": "Binek otomobiller; YENİ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, 2000 cm3 < silindir hacmi <= 2500 cm3",
+      "tanim_en": "Passenger cars; NEW, diesel/semi-diesel only, passenger capacity < 10 people, 2000 cm3 < displacement <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870332199011",
+      "tanim_tr": "Ambulanslar; YENİ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, 1500 cm3 < silindir hacmi <= 2500 cm3",
+      "tanim_en": "Ambulances; NEW, diesel/semi-diesel only, transport capacity < 10 people, 1500 cm3 < cylinder volume <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870332199019",
+      "tanim_tr": "İnsan taşımaya mahsus motorlu diğer taşıtlar; YENİ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, 1500 cm3 < silindir hacmi <= 2500cm3",
+      "tanim_en": "Other motor vehicles intended for the carriage of people; NEW, diesel/semi-diesel only, carrying capacity < 10 people, 1500 cm3 < cylinder volume <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870332901100",
+      "tanim_tr": "Binek otomobiller; KULLANILMIŞ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, 1500 cm3 < silindir hacmi <= 1600 cm3",
+      "tanim_en": "Passenger cars; USED, diesel/semi-diesel only, carrying capacity < 10 people, 1500 cm3 < cylinder volume <= 1600 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870332901200",
+      "tanim_tr": "Binek otomobiller; KULLANILMIŞ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, 1600 cm3 < silindir hacmi <= 2000 cm3",
+      "tanim_en": "Passenger cars; USED, diesel/semi-diesel only, carrying capacity < 10 people, 1600 cm3 < cylinder volume <= 2000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870332901300",
+      "tanim_tr": "Binek otomobiller; KULLANILMIŞ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, 2000 cm3 < silindir hacmi <= 2500 cm3",
+      "tanim_en": "Passenger cars; USED, diesel/semi-diesel only, carrying capacity < 10 people, 2000 cm3 < cylinder volume <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870332909011",
+      "tanim_tr": "Ambulanslar; KULLANILMIŞ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, 1500 cm3 < silindir hacmi <= 2500 cm3",
+      "tanim_en": "Ambulances; USED, diesel/semi-diesel only, carrying capacity < 10 people, 1500 cm3 < cylinder volume <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870332909019",
+      "tanim_tr": "İnsan taşımaya mahsus motorlu diğer taşıtlar; KULLANILMIŞ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, 1500 cm3 < silindir hacmi <= 2500cm3",
+      "tanim_en": "Other motor vehicles intended for the transport of people; USED, diesel/semi-diesel only, carrying capacity < 10 people, 1500 cm3 < cylinder volume <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870333110000",
+      "tanim_tr": "Karavanlar; YENİ, sadece dizel/yarı dizel, silindir hacmi > 2500 cm3",
+      "tanim_en": "Caravans; NEW, diesel/semi-diesel only, cylinder capacity > 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870333191011",
+      "tanim_tr": "Binek otomobilleri; YENİ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, 2500 cm3 < silindir hacmi <= 3000 cm3",
+      "tanim_en": "Passenger cars; NEW, diesel/semi-diesel only, passenger capacity < 10 people, 2500 cm3 < displacement <= 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870333191012",
+      "tanim_tr": "Binek otomobilleri; YENİ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, silindir hacmi > 3000 cm3",
+      "tanim_en": "Passenger cars; NEW, diesel/semi-diesel only, passenger capacity < 10 people, displacement > 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870333199011",
+      "tanim_tr": "Ambulanslar; YENİ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, silindir hacmi > 2500 cm3",
+      "tanim_en": "Ambulances; NEW, diesel/semi-diesel only, transport capacity < 10 people, cylinder capacity > 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870333199019",
+      "tanim_tr": "İnsan taşımaya mahsus motorlu diğer taşıtlar; YENİ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, silindir hacmi > 2500 cm3",
+      "tanim_en": "Other motor vehicles intended for the transport of people; NEW, diesel/semi-diesel only, carrying capacity < 10 people, cylinder capacity > 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870333901011",
+      "tanim_tr": "Binek otomobilleri; KULLANILMIŞ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, 2500 cm3 < silindir hacmi <= 3000 cm3",
+      "tanim_en": "Passenger cars; USED, diesel/semi-diesel only, carrying capacity < 10 people, 2500 cm3 < cylinder volume <= 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870333901012",
+      "tanim_tr": "Binek otomobilleri; KULLANILMIŞ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, silindir hacmi > 3000 cm3",
+      "tanim_en": "Passenger cars; USED, diesel/semi-diesel only, carrying capacity < 10 people, cylinder capacity > 3000 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870333909011",
+      "tanim_tr": "Ambulanslar; KULLANILMIŞ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, silindir hacmi > 2500 cm3",
+      "tanim_en": "Ambulances; USED, diesel/semi-diesel only, transport capacity < 10 people, cylinder volume > 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870333909019",
+      "tanim_tr": "İnsan taşımaya mahsus motorlu diğer taşıtlar; KULLANILMIŞ, sadece dizel/yarı dizel, taşıma kapasitesi < 10 kişi, silindir hacmi > 2500 cm3",
+      "tanim_en": "Other motor vehicles intended for transporting people; USED, diesel/semi-diesel only, carrying capacity < 10 people, cylinder capacity > 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870340100000",
+      "tanim_tr": "Hem benzinli hem de tahrik gücü veren elektrik motorlu taşıtlar; YENİ, harici güç kaynağına bağlanarak şarj edilenler HARİÇ, taşıma kap. < 10 kişi",
+      "tanim_en": "Vehicles with both gasoline and electric motors providing propulsion; EXCEPT NEW ones that are charged by connecting to an external power source, carrying capacity < 10 people.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870340900000",
+      "tanim_tr": "Hem benzinli hem de tahrik gücü veren elektrik motorlu taşıtlar; KULLANILMIŞ, harici güç kaynağına bağlanarak şarj edilenler HARİÇ, taş. kap.< 10 kişi",
+      "tanim_en": "Vehicles with both gasoline and electric motors providing propulsion; EXCEPT USED vehicles that are charged by connecting to an external power source, carrying capacity < 10 people.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870350000000",
+      "tanim_tr": "Hem dizel/yarı dizel hem de tahrik gücü veren elektrik motorlu taşıtlar; harici güç kaynağına bağlanarak şarj edilenler HARİÇ, taş. kap. < 10 kişi",
+      "tanim_en": "Vehicles with both diesel/semi-diesel and electric motors providing propulsion; EXCEPT those charged by connecting to an external power source, have a transport capacity of < 10 people.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870360100000",
+      "tanim_tr": "Hem benzinli hem de tahrik gücü veren elektrik motorlu taşıtlar; YENİ, harici güç kaynağına bağlanarak şarj edilenler, taşıma kapasitesi < 10 kişi",
+      "tanim_en": "Vehicles powered by both gasoline and electric motors; NEW, charged by connecting to an external power source, carrying capacity < 10 people.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870360900000",
+      "tanim_tr": "Hem benzinli hem de tahrik gücü veren elektrik motorlu taşıtlar; KULLANILMIŞ, harici güç kaynağına bağlanarak şarj edilenler, taşıma kap. < 10 kişi",
+      "tanim_en": "Vehicles with both gasoline and electric motors providing propulsion; USED, those charged by connecting to an external power source, carrying capacity < 10 people.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870370000000",
+      "tanim_tr": "Hem dizel/yarı dizel hem de tahrik gücü veren elektrik motorlu taşıtlar; harici güç kaynağına bağlanarak şarj edilenler, taşıma kapasitesi < 10 kişi",
+      "tanim_en": "Vehicles with both diesel/semi-diesel and electric motors providing propulsion; those charged by connecting to an external power source, carrying capacity < 10 people.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870380100021",
+      "tanim_tr": "Binek otomobilleri; YENİ, sadece elektrik motorundan tahrikli fakat tahrik gücü vermeyen bir içten yanmalı motora sahip, taşıma kapasitesi < 10 kişi",
+      "tanim_en": "Passenger cars; NEW, powered solely by an electric motor but equipped with an internal combustion engine that does not provide drive power, with a carrying capacity of less than 10 people.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870380100029",
+      "tanim_tr": "Binek otomobilleri; YENİ, sadece elektrik motorundan tahrikli, taş. Kap. < 10 kişi (tahrik gücü vermeyen bir içten yanmalı motora sahip olanlar HARİÇ)",
+      "tanim_en": "Passenger cars; NEW, electric motor driven only, carrying capacity < 10 people (EXCEPT those with an internal combustion engine that does not provide propulsion).",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870380100039",
+      "tanim_tr": "Sadece elektrik motorundan tahrikli diğer taşıtlar (binek otomobilleri HARİÇ); YENİ, taşıma kapasitesi < 10 kişi",
+      "tanim_en": "Other vehicles powered solely by electric motors (excluding passenger cars); NEW, carrying capacity < 10 people.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870380900000",
+      "tanim_tr": "Sadece elektrik motorundan tahrikli taşıtlar; KULLANILMIŞ, taşıma kapasitesi < 10 kişi",
+      "tanim_en": "Only electric motor-driven vehicles; USED, carrying capacity < 10 people.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870390000000",
+      "tanim_tr": "Diğer binek otomobilleri ve insan taşımak üzere imal edilmiş motorlu diğer taşıtlar; taşıma kapasitesi < 10 kişi",
+      "tanim_en": "Other passenger cars and other motor vehicles manufactured for the carriage of people; carrying capacity < 10 people",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870410100000",
+      "tanim_tr": "Karayolu şebekesi dışında kullanılmak üzere yapılmış damperler; dizel, yarı dizel veya benzinli",
+      "tanim_en": "Tippers designed for use outside the road network; diesel, semi-diesel or gasoline powered.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870410900000",
+      "tanim_tr": "Karayolu şebekesi dışında kullanılmak üzere yapılmış diğer damperler",
+      "tanim_en": "Other dumpers designed for use outside the road network.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870421100000",
+      "tanim_tr": "Yüksek radyoaktif maddeleri taşımaya mahsus (EURATOM) sadece dizel veya yarı dizel motorlu taşıtlar; brüt ağırlığı <= 5 ton",
+      "tanim_en": "Vehicles intended for the transport of highly radioactive materials (EURATOM) using only diesel or semi-diesel engines; gross weight <= 5 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870421310000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece dizel veya yarı dizel motorlu diğer taşıtlar; YENİ, brüt ağırlığı <= 5 ton, silindir hacmi > 2500 cm3",
+      "tanim_en": "Other vehicles intended solely for the transport of goods, with diesel or semi-diesel engines; NEW, gross weight <= 5 tons, cylinder capacity > 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870421390000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece dizel veya yarı dizel motorlu diğer taşıtlar; KULLANILMIŞ, brüt ağırlığı <= 5 ton, silindir hacmi > 2500 cm3",
+      "tanim_en": "Other vehicles intended solely for the transport of goods, with diesel or semi-diesel engines; USED, gross weight <= 5 tons, cylinder capacity > 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870421910000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece dizel veya yarı dizel motorlu diğer taşıtlar; YENİ, brüt ağırlığı <= 5 ton, silindir hacmi <= 2500 cm3",
+      "tanim_en": "Other vehicles intended solely for the transport of goods, with diesel or semi-diesel engines; NEW, gross weight <= 5 tons, cylinder capacity <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870421990000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece dizel veya yarı dizel motorlu diğer taşıtlar; KULLANILMIŞ, brüt ağırlığı <= 5 ton, silindir hacmi <= 2500 cm3",
+      "tanim_en": "Other vehicles intended solely for the transport of goods, with diesel or semi-diesel engines; USED, gross weight <= 5 tons, cylinder capacity <= 2500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870422100000",
+      "tanim_tr": "Yüksek radyoaktif maddelerin taşınması için özel yapılmış (EURATOM) sadece dizel veya yarı dizel motorlu taşıtlar; 5 ton < brüt ağırlığı <= 20 ton",
+      "tanim_en": "Vehicles specially designed for the transport of highly radioactive materials (EURATOM), with diesel or semi-diesel engines only; gross weight < 5 tons <= 20 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870422910000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece dizel veya yarı dizel motorlu diğer taşıtlar; YENİ, 5 ton < brüt ağırlığı <= 20 ton",
+      "tanim_en": "Other vehicles intended solely for the transport of goods, with diesel or semi-diesel engines; NEW, 5 tons < gross weight <= 20 tons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870422990000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece dizel veya yarı dizel motorlu diğer taşıtlar; KULLANILMIŞ, 5 ton < brüt ağırlığı <= 20 ton",
+      "tanim_en": "Other vehicles intended solely for the transport of goods, with diesel or semi-diesel engines; USED, gross weight < 5 tons <= 20 tons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870423100000",
+      "tanim_tr": "Yüksek radyoaktif maddelerin taşınması için özel yapılmış (EURATOM) sadece dizel veya yarı dizel motorlu taşıtlar; brüt ağırlığı > 20 ton",
+      "tanim_en": "Vehicles specially designed for the transport of highly radioactive materials (EURATOM), using only diesel or semi-diesel engines; gross weight > 20 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870423910000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece dizel veya yarı dizel motorlu diğer taşıtlar; YENİ, brüt ağırlığı > 20 ton",
+      "tanim_en": "Other vehicles intended solely for the transport of goods, with diesel or semi-diesel engines; NEW, gross weight > 20 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870423990000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece dizel veya yarı dizel motorlu diğer taşıtlar; KULLANILMIŞ, brüt ağırlığı > 20 ton",
+      "tanim_en": "Other vehicles intended solely for the transport of goods, with diesel or semi-diesel engines; USED, gross weight > 20 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870431100000",
+      "tanim_tr": "Yüksek radyoaktif maddeleri taşımaya mahsus (EURATOM) sadece benzin motorlu taşıtlar; brüt ağırlığı <= 5 ton",
+      "tanim_en": "Only gasoline-powered vehicles intended for transporting highly radioactive materials (EURATOM); gross weight <= 5 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870431310000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece benzin motorlu diğer taşıtlar; YENİ, brüt ağırlığı <= 5 ton, silindir hacmi > 2800 cm3",
+      "tanim_en": "Other vehicles for the transport of goods, powered solely by gasoline; NEW, gross weight <= 5 tons, cylinder capacity > 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870431390000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece benzin motorlu diğer taşıtlar; KULLANILMIŞ, brüt ağırlığı <= 5 ton, silindir hacmi > 2800 cm3",
+      "tanim_en": "Other vehicles intended solely for the transport of goods, with gasoline engines; USED, gross weight <= 5 tons, cylinder capacity > 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870431910000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece benzin motorlu diğer taşıtlar; YENİ, brüt ağırlığı <= 5 ton, silindir hacmi <= 2800 cm3",
+      "tanim_en": "Other vehicles for the transport of goods, powered solely by gasoline; NEW, gross weight <= 5 tons, cylinder capacity <= 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870431990000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece benzin motorlu diğer taşıtlar; KULLANILMIŞ, brüt ağırlığı <= 5 ton, silindir hacmi <= 2800 cm3",
+      "tanim_en": "Other vehicles intended solely for the transport of goods, with gasoline engines; USED, gross weight <= 5 tons, cylinder capacity <= 2800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870432100000",
+      "tanim_tr": "Yüksek radyoaktif maddeleri taşımaya mahsus (EURATOM) sadece benzin motorlu taşıtlar; brüt ağırlığı > 5 ton",
+      "tanim_en": "Only gasoline-powered vehicles intended for transporting highly radioactive materials (EURATOM); gross weight > 5 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870432910000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece benzin motorlu diğer taşıtlar; YENİ, brüt ağırlığı > 5 ton",
+      "tanim_en": "Other vehicles for the transport of goods, powered solely by gasoline; NEW, gross weight > 5 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870432990000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece benzin motorlu diğer taşıtlar; KULLANILMIŞ, brüt ağırlığı > 5 ton",
+      "tanim_en": "Other vehicles intended solely for transporting goods, with gasoline engines; USED, gross weight > 5 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870441100000",
+      "tanim_tr": "Yüksek radyoaktif maddeleri taşımaya mahsus (EURATOM) hem dizel veya yarı dizel hem de elektrik motorlu taşıtlar; brüt ağırlığı <= 5 ton",
+      "tanim_en": "Vehicles designed for transporting highly radioactive materials (EURATOM), with both diesel or semi-diesel and electric motors; gross weight <= 5 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870441310000",
+      "tanim_tr": "Eşya taşımaya mahsus hem dizel veya yarı dizel hem de elektrik motorlu diğer taşıtlar; YENİ, silindir hacmi > 2500 cm3', brüt ağırlığı <= 5 ton",
+      "tanim_en": "Other vehicles for the transport of goods, with both diesel or semi-diesel and electric motors; NEW, displacement > 2500 cm3', gross weight <= 5 tons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870441390000",
+      "tanim_tr": "Eşya taşımaya mahsus hem dizel veya yarı dizel hem de elektrik motorlu diğer taşıtlar; KULLANILMIŞ, silindir hacmi > 2500 cm3, brüt ağırlığı <= 5 ton",
+      "tanim_en": "Other vehicles for transporting goods, whether diesel, semi-diesel, or electric; USED, with cylinder capacity > 2500 cm3 and gross weight <= 5 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870441910000",
+      "tanim_tr": "Eşya taşımaya mahsus hem dizel veya yarı dizel hem de elektrik motorlu diğer taşıtlar; YENİ, silindir hacmi <= 2500 cm3', brüt ağırlığı <= 5 ton",
+      "tanim_en": "Other vehicles for the transport of goods, with both diesel or semi-diesel and electric motors; NEW, displacement <= 2500 cm3', gross weight <= 5 tons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870441990000",
+      "tanim_tr": "Eşya taşımaya mahsus hem dizel veya yarı dizel hem de elektrik motorlu diğer taşıtlar; KULLANILMIŞ, silindir hacmi <= 2500 cm3, brüt ağırlığı <= 5 ton",
+      "tanim_en": "Other vehicles for the transport of goods, whether diesel, semi-diesel, or electric; USED, with a cylinder capacity <= 2500 cm3 and gross weight <= 5 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870442100000",
+      "tanim_tr": "Yüksek radyoaktif maddeleri taşımaya mahsus (EURATOM) hem dizel veya yarı dizel hem de elektrik motorlu taşıtlar; 5 ton < brüt ağırlığı <= 20 ton",
+      "tanim_en": "Vehicles for transporting highly radioactive materials (EURATOM) with both diesel or semi-diesel and electric motors; 5 tons < gross weight <= 20 tons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870442910000",
+      "tanim_tr": "Eşya taşımaya mahsus hem dizel veya yarı dizel hem de tahrik gücü veren elektrik motorlu diğer taşıtlar; YENİ, 5 ton < brüt ağırlığı <= 20 ton",
+      "tanim_en": "Other vehicles for the transport of goods, equipped with both diesel or semi-diesel motors and electric motors for propulsion; NEW, 5 tons < gross weight <= 20 tons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870442990000",
+      "tanim_tr": "Eşya taşımaya mahsus hem dizel veya yarı dizel hem de tahrik gücü veren elektrik motorlu diğer taşıtlar; KULLANILMIŞ, 5 ton < brüt ağırlığı <= 20 ton",
+      "tanim_en": "Other vehicles for the transport of goods, equipped with both diesel or semi-diesel motors and electric motors for propulsion; USED, 5 tons < gross weight <= 20 tons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870443100000",
+      "tanim_tr": "Yüksek radyoaktif maddeleri taşımaya mahsus (EURATOM) hem dizel veya yarı dizel hem de elektrik motorlu taşıtlar; brüt ağırlığı > 20 ton",
+      "tanim_en": "Vehicles designed for transporting highly radioactive materials (EURATOM), with both diesel or semi-diesel and electric motors; gross weight > 20 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870443910000",
+      "tanim_tr": "Eşya taşımaya mahsus hem dizel veya yarı dizel hem de tahrik gücü veren elektrik motorlu diğer taşıtlar; YENİ, brüt ağırlığı > 20 ton",
+      "tanim_en": "Other vehicles for the transport of goods, equipped with both diesel or semi-diesel motors and electric motors for propulsion; NEW, gross weight > 20 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870443990000",
+      "tanim_tr": "Eşya taşımaya mahsus hem dizel veya yarı dizel hem de tahrik gücü veren elektrik motorlu diğer taşıtlar; KULLANILMIŞ, brüt ağırlığı > 20 ton",
+      "tanim_en": "Other vehicles for the transport of goods, equipped with both diesel or semi-diesel motors and electric motors for propulsion; USED, gross weight > 20 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870451100000",
+      "tanim_tr": "Yüksek radyoaktif maddeleri taşımaya mahsus (EURATOM) hem benzinli hem de tahrik gücü veren elektrik motorlu taşıtlar; brüt ağırlığı <= 5 ton",
+      "tanim_en": "Vehicles designed for transporting highly radioactive materials (EURATOM), powered by both gasoline and electric motors; gross weight <= 5 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870451310000",
+      "tanim_tr": "Eşya taşımaya mahsus hem benzinli hem de tahrik gücü veren elektrik motorlu diğer taşıtlar; YENİ, silindir hacmi > 2800 cm3, brüt ağırlığı <= 5 ton",
+      "tanim_en": "Other vehicles for transporting goods, powered by both gasoline and electric motors; NEW, displacement > 2800 cm3, gross weight <= 5 tons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870451390000",
+      "tanim_tr": "Eşya taşımaya mahsus hem benzinli hem de elektrik motorlu diğer taşıtlar; KULLANILMIŞ, silindir hacmi > 2800 cm3, brüt ağırlığı <= 5 ton",
+      "tanim_en": "Other vehicles for transporting goods, powered by both gasoline and electric motors; USED, with a cylinder capacity > 2800 cm3 and gross weight <= 5 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870451910000",
+      "tanim_tr": "Eşya taşımaya mahsus hem benzinli hem de tahrik gücü veren elektrik motorlu diğer taşıtlar; YENİ, silindir hacmi <= 2800 cm3, brüt ağırlığı <= 5 ton",
+      "tanim_en": "Other vehicles for transporting goods, powered by both gasoline and electric motors; NEW, displacement <= 2800 cm3, gross weight <= 5 tons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870451990000",
+      "tanim_tr": "Eşya taşımaya mahsus hem benzinli hem de elektrik motorlu diğer taşıtlar; KULLANILMIŞ, silindir hacmi <= 2800 cm3, brüt ağırlığı <= 5 ton",
+      "tanim_en": "Other vehicles for transporting goods, powered by both gasoline and electric motors; USED, cylinder capacity <= 2800 cm3, gross weight <= 5 tons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870452100000",
+      "tanim_tr": "Yüksek radyoaktif maddeleri taşımaya mahsus (EURATOM) hem benzinli hem de tahrik gücü veren elektrik motorlu taşıtlar; brüt ağırlığı > 5 ton",
+      "tanim_en": "Vehicles designed for transporting highly radioactive materials (EURATOM), powered by both gasoline and electric motors; gross weight > 5 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870452910000",
+      "tanim_tr": "Eşya taşımaya mahsus hem benzinli hem de tahrik gücü veren elektrik motorlu diğer taşıtlar; YENİ, brüt ağırlığı > 5 ton",
+      "tanim_en": "Other vehicles for transporting goods, powered by both gasoline and electric motors; NEW, gross weight > 5 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870452990000",
+      "tanim_tr": "Eşya taşımaya mahsus hem benzinli hem de tahrik gücü veren elektrik motorlu diğer taşıtlar; KULLANILMIŞ, brüt ağırlığı > 5 ton",
+      "tanim_en": "Other vehicles for transporting goods, powered by both gasoline and electric motors; USED, gross weight > 5 tons.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870460000000",
+      "tanim_tr": "Eşya taşımaya mahsus sadece tahrik gücü veren elektrik motorlu diğer taşıtlar",
+      "tanim_en": "Other vehicles with electric motors providing only propulsion power, intended for the transport of goods.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870490000000",
+      "tanim_tr": "Eşya taşımaya mahsus motorlu diğer taşıtlar",
+      "tanim_en": "Other motor vehicles for the transport of goods",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870510000011",
+      "tanim_tr": "Vinçli taşıtlar; kaldırma kapasitesi <= 75 ton",
+      "tanim_en": "Crane vehicles; lifting capacity <= 75 tons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870510000019",
+      "tanim_tr": "Vinçli taşıtlar; kaldırma kapasitesi > 75 ton",
+      "tanim_en": "Crane vehicles; lifting capacity > 75 tons",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870520000000",
+      "tanim_tr": "Sondaj veya delme işlerinde kullanılan seyyar derrickler",
+      "tanim_en": "Portable derricks used in drilling or boring operations.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870530000000",
+      "tanim_tr": "İtfaiye taşıtları",
+      "tanim_en": "Fire trucks",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870540000000",
+      "tanim_tr": "Beton karıştırıcı ile mücehhez kamyonlar",
+      "tanim_en": "Trucks equipped with concrete mixers",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870590300000",
+      "tanim_tr": "Beton pompalama taşıtları",
+      "tanim_en": "Concrete pumping vehicles",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870590801011",
+      "tanim_tr": "Arazözler",
+      "tanim_en": "Water tankers",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870590801012",
+      "tanim_tr": "Kar küremeye mahsus taşıtlar",
+      "tanim_en": "Vehicles for snow removal",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870590809011",
+      "tanim_tr": "Merdivenli veya yükseltilebilen platformlu taşıtlar",
+      "tanim_en": "Vehicles with stairs or elevated platforms",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870590809018",
+      "tanim_tr": "Özel amaçlı motorlu diğer taşıtlar (kurtarıcılar, yol süpürme arabaları, seyyar atölyeler, seyyar radyoloji üniteleri, vb.)",
+      "tanim_en": "Other special-purpose motor vehicles (recovery vehicles, road sweeping vehicles, mobile workshops, mobile radiology units, etc.)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870600110000",
+      "tanim_tr": "87.02 ve 87.04 pozisyonlarında yer alan dizel/yarı dizel (silindir hacmi > 2500cm3) ve benzinli (silindir hacmi >2800 cm3) araçların motorlu şasileri",
+      "tanim_en": "Engine chassis of diesel/semi-diesel (cylinder capacity > 2500 cm3) and gasoline (cylinder capacity > 2800 cm3) vehicles falling under headings 87.02 and 87.04.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870600190000",
+      "tanim_tr": "8701'deki traktörlerin ve 8703' teki dizel/yarı dizel (silindir hacmi > 2500cm3) ve benzinli (silindir hacmi >2800 cm3) araçların motorlu şasileri",
+      "tanim_en": "Motor chassis of tractors in 8701 and diesel/semi-diesel (cylinder capacity > 2500 cm3) and gasoline (cylinder capacity > 2800 cm3) vehicles in 8703",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870600910000",
+      "tanim_tr": "8703 pozisyonunda yer alan dizel/yarı dizel (silindir hacmi <= 2500cm3) ve benzinli (silindir hacmi <= 2800 cm3) araçların motorlu şasileri",
+      "tanim_en": "Engine chassis of diesel/semi-diesel (cylinder capacity <= 2500 cm3) and gasoline (cylinder capacity <= 2800 cm3) vehicles falling under heading 8703.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870600990000",
+      "tanim_tr": "87.02, 87.04, 87.05 pozisyonlarındaki dizel/yarı dizel (silindir hacmi <= 2500cm3) ve benzinli (silindir hacmi <= 2800 cm3) araçların motorlu şasileri",
+      "tanim_en": "Engine chassis of diesel/semi-diesel (cylinder capacity <= 2500 cm3) and gasoline (cylinder capacity <= 2800 cm3) vehicles in headings 87.02, 87.04, and 87.05.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870710100000",
+      "tanim_tr": "Binek otomobilleri ve insan taşımak üzere imal edilmiş diğer motorlu taşıtların (87.03) karoserileri; montaj sanayii için olanlar",
+      "tanim_en": "Bodywork for passenger cars and other motor vehicles manufactured for the carriage of people (87.03); those for the assembly industry.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870710900000",
+      "tanim_tr": "Binek otomobilleri ve insan taşımak üzere imal edilmiş diğer motorlu taşıtların (87.03) karoserileri; montaj sanayii için olanlar HARİÇ",
+      "tanim_en": "Bodywork of passenger cars and other motor vehicles manufactured for the carriage of people (87.03); EXCEPT those for assembly industry.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870790100000",
+      "tanim_tr": "Montaj sanayi için karoserler; 8701.10, 8704 (dizel/yarı dizel (hacmi <= 2500 cm3) ve benzinli (hacmi <= 2800 cm3)) ve 8705'teki taşıtlar için",
+      "tanim_en": "Bodywork for the assembly industry; for vehicles in 8701.10, 8704 (diesel/semi-diesel (volume <= 2500 cm3) and petrol (volume <= 2800 cm3)) and 8705.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870790900000",
+      "tanim_tr": "87.01, 87.02, 87.04 ve 87.05 Pozisyonlarında yer alan motorlu kara taşıtlarının karoserileri (şoför mahalleri dahil); 8707.90.10'da yer alanlar HARİÇ",
+      "tanim_en": "The bodies (including driver's cabins) of motor vehicles falling under headings 87.01, 87.02, 87.04 and 87.05; EXCEPT those falling under 8707.90.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870810100000",
+      "tanim_tr": "Montaj sanayi için tamponlar ve aksam-parçaları; 8703, 8704 (dizel/yarı dizel (sil.hacmi <= 2500cm3) ve benzinli (sil.hacmi<=2800cm3)) ve 8705 için",
+      "tanim_en": "Bumpers and components for the assembly industry; for 8703, 8704 (diesel/semi-diesel (cylinder volume <= 2500cm3) and petrol (cylinder volume <= 2800cm3)) and 8705.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870810901000",
+      "tanim_tr": "Traktörlere (87.01) ait tamponlar ve bunların aksam ve parçaları",
+      "tanim_en": "Bumpers and parts thereof for tractors (87.01)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870810909011",
+      "tanim_tr": "87.02 ila 87.05 Pozisyonlarındaki motorlu kara taşıtları için tamponlar ve bunların aksam-parçaları; 8708.10.10'da yer alanlar HARİÇ, metal dökümden",
+      "tanim_en": "Bumpers and their parts for motor vehicles in headings 87.02 to 87.05; made of cast metal, EXCEPT those included in 8708.10.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870810909019",
+      "tanim_tr": "87.02 ila 87.05 Pozisyonlarındaki motorlu kara taşıtları için tamponlar ve bunların aksam-parçaları; 8708.10.10'da yer alanlar ve metal dökümden HARİÇ",
+      "tanim_en": "Bumpers and their parts for motor vehicles in headings 87.02 to 87.05; EXCEPT those included in 8708.10.10 and made of metal casting.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870821100000",
+      "tanim_tr": "Montaj sanayi için emniyet kemerleri; 8703, 8704 (dizel/yarı dizel (sil.hacmi <= 2500 cm3) ve benzinli (sil.hacmi <= 2800 cm3)) ve 8705 için",
+      "tanim_en": "Safety belts for assembly industry; for 8703, 8704 (diesel/semi-diesel (cylinder volume <= 2500 cm3) and gasoline (cylinder volume <= 2800 cm3)) and 8705.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870821900000",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için emniyet kemerleri; 8708.21.10 alt pozisyonunda yer alanlar HARİÇ",
+      "tanim_en": "Seat belts for motor vehicles in positions 87.01 to 87.05; EXCEPT those in subheading 8708.21.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870822100000",
+      "tanim_tr": "Bu faslın 1 nolu alt pozisyon notunda belirtilen ön, arka ve diğer camlar; montaj sanayiinde kullanılanlar: 87.01.10 ,,,,, (Ayrıntı Resmi Gazetede)",
+      "tanim_en": "Front, rear and other windows, as specified in subheading note 1 of this chapter; those used in the assembly industry: 87.01.10 ,,,,, (Details in the Official Gazette)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870822900000",
+      "tanim_tr": "Bu faslın 1 nolu alt pozisyon notunda belirtilen ön, arka ve diğer camlar; 8708.22.10 pozisyonunda yer alanlar HARİÇ",
+      "tanim_en": "Front, rear and other windows as specified in subheading note 1 of this chapter; EXCEPT those falling under heading 8708.22.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870829101000",
+      "tanim_tr": "Montaj sanayi için karoserilerin diğer aksam ve parçaları; 8701.10 Alt pozisyonundaki motokültörlere ait olanlar (8708.22.10'daki camlar HARİÇ)",
+      "tanim_en": "Other parts and components of car bodies for the assembly industry; those belonging to motor cultivators of subheading 8701.10 (EXCLUDING glass of 8708.22.10)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870829109000",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu taşıtların karoserilerinin diğer aksam, parça ve aksesuarı; montaj sanayi için olanlar",
+      "tanim_en": "Other parts, components and accessories for the bodies of motor vehicles falling under headings 87.01 to 87.05; those intended for the assembly industry.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870829901000",
+      "tanim_tr": "Traktör karoserilerinin diğer aksam ve parçaları; montaj sanayi için ve 8708.22.90'daki camlar HARİÇ (ayrıntı Resmi Gazetede)",
+      "tanim_en": "Other parts and components of tractor bodies; for the assembly industry and EXCLUDING the glass as specified in 8708.22.90 (details in the Official Gazette)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870829909000",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu taşıtların karoserilerinin diğer aksam, parça ve aksesuarı; montaj sanayi için olanlar HARİÇ",
+      "tanim_en": "Other parts, components and accessories of the bodies of motor vehicles falling under headings 87.01 to 87.05; EXCLUDING those for the assembly industry.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870830100000",
+      "tanim_tr": "Montaj sanayi için frenler, servo-frenler ve aksamı; 8701.10, 8703, 8704 (dizel/yarı dizel (hacmi<= 2500 cm3) ve benzinli (hacmi<=2800cm3)), 8705 için",
+      "tanim_en": "Brakes, servo-brakes and components for assembly industry; 8701.10, 8703, 8704 (diesel/semi-diesel (volume <= 2500 cm3) and gasoline (volume <= 2800 cm3)), for 8705",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870830910011",
+      "tanim_tr": "87.01 ila 87.05'teki motorlu kara taşıtlarındaki diskli frenler ve aksam-parçaları; 8708.30.10 pozisyonunda yer alanlar HARİÇ, metal dökümden olanlar",
+      "tanim_en": "Disc brakes and parts thereof for motor vehicles in categories 87.01 to 87.05; those made of cast metal, EXCEPT those falling under category 8708.30.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870830910019",
+      "tanim_tr": "87.01 ila 87.05'teki motorlu kara taşıtlarındaki diskli frenler ve aksam-parçaları; 8708.30.10'da yer alanlar ve metal dökümden olanlar HARİÇ",
+      "tanim_en": "Disc brakes and their components in motor vehicles, as specified in 87.01 to 87.05; EXCEPT those specified in 8708.30.10 and those made of cast metal.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870830990011",
+      "tanim_tr": "87.01 ila 87.05'teki motorlu kara taşıtları için diğer frenler, servo-frenler ve aksam-parçalarıı; 8708.30.10'dakiler HARİÇ, metal dökümden olanlar",
+      "tanim_en": "Other brakes, servo-brakes and parts thereof for motor vehicles in categories 87.01 to 87.05; those made of cast metal, EXCEPT those in category 8708.30.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870830990019",
+      "tanim_tr": "87.01 ila 87.05'teki motorlu kara taşıtları için diğer frenler, servo-frenler ve aksam-parçalarıı; 8708.30.10'dakiler ve metal dökümden olanlar HARİÇ",
+      "tanim_en": "Other brakes, servo-brakes and parts thereof for motor vehicles in categories 87.01 to 87.05; EXCEPT those in category 8708.30.10 and those made of cast metal.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870840200000",
+      "tanim_tr": "Montaj sanayi için vites kutuları ve aksamı; 8701.10, 8703, 8704 (dizel/yarı dizel (hacmi <= 2500 cm3) ve benzinli (hacmi<=2800cm3)) ve 8705 için",
+      "tanim_en": "Gearboxes and components for assembly industry; for 8701.10, 8703, 8704 (diesel/semi-diesel (volume <= 2500 cm3) and petrol (volume <= 2800 cm3)) and 8705",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870840500000",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için vites kutuları; 8708.40.20 alt pozisyonunda yer alanlar HARİÇ",
+      "tanim_en": "Gearboxes for motor vehicles in positions 87.01 to 87.05; EXCEPT those in subheading 8708.40.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870840910000",
+      "tanim_tr": "87.01 ila 87.05'teki motorlu kara taşıtları için vites kutularının kapalı kalıpta dövülmüş çelikten aksam ve parçaları; 8708.40.20'dekiler HARİÇ",
+      "tanim_en": "Parts and components of gearboxes made of closed-die forged steel for motor vehicles, as specified in 87.01 to 87.05; EXCEPT those specified in 8708.40.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870840990000",
+      "tanim_tr": "87.01 ila 87.05'teki motorlu kara taşıtları için vites kutularının aksam ve parçaları; kapalı kalıpta dövülmüş çelikten ve 8708.40.20'dekiler HARİÇ",
+      "tanim_en": "Parts and components of gearboxes for motor vehicles, as specified in 87.01 to 87.05; made of forged steel and EXCEPT those specified in 8708.40.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870850200000",
+      "tanim_tr": "Montaj sanayi için akslar ve aksamı; 8703, 8704 (dizel/yarı dizel (hacmi <= 2500 cm3) ve benzinli (hacmi <= 2800 cm3)) ve 87.05 için",
+      "tanim_en": "Axles and components for assembly industry; for 8703, 8704 (diesel/semi-diesel (volume <= 2500 cm3) and gasoline (volume <= 2800 cm3)) and 87.05",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870850350014",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu taşıtlar için taşıyıcı akslar, dingiller, dingil başları; 8708.50.20.00.00 için olanlar HARİÇ",
+      "tanim_en": "Axles, shafts, and axle heads for motor vehicles in headings 87.01 to 87.05; EXCEPT those for 8708.50.20.00.00.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870850350019",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için diferansiyelli hareket ettirici diğer akslar",
+      "tanim_en": "Other axles with differential drive for motor vehicles falling under positions 87.01 to 87.05",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870850550000",
+      "tanim_tr": "Motorlu kara taşıtları için diferansiyelli hareket ettirici akslar ve taşıyıcı aksların kapalı kalıpta dövülmüş çelikten aksamı; 8708.50.20 hariç",
+      "tanim_en": "Components of differential drive axles and carrier axles for motor vehicles, made of closed-die forged steel; excluding 8708.50.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870850910000",
+      "tanim_tr": "Motorlu kara taşıtları için taşıyıcı aksların aksamı; kapalı kalıpta dövülmüş çelikten olanlar ve 8708.50.20'de yer alanlar HARİÇ",
+      "tanim_en": "Parts of carrier axles for motor vehicles; EXCEPT those made of forged steel in closed die and those included in 8708.50.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870850990011",
+      "tanim_tr": "Motorlu kara taşıtları için diferansiyelli hareket ettirici aksların aksam-parçaları; 8708.50.55 ve 8708.50.20'dekiler HARİÇ, metal dökümden olanlar",
+      "tanim_en": "Parts of differential drive axles for motor vehicles, made of cast metal, EXCEPT those specified in 8708.50.55 and 8708.50.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870850990019",
+      "tanim_tr": "Motorlu kara taşıtları için başka yerde belirtilmemiş diferansiyelli hareket ettirici aksların aksam-parçaları",
+      "tanim_en": "Components of differential drive axles for motor vehicles, not specified elsewhere.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870870100000",
+      "tanim_tr": "Montaj sanayi için tekerlekler ve aksamı; 8701.10, 8703, 8704 (dizel/yarı dizel (hacmi <= 2500cm3) ve benzinli (hacmi<=2800cm3)) ve 87.05 için",
+      "tanim_en": "Wheels and parts for the assembly industry; for 8701.10, 8703, 8704 (diesel/semi-diesel (volume <= 2500cm3) and petrol (volume <= 2800cm3)) and 87.05",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870870500012",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için aluminyumdan tekerlekler; 8708.70.10 HARİÇ",
+      "tanim_en": "Aluminum wheels for motor vehicles in positions 87.01 to 87.05; EXCEPT 8708.70.10",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870870500013",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için aluminyumdan jantlar; 8708.70.10 HARİÇ",
+      "tanim_en": "Aluminum rims for motor vehicles in positions 87.01 to 87.05; EXCEPT 8708.70.10",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870870500018",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için aluminyumdan tekerleklerin aksam-parçaları; 8708.70.10 HARİÇ",
+      "tanim_en": "Parts of aluminum wheels for motor vehicles falling under headings 87.01 to 87.05; EXCEPT 8708.70.10",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870870910000",
+      "tanim_tr": "87.01 ila 87.05'teki motorlu kara taşıtları için demir/çelikten yıldız şeklinde tek bir parça halinde dökülmüş jant kapakları; 8708.70.10 HARİÇ",
+      "tanim_en": "Star-shaped wheel covers cast in one piece of iron/steel for motor vehicles in categories 87.01 to 87.05; EXCEPT 8708.70.10",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870870990012",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için diğer maddelerden tekerlekler; 8708.70.10 HARİÇ",
+      "tanim_en": "Wheels of other materials for motor vehicles falling under headings 87.01 to 87.05; EXCEPT 8708.70.10",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870870990013",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için diğer maddelerden jantlar; 8708.70.10 HARİÇ",
+      "tanim_en": "Wheels for motor vehicles of other materials falling under headings 87.01 to 87.05; EXCEPT 8708.70.10",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870870990018",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için tekerleklerin diğer maddelerden aksam-parçaları; 8708.70.10 HARİÇ",
+      "tanim_en": "Parts of wheels for motor vehicles in headings 87.01 to 87.05, made of other materials; EXCEPT 8708.70.10",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870880200000",
+      "tanim_tr": "Montaj sanayi için suspansiyonlar ve aksamı; 8703, 8704 (dizel/yarı dizel (hacmi <= 2500 cm3) ve benzinli (hacmi <= 2800 cm3)) ve 8705 için",
+      "tanim_en": "Suspensions and components for the assembly industry; for 8703, 8704 (diesel/semi-diesel (volume <= 2500 cm3) and gasoline (volume <= 2800 cm3)) and 8705.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870880350000",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için suspansiyon amartisörleri; 8708.80.20 pozisyonunda yer alanlar HARİÇ",
+      "tanim_en": "Suspension shock absorbers for motor vehicles falling under headings 87.01 to 87.05; EXCEPT those falling under heading 8708.80.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870880550000",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için çapraz stabilizatörler ve diğer burulma (torsiyon) çubukları; 8708.80.20 HARİÇ",
+      "tanim_en": "Cross stabilizers and other torsion bars for motor vehicles in positions 87.01 to 87.05; EXCEPT 8708.80.20",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870880910011",
+      "tanim_tr": "Salıncaklar",
+      "tanim_en": "Swings",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870880910019",
+      "tanim_tr": "Diğerleri",
+      "tanim_en": "Others",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870880990011",
+      "tanim_tr": "Salıncaklar",
+      "tanim_en": "Swings",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870880990019",
+      "tanim_tr": "Diğerleri",
+      "tanim_en": "Others",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870891200000",
+      "tanim_tr": "Montaj sanayi için radyatörler ve aksamı; 8701.10, 8703, 8704 (dizel/yarı dizel (hacmi <= 2500cm3) ve benzinli (hacmi<=2800cm3)) ve 87.05 için",
+      "tanim_en": "Radiators and components for the assembly industry; for 8701.10, 8703, 8704 (diesel/semi-diesel (volume <= 2500cm3) and petrol (volume <= 2800cm3)) and 87.05",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870891350000",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için radyatörler; 8708.91.20 alt pozisyonunda yer alanlar HARİÇ",
+      "tanim_en": "Radiators for motor vehicles falling under headings 87.01 to 87.05; EXCEPT those falling under subheading 8708.91.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870891910000",
+      "tanim_tr": "87.01 ila 87.05'te yer alan motorlu kara taşıtları için radyatörler için kapalı kalıpta dövülmüş çelikten aksam ve parçalar; 8708.91.20 HARİÇ",
+      "tanim_en": "Parts and components made of closed-die forged steel for radiators for motor vehicles, falling under categories 87.01 to 87.05; EXCLUDING 8708.91.20",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870891990011",
+      "tanim_tr": "87.01 ila 87.05'te yer alan motorlu kara taşıtları için radyatör çekirdekleri; kapalı kalıpta dövülmüş çelikten olanlar ve 8708.91.20 HARİÇ",
+      "tanim_en": "Radiator cores for motor vehicles falling under categories 87.01 to 87.05; those made of closed-die forged steel, and excluding category 8708.91.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870891990019",
+      "tanim_tr": "87.01 ila 87.05'te yer alan motorlu kara taşıtları için radyatörlerin diğer aksam ve parçaları",
+      "tanim_en": "Other parts and accessories of radiators for motor vehicles falling under sections 87.01 to 87.05.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870892200000",
+      "tanim_tr": "Montaj sanayi için eksoz susturucu ve borusu; 8701.10, 8703, 8704 (dizel/yarı dizel (hacmi <=2500cm3) ve benzinli (hacmi<=2800cm3)) ve 87.05 için",
+      "tanim_en": "Exhaust mufflers and pipes for assembly industry; for 8701.10, 8703, 8704 (diesel/semi-diesel (volume <=2500cm3) and gasoline (volume <=2800cm3)) and 87.05",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870892350000",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için eksoz susturucuları ve eksoz boruları; 8708.92.20 HARİÇ",
+      "tanim_en": "Exhaust mufflers and exhaust pipes for motor vehicles falling under headings 87.01 to 87.05; EXCLUDING 8708.92.20",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870892910000",
+      "tanim_tr": "87.01 ila 87.05'te yer alan motorlu kara taşıtları için eksoz susturucu ve borularının kapalı kalıpta dövülmüş çelikten aksamı; 8708.92.20 HARİÇ",
+      "tanim_en": "Exhaust mufflers and pipes made of closed-die forged steel for motor vehicles falling under categories 87.01 to 87.05; EXCLUDING 8708.92.20",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870892990000",
+      "tanim_tr": "87.01 ila 87.05'teki motorlu kara taşıtları için eksoz susturucu ve borularının aksamı; kapalı kalıpta dövülmüş çelikten olanlar ve 8708.92.20 HARİÇ",
+      "tanim_en": "Exhaust mufflers and pipe components for motor vehicles in sections 87.01 to 87.05; those made of forged steel and excluding section 8708.92.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870893100000",
+      "tanim_tr": "Montaj sanayi için debriyajlar ve aksamı; 8701.10, 8703, 8704 (dizel/yarı dizel (hacmi <=2500cm3) ve benzinli (hacmi<=2800cm3)) ve 87.05 için",
+      "tanim_en": "Clutches and components for assembly industry; for 8701.10, 8703, 8704 (diesel/semi-diesel (volume <=2500cm3) and petrol (volume <=2800cm3)) and 87.05",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870893900011",
+      "tanim_tr": "Debriyajlar",
+      "tanim_en": "Clutches",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870893900021",
+      "tanim_tr": "Baskı komplesi",
+      "tanim_en": "Printing assembly",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870893900022",
+      "tanim_tr": "Disk komplesi",
+      "tanim_en": "Disk assembly",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870893900029",
+      "tanim_tr": "Diğerleri",
+      "tanim_en": "Others",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870893900031",
+      "tanim_tr": "Baskı komplesi",
+      "tanim_en": "Printing assembly",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870893900032",
+      "tanim_tr": "Disk komplesi",
+      "tanim_en": "Disk assembly",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870893900039",
+      "tanim_tr": "Diğerleri",
+      "tanim_en": "Others",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870894200000",
+      "tanim_tr": "Montaj san. için direksiyon simiti-kolonu-kutusu ve aksamı; 8703, 8704 (dizel/yarı dizel (hacmi<= 2500cm3) ve benzinli (hacmi<=2800cm3)) ve 8705 için",
+      "tanim_en": "Steering wheel-column-box and components for assembly industry; for 8703, 8704 (diesel/semi-diesel (volume <= 2500cm3) and gasoline (volume <= 2800cm3)) and 8705.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870894350011",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için direksiyon simitleri; 8708.94.20'de yer alanlar HARİÇ",
+      "tanim_en": "Steering wheels for motor vehicles in positions 87.01 to 87.05; EXCEPT those in 8708.94.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870894350012",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için direksiyon kolonları; 8708.94.20'de yer alanlar HARİÇ",
+      "tanim_en": "Steering columns for motor vehicles in positions 87.01 to 87.05; EXCEPT those in 8708.94.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870894350013",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için mekanik direksiyon kutuları; 8708.94.20'de yer alanlar HARİÇ",
+      "tanim_en": "Mechanical steering boxes for motor vehicles in positions 87.01 to 87.05; EXCEPT those in 8708.94.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870894350016",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için hidrolik direksiyon kutuları; 8708.94.20'de yer alanlar HARİÇ",
+      "tanim_en": "Hydraulic steering boxes for motor vehicles in positions 87.01 to 87.05; EXCEPT those in 8708.94.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870894910000",
+      "tanim_tr": "87.01 ila 87.05'teki motorlu kara taşıtları için direksiyon simidi - kolonu - kutusu için kapalı kalıpta dövülmüş çelikten aksamlar; 8708.94.20 HARİÇ",
+      "tanim_en": "Parts made of forged steel in closed die for steering wheels, columns, and boxes for motor vehicles in categories 87.01 to 87.05; EXCLUDING 8708.94.20",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870894990011",
+      "tanim_tr": "87.01 ila 87.05'teki motorlu kara taş. için direksiyon simidi-kolonu-kutusu için aksam-parça; 8708.94.91 ve 8708.94.20 HARİÇ, metal dökümden olanlar",
+      "tanim_en": "Steering wheel-column-box parts/assemblies for motor vehicles, numbers 87.01 to 87.05; those made of metal casting, EXCEPT 8708.94.91 and 8708.94.20.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870894990019",
+      "tanim_tr": "87.01 ila 87.05'teki motorlu kara taş. için direksiyon simidi-kolonu-kutusu için aksam-parça; 8708.94.91 ve 8708.94.20 ve metal dökümden olanlar HARİÇ",
+      "tanim_en": "Steering wheel-column-box parts/assemblies for motor vehicles in 87.01 to 87.05; EXCEPT those of 8708.94.91 and 8708.94.20 and those made of metal casting.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870895100000",
+      "tanim_tr": "Montaj sanayi için airbag ve aksamı; 8701.10, 8703, 8704 (dizel/yarı dizel (hacmi <=2500cm3) ve benzinli (hacmi<=2800cm3)) ve 8705 için",
+      "tanim_en": "Airbags and components for the assembly industry; for 8701.10, 8703, 8704 (diesel/semi-diesel (volume <=2500cm3) and gasoline (volume <=2800cm3)) and 8705.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870895910000",
+      "tanim_tr": "87.01 ila 87.05 Pozisyonlarında yer alan motorlu kara taşıtları için kapalı kalıpta dövülmüş çelikten airbag ve bunların aksamı; 8708.95.10 HARİÇ",
+      "tanim_en": "Airbags and parts thereof, made of sealed-mold forged steel, for motor vehicles falling under headings 87.01 to 87.05; EXCLUDING 8708.95.10",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870895990000",
+      "tanim_tr": "87.01 ila 87.05'teki motorlu kara taşıtları için airbag ve bunların aksamı; kapalı kalıpta dövülmüş çelikten olanlar ve 8708.95.10'da yer alan HARİÇ",
+      "tanim_en": "Airbags and their components for motor vehicles in sections 87.01 to 87.05; those made of forged steel and EXCEPT those included in section 8708.95.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899101100",
+      "tanim_tr": "Montaj sanayi için motokültörlerin (8701.10) şasi aksamı",
+      "tanim_en": "Chassis components of motor cultivators (8701.10) for the assembly industry.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899101200",
+      "tanim_tr": "Montaj sanayi için şasi aksamı; 8703, 8704 (dizel/yarı dizel (hacmi <=2500cm3) ve benzinli (hacmi<=2800cm3)) ve 87.05 için",
+      "tanim_en": "Chassis components for the assembly industry; for 8703, 8704 (diesel/semi-diesel (volume <=2500cm3) and gasoline (volume <=2800cm3)) and 87.05.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899101911",
+      "tanim_tr": "Montaj sanayi için motorsuz şasiler; 8701.10, 8703, 8704 (dizel/yarı dizel (hacmi <=2500cm3) ve benzinli (hacmi<=2800cm3)) ve 87.05 için",
+      "tanim_en": "Non-motorized chassis for assembly industry; for 8701.10, 8703, 8704 (diesel/semi-diesel (volume <=2500cm3) and petrol (volume <=2800cm3)) and 87.05",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899101917",
+      "tanim_tr": "Montaj sanayi için rot, rotbaşı ve rotiller; 8701.10, 8703, 8704 (dizel/yarı dizel (hacmi <=2500cm3) ve benzinli (hacmi<=2800cm3)) ve 87.05 için",
+      "tanim_en": "Tie rods, tie rod ends and ball joints for the assembly industry; for 8701.10, 8703, 8704 (diesel/semi-diesel (volume <=2500cm3) and gasoline (volume <=2800cm3)) and 87.05.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899101919",
+      "tanim_tr": "Montaj sanayi için diğer aksam ve parçalar; 8701.10, 8703, 8704 (dizel/yarı dizel (hacmi <=2500cm3) ve benzinli (hacmi<=2800cm3)) ve 87.05 için",
+      "tanim_en": "Other components and parts for the assembly industry; for 8701.10, 8703, 8704 (diesel/semi-diesel (volume <=2500cm3) and petrol (volume <=2800cm3)) and 87.05",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899931100",
+      "tanim_tr": "87.01 pozisyonundaki traktörler için kapalı kalıpta dövülmüş çelikten şasi aksamı; 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Chassis components of forged steel for tractors in heading 87.01; EXCEPT those in 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899931911",
+      "tanim_tr": "87.01 pozisyonundaki traktörler için kapalı kalıpta dövülmüş çelikten motorsuz şasiler; 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Non-motorized chassis of forged steel for tractors in heading 87.01; EXCEPT those in 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899931917",
+      "tanim_tr": "87.01 pozisyonundaki traktörler için kapalı kalıpta dövülmüş çelikten rot, rotbaşı ve rotiller; 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Tie rods, tie rod ends and ball joints made of closed-die forged steel for tractors in heading 87.01; EXCEPT those in heading 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899931919",
+      "tanim_tr": "87.01 pozisyonundaki traktörler için kapalı kalıpta dövülmüş çelikten diğer aksam ve parçalar; 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Other parts and accessories of closed-die forged steel for tractors in heading 87.01; EXCEPT those in 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899939100",
+      "tanim_tr": "87.02 ila 87.05'te yer alan motorlu kara taşıtları için kapalı kalıpta dövülmüş çelikten şasi aksamı; 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Chassis components of forged steel for motor vehicles, falling under categories 87.02 to 87.05; EXCEPT those falling under category 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899939911",
+      "tanim_tr": "87.02 ila 87.05'te yer alan motorlu kara taşıtları için kapalı kalıpta dövülmüş çelikten motorsuz şasiler; 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Non-motorized chassis made of closed-die forged steel for motor vehicles falling under categories 87.02 to 87.05; EXCEPT those falling under category 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899939917",
+      "tanim_tr": "87.02 ila 87.05'te yer alan motorlu kara taşıtları için kapalı kalıpta dövülmüş çelikten rot, rotbaşı ve rotiller; 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Tie rods, tie rod ends and ball joints made of closed-die forged steel for motor vehicles falling under categories 87.02 to 87.05; EXCEPT those falling under category 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899939919",
+      "tanim_tr": "87.02 ila 87.05'te yer alan motorlu kara taşıtları için kapalı kalıpta dövülmüş çelikten diğer aksam ve parçalar; 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Other parts and accessories of forged steel for motor vehicles, falling under categories 87.02 to 87.05; EXCEPT those falling under category 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899971100",
+      "tanim_tr": "87.01 pozisyonundaki traktörler için şasi aksamı; kapalı kalıpta dövülmüş çelikten olanlar ve 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Chassis components for tractors in heading 87.01; EXCEPT those made of closed-die forged steel and those included in 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899971911",
+      "tanim_tr": "87.01 pozisyonundaki traktörler için motorsuz şasiler; kapalı kalıpta dövülmüş çelikten olanlar ve 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Non-motorized chassis for tractors in heading 87.01; EXCEPT those made of closed-die forged steel and those included in 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899971917",
+      "tanim_tr": "87.01 pozisyonundaki traktörler için rot, rotbaşı ve rotiller; kapalı kalıpta dövülmüş çelikten olanlar ve 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Tie rods, tie rod ends and ball joints for tractors in heading 87.01; EXCEPT those made of die-forged steel and those included in 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899971919",
+      "tanim_tr": "87.01 pozisyonundaki traktörler için diğer aksam ve parçalar; kapalı kalıpta dövülmüş çelikten olanlar ve 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Other parts and accessories for tractors in heading 87.01; excluding those made of closed-die forged steel and those included in 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899979100",
+      "tanim_tr": "87.02 ila 87.05'te yer alan motorlu kara taşıtları için şasi aksamı; kapalı kalıpta dövülmüş çelikten olanlar ve 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Chassis components for motor vehicles falling under categories 87.02 to 87.05; EXCEPT those made of forged steel and those falling under category 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899979911",
+      "tanim_tr": "87.02 ila 87.05'te yer alan motorlu kara taşıtları için motorsuz şasiler; kapalı kalıpta dövülmüş çelikten olanlar ve 8708.99.10'da yer alanlar HARİÇ",
+      "tanim_en": "Non-motorized chassis for motor vehicles falling under categories 87.02 to 87.05; EXCEPT those made of closed-die forged steel and those falling under category 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899979917",
+      "tanim_tr": "87.02 ila 87.05'te yer alan motorlu kara taşıtları için rot, rotbaşı ve rotiller; kapalı kalıpta dövülmüş çelikten olanlar ve 8708.99.10'dakiler HARİÇ",
+      "tanim_en": "Tie rods, tie rod ends and ball joints for motor vehicles falling under categories 87.02 to 87.05; EXCEPT those made of forged steel and those in category 8708.99.10.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899979921",
+      "tanim_tr": "87.02 ila 87.05'te yer alan motorlu kara taşıtları için başka yerde belirtilmemiş aksam ve parçalar; metal dökümden olanlar",
+      "tanim_en": "Parts and accessories for motor vehicles, as specified in sections 87.02 to 87.05, not otherwise specified; those made of metal casting.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870899979929",
+      "tanim_tr": "87.02 ila 87.05'te yer alan motorlu kara taşıtları için başka yerde belirtilmemiş aksam ve parçalar; metal dökümden olanlar HARİÇ",
+      "tanim_en": "Parts and accessories for motor vehicles, as specified in sections 87.02 to 87.05, not otherwise specified; EXCEPT those made of metal castings.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870911100000",
+      "tanim_tr": "Yüksek radyoaktif maddelerin taşınması için özel olarak yapılmış fabrika, liman, havaalanı vb. yerlerde kullanılan kısa mesafeli elektrikli taşıtlar",
+      "tanim_en": "Short-range electric vehicles specifically designed for transporting highly radioactive materials, used in factories, ports, airports, etc.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870911900000",
+      "tanim_tr": "Kendinden hareketli, kaldırma/elleçleme tertibatsız, fabrika, liman havaalanı vb. yerlerde kullanılan kısa mesafeli elektrikli diğer taşıtlar",
+      "tanim_en": "Self-propelled, short-range electric vehicles without lifting/handling devices, used in factories, ports, airports, etc.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870919100000",
+      "tanim_tr": "Yüksek radyoaktif maddelerin taşınması için özel olarak yapılmış fabrika, liman, havaalanı vb. yerlerde kullanılan kısa mesafeli diğer taşıtlar",
+      "tanim_en": "Other short-range vehicles specifically designed for transporting highly radioactive materials, used in factories, ports, airports, etc.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870919900000",
+      "tanim_tr": "Kendinden hareketli, kaldırma/elleçleme tertibatsız, fabrika, liman havaalanı vb. yerlerde kullanılan kısa mesafeli diğer taşıtlar",
+      "tanim_en": "Self-propelled, short-distance vehicles without lifting/handling devices, used in factories, ports, airports, etc.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "870990000000",
+      "tanim_tr": "Kendinden hareketli, kaldırma/elleçleme tertibatsız, fabrika, liman havaalanı vb. yerlerde kullanılan kısa mesafeli taşıtlar için aksam ve parçalar",
+      "tanim_en": "Parts and components for self-propelled, short-distance vehicles without lifting/handling devices, used in factories, ports, airports, etc.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871000000011",
+      "tanim_tr": "Tanklar ve motorlu diğer zırhlı savaş taşıtları (silahla donatılmış olsun olmasın)",
+      "tanim_en": "Tanks and other motorized armored fighting vehicles (whether or not armed)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871000000012",
+      "tanim_tr": "Tanklar ve motorlu diğer zırhlı savaş taşıtları için yürüyüş takımları ve yürüyüş takımlarının aksam ve parçaları",
+      "tanim_en": "Tracking systems and track components/parts for tanks and other motorized armored fighting vehicles.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871000000019",
+      "tanim_tr": "Tanklar ve motorlu diğer zırhlı savaş taşıtları için aksam ve parçaları; yürüyüş takımları ve yürüyüş takımlarının aksam ve parçaları HARİÇ",
+      "tanim_en": "Parts and accessories for tanks and other motorized armored fighting vehicles; excluding running gear and parts and accessories of running gear.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871110000011",
+      "tanim_tr": "Mopedler; içten yanmalı pistonlu (benzinli), silindir hacmi <= 50 cm3",
+      "tanim_en": "Mopeds have internal combustion piston (gasoline) engines with a cylinder capacity of <= 50 cm3.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871110000019",
+      "tanim_tr": "Motosikletler (mopedler HARİÇ); içten yanmalı pistonlu (benzinli), silindir hacmi <= 50 cm3",
+      "tanim_en": "Motorcycles (EXCLUDING mopeds); internal combustion piston (gasoline), cylinder capacity <= 50 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871120100000",
+      "tanim_tr": "Skuterler; içten yanmalı pistonlu (benzinli), 50 cm3 < silindir hacmi <= 250 cm3",
+      "tanim_en": "Scooters; internal combustion piston (gasoline), cylinder volume < 50 cm3 <= 250 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871120920011",
+      "tanim_tr": "Motosikletler (skuterler HARİÇ); içten yanmalı pistonlu (benzinli), 50 cm3 < silindir hacmi <= 80 cm3",
+      "tanim_en": "Motorcycles (EXCEPT scooters); internal combustion piston (gasoline), cylinder volume < 50 cm3 <= 80 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871120920019",
+      "tanim_tr": "Motosikletler (skuterler HARİÇ); içten yanmalı pistonlu (benzinli), 80 cm3 < silindir hacmi <= 125 cm3",
+      "tanim_en": "Motorcycles (EXCEPT scooters); internal combustion piston (gasoline), cylinder volume < 80 cm3 <= 125 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871120980000",
+      "tanim_tr": "Motosikletler (skuterler HARİÇ); içten yanmalı pistonlu (benzinli), 125 cm3 < silindir hacmi <= 250 cm3",
+      "tanim_en": "Motorcycles (EXCEPT scooters); internal combustion piston (gasoline), 125 cm3 < cylinder volume <= 250 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871130100000",
+      "tanim_tr": "Motosikletler; içten yanmalı pistonlu (benzinli), 250 cm3 < silindir hacmi <= 380 cm3",
+      "tanim_en": "Motorcycles; internal combustion piston (gasoline), 250 cm3 < cylinder volume <= 380 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871130900000",
+      "tanim_tr": "Motosikletler; içten yanmalı pistonlu (benzinli), 380 cm3 < silindir hacmi <= 500 cm3",
+      "tanim_en": "Motorcycles; internal combustion piston (gasoline), cylinder volume 380 cm3 <= 500 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871140000000",
+      "tanim_tr": "Motosikletler; içten yanmalı pistonlu (benzinli), 500 cm3 < silindir hacmi <= 800 cm3",
+      "tanim_en": "Motorcycles; internal combustion piston (gasoline), cylinder volume < 500 cm3 <= 800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871150000000",
+      "tanim_tr": "Motosikletler; içten yanmalı pistonlu (benzinli), silindir hacmi > 800 cm3",
+      "tanim_en": "Motorcycles; internal combustion piston (gasoline), cylinder capacity > 800 cm3",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871160100000",
+      "tanim_tr": "2/3/4 tekerlekli, elektrik motorundan tahrikli, pedal yardımlı taşıtlar; sürekli nominal gücü <= 250 watt",
+      "tanim_en": "2/3/4 wheeled, electric motor-driven, pedal-assisted vehicles; continuous nominal power <= 250 watts",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871160900011",
+      "tanim_tr": "Elektrik motorundan tahrikli motosikletler (mopedler DAHİL); motor gücü > 20 kW",
+      "tanim_en": "Motorcycles (including mopeds) powered by electric motors; motor power > 20 kW",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871160900012",
+      "tanim_tr": "Elektrik motorundan tahrikli motosikletler (mopedler DAHİL); motor gücü <= 20 kW",
+      "tanim_en": "Motorcycles (including mopeds) powered by electric motors; motor power <= 20 kW",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871190000000",
+      "tanim_tr": "Diğer motosikletler, bir yardımcı motoru bulunan diğer tekerlekli taşıtlar ve sepetler",
+      "tanim_en": "Other motorcycles, other wheeled vehicles with an auxiliary engine, and sidecars.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871200300000",
+      "tanim_tr": "Bilyalı rulmanı bulunan bisikletler",
+      "tanim_en": "Bicycles with ball bearings",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871200700011",
+      "tanim_tr": "Bilyalı rulmanı olmayan bisikletler",
+      "tanim_en": "Bicycles without ball bearings",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871200700019",
+      "tanim_tr": "Diğer motorsuz bisikletler ve diğer motorsuz tekerlekli taşıtlar (üç tekerlekli dağıtım amaçlı bisikletler dahil)",
+      "tanim_en": "Other non-motorized bicycles and other non-motorized wheeled vehicles (including three-wheeled delivery bikes)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871310000000",
+      "tanim_tr": "Engelliler için teşıyıcılar; hareket ettirici bir tertibatı olmayan",
+      "tanim_en": "Transporters for people with disabilities; those without a mobility device.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871390000000",
+      "tanim_tr": "Engelliler için teşıyıcılar; hareket ettirici bir tertibatı olanlar",
+      "tanim_en": "Carriers for people with disabilities; those with a mobility device.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871410100000",
+      "tanim_tr": "Motorsikletlere ait (mopedler dahil) frenler ve bunların aksam parçaları",
+      "tanim_en": "Motorcycle brakes and parts (including mopeds)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871410200000",
+      "tanim_tr": "Motorsikletlere ait (mopedler dahil) vites kutuları ve bunların aksam parçaları",
+      "tanim_en": "Gearboxes and components for motorcycles (including mopeds).",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871410300000",
+      "tanim_tr": "Motorsikletlere ait (mopedler dahil) tekerlekler ve bunların aksam, parça ve aksesuarları",
+      "tanim_en": "Wheels and parts, accessories for motorcycles (including mopeds).",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871410400000",
+      "tanim_tr": "Motorsikletlere ait (mopedler dahil) eksoz susturucuları, eksoz boruları ve bunların aksam ve parçaları",
+      "tanim_en": "Exhaust mufflers, exhaust pipes and their parts and accessories for motorcycles (including mopeds).",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871410500000",
+      "tanim_tr": "Motorsikletlere ait (mopedler dahil) debriyajlar ve bunların aksam ve parçaları",
+      "tanim_en": "Motorcycle clutches (including mopeds) and their components and parts.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871410900011",
+      "tanim_tr": "Motorsikletlere ait (mopedler dahil) şasiler",
+      "tanim_en": "Motorcycle chassis (including mopeds)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871410900019",
+      "tanim_tr": "Motorsikletlere ait (mopedler dahil) diğer aksam, parça ve aksesuar",
+      "tanim_en": "Other parts, components and accessories for motorcycles (including mopeds).",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871420000000",
+      "tanim_tr": "Engelliler için teşıyıcılara (motoru veya hareket ettirici başka bir tertibatı olsun olmasın) ait aksam, parça ve aksesuar",
+      "tanim_en": "Parts, components, and accessories for transporters (whether or not equipped with a motor or other propelling device) for persons with disabilities.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871491100011",
+      "tanim_tr": "Bisikletlere ve benzerlerine ait çerçeveler; çelikten olanlar",
+      "tanim_en": "Frames for bicycles and similar vehicles; those made of steel.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871491100019",
+      "tanim_tr": "Bisikletlere ve benzerlerine ait çerçeveler; çelikten olanlar HARİÇ",
+      "tanim_en": "Frames for bicycles and similar vehicles; EXCEPT those made of steel.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871491300000",
+      "tanim_tr": "Bisikletlere ait furşlar (çatallar)",
+      "tanim_en": "Bicycle forks",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871491900000",
+      "tanim_tr": "Bisikletler için çerçeveler ve furşlar (çatallar) için aksam ve parçalar",
+      "tanim_en": "Parts and components for bicycle frames and forks.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871492100000",
+      "tanim_tr": "Bisikletler için jantlar",
+      "tanim_en": "Wheels for bicycles",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871492900000",
+      "tanim_tr": "Bisikletler için tekerleklere mahsus gergi çubukları",
+      "tanim_en": "Tension bars for bicycle wheels.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871493000000",
+      "tanim_tr": "Bisikletler için tekerlek poyraları (tekerlek poyrasına dayanan kontrpedallı frenler ve poyra frenleri hariç) ve tekerlekler için zincir dişlileri",
+      "tanim_en": "Wheel hubs for bicycles (excluding hub-mounted brakes and hub brakes) and sprockets for wheels.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871494200000",
+      "tanim_tr": "Bisikletler için frenler (tekerlek poyrasına dayanan kontrpedallı frenler ve poyra frenleri dahil)",
+      "tanim_en": "Brakes for bicycles (including hub brakes and wheel hub brakes)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871494900000",
+      "tanim_tr": "Bisikletler için frenlere ait aksam ve parçalar",
+      "tanim_en": "Brake components and parts for bicycles.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871495000000",
+      "tanim_tr": "Bisikletlere ait seleler",
+      "tanim_en": "bicycle saddles",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871496100000",
+      "tanim_tr": "Bisikletlere ait pedallar",
+      "tanim_en": "Pedals for bicycles",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871496300000",
+      "tanim_tr": "Bisikletlere ait krank dişlileri",
+      "tanim_en": "Bicycle crank gears",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871496900000",
+      "tanim_tr": "Bisikletlere ait pedalların ve krank dişlilerinin aksam ve parçaları",
+      "tanim_en": "Parts and components of bicycle pedals and crank gears.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871499100000",
+      "tanim_tr": "Bisikletlere ait gidonlar",
+      "tanim_en": "Bicycle handlebars",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871499300000",
+      "tanim_tr": "Bisikletlere ait bagaj taşıyıcılar",
+      "tanim_en": "Bicycle luggage carriers",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871499500000",
+      "tanim_tr": "Bisikletlere ait vites değiştirme dişlileri (derayyörler)",
+      "tanim_en": "Gear shifters (derailleurs) for bicycles",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871499900011",
+      "tanim_tr": "Bisikletler için tekerlekler",
+      "tanim_en": "Wheels for bicycles",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871499900019",
+      "tanim_tr": "Bisikletlere ait başka yerde tanımlanmamış aksam ve parçalar",
+      "tanim_en": "Parts and accessories for bicycles not described elsewhere.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871500100000",
+      "tanim_tr": "Bebek arabaları",
+      "tanim_en": "Strollers",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871500900000",
+      "tanim_tr": "Bebek arabalarına ait aksam ve parçalar",
+      "tanim_en": "Stroller parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871610920000",
+      "tanim_tr": "Karavan tipi ikamet veya kamp yapmaya mahsus römork ve yarı römorklar; ağırlık <= 1600kg",
+      "tanim_en": "Caravan-type trailers and semi-trailers intended for residential or camping use; weight <= 1600kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871610980000",
+      "tanim_tr": "Karavan tipi ikamet veya kamp yapmaya mahsus römork ve yarı römorklar; ağırlık > 1600kg",
+      "tanim_en": "Caravan-type trailers and semi-trailers intended for residential or camping use; weight > 1600kg",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871620000000",
+      "tanim_tr": "Tarımda kullanılmaya mahsus kendinden yüklemeli veya boşaltmalı römork ve yarı römorklar",
+      "tanim_en": "Self-loading or self-unloading trailers and semi-trailers intended for use in agriculture.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871631000000",
+      "tanim_tr": "Tanker römorklar ve tanker yarı römorklar",
+      "tanim_en": "Tanker trailers and tanker semi-trailers",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871639100000",
+      "tanim_tr": "Yüksek radyoaktif maddelerin taşınması için özel olarak yapılmış (EURATOM) römorklar ve yarı römorklar",
+      "tanim_en": "Trailers and semi-trailers specifically designed for the transport of highly radioactive materials (EURATOM).",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871639300000",
+      "tanim_tr": "Eşya taşımaya mahsus diğer yarı römorklar; YENİ olanlar",
+      "tanim_en": "Other semi-trailers for transporting goods; NEW ones.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871639500000",
+      "tanim_tr": "Eşya taşımaya mahsus diğer römorklar; YENİ olanlar",
+      "tanim_en": "Other trailers for transporting goods; NEW ones.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871639800000",
+      "tanim_tr": "Eşya taşımaya mahsus diğer römorklar ve diğer yarı römorklar; KULLANILMIŞ olanlar",
+      "tanim_en": "Other trailers and other semi-trailers for the carriage of goods; USED ones.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871640000000",
+      "tanim_tr": "Diğer römorklar ve diğer yarı römorklar",
+      "tanim_en": "Other trailers and other semi-trailers",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871680001000",
+      "tanim_tr": "Hayvanla çekilen arabalar",
+      "tanim_en": "Animal-drawn carts",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871680009011",
+      "tanim_tr": "Hasta nakline ait hareket ettirici tertibatı bulunmayan arabalar",
+      "tanim_en": "Cars that lack mobility devices for transporting patients.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871680009012",
+      "tanim_tr": "Bayındırlık, inşaat ve benzeri işlerde kullanılan tek tekerlekli el arabaları",
+      "tanim_en": "Single-wheeled handcarts used in public works, construction and similar jobs.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871680009018",
+      "tanim_tr": "Hareket ettirici tertibatı bulunmayan diğer taşıtlar",
+      "tanim_en": "Other vehicles without a propellant device",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871690100000",
+      "tanim_tr": "Römorklar, yarı römorklar ve hareket ettirici tertibatı bulunmayan diğer taşıtlar için şasiler",
+      "tanim_en": "Chassis for trailers, semi-trailers and other vehicles without a propellant.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871690300000",
+      "tanim_tr": "Römorklar, yarı römorklar ve hareket ettirici tertibatı bulunmayan diğer taşıtlar için karoseriler",
+      "tanim_en": "Bodywork for trailers, semi-trailers and other vehicles without a drivetrain.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871690500000",
+      "tanim_tr": "Römorklar, yarı römorklar ve hareket ettirici tertibatı bulunmayan diğer taşıtlar için akslar",
+      "tanim_en": "Axles for trailers, semi-trailers and other vehicles without a drivetrain.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871690900021",
+      "tanim_tr": "Römorklar, yarı römorklar ve hareket ettirici tertibatı bulunmayan diğer taşıtlar için diğer aksam ve parçalar; metal dökümden olanlar",
+      "tanim_en": "Other parts and accessories for trailers, semi-trailers and other vehicles without a propellant mechanism; those made of cast metal.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "871690900029",
+      "tanim_tr": "Römorklar, yarı römorklar ve hareket ettirici tertibatı bulunmayan diğer taşıtlar için diğer aksam ve parçalar",
+      "tanim_en": "Other parts and accessories for trailers, semi-trailers and other vehicles without a propellant mechanism.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    }
+  ]
+}

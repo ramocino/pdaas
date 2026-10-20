@@ -1,0 +1,2203 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-tam",
+      "ad": {
+        "tr": "GTİP Tüm Vergiler",
+        "en": "GTIP All Taxes"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "41",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "410120101000",
+      "tanim_tr": "Sığırların (buffalo dahil) ve at cinsi hayvanların taze ham post ve derileri; yaş ağırlık =< 15kg",
+      "tanim_en": "Fresh raw hides and skins of cattle (including buffalo) and horses; wet weight =< 15kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410120102000",
+      "tanim_tr": "Sığırların (buffalo dahil) ve at cinsi hayvanların taze ham post ve derilerii; 15kg < yaş ağırlık <= 16kg",
+      "tanim_en": "Fresh raw hides and skins of cattle (including buffalo) and horses; 15kg < wet weight <= 16kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410120301000",
+      "tanim_tr": "Sığır (buffalo dahil) ve at cinsi hayvanların yaş tuzlanmış ham post ve derileri; yaş ağırlık =< 15kg",
+      "tanim_en": "Wet, salted raw hides and skins of cattle (including buffalo) and horses; wet weight =< 15kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410120302000",
+      "tanim_tr": "Sığır (buffalo dahil) ve at cinsi hayvanların yaş tuzlanmış ham post ve derileri; 15kg < yaş ağırlık <= 16kg",
+      "tanim_en": "Wet, salted raw hides and skins of cattle (including buffalo) and horses; 15kg < wet weight <= 16kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410120501000",
+      "tanim_tr": "Sığır (buffalo dahil) ve at cinsi hayvanların kurutulmuş veya kuru tuzlanmış ham post ve derileri; ağırlık =< 9kg",
+      "tanim_en": "Dried or dry-salted raw hides and skins of cattle (including buffalo) and horses; weight =< 9kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410120502000",
+      "tanim_tr": "Sığır (buffalo dahil) ve at cinsi hayvanların kurutulmuş veya kuru tuzlanmış ham post ve derileri; 9kg < ağırlık <= 10kg",
+      "tanim_en": "Dried or dry-salted raw hides and skins of cattle (including buffalo) and horses; weight < 9kg <= 10kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410120801000",
+      "tanim_tr": "Sığır (buffalo dahil) ve atların bütün halindeki diğer ham post ve derileri; ağırlık <= 14 kg",
+      "tanim_en": "Whole raw hides and skins of cattle (including buffalo) and horses; weight <= 14 kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410120802000",
+      "tanim_tr": "Sığır (buffalo dahil) ve atların bütün halindeki diğer ham post ve derileri; 14 kg < ağırlık <= 16 kg",
+      "tanim_en": "Whole raw hides and skins of cattle (including buffalo) and horses; 14 kg < weight <= 16 kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410150101000",
+      "tanim_tr": "Sığır (buffalo dahil) cinsi hayvanların taze ham post ve derileri; ağırlık > 16kg",
+      "tanim_en": "Fresh raw hides and skins of cattle (including buffalo); weight > 16kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410150102000",
+      "tanim_tr": "At cinsi hayvanların taze ham post ve derileri; ağırlık > 16kg",
+      "tanim_en": "Fresh raw hides and skins of equines; weight > 16kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410150301000",
+      "tanim_tr": "Sığır (buffalo dahil) cinsi hayvanların yaş tuzlanmış ham post ve derileri; ağırlık > 16kg",
+      "tanim_en": "Wet, salted raw hides and skins of cattle (including buffalo); weight > 16kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410150302000",
+      "tanim_tr": "At cinsi hayvanların yaş tuzlanmış ham post ve derileri; ağırlık > 16kg",
+      "tanim_en": "Wet, salted raw hides and skins of equines; weight > 16kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410150501000",
+      "tanim_tr": "Sığır (buffalo dahil) cinsi hayvanların kurutulmuş veya kuru tuzlanmış ham post ve derileri; ağırlık > 16kg",
+      "tanim_en": "Dried or dry-salted raw hides and skins of cattle (including buffalo); weight > 16kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410150502000",
+      "tanim_tr": "At cinsi hayvanların kurutulmuş veya kuru tuzlanmış ham post ve derileri; ağırlık > 16kg",
+      "tanim_en": "Dried or dry-salted raw hides and skins of equines; weight > 16kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410150900000",
+      "tanim_tr": "Sığır (buffalo dahil) ve at cinsi hayvanların diğer ham post ve derileri; ağırlık >16kg",
+      "tanim_en": "Raw hides and skins of cattle (including buffalo) and horses; weight >16kg",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410190001000",
+      "tanim_tr": "Sığır (buffalo dahil) ve at cinsi hayvanların krupon ve yarım krupon derileri",
+      "tanim_en": "Croupon and half-croupon hides of cattle (including buffalo) and horses.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410190002000",
+      "tanim_tr": "Sığırların (buffalo dahil) taze veya yaş tuzlanmış derileri",
+      "tanim_en": "Fresh or aged salted hides of cattle (including buffalo)",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410190003000",
+      "tanim_tr": "Sığırların (buffalo dahil) kurutulmuş veya kuru tuzlanmış derileri",
+      "tanim_en": "Dried or dry-salted hides of cattle (including buffalo)",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410190004000",
+      "tanim_tr": "Sığırların (buffalo dahil) diğer şekillerde muhafaza edilmiş derileri",
+      "tanim_en": "Other preserved hides of cattle (including buffalo)",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410190009000",
+      "tanim_tr": "Atların diğer derileri (diğer şekilde muhafaza edilmiş); ham",
+      "tanim_en": "Other horse hides (otherwise preserved); raw",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410210100000",
+      "tanim_tr": "Kuzuların yünü alınmamış ham derileri",
+      "tanim_en": "Raw hides of lambs from which the wool has not been removed",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410210900000",
+      "tanim_tr": "Koyunların yünü alınmamış ham derileri",
+      "tanim_en": "Raw sheepskins from which the wool has not been removed",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410221000000",
+      "tanim_tr": "Koyun ve kuzuların ham pikle derileri; yünü alınmış",
+      "tanim_en": "Raw pickled skins of sheep and lambs; wool removed.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410229000000",
+      "tanim_tr": "Koyun ve kuzuların diğer ham derileri; yünü alınmış",
+      "tanim_en": "Other raw hides of sheep and lambs; with the wool removed.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410320000000",
+      "tanim_tr": "Sürüngenlerin ham derileri",
+      "tanim_en": "Raw hides of reptiles",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410330000000",
+      "tanim_tr": "Domuzların ham derileri",
+      "tanim_en": "Raw hides of pigs",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410390000011",
+      "tanim_tr": "Diğer hayvanların ham yaş derileri",
+      "tanim_en": "Raw skins of other animals",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410390000012",
+      "tanim_tr": "Diğer hayvanların ham kuru derileri",
+      "tanim_en": "Raw dried hides of other animals",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410390000013",
+      "tanim_tr": "Diğer hayvanların ham pikle derileri",
+      "tanim_en": "Raw pickled skins of other animals",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410390000019",
+      "tanim_tr": "Diğer hayvanların ham diğer post ve derileri",
+      "tanim_en": "Raw hides and skins of other animals",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410411100011",
+      "tanim_tr": "Sığırların (buffalo dahil) bütün halde sırçalı derileri; dabaklanmış veya crust, yaş, kılları alınmış, alanı=<2,6m2)",
+      "tanim_en": "Whole full-grain hides of cattle (including buffalo); tanned or crusted, wet, hairless, area <2.6 m²",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410411100012",
+      "tanim_tr": "Sığırların (buffalo dahil) bütün halde yarma derileri; dabaklanmış veya crust, yaş, kılları alınmış, alanı=<2,6m2)",
+      "tanim_en": "Whole split hides of cattle (including buffalo); tanned or crusted, wet, hair removed, area <2.6 m2)",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410411510011",
+      "tanim_tr": "Sığırların (buffalo dahil) bütün halde sırçalı derileri; dabaklanmış veya crust, yaş, kılları alınmış, alanı>2,6m2)",
+      "tanim_en": "Whole full-grain hides of cattle (including buffalo); tanned or crusted, aged, hairless, area >2.6 m²",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410411510012",
+      "tanim_tr": "Sığırların (buffalo dahil) bütün halde yarma derileri; dabaklanmış veya crust, yaş, kılları alınmış, alanı>2,6m2)",
+      "tanim_en": "Whole split hides of cattle (including buffalo); tanned or crusted, wet, hair removed, area >2.6 m2)",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410411590011",
+      "tanim_tr": "Sığırların (buffalo dahil) parçalanmış sırçalı derileri; dabaklanmış veya crust, yaş, kılları alınmış",
+      "tanim_en": "Shredded grain hides of cattle (including buffalo); tanned or crusted, aged, and hairless.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410411590012",
+      "tanim_tr": "Sığırların (buffalo dahil) parçalanmış yarma derileri; dabaklanmış veya crust, yaş, kılları alınmış",
+      "tanim_en": "Cut and sliced ​​hides of cattle (including buffalo); tanned or crusted, aged, and hairless.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410411900011",
+      "tanim_tr": "Atların sırçalı derileri; dabaklanmış veya crust, yaş, kılları alınmış",
+      "tanim_en": "Horse hides; tanned or crusted, aged, hairless.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410411900012",
+      "tanim_tr": "Atların yarma derileri; dabaklanmış veya crust, yaş, kılları alınmış",
+      "tanim_en": "Horse hides; tanned or crusted, aged, hairless.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410419100000",
+      "tanim_tr": "Sığırların (buffalo dahil) bütün, diğer post ve derileri; dabaklanmış veya crust, yaş, kılları alınmış, alanı=<2,6m2",
+      "tanim_en": "Whole hides and skins of cattle (including buffalo); tanned or crusted, aged, hairless, area <2.6 m2",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410419510000",
+      "tanim_tr": "Sığırların (buffalo dahil) bütün, diğer post ve derileri; dabaklanmış veya crust, yaş, kılları alınmış, alanı>2,6m2",
+      "tanim_en": "Whole hides and skins of cattle (including buffalo); tanned or crusted, aged, hairless, area >2.6 m2",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410419590000",
+      "tanim_tr": "Sığırların (buffalo dahil) diğer deri ve köseleleri; dabaklanmış veya crust, yaş, kılları alınmış",
+      "tanim_en": "Other hides and skins of cattle (including buffalo); tanned or crusted, aged, and hairless.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410419900000",
+      "tanim_tr": "Atların diğer post ve derileri; dabaklanmış veya crust, yaş, kılları alınmış",
+      "tanim_en": "Other horse hides and skins; tanned or crusted, aged, hairless.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410441111000",
+      "tanim_tr": "Hint danası derisi; bütün veya baş ve ayakları alınmış, sırçalı ve yarma, sadece dabaklanmış, kuru, kılları alınmış, ağırlık =< 4.5kg, alanı <= 2.6m2",
+      "tanim_en": "Indian calfskin; whole or decapitated (head and feet removed), granulated and split, tanned only, dried, hairless, weight < 4.5 kg, area <= 2.6 m²",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410441119000",
+      "tanim_tr": "Hint danası derisi; bütün veya baş ve ayakları alınmış, sırçalı/yarma, sadece dabaklanmış, kuru, kılları alınmış, ağırlık =< 4.5kg, alanı <= 2.6m2",
+      "tanim_en": "Indian calfskin; whole or decapitated (head and feet removed), split/grained, tanned only, dried, hair removed, weight < 4.5 kg, area <= 2.6 m²",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410441191011",
+      "tanim_tr": "Danaların sırçalı ve yarma derisi; sadece dabaklanmış, kuru, kılları alınmış, ağırlık =< 4.5kg, alanı <= 2,6m2",
+      "tanim_en": "Cowhide, granulated and split hide; tanned, dried, hairless, weight < 4.5 kg, area <= 2.6 m²",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410441191019",
+      "tanim_tr": "Diğer sığırların (buffalo dahil) sırçalı ve yarma derisi; dabaklanmış, kuru, kılları alınmış, =< 4.5kg, alanı <= 2,6m2",
+      "tanim_en": "Grained and split hides of other cattle (including buffalo); tanned, dried, hair removed, <4.5 kg, area <= 2.6 m2",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410441199000",
+      "tanim_tr": "Sığırların (buffalo dahil) sırçalı ve yarma derisi; diğer şekilde hazırlanmış, kuru, kılları alınmış, alanı <= 2,6m2",
+      "tanim_en": "Grained and split hides of cattle (including buffalo); otherwise prepared, dried, hairless, area <= 2.6 m2",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410441510000",
+      "tanim_tr": "Sığırların (buffalo dahil) sırçalı ve yarma derileri; dabaklanmış veya crust, kuru, kılları alınmış, alanı > 2,6m2",
+      "tanim_en": "Grained and split hides of cattle (including buffalo); tanned or crusted, dried, hairless, area > 2.6 m2",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410441590000",
+      "tanim_tr": "Sığırların (buffalo dahil) diğer sırçalı ve yarma derileri; dabaklanmış veya crust, kuru, kılları alınmış",
+      "tanim_en": "Other grit and split hides of cattle (including buffalo); tanned or crusted, dried, and hairless.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410441900000",
+      "tanim_tr": "Atların sırçalı ve yarma derileri; dabaklanmış veya crust, kuru, kılları alınmış",
+      "tanim_en": "Grained and split horse hides; tanned or crusted, dried, hairless.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410449111000",
+      "tanim_tr": "Diğer Hint danası derisi; bütün veya baş ve ayakları alınmış, sadece dabaklanmış, kuru, kılları alınmış, ağırlık =< 4.5kg, alanı <= 2.6m2",
+      "tanim_en": "Other Indian calf skins; whole or with head and feet removed, tanned only, dried, hair removed, weight < 4.5 kg, area <= 2.6 m²",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410449119000",
+      "tanim_tr": "Diğer Hint danası derisi; bütün veya baş ve ayakları alınmış, dabaklanmış ve başka işlem görmüş, kuru, kılları alınmış, ağırlık=< 4.5kg, alanı<= 2.6m2",
+      "tanim_en": "Other Indian calf skins; whole or decapitated, tanned and otherwise processed, dried, hair removed, weight < 4.5 kg, area <= 2.6 m²",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410449191011",
+      "tanim_tr": "Danaların diğer derisi; sadece dabaklanmış, kuru, kılları alınmış, ağırlık =< 4.5kg, alanı <= 2,6m2",
+      "tanim_en": "The other hide of the calves; tanned, dried, hair removed, weight < 4.5 kg, area <= 2.6 m2",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410449191019",
+      "tanim_tr": "Diğer sığırların (buffalo dahil) diğer derisi; dabaklanmış, kuru, kılları alınmış, =< 4.5kg, alanı <= 2,6m2",
+      "tanim_en": "Other hides from other cattle (including buffalo); tanned, dried, hair removed, <4.5 kg, area <= 2.6 m²",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410449199000",
+      "tanim_tr": "Sığırların (buffalo dahil) diğer derisi; diğer şekilde hazırlanmış, kuru, kılları alınmış, alanı <= 2,6m2",
+      "tanim_en": "Other hides of cattle (including buffalo); otherwise prepared, dried, hair removed, area <= 2.6 m2",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410449510000",
+      "tanim_tr": "Sığırların (buffalo dahil) diğer derileri; dabaklanmış veya crust, kuru, kılları alınmış, alanı > 2,6m2",
+      "tanim_en": "Other hides of cattle (including buffalo); tanned or crusted, dried, hairless, area > 2.6 m2",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410449590000",
+      "tanim_tr": "Sığırların (buffalo dahil) diğer derileri; dabaklanmış veya crust, kuru, kılları alınmış",
+      "tanim_en": "Other hides of cattle (including buffalo); tanned or crusted, dried, and hairless.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410449900000",
+      "tanim_tr": "Atların diğer derileri; dabaklanmış veya crust, kuru, kılları alınmış",
+      "tanim_en": "Other horse hides; tanned or crusted, dried, hairless.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410510000000",
+      "tanim_tr": "Koyun ve kuzuların dabaklanmış derileri; yünü alınmış, yaş halde (wet-blue dahil)",
+      "tanim_en": "Tanned sheep and lamb hides; wool removed, in wet condition (including wet-blue)",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410530100000",
+      "tanim_tr": "Hint melezi koyun ve kuzuların bitkisel ön dabaklama yapılmış derileri; yünü alınmış",
+      "tanim_en": "Vegetable pre-tanned hides of Indian hybrid sheep and lambs; wool removed.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410530900000",
+      "tanim_tr": "Diğer koyun ve kuzuların dabaklanmış veya crust (ara kurutmalı) derileri; yünü alınmış, kuru halde (crust)",
+      "tanim_en": "Tanned or crusted (intermediately dried) skins of other sheep and lambs; wool removed, dried (crust)",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410621000000",
+      "tanim_tr": "Keçi ve oğlakların dabaklanmış post ve derileri; yünü/kılı alınmış, ileri bir işlem görmemiş, yaş halde (wet-blue dahil",
+      "tanim_en": "Tanned hides and skins of goats and kids; wool/hair removed, unprocessed, in their raw state (including wet-blue).",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410622100000",
+      "tanim_tr": "Hint keçisi ve oğlakların bitkisel ön dabaklama yapılmış crust (ara kurutmalı) post ve derileri; yünü veya kılı alınmış",
+      "tanim_en": "Vegetable pre-tanned crust (intermediately dried) hides and skins of Indian goats and kids; wool or hair removed.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410622900000",
+      "tanim_tr": "Diğer keçi ve oğlak dabaklama yapılmış crust (ara kurutmalı) post ve derileri; yünü veya kılı alınmış",
+      "tanim_en": "Other goat and kid tanned crust (intermediately dried) hides and skins; wool or hair removed.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410631001000",
+      "tanim_tr": "Domuzların dabaklanmış derisi; parçalara ayrılmamış, yaş halde wet-blue dahil), kılı alınmış",
+      "tanim_en": "Tanned pigskin (uncut, wet-blue included), hairless.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410631009000",
+      "tanim_tr": "Domuzların dabaklanmış derisi; parçalara ayrılmış, yaş halde wet-blue dahil), kılı alınmış",
+      "tanim_en": "Tanned pigskin (cut into pieces, wet, including wet-blue), hair removed.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410632000000",
+      "tanim_tr": "Domuzların dabaklanmış kuru (crust) derileri; kılı alınmış",
+      "tanim_en": "Tanned, dried (crust) hides of pigs; hair removed.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410640100000",
+      "tanim_tr": "Sürüngenlerin bitkisel ön dabaklama yapılmış derileri",
+      "tanim_en": "Reptile hides that have been pre-tanned using plant-based methods.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410640900000",
+      "tanim_tr": "Sürüngenlerin dabaklanmış kuru (crust) derileri",
+      "tanim_en": "Tanned dried (crust) skins of reptiles",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410691000000",
+      "tanim_tr": "Diğer hayvanların dabaklanmış, yaş derileri (wet-blue dahil); yünü veya kılı alınmış",
+      "tanim_en": "Tanned, wet hides of other animals (including wet-blue); wool or hair removed.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410692000000",
+      "tanim_tr": "Diğer hayvanların dabaklanmış, kuru (crust) derileri; yünü veya kılı alınmış",
+      "tanim_en": "Tanned, dried (crust) hides of other animals; hides from which the wool or hair has been removed.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410711110000",
+      "tanim_tr": "Sığırların (buffalo dahil) sırçalı videlası; ileri derecede hazırlanmış, bütün halde; yüzeyi=<2.6m2",
+      "tanim_en": "Glazed cowl for cattle (including buffalo); thoroughly prepared, whole; surface area <2.6 m2",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410711190000",
+      "tanim_tr": "Sığırların (buffalo dahil) ileri derecede hazırlanmış bütün haldeki sırçalı diğer derileri; yüzeyi=<2.6m2",
+      "tanim_en": "Highly prepared whole, full-grained hides of cattle (including buffalo); surface area = <2.6 m²",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410711900000",
+      "tanim_tr": "Sığırların (buffalo dahil) dabaklama veya ara kurutmadan ileri derecede hazırlanmış bütün haldeki sırçalı diğer derileri",
+      "tanim_en": "Whole, full-grain hides of cattle (including buffalo) that have been further prepared through tanning or intermediate drying.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410712110000",
+      "tanim_tr": "Sığırların (buffalo dahil) yarma videlası; ileri derecede hazırlanmış, bütün halde; yüzeyi=<2.6m2",
+      "tanim_en": "Cattle (including buffalo) splitting screws; thoroughly prepared, whole; surface area <2.6 m²",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410712190000",
+      "tanim_tr": "Sığırların (buffalo dahil) ileri derecede hazırlanmış bütün haldeki yarma diğer derileri; yüzeyi=<2.6m2",
+      "tanim_en": "Advanced prepared whole split hides and other skins of cattle (including buffalo); surface area = <2.6 m2",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410712910000",
+      "tanim_tr": "Sığırların (buffalo dahil) ileri derecede hazırlanmış bütün haldeki yarma diğer deri ve köseleleri",
+      "tanim_en": "Advanced processed whole cuts of beef (including buffalo) and other hides and skins.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410712990000",
+      "tanim_tr": "Atların ileri derecede hazırlanmış bütün haldeki yarma diğer deri ve köseleleri",
+      "tanim_en": "Highly processed whole horse hides and other skins",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410719100000",
+      "tanim_tr": "Sığırların (buffalo dahil) ileri derecede hazırlanmış diğer deri ve köseleleri; bütün halde, yüzeyi=<2.6m2",
+      "tanim_en": "Other highly prepared hides and skins of cattle (including buffalo); whole, surface area <2.6 m2",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410719900000",
+      "tanim_tr": "Sığırların (buffalo dahil) ve atların ileri derecede hazırlanmış bütün haldeki diğer deri ve köseleleri",
+      "tanim_en": "Advanced prepared whole hides and skins of cattle (including buffalo) and horses.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410791100000",
+      "tanim_tr": "Sığır (buffalo dahil) ve atların derilerinden ileri derecede hazırlanmış sırçalı taban köselesi",
+      "tanim_en": "Graduated leather soles made from the hides of cattle (including buffalo) and horses.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410791900000",
+      "tanim_tr": "Sığır (buffalo dahil) ve atların ileri derecede hazırlanmış sırçalı diğer derileri",
+      "tanim_en": "Highly prepared glazed hides of cattle (including buffalo) and horses.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410792100000",
+      "tanim_tr": "Sığırların (buffalo dahil) yarma derilerinden ileri derecede hazırlanmış deri ve kösele",
+      "tanim_en": "Highly processed leather and hides made from split hides of cattle (including buffalo).",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410792900000",
+      "tanim_tr": "Atların yarma derilerinden ileri derecede hazırlanmış deri ve kösele",
+      "tanim_en": "Highly processed leather and hides made from split horse skins.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410799100000",
+      "tanim_tr": "Sığırların (buffalo dahil) derilerinden ileri derecede hazırlanmış diğer deri ve kösele",
+      "tanim_en": "Other advanced leather and hides prepared from the hides of cattle (including buffalo).",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "410799900000",
+      "tanim_tr": "Atların derilerinden ileri derecede hazırlanmış diğer deri ve kösele",
+      "tanim_en": "Other leather and hide products prepared to a high standard from horse skins",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "411200000000",
+      "tanim_tr": "Koyun veya kuzuların dabaklama veya ara kurutmadan sonra ileri derecede hazırlanmış deri ve köseleleri",
+      "tanim_en": "The skins and hides of sheep or lambs that have been thoroughly prepared after tanning or intermediate drying.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "411310000000",
+      "tanim_tr": "Keçi ve oğlakların dabaklama veya ara kurutmadan sonra ileri derecede hazırlanmış deri ve köseleleri",
+      "tanim_en": "Goat and kid hides and skins that have been thoroughly prepared after tanning or intermediate drying.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "411320000000",
+      "tanim_tr": "Domuzların dabaklama veya ara kurutmadan sonra ileri derecede hazırlanmış deri ve köseleleri",
+      "tanim_en": "Advanced tanned or semi-dried hides and skins of pigs",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "411330000000",
+      "tanim_tr": "Sürüngenlerin dabaklama veya ara kurutmadan sonra ileri derecede hazırlanmış deri ve köseleleri",
+      "tanim_en": "Advanced prepared hides and skins of reptiles after tanning or intermediate drying.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "411390000000",
+      "tanim_tr": "Diğer hayvanların dabaklama veya ara kurutmadan sonra ileri derecede hazırlanmış deri ve köseleleri",
+      "tanim_en": "Skins and hides of other animals that have been further prepared after tanning or intermediate drying.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "411410100000",
+      "tanim_tr": "Güderi (kombine deri dahil); koyun ve kuzulardan elde edilenler",
+      "tanim_en": "Chamois leather (including combined leather); obtained from sheep and lambs.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "411410900000",
+      "tanim_tr": "Güderi (kombine deri dahil); diğer hayvanlardan elde edilenler",
+      "tanim_en": "Chamois leather (including combined leather); leathers obtained from other animals",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "411420000011",
+      "tanim_tr": "Rugan deri ve köseleler",
+      "tanim_en": "Patent leather and sole leathers",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "411420000012",
+      "tanim_tr": "Ruganla kaplanmış deri ve köseleler",
+      "tanim_en": "Leather and hides covered with patent leather",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "411420000013",
+      "tanim_tr": "Metalize deri ve köseleler",
+      "tanim_en": "Metallized leather and hides",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "411510000000",
+      "tanim_tr": "Deri, kösele veya ikisi esaslı terkip yolu ile elde edilen levha, yaprak ve şerit halindeki deri ve kösele",
+      "tanim_en": "Leather, sole leather, or a combination of both, obtained in sheet, leaf, and strip form.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    },
+    {
+      "kod": "411520000000",
+      "tanim_tr": "Deri, kösele veya ikisi esaslı terkip yolu ile elde edilen levha, yaprak ve şeritlerin döküntüleri, talaşı, tozu",
+      "tanim_en": "Waste, shavings, and dust of leather, sole leather, or sheets, leaves, and strips obtained by means of a combination of both.",
+      "kdv": {
+        "grup": "genel",
+        "oran": 0.2
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "oran": null
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "oran": null
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,2287 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-randiman",
+      "ad": {
+        "tr": "GTİP Randıman Eşleşmesi",
+        "en": "GTIP Yield Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "38",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "380110100000",
+      "tanim_tr": "Suni grafit tozları; ağırlıkça % 0,05'i geçmeyen oranda kül içeren",
+      "tanim_en": "Artificial graphite powders containing ash not exceeding 0.05% by weight.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380110900000",
+      "tanim_tr": "Diğer suni grafit",
+      "tanim_en": "Other artificial graphite",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380120100000",
+      "tanim_tr": "Sıvı yağ içinde çözelti halinde olan kolloidal grafit ve yarı-kolloidal grafit",
+      "tanim_en": "Colloidal graphite and semi-colloidal graphite in solution in liquid oil.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380120900000",
+      "tanim_tr": "Kolloidal veya yarı-kolloidal grafit; sıvı yağ içinde çözelti halinde olan HARİÇ",
+      "tanim_en": "Colloidal or semi-colloidal graphite; EXCEPT that which is in solution in liquid oil.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380130000000",
+      "tanim_tr": "Elektrotlar için karbonlu hamurlar ve fırınların izolasyonunda kullanılan benzeri hamurlar",
+      "tanim_en": "Carbon pastes for electrodes and similar pastes used in furnace insulation.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380190001000",
+      "tanim_tr": "Metalo-grafitik bileşikler halindeki karbonlar veya diğerleri (blok, levha, çubuk veya benzeri yarı mamuller halinde)",
+      "tanim_en": "Carbon in the form of metallographic compounds or others (in the form of blocks, sheets, rods or similar semi-finished products)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380190009000",
+      "tanim_tr": "Grafit temelli diğer ürünler veya esası hamur, blok, levha veya diğer yarı mamül grafit veya diğer karbon olan diğer müstahzarlar",
+      "tanim_en": "Other graphite-based products or other preparations based on paste, block, sheet or other semi-finished graphite or other carbon.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380210000000",
+      "tanim_tr": "Aktif hale getirilmiş karbon (aktif kömür)",
+      "tanim_en": "Activated carbon (activated charcoal)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380290001000",
+      "tanim_tr": "Hayvansal karalar; kullanılmış ve tesiri kalmamış hayvansal karalar dahil",
+      "tanim_en": "Animal lands; including used and decommissioned animal lands.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380290009012",
+      "tanim_tr": "Aktif hale getirilmiş toprak ve killer (ağartma toprağı ve asit aktivasyonlu killer hariç)",
+      "tanim_en": "Activated earth and clays (excluding bleaching earth and acid-activated clays)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380290009013",
+      "tanim_tr": "Ağartma toprağı (asit aktivasyonlu killer)",
+      "tanim_en": "Bleaching earth (acid-activated clays)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380290009018",
+      "tanim_tr": "Aktif hale getirilmiş diğer tabii mineral maddeler",
+      "tanim_en": "Other activated natural mineral substances",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380300100000",
+      "tanim_tr": "Tall oil (sıvı reçine); ham",
+      "tanim_en": "Tall oil (liquid resin); raw",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380300900000",
+      "tanim_tr": "Tall oil (sıvı reçine); ham olmayan",
+      "tanim_en": "Tall oil (liquid resin); not raw.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380400001000",
+      "tanim_tr": "Odun hamurunun imalinden arta kalan konsantre edilmiş sülfitli lesivler",
+      "tanim_en": "Concentrated sulfide lecithins remaining from the production of wood pulp.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380400009100",
+      "tanim_tr": "Odun hamurunun soda veya sülfat usulleri ile imalatından arta kalan lesivler",
+      "tanim_en": "Lecithins remaining after the processing of wood pulp using soda or sulfate methods.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380400009900",
+      "tanim_tr": "Odun hamurunun imalinden arta kalan diğer lesivler",
+      "tanim_en": "Other lecithin remaining from the production of wood pulp",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380510100000",
+      "tanim_tr": "Terabantin esansı",
+      "tanim_en": "Turpentine essence",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380510300000",
+      "tanim_tr": "Çam ağacı esansı",
+      "tanim_en": "Pine tree essence",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380510900000",
+      "tanim_tr": "Kağıt imalinden arta kalan sülfatlı esans",
+      "tanim_en": "Sulfate-based essence left over from paper manufacturing.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380590100000",
+      "tanim_tr": "Çam yağı (alfaterpineol içeren)",
+      "tanim_en": "Pine oil (containing alpha-terpineol)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380590901000",
+      "tanim_tr": "Ham para-simenler (kaynağı ne olursa olsun)",
+      "tanim_en": "Raw para-cemens (regardless of their origin)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380590909011",
+      "tanim_tr": "Ham dipenten",
+      "tanim_en": "Raw dipentene",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380590909012",
+      "tanim_tr": "Kağıt imalinden arta kalan bisülfitli esans",
+      "tanim_en": "Bisulfite-based essence left over from paper manufacturing.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380590909019",
+      "tanim_tr": "Ağaç odunundan elde edilen diğer terpenik yağlar",
+      "tanim_en": "Other terpenic oils obtained from tree wood",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380610000000",
+      "tanim_tr": "Kolofanlar ve reçine asitleri",
+      "tanim_en": "Rosins and resin acids",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380620000000",
+      "tanim_tr": "Kolofanların veya reçine asitlerinin veya kolofan veya reçine asidi türevlerinin tuzları (kolofan adüktlerinin tuzları hariç)",
+      "tanim_en": "Salts of rosin or resin acids or derivatives of rosin or resin acids (excluding salts of rosin adducts)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380630001000",
+      "tanim_tr": "Ester sakızları; sıvı veya hamur halde veya blok, parça, pıhtı, şekilsiz külçe, granül, pul ve toz halinde olanlar",
+      "tanim_en": "Ester gums; available in liquid or paste form, or in blocks, pieces, clots, amorphous nuggets, granules, flakes, and powders.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380630009000",
+      "tanim_tr": "Ester sakızları; sıvı veya hamur halde veya blok, parça, pıhtı, şekilsiz külçe, granül, pul ve toz halinde olanlar HARİÇ",
+      "tanim_en": "Ester gums; EXCEPT those in liquid or paste form, or in blocks, pieces, clots, shapeless nuggets, granules, flakes and powder.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380690001000",
+      "tanim_tr": "Eritilmiş sakızlar",
+      "tanim_en": "Melted gums",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380690009011",
+      "tanim_tr": "Reçine asitlerinin esterleri",
+      "tanim_en": "Esters of resin acids",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380690009019",
+      "tanim_tr": "Kolofanların, reçine asitlerinin diğer türevleri",
+      "tanim_en": "Rosins and other derivatives of resin acids",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380700101000",
+      "tanim_tr": "Odun katranı; karışık çözücü ve inceltici halinde",
+      "tanim_en": "Wood tar; in the form of a mixed solvent and thinner.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380700109000",
+      "tanim_tr": "Odun katranı; karışık çözücü ve inceltici halinde olanlar HARİÇ",
+      "tanim_en": "Wood tar; EXCEPT those in the form of mixed solvents and thinners.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380700901100",
+      "tanim_tr": "Odun katranı yağlarından, odun kreozotundan, odun naftasından karışık çözücüler ve incelticiler",
+      "tanim_en": "Mixed solvents and thinners from wood tar oils, wood creosote, and wood naphtha.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380700901911",
+      "tanim_tr": "Odun katranı yağları",
+      "tanim_en": "Wood tar oils",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380700901912",
+      "tanim_tr": "Odun kreozotu",
+      "tanim_en": "Wood creosote",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380700901913",
+      "tanim_tr": "Odun naftası (metilen)",
+      "tanim_en": "Wood naphtha (methylene)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380700909011",
+      "tanim_tr": "Bitkisel ziftler",
+      "tanim_en": "Vegetable tars",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380700909012",
+      "tanim_tr": "Esası kolofan, reçine asitleri zift olan biracılıkta kullanılan ziftler vb. müstahzarlar",
+      "tanim_en": "Preparations such as tar used in brewing, which are based on rosin, resin acids, and pitch.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380852000000",
+      "tanim_tr": "DDT (ISO) (clofenotane (INN)); net ağırlığı 300 gr'ı geçmeyen ambalajlarda olanlar",
+      "tanim_en": "DDT (ISO) (clofenote (INN)); in packages with a net weight not exceeding 300 g.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380859000000",
+      "tanim_tr": "Bu faslın 1 nolu altpozisyon notunda belirtilen diğer tarım ilaçları",
+      "tanim_en": "Other pesticides specified in subheading note 1 of this chapter.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380861000000",
+      "tanim_tr": "Tarım ilaçları (bu faslın 2 nolu altpozisyon notunda belirtilen); net ağırlığı 300 gr'ı geçmeyen ambalajlarda",
+      "tanim_en": "Agricultural pesticides (as specified in subheading note 2 of this chapter); in packages with a net weight not exceeding 300 g.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380862000000",
+      "tanim_tr": "Tarım ilaçları (bu faslın 2 nolu altpozisyon notunda belirtilen); 300gr < net ağırlığı <=7,5 kg'lık ambalajlarda",
+      "tanim_en": "Agricultural pesticides (as specified in subheading note 2 of this chapter); in packages with a net weight of <300g <= 7.5 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380869000000",
+      "tanim_tr": "Bu faslın 2 nolu altpozisyon notunda belirtilen diğer tarım ilaçları",
+      "tanim_en": "Other pesticides specified in subheading note 2 of this chapter.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380891100000",
+      "tanim_tr": "Haşarat öldürücüler; esası pretroitler olanlar",
+      "tanim_en": "Insecticides; those that are primarily based on pyrethroids.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380891200011",
+      "tanim_tr": "Haşarat öldürücüler; esası klorlanmış hidrokarbonlar olup dikofol içerenler",
+      "tanim_en": "Insecticides; primarily chlorinated hydrocarbons, including those containing dicofol.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380891200019",
+      "tanim_tr": "Haşarat öldürücüler; esası klorlanmış hidrokarbonlar olup dikofol içerenler HARİÇ",
+      "tanim_en": "Insecticides; those based on chlorinated hydrocarbons, EXCEPT those containing dicofol.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380891300000",
+      "tanim_tr": "Haşarat öldürücüler; esası karbamatlar olanlar",
+      "tanim_en": "Insecticides; those based on carbamates.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380891400000",
+      "tanim_tr": "Haşarat öldürücüler; esası organo-fosfor bileşikleri olanlar",
+      "tanim_en": "Insecticides; those whose basis is organo-phosphorus compounds.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380891900011",
+      "tanim_tr": "Haşarat öldürücüler; bromoklormetan ya da bromometan (Metil bromür) içerenler",
+      "tanim_en": "Insecticides; those containing bromochloromethane or bromomethane (methyl bromide).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380891900019",
+      "tanim_tr": "Diğer haşarat öldürücüler",
+      "tanim_en": "Other insecticides",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380892100000",
+      "tanim_tr": "Zararlı mantarları yok ediciler; inorganik, esası bakır bileşikleri olan",
+      "tanim_en": "Fungi killers; inorganic, copper-based compounds.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380892200011",
+      "tanim_tr": "Zararlı mantarları yok ediciler; inorganik, bromoklormetan ya da bromometan (Metil bromür) içerenler",
+      "tanim_en": "Fungi killers; inorganic, containing bromochloromethane or bromomethane (methyl bromide).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380892200019",
+      "tanim_tr": "Zararlı mantarları yok edici diğer inorganikler",
+      "tanim_en": "Other inorganic substances that destroy harmful fungi",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380892300000",
+      "tanim_tr": "Zararlı mantarları yok ediciler; esası ditiokarbamatlar olanlar",
+      "tanim_en": "Fungi killers; those based on dithiocarbamates.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380892400000",
+      "tanim_tr": "Zararlı mantarları yok ediciler; esası benzimidazoller olanlar",
+      "tanim_en": "Antifungal agents; those primarily composed of benzimidazoles.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380892500000",
+      "tanim_tr": "Zararlı mantarları yok ediciler; esası diazol veya triazol olanlar",
+      "tanim_en": "Antifungal agents; those based on diazole or triazole.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380892600000",
+      "tanim_tr": "Zararlı mantarları yok ediciler; esası diazin veya morfolinler olanlar",
+      "tanim_en": "Fungi killers; those based on diazins or morpholines.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380892900011",
+      "tanim_tr": "Zararlı mantarları diğer yok ediciler, bromoklormetan ya da bromometan (Metil bromür) içerenler",
+      "tanim_en": "Other fungicides include those containing bromochloromethane or bromomethane (methyl bromide).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380892900019",
+      "tanim_tr": "Zararlı mantarı diğer yok ediciler",
+      "tanim_en": "Other fungi destroyers",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380893110000",
+      "tanim_tr": "Zararlı bitkileri yok ediciler; esası fenoksi - bitki hormonları olanlar",
+      "tanim_en": "Weed killers; those that are essentially phenoxy - plant hormones.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380893130000",
+      "tanim_tr": "Zararlı bitkileri yok ediciler; esası triazinler olanlar",
+      "tanim_en": "Weed killers; those whose main component is triazines.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380893150000",
+      "tanim_tr": "Zararlı bitkileri yok ediciler; esası amidler olanlar",
+      "tanim_en": "Weed killers; those whose main component is amides.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380893170000",
+      "tanim_tr": "Zararlı bitkileri yok ediciler; esası karbamatlar olanlar",
+      "tanim_en": "Weed killers; those whose main component is carbamates.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380893210000",
+      "tanim_tr": "Zararlı bitkileri yok ediciler; esası dinitroanilin türevleri olanlar",
+      "tanim_en": "Weed killers; those primarily derived from dinitroaniline.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380893230000",
+      "tanim_tr": "Zararlı bitkileri yok ediciler; esası üre, ürasil ve süfonilüre türevleri olanlar",
+      "tanim_en": "Weed killers; those primarily composed of urea, uracil, and suffonylurea derivatives.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380893270011",
+      "tanim_tr": "Zararlı bitkileri yok edici bromoklormetan ya da bromometan (Metil bromür) içerenler",
+      "tanim_en": "Those containing bromochloromethane or bromomethane (methyl bromide) that kill harmful weeds.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380893270019",
+      "tanim_tr": "Zararlı bitkileri yok edici diğer ürünler",
+      "tanim_en": "Other products for eliminating harmful weeds",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380893300011",
+      "tanim_tr": "Bitkilerin sürgünlerini önleyici ürünler; bromoklormetan ya da bromometan (Metil bromür) içerenler",
+      "tanim_en": "Products that prevent plant shoot growth; those containing bromochloromethane or bromomethane (methyl bromide).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380893300019",
+      "tanim_tr": "Bitkilerin sürgünlerini önleyici ürünler; bromoklormetan ya da bromometan (Metil bromür) içerenler HARİÇ",
+      "tanim_en": "Products that prevent plant shoot growth; EXCEPT those containing bromochloromethane or bromomethane (methyl bromide).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380893900011",
+      "tanim_tr": "Bitkilerin büyümesini düzenleyici ürünler; bromoklormetan ya da bromometan (Metil bromür) içerenler",
+      "tanim_en": "Plant growth regulators; those containing bromochloromethane or bromomethane (methyl bromide).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380893900019",
+      "tanim_tr": "Bitkilerin büyümesini düzenleyici ürünler; bromoklormetan ya da bromometan (Metil bromür) içerenler HARİÇ",
+      "tanim_en": "Plant growth regulators; EXCEPT those containing bromochloromethane or bromomethane (methyl bromide).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380894100000",
+      "tanim_tr": "Dezenfekte ediciler; zirai müzadelede kullanılan, esası kuaterner amonyum tuzları olanlar",
+      "tanim_en": "Disinfectants; those used in agricultural pest control, which are essentially quaternary ammonium salts.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380894200000",
+      "tanim_tr": "Dezenfekte ediciler; zirai müzadelede kullanılan, esası halojenlenmiş bileşikler olanlar",
+      "tanim_en": "Disinfectants are halogenated compounds used in agricultural pest control.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380894900011",
+      "tanim_tr": "Zirai müzadelede kullanılan diğer dezenfekte ediciler; bromoklormetan ya da bromometan (Metil bromür) içerenler",
+      "tanim_en": "Other disinfectants used in agricultural pest control include those containing bromochloromethane or bromomethane (methyl bromide).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380894900019",
+      "tanim_tr": "Zirai müzadelede kullanılan diğer dezenfekte ediciler",
+      "tanim_en": "Other disinfectants used in agricultural pest control",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380899100011",
+      "tanim_tr": "Kemirici hayvanlara karşı kullanılan müstahzarlar; bromoklormetan ya da bromometan (Metil bromür) içerenler",
+      "tanim_en": "Preparations used against rodents; those containing bromochloromethane or bromomethane (methyl bromide).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380899100019",
+      "tanim_tr": "Kemirici hayvanlara karşı kullanılan müstahzarlar; bromoklormetan ya da bromometan (Metil bromür) içerenler HARİÇ",
+      "tanim_en": "Preparations used against rodents; EXCEPT those containing bromochloromethane or bromomethane (methyl bromide).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380899900011",
+      "tanim_tr": "Bitkileri koruyucu, geliştirici diğer müstahzarlar; bromoklormetan ya da bromometan (Metil bromür) içerenler",
+      "tanim_en": "Other preparations for protecting and improving plants; those containing bromochloromethane or bromomethane (methyl bromide).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380899900019",
+      "tanim_tr": "Bitkileri koruyucu, geliştirici diğer müstahzarlar; bromoklormetan ya da bromometan (Metil bromür) içerenler HARİÇ",
+      "tanim_en": "Other preparations for protecting and improving plants; EXCEPT those containing bromochloromethane or bromomethane (methyl bromide).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380910100000",
+      "tanim_tr": "Mensucat, kağıt, deri vb. sanayiler için apre veya finisaj müstahzarları, müstahzar haşıl, apreler, mordanlar, vb.; esası nişasta olup oranı < %55",
+      "tanim_en": "Finishing preparations, sizing agents, mordants, etc., for textile, paper, leather, etc. industries; based on starch with a content of < 55%.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380910300000",
+      "tanim_tr": "Mensucat, kağıt, deri vb. sanayiler için apre/finisaj müstahzarları, müstahzar haşıl, apreler, mordanlar, vb.; esası nişasta olup oranı >=%55, <%70",
+      "tanim_en": "Finishing preparations, sizing agents, finishes, mordants, etc., for textile, paper, leather, etc. industries; based on starch with a percentage >=55%, <%70",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380910500000",
+      "tanim_tr": "Mensucat, kağıt, deri vb. sanayiler için apre/finisaj müstahzarları, müstahzar haşıl, apreler, mordanlar, vb.; esası nişasta olup oranı >=%70, <%83",
+      "tanim_en": "Finishing preparations, sizing agents, mordants, etc., for textile, paper, leather, etc. industries; based on starch with a percentage >=70%, <83%",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380910900000",
+      "tanim_tr": "Mensucat, kağıt, deri vb. sanayiler için apre/finisaj müstahzarları, müstahzar haşıl, apreler, mordanlar, vb.; esası nişasta olup oranı >= %83",
+      "tanim_en": "Finishing preparations, sizing agents, mordants, etc., for textile, paper, leather, etc. industries; based on starch with a percentage >= 83%.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380991001011",
+      "tanim_tr": "Mensucat ve benzeri sanayiler için müstahzar haşıl ve apreler",
+      "tanim_en": "Sizing and finishing agents prepared for textile and similar industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380991001012",
+      "tanim_tr": "Mensucat ve benzeri sanayiler için mordansaj müstahzarları",
+      "tanim_en": "Mordant preparations for textile and similar industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380991009011",
+      "tanim_tr": "Mensucat ve benzeri sanayiler için mensucatın su geçirmez hale getirilmesine mahsus müstahzarlar",
+      "tanim_en": "Preparations for waterproofing textiles for the textile and similar industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380991009019",
+      "tanim_tr": "Mensucat ve benzeri sanayiler için apre veya finisaj müstahzarları, mordanlar, vb.",
+      "tanim_en": "Finishing preparations, mordants, etc., for textile and similar industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380992001000",
+      "tanim_tr": "Kağıt ve benzeri sanayiler için müstahzar haşıl ve apreler",
+      "tanim_en": "Sizing and finishing agents prepared for the paper and similar industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380992009000",
+      "tanim_tr": "Kağıt ve benzeri sanayiler için apre veya finisaj müstahzarları, mordanlar, vb.",
+      "tanim_en": "Finishing or emulsion preparations, mordants, etc., for the paper and similar industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380993001000",
+      "tanim_tr": "Deri ve benzeri sanayiler için müstahzar apreler",
+      "tanim_en": "Prepared finishes for leather and similar industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "380993009000",
+      "tanim_tr": "Deri ve benzeri sanayiler için apre veya finisaj müstahzarları, müstahzar haşıl, mordanlar, vb.",
+      "tanim_en": "Finishing preparations, sizing agents, mordants, etc., for leather and similar industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381010000011",
+      "tanim_tr": "Metal satıhlarının temizlenmesinde kullanılan müstahzarlar",
+      "tanim_en": "Preparations used for cleaning metal surfaces.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381010000012",
+      "tanim_tr": "Metal ve diğer maddelerden meydana gelen lehim ve kaynak pastaları ve tozları",
+      "tanim_en": "Solder and welding pastes and powders made from metal and other materials.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381090100000",
+      "tanim_tr": "Lehim ve kaynak çubuklarının, elektrotlarının sıvanmasında veya kaplanmasında kullanılan müstahzarlar",
+      "tanim_en": "Preparations used for coating or plating solder and welding rods and electrodes.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381090900000",
+      "tanim_tr": "Metallerin işlenmesinde kullanılan diğer müstahzarlar",
+      "tanim_en": "Other preparations used in the processing of metals",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381111100000",
+      "tanim_tr": "Esası kurşuntetraetil olan vuruntuyu önleyici müstahzarlar",
+      "tanim_en": "Anti-knock preparations based on lead tetraethyl",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381111900000",
+      "tanim_tr": "Esası diğer kurşun bileşikleri olan vuruntuyu önleyici müstahzarlar",
+      "tanim_en": "Anti-knock preparations whose basis is other lead compounds",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381119000000",
+      "tanim_tr": "Esası diğer bileşikler olan vuruntuyu önleyici müstahzarlar",
+      "tanim_en": "Anti-knock preparations whose basis is other compounds",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381121001000",
+      "tanim_tr": "Mineral yağlar ve benzeri ürünler için katkılar; petrol yağları veya bitümenli minerallerden elde edilen yağları içerenler",
+      "tanim_en": "Additives for mineral oils and similar products; those containing petroleum oils or oils derived from bituminous minerals.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381121009000",
+      "tanim_tr": "Yağlama yağları için diğer katkılar; petrol yağları veya bitümenli minerallerden elde edilen yağları içerenler",
+      "tanim_en": "Other additives for lubricating oils include those containing petroleum oils or oils derived from bituminous minerals.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381129001000",
+      "tanim_tr": "Mineral yağlar ve benzeri ürünler için diğer katkılar",
+      "tanim_en": "Other additives for mineral oils and similar products.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381129009000",
+      "tanim_tr": "Yağlama yağları için diğer katkılar",
+      "tanim_en": "Other additives for lubricating oils",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381190001011",
+      "tanim_tr": "Ağır mineral yağlar için müstahzar katkılar",
+      "tanim_en": "Prepared additives for heavy mineral oils.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381190001012",
+      "tanim_tr": "Hafif mineral yağlar için müstahzar katkılar",
+      "tanim_en": "Prepared additives for light mineral oils.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381190001019",
+      "tanim_tr": "Mineral yağlar gibi aynı amaçla kullanılan diğer sıvı yağlar için diğer müstahzar katkılar",
+      "tanim_en": "Other prepared additives for other liquid oils used for the same purpose, such as mineral oils.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381190009000",
+      "tanim_tr": "Oksidasyonu durdurucu müstahzarlar, diğer katkılar, aşınmayı önleyici katkılar, vb. diğer müstahzarlar",
+      "tanim_en": "Oxidation inhibitors, other additives, anti-wear additives, etc.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381210000000",
+      "tanim_tr": "Vulkanizasyon çabuklaştırıcı müstahzarlar",
+      "tanim_en": "Vulcanization accelerating preparations",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381220100000",
+      "tanim_tr": "Benzil 3-izobutiriloksi-1-izopropil-2,2-dimetilpropil ftalat ve benzil 3-izobutiriloksi -2,2,4-trimetilpentil ftalat içeren reaksiyon karışımı",
+      "tanim_en": "Reaction mixture containing benzyl 3-isobutyryloxy-1-isopropyl-2,2-dimethylpropyl phthalate and benzyl 3-isobutyryloxy-2,2,4-trimethylpentyl phthalate.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381220900000",
+      "tanim_tr": "Kauçuk ve plastikler için plastifiyan diğer bileşikler",
+      "tanim_en": "Other plasticizer compounds for rubber and plastics.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381231000000",
+      "tanim_tr": "2,2,4-trimetil-1,2 dihidroquinoline (TMQ) oligomerlerinin karışımları",
+      "tanim_en": "Mixtures of 2,2,4-trimethyl-1,2-dihydroquinoline (TMQ) oligomers",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381239100011",
+      "tanim_tr": "Kauçuk için oksidasyonu önleyici müstahzarlar",
+      "tanim_en": "Antioxidant preparations for rubber.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381239100019",
+      "tanim_tr": "Oksidasyonu önleyici diğer müstahzarlar",
+      "tanim_en": "Other anti-oxidation preparations",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381239900000",
+      "tanim_tr": "Plastifiyan diğer bileşikler ve diğer stabilizatör bileşikler",
+      "tanim_en": "Plasticizers, other compounds, and other stabilizer compounds.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381300000013",
+      "tanim_tr": "Yangın söndürme aleti için diğer dolgu maddeleri; Bromoklordiflometan, bromotriflormetan veya dibromo-tetrafloretan içerenler",
+      "tanim_en": "Other fillers for fire extinguishers include those containing bromochlordifluoromethane, bromotrifluoromethane, or dibromo-tetrafluoroethane.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381300000014",
+      "tanim_tr": "Yangın söndürme aleti için diğer dolgu maddeleri; Metan, etan veya propan hidrobromoflorkarbonlar (HBFC'ler) içerenler",
+      "tanim_en": "Other fillers for fire extinguishing equipment; those containing methane, ethane or propane hydrobromofluorocarbons (HBFCs).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381300000015",
+      "tanim_tr": "Yangın söndürme aleti için diğer dolgu maddeleri; Metan, etan veya propan hidrokloroflorkarbonlar (HCFC'ler) içerenler",
+      "tanim_en": "Other fillers for fire extinguishers; those containing methane, ethane or propane hydrochlorofluorocarbons (HCFCs).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381300000016",
+      "tanim_tr": "Yangın söndürme aleti için diğer dolgu maddeleri; Bromoklormetan içerenler",
+      "tanim_en": "Other fillers for fire extinguishers; those containing bromochloromethane.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381300000017",
+      "tanim_tr": "Yangın söndürme aleti için diğer dolgu maddesi ve bileşimi",
+      "tanim_en": "Other filler materials and components for fire extinguishing equipment.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381400100011",
+      "tanim_tr": "Diğer organik karma çözücüler ve incelticiler, boya, vernik çıkarmada kullanılan müstahzarlar; esası bütilasetat, CFC içerenler",
+      "tanim_en": "Other organic mixed solvents and thinners, preparations used in paint and varnish removal; those containing butyl acetate and CFCs.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381400100012",
+      "tanim_tr": "Diğer organik karma çözücüler ve incelticiler, boya, vernik çıkarmada kullanılan müstahzarlar; esası bütilasetat, HCFC içerenler",
+      "tanim_en": "Other organic mixed solvents and thinners, preparations used for removing paint and varnish; those containing butyl acetate and HCFCs.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381400100013",
+      "tanim_tr": "Diğer organik karma çözücü ve incelticiler, boya, vernik çıkarmada kullanılan müstahzarlar; esası bütilasetat, metilkloroform içerenler",
+      "tanim_en": "Other organic mixed solvents and thinners, preparations used for removing paint and varnish; those containing butyl acetate and methyl chloroform as bases.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381400100019",
+      "tanim_tr": "Diğer organik karma çözücüler ve incelticiler, boya, vernik çıkarmada kullanılan diğer müstahzarlar; esası bütilasetat olanlar",
+      "tanim_en": "Other organic mixed solvents and thinners, other preparations used in paint and varnish removal; those based on butyl acetate.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381400900011",
+      "tanim_tr": "Diğer organik karma çözücüler ve incelticiler, boya, vernik çıkarmada kullanılan diğer müstahzarlar; CFC içeren",
+      "tanim_en": "Other organic mixed solvents and thinners, other preparations used in paint and varnish removal; containing CFCs.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381400900012",
+      "tanim_tr": "Diğer organik karma çözücüler ve incelticiler, boya, vernik çıkarmada kullanılan diğer müstahzarlar; HCFC içeren fakat CFC içermeyen",
+      "tanim_en": "Other organic mixed solvents and thinners, other preparations used for removing paint and varnish; containing HCFCs but not CFCs.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381400900013",
+      "tanim_tr": "Diğer organik karma çözücüler ve incelticiler, boya, vernik çıkarmada kullanılan diğer müstahzarlar; metilkloroform içeren",
+      "tanim_en": "Other organic mixed solvents and thinners, other preparations used for removing paint and varnish; containing methylchloroform.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381400900019",
+      "tanim_tr": "Diğer organik karma çözücüler ve incelticiler, boya, vernik çıkarmada kullanılan diğer müstahzarlar",
+      "tanim_en": "Other organic mixed solvents and thinners, other preparations used in paint and varnish removal.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381511000000",
+      "tanim_tr": "Takviye edilmiş katalizatörler; aktif maddesi nikel veya nikel bileşikleri olanlar",
+      "tanim_en": "Reinforced catalysts; those whose active ingredient is nickel or nickel compounds.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381512000000",
+      "tanim_tr": "Takviye edilmiş katalizatörler; aktif maddesi kıymetli metal veya kıymetli metal bileşikleri olanlar",
+      "tanim_en": "Reinforced catalysts are those whose active ingredient is a precious metal or a compound of precious metals.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381519100000",
+      "tanim_tr": "Takviye edilmiş katalizatörler; partikül boyu <=10 mikrometre, %20<=bakır<=%35, %2<=bizmut<=%3, 0.2<=özgül kütlesi<=1",
+      "tanim_en": "Reinforced catalysts; particle size <=10 micrometers, 20% <=copper <=35%, 2% <=bismuth <=3%, 0.2 <=specific gravity <=1",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381519900000",
+      "tanim_tr": "Takviye edilmiş diğer katalizatörler",
+      "tanim_en": "Other reinforced catalysts",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381590100000",
+      "tanim_tr": "Metanol içinde çözelti halinde etilrtifenilfosfonyum asetat içeren katalizörler",
+      "tanim_en": "Catalysts containing ethyl pyrrhotency phenylphenylphosphonium acetate in solution in methanol",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381590900000",
+      "tanim_tr": "Reaksiyon başlatıcılar, hızlandırıcılar ve diğer katalitik müstahzarlar",
+      "tanim_en": "Reaction initiators, accelerators and other catalytic preparations",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381600100000",
+      "tanim_tr": "Dolomit ateş tuğlası harcı",
+      "tanim_en": "Dolomite firebrick mortar",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381600900011",
+      "tanim_tr": "Ateşe dayanıklı çimentolar (38.01 pozisyonundaki ürünler hariç)",
+      "tanim_en": "Fire-resistant cements (excluding products in heading 38.01)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381600900012",
+      "tanim_tr": "Ateşe dayanıklı harçlar (dolomit ateş tuğlası harcı ve 38.01 pozisyonundaki ürünler hariç)",
+      "tanim_en": "Fire-resistant mortars (excluding dolomite firebrick mortar and products of heading 38.01)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381600900019",
+      "tanim_tr": "Ateşe dayanıklı betonlar vb. karışımlar (38.01 pozisyonundaki ürünler hariç)",
+      "tanim_en": "Fire-resistant concretes and similar mixtures (excluding products in heading 38.01)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381700500000",
+      "tanim_tr": "Lineer alkilbenzen",
+      "tanim_en": "Linear alkylbenzene",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381700800011",
+      "tanim_tr": "Post dodesilbenzen (heavy-alkylates); 27.07 veya 29.02 pozisyonundakiler HARİÇ",
+      "tanim_en": "Post dodecylbenzene (heavy-alkylates); EXCEPT those in headings 27.07 or 29.02",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381700800019",
+      "tanim_tr": "Karışım halinde diğer alkilbenzenler; 27.07 veya 29.02 pozisyonundakiler HARİÇ",
+      "tanim_en": "Other alkylbenzenes in mixtures; EXCEPT those in headings 27.07 or 29.02",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381700800029",
+      "tanim_tr": "Karışım halinde diğer alkalinaftalenler; 27.07 veya 29.02 pozisyonundakiler HARİÇ",
+      "tanim_en": "Other alkalinaphthalenes in mixtures; EXCEPT those in headings 27.07 or 29.02.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381800110011",
+      "tanim_tr": "Dope edilmiş dikdörtgen şeklinde silisyum Mavi (Blue) waferlar (elektronikte kullanılan); kalınlığı 200 mikrometreyi geçmeyen (fotovoltaik waferlar)",
+      "tanim_en": "Doped rectangular silicon blue wafers (used in electronics); with a thickness not exceeding 200 micrometers (photovoltaic wafers)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381800110019",
+      "tanim_tr": "Dope edilmiş dikdörtgen şeklinde silisyum diğer waferlar (elektronikte kullanılan); kalınlığı 200 mikrometreyi geçmeyen (fotovoltaik waferlar)",
+      "tanim_en": "Doped rectangular silicon wafers (used in electronics); with a thickness not exceeding 200 micrometers (photovoltaic wafers)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381800190000",
+      "tanim_tr": "Dope edilmiş diğer silisyum (elektronikte kullanılan)",
+      "tanim_en": "Other doped silicon (used in electronics)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381800900000",
+      "tanim_tr": "Elektronikte kullanılmak üzere dope edilmiş diğer kimyasal elementler ve bileşikler",
+      "tanim_en": "Other doped chemical elements and compounds for use in electronics.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "381900000000",
+      "tanim_tr": "Hidrolik fren sıvıları ve hidrolik transmisyonlar için petrol yağları veya bitümenli mineral yağ <%70 olan müstahzar sıvılar",
+      "tanim_en": "Petroleum oils or bituminous mineral oils (less than 70%) for hydraulic brake fluids and hydraulic transmissions.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382000000000",
+      "tanim_tr": "Donmayı önleyici müstahzarlar ve donmayı çözücü müstahzar sıvılar",
+      "tanim_en": "Antifreeze preparations and defrosting liquids",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382100000000",
+      "tanim_tr": "Mikroorganizmaların (virüsler vb.), bitkilerin, insan veya hayvan hücrelerinin geliştirilmesine veya idamesine mahsus müstahzar kültür ortamları",
+      "tanim_en": "Prepared culture media for the development or maintenance of microorganisms (viruses, etc.), plants, human or animal cells.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382211000000",
+      "tanim_tr": "Sıtma için bir mesnet üzerinde bulunan laboratuvarlarda veya teşhiste kullanılan reaktifler ve müstahzar reaktifler",
+      "tanim_en": "Reagents and prepared reagents used in laboratories or for diagnosis of malaria, on a support basis.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382212000000",
+      "tanim_tr": "Zika ve Aedes cinsi sivrisineklerden geçen hastalıklar için bir mesnet üzerinde bulunan lab./teşhiste kullanılan reaktifler ve müstahzar reaktifler",
+      "tanim_en": "Reagents and prepared reagents used in laboratory/diagnostic applications for diseases transmitted by Zika and Aedes mosquitoes, displayed on a support structure.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382213000000",
+      "tanim_tr": "Kan gruplarının veya kan faktörlerinin tayini için bir mesnet üzerinde bulunan laboratuvarlarda/teşhiste kullanılan reaktifler ve müstahzar reaktifler",
+      "tanim_en": "Reagents and prepared reagents used in laboratories/diagnostics, mounted on a support for the determination of blood groups or blood factors.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382219000011",
+      "tanim_tr": "Su analizi için fotometrik test kiti",
+      "tanim_en": "Photometric test kit for water analysis.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382219000012",
+      "tanim_tr": "Yenidoğan tanı test kiti",
+      "tanim_en": "Newborn diagnostic test kit",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382219000019",
+      "tanim_tr": "Bir mesnet üzerinde bulunan laboratuvarlarda veya teşhiste kullanılan diğer reaktifler ve diğer müstahzar reaktifler",
+      "tanim_en": "Other reagents and prepared reagents used in laboratories or diagnostics, mounted on a support.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382290000011",
+      "tanim_tr": "DNA temelli biyolojik işaretleyiciler",
+      "tanim_en": "DNA-based biological markers",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382290000019",
+      "tanim_tr": "Standart (referans) maddeleri; DNA temelli biyolojik işaretleyiciler HARİÇ",
+      "tanim_en": "Standard (reference) substances; EXCLUDING DNA-based biological markers.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382311000000",
+      "tanim_tr": "Stearik asit; endüstriyel",
+      "tanim_en": "Stearic acid; industrial",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382312000000",
+      "tanim_tr": "Oleik asit; endüstriyel",
+      "tanim_en": "Oleic acid; industrial",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382313000000",
+      "tanim_tr": "Tall oil sıvı yağ asitleri; endüstriyel",
+      "tanim_en": "Tall oil is a liquid fatty acid; industrial.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382319100000",
+      "tanim_tr": "Damıtılmış yağ asitleri",
+      "tanim_en": "Distilled fatty acids",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382319300000",
+      "tanim_tr": "Yağ asitleri damıtma ürünleri",
+      "tanim_en": "Fatty acid distillation products",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382319900000",
+      "tanim_tr": "Sınai diğer monokarboksilik yağ asitleri, rafinaj mahsülü diğer asit yağları",
+      "tanim_en": "Industrial other monocarboxylic fatty acids, refining product other acid oils",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382370001000",
+      "tanim_tr": "Mum karakterine haiz sınai yağ alkolleri",
+      "tanim_en": "Industrial oil alcohols with wax-like properties",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382370009000",
+      "tanim_tr": "Diğer sınai yağ alkolleri",
+      "tanim_en": "Other industrial fatty alcohols",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382410001000",
+      "tanim_tr": "Dökümhane maçalarına veya kalıplarına mahsus müstahzar bağlayıcılar; esası tabii reçine olanlar",
+      "tanim_en": "Prepared binders for foundry cores or molds; those based on natural resins.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382410009011",
+      "tanim_tr": "Dökümhane maçalarına veya kalıplarına mahsus müstahzar bağlayıcılar; esası sentetik reçine olanlar",
+      "tanim_en": "Prepared binders for foundry cores or molds; those based on synthetic resins.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382410009019",
+      "tanim_tr": "Dökümhane maçalarına veya kalıplarına mahsus diğer müstahzar bağlayıcılar",
+      "tanim_en": "Other prepared binders for foundry cores or molds.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382430000000",
+      "tanim_tr": "Kendi aralarında veya metalik bağlayıcılarla karıştırılmış aglomere edilmemiş metal karbürler",
+      "tanim_en": "Unaggregated metal carbides mixed among themselves or with metallic binders",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382440000000",
+      "tanim_tr": "Çimento, harç veya betonlara mahsus müstahzar katkılar",
+      "tanim_en": "Prepared additives for cement, mortar or concrete.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382450100000",
+      "tanim_tr": "Ateşe dayanıklı olmayan kalıba dökülmeye hazır beton",
+      "tanim_en": "Non-fire-resistant ready-to-pour concrete in molds.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382450900000",
+      "tanim_tr": "Ateşe dayanıklı olmayan harç ve diğer betonlar",
+      "tanim_en": "Mortar and other concretes that are not fire-resistant.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382460110000",
+      "tanim_tr": "Sulu çözelti halinde sorbitol; D-glusitol miktarı üzerinden hesaplandığında ağırlık itibariyle % 2 veya daha az D-mannitol içerenler",
+      "tanim_en": "Sorbitol in aqueous solution; those containing 2% or less D-mannitol by weight, calculated based on the amount of D-glucitol.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382460190000",
+      "tanim_tr": "Sulu çözelti halinde sorbitol; D-glusitol miktarı üzerinden hesaplandığında ağırlık itibariyle % 2 veya daha az D-mannitol içerenler HARİÇ",
+      "tanim_en": "Sorbitol in aqueous solution; EXCEPT those containing 2% or less D-mannitol by weight, calculated based on the amount of D-glucitol.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382460910000",
+      "tanim_tr": "Sorbitol; sulu çözelti halinde olanlar HARİÇ, D-glusitol miktarı üzerinden hesaplandığında ağırlık itibariyle % 2 veya daha az D-mannitol içerenler",
+      "tanim_en": "Sorbitol; EXCEPT those in aqueous solution, containing 2% or less D-mannitol by weight, calculated based on the amount of D-glucitol.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382460990000",
+      "tanim_tr": "Sorbitol; sulu çözelti halinde olanlar ve D-glusitol miktarı üzerinden hesaplandığında ağırlık itibariyle % 2 veya daha az D-mannitol içerenler HARİÇ",
+      "tanim_en": "Sorbitol; EXCEPT those in aqueous solution and those containing 2% or less D-mannitol by weight, calculated based on the amount of D-glucitol.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382481000000",
+      "tanim_tr": "Kimya ve bağlı sanayilerde kullanılan oksiran (etilenoksit) içeren karışımlar ve müstahzarlar",
+      "tanim_en": "Mixtures and preparations containing oxirane (ethylene oxide) used in the chemical and related industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382482000000",
+      "tanim_tr": "Kimya ve bağlı sanayilerde kullanılan (PCBs), (PCTs) veya (PBBs) içeren karışımlar ve müstahzarlar",
+      "tanim_en": "Mixtures and preparations containing PCBs, PCTs, or PCBs used in the chemical and related industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382483000000",
+      "tanim_tr": "Kimya ve bağlı sanayilerde kullanılan Tris (2,3-dibromopropil) fosfat içeren karışımlar ve müstahzarlar",
+      "tanim_en": "Mixtures and preparations containing Tris (2,3-dibromopropyl) phosphate used in the chemical and related industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382484000000",
+      "tanim_tr": "Kimya ve bağlı sanayilerde kullanılan aldrin (ISO), camphechlor (ISO) (toxaphene), (devamı Resmi Gazetede) içeren karışımlar ve müstahzarlar",
+      "tanim_en": "Mixtures and preparations containing aldrin (ISO), camphechlor (ISO) (toxaphene), (continued in the Official Gazette) used in the chemical and related industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382485000000",
+      "tanim_tr": "Kimya ve bağlı sanayilerde kullanılan Lindane (ISO, INN) dahil, 1,2,3,4,5,6 hexachlorocyclohexane (HCH (ISO)) içeren karışımlar ve müstahzarlar",
+      "tanim_en": "Mixtures and preparations containing 1,2,3,4,5,6 hexachlorocyclohexane (HCH (ISO)), including Lindane (ISO, INN), used in the chemical and related industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382486000000",
+      "tanim_tr": "Kimya ve bağlı sanayilerde kullanılan Pentachlorobenzene (ISO) veya hexachlorobenzene (ISO) içeren karışımlar ve müstahzarlar",
+      "tanim_en": "Mixtures and preparations containing pentachlorobenzene (ISO) or hexachlorobenzene (ISO) used in the chemical and related industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382487000000",
+      "tanim_tr": "Perfluorooctane sülfonik asit, tuzları, perfluorooctane sülfonamidler veya perfluorooctane sulphonyl fluoride içeren karışımlar ve müstahzarlar",
+      "tanim_en": "Mixtures and preparations containing perfluorooctane sulfonic acid, its salts, perfluorooctane sulfonamides or perfluorooctane sulphonyl fluoride.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382488000000",
+      "tanim_tr": "Kimya ve bağlı sanayilerde kullanılan tetra-, penta-, hexa- hepta- veya octabromodiphenyl eterleri içeren karışımlar ve müstahzarlar",
+      "tanim_en": "Mixtures and preparations containing tetra-, penta-, hexa-, hepta-, or octabromodiphenyl ethers used in the chemical and related industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382489000000",
+      "tanim_tr": "Kısa zincirli klorlu parafinleri içeren karışımlar ve müstahzarlar",
+      "tanim_en": "Mixtures and preparations containing short-chain chlorinated paraffins.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382491000000",
+      "tanim_tr": "Esas olarak 5-ethyl-2-methyl-2-oxido- 1,3,2-dioxaphosphinan-5-yl) methyl methyl (devamı Resmi Gazetede) içeren karışım ve müstahzarlar",
+      "tanim_en": "Mixtures and preparations containing mainly 5-ethyl-2-methyl-2-oxido-1,3,2-dioxaphosphinan-5-yl)methyl methyl (continued in the Official Gazette).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382492000000",
+      "tanim_tr": "Metilfosfonik asidin poliglikol esterleri",
+      "tanim_en": "Polyglycol esters of methylphosphonic acid",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499100000",
+      "tanim_tr": "Petrol sülfonatları, bitümenli minerallerden elde edilen tiofenli sülfonik asitlerin yağları ve bunların tuzları",
+      "tanim_en": "Petroleum sulfonates, oils and salts of thiophene sulfonic acids obtained from bituminous minerals.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499150011",
+      "tanim_tr": "İyon değiştiriciler (esası sülfonlu karbonlar/tabii mineral madde olanlar)",
+      "tanim_en": "Ion exchangers (based on sulfonated carbons/natural mineral substances)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499150012",
+      "tanim_tr": "Sentetik zeolit (İyon değiştirici)",
+      "tanim_en": "Synthetic zeolite (ion exchange)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499150019",
+      "tanim_tr": "Diğer iyon değiştiriciler",
+      "tanim_en": "Other ion exchangers",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499200000",
+      "tanim_tr": "Elektrik tüpleri ve valflarında vakum teminine yarayan emici bileşimler",
+      "tanim_en": "Absorbent compounds used to provide vacuum in electrical tubes and valves.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499250000",
+      "tanim_tr": "Pirolinyitler (kalsiyum pirolinyit gibi), ham kalsiyum tartarat ve ham kalsiyum sitrat",
+      "tanim_en": "Pyrrolites (such as calcium pyrrolinite), crude calcium tartrate, and crude calcium citrate.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499300000",
+      "tanim_tr": "Naftenik asitler, bunların suda çözünmeyen tuzları ve esterleri",
+      "tanim_en": "Naphthenic acids, their water-insoluble salts and esters",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499450000",
+      "tanim_tr": "Kabuklanmayı önleyici bileşikler vb.",
+      "tanim_en": "Anti-scaling compounds, etc.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499500000",
+      "tanim_tr": "Elektroliz yoluyla kaplamada kullanılan müstahzarlar",
+      "tanim_en": "Preparations used in electroplating.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499550000",
+      "tanim_tr": "Mono, di ve tri stearatlardan oluşan gliserol karışımları (katı yağlar için emilsifiyan olarak kullanılanlar)",
+      "tanim_en": "Glycerol mixtures consisting of mono, di, and tri stearates (used as emulsifiers for solid fats)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499610000",
+      "tanim_tr": "Antibiyotiklerin (insan için kullanılan 30.04 alt pozisyonunda yer alan) imalat işlemi ara ürünleri",
+      "tanim_en": "Intermediate products of the manufacturing process of antibiotics (subheading 30.04 for human use).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499620000",
+      "tanim_tr": "Monensin tuzlarının imalinden elde edilen ara ürünler (eczacılık ve cerrahide kullanılan)",
+      "tanim_en": "Intermediate products obtained from the manufacture of monensin salts (used in pharmacy and surgery)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499640000",
+      "tanim_tr": "Eczacılık ve cerrahide kullanılan diğer ürün ve müstahzarlar",
+      "tanim_en": "Other products and preparations used in pharmacy and surgery.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499650011",
+      "tanim_tr": "Bor nitrür içerenler",
+      "tanim_en": "Those containing boron nitride",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499650019",
+      "tanim_tr": "Diğerleri",
+      "tanim_en": "Others",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499700000",
+      "tanim_tr": "İnşaat sanayinde kullanılan yanmayı ve su geçirmeyi önleyen müstahzarlar vb.",
+      "tanim_en": "Preparations used in the construction industry that prevent fire and water penetration, etc.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499750000",
+      "tanim_tr": "Lityum niyobat wafer (dope edilmemiş)",
+      "tanim_en": "Lithium niobate wafer (undoped)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499800000",
+      "tanim_tr": "Dimerize edilmiş yağ asitlerinden türetilmiş aminlerin karışımı; 520 <= molekül ağırlığı <= 550)",
+      "tanim_en": "Mixture of amines derived from dimerized fatty acids; 520 <= molecular weight <= 550)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499850000",
+      "tanim_tr": "3 - (1 - Etil - 1 metilpropil) izoksazol - 5 - ylamin (tolüen içinde çözelti halinde)",
+      "tanim_en": "3-(1-ethyl-1-methylpropyl)isoxazole-5-ylamine (in solution in toluene)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499860000",
+      "tanim_tr": "Çoğunlukla dimetil metilfosfonat, oksiran ve difosforpentaoksit içeren karışımlar",
+      "tanim_en": "Mixtures that mostly contain dimethyl methylphosphonate, oxirane, and diphosphorus pentoxide.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920011",
+      "tanim_tr": "Füzel yağları",
+      "tanim_en": "Fusel oils",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920012",
+      "tanim_tr": "Dippel yağı",
+      "tanim_en": "Dippel oil",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920013",
+      "tanim_tr": "Emülsiyon kırıcılar",
+      "tanim_en": "Emulsion breakers",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920016",
+      "tanim_tr": "Başlıca o alkyl (<= C10, cycloalkyl) alkyl (methyl, ethyl npropyl veya isopropyl) phosphonofluoridates içeren karışımlar",
+      "tanim_en": "Mainly mixtures containing o alkyl (<= C10, cycloalkyl) alkyl (methyl, ethyl, isopropyl or isopropyl) phosphonofluoridates",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920017",
+      "tanim_tr": "Başlıca o alkyl (<= C10, cycloalkyl) N,Ndialkyl phosphoramidocyanidates içeren karışımlar",
+      "tanim_en": "Mainly mixtures containing o-alkyl (<= C10, cycloalkyl) N,Ndialkyl phosphoramidocyanidates",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920018",
+      "tanim_tr": "Başlıca [S-2-(dialkyl (methyl, ethyl, n-propyl veya isopropyl) amino) ethyl] hydrogen alkyl (Devamı resmi gazetede) içeren karşımlar",
+      "tanim_en": "Mainly [S-2-(dialkyl (methyl, ethyl, n-propyl or isopropyl) amino) ethyl] hydrogen alkyl (Continued in the official gazette) containing mixtures",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920021",
+      "tanim_tr": "Başlıca alkyl (methyl, ethyl, n-propyl veya isopropyl) phosphonyl-difluorides içeren karışımlar",
+      "tanim_en": "Mixtures containing mainly alkyl (methyl, ethyl, n-propyl or isopropyl) phosphonyl-difluorides.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920022",
+      "tanim_tr": "Başlıca [o-2- dialkyl (methyl, ethyl, n-propyl veya isopropyl) aminoethyl] hydrogen alkyl (Devamı resmi gazetede) içeren karışımlar",
+      "tanim_en": "Mixtures containing mainly [o-2-dialkyl (methyl, ethyl, n-propyl or isopropyl)aminoethyl] hydrogen alkyl (Continued in the official gazette)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920023",
+      "tanim_tr": "Başlıca N,N- dialkyl (methyl, ethyl, n-propyl veya isopropyl) phosphoramidic dihalides içeren karışımlar",
+      "tanim_en": "Mixtures containing mainly N,N-dialkyl (methyl, ethyl, n-propyl or isopropyl) phosphoramidic dihalides.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920024",
+      "tanim_tr": "Başlıca dialkyl (methyl, ethyl, n-propyl veya isopropyl) N,N-dialkyl (methyl, ethyl, n-propyl (Devamı resmi gazetede) içeren karışımlar",
+      "tanim_en": "Mixtures containing mainly dialkyl (methyl, ethyl, n-propyl or isopropyl) N,N-dialkyl (methyl, ethyl, n-propyl (Continued in the official gazette))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920025",
+      "tanim_tr": "Başlıca N,N-dialkyl (methyl, ethyl,n-propyl veya isopropyl) 2-chloroethylamines veya bunların (Devamı resmi gazetede) içeren karışımlar",
+      "tanim_en": "Mainly N,N-dialkyl (methyl, ethyl,n-propyl or isopropyl) 2-chloroethylamines or mixtures thereof (Continued in the official gazette)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920026",
+      "tanim_tr": "Başlıca N,N-dimethyl-2-aminoethanol veya N,N-diethyl-2-amino-ethanol veya protonlandırılmış tuzlarını içeren karışımlar",
+      "tanim_en": "Mixtures mainly containing N,N-dimethyl-2-aminoethanol or N,N-diethyl-2-amino-ethanol or its protonated salts.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920029",
+      "tanim_tr": "Başlıca N,N-dialkyl (methyl, ethyl,n-propyl veya isopropyl)-2-aminoethanols veya bunların protonlandırılmış tuzlarını içeren diğer karışımlar",
+      "tanim_en": "Primarily N,N-dialkyl (methyl, ethyl,n-propyl or isopropyl)-2-aminoethanols or other mixtures containing their protonated salts.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920031",
+      "tanim_tr": "Başlıca N,N-dialkyl (methyl, ethyl,n-propyl veya isopropyl) aminoethane-2-thiols veya bunların protonlandırılmış tuzlarını içeren karışımlar",
+      "tanim_en": "Mainly mixtures containing N,N-dialkyl (methyl, ethyl,n-propyl or isopropyl) aminoethane-2-thiols or their protonated salts.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920032",
+      "tanim_tr": "Başlıca fosfor atomuna bağlı bir metil, etil, n-propil veya isopropil grubu ihtiva eden kimyasalları içeren diğer karışımlar",
+      "tanim_en": "Other mixtures containing chemicals that have a methyl, ethyl, n-propyl, or isopropyl group attached to the main phosphorus atom.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920033",
+      "tanim_tr": "Poliklorlu naftalenler",
+      "tanim_en": "Polychlorinated naphthalenes",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920034",
+      "tanim_tr": "Klorlu parafinler",
+      "tanim_en": "Chlorinated paraffins",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499920039",
+      "tanim_tr": "Esas olarak organik bileşiklerden oluşan 20 °C'de sıvı formunda olan diğer kimyasal ürünler veya müstahzarlar",
+      "tanim_en": "Other chemical products or preparations consisting mainly of organic compounds and in liquid form at 20 °C.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499930011",
+      "tanim_tr": "Gaz halindeki halojenlenmiş hidrokarbonların karışımları",
+      "tanim_en": "Mixtures of gaseous halogenated hydrocarbons",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499930012",
+      "tanim_tr": "Zineb",
+      "tanim_en": "Zineb",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499930013",
+      "tanim_tr": "Yüksek yoğunluklu tatlandırıcı karışımları",
+      "tanim_en": "High-intensity sweetener blends",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499930014",
+      "tanim_tr": "Sakız mayası ( gomelastik )",
+      "tanim_en": "Gum resin (gum paste)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499930019",
+      "tanim_tr": "Başka yerde belirtilmeyen veya yer almayan esas olarak organik bileşiklerden oluşan diğer kimyasal ürünler/müstahzarlar",
+      "tanim_en": "Other chemical products/preparations consisting mainly of organic compounds, not specified or included elsewhere.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499961000",
+      "tanim_tr": "Farklı anyon içeren bileşiklerin tuzlarının karışımları",
+      "tanim_en": "Mixtures of salts of compounds containing different anions",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499962000",
+      "tanim_tr": "Yazı teksirinde, matbaa merdanelerinde vb işlerde kullanılan jelatin esaslı patlar",
+      "tanim_en": "Gelatin-based pastes used in duplicating texts, printing presses, etc.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499969014",
+      "tanim_tr": "Seramik fırınlarının ısısını kontrola yarayan eriyebilen göstergeler",
+      "tanim_en": "Fusible indicators used to monitor the temperature of ceramic kilns.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499969021",
+      "tanim_tr": "Akümülatörler için kadmiyum oksit veya nikel hidroksit esaslı bileşikler",
+      "tanim_en": "Cadmium oxide or nickel hydroxide-based compounds for accumulators.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382499969068",
+      "tanim_tr": "Kimya sanayii veya kimya sanayiine bağlı sanayilerde kullanılan diğer kimyasal ürünler ve müstahzarlar",
+      "tanim_en": "Other chemical products and preparations used in the chemical industry or industries related to the chemical industry.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382510000000",
+      "tanim_tr": "Şehir atıkları",
+      "tanim_en": "City waste",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382520000000",
+      "tanim_tr": "Kanalizasyon çamuru",
+      "tanim_en": "sewage sludge",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382530000000",
+      "tanim_tr": "Klinik atıkları",
+      "tanim_en": "Clinical waste",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382541000000",
+      "tanim_tr": "Atık organik çözücüler (halojenlenmiş)",
+      "tanim_en": "Waste organic solvents (halogenated)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382549000000",
+      "tanim_tr": "Atık organik çözücüler (halojenlenmiş olanlar HARİÇ)",
+      "tanim_en": "Waste organic solvents (EXCEPT halogenated ones)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382550000000",
+      "tanim_tr": "Metal dekapajı için amonyaklı suların, hidrolik sıvıların, fren ve antifiriz sıvılarının atıkları",
+      "tanim_en": "Waste from ammonia solutions, hydraulic fluids, brake fluids, and antifreeze fluids used in metal pickling.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382561000000",
+      "tanim_tr": "Kimya sanayi ve kimya sanayine bağlı sanayilerin diğer artıkları; esas olarak organik bileşenleri içeren",
+      "tanim_en": "Waste from the chemical industry and related industries; mainly containing organic components.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382569000000",
+      "tanim_tr": "Kimya sanayi ve kimya sanayine bağlı sanayilerin diğer artıkları",
+      "tanim_en": "Waste from the chemical industry and related industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382590100000",
+      "tanim_tr": "Gaz temizleyici alkalinize demir oksitler",
+      "tanim_en": "Gas cleaner alkalizing iron oxides",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382590900000",
+      "tanim_tr": "Kimya sanayi ve kimya sanayine bağlı sanayilerin diğer atıkları",
+      "tanim_en": "Chemical industry and other waste from chemical industry-related industries",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382600100011",
+      "tanim_tr": "YAME/Biodizel; ağırlık itibariyle yağ asiti metil esteri >=%96,5, petrol/bitümenli mineral yağı oranı < %70",
+      "tanim_en": "YAME/Biodiesel; fatty acid methyl ester by weight >=96.5%, petroleum/bituminous mineral oil ratio < 70%",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382600100019",
+      "tanim_tr": "Diğer biodizel ve bunların karışımları; ağırlık itibariyle ester içeriği >= %96,5, petrol/bitümenli mineral yağı < %70",
+      "tanim_en": "Other biodiesel and its blends; ester content by weight >= 96.5%, petroleum/bituminous mineral oil < 70%",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382600900011",
+      "tanim_tr": "Denizcilik yakıtı harmanlama bileşeni; petrol yağı veya bitümenli minerallerden elde edilen yağ oranı < %70",
+      "tanim_en": "Marine fuel blending component; oil content derived from petroleum oil or bituminous minerals < 70%",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382600900019",
+      "tanim_tr": "Diğer biodizel ve bunların diğer karışımları; petrol yağı veya bitümenli minerallerden elde edilen yağ oranı < %70",
+      "tanim_en": "Other biodiesel and its mixtures; oil content derived from petroleum oil or bituminous minerals < 70%",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382711000011",
+      "tanim_tr": "R-502 [R-115 (Kloropentafloroetan), R-22 (Klorodiflorometan)] karışımı",
+      "tanim_en": "R-502 [R-115 (Chloropentafluoroethane), R-22 (Chlorodifluoromethane)] mixture",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382711000019",
+      "tanim_tr": "Kloroflorokarbonlar (CFCs) içeren diğer karışımlar",
+      "tanim_en": "Other mixtures containing chlorofluorocarbons (CFCs)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382712000000",
+      "tanim_tr": "Hidrobromoflorokarbonlar (HBFCs) içeren karışımlar",
+      "tanim_en": "Mixtures containing hydrobromofluorocarbons (HBFCs)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382713000000",
+      "tanim_tr": "Karbon teraklorür içeren karışımlar",
+      "tanim_en": "Mixtures containing carbon terachloride",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382714000000",
+      "tanim_tr": "1,1,1-trikloroetan (metil kloroform) içeren karışımlar",
+      "tanim_en": "Mixtures containing 1,1,1-trichloroethane (methyl chloroform)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382720000000",
+      "tanim_tr": "Bromoklorodiflorometan (Halon-1211), bromotriflorometan (Halon-1301) veya dibromotetrafloroetanlar (Halon-2402) içeren karışımlar",
+      "tanim_en": "Mixtures containing bromochlorodifluoromethane (Halon-1211), bromotrifluoromethane (Halon-1301) or dibromotetrafluoroethanes (Halon-2402)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382731000000",
+      "tanim_tr": "2903.41 ila 2903.48 alt pozisyonlarındaki maddeleri içeren fakat kloroflorokarbonlar (CFCs) içermeyen karışımlar",
+      "tanim_en": "Mixtures containing substances from subheadings 2903.41 to 2903.48 but not containing chlorofluorocarbons (CFCs).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382732000011",
+      "tanim_tr": "142B [(Klorodifloroetan), R-22 (Klorodiflorometan)] karışımı",
+      "tanim_en": "142B [(Chlorodifluoroethane), R-22 (Chlorodifluoromethane)] mixture",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382732000019",
+      "tanim_tr": "2903.71 ila 2903.75 alt pozisyonlarındaki maddeleri içeren, fakat kloroflorokarbonlar (CFCs) içermeyen diğer karışımlar",
+      "tanim_en": "Other mixtures containing substances of subheadings 2903.71 to 2903.75, but not chlorofluorocarbons (CFCs).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382739000000",
+      "tanim_tr": "Hidrokloroflorokarbonlar (HCFCs) içeren, fakat kloroflorokarbonlar (CFCs) içermeyen diğer karışımlar",
+      "tanim_en": "Other mixtures containing hydrochlorofluorocarbons (HCFCs) but not chlorofluorocarbons (CFCs)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382740000000",
+      "tanim_tr": "Bromometan (metil bromür) veya bromoklorometan içeren karışımlar",
+      "tanim_en": "Mixtures containing bromomethane (methyl bromide) or bromochloromethane",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382751000010",
+      "tanim_tr": "R508A (%61 heksafloroetan (perfloroetan) (PFC-116) ve %39 triflorometan (floroform) (HFC-23) içerenler)",
+      "tanim_en": "R508A (containing 61% hexafluoroethane (perfluoroethane) (PFC-116) and 39% trifluoromethane (fluoroform) (HFC-23))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382751000020",
+      "tanim_tr": "R508B (%54 heksafloroetan (perfloroetan) (PFC-116) ve %46 triflorometan (floroform) (HFC-23) içerenler)",
+      "tanim_en": "R508B (containing 54% hexafluoroethane (perfluoroethane) (PFC-116) and 46% trifluoromethane (fluoroform) (HFC-23))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382751000090",
+      "tanim_tr": "Triflorometan (HFC-23) içeren fakat kloroflorokarbonlar (CFC'ler) veya hidrokloroflorokarbonlar (HCFC'ler) içermeyen diğer karışımlar",
+      "tanim_en": "Other mixtures containing trifluoromethane (HFC-23) but not chlorofluorocarbons (CFCs) or hydrochlorofluorocarbons (HCFCs)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382759000000",
+      "tanim_tr": "Perflorokarbonlar (PFC'ler) içeren ancak kloroflorokarbonlar (CFC'ler) veya hidrokloroflorokarbonlar (HCFC'ler) içermeyen karışımlar",
+      "tanim_en": "Mixtures containing perfluorocarbons (PFCs) but not chlorofluorocarbons (CFCs) or hydrochlorofluorocarbons (HCFCs)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382761000010",
+      "tanim_tr": "R507A (%50 pentafloroetan (HFC-125) ve %50 1,1,1-trifloroetan (HFC-143a) içerenler)",
+      "tanim_en": "R507A (containing 50% pentafluoroethane (HFC-125) and 50% 1,1,1-trifluoroethane (HFC-143a))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382761000020",
+      "tanim_tr": "R404A (%52 1,1,1-trifloroetan (HFC-143a), %44 pentafloroetan (HFC-125) ve %4 1,1,1,2-tetrafloroetan (HFC-134a) içerenler)",
+      "tanim_en": "R404A (containing 52% 1,1,1-trifluoroethane (HFC-143a), 44% pentafluoroethane (HFC-125) and 4% 1,1,1,2-tetrafluoroethane (HFC-134a))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382761000090",
+      "tanim_tr": "Kütlece 1,1,1-trifloroetan (HFC-143a) oranı >= %15, fakat kloroflorokarbonlar (CFC'ler) veya hidrokloroflorokarbonlar (HCFC'ler) içermeyen karışımlar",
+      "tanim_en": "Mixtures containing 1,1,1-trifluoroethane (HFC-143a) by mass >= 15%, but without chlorofluorocarbons (CFCs) or hydrochlorofluorocarbons (HCFCs).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382762000010",
+      "tanim_tr": "Yalnızca 1,1,1-trifloroetan ve pentafloroetan içeren karışımlar; pentafloroetan (HFC-125) oranı kütlece >= %55",
+      "tanim_en": "Mixtures containing only 1,1,1-trifluoroethane and pentafluoroethane; pentafluoroethane (HFC-125) content >= 55% by mass.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382762000020",
+      "tanim_tr": "Yalnızca 1,1,1-trifloroetan, pentafloroetan ve 1,1,1,2-tetrafloroetan içeren karışımlar; pentafloroetan (HFC-125) oranı kütlece >= %55",
+      "tanim_en": "Mixtures containing only 1,1,1-trifluoroethane, pentafluoroethane and 1,1,1,2-tetrafluoroethane; pentafluoroethane (HFC-125) content >= 55% by mass.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382762000030",
+      "tanim_tr": "Yalnızca diflorometan ve pentafloroetan içeren karışımlar; pentafloroetan (HFC-125) oranı kütlece >= %55",
+      "tanim_en": "Mixtures containing only difluoromethane and pentafluoroethane; pentafluoroethane (HFC-125) content >= 55% by mass.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382762000040",
+      "tanim_tr": "Yalnızca diflorometan, pentafloroetan ve 1,1,1,2-tetrafloroetan içeren karışımlar; pentafloroetan (HFC-125) oranı kütlece >= %55",
+      "tanim_en": "Mixtures containing only difluoromethane, pentafluoroethane and 1,1,1,2-tetrafluoroethane; pentafluoroethane (HFC-125) content >= 55% by mass.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382762000050",
+      "tanim_tr": "R422D (%65,1 pentafloroetan (HFC-125), %31,5 1,1,1,2-tetrafloroetan (HFC-134a) ve %3,4 izobütan içerenler)",
+      "tanim_en": "R422D (containing 65.1% pentafluoroethane (HFC-125), 31.5% 1,1,1,2-tetrafluoroethane (HFC-134a) and 3.4% isobutane)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382762000060",
+      "tanim_tr": "R419A (%77 pentafloroetan (HFC-125), %19 1,1,1,2-tetrafloroetan (HFC-134a) ve %4 dimetil eter (R-E170) içerenler)",
+      "tanim_en": "R419A (containing 77% pentafluoroethane (HFC-125), 19% 1,1,1,2-tetrafluoroethane (HFC-134a) and 4% dimethyl ether (R-E170))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382762000090",
+      "tanim_tr": "Kütlece pentafloroetan (HFC-125) oranı >= %55, ancak asiklik hidrokarbonların (HFO'lar) doymamış florlu türevlerini içermeyen diğer karışımlar",
+      "tanim_en": "Mixtures with a pentafluoroethane (HFC-125) content by mass >= 55%, but not containing unsaturated fluorinated derivatives of acyclic hydrocarbons (HFOs).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382763000010",
+      "tanim_tr": "Yalnızca 1,1,1-trifloroetan ve pentafloroetan içeren karışımlar; kütlece pentafloroetan (HFC-125) oranı >= % 40",
+      "tanim_en": "Mixtures containing only 1,1,1-trifluoroethane and pentafluoroethane; pentafluoroethane (HFC-125) content by mass >= 40%",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382763000015",
+      "tanim_tr": "Yalnızca 1,1,1-trifloroetan, pentafloroetan ve 1,1,1,2-tetrafloroetan içeren karışımlar; kütlece pentafloroetan (HFC-125) oranı >= % 40",
+      "tanim_en": "Mixtures containing only 1,1,1-trifluoroethane, pentafluoroethane and 1,1,1,2-tetrafluoroethane; pentafluoroethane (HFC-125) content >= 40% by mass.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382763000020",
+      "tanim_tr": "R410A (%50 pentafloroetan (HFC-125) ve %50 diflorometan (HFC-32) içerenler)",
+      "tanim_en": "R410A (containing 50% pentafluoroethane (HFC-125) and 50% difluoromethane (HFC-32))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382763000029",
+      "tanim_tr": "Yalnızca diflorometan ve kütlece % 40 veya daha fazla pentafloroetan (HFC-125) içeren diğer karışımlar",
+      "tanim_en": "Only difluoromethane and other mixtures containing 40% or more pentafluoroethane (HFC-125) by mass.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382763000030",
+      "tanim_tr": "R407A (%40 pentafloroetan (HFC-125), %40 1,1,1,2-tetrafloroetan (HFC-134a) ve %20 diflorometan (HFC-32) içerenler)",
+      "tanim_en": "R407A (containing 40% pentafluoroethane (HFC-125), 40% 1,1,1,2-tetrafluoroethane (HFC-134a) and 20% difluoromethane (HFC-32))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382763000039",
+      "tanim_tr": "Yalnızca diflorometan, pentafloroetan ve 1,1,1,2-tetrafloroetan içeren diğer karışımlar; kütlece pentafloroetan (HFC-125) oranı >= % 40",
+      "tanim_en": "Other mixtures containing only difluoromethane, pentafluoroethane and 1,1,1,2-tetrafluoroethane; pentafluoroethane (HFC-125) content by mass >= 40%",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382763000040",
+      "tanim_tr": "R452A (%59 pentafloroetan (HFC-125), %30 2,3,3,3-tetrafloropropen (HFC-1234yf) ve %11 diflorometan (HFC-32) içerenler)",
+      "tanim_en": "R452A (containing 59% pentafluoroethane (HFC-125), 30% 2,3,3,3-tetrafluoropropene (HFC-1234yf) and 11% difluoromethane (HFC-32))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382763000049",
+      "tanim_tr": "Doymamış hidroflorokarbonlar içeren diğer karışımlar; kütlece pentafloroetan oranı >= % 40",
+      "tanim_en": "Other mixtures containing unsaturated hydrofluorocarbons; pentafluoroethane content by mass >= 40%",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382763000090",
+      "tanim_tr": "R417A (%50 1,1,1,2-tetrafloroetan (HFC-134a), %46,6 pentafloroetan (HFC-125) ve %3,4 bütan içerenler)",
+      "tanim_en": "R417A (containing 50% 1,1,1,2-tetrafluoroethane (HFC-134a), 46.6% pentafluoroethane (HFC-125) and 3.4% butane)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382763000099",
+      "tanim_tr": "Başka yerde yer almayan, kütlece % 40 veya daha fazla pentafloroetan (HFC-125) içeren diğer karışımlar",
+      "tanim_en": "Other mixtures containing 40% or more by mass of pentafluoroethane (HFC-125), not found elsewhere.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382764000010",
+      "tanim_tr": "Yalnızca 1,1,1-trifloroetan, pentafloroetan ve 1,1,1,2-tetrafloroetan içeren karışımlar; 1,1,1,2-tetrafloroetan (HFC-134a) oranı kütlece >= %30",
+      "tanim_en": "Mixtures containing only 1,1,1-trifluoroethane, pentafluoroethane and 1,1,1,2-tetrafluoroethane; 1,1,1,2-tetrafluoroethane (HFC-134a) content >= 30% by mass.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382764000020",
+      "tanim_tr": "R407C (%52 1,1,1,2-tetrafloroetan (HFC-134a), %25 pentafloroetan (HFC-125) ve %23 diflorometan (HFC-32) içerenler)",
+      "tanim_en": "R407C (containing 52% 1,1,1,2-tetrafluoroethane (HFC-134a), 25% pentafluoroethane (HFC-125) and 23% difluoromethane (HFC-32))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382764000021",
+      "tanim_tr": "R407F (%40 1,1,1,2-tetrafloroetan (HFC-134a), %30 diflorometan (HFC-32) ve %30 pentafloroetan (HFC-125) içerenler)",
+      "tanim_en": "R407F (containing 40% 1,1,1,2-tetrafluoroethane (HFC-134a), 30% difluoromethane (HFC-32) and 30% pentafluoroethane (HFC-125))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382764000022",
+      "tanim_tr": "R407H (%52,5 1,1,1,2-tetrafloroetan (HFC-134a), %32,5 diflorometan (HFC-32) ve %15 pentafloroetan (HFC-125) içerenler)",
+      "tanim_en": "R407H (containing 52.5% 1,1,1,2-tetrafluoroethane (HFC-134a), 32.5% difluoromethane (HFC-32) and 15% pentafluoroethane (HFC-125))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382764000029",
+      "tanim_tr": "Yalnızca diflorometan, pentafloroetan ve 1,1,1,2-tetrafloroetan içeren diğer karışımlar; 1,1,1,2-tetrafloroetan (HFC-134a) oranı kütlece >= %30",
+      "tanim_en": "Other mixtures containing only difluoromethane, pentafluoroethane and 1,1,1,2-tetrafluoroethane; 1,1,1,2-tetrafluoroethane (HFC-134a) content >= 30% by mass.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382764000090",
+      "tanim_tr": "Kütlece >= %30 1,1,1,2-tetrafloroetan (HFC-134a) içeren ancak doymamış florlu asiklik hidrokarbon türevlerini (HFO'lar) içermeyen diğer karışımlar",
+      "tanim_en": "Other mixtures containing >= 30% by mass of 1,1,1,2-tetrafluoroethane (HFC-134a) but not containing unsaturated fluorinated acyclic hydrocarbon derivatives (HFOs)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382765000010",
+      "tanim_tr": "Yalnızca diflorometan, pentafloroetan ve 1,1,1,2-tetrafloroetan içeren karışımlar; diflorometan (HFC-32) >= %20 ve pentafloroetan (HFC-125) >= %20",
+      "tanim_en": "Mixtures containing only difluoromethane, pentafluoroethane and 1,1,1,2-tetrafluoroethane; difluoromethane (HFC-32) >= 20% and pentafluoroethane (HFC-125) >= 20%",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382765000020",
+      "tanim_tr": "R448A (%26 diflorometan, %26 pentafloroetan, %21 1,1,1,2-tetrafloroetan, %20 2,3,3,3-tetrafloropropen ve %7 1,3,3,3-tetrafloropropen içerenler)",
+      "tanim_en": "R448A (containing 26% difluoromethane, 26% pentafluoroethane, 21% 1,1,1,2-tetrafluoroethane, 20% 2,3,3,3-tetrafluoropropene and 7% 1,3,3,3-tetrafluoropropene)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382765000021",
+      "tanim_tr": "R449A (%25,7 1,1,1,2-tetrafloroetan, %25,3 2,3,3,3-tetrafloropropen, %24,7 pentafloroetan ve %24,3 diflorometan içerenler)",
+      "tanim_en": "R449A (containing 25.7% 1,1,1,2-tetrafluoroethane, 25.3% 2,3,3,3-tetrafluoropropene, 24.7% pentafluoroethane and 24.3% difluoromethane)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382765000029",
+      "tanim_tr": "Kütlece %20 veya daha fazla doymamış diflorometan (HFC-32) ve kütlece %20 veya daha fazla doymamış pentafloroetan (HFC-125) içeren diğer karışımlar",
+      "tanim_en": "Other mixtures containing 20% ​​or more by mass of unsaturated difluoromethane (HFC-32) and 20% or more by mass of unsaturated pentafluoroethane (HFC-125)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382765000090",
+      "tanim_tr": "Kütlece %20 veya daha fazla diflorometan (HFC-32) ve kütlece %20 veya daha fazla pentafloroetan (HFC-125) içeren diğer karışımlar",
+      "tanim_en": "Other mixtures containing 20% ​​or more by mass of difluoromethane (HFC-32) and 20% or more by mass of pentafluoroethane (HFC-125)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382768000010",
+      "tanim_tr": "R452B (%67 diflorometan (HFC-32), %26 2,3,3,3-tetrafloropropen (HFC-1234yf) ve %7 pentafloroetan (HFC-125) içerenler)",
+      "tanim_en": "R452B (containing 67% difluoromethane (HFC-32), 26% 2,3,3,3-tetrafluoropropene (HFC-1234yf) and 7% pentafluoroethane (HFC-125))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382768000020",
+      "tanim_tr": "R455A (%75,5 2,3,3,3-tetrafloropropen (HFC-1234yf), %21,5 diflorometan (HFC-32) ve %3 karbondioksit içerenler)",
+      "tanim_en": "R455A (containing 75.5% 2,3,3,3-tetrafluoropropene (HFC-1234yf), 21.5% difluoromethane (HFC-32) and 3% carbon dioxide)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382768000030",
+      "tanim_tr": "Yalnızca 1,1,1,3,3-pentaflorobütan (HFC-365mfc) ve 1,1,1,2,3,3,3-heptafloropropan (HFC-227ea) içeren karışımlar",
+      "tanim_en": "Mixtures containing only 1,1,1,3,3-pentafluorobutane (HFC-365mfc) and 1,1,1,2,3,3,3-heptafluoropropane (HFC-227ea)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382768000040",
+      "tanim_tr": "Yalnızca 1,1,1,3,3-pentaflorobütan (HFC-365mfc) ve 1,1,1,3,3-pentafloropropan (HFC-245fa) içeren karışımlar",
+      "tanim_en": "Mixtures containing only 1,1,1,3,3-pentafluorobutane (HFC-365mfc) and 1,1,1,3,3-pentafluoropropane (HFC-245fa)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382768000050",
+      "tanim_tr": "R450A (%58 1,3,3,3-tetrafloropropen (HFC-1234ze) ve % 42 1,1,1,2-tetrafloroetan (HFC-134a) içerenler)",
+      "tanim_en": "R450A (containing 58% 1,3,3,3-tetrafluoropropene (HFC-1234ze) and 42% 1,1,1,2-tetrafluoroethane (HFC-134a))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382768000060",
+      "tanim_tr": "R513A (%56 2,3,3,3-tetrafloropropen (HFC-1234yf) ve %44 1,1,1,2-tetrafloroetan (HFC-134a) içerenler)",
+      "tanim_en": "R513A (containing 56% 2,3,3,3-tetrafluoropropene (HFC-1234yf) and 44% 1,1,1,2-tetrafluoroethane (HFC-134a))",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382768000090",
+      "tanim_tr": "Başka yerde yer almayıp 2903.41 ila 2903.48 alt pozisyonlarında yer alan maddeleri içeren diğer karışımlar",
+      "tanim_en": "Other mixtures containing substances classified under subheadings 2903.41 to 2903.48, not found elsewhere.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382769000012",
+      "tanim_tr": "R514A (%74,7 1,1,1,4,4,4-heksafloro-2-büten (HFC-1336mzz) ve %25 3 trans-1,2-dikloroetilen içerenler)",
+      "tanim_en": "R514A (containing 74.7% 1,1,1,4,4,4-hexafluoro-2-butene (HFC-1336mzz) and 25% 3-trans-1,2-dichloroethylene)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382769000019",
+      "tanim_tr": "Doymamış hidroflorokarbonlar (HFC'ler) içeren ancak kloroflorokarbonlar (CFC'ler) veya hidrokloroflorokarbonlar (HCFC'ler) içermeyen diğer karışımlar",
+      "tanim_en": "Other mixtures containing unsaturated hydrofluorocarbons (HFCs) but not chlorofluorocarbons (CFCs) or hydrochlorofluorocarbons (HCFCs)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382769000090",
+      "tanim_tr": "Diğer hidroflorokarbonlar (HFC'ler) içeren ancak kloroflorokarbonlar (CFC'ler) veya hidrokloroflorokarbonlar (HCFC'ler) içermeyen diğer karışımlar",
+      "tanim_en": "Other mixtures containing other hydrofluorocarbons (HFCs) but not chlorofluorocarbons (CFCs) or hydrochlorofluorocarbons (HCFCs)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "382790000000",
+      "tanim_tr": "Kimya ve bağlı sanayilerde kullanılan metan, etan veya propanın halojenlenmiş türevlerini içeren diğer karışımlar",
+      "tanim_en": "Mixtures containing halogenated derivatives of methane, ethane, or propane used in the chemical and related industries.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    }
+  ]
+}

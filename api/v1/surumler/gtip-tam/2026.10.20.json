@@ -1,0 +1,631 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-tam",
+      "ad": {
+        "tr": "GTİP Tüm Vergiler",
+        "en": "GTIP All Taxes"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "checksum": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "fasillar": [
+    {
+      "kod": "01",
+      "kayit_sayisi": 102,
+      "dosya": "fasil/01.json"
+    },
+    {
+      "kod": "02",
+      "kayit_sayisi": 261,
+      "dosya": "fasil/02.json"
+    },
+    {
+      "kod": "03",
+      "kayit_sayisi": 482,
+      "dosya": "fasil/03.json"
+    },
+    {
+      "kod": "04",
+      "kayit_sayisi": 207,
+      "dosya": "fasil/04.json"
+    },
+    {
+      "kod": "05",
+      "kayit_sayisi": 36,
+      "dosya": "fasil/05.json"
+    },
+    {
+      "kod": "06",
+      "kayit_sayisi": 60,
+      "dosya": "fasil/06.json"
+    },
+    {
+      "kod": "07",
+      "kayit_sayisi": 173,
+      "dosya": "fasil/07.json"
+    },
+    {
+      "kod": "08",
+      "kayit_sayisi": 157,
+      "dosya": "fasil/08.json"
+    },
+    {
+      "kod": "09",
+      "kayit_sayisi": 60,
+      "dosya": "fasil/09.json"
+    },
+    {
+      "kod": "10",
+      "kayit_sayisi": 75,
+      "dosya": "fasil/10.json"
+    },
+    {
+      "kod": "11",
+      "kayit_sayisi": 90,
+      "dosya": "fasil/11.json"
+    },
+    {
+      "kod": "12",
+      "kayit_sayisi": 134,
+      "dosya": "fasil/12.json"
+    },
+    {
+      "kod": "13",
+      "kayit_sayisi": 34,
+      "dosya": "fasil/13.json"
+    },
+    {
+      "kod": "14",
+      "kayit_sayisi": 22,
+      "dosya": "fasil/14.json"
+    },
+    {
+      "kod": "15",
+      "kayit_sayisi": 224,
+      "dosya": "fasil/15.json"
+    },
+    {
+      "kod": "16",
+      "kayit_sayisi": 142,
+      "dosya": "fasil/16.json"
+    },
+    {
+      "kod": "17",
+      "kayit_sayisi": 62,
+      "dosya": "fasil/17.json"
+    },
+    {
+      "kod": "18",
+      "kayit_sayisi": 28,
+      "dosya": "fasil/18.json"
+    },
+    {
+      "kod": "19",
+      "kayit_sayisi": 85,
+      "dosya": "fasil/19.json"
+    },
+    {
+      "kod": "20",
+      "kayit_sayisi": 386,
+      "dosya": "fasil/20.json"
+    },
+    {
+      "kod": "21",
+      "kayit_sayisi": 61,
+      "dosya": "fasil/21.json"
+    },
+    {
+      "kod": "22",
+      "kayit_sayisi": 235,
+      "dosya": "fasil/22.json"
+    },
+    {
+      "kod": "23",
+      "kayit_sayisi": 82,
+      "dosya": "fasil/23.json"
+    },
+    {
+      "kod": "24",
+      "kayit_sayisi": 37,
+      "dosya": "fasil/24.json"
+    },
+    {
+      "kod": "25",
+      "kayit_sayisi": 141,
+      "dosya": "fasil/25.json"
+    },
+    {
+      "kod": "26",
+      "kayit_sayisi": 51,
+      "dosya": "fasil/26.json"
+    },
+    {
+      "kod": "27",
+      "kayit_sayisi": 204,
+      "dosya": "fasil/27.json"
+    },
+    {
+      "kod": "28",
+      "kayit_sayisi": 583,
+      "dosya": "fasil/28.json"
+    },
+    {
+      "kod": "29",
+      "kayit_sayisi": 1807,
+      "dosya": "fasil/29.json"
+    },
+    {
+      "kod": "30",
+      "kayit_sayisi": 91,
+      "dosya": "fasil/30.json"
+    },
+    {
+      "kod": "31",
+      "kayit_sayisi": 50,
+      "dosya": "fasil/31.json"
+    },
+    {
+      "kod": "32",
+      "kayit_sayisi": 105,
+      "dosya": "fasil/32.json"
+    },
+    {
+      "kod": "33",
+      "kayit_sayisi": 72,
+      "dosya": "fasil/33.json"
+    },
+    {
+      "kod": "34",
+      "kayit_sayisi": 56,
+      "dosya": "fasil/34.json"
+    },
+    {
+      "kod": "35",
+      "kayit_sayisi": 54,
+      "dosya": "fasil/35.json"
+    },
+    {
+      "kod": "36",
+      "kayit_sayisi": 22,
+      "dosya": "fasil/36.json"
+    },
+    {
+      "kod": "37",
+      "kayit_sayisi": 44,
+      "dosya": "fasil/37.json"
+    },
+    {
+      "kod": "38",
+      "kayit_sayisi": 306,
+      "dosya": "fasil/38.json"
+    },
+    {
+      "kod": "39",
+      "kayit_sayisi": 317,
+      "dosya": "fasil/39.json"
+    },
+    {
+      "kod": "40",
+      "kayit_sayisi": 147,
+      "dosya": "fasil/40.json"
+    },
+    {
+      "kod": "41",
+      "kayit_sayisi": 98,
+      "dosya": "fasil/41.json"
+    },
+    {
+      "kod": "42",
+      "kayit_sayisi": 75,
+      "dosya": "fasil/42.json"
+    },
+    {
+      "kod": "43",
+      "kayit_sayisi": 33,
+      "dosya": "fasil/43.json"
+    },
+    {
+      "kod": "44",
+      "kayit_sayisi": 308,
+      "dosya": "fasil/44.json"
+    },
+    {
+      "kod": "45",
+      "kayit_sayisi": 14,
+      "dosya": "fasil/45.json"
+    },
+    {
+      "kod": "46",
+      "kayit_sayisi": 29,
+      "dosya": "fasil/46.json"
+    },
+    {
+      "kod": "47",
+      "kayit_sayisi": 25,
+      "dosya": "fasil/47.json"
+    },
+    {
+      "kod": "48",
+      "kayit_sayisi": 273,
+      "dosya": "fasil/48.json"
+    },
+    {
+      "kod": "49",
+      "kayit_sayisi": 28,
+      "dosya": "fasil/49.json"
+    },
+    {
+      "kod": "50",
+      "kayit_sayisi": 33,
+      "dosya": "fasil/50.json"
+    },
+    {
+      "kod": "51",
+      "kayit_sayisi": 83,
+      "dosya": "fasil/51.json"
+    },
+    {
+      "kod": "52",
+      "kayit_sayisi": 202,
+      "dosya": "fasil/52.json"
+    },
+    {
+      "kod": "53",
+      "kayit_sayisi": 49,
+      "dosya": "fasil/53.json"
+    },
+    {
+      "kod": "54",
+      "kayit_sayisi": 231,
+      "dosya": "fasil/54.json"
+    },
+    {
+      "kod": "55",
+      "kayit_sayisi": 160,
+      "dosya": "fasil/55.json"
+    },
+    {
+      "kod": "56",
+      "kayit_sayisi": 104,
+      "dosya": "fasil/56.json"
+    },
+    {
+      "kod": "57",
+      "kayit_sayisi": 72,
+      "dosya": "fasil/57.json"
+    },
+    {
+      "kod": "58",
+      "kayit_sayisi": 87,
+      "dosya": "fasil/58.json"
+    },
+    {
+      "kod": "59",
+      "kayit_sayisi": 79,
+      "dosya": "fasil/59.json"
+    },
+    {
+      "kod": "60",
+      "kayit_sayisi": 118,
+      "dosya": "fasil/60.json"
+    },
+    {
+      "kod": "61",
+      "kayit_sayisi": 189,
+      "dosya": "fasil/61.json"
+    },
+    {
+      "kod": "62",
+      "kayit_sayisi": 305,
+      "dosya": "fasil/62.json"
+    },
+    {
+      "kod": "63",
+      "kayit_sayisi": 136,
+      "dosya": "fasil/63.json"
+    },
+    {
+      "kod": "64",
+      "kayit_sayisi": 92,
+      "dosya": "fasil/64.json"
+    },
+    {
+      "kod": "65",
+      "kayit_sayisi": 25,
+      "dosya": "fasil/65.json"
+    },
+    {
+      "kod": "66",
+      "kayit_sayisi": 9,
+      "dosya": "fasil/66.json"
+    },
+    {
+      "kod": "67",
+      "kayit_sayisi": 17,
+      "dosya": "fasil/67.json"
+    },
+    {
+      "kod": "68",
+      "kayit_sayisi": 90,
+      "dosya": "fasil/68.json"
+    },
+    {
+      "kod": "69",
+      "kayit_sayisi": 80,
+      "dosya": "fasil/69.json"
+    },
+    {
+      "kod": "70",
+      "kayit_sayisi": 199,
+      "dosya": "fasil/70.json"
+    },
+    {
+      "kod": "71",
+      "kayit_sayisi": 101,
+      "dosya": "fasil/71.json"
+    },
+    {
+      "kod": "72",
+      "kayit_sayisi": 785,
+      "dosya": "fasil/72.json"
+    },
+    {
+      "kod": "73",
+      "kayit_sayisi": 336,
+      "dosya": "fasil/73.json"
+    },
+    {
+      "kod": "74",
+      "kayit_sayisi": 83,
+      "dosya": "fasil/74.json"
+    },
+    {
+      "kod": "75",
+      "kayit_sayisi": 30,
+      "dosya": "fasil/75.json"
+    },
+    {
+      "kod": "76",
+      "kayit_sayisi": 84,
+      "dosya": "fasil/76.json"
+    },
+    {
+      "kod": "77",
+      "kayit_sayisi": 1,
+      "dosya": "fasil/77.json"
+    },
+    {
+      "kod": "78",
+      "kayit_sayisi": 11,
+      "dosya": "fasil/78.json"
+    },
+    {
+      "kod": "79",
+      "kayit_sayisi": 22,
+      "dosya": "fasil/79.json"
+    },
+    {
+      "kod": "80",
+      "kayit_sayisi": 18,
+      "dosya": "fasil/80.json"
+    },
+    {
+      "kod": "81",
+      "kayit_sayisi": 98,
+      "dosya": "fasil/81.json"
+    },
+    {
+      "kod": "82",
+      "kayit_sayisi": 161,
+      "dosya": "fasil/82.json"
+    },
+    {
+      "kod": "83",
+      "kayit_sayisi": 68,
+      "dosya": "fasil/83.json"
+    },
+    {
+      "kod": "84",
+      "kayit_sayisi": 1383,
+      "dosya": "fasil/84.json"
+    },
+    {
+      "kod": "85",
+      "kayit_sayisi": 773,
+      "dosya": "fasil/85.json"
+    },
+    {
+      "kod": "86",
+      "kayit_sayisi": 43,
+      "dosya": "fasil/86.json"
+    },
+    {
+      "kod": "87",
+      "kayit_sayisi": 348,
+      "dosya": "fasil/87.json"
+    },
+    {
+      "kod": "88",
+      "kayit_sayisi": 47,
+      "dosya": "fasil/88.json"
+    },
+    {
+      "kod": "89",
+      "kayit_sayisi": 49,
+      "dosya": "fasil/89.json"
+    },
+    {
+      "kod": "90",
+      "kayit_sayisi": 350,
+      "dosya": "fasil/90.json"
+    },
+    {
+      "kod": "91",
+      "kayit_sayisi": 68,
+      "dosya": "fasil/91.json"
+    },
+    {
+      "kod": "92",
+      "kayit_sayisi": 30,
+      "dosya": "fasil/92.json"
+    },
+    {
+      "kod": "93",
+      "kayit_sayisi": 28,
+      "dosya": "fasil/93.json"
+    },
+    {
+      "kod": "94",
+      "kayit_sayisi": 114,
+      "dosya": "fasil/94.json"
+    },
+    {
+      "kod": "95",
+      "kayit_sayisi": 93,
+      "dosya": "fasil/95.json"
+    },
+    {
+      "kod": "96",
+      "kayit_sayisi": 106,
+      "dosya": "fasil/96.json"
+    },
+    {
+      "kod": "97",
+      "kayit_sayisi": 27,
+      "dosya": "fasil/97.json"
+    },
+    {
+      "kod": "99",
+      "kayit_sayisi": 14,
+      "dosya": "fasil/99.json"
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-kdv",
+      "ad": {
+        "tr": "GTİP KDV Eşleşmesi",
+        "en": "GTIP VAT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "31",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "310100001000",
+      "tanim_tr": "Hayvansal veya bitkisel gübreler (kimyasal işlem görmüş olanlar)",
+      "tanim_en": "Animal or plant fertilizers (those that have been chemically treated)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310100009000",
+      "tanim_tr": "Hayvansal veya bitkisel diğer gübreler",
+      "tanim_en": "Other animal or plant fertilizers",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310210120000",
+      "tanim_tr": "Üre; sulu çözelti halinde, ağırlık itibariyle %31,8 <= üre <= %33,2, kuru anhidrit ürün üzerinden, içindeki azot miktarı ağırlık itibariyle > % 45",
+      "tanim_en": "Urea; in aqueous solution, contains 31.8% <= urea <= 33.2% by weight, and the nitrogen content in the dry anhydride product is >45% by weight.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310210150000",
+      "tanim_tr": "Üre; sulu çözelti halinde, ağırlık itibariyle %33,2 < üre <= %55, kuru anhidrit ürün üzerinden, içindeki azot miktarı ağırlık itibariyle > % 45",
+      "tanim_en": "Urea; in aqueous solution, contains 33.2% < urea <= 55% by weight, and the nitrogen content, based on dry anhydride product, is > 45% by weight.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310210190000",
+      "tanim_tr": "Diğer üre; kuru anhidrit ürün üzerinden, azot miktarı ağırlık olarak >%45",
+      "tanim_en": "Other urea; based on the dry anhydride product, nitrogen content is >45% by weight.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310210900000",
+      "tanim_tr": "Üre; kuru anhidrit ürün üzerinden, azot miktarı ağırlık olarak <=%45",
+      "tanim_en": "Urea; based on the dry anhydride product, nitrogen content by weight is <=45%.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310221000000",
+      "tanim_tr": "Amonyum sülfat",
+      "tanim_en": "Ammonium sulfate",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310229000011",
+      "tanim_tr": "Amonyum sülfo nitrat",
+      "tanim_en": "Ammonium sulfo nitrate",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310229000019",
+      "tanim_tr": "Amonyum sülfat ve amonyum nitratın diğer çift tuzları, karışımları",
+      "tanim_en": "Ammonium sulfate and other double salts of ammonium nitrate, their mixtures",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310230100000",
+      "tanim_tr": "Amonyum nitrat; sulu çözelti halinde olanlar",
+      "tanim_en": "Ammonium nitrate; in aqueous solution form.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310230900000",
+      "tanim_tr": "Amonyum nitrat; sulu çözelti halinde olanlar HARİÇ",
+      "tanim_en": "Ammonium nitrate; EXCEPT those in aqueous solution form.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310240100011",
+      "tanim_tr": "Kalsiyum amonyum nitrat (CAN); azot <= % 28",
+      "tanim_en": "Calcium ammonium nitrate (CAN); nitrogen <= 28%",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310240100019",
+      "tanim_tr": "Amonyum nitratın kalsiyum karbonatla veya bitki olmayan diğer inorganik maddelerle karışımları; azot <= % 28 (CAN hariç)",
+      "tanim_en": "Mixtures of ammonium nitrate with calcium carbonate or other non-plant inorganic substances; nitrogen <= 28% (excluding CAN)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310240900011",
+      "tanim_tr": "Kalsiyum amonyum nitrat (CAN); azot >% 28",
+      "tanim_en": "Calcium ammonium nitrate (CAN); nitrogen >28%",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310240900019",
+      "tanim_tr": "Amonyum nitratın kalsiyum karbonatla veya bitki olmayan diğer inorganik maddelerle karışımları; azot >% 28 (CAN hariç)",
+      "tanim_en": "Mixtures of ammonium nitrate with calcium carbonate or other non-plant inorganic substances; nitrogen >28% (excluding CAN)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310250000000",
+      "tanim_tr": "Sodyum nitrat",
+      "tanim_en": "Sodium nitrate",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310260000000",
+      "tanim_tr": "Kalsiyum nitrat ve amonyum nitratın çift tuzları ve karışımları",
+      "tanim_en": "Double salts and mixtures of calcium nitrate and ammonium nitrate.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310280000000",
+      "tanim_tr": "Üre ve amonyum nitratın sulu veya amonyaklı çözeltiler içindeki karışımları",
+      "tanim_en": "Mixtures of urea and ammonium nitrate in aqueous or ammoniacal solutions",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310290001000",
+      "tanim_tr": "Kalsiyum siyanamid; ağırlık itibariyle % 25 veya daha fazla azot içeren",
+      "tanim_en": "Calcium cyanamide; containing 25% or more nitrogen by weight.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310290009000",
+      "tanim_tr": "Azotlu mineral veya kimyasal diğer gübreler",
+      "tanim_en": "Nitrogenous mineral or other chemical fertilizers",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310311000000",
+      "tanim_tr": "Süper fosfatlar; ağırlık itibariyle % 35 veya daha fazla difosfor pentaoksit içerenler",
+      "tanim_en": "Superphosphates; those containing 35% or more diphosphorus pentoxide by weight.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310319000000",
+      "tanim_tr": "Süper fosfatlar; ağırlık itibariyle % 35 veya daha fazla difosfor pentaoksit içerenler HARİÇ",
+      "tanim_en": "Superphosphates; EXCEPT those containing 35% or more diphosphorus pentoxide by weight.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310390000000",
+      "tanim_tr": "Fosfatlı mineral veya kimyasal diğer gübreler",
+      "tanim_en": "Phosphate-containing mineral or other chemical fertilizers",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310420100000",
+      "tanim_tr": "Potasyum klorür; kuru anhidrit ürün üzerinden K2O oranı <=%40",
+      "tanim_en": "Potassium chloride; K2O content <=40% on dry anhydride product.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310420500000",
+      "tanim_tr": "Potasyum klorür; kuru anhidrit ürün üzerinden %40 < K2O oranı =<%62",
+      "tanim_en": "Potassium chloride; 40% of the dry anhydride product < K2O content = < 62%",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310420900000",
+      "tanim_tr": "Potasyum klorür; kuru anhidrit ürün üzerinden K2O oranı >%62",
+      "tanim_en": "Potassium chloride; K2O content >62% on dry anhydride product.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310430001000",
+      "tanim_tr": "Potasyum sülfat; K2O oranı =<% 52",
+      "tanim_en": "Potassium sulfate; K2O content =<52%",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310430009000",
+      "tanim_tr": "Potasyum sülfat; K2O oranı >% 52",
+      "tanim_en": "Potassium sulfate; K2O content >52%",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310490001100",
+      "tanim_tr": "Magnezyum sülfat - potasyum sülfat; K2O oranı =<% 30",
+      "tanim_en": "Magnesium sulfate - potassium sulfate; K2O ratio =<30%",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310490001900",
+      "tanim_tr": "Magnezyum sülfat - potasyum sülfat; K2O oranı >% 30",
+      "tanim_en": "Magnesium sulfate - potassium sulfate; K2O content >30%",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310490009000",
+      "tanim_tr": "Potaslı mineral veya kimyasal diğer gübreler",
+      "tanim_en": "Potassium-based mineral or other chemical fertilizers",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310510001100",
+      "tanim_tr": "Potasyum sülfat; K2O oranı <= %52 (tablet veya ambalajlı <= 10 kg)",
+      "tanim_en": "Potassium sulfate; K2O content <= 52% (tablets or packaged <= 10 kg)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310510001900",
+      "tanim_tr": "Potasyum sülfat; K2O oranı > %52 (tablet veya ambalajlı <= 10 kg)",
+      "tanim_en": "Potassium sulfate; K2O content > 52% (tablets or packaged <= 10 kg)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310510002100",
+      "tanim_tr": "Magnezyum sülfat - potasyum sülfat; K2O oranı <= %30 (tablet veya ambalajlı <= 10 kg)",
+      "tanim_en": "Magnesium sulfate - potassium sulfate; K2O content <= 30% (tablets or packaged <= 10 kg)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310510002900",
+      "tanim_tr": "Magnezyum sülfat - potasyum sülfat; K2O oranı > %30 (tablet veya ambalajlı <= 10 kg)",
+      "tanim_en": "Magnesium sulfate - potassium sulfate; K2O content > 30% (tablets or packaged <= 10 kg)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310510003100",
+      "tanim_tr": "Kalsiyum siyanamid; azot oranı <= %25 (tablet veya ambalajlı <= 10 kg)",
+      "tanim_en": "Calcium cyanamide; nitrogen content <= 25% (tablets or packaged <= 10 kg)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310510003900",
+      "tanim_tr": "Kalsiyum siyanamid; azot oranı > %25 (tablet veya ambalajlı <= 10 kg)",
+      "tanim_en": "Calcium cyanamide; nitrogen content > 25% (tablets or packaged <= 10 kg)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310510009011",
+      "tanim_tr": "Azot, fosfor ve potasyumun ikisini veya üçünü içeren mineral veya kimyasal sıvı gübreler (ambalajlı <= 10 kg)",
+      "tanim_en": "Mineral or chemical liquid fertilizers containing two or all three of nitrogen, phosphorus, and potassium (packaged <= 10 kg)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310510009019",
+      "tanim_tr": "Azot, fosfor ve potasyumun ikisini veya üçünü içeren mineral veya kimyasal diğer gübreler (ambalajlı <= 10 kg)",
+      "tanim_en": "Mineral or chemical fertilizers containing two or all three of nitrogen, phosphorus, and potassium (packaged <= 10 kg)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310520100000",
+      "tanim_tr": "Azot, fosfor ve potasyumun üçünü birden içeren mineral veya kimyasal gübreler; nitrogen >%10",
+      "tanim_en": "Mineral or chemical fertilizers containing all three elements: nitrogen, phosphorus, and potassium; nitrogen >10%",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310520900000",
+      "tanim_tr": "Azot, fosfor ve potasyumun üçünü birden içeren mineral veya kimyasal gübreler; nitrogen <=%10",
+      "tanim_en": "Mineral or chemical fertilizers containing all three elements: nitrogen, phosphorus, and potassium; nitrogen <=10%",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310530000000",
+      "tanim_tr": "Diamonyum hidrojenortofosfat (diamonyum fosfat)",
+      "tanim_en": "Diammonium hydrogen orthophosphate (diammonium phosphate)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310540000011",
+      "tanim_tr": "Amonyum dihidrojenortofosfat (monoamonyum fosfat)",
+      "tanim_en": "Ammonium dihydrogen orthophosphate (monoammonium phosphate)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310540000012",
+      "tanim_tr": "Amonyum dihidrojenortofosfatın (monoamonyum fosfat) diamonyum hidrojenortofosfatla (diamonyum fosfat) karışımları",
+      "tanim_en": "Mixtures of ammonium dihydrogen orthophosphate (monoammonium phosphate) with diammonium hydrogen orthophosphate (diammonium phosphate)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310551000000",
+      "tanim_tr": "Azot ve fosforun ikisini de içeren diğer mineral veya kimyasal gübreler; nitrat ve fosfat içerenler",
+      "tanim_en": "Other mineral or chemical fertilizers that contain both nitrogen and phosphorus; those containing nitrates and phosphates.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310559000011",
+      "tanim_tr": "Azot ve fosforun ikisini de içeren diğer mineral veya kimyasal gübreler; nitrat ve fosfat içermeyenler, azot =>%10",
+      "tanim_en": "Other mineral or chemical fertilizers containing both nitrogen and phosphorus; those that do not contain nitrates and phosphates, nitrogen =>10%",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310559000019",
+      "tanim_tr": "Azot ve fosforun ikisini de içeren diğer mineral veya kimyasal gübreler; nitrat ve fosfat içermeyenler, azot <%10",
+      "tanim_en": "Other mineral or chemical fertilizers containing both nitrogen and phosphorus; those that do not contain nitrates and phosphates, nitrogen <10%.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310560000000",
+      "tanim_tr": "Fosforun ve potasyumun ikisini de içeren diğer mineral veya kimyasal gübreler",
+      "tanim_en": "Other mineral or chemical fertilizers that contain both phosphorus and potassium.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310590200000",
+      "tanim_tr": "Kuru anhidrit ürün üzerinden, içindeki azot miktarı ağırlık itibariyle % 10'u geçen diğer gübreler",
+      "tanim_en": "Other fertilizers containing more than 10% nitrogen by weight of the dry anhydride product.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "310590800000",
+      "tanim_tr": "Mineral veya kimyasal diğer gübreler",
+      "tanim_en": "Mineral or other chemical fertilizers",
+      "grup": "genel",
+      "oran": 0.2
+    }
+  ]
+}

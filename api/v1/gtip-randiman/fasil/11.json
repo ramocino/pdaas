@@ -1,0 +1,799 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-randiman",
+      "ad": {
+        "tr": "GTİP Randıman Eşleşmesi",
+        "en": "GTIP Yield Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "11",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "110100110000",
+      "tanim_tr": "Makarnalık (durum) buğday unu",
+      "tanim_en": "durum wheat flour",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": [
+        {
+          "kural_kod": "gtip-bugday-un",
+          "girdi_prefixler": [
+            "1001"
+          ],
+          "randiman": 0.78
+        }
+      ]
+    },
+    {
+      "kod": "110100150000",
+      "tanim_tr": "Adi ve kaplıca (kızıl) buğday unu",
+      "tanim_en": "Common and spa (red) wheat flour",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": [
+        {
+          "kural_kod": "gtip-bugday-un",
+          "girdi_prefixler": [
+            "1001"
+          ],
+          "randiman": 0.78
+        }
+      ]
+    },
+    {
+      "kod": "110100900000",
+      "tanim_tr": "Mahlut unu",
+      "tanim_en": "Mixed flour",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": [
+        {
+          "kural_kod": "gtip-bugday-un",
+          "girdi_prefixler": [
+            "1001"
+          ],
+          "randiman": 0.78
+        }
+      ]
+    },
+    {
+      "kod": "110220100000",
+      "tanim_tr": "Mısır unu; yağ oranı ağırlık itibariyle < = % 1,5",
+      "tanim_en": "Corn flour; fat content by weight <= 1.5%",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110220900000",
+      "tanim_tr": "Mısır unu; yağ oranı ağırlık itibariyle > % 1,5",
+      "tanim_en": "Corn flour; fat content > 1.5% by weight.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110290100000",
+      "tanim_tr": "Arpa unu",
+      "tanim_en": "Barley flour",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110290300000",
+      "tanim_tr": "Yulaf unu",
+      "tanim_en": "Oat flour",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110290500000",
+      "tanim_tr": "Pirinç unu",
+      "tanim_en": "Rice flour",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110290700000",
+      "tanim_tr": "Çavdar unu",
+      "tanim_en": "Rye flour",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110290900000",
+      "tanim_tr": "Diğer hububat unları",
+      "tanim_en": "Other cereal flours",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110311100000",
+      "tanim_tr": "Makarnalık buğdayın (durum buğday) kabaca öğütülmesinden elde edilen küçük parçalar ve kaba un",
+      "tanim_en": "Small pieces and coarse flour obtained from coarsely grinding durum wheat (for pasta).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110311900000",
+      "tanim_tr": "Adi ve kaplıca (kızıl) buğdayın öğütülmesinden elde edilen küçük parçalar ve kaba un",
+      "tanim_en": "Small pieces and coarse flour obtained from grinding common and spelt (red) wheat.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110313100000",
+      "tanim_tr": "Mısırın kabaca öğütülmesinden elde edilen küçük parçalar ve kaba unlar; yağ oranı <= % 1,5",
+      "tanim_en": "Small pieces and coarse flours obtained from coarsely grinding corn; fat content <= 1.5%",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110313900000",
+      "tanim_tr": "Mısırın kabaca öğütülmesinden elde edilen küçük parçalar ve kaba unlar; yağ oranı > % 1,5",
+      "tanim_en": "Small pieces and coarse flours obtained from coarsely grinding corn; fat content > 1.5%",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110319200000",
+      "tanim_tr": "Çavdar veya arpanın kabaca öğütülmesinden elde edilen küçük parçalar ve kaba unlar",
+      "tanim_en": "Small pieces and coarse flours obtained from coarsely grinding rye or barley.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110319400000",
+      "tanim_tr": "Yulafın kabaca öğütülmesinden elde edilen küçük parçalar ve kaba unlar",
+      "tanim_en": "Small pieces and coarse flours obtained from coarsely grinding oats.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110319500000",
+      "tanim_tr": "Pirincin kabaca öğütülmesinden elde edilen küçük parçalar ve kaba un",
+      "tanim_en": "Small pieces and coarse flour obtained from coarsely grinding rice.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110319900013",
+      "tanim_tr": "Mahlutun kabaca öğütülmesinden elde edilen küçük parçalar ve kaba un",
+      "tanim_en": "Small pieces and coarse flour obtained from coarsely grinding the mixture.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110319900019",
+      "tanim_tr": "Diğer hububatın kabaca öğütülmesinden elde edilen küçük parçalar ve kaba un",
+      "tanim_en": "Small pieces and coarse flour obtained from the coarse grinding of other grains.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110320250000",
+      "tanim_tr": "Çavdar veya arpadan pelletler",
+      "tanim_en": "Pellets made from rye or barley",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110320300000",
+      "tanim_tr": "Yulaftan pelletler",
+      "tanim_en": "Pellets made from oats",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110320400000",
+      "tanim_tr": "Mısırdan pelletler",
+      "tanim_en": "Pellets from corn",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110320500000",
+      "tanim_tr": "Pirinçten pelletler",
+      "tanim_en": "Pellets made of rice",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110320600000",
+      "tanim_tr": "Buğdaydan pelletler",
+      "tanim_en": "Pellets from wheat",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110320900000",
+      "tanim_tr": "Diğer hububattan pelletler",
+      "tanim_en": "Pellets from other grains",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110412100000",
+      "tanim_tr": "Yulaftan yassılaştırılmış taneler",
+      "tanim_en": "Flattened grains of oats",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110412900000",
+      "tanim_tr": "Yulaftan flokon halindeki taneler",
+      "tanim_en": "Oat flakes",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110419100011",
+      "tanim_tr": "Buğdaydan yassılaştırılmış taneler",
+      "tanim_en": "Flattened grains of wheat",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110419100012",
+      "tanim_tr": "Buğdaydan flokon halindeki taneler",
+      "tanim_en": "Wheat grains in flake form",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110419300011",
+      "tanim_tr": "Çavdardan yassılaştırılmış taneler",
+      "tanim_en": "Flattened grains of rye",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110419300012",
+      "tanim_tr": "Çavdardan flokon halindeki taneler",
+      "tanim_en": "Rye grains in flake form",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110419500011",
+      "tanim_tr": "Mısırdan yassılaştırılmış taneler",
+      "tanim_en": "Flattened kernels from corn",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110419500012",
+      "tanim_tr": "Mısırdan flokon halindeki taneler",
+      "tanim_en": "Corn kernels in flake form",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110419610000",
+      "tanim_tr": "Arpadan yassılaştırılmış taneler",
+      "tanim_en": "Flattened grains of barley",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110419690000",
+      "tanim_tr": "Arpadan flokon halindeki taneler",
+      "tanim_en": "Barley grains in flake form",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110419910000",
+      "tanim_tr": "Pirinçten flokon halindeki taneler",
+      "tanim_en": "Grains of rice in flake form",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110419990011",
+      "tanim_tr": "Diğer hububattan yassılaştırılmış taneler",
+      "tanim_en": "Flattened grains from other cereals",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110419990012",
+      "tanim_tr": "Diğer hububattan flokon halindeki taneler",
+      "tanim_en": "Grains in flake form from other cereals",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110422400000",
+      "tanim_tr": "Yulaf taneleri; kabuğu veya kavuzu çıkarılmış, dilimlenmiş veya iri parçalar halinde ufalanmış olsun olmasın",
+      "tanim_en": "Oat grains; whether hulled or dehulled, sliced ​​or coarsely crushed.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110422500000",
+      "tanim_tr": "Yulaf taneleri; yuvarlatılmış",
+      "tanim_en": "Oat grains; rounded",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110422950000",
+      "tanim_tr": "Diğer yulaf taneleri:",
+      "tanim_en": "Other oat grains:",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110423400000",
+      "tanim_tr": "Mısır taneleri; kabuğu veya kavuzu çıkarılmış, dilimlenmiş, iri parçalar halinde ufalanmış olsun olmasın, yuvarlatılmış",
+      "tanim_en": "Corn kernels; whether hulled or dehulled, sliced, coarsely crushed, or rounded.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110423980000",
+      "tanim_tr": "Diğer mısır taneleri",
+      "tanim_en": "Other corn kernels",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110429040000",
+      "tanim_tr": "Arpa taneleri; kabuğu veya kavuzu çıkarılmış, dilimlenmiş veya iri parçalar halinde ufalanmış olsun olmasın",
+      "tanim_en": "Barley grains; whether hulled or dehulled, sliced ​​or coarsely crushed.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110429050000",
+      "tanim_tr": "Arpa taneleri; yuvarlatılmış",
+      "tanim_en": "Barley grains; rounded",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110429080000",
+      "tanim_tr": "Diğer arpa taneleri",
+      "tanim_en": "Other barley grains",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110429170000",
+      "tanim_tr": "Diğer hububat taneleri; kabuğu veya kavuzu çıkarılmış, dilimlenmiş veya iri parçalar halinde ufalanmış olsun olmasın",
+      "tanim_en": "Other cereal grains; whether hulled or dehulled, sliced ​​or coarsely chopped.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110429300000",
+      "tanim_tr": "Yuvarlatılmış diğer hububat taneleri",
+      "tanim_en": "Other rounded cereal grains",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110429510000",
+      "tanim_tr": "Buğday; sadece iri parçalar halinde ufalanmış",
+      "tanim_en": "Wheat; simply crushed into large pieces.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110429550000",
+      "tanim_tr": "Çavdar; sadece iri parçalar halinde ufalanmış",
+      "tanim_en": "Rye; only coarsely ground.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110429590000",
+      "tanim_tr": "Diğer hububat; sadece iri parçalar halinde ufalanmış",
+      "tanim_en": "Other grains; only crushed into large pieces.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110429810000",
+      "tanim_tr": "Diğer buğday taneleri",
+      "tanim_en": "Other wheat grains",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110429850000",
+      "tanim_tr": "Diğer çavdar taneleri",
+      "tanim_en": "Other rye grains",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110429890000",
+      "tanim_tr": "Diğer hububat taneleri",
+      "tanim_en": "Other cereal grains",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110430100000",
+      "tanim_tr": "Buğday embriyonları; bütün, yassılaştırılmış, flokon haline getirilmiş veya öğütülmüş",
+      "tanim_en": "Wheat germ; whole, flattened, flaked or ground.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110430900011",
+      "tanim_tr": "Mısır özü; bütün, yassılaştırılmış, flokon haline getirilmiş veya öğütülmüş",
+      "tanim_en": "Corn extract; whole, flattened, flaked or ground.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110430900019",
+      "tanim_tr": "Diğer hububat embriyonları; bütün, yassılaştırılmış, flokon haline getirilmiş veya öğütülmüş",
+      "tanim_en": "Other cereal embryos; whole, flattened, flaked or ground.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110510000011",
+      "tanim_tr": "Patates unu",
+      "tanim_en": "Potato flour",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110510000012",
+      "tanim_tr": "Patates ezmesi ve tozları",
+      "tanim_en": "Mashed potatoes and potato powders",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110520000000",
+      "tanim_tr": "Patates flokonları, granülleri ve pelletleri",
+      "tanim_en": "Potato flakes, granules and pellets",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110610000000",
+      "tanim_tr": "Kuru baklağillerin (07.13) unu, kaba unu ve tozları",
+      "tanim_en": "Flour, coarse flour and powders of dried legumes (07.13)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110620100000",
+      "tanim_tr": "Nişasta veya inülin içeren kök ve yumruların (07.14) başka maddeler katılmış (denature) unu, kaba unu ve tozları",
+      "tanim_en": "Denatured flour, coarse flour and powders of roots and tubers (07.14) containing starch or inulin, mixed with other substances.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110620900011",
+      "tanim_tr": "Salep",
+      "tanim_en": "Salep",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110620900019",
+      "tanim_tr": "Nişasta veya inülin içeren kök ve yumruların (07.14) diğer unu, kaba unu ve tozları",
+      "tanim_en": "Other flours, coarse flours and powders of roots and tubers (07.14) containing starch or inulin",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110630100000",
+      "tanim_tr": "Muzun unu, kaba unu ve tozu",
+      "tanim_en": "Banana meal, coarse meal and powder.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110630900015",
+      "tanim_tr": "Fındıktan un, kaba un ve tozlar",
+      "tanim_en": "Hazelnut flour, coarse flour and powders",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110630900019",
+      "tanim_tr": "Diğer meyvelerin ve sert kabuklu diğer meyvelerin (08) unu, kaba unu ve tozları",
+      "tanim_en": "Flour, coarse flour and powders of other fruits and other nuts (08)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110710110000",
+      "tanim_tr": "Buğday maltı (kavrulmamış); un şeklinde",
+      "tanim_en": "Wheat malt (unroasted); in flour form.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110710190000",
+      "tanim_tr": "Buğday maltı (kavrulmamış); un şeklinde olanlar HARİÇ",
+      "tanim_en": "Wheat malt (unroasted); EXCEPT those in flour form.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110710910011",
+      "tanim_tr": "Arpa maltı (kavrulmamış); un şeklinde",
+      "tanim_en": "Barley malt (unroasted); in flour form.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110710910019",
+      "tanim_tr": "Diğer maltlar (kavrulmamış); un şeklinde",
+      "tanim_en": "Other malts (unroasted); in flour form.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110710990011",
+      "tanim_tr": "Arpa maltı (kavrulmamış); un şeklinde olanlar HARİÇ",
+      "tanim_en": "Barley malt (unroasted); EXCEPT those in flour form.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110710990019",
+      "tanim_tr": "Diğer maltlar (kavrulmamış); un şeklinde olanlar HARİÇ",
+      "tanim_en": "Other malts (unroasted); EXCEPT those in flour form.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110720000011",
+      "tanim_tr": "Buğday maltı (kavrulmuş)",
+      "tanim_en": "Roasted wheat malt",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110720000012",
+      "tanim_tr": "Arpa maltı (kavrulmuş)",
+      "tanim_en": "Roasted barley malt",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110720000019",
+      "tanim_tr": "Diğer maltlar (kavrulmuş)",
+      "tanim_en": "Other malts (roasted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110811001000",
+      "tanim_tr": "Buğday nişastası; torba içinde olanlar",
+      "tanim_en": "Wheat starch; those in bags.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110811009000",
+      "tanim_tr": "Buğday nişastası; torba içinde olanlar HARİÇ",
+      "tanim_en": "Wheat starch; EXCEPT those in bags.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110812001000",
+      "tanim_tr": "Mısır nişastası; torba içinde olanlar",
+      "tanim_en": "Cornstarch; in bags.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110812009000",
+      "tanim_tr": "Mısır nişastası; torba içinde olanlar HARİÇ",
+      "tanim_en": "Cornstarch; EXCEPT those in bags.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110813001000",
+      "tanim_tr": "Patates nişastası; torba içinde olanlar",
+      "tanim_en": "Potato starch; the kind that comes in bags.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110813009000",
+      "tanim_tr": "Patates nişastası; torba içinde olanlar HARİÇ",
+      "tanim_en": "Potato starch; EXCEPT those in bags.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110814001000",
+      "tanim_tr": "Manyok nişastası (cassava); torba içinde olanlar",
+      "tanim_en": "Cassava starch; available in bags.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110814009000",
+      "tanim_tr": "Manyok nişastası (cassava); torba içinde olanlar HARİÇ",
+      "tanim_en": "Cassava starch; EXCEPT those in bags.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110819101000",
+      "tanim_tr": "Pirinç nişastası; torba içinde olanlar",
+      "tanim_en": "Rice starch; the kind that comes in bags.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110819109000",
+      "tanim_tr": "Pirinç nişastası; torba içinde olanlar HARİÇ",
+      "tanim_en": "Rice starch; EXCEPT those in bags.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110819901000",
+      "tanim_tr": "Diğer nişastalar; torba içinde olanlar",
+      "tanim_en": "Other starches; those in bags",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110819909000",
+      "tanim_tr": "Diğer nişastalar; torba içinde olanlar HARİÇ",
+      "tanim_en": "Other starches; EXCEPT those in bags.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110820000000",
+      "tanim_tr": "İnülin",
+      "tanim_en": "Inulin",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "110900000000",
+      "tanim_tr": "Buğday gluteni (kurutulmuş olsun olmasın)",
+      "tanim_en": "Wheat gluten (whether dried or not)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    }
+  ]
+}

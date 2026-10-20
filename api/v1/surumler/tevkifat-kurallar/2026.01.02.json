@@ -1,0 +1,235 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "tevkifat-kurallar",
+      "ad": {
+        "tr": "KDV Tevkifat Eşleme Kuralları",
+        "en": "VAT Withholding Mapping Rules"
+      }
+    },
+    "katman": "kurallar",
+    "yapi": {
+      "tip": "kural-seti",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.01.02",
+    "guncelleme": "2026-01-02",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": true,
+      "baslangic": "2026-01-01",
+      "bitis": "2026-12-31"
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-tevkifat",
+        "ad": {
+          "tr": "KDV Genel Uygulama Tebliği — Tevkifat Uygulaması ve Kod Listesi",
+          "en": "VAT General Implementation Communiqué — Withholding Application and Code List"
+        },
+        "tur": "genel_teblig",
+        "kurum_kod": "gib",
+        "url": null,
+        "resmi_gazete": "29425",
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "9",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      }
+    ],
+    "checksum": "sha256:f91bc039e331700e81d86e71e5ab41b368a44afe89d2fed8ef2a69211da3fe0c"
+  },
+  "gruplar": {
+    "601": {
+      "ad_tr": "Yapım İşleri ve İlgili Mühendislik-Mimarlık Hizmetleri",
+      "ad_en": "Construction Works and Related Engineering/Architectural Services",
+      "oran_kodu": "601"
+    },
+    "603": {
+      "ad_tr": "Makine, Teçhizat, Demirbaş ve Taşıt Bakım-Onarımı",
+      "ad_en": "Maintenance and Repair of Machinery, Equipment, Fixtures and Vehicles",
+      "oran_kodu": "603"
+    },
+    "607": {
+      "ad_tr": "Yemek Servis Hizmetleri",
+      "ad_en": "Catering Services",
+      "oran_kodu": "607"
+    },
+    "608": {
+      "ad_tr": "Temizlik, Çevre ve Bahçe Bakım Hizmetleri",
+      "ad_en": "Cleaning, Environmental and Landscaping Services",
+      "oran_kodu": "608"
+    },
+    "619": {
+      "ad_tr": "Bakır, Çinko, Alüminyum ve Kurşun Ürünlerinin Teslimi",
+      "ad_en": "Delivery of Copper, Zinc, Aluminum and Lead Products",
+      "oran_kodu": "619"
+    },
+    "622": {
+      "ad_tr": "Danışmanlık ve Denetim Hizmetleri",
+      "ad_en": "Consultancy and Audit Services",
+      "oran_kodu": "622"
+    },
+    "624": {
+      "ad_tr": "Yük Taşımacılığı Hizmetleri",
+      "ad_en": "Freight Transport Services",
+      "oran_kodu": "624"
+    },
+    "625": {
+      "ad_tr": "Ticari Reklam Hizmetleri",
+      "ad_en": "Commercial Advertising Services",
+      "oran_kodu": "625"
+    },
+    "627": {
+      "ad_tr": "Demir-Çelik Ürünlerinin Teslimi",
+      "ad_en": "Delivery of Iron and Steel Products",
+      "oran_kodu": "627"
+    },
+    "820": {
+      "ad_tr": "Metal, Plastik, Lastik, Kauçuk, Kağıt, Cam Hurda ve Atıkları",
+      "ad_en": "Metal, Plastic, Rubber, Paper, Glass Scrap and Waste",
+      "oran_kodu": "820"
+    },
+    "822": {
+      "ad_tr": "Ağaç ve Orman Ürünleri Teslimi",
+      "ad_en": "Delivery of Wood and Forest Products",
+      "oran_kodu": "822"
+    },
+    "tevkifat_yok": {
+      "ad_tr": "KDV Tevkifatı Yok",
+      "ad_en": "No VAT Withholding"
+    }
+  },
+  "kurallar": [
+    {
+      "kod": "gtip-tevkifat-yok",
+      "grup": "tevkifat_yok",
+      "oncelik": 1,
+      "prefixler": [],
+      "varsayilan": true,
+      "tip": "varsayilan",
+      "aciklama_tr": "Tevkifat kapsamına girmeyen tüm GTİP kodları — KDV tam olarak satıcı tarafından beyan edilir",
+      "aciklama_en": "All GTIP codes outside the withholding scope — VAT is fully declared by the seller"
+    },
+    {
+      "kod": "gtip-bakir-cinko-aluminyum-kursun-619",
+      "grup": "619",
+      "oncelik": 50,
+      "tip": "mal",
+      "prefixler": [
+        "74",
+        "76",
+        "78",
+        "79"
+      ],
+      "aciklama_tr": "Bakır (74), alüminyum (76), kurşun (78) ve çinko (79) ürünlerinin teslimi — 7/10 tevkifat",
+      "aciklama_en": "Delivery of copper (74), aluminum (76), lead (78) and zinc (79) products — 7/10 withholding"
+    },
+    {
+      "kod": "gtip-demir-celik-627",
+      "grup": "627",
+      "oncelik": 50,
+      "tip": "mal",
+      "prefixler": [
+        "72",
+        "7301",
+        "7302",
+        "7303",
+        "7304",
+        "7305",
+        "7306",
+        "7307",
+        "7308"
+      ],
+      "aciklama_tr": "Demir-çelik ve belirli demir-çelik eşya (72, 7301-7308) teslimi — 5/10 tevkifat. 73 faslının diğer kısımları (7309 sonrası) tevkifat kapsamı dışındadır.",
+      "aciklama_en": "Delivery of iron and steel and certain iron/steel articles (72, 7301-7308) — 5/10 withholding. Remaining chapter 73 (7309 onward) is out of scope."
+    },
+    {
+      "kod": "gtip-hurda-820",
+      "grup": "820",
+      "oncelik": 60,
+      "tip": "mal",
+      "prefixler": [
+        "3915",
+        "4004",
+        "4707",
+        "7001",
+        "7204",
+        "7404",
+        "7503",
+        "7602",
+        "7802",
+        "7902",
+        "8002",
+        "8101",
+        "8102",
+        "8103",
+        "8104",
+        "8105",
+        "8106",
+        "8107",
+        "8108",
+        "8109",
+        "8110",
+        "8111",
+        "8112"
+      ],
+      "aciklama_tr": "Metal, plastik, lastik, kauçuk, kağıt ve cam hurda/atık teslimi — 10/10 (tam) tevkifat. Kanun md.17/4-g kapsamında özel hüküm.",
+      "aciklama_en": "Delivery of metal, plastic, rubber, paper and glass scrap/waste — 10/10 (full) withholding. Special provision under VAT Law Art. 17/4-g."
+    },
+    {
+      "kod": "gtip-agac-orman-822",
+      "grup": "822",
+      "oncelik": 50,
+      "tip": "mal",
+      "prefixler": [
+        "44",
+        "9406"
+      ],
+      "aciklama_tr": "Ağaç ve orman ürünleri (44 faslı) ve prefabrik yapılar (9406) — 5/10 tevkifat",
+      "aciklama_en": "Wood and forest products (chapter 44) and prefabricated structures (9406) — 5/10 withholding"
+    }
+  ],
+  "hizmet_kurallari": {
+    "aciklama_tr": "Hizmet tevkifatları (601, 603, 607, 608, 622, 624, 625) GTİP kodu ile eşleşmez; hizmet türüne göre belirlenir. Bu kodlar için ayrı bir 'hizmet-kdv-kurallar.json' dosyası ileride CPC/CPA kodlarıyla açılacaktır.",
+    "aciklama_en": "Service withholdings (601, 603, 607, 608, 622, 624, 625) are not matched by GTIP code; they are determined by service type. A separate 'service-vat-rules.json' file using CPC/CPA codes will be created later for these codes.",
+    "kodlar": [
+      "601",
+      "603",
+      "607",
+      "608",
+      "622",
+      "624",
+      "625"
+    ]
+  }
+}

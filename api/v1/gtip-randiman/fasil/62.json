@@ -1,0 +1,2280 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-randiman",
+      "ad": {
+        "tr": "GTİP Randıman Eşleşmesi",
+        "en": "GTIP Yield Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "62",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "620120000000",
+      "tanim_tr": "Erkek veya erkek çocuk için palto, kaban, kolsuz ceket, pelerin, vb. eşya (örme ve kroşe olmayan); yünden veya ince hayvan kıllarından",
+      "tanim_en": "Coats, jackets, sleeveless coats, capes, etc. for men or boys (not knitted or crocheted); made of wool or fine animal hair.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130100011",
+      "tanim_tr": "Erkek veya erkek çocuk için paltolar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Coats for boys or males (not knitted or crocheted); made of cotton; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130100012",
+      "tanim_tr": "Erkek veya erkek çocuk için yağmurluklar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Raincoats for boys or males (not knitted or crocheted); made of cotton; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130100013",
+      "tanim_tr": "Erkek veya erkek çocuk için kabanlar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Coats for boys or males (not knitted or crocheted); made of cotton; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130100014",
+      "tanim_tr": "Erkek veya erkek çocuk için kolsuz ceketler (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Sleeveless jackets for boys or males (not knitted or crocheted); made of cotton; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130100015",
+      "tanim_tr": "Erkek veya erkek çocuk için pelerinler (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Capes for boys or male children (not knitted or crocheted); made of cotton; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130100016",
+      "tanim_tr": "Erkek veya erkek çocuk için parkalar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Parkas for boys or young men (not knitted or crocheted); made of cotton; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130100019",
+      "tanim_tr": "Erkek veya erkek çocuk için anorak, rüzgarlık, vb. eşya (örme ve kroşe olmayan); 6201.30.10.00.11 - 6201.30.10.00.16 HARİÇ, pamuktan; ağırlığı <= 1 kg",
+      "tanim_en": "Anoraks, windbreakers, etc. for boys or males (not knitted or crocheted); made of cotton, EXCEPT 6201.30.10.00.11 - 6201.30.10.00.16; weight <= 1 kg",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130900011",
+      "tanim_tr": "Erkek veya erkek çocuk için paltolar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Coats for boys or males (not knitted or crocheted); made of cotton; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130900012",
+      "tanim_tr": "Erkek veya erkek çocuk için yağmurluklar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Raincoats for boys or males (not knitted or crocheted); made of cotton; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130900013",
+      "tanim_tr": "Erkek veya erkek çocuk için kabanlar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Coats for boys or males (not knitted or crocheted); made of cotton; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130900014",
+      "tanim_tr": "Erkek veya erkek çocuk için kolsuz ceketler (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Sleeveless jackets for boys or young men (not knitted or crocheted); made of cotton; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130900015",
+      "tanim_tr": "Erkek veya erkek çocuk için pelerinler (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Capes for boys or male children (not knitted or crocheted); made of cotton; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130900016",
+      "tanim_tr": "Erkek veya erkek çocuk için parkalar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Parkas for boys or young men (not knitted or crocheted); made of cotton; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620130900019",
+      "tanim_tr": "Erkek veya erkek çocuk için anorak vb. eşya (örme ve kroşe olmayan); 6201.30.90.00.11 - 6201.30.90.00.16 HARİÇ, pamuktan; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Anoraks and similar items for boys or males (not knitted or crocheted); made of cotton, EXCEPT 6201.30.90.00.11 - 6201.30.90.00.16; each weighing > 1 kg",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140100011",
+      "tanim_tr": "Erkek veya erkek çocuk için paltolar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Coats for boys or males (not knitted or crocheted); made of synthetic or artificial fibers; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140100012",
+      "tanim_tr": "Erkek veya erkek çocuk için yağmurluklar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Raincoats for boys or males (not knitted or crocheted); made of synthetic or artificial fibers; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140100013",
+      "tanim_tr": "Erkek veya erkek çocuk için kabanlar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Coats for boys or males (not knitted or crocheted); made of synthetic or artificial fibers; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140100014",
+      "tanim_tr": "Erkek veya erkek çocuk için kolsuz ceketler (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Sleeveless jackets for boys or males (not knitted or crocheted); made of synthetic or artificial fibers; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140100015",
+      "tanim_tr": "Erkek veya erkek çocuk için pelerinler (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Capes for boys or males (not knitted or crocheted); made of synthetic or artificial fibers; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140100016",
+      "tanim_tr": "Erkek veya erkek çocuk için parkalar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Parkas for boys or males (not knitted or crocheted); made of synthetic or artificial fibers; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140100019",
+      "tanim_tr": "Erkek veya erkek çocuk için anorak vb.eşya (örme ve kroşe olmayan); 6201.40.10.00.11 - 6201.40.10.00.16 HARİÇ, sentetik/suni liflerden; ağırlığı <=1kg",
+      "tanim_en": "Anoraks and similar items for men or boys (not knitted or crocheted); made of synthetic/artificial fibers, EXCEPT 6201.40.10.00.11 - 6201.40.10.00.16; weight <=1kg",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140900011",
+      "tanim_tr": "Erkek veya erkek çocuk için paltolar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Coats for boys or men (not knitted or crocheted); made of synthetic or artificial fibers; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140900012",
+      "tanim_tr": "Erkek veya erkek çocuk için yağmurluklar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Raincoats for boys or men (not knitted or crocheted); made of synthetic or artificial fibers; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140900013",
+      "tanim_tr": "Erkek veya erkek çocuk için kabanlar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Coats for boys or males (not knitted or crocheted); made of synthetic or artificial fibers; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140900014",
+      "tanim_tr": "Erkek veya erkek çocuk için kolsuz ceketler (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Sleeveless jackets for boys or males (not knitted or crocheted); made of synthetic or artificial fibers; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140900015",
+      "tanim_tr": "Erkek veya erkek çocuk için pelerinler (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Capes for boys or males (not knitted or crocheted); made of synthetic or artificial fibers; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140900016",
+      "tanim_tr": "Erkek veya erkek çocuk için parkalar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Parkas for boys or men (not knitted or crocheted); made of synthetic or artificial fibers; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620140900019",
+      "tanim_tr": "Erkek veya erkek çocuk için anorak vb. eşya (örme ve kroşe olmayan); 6201.40.90.00.11 - 6201.40.90.00.16 HARİÇ, sentetik/suni liflerden; ağırlığı >1kg",
+      "tanim_en": "Anoraks and similar items for men or boys (not knitted or crocheted); made of synthetic/artificial fibers, EXCEPT 6201.40.90.00.11 - 6201.40.90.00.16; weight >1kg",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620190000000",
+      "tanim_tr": "Erkekler veya erkek çocuklar için palto, kaban, kolsuz ceket, pelerin, anorak, vb. eşya (örme ve kroşe olmayan); dokumaya elverişli diğer maddelerden",
+      "tanim_en": "Coats, jackets, sleeveless jackets, capes, anoraks, etc. for men or boys (not knitted or crocheted); made from other textile materials.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620220000000",
+      "tanim_tr": "Kadın ve kız çocuklar için manto, kaban, kolsuz ceket, pelerin, anorak, vb. eşya (örme ve kroşe olmayan); yünden veya ince hayvan kıllarından",
+      "tanim_en": "Coats, jackets, sleeveless coats, capes, anoraks, etc. for women and girls (not knitted or crocheted); made of wool or fine animal hair.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230100011",
+      "tanim_tr": "Kadın ve kız çocuklar için mantolar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Coats for women and girls (not knitted or crocheted); made of cotton; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230100012",
+      "tanim_tr": "Kadın ve kız çocuklar için yağmurluklar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Raincoats for women and girls (not knitted or crocheted); made of cotton; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230100013",
+      "tanim_tr": "Kadın ve kız çocuklar için kabanlar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Coats for women and girls (not knitted or crocheted); made of cotton; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230100014",
+      "tanim_tr": "Kadın ve kız çocuklar için kolsuz ceketler (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Sleeveless jackets for women and girls (not knitted or crocheted); made of cotton; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230100015",
+      "tanim_tr": "Kadın ve kız çocuklar için pelerinler (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Capes for women and girls (not knitted or crocheted); made of cotton; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230100016",
+      "tanim_tr": "Kadın ve kız çocuklar için parkalar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Parkas for women and girls (not knitted or crocheted); made of cotton; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230100019",
+      "tanim_tr": "Kadın ve kız çocuklar için anorak, rüzgarlık, vb. eşya (örme ve kroşe olmayan); 6202.30.10.00.11 - 6202.30.10.00.16 HARİÇ, pamuktan; ağırlığı <= 1 kg",
+      "tanim_en": "Anoraks, windbreakers, etc. for women and girls (not knitted or crocheted); made of cotton, EXCEPT 6202.30.10.00.11 - 6202.30.10.00.16; weight <= 1 kg",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230900011",
+      "tanim_tr": "Kadın ve kız çocuklar için mantolar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Coats for women and girls (not knitted or crocheted); made of cotton; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230900012",
+      "tanim_tr": "Kadın ve kız çocuklar için yağmurluklar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Raincoats for women and girls (not knitted or crocheted); made of cotton; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230900013",
+      "tanim_tr": "Kadın ve kız çocuklar için kabanlar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Coats for women and girls (not knitted or crocheted); made of cotton; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230900014",
+      "tanim_tr": "Kadın ve kız çocuklar için kolsuz ceketler (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Sleeveless jackets for women and girls (not knitted or crocheted); made of cotton; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230900015",
+      "tanim_tr": "Kadın ve kız çocuklar için pelerinler (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Capes for women and girls (not knitted or crocheted); made of cotton; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230900016",
+      "tanim_tr": "Kadın ve kız çocuklar için parkalar (örme ve kroşe olmayan); pamuktan; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Parkas for women and girls (not knitted or crocheted); made of cotton; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620230900019",
+      "tanim_tr": "Kadın ve kız çocuklar için anorak, rüzgarlık, vb. eşya (örme ve kroşe olmayan); 6202.30.90.00.11 - 6202.30.90.00.16 HARİÇ, pamuktan; ağırlığı > 1 kg",
+      "tanim_en": "Anoraks, windbreakers, etc. for women and girls (not knitted or crocheted); made of cotton, EXCEPT 6202.30.90.00.11 - 6202.30.90.00.16; weight > 1 kg",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240100011",
+      "tanim_tr": "Kadın ve kız çocuklar için mantolar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Coats for women and girls (not knitted or crocheted); made of synthetic or artificial fibers; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240100012",
+      "tanim_tr": "Kadın ve kız çocuklar için yağmurluklar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Raincoats for women and girls (not knitted or crocheted); made of synthetic or artificial fibers; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240100013",
+      "tanim_tr": "Kadın ve kız çocuklar için kabanlar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Coats for women and girls (not knitted or crocheted); made of synthetic or artificial fibers; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240100014",
+      "tanim_tr": "Kadın ve kız çocuklar için kolsuz ceketler (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Sleeveless jackets for women and girls (not knitted or crocheted); made of synthetic or artificial fibers; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240100015",
+      "tanim_tr": "Kadın ve kız çocuklar için pelerinler (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Capes for women and girls (not knitted or crocheted); made of synthetic or artificial fibers; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240100016",
+      "tanim_tr": "Kadın ve kız çocuklar için parkalar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı <= 1 kg",
+      "tanim_en": "Parkas for women and girls (not knitted or crocheted); made of synthetic or artificial fibers; each weighing <= 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240100019",
+      "tanim_tr": "Kadın ve kız çocuklar için anorak, vb. eşya (örme ve kroşe HARİÇ); 6202.40.10.00.11 - 6202.40.10.00.16 HARİÇ, sentetik/suni liflerden; ağırlığı <= 1kg",
+      "tanim_en": "Anoraks and similar items for women and girls (EXCEPT knitted and crocheted); EXCEPT 6202.40.10.00.11 - 6202.40.10.00.16, made of synthetic/artificial fibers; weight <= 1kg",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240900011",
+      "tanim_tr": "Kadın ve kız çocuklar için mantolar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Coats for women and girls (not knitted or crocheted); made of synthetic or artificial fibers; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240900012",
+      "tanim_tr": "Kadın ve kız çocuklar için yağmurluklar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Raincoats for women and girls (not knitted or crocheted); made of synthetic or artificial fibers; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240900013",
+      "tanim_tr": "Kadın ve kız çocuklar için kabanlar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Coats for women and girls (not knitted or crocheted); made of synthetic or artificial fibers; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240900014",
+      "tanim_tr": "Kadın ve kız çocuklar için kolsuz ceketler (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Sleeveless jackets for women and girls (not knitted or crocheted); made of synthetic or artificial fibers; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240900015",
+      "tanim_tr": "Kadın ve kız çocuklar için pelerinler (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Capes for women and girls (not knitted or crocheted); made of synthetic or artificial fibers; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240900016",
+      "tanim_tr": "Kadın ve kız çocuklar için parkalar (örme ve kroşe olmayan); sentetik veya suni liflerden; herbirinin ağırlığı > 1 kg",
+      "tanim_en": "Parkas for women and girls (not knitted or crocheted); made of synthetic or artificial fibers; each weighing > 1 kg.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620240900019",
+      "tanim_tr": "Kadın ve kız çocuklar için anorak, vb. eşya (örme ve kroşe HARİÇ); 6202.40.90.00.11 - 6202.40.90.00.16 HARİÇ, sentetik/suni liflerden; ağırlığı > 1 kg",
+      "tanim_en": "Anoraks and similar items for women and girls (EXCEPT knitted and crocheted); EXCEPT 6202.40.90.00.11 - 6202.40.90.00.16, made of synthetic/artificial fibers; weight > 1 kg",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620290000011",
+      "tanim_tr": "Kadın ve kız çocuklar için mantolar (örme ve kroşe olmayan); dokumaya elverişli diğer maddelerden",
+      "tanim_en": "Coats for women and girls (not knitted or crocheted); from other materials suitable for weaving.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620290000012",
+      "tanim_tr": "Kadın ve kız çocuklar için yağmurluklar (örme ve kroşe olmayan); dokumaya elverişli diğer maddelerden",
+      "tanim_en": "Raincoats for women and girls (not knitted or crocheted); made from other woven materials.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620290000013",
+      "tanim_tr": "Kadın ve kız çocuklar için kabanlar (örme ve kroşe olmayan); dokumaya elverişli diğer maddelerden",
+      "tanim_en": "Coats for women and girls (not knitted or crocheted); made from other materials suitable for weaving.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620290000014",
+      "tanim_tr": "Kadın ve kız çocuklar için kolsuz ceketler (örme ve kroşe olmayan); dokumaya elverişli diğer maddelerden",
+      "tanim_en": "Sleeveless jackets for women and girls (not knitted or crocheted); made from other woven materials.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620290000015",
+      "tanim_tr": "Kadın ve kız çocuklar için pelerinler (örme ve kroşe olmayan); dokumaya elverişli diğer maddelerden",
+      "tanim_en": "Cloaks for women and girls (not knitted or crocheted); from other materials suitable for weaving.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620290000019",
+      "tanim_tr": "Kadın ve kız çocuklar için anorak, vb. eşya (örme ve kroşe olmayan); 6202.90.00.00.11 - 6202.90.00.00.15 HARİÇ, dokumaya elverişli diğer maddelerden",
+      "tanim_en": "Anoraks and similar articles for women and girls (not knitted or crocheted); made of other textile materials, EXCEPT 6202.90.00.00.11 - 6202.90.00.00.15",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620311000000",
+      "tanim_tr": "Erkek/erkek çocuk için takım elbise; yün/ince kıldan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Suit for a boy/male; made of wool/fine fiber (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620312000000",
+      "tanim_tr": "Erkek/erkek çocuk için takım elbise; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Suit for boys/men; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620319100000",
+      "tanim_tr": "Erkek/erkek çocuk için takım elbise; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Suit for boys/men; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620319300000",
+      "tanim_tr": "Erkek/erkek çocuk için takım elbise; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Suit for boys/men; made of synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620319900000",
+      "tanim_tr": "Erkek/erkek çocuk için takım elbise; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Suit for boys/men; made from woven or other materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620322100000",
+      "tanim_tr": "Erkek/erkek çocuk için takım halinde mesleki kıyafet; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Professional uniform set for boys/men; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620322800000",
+      "tanim_tr": "Erkek/erkek çocuk için takım halinde diğer kıyafet; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items in a set for a boy/male; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620323100000",
+      "tanim_tr": "Erkek/erkek çocuk için takım halinde mesleki kıyafet; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Professional uniform set for boys/men; made of synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620323800000",
+      "tanim_tr": "Erkek/erkek çocuk için takım halinde diğer kıyafet; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items in a set for boys/men; made of synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620329110000",
+      "tanim_tr": "Erkek/erkek çocuk için takım halinde mesleki kıyafet; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Professional uniform set for boys/men; made of synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620329180000",
+      "tanim_tr": "Erkek/erkek çocuk için takım halinde diğer kıyafet; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items in a set for a boy/male; made of synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620329300000",
+      "tanim_tr": "Erkek/erkek çocuk için takım halinde kıyafet; yünden veya ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Matching outfit for boys; made of wool or fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620329900011",
+      "tanim_tr": "Erkek/erkek çocuk için takım halinde mesleki kıyafet; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Professional uniform set for boys/men; made of other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620329900019",
+      "tanim_tr": "Erkek/erkek çocuk için takım halinde diğer kıyafet; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items in sets for boys/males; made of other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620331000000",
+      "tanim_tr": "Erkek/erkek çocuk için ceketler ve blazerler, yünden veya ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Jackets and blazers for boys/men, made of wool or fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620332100000",
+      "tanim_tr": "Erkek/erkek çocuk için mesleki kıyafet olan ceketler ve blazerlar; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Jackets and blazers, which are professional attire for boys/men; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620332900000",
+      "tanim_tr": "Erkek/erkek çocuk için diğer ceketler ve diğer blazerlar; pamuktan, diğer (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other jackets and blazers for boys/men; cotton, other (non-knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620333100000",
+      "tanim_tr": "Erkek/erkek çocuk için mesleki kıyafet olan ceketler ve blazerlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Jackets and blazers, which are professional attire for boys/men, are made from synthetic fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620333900000",
+      "tanim_tr": "Erkek/erkek çocuk için diğer ceketler ve diğer blazerlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other jackets and blazers for boys/men; made from synthetic fibers (non-knitted or non-crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620339110000",
+      "tanim_tr": "Erkek/erkek çocuk için mesleki kıyafet olarak ceketler ve blazerler; suni liferden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Jackets and blazers as professional attire for boys/men; made of synthetic fiber (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620339190000",
+      "tanim_tr": "Erkek/erkek çocuk için diğer ceketler ve diğer blazerler; suni liferden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other jackets and blazers for boys/men; made of artificial fiber (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620339900000",
+      "tanim_tr": "Erkek/erkek çocuk için ceketler ve blazerler; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Jackets and blazers for boys/men; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620341100000",
+      "tanim_tr": "Erkek/erkek çocuk için pantolonlar ve kısa pantolonlar; yün/ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Trousers and shorts for boys/men; made of wool/fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620341300000",
+      "tanim_tr": "Erkek/erkek çocuk için askılı ve üst ön parçalı tulumlar; yün/ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Boys' overalls with sleeveless and top front panels; made of wool/fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620341900000",
+      "tanim_tr": "Erkek/erkek çocuk için şort; yün/ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shorts for boys; made of wool/fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620342110000",
+      "tanim_tr": "Erkek/erkek çocuk için mesleki kıyafet olan pantolonlar ve kısa pantolonlar; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Trousers and shorts, professional attire for boys/men; made of cotton (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620342310000",
+      "tanim_tr": "Erkek/erkek çocuk için pantolonlar, kısa pantolonlar; denimden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Trousers, shorts for boys/men; denim (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620342330000",
+      "tanim_tr": "Erkek/erkek çocuk için pantolonlar, kısa pantolonlar; pamuk esaslı atkı iplikli kadife ve pelüşten (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Trousers for boys/men; velvet and plush (not knitted or crocheted) made from cotton-based weft yarn.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620342350000",
+      "tanim_tr": "Erkek/erkek çocuk için pantolonlar, kısa pantolonlar; pamuk esaslı diğer kumaşlardan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Trousers, shorts for boys/men; made from cotton-based or other non-knitted fabrics.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620342510000",
+      "tanim_tr": "Erkek/erkek çocuk için mesleki kıyafet olan askılı ve üst ön parçalı tulumlar; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Overalls with suspenders and a top front piece, professional attire for boys/men; made of cotton (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620342590000",
+      "tanim_tr": "Erkek/erkek çocuk için diğer askılı ve üst ön parçalı tulumlar; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other overalls with sleeveless and top front pieces for boys/males; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620342900000",
+      "tanim_tr": "Erkek/erkek çocuk için şortlar; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shorts for boys/men; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620343110000",
+      "tanim_tr": "Erkek/erkek çocuk için mesleki kıyafet olan pantolonlar ve kısa pantolonlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Trousers and shorts, which are occupational clothing for boys/men; made of synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620343190000",
+      "tanim_tr": "Erkek/erkek çocuk için diğer pantolonlar ve kısa diğer pantolonlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other trousers and shorts for boys/men; made of synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620343310000",
+      "tanim_tr": "Erkek/erkek çocuk için mesleki kıyafet olan askılı ve üst ön parçalı tulumlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Overalls with suspenders and a top front piece, professional attire for boys/males; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620343390000",
+      "tanim_tr": "Erkek/erkek çocuk için askılı ve üst ön parçalı diğer tulumlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other overalls for boys/men with sleeveless and top front pieces; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620343900000",
+      "tanim_tr": "Erkek/erkek çocuk için şortlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shorts for boys/men; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620349110000",
+      "tanim_tr": "Erkek/erkek çocuk için mesleki kıyafet olan pantolonlar ve kısa pantolonlar; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Trousers and shorts, considered professional attire for boys/men; made of synthetic fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620349190000",
+      "tanim_tr": "Erkek/erkek çocuk için diğer pantolonlar ve kısa diğer pantolonlar; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other trousers and shorts for boys/men; made of synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620349310000",
+      "tanim_tr": "Erkek/erkek çocuk için mesleki kıyafet olan askılı ve üst ön parçalı tulumlar; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Overalls with suspenders and a top front piece, professional attire for boys/males; made of synthetic fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620349390000",
+      "tanim_tr": "Erkek/erkek çocuk için askılı ve üst ön parçalı diğer tulumlar; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other overalls for boys/men with sleeveless and top front pieces; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620349500000",
+      "tanim_tr": "Erkek/erkek çocuk için şortlar; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shorts for boys/men; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620349900000",
+      "tanim_tr": "Erkek/erkek çocuk için pantolonlar, kısa pantolonlar, tulumlar ve şortlar; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Trousers, shorts, overalls and shorts for boys/men; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620411000000",
+      "tanim_tr": "Kadın/kız çocuk için takım elbise; yün/ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Suit for women/girls; made of wool/fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620412000000",
+      "tanim_tr": "Kadın/kız çocuk için takım elbise; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Suit for women/girls; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620413000000",
+      "tanim_tr": "Kadın/kız çocuk için takım elbise; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Suit for women/girls; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620419100000",
+      "tanim_tr": "Kadın/kız çocuk için takım elbise; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Suit for women/girls; made of synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620419900000",
+      "tanim_tr": "Kadın/kız çocuk için takım elbise; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Suit for women/girls; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620421000000",
+      "tanim_tr": "Kadın/kız çocuk için takım; yün/ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Outfit for women/girls; made of wool/fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620422100000",
+      "tanim_tr": "Kadın/kız çocuk için mesleki kıyafet olan takımlar; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Professional uniforms for women/girls; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620422800000",
+      "tanim_tr": "Kadın/kız çocuk için diğer takımlar; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other sets for women/girls; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620423100000",
+      "tanim_tr": "Kadın/kız çocuk için mesleki kıyafet olan takımlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Professional uniforms for women/girls are made from synthetic fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620423800000",
+      "tanim_tr": "Kadın/kız çocuk için diğer takımlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other sets for women/girls; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620429110000",
+      "tanim_tr": "Kadın/kız çocuk için mesleki kıyafet olan takımlar; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Professional uniforms for women/girls; made of synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620429180000",
+      "tanim_tr": "Kadın/kız çocuk için diğer takımlar; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other sets for women/girls; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620429900000",
+      "tanim_tr": "Kadın/kız çocuk için takım; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Outfit for women/girls; made from other tactile materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620431000000",
+      "tanim_tr": "Kadın/kız çocuk için ceketler ve blazerler; yün veya ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Jackets and blazers for women/girls; made of wool or fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620432100000",
+      "tanim_tr": "Kadın/kız çocuk için mesleki kıyafet olan ceketler ve blazerler; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Jackets and blazers, which are professional attire for women/girls, are made of cotton (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620432900012",
+      "tanim_tr": "Kadın/kız çocuk için diğer ceketler ve diğer blazerler; denimden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other jackets and blazers for women/girls; made of denim (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620432900013",
+      "tanim_tr": "Kadın/kız çocuk için diğer ceketler ve diğer blazerler; pamuktan dokunmuş kadifeden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other jackets and blazers for women/girls; made of cotton woven velvet (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620432900018",
+      "tanim_tr": "Kadın/kız çocuk için diğer ceketler ve diğer blazerler; pamuktan diğer kumaşlardan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other jackets and blazers for women/girls; cotton and other fabrics (non-knitted or non-crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620433100000",
+      "tanim_tr": "Kadın/kız çocuk için mesleki kıyafet olan ceketler ve blazerler; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Jackets and blazers, which are professional attire for women/girls, are made from synthetic fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620433900000",
+      "tanim_tr": "Kadın/kız çocuk için diğer ceketler ve diğer blazerler; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other jackets and blazers for women/girls; made from synthetic fibers (non-knitted or non-crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620439110000",
+      "tanim_tr": "Kadın/kız çocuk için mesleki kıyafet olan ceketler ve blazerler; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Jackets and blazers, which are professional attire for women/girls, are made from synthetic fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620439190000",
+      "tanim_tr": "Kadın/kız çocuk için diğer ceketler ve diğer blazerler; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other jackets and blazers for women/girls; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620439900000",
+      "tanim_tr": "Kadın/kız çocuk için ceketler ve blazerler; dokunabilir diğer maddeden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Jackets and blazers for women/girls; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620441000000",
+      "tanim_tr": "Kadın/kız çocuk için elbise; yünden veya ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Dress for women/girls; made of wool or fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620442000012",
+      "tanim_tr": "Kadın/kız çocuk için elbise; denimden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Dress for women/girls; made of denim (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620442000013",
+      "tanim_tr": "Kadın/kız çocuk için elbise; pamuktan dokunmuş kadifeden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Dress for women/girls; made of cotton woven velvet (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620442000018",
+      "tanim_tr": "Kadın/kız çocuk için elbise; pamuktan dokunmuş diğer kumaştan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Dress for women/girls; made of cotton or other woven fabric (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620443000011",
+      "tanim_tr": "Gelinlikler; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Wedding dresses are made from synthetic fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620443000019",
+      "tanim_tr": "Kadın/kız çocuk için diğer elbiseler; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing for women/girls; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620444000011",
+      "tanim_tr": "Gelinlikler; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Wedding dresses are made from synthetic fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620444000019",
+      "tanim_tr": "Kadın/kız çocuk için diğer elbiseler; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing for women/girls; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620449100011",
+      "tanim_tr": "Gelinlikler; ipek veya ipek döküntülerinden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Wedding dresses are made of silk or silk scraps (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620449100019",
+      "tanim_tr": "Kadın/kız çocuk için diğer elbiseler; ipek veya ipek döküntülerinden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing for women/girls; made of silk or silk waste (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620449900000",
+      "tanim_tr": "Kadın/kız çocuk için elbise; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Dress for women/girls; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620451000011",
+      "tanim_tr": "Kadın/kız çocuk için etek; el yapımı, yünden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Skirt for women/girls; handmade, made of wool (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620451000019",
+      "tanim_tr": "Kadın/kız çocuk için diğer etekler; yün/ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other skirts for women/girls; made of wool/fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620451000021",
+      "tanim_tr": "Kadın/kız çocuk için pantolon etek; el yapımı, yünden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Pants/skirt for women/girls; handmade, made of wool (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620451000029",
+      "tanim_tr": "Kadın/kız çocuk için diğer pantolon etekler; yün/ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other pant-skirts for women/girls; made of wool/fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620452000012",
+      "tanim_tr": "Kadın/kız çocuk için etek; denimden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Skirt for women/girls; made of denim (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620452000013",
+      "tanim_tr": "Kadın/kız çocuk için etek; pamuktan dokunmuş kadifeden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Skirt for women/girls; made of cotton velvet (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620452000018",
+      "tanim_tr": "Kadın/kız çocuk için etek; pamuktan dokunmuş diğer kumaştan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Skirts for women/girls; made of cotton or other woven fabric (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620452000022",
+      "tanim_tr": "Kadın/kız çocuk için pantolon etekler; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Women's/girls' culottes; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620453000000",
+      "tanim_tr": "Kadın/kız çocuk için etek ve pantolon etek; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Skirts and culottes for women/girls; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620459100000",
+      "tanim_tr": "Kadın/kız çocuk için etek ve pantolon etek, suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Skirts and culottes for women/girls, made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620459900000",
+      "tanim_tr": "Kadın/kız çocuk için etek ve pantolon etek; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Skirts and skirt-pants for women/girls; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620461100000",
+      "tanim_tr": "Kadın/kız çocuk için pantolonlar ve kısa pantolonlar, yünden veya ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Trousers and shorts for women/girls, made of wool or fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620461850000",
+      "tanim_tr": "Kadın/kız çocuk için askılı ve üst ön parçalı tulumlar ve şortlar; yünden veya ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Jumpsuits and shorts for women/girls with sleeveless and top front pieces; made of wool or fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620462110000",
+      "tanim_tr": "Kadın/kız çocuk için mesleki kıyafet olan pantolon ve kısa pantalonlar; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Trousers and shorts, which are professional attire for women/girls, must be made of cotton (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620462310000",
+      "tanim_tr": "Kadın/kız çocuk için diğer pantolon ve kısa pantalonlar; denimden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other trousers and shorts for women/girls; made of denim (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620462330000",
+      "tanim_tr": "Kadın/kız çocuk için diğer pantolon ve kısa pantalonlar; pamuktan dokunmuş atkı iplikli kadifeden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other trousers and shorts for women/girls; made of cotton woven velvet (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620462390000",
+      "tanim_tr": "Kadın/kız çocuk için diğer pantolon ve kısa pantalonlar; pamuktan dokunmuş diğer kumaştan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other trousers and shorts for women/girls; made of other woven cotton fabrics (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620462510000",
+      "tanim_tr": "Kadın/kız çocuk için mesleki kıyafet olan askılı ve üst ön parçalı tulum; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Women's/girls' professional uniform: overalls with sleeves and a top front piece; made of cotton (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620462590000",
+      "tanim_tr": "Kadın/kız çocuk için diğer askılı ve üst ön parçalı tulum; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other sleeveless and top-front rompers for women/girls; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620462900000",
+      "tanim_tr": "Kadın/kız çocuk için şort; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shorts for women/girls; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620463110000",
+      "tanim_tr": "Kadın/kız çocuk için mesleki kıyafet olan pantolon ve kısa pantalonlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Trousers and shorts, which are occupational clothing for women/girls, are made of synthetic fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620463180000",
+      "tanim_tr": "Kadın/kız çocuk için diğer pantolon ve kısa pantalonlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other trousers and shorts for women/girls; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620463310000",
+      "tanim_tr": "Kadın/kız çocuk için mesleki kıyafet olan askılı ve üst ön parçalı tulumlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Women's/girls' occupational uniforms consisting of overalls with sleeves and a top front piece; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620463390000",
+      "tanim_tr": "Kadın/kız çocuk için diğer askılı ve üst ön parçalı tulumlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other sleeveless and top-front rompers for women/girls; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620463900000",
+      "tanim_tr": "Kadın/kız çocuk için şortlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shorts for women/girls; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620469110000",
+      "tanim_tr": "Kadın/kız çocuk için mesleki kıyafet olan pantolon ve kısa pantalonlar; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Trousers and shorts, which are occupational clothing for women/girls, are made of synthetic fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620469180000",
+      "tanim_tr": "Kadın/kız çocuk için diğer pantolon ve kısa pantalonlar; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other trousers and shorts for women/girls; made of synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620469310000",
+      "tanim_tr": "Kadın/kız çocuk için mesleki kıyafet olan askılı ve üst ön parçalı tulumlar; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Women's/girls' professional uniforms: overalls with sleeves and a top front piece; made of synthetic fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620469390000",
+      "tanim_tr": "Kadın/kız çocuk için diğer askılı ve üst ön parçalı tulumlar; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other sleeveless and top-front rompers for women/girls; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620469500000",
+      "tanim_tr": "Kadın/kız çocuk için şortlar; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shorts for women/girls; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620469900000",
+      "tanim_tr": "Kadın/kız çocuk için şortlar; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shorts for women/girls; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620520000012",
+      "tanim_tr": "Erkek/erkek çocuk için pamuktan gömlek; denimden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Cotton shirt for boys; denim (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620520000013",
+      "tanim_tr": "Erkek/erkek çocuk için pamuktan gömlek; pamuktan dokunmuş kadifeden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Cotton shirt for boys; cotton woven velvet (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620520000018",
+      "tanim_tr": "Erkek/erkek çocuk için pamuktan gömlek; pamuktan dokunmuş diğer jumaştan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Cotton shirt for boys; other cotton woven fabrics (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620530000000",
+      "tanim_tr": "Erkek/erkek çocuk için gömlek; sentetik veya suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shirt for boys/men; made of synthetic or artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620590100000",
+      "tanim_tr": "Erkek/erkek çocuk için gömlek; ketenden veya ramiden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shirt for a boy/male; made of linen or ramie (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620590800011",
+      "tanim_tr": "Erkek/erkek çocuk için gömlek; ipek veya ipek döküntülerinden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shirt for a boy/male; made of silk or silk waste (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620590800012",
+      "tanim_tr": "Erkek/erkek çocuk için gömlek; yünden/ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shirt for boys; made of wool/fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620590800018",
+      "tanim_tr": "Erkek/erkek çocuk için gömlek; dokumaya elverişli diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shirt for boys/men; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620610000000",
+      "tanim_tr": "Kadınlar ve kız çocuklar için bluzlar, gömlekler ve gömlek-bluzlar; ipekten veya ipek döküntülerinden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Blouses, shirts and shirt-blouses for women and girls; made of silk or silk waste (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620620000000",
+      "tanim_tr": "Kadınlar ve kız çocuklar için bluzlar, gömlekler ve gömlek-bluzlar; yünden veya ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Blouses, shirts and shirt-blouses for women and girls; made of wool or fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620630000012",
+      "tanim_tr": "Kadın/kız çocuk için bluz; denimden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Blouse for women/girls; made of denim (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620630000013",
+      "tanim_tr": "Kadın/kız çocuk için bluz; pamuktan dokunmuş kadifeden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Blouse for women/girls; made of cotton woven velvet (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620630000018",
+      "tanim_tr": "Kadın/kız çocuk için bluz; pamuktan dokunmuş diğer kumaşlardan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Blouses for women/girls; made from cotton or other woven fabrics (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620630000022",
+      "tanim_tr": "Kadın/kız çocuk için gömlek; denimden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shirt for women/girls; made of denim (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620630000023",
+      "tanim_tr": "Kadın/kız çocuk için gömlek; pamuktan dokunmuş kadifeden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shirt for women/girls; made of cotton woven velvet (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620630000028",
+      "tanim_tr": "Kadın/kız çocuk için gömlek; pamuktan dokunmuş diğer kumaşlardan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shirt for women/girls; made from cotton or other woven fabrics (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620640000000",
+      "tanim_tr": "Kadınlar ve kız çocuklar için bluzlar, gömlekler ve gömlek-bluzlar; sentetik veya suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Blouses, shirts and shirt-blouses for women and girls; made from synthetic or artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620690100000",
+      "tanim_tr": "Kadınlar ve kız çocuklar için bluzlar, gömlekler ve gömlek-bluzlar; keten ve ramiden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Blouses, shirts and shirt-blouses for women and girls; made of linen and ramie (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620690900011",
+      "tanim_tr": "Kadın/kız çocuk için bluz; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Blouse for women/girls; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620690900012",
+      "tanim_tr": "Kadın/kız çocuk için gömlek; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shirt for women/girls; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620690900013",
+      "tanim_tr": "Kadın/kız çocuk için gömlek-bluz; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shirts/blouses for women/girls; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620711000011",
+      "tanim_tr": "Erkek/erkek çocuk için uzun ve kısa külotlar; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Long and short underwear for boys/men; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620711000012",
+      "tanim_tr": "Erkek/erkek çocuk için slip; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Slip for boys/men; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620719000011",
+      "tanim_tr": "Erkek/erkek çocuk için uzun ve kısa külotlar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Long and short underwear for boys/men; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620719000012",
+      "tanim_tr": "Erkek/erkek çocuk için slip; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Slip for boys/men; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620719000019",
+      "tanim_tr": "Erkek/erkek çocuk için uzun ve kısa külotlar; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Long and short underwear for boys/men; made from other tactile materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620719000029",
+      "tanim_tr": "Erkek/erkek çocuk için slip; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Slip for boys/male; made from other tactile materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620721000000",
+      "tanim_tr": "Erkek/erkek çocuk için gece gömlekleri ve pijamalar; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Nightgowns and pajamas for boys/men; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620722000000",
+      "tanim_tr": "Erkek/erkek çocuk için gece gömlekleri ve pijamalar; sentetik veya suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Nightgowns and pajamas for boys/men; made from synthetic or artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620729000000",
+      "tanim_tr": "Erkek/erkek çocuk için gece gömlekleri ve pijamalar; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Nightgowns and pajamas for boys/men; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620791000000",
+      "tanim_tr": "Erkekler ve erkek çocuk için fanila, atlet, bornozlar, robdöşambrlar, vb. eşya; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Undershirts, tank tops, bathrobes, dressing gowns, etc. for men and boys; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620799100000",
+      "tanim_tr": "Erkekler ve erkek çocuk için fanila, atlet, bornozlar, robdöşambrlar, vb. eşya; sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Undershirts, tank tops, bathrobes, dressing gowns, etc. for men and boys; made from synthetic/artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620799900000",
+      "tanim_tr": "Erkekler ve erkek çocuk için fanila, atlet, bornozlar, robdöşambrlar, vb. eşya; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Undershirts, tank tops, bathrobes, dressing gowns, etc. for men and boys; made from other woven materials (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620811000000",
+      "tanim_tr": "Kadın/kız çocuk için kombinezon, jüp/jüpon; sentetik veya suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Petticoats/underskirts for women/girls; made of synthetic or artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620819000000",
+      "tanim_tr": "Kadın/kız çocuk için kombinezon, jüp/jüpon; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Petticoats/underskirts for women/girls; made from woven or other non-knitted materials.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620821000011",
+      "tanim_tr": "Kadın/kız çocuk için gecelik; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Nightgown for women/girls; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620821000012",
+      "tanim_tr": "Kadın/kız çocuk için pijama; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Pajamas for women/girls; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620822000011",
+      "tanim_tr": "Kadın/kız çocuk için gecelik; sentetik veya suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Nightgowns for women/girls; made of synthetic or artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620822000012",
+      "tanim_tr": "Kadın/kız çocuk için pijama; sentetik veya suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Pajamas for women/girls; made from synthetic or artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620829000011",
+      "tanim_tr": "Kadın/kız çocuk için gecelik; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Nightgown for women/girls; made from other tactile materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620829000012",
+      "tanim_tr": "Kadın/kız çocuk için pijama; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Pajamas for women/girls; made from other tactile materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620891000000",
+      "tanim_tr": "Kadınlar ve kız çocuk için fanila, kaşkorse, slip ve külot, lizöz, bornoz, sabahlık, vb. eşya; pamuktan (örülmemiş/kroşe olmayan)",
+      "tanim_en": "Undershirts, camisoles, briefs and panties, slime, bathrobes, dressing gowns, etc. for women and girls; made of cotton (non-knitted/non-crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620892000000",
+      "tanim_tr": "Kadınlar ve kız çocuk için fanila, kaşkorse, slip ve külot, lizöz, bornoz, sabahlık, vb. eşya; sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Articles of clothing for women and girls, such as undershirts, corsets, briefs and panties, slime, bathrobes, dressing gowns, etc.; made from synthetic/artificial fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620899000000",
+      "tanim_tr": "Kadınlar ve kız çocuk için fanila, kaşkorse, slip ve külot, lizöz, bornoz, sabahlık, vb. eşya; dokunabilir diğer maddelerden (örülmemiş/kroşe olmayan)",
+      "tanim_en": "Articles of clothing for women and girls, such as undershirts, corsets, briefs and panties, slime, bathrobes, dressing gowns, etc.; made from other woven materials (non-knitted/non-crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620920000011",
+      "tanim_tr": "Bebek için eldiven; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Baby gloves; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620920000012",
+      "tanim_tr": "Bebek için çoraplar; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Socks for babies; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620920000019",
+      "tanim_tr": "Bebek için diğer giyim eşyası ve aksesuar; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing and accessories for the baby; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620930000011",
+      "tanim_tr": "Bebek için eldiven; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Baby gloves; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620930000012",
+      "tanim_tr": "Bebek için çoraplar; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Socks for babies; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620930000019",
+      "tanim_tr": "Bebek için diğer giyim eşyası ve aksesuarı; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing and accessories for the baby; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620990100011",
+      "tanim_tr": "Bebek için eldiven; yünden veya ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Baby gloves; made of wool or fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620990100012",
+      "tanim_tr": "Bebek için çoraplar; yünden veya ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Socks for babies; made of wool or fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620990100019",
+      "tanim_tr": "Bebek için diğer giyim eşyası ve aksesuar; yünden veya ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing and accessories for the baby; made of wool or fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620990900011",
+      "tanim_tr": "Bebek için eldiven; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Baby gloves; made from materials that can be touched by other materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620990900012",
+      "tanim_tr": "Bebek için çoraplar; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Socks for babies; made from other tactile materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "620990900019",
+      "tanim_tr": "Bebek için diğer giyim eşyası ve aksesuarı; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing and accessories for the baby; made from other tactile materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621010100011",
+      "tanim_tr": "Palto (manto); keçeden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Coat (mantle); made of felt (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621010100019",
+      "tanim_tr": "Diğer giyim eşyası; keçeden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items; made of felt (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621010920000",
+      "tanim_tr": "Hastalar veya cerrahlar tarafından cerrahi operasyonlarda giyilen elbise; tek kullanımlık, dokunmamış mensucattan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Gowns worn by patients or surgeons during surgical operations; disposable, non-woven fabric (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621010980000",
+      "tanim_tr": "Dokunmamış mensucattan diğer giyim eşyası (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items of nonwoven fabrics (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621020000000",
+      "tanim_tr": "Erkek/erkek çocuk için palto, kaban, vb. dış giyim eşyası; kauçuklu, plastikli, vb. mensucattan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Outerwear such as coats and jackets for boys; made of rubberized, plasticized, etc. fabrics (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621030000000",
+      "tanim_tr": "Kadın/kız çocuk için yağmurluk, kaban, vb. dış giyim; kauçuklu, plastikli, vb. mensucattan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Outerwear for women/girls, such as raincoats, jackets, etc.; made of rubberized, plasticized, etc. textiles (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621040000011",
+      "tanim_tr": "Erkek/erkek çocuk için dalgıç elbisesi; kauçuklu, plastikli, vb. mensucattan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Diving suit for boys/men; made of rubberized, plasticized, etc. fabric (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621040000012",
+      "tanim_tr": "Erkek/erkek çocuk için radyasyona karşı koruyucu elbiseler; kauçuklu, plastikli, vb. mensucattan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Radiation protective clothing for boys/males; made of rubberized, plasticized, etc. fabrics (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621040000019",
+      "tanim_tr": "Erkek/erkek çocuk için diğer giyim eşyası; kauçuklu, plastikli, vb. mensucattan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items for boys/men; made of rubberized, plasticized, etc. fabrics (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621050000011",
+      "tanim_tr": "Kadın/kız çocuk için dalgıç elbisesi; kauçuklu, plastikli, vb. mensucattan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Women's/girls' wetsuit; made of rubberized, plasticized, etc. fabric (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621050000012",
+      "tanim_tr": "Kadın/kız çocuk için radyasyona karşı koruyucu elbiseler; kauçuklu, plastikli, vb. mensucattan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Radiation protective clothing for women/girls; made of rubberized, plasticized, etc. fabrics (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621050000019",
+      "tanim_tr": "Kadın/kız çocuk için diğer giyim eşyası; kauçuklu, plastikli, vb. mensucattan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items for women/girls; made of rubberized, plasticized, etc. fabrics (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621111000011",
+      "tanim_tr": "Erkek/erkek çocuk için yüzme kıyafetleri; suni/sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Swimwear for boys/men; made from artificial/synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621111000019",
+      "tanim_tr": "Erkek/erkek çocuk için yüzme kıyafetleri; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Swimwear for boys/men; made from non-woven or non-crocheted materials.",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621112000011",
+      "tanim_tr": "Kadın/kız çocuk için yüzme kıyafeti; suni/sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Swimsuit for women/girls; made of artificial/synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621112000019",
+      "tanim_tr": "Kadın/kız çocuk için yüzme kıyafeti; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Swimsuit for women/girls; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621120000000",
+      "tanim_tr": "Kayak kıyafetleri (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Ski clothing (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621132100011",
+      "tanim_tr": "Erkek/erkek çocuk için önlük; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Bib for boys/male; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621132100012",
+      "tanim_tr": "Erkek/erkek çocuk için koruyucu elbise; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Protective clothing for boys/males; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621132100013",
+      "tanim_tr": "Erkek/erkek çocuk için yaka ve askılar; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Collars and suspenders for boys/men; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621132100019",
+      "tanim_tr": "Erkek/erkek çocuk için diğer mesleki kıyafet; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other professional attire for boys/men; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621132310000",
+      "tanim_tr": "Erkek/erkek çocuk için astarlı spor kıyafet; dış yüzü tek ve aynı pamuk mensucattan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Lined sportswear for boys; outer surface made from a single, identical cotton fabric (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621132410000",
+      "tanim_tr": "Erkek/erkek çocuk için astarlı spor kıyafet; üst kısımlar, pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Lined sportswear for boys; tops made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621132420000",
+      "tanim_tr": "Erkek/erkek çocuk için astarlı spor kıyafet; alt kısımlar, pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Lined sportswear for boys; bottoms made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621132900000",
+      "tanim_tr": "Erkek/erkek çocuk için diğer giyim eşyası; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items for boys/men; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621133100011",
+      "tanim_tr": "Erkek/erkek çocuk için önlük; sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Bib for boys/male; made of synthetic/artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621133100012",
+      "tanim_tr": "Erkek/erkek çocuk için koruyucu elbise; sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Protective clothing for boys/men; made of synthetic/artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621133100013",
+      "tanim_tr": "Erkek/erkek çocuk için yaka ve askılar; sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Collars and suspenders for boys/men; made from synthetic/artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621133100019",
+      "tanim_tr": "Erkek/erkek çocuk için diğer mesleki kıyafet; sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other professional attire for boys/men; made of synthetic/artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621133310000",
+      "tanim_tr": "Erkek/erkek çocuk için astarlı spor kıyafet; dışı yüzü tek ve aynı mensucattan, sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Lined sportswear for boys; outer and outer surfaces made of the same fabric, synthetic/artificial fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621133410000",
+      "tanim_tr": "Erkek/erkek çocuk için astarlı spor kıyafet; üst kısımlar, sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Lined sportswear for boys; tops made of synthetic/artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621133420000",
+      "tanim_tr": "Erkek/erkek çocuk için astarlı spor kıyafet; alt kısımlar, sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Lined sportswear for boys; bottoms made of synthetic/artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621133900000",
+      "tanim_tr": "Erkek/erkek çocuk için diğer giyim eşyası; sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items for boys/men; made of synthetic/artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621139000021",
+      "tanim_tr": "Erkek/erkek çocuk için mesleki kıyafetleri; yün/ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Occupational clothing for boys/men; wool/fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621139000029",
+      "tanim_tr": "Erkek/erkek çocuk için diğer giyim eşyası; yün/ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items for boys/men; wool/fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621139000031",
+      "tanim_tr": "Erkek/erkek çocuk için mesleki kıyafetleri; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Occupational clothing for boys/men; made of other tactile materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621139000039",
+      "tanim_tr": "Erkek/erkek çocuk için diğer giyim eşyası; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items for boys/men; made of other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621142100000",
+      "tanim_tr": "Kadın/kız çocuk için önlük, gömlek ve diğer mesleki kıyafet; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Aprons, shirts and other professional clothing for women/girls; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621142310000",
+      "tanim_tr": "Kadın/kız çocuk için astarlı spor kıyafet; dış yüzü tek ve aynı pamuk mensucattan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Lined sportswear for women/girls; outer surface made of a single, identical cotton fabric (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621142410000",
+      "tanim_tr": "Kadın/kız çocuk için astarlı spor kıyafet; üst kısımlar, pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Lined sportswear for women/girls; tops made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621142420000",
+      "tanim_tr": "Kadın/kız çocuk için astarlı spor kıyafet; alt kısımlar, pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Lined sportswear for women/girls; bottoms made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621142900000",
+      "tanim_tr": "Kadın/kız çocuk için diğer giyim eşyası; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items for women/girls; made of cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621143100000",
+      "tanim_tr": "Kadın/kız çocuk için önlük, gömlek ve diğer mesleki kıyafet; sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Aprons, shirts and other professional clothing for women/girls; made of synthetic/artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621143310000",
+      "tanim_tr": "Kadın/kız çocuk için astarlı spor kıyafet; dış yüzü tek ve aynı mensucattan, sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Lined sportswear for women/girls; outer surface made of a single, identical fabric, synthetic/artificial fibers (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621143410000",
+      "tanim_tr": "Kadın/kız çocuk için astarlı spor kıyafet; üst kısımlar, sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Lined sportswear for women/girls; tops made of synthetic/artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621143420000",
+      "tanim_tr": "Kadın/kız çocuk için astarlı spor kıyafet; alt kısımlar, sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Lined sportswear for women/girls; bottoms made of synthetic/artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621143900000",
+      "tanim_tr": "Kadın/kız çocuk için diğer giyim eşyası; sentetik/suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing items for women/girls; made of synthetic/artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621149000011",
+      "tanim_tr": "Kadın/kız çocuk için önlük, gömlek ve diğer mesleki kıyafet; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Aprons, shirts and other professional clothing for women/girls; made of other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621149000019",
+      "tanim_tr": "Kadın/kız çocuk için diğer giyim eşyası; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other clothing for women/girls; made of other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621210100000",
+      "tanim_tr": "Bir sütyen ve külot içeren setler (örülmüş veya kroşe olsun olmasın)",
+      "tanim_en": "Sets that include a bra and panties (whether knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621210900000",
+      "tanim_tr": "Sütyenler (setler HARİÇ) (örülmüş veya kroşe olsun olmasın)",
+      "tanim_en": "Bras (excluding sets) (whether knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621220000000",
+      "tanim_tr": "Korse ve korse pantolonlar (örülmüş veya kroşe olsun olmasın)",
+      "tanim_en": "Corsets and corset trousers (whether knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621230000000",
+      "tanim_tr": "Sütyenli korseler (örülmüş veya kroşe olsun olmasın)",
+      "tanim_en": "Corsets with built-in bras (whether knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621290000011",
+      "tanim_tr": "Kuşaklar (örülmüş veya kroşe olsun olmasın)",
+      "tanim_en": "Belts (whether knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621290000019",
+      "tanim_tr": "Askı, çorap bağı, korse kemeri, jartiyer vb eşya ve parçaları (örülmüş veya kroşe olsun olmasın)",
+      "tanim_en": "Suspenders, stocking ties, corset belts, garter belts, etc., items and parts thereof (whether knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621320000011",
+      "tanim_tr": "Mendil; pamuktan, el yapımı (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Handkerchief; made of cotton, handmade (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621320000019",
+      "tanim_tr": "Diğer mendiller; pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other handkerchiefs are made of cotton (not knitted or crocheted).",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621390001000",
+      "tanim_tr": "Mendil; ketenden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Handkerchief; made of linen (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621390009000",
+      "tanim_tr": "Mendil; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Handkerchief; made from other tactile materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621410000000",
+      "tanim_tr": "Şal; ipek/ipek döküntülerinden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shawl; made of silk/silk waste (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621420000000",
+      "tanim_tr": "Şal; yün/ince hayvan kıllarından (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shawl; made of wool/fine animal hair (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621430000000",
+      "tanim_tr": "Şal; sentetik liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shawl; made from synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621440000000",
+      "tanim_tr": "Şal; suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shawl; made of synthetic fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621490000000",
+      "tanim_tr": "Şal; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shawl; made from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621510001000",
+      "tanim_tr": "Kravat imali için şekil verilerek kesilmiş parçalar; ipek veya ipek döküntülerinden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shaped and cut pieces for tie making; from silk or silk waste (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621510009000",
+      "tanim_tr": "Kravat, papyon, boyunbağları (kravat imali için şekil verilerek kesilmiş parçalar HARİÇ); ipek/ipek döküntülerinden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Ties, bow ties, neckties (EXCEPT pieces cut and shaped for tie making); silk/silk waste (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621520001000",
+      "tanim_tr": "Kravat imali için şekil verilerek kesilmiş parçalar; sentetik ve suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Cut and shaped pieces for tie making; from synthetic and artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621520009000",
+      "tanim_tr": "Kravat, papyon, boyunbağları (kravat imali için şekil verilerek kesilmiş parçalar HARİÇ); sentetik ve suni liflerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Ties, bow ties, neckties (EXCEPT pieces cut and shaped for tie making); made of synthetic and artificial fibers (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621590001000",
+      "tanim_tr": "Kravat imali için şekil verilerek kesilmiş parçalar; dokumaya elverişli diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Shaped and cut pieces for tie making; from other woven materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621590009000",
+      "tanim_tr": "Kravat, papyon, boyunbağları (kravat imali için kesilmiş parçalar HARİÇ); dokumaya elverişli diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Ties, bow ties, neckties (EXCEPT pieces cut for tie making); other textile materials (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621600000000",
+      "tanim_tr": "Eldivenler, tek parmaklı eldivenlar ve parmaksız eldivenler (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Gloves, finger mittens, and fingerless mittens (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621710000011",
+      "tanim_tr": "Giyim eşyası aksesuarları; el yapımı (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Clothing accessories; handmade (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621710000019",
+      "tanim_tr": "Giyim eşyasının diğer aksesuarları (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Other accessories for the garment (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621790001100",
+      "tanim_tr": "Mendiller için parçalar; keten ve pamuktan (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Pieces for handkerchiefs; linen and cotton (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621790001900",
+      "tanim_tr": "Mendiller için parçalar; dokunabilir diğer maddelerden (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Pieces for handkerchiefs; woven or other non-knitted materials (not crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    },
+    {
+      "kod": "621790009000",
+      "tanim_tr": "Giyim eşyasının veya giyim eşyası aksesuarının parçaları (örülmemiş veya kroşe olmayan)",
+      "tanim_en": "Parts of clothing or clothing accessories (not knitted or crocheted)",
+      "girdi_oldugu_kurallar": [],
+      "cikti_oldugu_kurallar": []
+    }
+  ]
+}

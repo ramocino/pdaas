@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "sgk-aylik-gun-sayisi-kurallari",
+      "ad": {
+        "tr": "Aylık Gün Sayısı Hesaplama Kuralları",
+        "en": "Monthly Day Count Calculation Rules"
+      }
+    },
+    "katman": "ham",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "sgk",
+      "kapsam": [
+        "sosyal_guvenlik"
+      ]
+    },
+    "surum": "2026.01.01",
+    "guncelleme": "2026-01-01",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "csgb",
+      "ad": {
+        "tr": "T.C. Çalışma ve Sosyal Güvenlik Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Labour and Social Security"
+      },
+      "birim": {
+        "tr": "Sosyal Güvenlik Kurumu",
+        "en": "Social Security Institution"
+      },
+      "kurumlar": [
+        "csgb",
+        "sgk"
+      ]
+    },
+    "kaynaklar": [],
+    "mevzuat_ref": []
+  },
+  "kayitlar": [
+    {
+      "kod": "AY-30",
+      "ad_tr": "Aylık Çalışma — 30 Gün Kuralı",
+      "ad_en": "Monthly Employment — 30-Day Rule",
+      "aciklama_tr": "Ay içinde tam çalışan (aylık ücretli) sigortalılar için, o ayın fiili gün sayısı ne olursa olsun 30 gün bildirilir.",
+      "aciklama_en": "For insured persons working full-time (monthly paid) within the month, 30 days are reported regardless of the actual number of days in the month."
+    },
+    {
+      "kod": "AY-SUBAT-28",
+      "ad_tr": "Şubat Ayı (28 Çeken Yıl)",
+      "ad_en": "February (Non-Leap Year)",
+      "aciklama_tr": "Şubat ayı 28 çektiğinde, tam çalışan sigortalı için bildirilen gün sayısı yine 30'dur.",
+      "aciklama_en": "When February has 28 days, the day count reported for a full-time insured is still 30."
+    },
+    {
+      "kod": "AY-SUBAT-29",
+      "ad_tr": "Şubat Ayı (29 Çeken Yıl)",
+      "ad_en": "February (Leap Year)",
+      "aciklama_tr": "Şubat 29 çektiğinde dahi tam çalışan sigortalı için bildirilen gün sayısı 30'dur.",
+      "aciklama_en": "Even when February has 29 days, the day count reported for a full-time insured is 30."
+    },
+    {
+      "kod": "AY-31",
+      "ad_tr": "31 Çeken Aylar",
+      "ad_en": "Months with 31 Days",
+      "aciklama_tr": "31 çeken aylarda tam çalışan sigortalı için de 30 gün bildirilir; 1 gün eksik bildirilir.",
+      "aciklama_en": "In months with 31 days, 30 days are reported for full-time insured; one day is omitted."
+    },
+    {
+      "kod": "GUN-GERCEK",
+      "ad_tr": "Günlük Çalışan — Gerçek Gün Sayısı",
+      "ad_en": "Daily Worker — Actual Day Count",
+      "aciklama_tr": "Günlük ücretle çalışanlar için ay içindeki gerçek çalışılan gün sayısı bildirilir (1–30 arası).",
+      "aciklama_en": "For daily-wage workers, the actual number of days worked within the month is reported (between 1 and 30)."
+    },
+    {
+      "kod": "GUN-KISMI",
+      "ad_tr": "Kısmi (Part-Time) Çalışma",
+      "ad_en": "Partial (Part-Time) Employment",
+      "aciklama_tr": "Kısmi süreli çalışanlar için, çalışılan saat toplamı 7,5'e bölünerek gün sayısı bulunur; ondalık kesirler tam güne yuvarlanır (0,5 ve üzeri 1 gün).",
+      "aciklama_en": "For part-time workers, total hours worked is divided by 7.5 to find the day count; decimals are rounded up (0.5 and above counts as 1 day)."
+    },
+    {
+      "kod": "GUN-EKSIK",
+      "ad_tr": "Eksik Gün Bildirimi",
+      "ad_en": "Underreported Days Declaration",
+      "aciklama_tr": "Ay içinde 30 günden az çalışılan durumlarda, eksik gün nedeni kodu (örn. istirahat, ücretsiz izin) ile birlikte bildirilir.",
+      "aciklama_en": "When fewer than 30 days are worked in a month, the underreported days are declared together with the missing day reason code (e.g., sick leave, unpaid leave)."
+    },
+    {
+      "kod": "GUN-ISTISNA-ISVEREN",
+      "ad_tr": "İşverenin Kendi Sigortası",
+      "ad_en": "Employer's Own Insurance",
+      "aciklama_tr": "İşverenin kendisi de 4/a kapsamında sigortalı ise kendi adına 30 gün bildirilir.",
+      "aciklama_en": "If the employer is also insured under 4/a, 30 days are reported on their own behalf."
+    },
+    {
+      "kod": "GUN-ISTISNA-YERALTI",
+      "ad_tr": "Yeraltı İşlerinde 30 Gün Kuralı",
+      "ad_en": "30-Day Rule for Underground Works",
+      "aciklama_tr": "Yeraltı işlerinde fiilen çalışılan gün sayısı 1 ile 30 arasında bildirilir; ancak günlük 8 saatten az çalışmalar tam gün sayılmaz.",
+      "aciklama_en": "In underground works, actual days worked are reported between 1 and 30; however, work under 8 hours per day does not count as a full day."
+    },
+    {
+      "kod": "GUN-KESINTI-KURALI",
+      "ad_tr": "Kesinti Günü Kuralı",
+      "ad_en": "Deduction Day Rule",
+      "aciklama_tr": "İşe giriş ve çıkış tarihlerinde ay içinde çalışılan gün sayısı hesap edilirken, işe girdiği ve çıktığı gün de çalışılmış sayılır (tek gün sayılır).",
+      "aciklama_en": "In calculating days worked within the month at entry and exit dates, the entry and exit days also count as worked (each counts as one day)."
+    }
+  ],
+  "notlar_tr": [
+    "Aylık prim ve hizmet belgesinde gün sayısı 'Ay' alanına yazılan değer en fazla 30 olabilir.",
+    "30 günden fazla gün bildiriminde bulunulamaz.",
+    "Fazla mesai saatleri gün sayısını etkilemez; yalnızca kazanca yansır.",
+    "Yıllık ücretli izin, hafta tatili, genel tatiller ve ücretli izin günleri çalışılmış gün sayılır."
+  ],
+  "notlar_en": [
+    "The day count in the Monthly Premium and Service Declaration cannot exceed 30 per month.",
+    "More than 30 days per month cannot be reported.",
+    "Overtime hours do not affect the day count; they only affect earnings.",
+    "Annual paid leave, weekly rest days, public holidays and paid leave days count as worked days."
+  ]
+}

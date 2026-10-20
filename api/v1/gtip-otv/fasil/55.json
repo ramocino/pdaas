@@ -1,0 +1,1265 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-otv",
+      "ad": {
+        "tr": "GTİP ÖTV Eşleşmesi",
+        "en": "GTIP SCT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "55",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "550000000001",
+      "tanim_tr": "Sentetik ve suni devamsız lifler",
+      "tanim_en": "Synthetic and artificial discontinuous fibers",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550111000000",
+      "tanim_tr": "Aramidlerden filament demetleri",
+      "tanim_en": "Filament bundles from aramids",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550119000000",
+      "tanim_tr": "Naylon veya diğer poliamidlerden filament demetleri; aramidlerden olanlar HARİÇ",
+      "tanim_en": "Filament bundles of nylon or other polyamides; EXCEPT those of aramids.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550120000000",
+      "tanim_tr": "Sentetik filament demetleri; poliesterlerden",
+      "tanim_en": "Synthetic filament bundles; made from polyesters.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550130000000",
+      "tanim_tr": "Sentetik filament demetleri; akrilik veya modakrilikten",
+      "tanim_en": "Synthetic filament bundles; made from acrylic or modacrylic.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550140000000",
+      "tanim_tr": "Sentetik filament demetleri; polipropilenden",
+      "tanim_en": "Synthetic filament bundles; made from polypropylene.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550190000000",
+      "tanim_tr": "Diğer sentetik filament demetleri",
+      "tanim_en": "Other synthetic filament bundles",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550210000000",
+      "tanim_tr": "Suni filament demetleri; selüloz asetatdan olanlar",
+      "tanim_en": "Artificial filament bundles; those made of cellulose acetate.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550290000000",
+      "tanim_tr": "Suni filament demetleri; selüloz asetatdan olanlar HARİÇ",
+      "tanim_en": "Artificial filament bundles; EXCEPT those made of cellulose acetate.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550311000000",
+      "tanim_tr": "Aramidlerden sentetik devamsız lifler; karde edilmemiş, taranmamış veya iplik imali için diğer surette hazırlanmamış",
+      "tanim_en": "Synthetic staple fibers of aramids; not carded, combed or otherwise prepared for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550319000000",
+      "tanim_tr": "Diğer naylon veya diğer poliamidlerden devamsız lifler; karde edilmemiş, taranmamış veya iplik imali için diğer surette hazırlanmamış",
+      "tanim_en": "Staple fibers of other nylon or other polyamides; not carded, combed or otherwise prepared for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550320000011",
+      "tanim_tr": "Poliesterlerden devamsız renkli lifler; karde edilmemiş, taranmamış veya iplik imali için diğer surette hazırlanmamış",
+      "tanim_en": "Discontinuous colored fibers of polyesters; not carded, combed or otherwise prepared for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550320000019",
+      "tanim_tr": "Poliesterlerden devamsız diğer lifler; karde edilmemiş, taranmamış veya iplik imali için diğer surette hazırlanmamış",
+      "tanim_en": "Other discontinuous fibers of polyesters; not carded, combed or otherwise prepared for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550330000000",
+      "tanim_tr": "Akrilik veya modakrilikten devamsız lifler; karde edilmemiş, taranmamış veya iplik imali için diğer surette hazırlanmamış",
+      "tanim_en": "Acrylic or modacrylic discontinuous fibers; not carded, combed or otherwise prepared for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550340000011",
+      "tanim_tr": "Polipropilenden devamsız lifler; karde edilmemiş, taranmamış veya iplik imali için diğer surette hazırlanmamış (inşaatta kullanılanlar)",
+      "tanim_en": "Staple fibers of polypropylene; not carded, combed or otherwise prepared for yarn production (for construction use)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550340000019",
+      "tanim_tr": "Polipropilenden devamsız lifler; karde edilmemiş, taranmamış veya iplik imali için diğer surette hazırlanmamış (inşaatta kullanılanlar HARİÇ)",
+      "tanim_en": "Staple fibers of polypropylene; not carded, combed or otherwise prepared for yarn production (EXCEPT those used in construction)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550390000000",
+      "tanim_tr": "Sentetik devamsız lifler; diğerlerinden, karde edilmemiş, taranmamış veya iplik imali için diğer surette hazırlanmamış",
+      "tanim_en": "Synthetic staple fibers; not carded, combed or otherwise prepared for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550410000011",
+      "tanim_tr": "Viskoz ipeğinden selülozik elyaf (Liyosel); karde edilmemiş, taranmamış veya iplik imali için başka şekilde bir işlem görmemiş",
+      "tanim_en": "Cellulosic fiber (Lyocell) from viscose silk; not carded, combed or otherwise processed for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550410000019",
+      "tanim_tr": "Viskoz ipeğinden suni devamsız lifler (selülozik elyaf (Liyosel) HARİÇ); karde edilmemiş,taranmamış veya iplik imali için başka şekilde işlem görmemiş",
+      "tanim_en": "Artificial discontinuous fibers of viscose silk (EXCEPT cellulosic fiber (Lyocell)); not carded, combed or otherwise processed for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550490000011",
+      "tanim_tr": "Suni devamsız lifler; asetatdan, karde edilmemiş, taranmamış veya iplik imali için başka şekilde bir işlem görmemiş",
+      "tanim_en": "Synthetic staple fibers; made from acetate, not carded, not combed or otherwise processed for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550490000012",
+      "tanim_tr": "Suni devamsız lifler; proteik esaslı, karde edilmemiş, taranmamış veya iplik imali için başka şekilde bir işlem görmemiş",
+      "tanim_en": "Synthetic staple fibers; protein-based, uncarded, uncombed or otherwise processed for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550490000019",
+      "tanim_tr": "Diğer suni devamsız lifler; karde edilmemiş, taranmamış veya iplik imali için başka şekilde bir işlem görmemiş",
+      "tanim_en": "Other synthetic staple fibers; not carded, combed or otherwise processed for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550510100011",
+      "tanim_tr": "Naylon veya diğer poliamidlerden döküntüler; ditme sureti ile elde edilenler",
+      "tanim_en": "Waste of nylon or other polyamides; obtained by shredding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550510100019",
+      "tanim_tr": "Naylon veya diğer poliamidlerden döküntüler; ditme sureti ile elde edilenler HARİÇ",
+      "tanim_en": "Waste of nylon or other polyamides; EXCEPT those obtained by shredding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550510300011",
+      "tanim_tr": "Poliesterlerden döküntüler; ditme sureti ile elde edilen edilenler",
+      "tanim_en": "Polyester waste; those obtained by shredding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550510300019",
+      "tanim_tr": "Poliesterlerden döküntüler; ditme sureti ile elde edilen edilenler HARİÇ",
+      "tanim_en": "Waste from polyesters; EXCEPT those obtained by shredding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550510500011",
+      "tanim_tr": "Akrilik veya modakrilikten döküntüler; ditme sureti ile elde edilenler",
+      "tanim_en": "Acrylic or modacrylic waste; those obtained by shredding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550510500019",
+      "tanim_tr": "Akrilik veya modakrilikten döküntüler; ditme sureti ile elde edilenler HARİÇ",
+      "tanim_en": "Waste from acrylic or modacrylic; EXCEPT those obtained by shredding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550510700011",
+      "tanim_tr": "Polipropilenden döküntüler; ditme sureti ile elde edilenler",
+      "tanim_en": "Polypropylene waste; those obtained by shredding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550510700019",
+      "tanim_tr": "Polipropilenden döküntüler; ditme sureti ile elde edilenler HARİÇ",
+      "tanim_en": "Waste from polypropylene; EXCEPT that obtained by shredding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550510900011",
+      "tanim_tr": "Sentetik diğer liflerden döküntüler; ditme sureti ile elde edilenler",
+      "tanim_en": "Waste from other synthetic fibers; those obtained by shredding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550510900019",
+      "tanim_tr": "Sentetik diğer liflerden döküntüler; ditme sureti ile elde edilenler HARİÇ",
+      "tanim_en": "Waste from other synthetic fibers; EXCEPT those obtained by shredding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550520000011",
+      "tanim_tr": "Suni liflerden döküntüler; ditme sureti ile elde edilenler",
+      "tanim_en": "Waste from synthetic fibers; those obtained by shredding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550520000018",
+      "tanim_tr": "Suni liflerden döküntüler; ditme sureti ile elde edilenlerHARİÇ",
+      "tanim_en": "Waste from synthetic fibers; EXCEPT those obtained by shredding.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550610000000",
+      "tanim_tr": "Naylon veya diğer poliamidlerden devamsız lifler; karde edilmiş, taranmış veya iplik imali için başka şekilde işlem görmüş",
+      "tanim_en": "Discontinuous fibers of nylon or other polyamides; carded, combed or otherwise processed for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550620000000",
+      "tanim_tr": "Poliesterlerden devamsız lifler; karde edilmiş, taranmış veya iplik imali için başka şekilde işlem görmüş",
+      "tanim_en": "Discontinuous fibers of polyesters; carded, combed or otherwise processed for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550630000000",
+      "tanim_tr": "Akrilik veya modakrilikten devamsız lifler; karde edilmiş, taranmış veya iplik imali için başka şekilde işlem görmüş",
+      "tanim_en": "Acrylic or modacrylic discontinuous fibers; carded, combed or otherwise processed for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550640000000",
+      "tanim_tr": "Polipropilenden devamsız lifler; karde edilmiş, taranmış veya iplik imali için başka şekilde işlem görmüş",
+      "tanim_en": "Staple fibers of polypropylene; carded, combed or otherwise processed for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550690000000",
+      "tanim_tr": "Diğer sentetik devamsız lifler; karde edilmiş, taranmış veya iplik imali için başka şekilde işlem görmüş",
+      "tanim_en": "Other synthetic staple fibers; carded, combed or otherwise processed for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550700000011",
+      "tanim_tr": "Viskozdan devamsız lifler; karde edilmiş, taranmış veya iplik imali için başka şekilde işlem görmüş",
+      "tanim_en": "Viscose discontinuous fibers; carded, combed or otherwise processed for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550700000012",
+      "tanim_tr": "Asetattan devamsız lifler; karde edilmiş, taranmış veya iplik imali için başka şekilde işlem görmüş",
+      "tanim_en": "Acetate discontinuous fibers; carded, combed or otherwise processed for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550700000019",
+      "tanim_tr": "Diğer suni devamsız lifler; karde edilmiş, taranmış veya iplik imali için başka şekilde işlem görmüş",
+      "tanim_en": "Other artificial staple fibers; carded, combed or otherwise processed for yarn production.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550810100011",
+      "tanim_tr": "Devamsız poliester liflerden dikiş ipliği; perakende satılacak hale getirilmemiş",
+      "tanim_en": "Sewing thread made from discontinued polyester fibers; not yet ready for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550810100012",
+      "tanim_tr": "Devamsız akrilik liflerden dikiş ipliği; perakende satılacak hale getirilmemiş",
+      "tanim_en": "Sewing thread made from discontinued acrylic fibers; not yet ready for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550810100019",
+      "tanim_tr": "Diğer sentetik devamsız liflerden dikiş ipliği; perakende satılacak hale getirilmemiş",
+      "tanim_en": "Sewing thread from other synthetic staple fibers; not yet prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550810900000",
+      "tanim_tr": "Sentetik devamsız liflerden dikiş ipliği; perakende satılacak hale getirilmiş",
+      "tanim_en": "Sewing thread made from synthetic staple fibers; ready for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550820100000",
+      "tanim_tr": "Suni devamsız liflerden dikiş ipliği; perakende satılacak hale getirilmemiş",
+      "tanim_en": "Sewing thread made from synthetic staple fibers; not yet ready for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550820900000",
+      "tanim_tr": "Suni devamsız liflerden dikiş ipliği; perakende satılacak hale getirilmiş",
+      "tanim_en": "Sewing thread made from synthetic staple fibers; ready for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550911000000",
+      "tanim_tr": "Tek kat iplikler (dikiş ipliği hariç); naylon veya poliamid devamsız lifleri >= %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Single-ply yarns (excluding sewing thread); nylon or polyamide discontinuous fibers >= 85%, not prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550912000000",
+      "tanim_tr": "Çok katlı veya katlı bükülü iplikler (dikiş ipliği hariç); naylon veya poliamid devamsız lifleri >= %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Multi-ply or plied twisted yarns (excluding sewing thread); nylon or polyamide discontinuous fibers >= 85%, not prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550921000000",
+      "tanim_tr": "Tek kat iplikler (dikiş ipliği hariç); poliester devamsız lifleri >= %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Single-ply yarns (excluding sewing thread); polyester staple fibers >= 85%, not prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550922000000",
+      "tanim_tr": "Çok katlı veya katlı bükülü iplikler (dikiş ipliği hariç); poliester devamsız lifleri >= %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Multi-ply or plied twisted yarns (excluding sewing thread); polyester staple fibers >= 85%, not prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550931000000",
+      "tanim_tr": "Tek kat iplikler (dikiş ipliği hariç); akrilik veya modakrilik devamsız lifleri >= %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Single-ply yarns (excluding sewing thread); acrylic or modacrylic staple fibers >= 85%, not prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550932000000",
+      "tanim_tr": "Çok katlı veya katlı bükülü iplikler (dikiş ipliği hariç); akrilik veya modakrilik devamsız lifleri >= %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Multi-ply or plied twisted yarns (excluding sewing thread); acrylic or modacrylic staple fibers >= 85%, not prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550941000000",
+      "tanim_tr": "Tek kat iplikler (dikiş ipliği hariç); diğer sentetik devamsız lifler >= %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Single-ply yarns (excluding sewing thread); other synthetic staple fibers >= 85%, not prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550942000000",
+      "tanim_tr": "Çok katlı veya katlı bükülü iplikler (dikiş ipliği hariç); diğer sentetik devamsız lifler >= %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Multi-ply or plied twisted yarns (excluding sewing thread); other synthetic staple fibers >= 85%, not prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550951000000",
+      "tanim_tr": "İplikler (dikiş ipliği hariç); devamsız poliester lif ağırlıklı fakat < %85, suni devamsız liflerle karışık, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Yarns (excluding sewing thread); mainly staple polyester fibers but < 85%, mixed with synthetic staple fibers, not prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550952000000",
+      "tanim_tr": "İplikler (dikiş ipliği hariç); devamsız poliester lif ağırlıklı fakat < %85, yün veya ince hayvan kılları ile karışık, perakende satış için olmayan",
+      "tanim_en": "Yarns (excluding sewing thread); consisting mainly of discontinuous polyester fibers but < 85% mixed with wool or fine animal hair, not intended for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550953000000",
+      "tanim_tr": "İplikler (dikiş ipliği hariç); devamsız poliester lif ağırlıklı fakat < %85, pamuk ile karışık, perakende satış için olmayan",
+      "tanim_en": "Yarns (excluding sewing thread); mainly staple polyester fibers but < 85%, mixed with cotton, not for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550959000000",
+      "tanim_tr": "Diğer iplikler (dikiş ipliği hariç); devamsız poliester lif ağırlıklı fakat < %85, perakende satış için olmayan",
+      "tanim_en": "Other yarns (excluding sewing thread); mainly staple polyester fiber but < 85%, not for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550961000000",
+      "tanim_tr": "İplikler (dikiş ipliği hariç); devamsız akrilik veya modakrilik lif ağırlıklı fakat < %85, yün veya ince hayvan kılları ile karışık, perakende olmayan",
+      "tanim_en": "Yarns (excluding sewing thread); predominantly made of discontinuous acrylic or modacrylic fibers but < 85% mixed with wool or fine animal hair, not for retail.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550962000000",
+      "tanim_tr": "İplikler (dikiş ipliği hariç); devamsız akrilik veya modakrilik lif ağırlıklı fakat < %85, pamuk ile karışık, perakende olmayan",
+      "tanim_en": "Yarns (excluding sewing thread); predominantly made of discontinuous acrylic or modacrylic fibers but < 85%, mixed with cotton, not for retail.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550969000000",
+      "tanim_tr": "Diğer iplikler (dikiş ipliği hariç); devamsız akrilik veya modakrilik lif ağırlıklı fakat < %85, perakende olmayan",
+      "tanim_en": "Other yarns (excluding sewing thread); predominantly made of discontinuous acrylic or modacrylic fibers but < 85%, non-retail.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550991000000",
+      "tanim_tr": "İplikler (dikiş ipliği hariç); diğer sentetik devamsız lif ağırlıklı fakat < %85, yün veya ince hayvan kılları ile karışık, perakende olmayan",
+      "tanim_en": "Yarns (excluding sewing thread); other synthetic staple fibers, predominantly but < 85% mixed with wool or fine animal hair, not for retail.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550992000000",
+      "tanim_tr": "İplikler (dikiş ipliği hariç); diğer sentetik devamsız lif ağırlıklı fakat < %85, pamuk ile karışık, perakende olmayan",
+      "tanim_en": "Yarns (excluding sewing thread); other synthetic staple fibers, predominantly but < 85%, mixed with cotton, not for retail.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "550999000000",
+      "tanim_tr": "Diğer iplikler (dikiş ipliği hariç); diğer sentetik devamsız lif ağırlıklı fakat < %85, perakende satış için olmayan",
+      "tanim_en": "Other yarns (excluding sewing thread); other synthetic staple fibers, predominantly but < 85%, not for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551011000000",
+      "tanim_tr": "Tek kat iplikler (dikiş ipliği hariç); suni devamsız lifler >= %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Single-ply yarns (excluding sewing thread); synthetic staple fibers >= 85%, not ready for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551012000000",
+      "tanim_tr": "Çok katlı veya katlı bükülü iplikler (dikiş ipliği hariç); suni devamsız lifler >= %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Multi-ply or plied twisted yarns (excluding sewing thread); artificial staple fibers >= 85%, not prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551020000000",
+      "tanim_tr": "İplikler (dikiş ipliği hariç); suni devamsız lifler ağırlıklı fakat < %85, yün veya ince hayvan kılları ile karışık, perakende satış için olmayan",
+      "tanim_en": "Yarns (excluding sewing thread); predominantly synthetic staple fibers but < 85% mixed with wool or fine animal hair, not intended for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551030000000",
+      "tanim_tr": "İplikler (dikiş ipliği hariç); suni devamsız lifler ağırlıklı fakat < %85, pamuk ile karışık, perakende satış için olmayan",
+      "tanim_en": "Yarns (excluding sewing thread); predominantly synthetic staple fibers but < 85%, mixed with cotton, not for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551090000000",
+      "tanim_tr": "Diğer iplikler (dikiş ipliği hariç); suni devamsız lifler ağırlıklı fakat < %85, perakende satış için olmayan",
+      "tanim_en": "Other yarns (excluding sewing thread); predominantly synthetic staple fibers but < 85%, not for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551110000000",
+      "tanim_tr": "İplikler (dikiş ipliği hariç); sentetik devamsız lifler >= %85, suni devamsız liflerle karışık, perakende satılacak hale getirilmiş",
+      "tanim_en": "Yarns (excluding sewing thread); synthetic staple fibers >= 85%, mixed with artificial staple fibers, ready for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551120000000",
+      "tanim_tr": "İplikler (dikiş ipliği hariç); sentetik devamsız lifler < %85, suni devamsız liflerle karışık, perakende satılacak hale getirilmiş",
+      "tanim_en": "Yarns (excluding sewing thread); synthetic staple fibers < 85%, mixed with artificial staple fibers, ready for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551130000000",
+      "tanim_tr": "İplikler (dikiş ipliği hariç); suni devamsız liflerlerden, perakende satılacak hale getirilmiş",
+      "tanim_en": "Threads (excluding sewing thread); made from synthetic staple fibers, prepared for retail sale.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551211000000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler >= %85, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven fabrics; staple polyester fibers >= 85%, unbleached or bleached",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551219100000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler >= %85, baskılı",
+      "tanim_en": "Woven fabrics; discontinuous polyester fibers >= 85%, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551219900000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız poliester lifler >= %85",
+      "tanim_en": "Other woven textiles; discontinuous polyester fibers >= 85%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551221000000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız akrilik veya modakrilik lifler >= %85, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven fabrics; staple acrylic or modacrylic fibers >= 85%, unbleached or bleached",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551229100000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız akrilik veya modakrilik lifler >= %85, baskılı",
+      "tanim_en": "Woven fabrics; discontinuous acrylic or modacrylic fibers >= 85%, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551229900000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız akrilik veya modakrilik lifler >= %85",
+      "tanim_en": "Other woven textiles; discontinuous acrylic or modacrylic fibers >= 85%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551291000000",
+      "tanim_tr": "Dokunmuş mensucat; diğer sentetik devamsız lifler >= %85, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven fabrics; other synthetic staple fibers >= 85%, unbleached or bleached",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551299100000",
+      "tanim_tr": "Dokunmuş mensucat; diğer sentetik devamsız lifler >= %85, baskılı",
+      "tanim_en": "Woven fabrics; other synthetic staple fibers >= 85%, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551299900000",
+      "tanim_tr": "Dokunmuş diğer mensucat; diğer sentetik devamsız lifler >= %85",
+      "tanim_en": "Other woven textiles; other synthetic staple fibers >= 85%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551311200000",
+      "tanim_tr": "Bez ayağı; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 <= 170gr, genişlik <= 165cm, ağartılmamış veya ağartılmış",
+      "tanim_en": "Plain weave; predominantly discontinuous polyester fibers but <85%, mixed with cotton, <= 170 gr/m², width <= 165 cm, unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551311900000",
+      "tanim_tr": "Bez ayağı; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 <= 170gr, genişlik > 165cm, ağartılmamış veya ağartılmış",
+      "tanim_en": "Plain weave; predominantly discontinuous polyester fibers but < 85%, mixed with cotton, <= 170 gr/m², width > 165 cm, unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551312000000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler ağırlıklı fakat < %85, 3'lü veya 4'lü dimi, pamukla karışık, m2 <= 170gr, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven fabrics; predominantly made of discontinuous polyester fibers but < 85%, 3-ply or 4-ply twill, mixed with cotton, <= 170 gr/m², unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551313000000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 <= 170gr, ağartılmamış veya ağartılmış",
+      "tanim_en": "Other woven fabrics; predominantly made of discontinuous polyester fibers but < 85%, mixed with cotton, <= 170 gr/m², unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551319000000",
+      "tanim_tr": "Dokunmuş mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85, pamukla karışık, m2 <= 170gr, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven fabrics; predominantly other synthetic staple fibers but < 85%, mixed with cotton, <= 170 gr/m², unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551321000000",
+      "tanim_tr": "Bez ayağı; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 <= 170gr, boyanmış",
+      "tanim_en": "Plain weave; mainly discontinuous polyester fibers but <85%, mixed with cotton, <= 170 gr/m², dyed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551323100000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler ağırlıklı fakat < %85, 3'lü veya 4'lü dimi, pamukla karışık, m2 <= 170gr, boyanmış",
+      "tanim_en": "Woven fabrics; predominantly discontinuous polyester fibers but < 85%, 3-ply or 4-ply twill, mixed with cotton, <= 170 gr/m², dyed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551323900000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 <= 170gr, boyanmış",
+      "tanim_en": "Other woven textiles; predominantly discontinuous polyester fibers but <85%, mixed with cotton, <= 170 gr/m², dyed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551329000000",
+      "tanim_tr": "Dokunmuş mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85, pamukla karışık, m2 <= 170gr, boyanmış",
+      "tanim_en": "Woven fabrics; predominantly composed of other synthetic staple fibers but < 85%, mixed with cotton, <= 170 gr/m², dyed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551331000000",
+      "tanim_tr": "Bez ayağı; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 <= 170gr, farklı renkteki ipliklerden",
+      "tanim_en": "Plain weave; mainly consisting of discontinuous polyester fibers but <85%, mixed with cotton, <= 170 gr/m², made from yarns of different colors.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551339000000",
+      "tanim_tr": "Dokunmuş mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85, pamukla karışık, m2 <= 170gr, farklı renkteki ipliklerden",
+      "tanim_en": "Woven fabrics; mainly composed of other synthetic staple fibers but <85%, mixed with cotton, <= 170 gr/m², made from yarns of different colors.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551341000000",
+      "tanim_tr": "Bez ayağı; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 <= 170gr, baskılı",
+      "tanim_en": "Plain weave; mainly discontinuous polyester fibers but <85%, mixed with cotton, <= 170 gr/m², printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551349000000",
+      "tanim_tr": "Dokunmuş mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85, pamukla karışık, m2 <= 170gr, baskılı",
+      "tanim_en": "Woven fabrics; mainly composed of other synthetic staple fibers but < 85%, mixed with cotton, <= 170 gr/m², printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551411000000",
+      "tanim_tr": "Bez ayağı; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 > 170gr, ağartılmamış veya ağartılmış",
+      "tanim_en": "Plain weave; predominantly discontinuous polyester fibers but < 85%, mixed with cotton, > 170 gr/m², unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551412000000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler ağırlıklı fakat < %85, 3'lü veya 4'lü dimi, pamukla karışık, m2 > 170gr, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven fabrics; predominantly made of discontinuous polyester fibers but < 85%, 3-ply or 4-ply twill, mixed with cotton, > 170 gr/m², unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551419100000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 > 170gr, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven fabrics; predominantly staple polyester fibers but < 85%, mixed with cotton, > 170 gr/m², unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551419900000",
+      "tanim_tr": "Dokunmuş mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85, pamukla karışık, m2 > 170gr, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven fabrics; predominantly other synthetic staple fibers but < 85%, mixed with cotton, > 170 gr/m², unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551421000000",
+      "tanim_tr": "Bez ayağı; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 > 170gr, boyanmış",
+      "tanim_en": "Plain weave; mainly discontinuous polyester fibers but < 85%, mixed with cotton, > 170 gr/m², dyed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551422000000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler ağırlıklı fakat < %85, 3'lü veya 4'lü dimi, pamukla karışık, m2 > 170gr, boyanmış",
+      "tanim_en": "Woven fabrics; predominantly discontinuous polyester fibers but < 85%, 3-ply or 4-ply twill, mixed with cotton, > 170 gr/m², dyed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551423000000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 > 170gr, boyanmış",
+      "tanim_en": "Other woven fabrics; mainly discontinuous polyester fibers but < 85%, mixed with cotton, > 170 gr/m², dyed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551429000000",
+      "tanim_tr": "Dokunmuş mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85, pamukla karışık, m2 > 170gr, boyanmış",
+      "tanim_en": "Woven fabrics; mainly other synthetic staple fibers but < 85%, mixed with cotton, > 170 gr/m², dyed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551430100000",
+      "tanim_tr": "Bez ayağı; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 > 170gr, farklı renkteki ipliklerden",
+      "tanim_en": "Plain weave; mainly composed of discontinuous polyester fibers but <85%, mixed with cotton, >170g/m², made from yarns of different colors.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551430300000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler ağırlıklı fakat < %85, 3'lü veya 4'lü dimi, pamukla karışık, m2 > 170gr, farklı renkteki ipliklerden",
+      "tanim_en": "Woven fabrics; mainly consisting of discontinuous polyester fibers but < 85%, 3-ply or 4-ply twill, mixed with cotton, > 170 gr/m², from yarns of different colors.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551430500000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 > 170gr, farklı renkteki ipliklerden",
+      "tanim_en": "Other woven fabrics; mainly discontinuous polyester fibers but < 85%, mixed with cotton, > 170 gr/m², from yarns of different colors.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551430900000",
+      "tanim_tr": "Dokunmuş mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85, pamukla karışık, m2 > 170gr, farklı renkteki ipliklerden",
+      "tanim_en": "Woven fabrics; mainly composed of other synthetic staple fibers but < 85%, mixed with cotton, > 170 gr/m², from yarns of different colors.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551441000000",
+      "tanim_tr": "Bez ayağı; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 > 170gr, baskılı",
+      "tanim_en": "Plain weave; mainly discontinuous polyester fibers but < 85%, mixed with cotton, > 170 gr/m², printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551442000000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler ağırlıklı fakat < %85, 3'lü veya 4'lü dimi, pamukla karışık, m2 > 170gr, baskılı",
+      "tanim_en": "Woven fabrics; predominantly discontinuous polyester fibers but < 85%, 3-ply or 4-ply twill, mixed with cotton, > 170 gr/m², printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551443000000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız poliester lifler ağırlıklı fakat < %85, pamukla karışık, m2 > 170gr, baskılı",
+      "tanim_en": "Other woven fabrics; mainly discontinuous polyester fibers but < 85%, mixed with cotton, > 170 gr/m², printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551449000000",
+      "tanim_tr": "Dokunmuş mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85, pamukla karışık, m2 > 170gr, baskılı",
+      "tanim_en": "Woven fabrics; mainly composed of other synthetic staple fibers but < 85%, mixed with cotton, > 170 gr/m², printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551511100000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler ağırlıklı fakat < %85, devamsız viskoz ipeği lifleriyle karışık, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven fabrics; predominantly composed of staple polyester fibers but < 85%, mixed with staple viscose silk fibers, unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551511300000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler ağırlıklı fakat < %85, devamsız viskoz ipeği lifleriyle karışık, baskılı",
+      "tanim_en": "Woven fabrics; predominantly composed of discontinuous polyester fibers but mixed with <85% discontinuous viscose silk fibers, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551511900000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız poliester lifler ağırlıklı fakat < %85, devamsız viskoz ipeği lifleriyle karışık",
+      "tanim_en": "Other woven textiles; predominantly staple polyester fibers but mixed with <85% staple viscose silk fibers.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551512100000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler ağırlıklı fakat < %85, sentetik ve suni filamentlerle karışık, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven fabrics; predominantly staple polyester fibers but < 85%, mixed with synthetic and artificial filaments, unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551512300000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler ağırlıklı fakat < %85, sentetik ve suni filamentlerle karışık, baskılı",
+      "tanim_en": "Woven fabrics; predominantly staple polyester fibers but < 85% mixed with synthetic and artificial filaments, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551512900000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız poliester lifler ağırlıklı fakat < %85, sentetik ve suni filamentlerle karışık",
+      "tanim_en": "Other woven textiles; predominantly staple polyester fibers but < 85%, mixed with synthetic and artificial filaments.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551513110000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler ağırlıklı fakat < %85, karde edilmiş yün / ince hayvan kılları ile karışık, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven fabrics; predominantly of discontinuous polyester fibers but < 85% mixed with carded wool/fine animal hair, unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551513190000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız poliester lifler ağırlıklı fakat < %85, karde edilmiş yün / ince hayvan kılları ile karışık",
+      "tanim_en": "Other woven fabrics; predominantly staple polyester fibers but < 85%, mixed with carded wool/fine animal hair.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551513910000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız poliester lifler ağırlıklı fakat < %85, taranmış yün / ince hayvan kılları ile karışık, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven fabrics; predominantly of discontinuous polyester fibers but < 85% mixed with combed wool/fine animal hair, unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551513990000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız poliester lifler ağırlıklı fakat < %85, taranmış yün / ince hayvan kılları ile karışık",
+      "tanim_en": "Other woven textiles; predominantly staple polyester fibers but < 85% mixed with combed wool/fine animal hair.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551519100000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız poliester lifler ağırlıklı fakat < %85, ağartılmamış veya ağartılmış",
+      "tanim_en": "Other woven fabrics; predominantly, but < 85%, of discontinuous polyester fibers, unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551519300000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız poliester lifler ağırlıklı fakat < %85, baskılı",
+      "tanim_en": "Other woven textiles; predominantly discontinuous polyester fibers but < 85%, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551519900000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız poliester lifler ağırlıklı fakat < %85",
+      "tanim_en": "Other woven fabrics; mainly consisting of discontinuous polyester fibers but < 85%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551521100000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız akrilik veya modakrilik lifler ağırlıklı fakat < %85, sentetik ve suni filamentlerle karışık, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven textiles; predominantly of staple acrylic or modacrylic fibers but < 85%, mixed with synthetic and artificial filaments, unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551521300000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız akrilik veya modakrilik lifler ağırlıklı fakat < %85, sentetik ve suni filamentlerle karışık, baskılı",
+      "tanim_en": "Woven fabrics; predominantly made of discontinuous acrylic or modacrylic fibers but mixed with <85% synthetic and artificial filaments, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551521900000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız akrilik veya modakrilik lifler ağırlıklı fakat < %85, sentetik ve suni filamentlerle karışık",
+      "tanim_en": "Other woven textiles; predominantly of discontinuous acrylic or modacrylic fibers but < 85%, mixed with synthetic and artificial filaments.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551522110000",
+      "tanim_tr": "Dokunmuş mens.; devamsız akrilik/modakrilik lifler ağırlıklı fakat < %85, karde edilmiş yün/ince hayvan kılları ile karışık, ağartılmamış/ağartılmış",
+      "tanim_en": "Woven fabrics; predominantly made of discontinuous acrylic/modacrylic fibers but < 85%, mixed with carded wool/fine animal hair, unbleached/bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551522190000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız akrilik veya modakrilik lifler ağırlıklı fakat < %85, karde edilmiş yün veya ince hayvan kılları ile karışık",
+      "tanim_en": "Other woven textiles; predominantly of discontinuous acrylic or modacrylic fibers but < 85%, mixed with carded wool or fine animal hair.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551522910000",
+      "tanim_tr": "Dokunmuş mensucat; devamsız akrilik/modakrilik lifler ağırlıklı fakat < %85, taranmış yün/ince hayvan kılları ile karışık, ağartılmamış/ağartılmış",
+      "tanim_en": "Woven fabrics; predominantly of discontinuous acrylic/modacrylic fibers but < 85% mixed with combed wool/fine animal hair, unbleached/bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551522990000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız akrilik veya modakrilik lifler ağırlıklı fakat < %85, taranmış yün veya ince hayvan kılları ile karışık",
+      "tanim_en": "Other woven textiles; predominantly of discontinuous acrylic or modacrylic fibers but < 85%, mixed with combed wool or fine animal hair.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551529000000",
+      "tanim_tr": "Dokunmuş diğer mensucat; devamsız akrilik veya modakrilik lifler ağırlıklı fakat < %85",
+      "tanim_en": "Other woven textiles; predominantly consisting of discontinuous acrylic or modacrylic fibers but < 85%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551591100000",
+      "tanim_tr": "Dokunmuş mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85, sentetik ve suni filamentlerle karışık, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven fabrics; predominantly made of other synthetic staple fibers but < 85%, mixed with synthetic and artificial filaments, unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551591300000",
+      "tanim_tr": "Dokunmuş mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85, sentetik ve suni filamentlerle karışık, baskılı",
+      "tanim_en": "Woven fabrics; predominantly made of other synthetic staple fibers but mixed with < 85% synthetic and artificial filaments, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551591900000",
+      "tanim_tr": "Dokunmuş diğer mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85, sentetik ve suni filamentlerle karışık",
+      "tanim_en": "Other woven textiles; other synthetic staple fibers predominantly but < 85%, mixed with synthetic and artificial filaments.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551599200000",
+      "tanim_tr": "Dokunmuş diğer mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85, ağartılmamış veya ağartılmış",
+      "tanim_en": "Other woven textiles; other synthetic staple fibers predominantly but < 85%, unbleached or bleached",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551599400000",
+      "tanim_tr": "Dokunmuş diğer mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85, baskılı",
+      "tanim_en": "Other woven textiles; other synthetic staple fibers predominantly but < 85%, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551599800000",
+      "tanim_tr": "Dokunmuş diğer mensucat; diğer sentetik devamsız lifler ağırlıklı fakat < %85",
+      "tanim_en": "Other woven textiles; other synthetic staple fibers predominantly but < 85%",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551611000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler >= %85, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven textiles; synthetic staple fibers >= 85%, unbleached or bleached",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551612000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler >= %85, boyanmış",
+      "tanim_en": "Woven textiles; synthetic staple fibers >= 85%, dyed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551613000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler >= %85, farklı renkteki ipliklerden",
+      "tanim_en": "Woven textiles; synthetic staple fibers >= 85%, from yarns of different colors.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551614000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler >= %85, baskılı",
+      "tanim_en": "Woven textiles; synthetic staple fibers >= 85%, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551621000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler ağırlıklı fakat < %85, sentetik veya suni filamentlerle karışık, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven textiles; predominantly synthetic staple fibers but < 85%, mixed with synthetic or synthetic filaments, unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551622000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler ağırlıklı fakat < %85, sentetik veya suni filamentlerle karışık, boyanmış",
+      "tanim_en": "Woven textiles; predominantly synthetic staple fibers but < 85% mixed with synthetic or artificial filaments, dyed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551623100000",
+      "tanim_tr": "Dokunmuş jakar mensucat; suni devamsız lifler ağırlıklı fakat < %85, sentetik/suni filamentlerle karışık, eni >=140cm, farklı renkteki ipliklerden",
+      "tanim_en": "Woven jacquard fabric; predominantly synthetic staple fibers but <85% mixed with synthetic/synthetic filaments, width >=140cm, made from yarns of different colors.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551623900000",
+      "tanim_tr": "Dokunmuş diğer mensucat; suni devamsız lifler ağırlıklı fakat < %85, sentetik veya suni filamentlerle karışık, farklı renkteki ipliklerden",
+      "tanim_en": "Other woven textiles; predominantly artificial staple fibers but < 85% mixed with synthetic or artificial filaments, from yarns of different colors.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551624000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler ağırlıklı fakat < %85, sentetik veya suni filamentlerle karışık, baskılı",
+      "tanim_en": "Woven textiles; predominantly synthetic staple fibers but mixed with <85% synthetic or synthetic filaments, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551631000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler ağırlıklı fakat < %85, yün veya ince hayvan kılları ile karışık, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven textiles; predominantly of synthetic staple fibers but < 85%, mixed with wool or fine animal hair, unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551632000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler ağırlıklı fakat < %85, yün veya ince hayvan kılları ile karışık, boyanmış",
+      "tanim_en": "Woven textiles; predominantly synthetic staple fibers but < 85% mixed with wool or fine animal hair, dyed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551633000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler ağırlıklı fakat < %85, yün veya ince hayvan kılları ile karışık, farklı renkteki ipliklerden",
+      "tanim_en": "Woven fabrics; mainly composed of synthetic staple fibers but mixed with <85% wool or fine animal hair, made from yarns of different colors.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551634000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler ağırlıklı fakat < %85, yün veya ince hayvan kılları ile karışık, baskılı",
+      "tanim_en": "Woven textiles; predominantly synthetic staple fibers but mixed with <85% wool or fine animal hair, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551641000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler ağırlıklı fakat < %85, pamuk ile karışık, ağartılmamış veya ağartılmış",
+      "tanim_en": "Woven textiles; predominantly synthetic staple fibers but < 85%, mixed with cotton, unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551642000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler ağırlıklı fakat < %85, pamuk ile karışık, boyanmış",
+      "tanim_en": "Woven textiles; predominantly synthetic staple fibers but < 85%, mixed with cotton, dyed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551643000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler ağırlıklı fakat < %85, pamuk ile karışık, farklı renkteki ipliklerden",
+      "tanim_en": "Woven fabrics; mainly composed of synthetic staple fibers but less than 85%, mixed with cotton, from yarns of different colors.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551644000000",
+      "tanim_tr": "Dokunmuş mensucat; suni devamsız lifler ağırlıklı fakat < %85, pamuk ile karışık, baskılı",
+      "tanim_en": "Woven textiles; predominantly synthetic staple fibers but < 85%, mixed with cotton, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551691000000",
+      "tanim_tr": "Dokunmuş diğer mensucat; suni devamsız lifler ağırlıklı fakat < %85, ağartılmamış veya ağartılmış",
+      "tanim_en": "Other woven textiles; predominantly synthetic staple fibers but < 85%, unbleached or bleached.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551692000000",
+      "tanim_tr": "Dokunmuş diğer mensucat; suni devamsız lifler ağırlıklı fakat < %85, boyanmış",
+      "tanim_en": "Other woven textiles; predominantly synthetic staple fibers but < 85%, dyed.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551693000000",
+      "tanim_tr": "Dokunmuş diğer mensucat; suni devamsız lifler ağırlıklı fakat < %85, farklı renkteki ipliklerden",
+      "tanim_en": "Other woven textiles; mainly artificial staple fibers but < 85%, from yarns of different colors.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "551694000000",
+      "tanim_tr": "Dokunmuş diğer mensucat; suni devamsız lifler ağırlıklı fakat < %85, baskılı",
+      "tanim_en": "Other woven textiles; predominantly synthetic staple fibers but < 85%, printed.",
+      "grup": "otv_yok",
+      "oran": null
+    }
+  ]
+}

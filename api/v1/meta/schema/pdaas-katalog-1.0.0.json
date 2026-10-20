@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdaas.com.tr/api/v1/meta/schema/pdaas-katalog-1.0.0.json",
+  "title": "PDaaS katalog (1.0.0)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_surumu",
+    "guncelleme",
+    "servisler"
+  ],
+  "properties": {
+    "schema_surumu": {
+      "const": "1.0.0"
+    },
+    "guncelleme": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "servisler": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kod",
+          "ad",
+          "tip",
+          "kod_sistemi",
+          "katmanlar"
+        ],
+        "properties": {
+          "kod": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "ad": {
+            "$ref": "#/$defs/i18n"
+          },
+          "tip": {
+            "enum": [
+              "liste",
+              "agac",
+              "kural-seti"
+            ]
+          },
+          "kod_sistemi": {
+            "type": "string"
+          },
+          "katmanlar": {
+            "type": "object",
+            "additionalProperties": false,
+            "minProperties": 1,
+            "properties": {
+              "ham": {
+                "$ref": "#/$defs/katman_kaydi"
+              },
+              "kurallar": {
+                "$ref": "#/$defs/katman_kaydi"
+              },
+              "konsolide": {
+                "$ref": "#/$defs/katman_kaydi"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "i18n": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tr"
+      ],
+      "properties": {
+        "tr": {
+          "type": "string"
+        },
+        "en": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "katman_kaydi": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "son",
+        "url",
+        "surumler_url",
+        "checksum"
+      ],
+      "properties": {
+        "son": {
+          "type": "string",
+          "pattern": "^\\d{4}\\.\\d{2}\\.\\d{2}(\\.\\d+)?$"
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "surumler_url": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "checksum": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

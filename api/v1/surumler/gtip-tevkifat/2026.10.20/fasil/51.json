@@ -1,0 +1,727 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-tevkifat",
+      "ad": {
+        "tr": "GTİP Tevkifat Eşleşmesi",
+        "en": "GTIP Withholding Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.20",
+    "guncelleme": "2026-10-20",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:3025ccccd76b8a7045611d7481b6225c9ffd7132605e159076a34976ccd9b728"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.20"
+      },
+      "uretim_zamani": "2026-10-20T20:08:56.107114+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "51",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:d5364511d8810abbec34d2e5a9a0048013f5bf964dab460f4d78dc54d7501aeb"
+  },
+  "kayitlar": [
+    {
+      "kod": "510111001000",
+      "tanim_tr": "Merinos yapağısı; kırkma, karde edilmemiş veya taranmamış",
+      "tanim_en": "Merino wool; not shorn, carded or combed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510111002000",
+      "tanim_tr": "Kirli şevyot (yapağı); kırkma, karde edilmemiş veya taranmamış",
+      "tanim_en": "Dirty chevyot (fleece); not shorn, carded or combed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510111009000",
+      "tanim_tr": "Diğer kırkma yapağı, karde edilmemiş veya taranmamış",
+      "tanim_en": "Other sheared fleece, uncarded or uncombed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510119001000",
+      "tanim_tr": "Merinos yapağısı; kırkma olmayan, karde edilmemiş veya taranmamış",
+      "tanim_en": "Merino wool; unshorn, uncarded or uncombed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510119002000",
+      "tanim_tr": "Kirli şevyot (yapağı); kırkma olmayan, karde edilmemiş veya taranmamış",
+      "tanim_en": "Dirty chevote (fleece); unshorn, uncarded or uncombed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510119009000",
+      "tanim_tr": "Diğer yapağı; karde edilmemiş veya taranmamış",
+      "tanim_en": "Other fleece; uncarded or uncombed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510121001000",
+      "tanim_tr": "Merinos yünü; kırkma, yıkanmış, karbonize edilmemiş, karde edilmemiş veya taranmamış",
+      "tanim_en": "Merino wool; shorn, washed, not carbonized, not carded or combed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510121009000",
+      "tanim_tr": "Diğer kırkma yün; yıkanmış, karbonize edilmemiş, karde edilmemiş veya taranmamış",
+      "tanim_en": "Other sheared wool; washed, not carbonized, not carded or not combed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510129001000",
+      "tanim_tr": "Merinos yünü; yıkanmış, karbonize edilmemiş, kırkma olmayan, karde edilmemiş veya taranmamış",
+      "tanim_en": "Merino wool; washed, not carbonized, not shorn, not carded or combed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510129009000",
+      "tanim_tr": "Diğer yün; yıkanmış, karbonize edilmemiş, kırkma olmayan, karde edilmemiş veya taranmamış",
+      "tanim_en": "Other wool; washed, not carbonized, not shorn, not carded or not combed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510130000000",
+      "tanim_tr": "Yünler; karbonize edilmiş, karde edilmemiş veya taranmamış",
+      "tanim_en": "Wools; carbonized, uncarded or uncombed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510211000000",
+      "tanim_tr": "Kaşmir keçisi kılları; karde edilmemiş veya taranmamış",
+      "tanim_en": "Cashmere goat hair; uncarded or uncombed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510219100000",
+      "tanim_tr": "Ankara tavşanı kılı; karde edilmemiş veya taranmamış",
+      "tanim_en": "Angora rabbit fur; uncarded or uncombed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510219300000",
+      "tanim_tr": "Alpaka, lama ve vikunya kılı; karde edilmemiş veya taranmamış",
+      "tanim_en": "Alpaca, llama, and vicuña hair; uncarded or uncombed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510219400000",
+      "tanim_tr": "Yak, deve, Ankara, Tibet, vb. keçilerin kılı; karde edilmemiş veya taranmamış",
+      "tanim_en": "Hair from yaks, camels, Angora goats, Tibetan goats, etc.; unkarted or uncombed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510219900000",
+      "tanim_tr": "Tavşan (Ankara hariç), kunduz, misk sıçanı kılı; karde edilmemiş veya taranmamış",
+      "tanim_en": "Rabbit (except Ankara), beaver, muskrat hair; uncarded or uncombed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510220001000",
+      "tanim_tr": "Kaba hayvan kılları; şapka fötrü imaline mahsus, karde edilmemiş veya taranmamış",
+      "tanim_en": "Coarse animal hair; uncarded or uncombed, intended for the manufacture of felt hats.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510220009011",
+      "tanim_tr": "Adi keçi kılı; karde edilmemiş veya taranmamış",
+      "tanim_en": "Common goat hair; uncarded or uncombed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510220009019",
+      "tanim_tr": "Diğer kaba hayvan kılları; karde edilmemiş veya taranmamış",
+      "tanim_en": "Other coarse animal hair; uncarded or uncombed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510310100000",
+      "tanim_tr": "Yün ve ince hayvan kıllarının tarama döküntüleri; karbonize edilmemiş",
+      "tanim_en": "Combing residues of wool and fine animal hair; uncarbonized.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510310900000",
+      "tanim_tr": "Yün ve ince hayvan kıllarının tarama döküntüleri; karbonize edilmiş",
+      "tanim_en": "Combing residues of wool and fine animal hair; carbonized.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510320000010",
+      "tanim_tr": "Yün ve ince hayvan kıllarının iplik döküntüleri",
+      "tanim_en": "Yarn waste from wool and fine animal hair.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510320000021",
+      "tanim_tr": "Yün ve ince hayvan kıllarının diğer döküntüleri; karbonize edilmemiş",
+      "tanim_en": "Wool and other fine animal hair waste; uncarbonized",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510320000022",
+      "tanim_tr": "Yün ve ince hayvan kıllarının diğer döküntüleri; karbonize edilmiş",
+      "tanim_en": "Wool and other fine animal hair waste; carbonized",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510330000000",
+      "tanim_tr": "Kaba hayvan kılı döküntüleri (iplik döküntüleri dahil) (ditme suretiyle elde edilenler hariç)",
+      "tanim_en": "Coarse animal hair waste (including yarn waste) (excluding that obtained by shredding)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510400000011",
+      "tanim_tr": "Şodi ve mungo (yün, ince veya kaba hayvan kıllarının ditme suretiyle elde edilen döküntüler)",
+      "tanim_en": "Shodi and mungo (wool, waste obtained by tearing off fine or coarse animal hair)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510400000019",
+      "tanim_tr": "Yün, ince veya kaba hayvan kıllarının ditme suretiyle elde edilen diğer döküntüleri",
+      "tanim_en": "Wool, fine or coarse animal hair, and other waste obtained by tearing.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510510000011",
+      "tanim_tr": "Merinos yünü; karde edilmiş",
+      "tanim_en": "Merino wool; carded.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510510000019",
+      "tanim_tr": "Diğer yünler; karde edilmiş",
+      "tanim_en": "Other wools; carded",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510521000000",
+      "tanim_tr": "Yün tops'ları ve diğer yünler; yığın halinde taranmış",
+      "tanim_en": "Wool tops and other woolens; combed in piles.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510529000000",
+      "tanim_tr": "Yün tops'ları ve diğer yünler; taranmış (yığın halinde taranmış olanlar HARİÇ)",
+      "tanim_en": "Wool tops and other woolens; combed (EXCEPT those combed in bulk)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510531000000",
+      "tanim_tr": "Kaşmir keçisi kılı; karde edilmiş veya taranmış",
+      "tanim_en": "Cashmere goat hair; carded or combed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510539000011",
+      "tanim_tr": "Tiftikler; karde edilmiş veya taranmış",
+      "tanim_en": "Mohair; carded or combed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510539000019",
+      "tanim_tr": "İnce diğer hayvan kılları; karde edilmiş veya taranmış",
+      "tanim_en": "Fine other animal hairs; carded or combed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510540000000",
+      "tanim_tr": "Kaba hayvan kılları; karde edilmiş veya taranmış",
+      "tanim_en": "Coarse animal hair; carded or combed.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510610100000",
+      "tanim_tr": "Yün ipliği; karde edilmiş (strayhgarn), ağartılmamış, yün >= %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Wool yarn; carded (strayhgarn), unbleached, wool >= 85%, not ready for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510610900000",
+      "tanim_tr": "Yün ipliği; karde edilmiş (strayhgarn), ağartılmamış HARİÇ, yün >= %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Wool yarn; carded (straithgarn), unbleached, EXCEPT wool >= 85%, not prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510620100000",
+      "tanim_tr": "Yün iplikler; karde edilmiş (strayhgarn), yün < %85 (fakat yün + ince hayvan kılı > %85), perakende satılacak hale getirilmemiş",
+      "tanim_en": "Wool yarns; carded (straithgarn), wool < 85% (but wool + fine animal hair > 85%), not ready for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510620910000",
+      "tanim_tr": "Yün iplikler; karde edilmiş (strayhgarn), ağartılmamış, yün < %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Wool yarns; carded (strayhgarn), unbleached, wool < 85%, not ready for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510620990000",
+      "tanim_tr": "Diğer yün iplikler; karde edilmiş (strayhgarn), yün < %85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Other wool yarns; carded (straithgarn), wool < 85%, not prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510710100000",
+      "tanim_tr": "Yün iplikler (kamgarn); ağartılmamış, taranmış, yün=>%85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Worsted wool yarns; unbleached, combed, wool => 85%, not ready for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510710900000",
+      "tanim_tr": "Yün iplikler (kamgarn); ağartılmış, taranmış, yün=>%85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Worsted wool yarns; bleached, combed, wool => 85%, not ready for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510720100000",
+      "tanim_tr": "Yün iplikler (kamgarn); ağartılmamış, taranmış, yün < %85, fakat, yün + ince hayvan kılı >=%85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Worsted wool yarns; unbleached, combed, wool < 85%, but wool + fine animal hair >= 85%, not prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510720300000",
+      "tanim_tr": "Yün iplikler (kamgarn); ağartılmış, taranmış, yün < %85, fakat, yün + ince hayvan kılı >=%85, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Worsted wool yarns; bleached, combed, wool < 85%, but wool + fine animal hair >= 85%, not prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510720510000",
+      "tanim_tr": "Yün iplikler (kamgarn); ağartılmamış, taranmış, yün < %85, devamsız sentetik liflerle karışık, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Worsted wool yarns; unbleached, combed, wool < 85%, mixed with discontinuous synthetic fibers, not prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510720590000",
+      "tanim_tr": "Yün iplikler (kamgarn); ağartılmış, taranmış, yün < %85, devamsız sentetik liflerle karışık, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Worsted wool yarns; bleached, combed, wool < 85%, mixed with discontinuous synthetic fibers, not prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510720910000",
+      "tanim_tr": "Yün iplikler (kamgarn); ağartılmamış, taranmış, yün < %85, başka şekilde karıştırılmış, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Worsted wool yarns; unbleached, combed, wool < 85%, otherwise blended, not prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510720990000",
+      "tanim_tr": "Yün iplikler (kamgarn); ağartılmış, taranmış, yün < %85, başka şekilde karıştırılmış, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Worsted wool yarns; bleached, combed, wool < 85%, otherwise blended, not prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510810100011",
+      "tanim_tr": "Tiftiklerden iplikler; karde edilmiş, ağartılmamış, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Yarns made from mohair; carded, unbleached, not ready for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510810100019",
+      "tanim_tr": "Diğer ince hayvan kıllarından iplikler; karde edilmiş, ağartılmamış, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Other fine animal hair yarns; carded, unbleached, not prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510810900011",
+      "tanim_tr": "Tiftiklerden iplikler; karde edilmiş, ağartılmış, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Yarns made from mohair; carded, bleached, but not yet ready for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510810900019",
+      "tanim_tr": "Diğer ince hayvan kıllarından iplikler; karde edilmiş, ağartılmış, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Other fine animal hair yarns; carded, bleached, not prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510820100011",
+      "tanim_tr": "Tiftiklerden iplikler; taranmış, ağartılmamış, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Yarns made from mohair; combed, unbleached, not yet prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510820100019",
+      "tanim_tr": "Diğer ince hayvan kıllarından iplikler; taranmış, ağartılmamış, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Other fine animal hair yarns; combed, unbleached, not prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510820900011",
+      "tanim_tr": "Tiftiklerden iplikler; taranmış, ağartılmış, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Yarns made from mohair; combed, bleached, but not yet ready for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510820900019",
+      "tanim_tr": "Diğer ince hayvan kıllarından iplikler; taranmış, ağartılmış, perakende satılacak hale getirilmemiş",
+      "tanim_en": "Other fine animal hair threads; combed, bleached, but not prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510910100011",
+      "tanim_tr": "Yünden iplikler; yün >= %85, 125gr < top/çile <= 500gr, perakende satılacak hale getirilmiş",
+      "tanim_en": "Wool yarns; wool >= 85%, 125g < skein/ball <= 500g, ready for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510910100012",
+      "tanim_tr": "İnce hayvan kıllarından iplikler; ince hayvan kılı >= %85, 125gr < top/çile <= 500gr, perakende satılacak hale getirilmiş",
+      "tanim_en": "Yarns made from fine animal hair; fine animal hair >= 85%, 125g < roll/skein <= 500g, ready for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510910900011",
+      "tanim_tr": "Yünden diğer iplikler; yün veya ince hayvan kılı >= %85, perakende satılacak hale getirilmiş",
+      "tanim_en": "Other yarns of wool; wool or fine animal hair >= 85%, prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510910900012",
+      "tanim_tr": "İnce hayvan kıllarından diğer iplikler; yün veya ince hayvan kılı >= %85, perakende satılacak hale getirilmiş",
+      "tanim_en": "Other yarns from fine animal hair; wool or fine animal hair >= 85%, prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "510990000000",
+      "tanim_tr": "Yün veya ince hayvan kıllarından iplikler; yün veya ince hayvan kılı < %85, perakende satılacak hale getirilmiş",
+      "tanim_en": "Yarns of wool or fine animal hair; wool or fine animal hair < ​​85%, prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511000001000",
+      "tanim_tr": "Kaba hayvan kıllarından veya at kılından iplikler; perakende satılacak hale getirilmiş",
+      "tanim_en": "Threads made from coarse animal hair or horsehair; prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511000009000",
+      "tanim_tr": "Kaba hayvan kıllarından veya at kılından iplikler; perakende satılacak hale getirilmemiş",
+      "tanim_en": "Threads made from coarse animal hair or horsehair; not yet prepared for retail sale.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511111000000",
+      "tanim_tr": "Dokunmuş mensucat; karde edilmiş (strayhgarn) yün veya ince hayvan kılı >= %85, m2 =< 300gr",
+      "tanim_en": "Woven fabrics; carded (straithgarn) wool or fine animal hair >= 85%, m2 =< 300gr",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511119000000",
+      "tanim_tr": "Dokunmuş mensucat; karde edilmiş (strayhgarn) yün veya ince hayvan kılı >= %85, m2 > 300gr",
+      "tanim_en": "Woven fabrics; carded (straithgarn) wool or fine animal hair >= 85%, > 300gr/m²",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511120000000",
+      "tanim_tr": "Dokunmuş mensucat; ağırlıklı karde edilmiş (strayhgarn) yün veya ince hayvan kılı fakat < %85, sentetik ve suni filamentlerle karışık",
+      "tanim_en": "Woven fabrics; predominantly carded (straithgarn) wool or fine animal hair, but mixed with < 85% synthetic and artificial filaments.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511130100000",
+      "tanim_tr": "Dokunmuş mensucat; ağırlıklı karde edilmiş (strayhgarn) yün veya ince hayvan kılı fakat < %85, m2 <= 300gr, sentetik ve suni devamsız liflerle karışık",
+      "tanim_en": "Woven fabrics; predominantly carded (straithgarn) wool or fine animal hair, but < 85%, <= 300 gr/m², mixed with synthetic and artificial discontinuous fibers.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511130800000",
+      "tanim_tr": "Dokunmuş mensucat; ağırlıklı karde edilmiş (strayhgarn) yün veya ince hayvan kılı fakat < %85, m2 > 300gr, sentetik ve suni devamsız liflerle karışık",
+      "tanim_en": "Woven fabrics; predominantly carded (straithgarn) wool or fine animal hair, but < 85%, > 300 gr/m², mixed with synthetic and artificial discontinuous fibers.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511190100000",
+      "tanim_tr": "Dokunmuş mensucat; ağırlıklı karde edilmiş (strayhgarn) yün veya ince hayvan kılı fakat < %85, ipek > %10",
+      "tanim_en": "Woven fabrics; predominantly carded (straithgarn) wool or fine animal hair, but < 85%, silk > 10%.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511190910000",
+      "tanim_tr": "Dokunmuş diğer mensucat; ağırlıklı karde edilmiş (strayhgarn) yün veya ince hayvan kılı fakat < %85, m2 <= 300gr",
+      "tanim_en": "Other woven textiles; mainly carded (straithgarn) wool or fine animal hair, but < 85%, <= 300 gr/m².",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511190980000",
+      "tanim_tr": "Dokunmuş diğer mensucat; ağırlıklı karde edilmiş (strayhgarn) yün veya ince hayvan kılı fakat < %85, m2 > 300gr",
+      "tanim_en": "Other woven textiles; mainly carded (straithgarn) wool or fine animal hair, but < 85%, > 300 gr/m².",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511211000000",
+      "tanim_tr": "Dokunmuş mensucat; taranmış (kamgarn) yün veya ince hayvan kılı >= %85, m2 =< 200gr",
+      "tanim_en": "Woven fabrics; combed (worsted) wool or fine animal hair >= 85%, m2 =< 200gr",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511219000000",
+      "tanim_tr": "Dokunmuş mensucat; taranmış (kamgarn) yün veya ince hayvan kılı >= %85, m2 > 200gr",
+      "tanim_en": "Woven fabrics; combed (worsted) wool or fine animal hair >= 85%, > 200gr/m²",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511220000000",
+      "tanim_tr": "Dokunmuş mensucat; ağırlıklı taranmış (kamgarn) yün veya ince hayvan kılı fakat < %85, sentetik ve suni filamentlerle karışık",
+      "tanim_en": "Woven textiles; predominantly combed (worsted) wool or fine animal hair, but mixed with < 85% synthetic and artificial filaments.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511230100000",
+      "tanim_tr": "Dokunmuş mensucat; ağırlıklı taranmış (kamgarn) yün veya ince hayvan kılı fakat < %85, sentetik ve suni devamsız liflerle karışık, m2 =< 200gr",
+      "tanim_en": "Woven fabrics; predominantly combed (worsted) wool or fine animal hair, but mixed with < 85% synthetic and artificial staple fibers, gr/m² = < 200 gr.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511230800000",
+      "tanim_tr": "Dokunmuş mensucat; ağırlıklı taranmış (kamgarn) yün veya ince hayvan kılı fakat < %85, sentetik ve suni devamsız liflerle karışık, m2 > 200gr",
+      "tanim_en": "Woven fabrics; predominantly combed (worsted) wool or fine animal hair, but mixed with < 85% synthetic and artificial staple fibers, > 200 gr/m².",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511290100000",
+      "tanim_tr": "Dokunmuş diğer mensucat; ağırlıklı taranmış (kamgarn) yün veya ince hayvan kılı fakat < %85, ipek > %10",
+      "tanim_en": "Other woven textiles; predominantly combed (worsted) wool or fine animal hair but < 85%, silk > 10%",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511290910000",
+      "tanim_tr": "Dokunmuş diğer mensucat; ağırlıklı taranmış (kamgarn) yün veya ince hayvan kılı fakat < %85, m2 =< 200gr",
+      "tanim_en": "Other woven textiles; predominantly combed (worsted) wool or fine animal hair but < 85%, m2 =< 200gr",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511290980000",
+      "tanim_tr": "Dokunmuş diğer mensucat; ağırlıklı taranmış (kamgarn) yün veya ince hayvan kılı fakat < %85, m2 > 200gr",
+      "tanim_en": "Other woven textiles; predominantly combed (worsted) wool or fine animal hair, but < 85%, > 200 gr/m².",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511300001000",
+      "tanim_tr": "Kaba hayvan kılından veya at kılından dokunmuş elastiki mensucat",
+      "tanim_en": "Elastic fabrics woven from coarse animal hair or horsehair.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511300009011",
+      "tanim_tr": "At kılından mensucat",
+      "tanim_en": "fabrics made from horsehair",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511300009012",
+      "tanim_tr": "Adi keçi kılından mensucat",
+      "tanim_en": "Textiles made from common goat hair",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "511300009019",
+      "tanim_tr": "Diğer kaba hayvan kılından mensucat",
+      "tanim_en": "Other coarse animal hair textiles",
+      "grup": "tevkifat_yok",
+      "oran": null
+    }
+  ]
+}
