@@ -17,8 +17,8 @@
         "ticaret"
       ]
     },
-    "surum": "2026.10.20",
-    "guncelleme": "2026-10-20",
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
     "yayin_durumu": "yayinda",
     "zaman": {
       "bazli": false,
@@ -44,8 +44,8 @@
       {
         "kod": "gib-kdv-oranlari",
         "ad": {
-          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
-          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
         },
         "tur": "bkk_eki_liste",
         "kurum_kod": "gib",
@@ -86,6 +86,24 @@
         "tarih": "2008-01-12"
       },
       {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
+          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
+        },
+        "resmi_gazete": "32241",
+        "tarih": "2023-07-07"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
+          "en": "Presidential Decision No. 9126 (amendment to List II)"
+        },
+        "resmi_gazete": "32722",
+        "tarih": "2024-11-14"
+      },
+      {
         "tur": "kanun",
         "ad": {
           "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
@@ -93,6 +111,24 @@
         },
         "resmi_gazete": "24783",
         "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
       }
     ],
     "uretim": {
@@ -104,13 +140,13 @@
         },
         {
           "servis_kod": "kdv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+          "surum": "2026.10.21",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
         },
         {
           "servis_kod": "otv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+          "surum": "2026.10.21",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
         },
         {
           "servis_kod": "tevkifat-oranlari",
@@ -121,13 +157,18 @@
           "servis_kod": "randiman",
           "surum": "2026.01.01",
           "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.21",
+          "checksum": "sha256:0d2f2bbedb7b830c36bc195160da59ef4ba6fc8245465e18cbfcc29d8cbd810f"
         }
       ],
       "kural_seti": {
         "kod": "coklu-kural",
-        "surum": "2026.10.20"
+        "surum": "2026.10.21"
       },
-      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "uretim_zamani": "2026-10-21T10:46:36.400758+00:00",
       "eslesme_ozeti": {
         "toplam": 15799,
         "eslesen": 15799,
@@ -146,8 +187,8 @@
       "tanim_tr": "Karaciğerden yapılmış sosisler ve benzeri ürünler ve esası bu ürünler olan gıda müstahzarları",
       "tanim_en": "Sausages and similar products made from liver, and food preparations based on such products.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -157,6 +198,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -167,8 +209,8 @@
       "tanim_tr": "Etten, sakatattan (karaciğer HARİÇ), kandan veya böcekten yapılmış sosisler (kurutulmuş veya sürülebilir, pişirilmemiş); hava almayan kaplarda olanlar",
       "tanim_en": "Sausages made from meat, offal (EXCEPT liver), blood or insects (dried or spreadable, uncooked); those in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -178,6 +220,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -188,8 +231,8 @@
       "tanim_tr": "Etten, sakatattan (karaciğer HARİÇ), kandan veya böcekten yapılmış sosisler (kurutulmuş/sürülebilir, pişirilmemiş);hava almayan kaplarda olanlar HARİÇ",
       "tanim_en": "Sausages made from meat, offal (EXCEPT liver), blood or insects (dried/spreadable, uncooked); EXCEPT those in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -199,6 +242,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -209,8 +253,8 @@
       "tanim_tr": "Etten, sakatattan (karaciğer HARİÇ), kandan veya böcekten yapılmış sosisler vb. ürünler (pişirilmemiş sosisler HARİÇ); hava almayan kaplarda olanlar",
       "tanim_en": "Sausages and similar products made from meat, offal (EXCEPT liver), blood or insects (EXCEPT uncooked sausages); those in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -220,6 +264,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -230,8 +275,8 @@
       "tanim_tr": "Etten, sakatattan (karaciğer HARİÇ), kandan veya böcekten yapılmış sosisler vb. ürünler; pişirilmemiş sosisler ve hava almayan kaplarda olanlar HARİÇ",
       "tanim_en": "Sausages and similar products made from meat, offal (EXCEPT liver), blood or insects; uncooked sausages and those in airtight containers are EXCEPT.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -241,6 +286,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -251,8 +297,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş homojenize et, sakatat, kan veya böcek (sosisler ve benzerleri HARİÇ)",
       "tanim_en": "Prepared or preserved homogenized meat, offal, blood or insects (EXCEPT sausages and the like)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -262,6 +308,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -272,8 +319,8 @@
       "tanim_tr": "Kaz ve ördek karaciğerlerinden hazırlanmış veya konserve edilmiş ürünler (homojenize ürünler, sosisler vb. HARİÇ); hava almayan kaplarda",
       "tanim_en": "Products prepared or preserved from goose and duck livers (EXCEPT homogenized products, sausages, etc.); in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -283,6 +330,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -293,8 +341,8 @@
       "tanim_tr": "Kaz ve ördek karaciğerlerinden hazırlanmış veya konserve edilmiş ürünler (homojenize ürünler, sosisler vb. HARİÇ); hava almayan kaplarda olanlar HARİÇ",
       "tanim_en": "Products prepared or preserved from goose and duck livers (EXCEPT homogenized products, sausages, etc.); EXCEPT those in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -304,6 +352,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -314,8 +363,8 @@
       "tanim_tr": "Diğer hayvanların karaciğerlerinden hazırlanmış veya konserve edilmiş ürünler (homojenize ürünler, sosisler vb. HARİÇ); hava almayan kaplarda",
       "tanim_en": "Products prepared or preserved from the livers of other animals (EXCEPT homogenized products, sausages, etc.); in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -325,6 +374,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -335,8 +385,8 @@
       "tanim_tr": "Diğer hayvanların karaciğerlerinden hazırlanmış/konserve edilmiş ürünler (homojenize ürünler, sosisler vb. HARİÇ); hava almayan kaplarda olanlar HARİÇ",
       "tanim_en": "Products prepared/preserved from the livers of other animals (EXCEPT homogenized products, sausages, etc.); EXCEPT those in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -346,6 +396,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -356,8 +407,8 @@
       "tanim_tr": "Hindi eti ve sakatatından müstahzarlar; pişirilmemiş, et ve sakatat => %57, hava almayan kaplarda",
       "tanim_en": "Preparations from turkey meat and offal; uncooked, meat and offal => 57%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -367,6 +418,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -377,8 +429,8 @@
       "tanim_tr": "Hindi eti ve sakatatından müstahzarlar; pişirilmemiş, et ve sakatat => %57, diğer hallerde",
       "tanim_en": "Preparations of turkey meat and offal; uncooked, meat and offal => 57%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -388,6 +440,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -398,8 +451,8 @@
       "tanim_tr": "Hindi et ve sakatatından müstahzarlar; hazırlanmış/konserve edilmiş, et ve sakatat =>%57, hava almayan kaplarda",
       "tanim_en": "Preparations of turkey meat and offal; prepared/preserved, meat and offal => 57%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -409,6 +462,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -419,8 +473,8 @@
       "tanim_tr": "Hindi et ve sakatatından müstahzarlar; hazırlanmış/konserve edilmiş, et ve sakatat =>%57, diğer hallerde",
       "tanim_en": "Preparations of turkey meat and offal; prepared/preserved, meat and offal => 57%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -430,6 +484,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -440,8 +495,8 @@
       "tanim_tr": "Hindi et ve sakatatından müstahzarlar; hazırlanmış/konserve edilmiş, et ve sakatat < %57, hava almayan kaplarda",
       "tanim_en": "Preparations of turkey meat and offal; prepared/preserved, meat and offal < 57%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -451,6 +506,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -461,8 +517,8 @@
       "tanim_tr": "Hindi et ve sakatatından müstahzarlar; hazırlanmış/konserve edilmiş, et ve sakatat < %57, diğer hallerde",
       "tanim_en": "Preparations of turkey meat and offal; prepared/preserved, meat and offal < 57%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -472,6 +528,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -482,8 +539,8 @@
       "tanim_tr": "Horoz ve tavuk et ve sakatatından müstahzarlar; pişirilmemiş, et ve sakatat => %57, hava almayan kaplarda",
       "tanim_en": "Preparations from rooster and chicken meat and offal; uncooked, meat and offal => 57%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -493,6 +550,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -503,8 +561,8 @@
       "tanim_tr": "Horoz ve tavuk et ve sakatatından müstahzarlar; pişirilmemiş, et ve sakatat => %57, diğer hallerde",
       "tanim_en": "Preparations from rooster and chicken meat and offal; uncooked, meat and offal => 57%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -514,6 +572,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -524,8 +583,8 @@
       "tanim_tr": "Horoz ve tavuk et ve sakatatından müstahzarlar; hazırlanmış/konserve edilmiş, et ve sakatat => %57, hava almayan kaplarda",
       "tanim_en": "Preparations of rooster and chicken meat and offal; prepared/preserved, meat and offal => 57%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -535,6 +594,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -545,8 +605,8 @@
       "tanim_tr": "Horoz ve tavuk et ve sakatatından müstahzarlar; hazırlanmış/konserve edilmiş, et ve sakatat => %57, diğer hallerde",
       "tanim_en": "Preparations of rooster and chicken meat and offal; prepared/preserved, meat and offal => 57%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -556,6 +616,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -566,8 +627,8 @@
       "tanim_tr": "Horoz ve tavuk et ve sakatatından müstahzarlar; hazırlanmış/konserve edilmiş, %25=<et, sakatat<%57, hava almayan kaplarda",
       "tanim_en": "Preparations of rooster and chicken meat and offal; prepared/preserved, 25% <meat, offal <57%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -577,6 +638,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -587,8 +649,8 @@
       "tanim_tr": "Horoz ve tavuk et ve sakatatından müstahzarlar; hazırlanmış/konserve edilmiş, %25=<et, sakatat<%57, diğer hallerde",
       "tanim_en": "Preparations of rooster and chicken meat and offal; prepared/preserved, 25%=<meat, offal<57%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -598,6 +660,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -608,8 +671,8 @@
       "tanim_tr": "Horoz ve tavuk et ve sakatatından müstahzarlar; hazırlanmış/konserve edilmiş, et, sakatat<%25, hava almayan kaplarda",
       "tanim_en": "Preparations of rooster and chicken meat and offal; prepared/preserved, meat, offal <25%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -619,6 +682,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -629,8 +693,8 @@
       "tanim_tr": "Horoz ve tavuk et ve sakatatından müstahzarlar; hazırlanmış/konserve edilmiş, et, sakatat<%25, diğer hallerde",
       "tanim_en": "Preparations of rooster and chicken meat and offal; prepared/preserved, meat, offal <25%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -640,6 +704,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -650,8 +715,8 @@
       "tanim_tr": "Diğer kümes hayvanları et ve sakatatından müstahzarlar; pişirilmemiş, et ve sakatat => %57, hava almayan kaplarda",
       "tanim_en": "Preparations of other poultry meat and offal; uncooked, meat and offal => 57%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -661,6 +726,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -671,8 +737,8 @@
       "tanim_tr": "Diğer kümes hayvanları et ve sakatatından müstahzarlar; pişirilmemiş, et ve sakatat => %57, diğer hallerde",
       "tanim_en": "Preparations of other poultry meat and offal; uncooked meat and offal => 57%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -682,6 +748,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -692,8 +759,8 @@
       "tanim_tr": "Diğer kümes hayvanları et ve sakatatından müstahzarlar; hazırlanmış/konserve, et ve sakatat => %57, hava almayan kaplarda",
       "tanim_en": "Other preparations of poultry meat and offal; prepared/canned meat and offal => 57%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -703,6 +770,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -713,8 +781,8 @@
       "tanim_tr": "Diğer kümes hayvanları et ve sakatatından müstahzarlar; hazırlanmış/konserve, et ve sakatat => %57, diğer hallerde",
       "tanim_en": "Other preparations of poultry meat and offal; prepared/canned meat and offal => 57%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -724,6 +792,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -734,8 +803,8 @@
       "tanim_tr": "Diğer kümes hayvanları et ve sakatatından müstahzarlar; hazırlanmış/konserve, et ve sakatat < %57, hava almayan kaplarda",
       "tanim_en": "Other preparations of poultry meat and offal; prepared/canned, meat and offal < 57%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -745,6 +814,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -755,8 +825,8 @@
       "tanim_tr": "Diğer kümes hayvanları et ve sakatatından müstahzarlar; hazırlanmış/konserve, et ve sakatat < %57, diğer hallerde",
       "tanim_en": "Other preparations of poultry meat and offal; prepared/canned meat and offal < 57%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -766,6 +836,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -776,8 +847,8 @@
       "tanim_tr": "Evcil domuz but ve parçalarından hazırlanmış veya konserve edilmiş et; hava almayan kaplarda",
       "tanim_en": "Meat prepared or preserved from the leg and parts of domestic pork; in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -787,6 +858,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -797,8 +869,8 @@
       "tanim_tr": "Evcil domuz but ve parçalarından hazırlanmış veya konserve edilmiş et; diğer hallerde",
       "tanim_en": "Meat prepared or preserved from the leg and parts of domestic pig; otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -808,6 +880,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -818,8 +891,8 @@
       "tanim_tr": "Evcil olmayan domuz but ve parçalarından hazırlanmış veya konserve edilmiş et; hava almayan kaplarda",
       "tanim_en": "Meat prepared or preserved from non-domesticated pork legs and parts; in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -829,6 +902,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -839,8 +913,8 @@
       "tanim_tr": "Evcil olmayan domuz but ve parçalarından hazırlanmış veya konserve edilmiş et; diğer hallerde",
       "tanim_en": "Meat prepared or preserved from the leg and parts of a non-domesticated pig; otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -850,6 +924,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -860,8 +935,8 @@
       "tanim_tr": "Evcil domuz kol ve parçalarından hazırlanmış veya konserve edilmiş et; hava almayan kaplarda",
       "tanim_en": "Meat prepared or preserved from the shoulder and parts of domestic pigs; in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -871,6 +946,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -881,8 +957,8 @@
       "tanim_tr": "Evcil domuz kol ve parçalarından hazırlanmış veya konserve edilmiş et; diğer hallerde",
       "tanim_en": "Meat prepared or preserved from the shoulder and parts of domestic pigs; otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -892,6 +968,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -902,8 +979,8 @@
       "tanim_tr": "Evcil olmayan domuz kol ve parçalarından hazırlanmış veya konserve edilmiş et; hava almayan kaplarda",
       "tanim_en": "Meat prepared or preserved from the shoulder and parts of a non-domesticated pig; in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -913,6 +990,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -923,8 +1001,8 @@
       "tanim_tr": "Evcil olmayan domuz kol ve parçalarından hazırlanmış veya konserve edilmiş et; diğer hallerde",
       "tanim_en": "Meat prepared or preserved from the shoulder and parts of a non-domesticated pig; otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -934,6 +1012,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -944,8 +1023,8 @@
       "tanim_tr": "Evcil domuzun bel ve parçalarından hazırlanmış/konserve edilmiş et; et; sakatat=>%80, hava almayan kaplarda",
       "tanim_en": "Meat prepared/canned from the loin and parts of domestic pig; meat; offal => 80%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -955,6 +1034,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -965,8 +1045,8 @@
       "tanim_tr": "Evcil domuzun bel ve parçalarından hazırlanmış/konserve edilmiş et; et; sakatat=>%80, diğer hallerde",
       "tanim_en": "Meat prepared/preserved from the loin and parts of a domestic pig; meat; offal => 80%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -976,6 +1056,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -986,8 +1067,8 @@
       "tanim_tr": "Evcil domuzun boyun ve parçalarından hazırlanmış/konserve edilmiş et (boyun ve kol karışımları DAHİL); et; sakatat=>%80, hava almayan kaplarda",
       "tanim_en": "Prepared/preserved meat from the neck and parts of domestic pigs (INCLUDING neck and shoulder mixtures); meat; offal => 80%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -997,6 +1078,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1007,8 +1089,8 @@
       "tanim_tr": "Evcil domuzun boyun ve parçalarından hazırlanmış/konserve edilmiş et (boyun ve kol karışımları DAHİL); et; sakatat=>%80, diğer hallerde",
       "tanim_en": "Prepared/preserved meat from the neck and parts of domestic pigs (INCLUDING neck and shoulder mixtures); meat; offal => 80%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1018,6 +1100,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1028,8 +1111,8 @@
       "tanim_tr": "Evcil domuzun but, kol, bel, boyun karışımından hazırlanmış/konserve edilmiş et; et; sakatat=>%80, hava almayan kaplarda",
       "tanim_en": "Prepared/canned meat from a mixture of leg, shoulder, loin, and neck of domestic pigs; meat; offal => 80%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1039,6 +1122,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1049,8 +1133,8 @@
       "tanim_tr": "Evcil domuzun but, kol, bel, boyun karışımından hazırlanmış/konserve edilmiş et; et; sakatat=>%80, diğer hallerde",
       "tanim_en": "Meat prepared/canned from a mixture of leg, shoulder, loin, and neck of domestic pigs; meat; offal => 80%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1060,6 +1144,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1070,8 +1155,8 @@
       "tanim_tr": "Evcil domuzun diğer bölge etleri ve karışımlarından hazırlanmış/konserve edilmiş et; et; sakatat=>%80, hava almayan kaplarda",
       "tanim_en": "Meat prepared/preserved from other parts of the domestic pig and mixtures thereof; meat; offal => 80%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1081,6 +1166,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1091,8 +1177,8 @@
       "tanim_tr": "Evcil domuzun diğer bölge etleri ve karışımlarından hazırlanmış/konserve edilmiş et; et; sakatat=>%80, diğer hallerde",
       "tanim_en": "Meat prepared/preserved from other parts of the domestic pig and mixtures thereof; meat; offal => 80%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1102,6 +1188,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1112,8 +1199,8 @@
       "tanim_tr": "Evcil domuzun diğer bölge etleri ve karışımlarından hazırlanmış/konserve edilmiş et; %40=< et, sakatat<%80, hava almayan kaplarda",
       "tanim_en": "Meat prepared/preserved from other parts of the domestic pig and mixtures thereof; 40% meat, offal <80%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1123,6 +1210,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1133,8 +1221,8 @@
       "tanim_tr": "Evcil domuzun diğer bölge etleri ve karışımlarından hazırlanmış/konserve edilmiş et; %40=< et, sakatat<%80, diğer hallerde",
       "tanim_en": "Meat prepared/preserved from other parts of the domestic pig and mixtures thereof; 40% meat, offal <80%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1144,6 +1232,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1154,8 +1243,8 @@
       "tanim_tr": "Evcil domuzun diğer bölge etleri ve karışımlarından hazırlanmış/konserve edilmiş et; et, sakatat <%40, hava almayan kaplarda",
       "tanim_en": "Meat prepared/preserved from other parts of the domestic pig and mixtures thereof; meat, offal <40%, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1165,6 +1254,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1175,8 +1265,8 @@
       "tanim_tr": "Evcil domuzun diğer bölge etleri ve karışımlarından hazırlanmış/konserve edilmiş et; et, sakatat <%40, diğer hallerde",
       "tanim_en": "Meat prepared/preserved from other parts of the domestic pig and mixtures thereof; meat, offal <40%, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1186,6 +1276,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1196,8 +1287,8 @@
       "tanim_tr": "Evcil olmayan domuzun etlerinden hazırlanmış/konserve edilmiş et, sakatat; hava almayan kaplarda",
       "tanim_en": "Meat and offal prepared/preserved from wild pigs; in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1207,6 +1298,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1217,8 +1309,8 @@
       "tanim_tr": "Evcil olmayan domuzun etlerinden hazırlanmış/konserve edilmiş et, sakatat; diğer hallerde",
       "tanim_en": "Meat and offal prepared/preserved from wild pigs; otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1228,6 +1320,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1238,8 +1331,8 @@
       "tanim_tr": "Sığır cinsi hayvanlardan hazırlanmış veya konserve edilmiş et, sakatat ve karışımlar; pişirilmemiş, hava almayan kaplarda",
       "tanim_en": "Meat, offal, and mixtures of beef, prepared or preserved; uncooked, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1249,6 +1342,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1259,8 +1353,8 @@
       "tanim_tr": "Sığır cinsi hayvanlardan hazırlanmış veya konserve edilmiş et, sakatat ve karışımlar; pişirilmemiş, diğer hallerde",
       "tanim_en": "Meat, offal and mixtures of beef, prepared or preserved; uncooked, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1270,6 +1364,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1280,8 +1375,8 @@
       "tanim_tr": "Salamura edilmiş sığır cinsi hayvanların etleri; hava almayan kaplarda",
       "tanim_en": "Brined beef is stored in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1291,6 +1386,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1301,8 +1397,8 @@
       "tanim_tr": "Sığır cinsi hayvanlardan hazırlanmış veya konserve edilmiş et, sakatat ve karışımlar; pişirilmiş",
       "tanim_en": "Meat, offal, and mixtures of beef, prepared or preserved; cooked.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1312,6 +1408,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1322,8 +1419,8 @@
       "tanim_tr": "Hayvanların kan müstahzarları; hava almayan kaplarda",
       "tanim_en": "Animal blood preparations; in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1333,6 +1430,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1343,8 +1441,8 @@
       "tanim_tr": "Hayvanların kan müstahzarları; diğer hallerde",
       "tanim_en": "Preparations of animal blood; in other cases",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1354,6 +1452,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1364,8 +1463,8 @@
       "tanim_tr": "Av hayvanları ve tahşandan hazırlanmış veya konserve edilmiş et, sakatat; hava almayan kaplarda",
       "tanim_en": "Meat and offal prepared or preserved from game and hawthorn; in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1375,6 +1474,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1385,8 +1485,8 @@
       "tanim_tr": "Av hayvanları ve tahşandan hazırlanmış veya konserve edilmiş et, sakatat; diğer hallerde",
       "tanim_en": "Meat and offal prepared or preserved from game and hawthorn; in other cases",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1396,6 +1496,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1406,8 +1507,8 @@
       "tanim_tr": "Evcil domuz eti ve sakat içeren karışımlardan hazırlanmış veya konserve edilmiş müstahzarlar; hava almayan kaplarda",
       "tanim_en": "Preparations made from mixtures or preserved from domestic pork and offal; in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1417,6 +1518,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1427,8 +1529,8 @@
       "tanim_tr": "Evcil domuz eti ve sakat içeren karışımlardan hazırlanmış veya konserve edilmiş müstahzarlar; diğer hallerde",
       "tanim_en": "Preparations made from or preserved from mixtures containing domestic pork and offal; in other cases",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1438,6 +1540,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1448,8 +1551,8 @@
       "tanim_tr": "Sığır eti ve sakat içeren karışımlardan hazırlanmış/konserve edilmiş müstahzarlar; pişirilmemiş, hava almayan kaplarda",
       "tanim_en": "Preparations made from/preserved from mixtures containing beef and offal; uncooked, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1459,6 +1562,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1469,8 +1573,8 @@
       "tanim_tr": "Sığır eti ve sakat içeren karışımlardan hazırlanmış veya konserve edilmiş müstahzarlar; pişirilmemiş, diğer hallerde",
       "tanim_en": "Preparations made from or preserved from mixtures containing beef and offal; uncooked, otherwise",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1480,6 +1584,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1490,8 +1595,8 @@
       "tanim_tr": "Sığır eti ve sakat içeren karışımlardan hazırlanmış/konserve edilmiş müstahzarlar; pişirilmiş, hava almayan kaplarda",
       "tanim_en": "Preparations made from/preserved from mixtures containing beef and offal; cooked, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1501,6 +1606,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1511,8 +1617,8 @@
       "tanim_tr": "Sığır eti ve sakat içeren karışımlardan hazırlanmış veya konserve edilmiş müstahzarlar; pişirilmiş, diğer hallerde",
       "tanim_en": "Preparations made from mixtures containing beef and offal, or preserved; cooked, otherwise...",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1522,6 +1628,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1532,8 +1639,8 @@
       "tanim_tr": "Koyunlardan hazırlanmış veya konserve edilmiş et, sakatat; hava almayan kaplarda",
       "tanim_en": "Meat and offal prepared or preserved from sheep; in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1543,6 +1650,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1553,8 +1661,8 @@
       "tanim_tr": "Koyunlardan hazırlanmış veya konserve edilmiş et, sakatat; diğer kaplarda",
       "tanim_en": "Meat and offal prepared or preserved from sheep; in other containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1564,6 +1672,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1574,8 +1683,8 @@
       "tanim_tr": "Keçilerden hazırlanmış veya konserve edilmiş et, sakatat; hava almayan kaplarda",
       "tanim_en": "Meat and offal prepared or preserved from goats; in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1585,6 +1694,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1595,8 +1705,8 @@
       "tanim_tr": "Keçilerden hazırlanmış veya konserve edilmiş et, sakatat; diğer kaplarda",
       "tanim_en": "Meat and offal prepared or preserved from goats; in other containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1606,6 +1716,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1616,8 +1727,8 @@
       "tanim_tr": "Diğer hayvanlardan hazırlanmış veya konserve edilmiş et, sakatat ve böcekler; hava almayan kaplarda",
       "tanim_en": "Meat, offal, and insects prepared from other animals or preserved; in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1627,6 +1738,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1637,8 +1749,8 @@
       "tanim_tr": "Diğer hayvanlardan hazırlanmış veya konserve edilmiş et, sakatat ve böceklerden; diğer kaplarda",
       "tanim_en": "Meat, offal, and insects prepared or preserved from other animals; in other containers",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1648,6 +1760,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1658,8 +1771,8 @@
       "tanim_tr": "Et, balık, kabuklu hayvan, yumuşakça ve diğer su omurgasızlarının hülasa ve suları; hazır ambalajda net <= 1 kg",
       "tanim_en": "Extracts and broths of meat, fish, crustaceans, molluscs and other aquatic invertebrates; in ready-to-use packaging, net weight <= 1 kg.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1669,6 +1782,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1679,8 +1793,8 @@
       "tanim_tr": "Et, balık, kabuklu hayvan, yumuşakça ve diğer su omurgasızlarının hülasa ve suları; hazır ambalajda net > 1 kg",
       "tanim_en": "Extracts and broths of meat, fish, crustaceans, molluscs and other aquatic invertebrates; in ready-to-use packaging, net weight > 1 kg.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1690,6 +1804,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1700,8 +1815,8 @@
       "tanim_tr": "Som balıkları; hazırlanmış veya konserve edilmiş, bütün veya parça halinde",
       "tanim_en": "Salmon; prepared or canned, whole or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1711,6 +1826,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1721,8 +1837,8 @@
       "tanim_tr": "Ringa balıkları; çiğ fileto halinde hazırlanmış, dondurulmuş, bütün veya parça halinde",
       "tanim_en": "Herring is available as raw fillets, frozen, whole, or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1732,6 +1848,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1742,8 +1859,8 @@
       "tanim_tr": "Ringa balıkları; hazırlanmış veya konserve edilmiş, bütün veya parça halinde, hava almayan kaplarda",
       "tanim_en": "Herring; prepared or canned, whole or in pieces, in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1753,6 +1870,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1763,8 +1881,8 @@
       "tanim_tr": "Ringa balıkları; hazırlanmış veya konserve edilmiş, bütün veya parça halinde, hava almayan kaplarda olanlar HARİÇ",
       "tanim_en": "Herring; prepared or preserved, whole or in pieces, EXCEPT those in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1774,6 +1892,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1784,8 +1903,8 @@
       "tanim_tr": "Sardalyalar; zeytinyağı ile hazırlanmış veya konserve edilmiş, bütün veya parça halinde",
       "tanim_en": "Sardines; prepared with olive oil or canned, whole or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1795,6 +1914,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1805,8 +1925,8 @@
       "tanim_tr": "Sardalyalar; diğer usullerle hazırlanmış veya konserve edilmiş, bütün veya parça halinde",
       "tanim_en": "Sardines; prepared by other methods or canned, whole or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1816,6 +1936,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1826,8 +1947,8 @@
       "tanim_tr": "Sardinella ve palatika ve çaça balıkları; hazırlanmış veya konserve edilmiş, bütün veya parça halinde",
       "tanim_en": "Sardinella, palatica, and anchovy fish; prepared or preserved, whole or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1837,6 +1958,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1847,8 +1969,8 @@
       "tanim_tr": "Skipjack; bitkisel yağlarla hazırlanmış veya konserve edilmiş, bütün veya parça halinde",
       "tanim_en": "Skipjack; whole or in pieces, prepared or preserved with vegetable oils.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1858,6 +1980,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1868,8 +1991,8 @@
       "tanim_tr": "Skipjack filetoları; diğer yöntemlerle hazırlanmış veya konserve edilmiş",
       "tanim_en": "Skipjack fillets; prepared by other methods or canned",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1879,6 +2002,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1889,8 +2013,8 @@
       "tanim_tr": "Skipjack (filetolar hariç); kıyılmamış, diğer yöntemlerle hazırlanmış veya konserve edilmiş",
       "tanim_en": "Skipjack (excluding fillets); not chopped, otherwise prepared or canned.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1900,6 +2024,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1910,8 +2035,8 @@
       "tanim_tr": "Sarı yüzgeçli orkinos(Thunnus albacares); bitkisel yağlarla hazırlanmış veya konserve edilmiş, bütün veya parça halinde(kıyılmamış)",
       "tanim_en": "Yellowfin tuna (Thunnus albacares); prepared or preserved in vegetable oils, whole or in pieces (not minced)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1921,6 +2046,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1931,8 +2057,8 @@
       "tanim_tr": "Sarı yüzgeçli orkinos (Thunnus albacares) filetoları; diğer yöntemlerle hazırlanmış veya konserve edilmiş",
       "tanim_en": "Yellowfin tuna (Thunnus albacares) fillets; prepared by other methods or preserved.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1942,6 +2068,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1952,8 +2079,8 @@
       "tanim_tr": "Sarı yüzgeçli orkinos (Thunnus albacares) (filetolar hariç); kıyılmamış, diğer yöntemlerle hazırlanmış veya konserve edilmiş",
       "tanim_en": "Yellowfin tuna (Thunnus albacares) (excluding fillets); not minced, otherwise prepared or preserved.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1963,6 +2090,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1973,8 +2101,8 @@
       "tanim_tr": "Diğer orkinoslar ve ton balıkları; bitkisel yağlarla hazırlanmış veya konserve edilmiş, bütün veya parça halinde (kıyılmamış)",
       "tanim_en": "Other tuna and bluefin tuna; prepared or preserved with vegetable oils, whole or in pieces (not chopped)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1984,6 +2112,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1994,8 +2123,8 @@
       "tanim_tr": "Diğer orkinoslar ve ton balıklarının filetoları; diğer yöntemlerle hazırlanmış veya konserve edilmiş",
       "tanim_en": "Other tuna and bluefin tuna fillets; prepared by other methods or preserved.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2005,6 +2134,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2015,8 +2145,8 @@
       "tanim_tr": "Diğer orkinoslar ve ton balıkları (filetolar hariç); kıyılmamış, diğer yöntemlerle hazırlanmış veya konserve edilmiş",
       "tanim_en": "Other tuna and bluefin tuna (excluding fillets); not minced, otherwise prepared or preserved.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2026,6 +2156,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2036,8 +2167,8 @@
       "tanim_tr": "Palamutlar (Sarda spp.); hazırlanmış veya konserve edilmiş (bütün veya parça halinde)",
       "tanim_en": "Bonito (Sarda spp.); prepared or preserved (whole or in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2047,6 +2178,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2057,8 +2189,8 @@
       "tanim_tr": "Uskumru ve kolyoz balıklarının filetoları; hazırlanmış veya konserve edilmiş (bütün veya parça halinde)",
       "tanim_en": "Mackerel and horse mackerel fillets; prepared or preserved (whole or in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2068,6 +2200,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2078,8 +2211,8 @@
       "tanim_tr": "Uskumru ve kolyoz balıkları (filetolar HARİÇ); hazırlanmış veya konserve edilmiş (bütün veya parça halinde)",
       "tanim_en": "Mackerel and horse mackerel (EXCEPT fillets); prepared or preserved (whole or in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2089,6 +2222,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2099,8 +2233,8 @@
       "tanim_tr": "Avustralya uskumrusu (Scomber australasicus); hazırlanmış veya konserve edilmiş (bütün veya parça halinde)",
       "tanim_en": "Australian mackerel (Scomber australasicus); prepared or preserved (whole or in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2110,6 +2244,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2120,8 +2255,8 @@
       "tanim_tr": "Hamsi balıkları; hazırlanmış veya konserve edilmiş (bütün veya parça halinde)",
       "tanim_en": "Anchovies; prepared or canned (whole or in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2131,6 +2266,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2141,8 +2277,8 @@
       "tanim_tr": "Yılan balıkları; hazırlanmış veya konserve edilmiş (bütün veya parça halinde)",
       "tanim_en": "Eels; prepared or canned (whole or in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2152,6 +2288,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2162,8 +2299,8 @@
       "tanim_tr": "Köpekbalığı yüzgeçleri; hazırlanmış veya konserve edilmiş (bütün veya parça halinde)",
       "tanim_en": "Shark fins; prepared or preserved (whole or in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2173,6 +2310,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2183,8 +2321,8 @@
       "tanim_tr": "Salmonidae türü balıklar (som balıkları hariç); hazırlanmış veya konserve edilmiş (bütün veya parça halinde)",
       "tanim_en": "Salmonidae species of fish (excluding salmon); prepared or preserved (whole or in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2194,6 +2332,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2204,8 +2343,8 @@
       "tanim_tr": "Euthynnus cinsi balıkların filetoları (skipjack (Katsuwonus pelamis) HARİÇ); hazırlanmış veya konserve edilmiş (bütün veya parça halinde)",
       "tanim_en": "Fillets of Euthynnus genus fish (EXCEPT skipjack (Katsuwonus pelamis)); prepared or preserved (whole or in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2215,6 +2354,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2225,8 +2365,8 @@
       "tanim_tr": "Euthynnus cinsi balıklar (filetolar ve skipjack (Katsuwonus pelamis HARİÇ); hazırlanmış veya konserve edilmiş (bütün veya parça halinde)",
       "tanim_en": "Fish of the genus Euthynnus (EXCEPT fillets and skipjack (Katsuwonus pelamis)); prepared or preserved (whole or in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2236,6 +2376,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2246,8 +2387,8 @@
       "tanim_tr": "Tek renkli orcynopsis türü balıklar; hazırlanmış veya konserve edilmiş (bütün veya parça halinde)",
       "tanim_en": "Solid-colored Orcynopsis fish; prepared or preserved (whole or in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2257,6 +2398,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2267,8 +2409,8 @@
       "tanim_tr": "Balıkların çiğ filetolar (hamur veya ekmek kırıntılarıyla kaplanmış, yağda ön kızartma yapılmış olsun olmasın); dondurulmuş (bütün/parça halinde)",
       "tanim_en": "Raw fish fillets (whether or not coated in dough or breadcrumbs and pre-fried); frozen (whole/in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2278,6 +2420,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2288,8 +2431,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş morina balıkları (Gadus morhua,Gadus ogac,Gadus macrocephalus); kıyılmamış (bütün/parça halinde)",
       "tanim_en": "Prepared or preserved cod (Gadus morhua, Gadus ogac, Gadus macrocephalus); whole (in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2299,6 +2442,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2309,8 +2453,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş kömür balıkları (Pollachius virens); kıyılmamış (bütün/parça halinde)",
       "tanim_en": "Prepared or preserved charfish (Pollachius virens); whole (in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2320,6 +2464,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2330,8 +2475,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş berlam balıkları (Merluccius spp., Urophycis spp.); kıyılmamış (bütün/parça halinde)",
       "tanim_en": "Prepared or canned hake (Merluccius spp., Urophycis spp.); whole (in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2341,6 +2486,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2351,8 +2497,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş Alaska mezgit (Theragra chalcogramma) ve mezgit (Pollachius pollachius) balıkları; kıyılmamış (bütün/parça halinde)",
       "tanim_en": "Prepared or canned Alaskan haddock (Theragra chalcogramma) and haddock (Pollachius pollachius); whole (in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2362,6 +2508,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2372,8 +2519,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş diğer balıklar; kıyılmamış (bütün/parça halinde)",
       "tanim_en": "Other prepared or canned fish; not minced (whole/in pieces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2383,6 +2530,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2393,8 +2541,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş surimi müstahzarları; bütün veya parça halinde olanlar HARİÇ",
       "tanim_en": "Prepared or preserved surimi products; EXCEPT those that are whole or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2404,6 +2552,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2414,8 +2563,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş som balıkları; bütün veya parça halinde olanlar HARİÇ",
       "tanim_en": "Prepared or canned salmon; EXCEPT whole or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2425,6 +2574,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2435,8 +2585,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş Salmonidaeler (som balıkları hariç); bütün veya parça halinde olanlar HARİÇ",
       "tanim_en": "Prepared or preserved salmon (excluding salmon); whole or in pieces, EXCEPT.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2446,6 +2596,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2456,8 +2607,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş hamsiler; bütün veya parça halinde olanlar HARİÇ",
       "tanim_en": "Prepared or canned anchovies; EXCEPT those whole or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2467,6 +2618,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2477,8 +2629,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş sardalya balıkları; bütün veya parça halinde olanlar HARİÇ",
       "tanim_en": "Prepared or canned sardines; EXCEPT those that are whole or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2488,6 +2640,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2498,8 +2651,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş uskumru balıkları; bütün veya parça halinde olanlar HARİÇ",
       "tanim_en": "Prepared or canned mackerel; EXCLUDING whole or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2509,6 +2662,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2519,8 +2673,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş palamut ve kolyoz türleri, tek renkli Orcynopsis türü balıklar; bütün veya parça halinde olanlar HARİÇ",
       "tanim_en": "Prepared or preserved bonito and mackerel species, and single-colored Orcynopsis fish; EXCLUDING those found whole or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2530,6 +2684,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2540,8 +2695,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş ton balıkları, skipjack veya Euthynnus cinsi diğer balıklar; bütün veya parça halinde olanlar HARİÇ",
       "tanim_en": "Prepared or preserved tuna, skipjack or other fish of the genus Euthynnus; EXCEPT those that are whole or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2551,6 +2706,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2561,8 +2717,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş ringa balıkları; bütün veya parça halinde olanlar HARİÇ",
       "tanim_en": "Prepared or canned herring; EXCEPT whole or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2572,6 +2728,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2582,8 +2739,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş diğer balıklar; bütün veya parça halinde olanlar HARİÇ",
       "tanim_en": "Other prepared or preserved fish; EXCLUDING whole or in pieces.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2593,6 +2750,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2603,8 +2761,8 @@
       "tanim_tr": "Havyar; hazırlanmış veya konserve edilmiş",
       "tanim_en": "Caviar; prepared or preserved",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2614,6 +2772,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2624,8 +2783,8 @@
       "tanim_tr": "Balık yumurtalarından elde edilen havyar yerine kullanılan ürünler; hazırlanmış veya konserve edilmiş",
       "tanim_en": "Products used as a substitute for caviar, obtained from fish eggs; prepared or preserved.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2635,6 +2794,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2645,8 +2805,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş yengeçler",
       "tanim_en": "Prepared or canned crabs",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2656,6 +2816,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2666,8 +2827,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş karidesler; hava almayan kaplarda olanlar HARİÇ, hazır ambalajda net muhteva <= 2 kg",
       "tanim_en": "Prepared or canned shrimp; EXCEPT those in airtight containers, net content in ready-packaged containers <= 2 kg.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2677,6 +2838,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2687,8 +2849,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş karidesler; hava almayan kaplarda olanlar HARİÇ, hazır ambalajda net muhteva > 2 kg",
       "tanim_en": "Prepared or canned shrimp; EXCEPT those in airtight containers, net content in ready-packaged containers > 2 kg.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2698,6 +2860,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2708,8 +2871,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş karidesler; hava almayan kaplarda olanlar",
       "tanim_en": "Prepared or canned shrimp; those in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2719,6 +2882,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2729,8 +2893,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş istakoz eti; (pişirilmiş) (istakoz yağı veya istakoz ezmesi, patesi, çorbası veya istakoz sosları imaline mahsus)",
       "tanim_en": "Prepared or preserved lobster meat; (cooked) (for the manufacture of lobster oil or lobster paste, pâté, soup or lobster sauces)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2740,6 +2904,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2750,8 +2915,8 @@
       "tanim_tr": "Diğer şekillerde hazırlanmış veya konserve edilmiş istakozlar",
       "tanim_en": "Lobsters prepared or preserved in other ways",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2761,6 +2926,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2771,8 +2937,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş kerevit",
       "tanim_en": "Prepared or canned crayfish",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2782,6 +2948,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2792,8 +2959,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş diğer kabuklu hayvanlar",
       "tanim_en": "Other prepared or preserved shellfish",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2803,6 +2970,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2813,8 +2981,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş istiridyeler",
       "tanim_en": "Prepared or canned oysters",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2824,6 +2992,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2834,8 +3003,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş deniz tarakları (kraliçe deniz tarakları dahil)",
       "tanim_en": "Prepared or preserved scallops (including queen scallops)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2845,6 +3014,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2855,8 +3025,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş midyeler; hava almayan kaplarda olanlar",
       "tanim_en": "Prepared or canned mussels; those in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2866,6 +3036,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2876,8 +3047,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş midyeler; hava almayan kaplarda olanlar HARİÇ",
       "tanim_en": "Prepared or canned mussels; EXCEPT those in airtight containers.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2887,6 +3058,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2897,8 +3069,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş mürekkep balığı ve kalamar",
       "tanim_en": "Prepared or canned squid and cuttlefish",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2908,6 +3080,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2918,8 +3091,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş ahtapot",
       "tanim_en": "Prepared or canned octopus",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2929,6 +3102,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2939,8 +3113,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş Arcidae, Arcticidae, Cardiidae, Donacidae, Hiatellidae, Mactridae, vb. familyalarına ait yumuşakçalar",
       "tanim_en": "Prepared or preserved mollusks from the families Arcidae, Arcticidae, Cardiidae, Donacidae, Hiatellidae, Mactridae, etc.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2950,6 +3124,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2960,8 +3135,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş deniz kulağı",
       "tanim_en": "Prepared or preserved abalone",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2971,6 +3146,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2981,8 +3157,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş salyangoz (deniz salyangozları hariç)",
       "tanim_en": "Prepared or preserved snails (excluding sea snails)",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2992,6 +3168,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -3002,8 +3179,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş deniz salyangozu",
       "tanim_en": "Prepared or canned sea snails",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -3013,6 +3190,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -3023,8 +3201,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş diğer yumuşakçalar",
       "tanim_en": "Other prepared or preserved mollusks",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -3034,6 +3212,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -3044,8 +3223,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş deniz hıyarları",
       "tanim_en": "Prepared or canned sea cucumbers",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -3055,6 +3234,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -3065,8 +3245,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş deniz kestanesi",
       "tanim_en": "Prepared or canned sea urchin",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -3076,6 +3256,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -3086,8 +3267,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş denizanası",
       "tanim_en": "Prepared or canned jellyfish",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -3097,6 +3278,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -3107,8 +3289,8 @@
       "tanim_tr": "Hazırlanmış veya konserve edilmiş diğer su omurgasızları",
       "tanim_en": "Other prepared or preserved aquatic invertebrates",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -3118,6 +3300,7 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": null,
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []

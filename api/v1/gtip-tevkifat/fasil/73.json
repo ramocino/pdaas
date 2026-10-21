@@ -17,8 +17,8 @@
         "ticaret"
       ]
     },
-    "surum": "2026.10.20",
-    "guncelleme": "2026-10-20",
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
     "yayin_durumu": "yayinda",
     "zaman": {
       "bazli": false,
@@ -44,8 +44,8 @@
       {
         "kod": "gib-kdv-oranlari",
         "ad": {
-          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
-          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
         },
         "tur": "bkk_eki_liste",
         "kurum_kod": "gib",
@@ -86,6 +86,24 @@
         "tarih": "2008-01-12"
       },
       {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
+          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
+        },
+        "resmi_gazete": "32241",
+        "tarih": "2023-07-07"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
+          "en": "Presidential Decision No. 9126 (amendment to List II)"
+        },
+        "resmi_gazete": "32722",
+        "tarih": "2024-11-14"
+      },
+      {
         "tur": "kanun",
         "ad": {
           "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
@@ -93,6 +111,24 @@
         },
         "resmi_gazete": "24783",
         "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
       }
     ],
     "uretim": {
@@ -104,13 +140,13 @@
         },
         {
           "servis_kod": "kdv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+          "surum": "2026.10.21",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
         },
         {
           "servis_kod": "otv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+          "surum": "2026.10.21",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
         },
         {
           "servis_kod": "tevkifat-oranlari",
@@ -121,13 +157,18 @@
           "servis_kod": "randiman",
           "surum": "2026.01.01",
           "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.21",
+          "checksum": "sha256:0d2f2bbedb7b830c36bc195160da59ef4ba6fc8245465e18cbfcc29d8cbd810f"
         }
       ],
       "kural_seti": {
         "kod": "coklu-kural",
-        "surum": "2026.10.20"
+        "surum": "2026.10.21"
       },
-      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "uretim_zamani": "2026-10-21T10:46:36.400758+00:00",
       "eslesme_ozeti": {
         "toplam": 15799,
         "eslesen": 15799,
@@ -146,1134 +187,1620 @@
       "tanim_tr": "Demir veya çelikten çatılmış palplanşlar (delinmiş veya birleştirilmiş parçalardan yapılmış olsun olmasın)",
       "tanim_en": "Sheet piles constructed of iron or steel (whether or not made of perforated or assembled sections)",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730110000012",
       "tanim_tr": "Demir veya çelikten çatılmamış palplanşlar (delinmiş veya birleştirilmiş parçalardan yapılmış olsun olmasın)",
       "tanim_en": "Sheet piles made of iron or steel that are not framed (whether or not made of drilled or assembled parts)",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730120000000",
       "tanim_tr": "Demir veya çelikten kaynak yapılmış profiller",
       "tanim_en": "Profiles welded from iron or steel",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730210100000",
       "tanim_tr": "Demir veya çelikten demiryolu ve tramvay hattı için elektrik iletici raylar; demirli olmayan metal aksamı ile birlikte",
       "tanim_en": "Electric conductor rails for railway and tramway lines, made of iron or steel; including non-ferrous metal components.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730210220000",
       "tanim_tr": "Demir veya çelikten yassı tabanlı simetrik demiryolu rayları; bir metresinin ağırlığı >= 36 kg, yeni olanlar",
       "tanim_en": "Flat-based, symmetrical railway tracks made of iron or steel; weighing >= 36 kg per meter, new ones included.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730210280000",
       "tanim_tr": "Demir veya çelikten yassı tabanlı simetrik demiryolu rayları; bir metresinin ağırlığı < 36 kg, yeni olanlar",
       "tanim_en": "Flat-based, symmetrical railway tracks made of iron or steel; weighing less than 36 kg per meter, new ones included.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730210400000",
       "tanim_tr": "Demir veya çelikten demiryolu ve tramvay hattı için oluklu yeni raylar",
       "tanim_en": "New grooved rails for railway and tram lines, made of iron or steel.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730210500000",
       "tanim_tr": "Demir veya çelikten demiryolu ve tramvay hattı için diğer yeni raylar",
       "tanim_en": "Other new rails for railway and tram lines, made of iron or steel.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730210900000",
       "tanim_tr": "Demir veya çelikten demiryolu ve tramvay hattı için raylar; kullanılmış olanlar",
       "tanim_en": "Rails for railway and tramway lines, made of iron or steel; used ones.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730230000000",
       "tanim_tr": "Demir veya çelikten demiryolu ve tramvay hattı için makas dilleri, makas göbeği, diğer kruvazman ve makas elemanları",
       "tanim_en": "Rail and tram line switch blades, switch hubs, and other crossover and switch elements made of iron or steel.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730240000011",
       "tanim_tr": "Demir veya çelikten demiryolu ve tramvay hattı için cebireler ve seletler; haddelenmiş olanlar",
       "tanim_en": "Rail and tramway track braces and rail rails of iron or steel; rolled ones.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730240000019",
       "tanim_tr": "Demir veya çelikten demiryolu ve tramvay hattı için cebireler ve seletler; haddelenmiş olanlar HARİÇ",
       "tanim_en": "Rail and tramway track braces and rail rails of iron or steel; EXCEPT those that are rolled.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730290001000",
       "tanim_tr": "Demir veya çelikten demiryolu ve tramvay hattı için kontr-raylar",
       "tanim_en": "Iron or steel plywood for railway and tramway lines.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730290002000",
       "tanim_tr": "Demir veya çelikten demiryolu ve tramvay hattı için traversler",
       "tanim_en": "Railway and tramway sleepers made of iron or steel.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730290009011",
       "tanim_tr": "Demir veya çelikten demiryolu ve tramvay hattı için dişli raylar",
       "tanim_en": "Gauge rails for railway and tramway lines, made of iron or steel.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730290009019",
       "tanim_tr": "Demir veya çelikten demiryolu ve tramvay hattı için diğer raylar",
       "tanim_en": "Rails of iron or steel for railway and tramway lines.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730290009029",
       "tanim_tr": "Demir veya çelikten demiryolu ve tramvay hattı için diğer malzemeler",
       "tanim_en": "Iron or steel and other materials for railway and tramway lines.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730300100011",
       "tanim_tr": "Demir dökümden basınç sistemlerinde kullanılacak türde olan ince ve kalın borular; çapı <= 200 mm",
       "tanim_en": "Thin and thick pipes made of cast iron, suitable for use in pressure systems; diameter <= 200 mm.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730300100012",
       "tanim_tr": "Demir dökümden basınç sistemlerinde kullanılacak türde olan ince ve kalın borular; çapı > 200 mm",
       "tanim_en": "Thin and thick pipes made of cast iron, suitable for use in pressure systems; diameter > 200 mm.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730300900013",
       "tanim_tr": "Lamel grafitli gri pik döküm ince ve kalın borular; çapı <= 200 mm",
       "tanim_en": "Thin and thick grey cast iron tubes with lamellar graphite; diameter <= 200 mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730300900014",
       "tanim_tr": "Demir dökümden ince ve kalın diğer borular; çapı <= 200 mm",
       "tanim_en": "Other thin and thick pipes made of cast iron; diameter <= 200 mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730300900015",
       "tanim_tr": "Lamel grafitli gri pik döküm ince ve kalın borular; çapı > 200 mm",
       "tanim_en": "Thin and thick grey cast iron tubes with lamellar graphite; diameter > 200 mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730300900016",
       "tanim_tr": "Demir dökümden ince ve kalın diğer borular; çapı > 200 mm",
       "tanim_en": "Thin and other thick pipes made of cast iron; diameter > 200 mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730300900019",
       "tanim_tr": "Demir dökümden içi boş profiller",
       "tanim_en": "Hollow profiles made of cast iron.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730411000000",
       "tanim_tr": "Paslanmaz çelikten gaz veya petrol boru hatlarında kullanılan ince ve kalın borular; dikişsiz",
       "tanim_en": "Thin and thick pipes made of stainless steel, used in gas or oil pipelines; seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730419100011",
       "tanim_tr": "Demir (döküm demir hariç) veya çelikten (paslanmaz hariç) gaz/petrol boru hatlarında kullanılan ince ve kalın borular; dikişsiz, dış çapı <= 73mm",
       "tanim_en": "Thin and thick pipes made of iron (excluding cast iron) or steel (excluding stainless steel) used in gas/oil pipelines; seamless, outer diameter <= 73mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730419100012",
       "tanim_tr": "Demir (döküm demir hariç) veya çelikten (paslanmaz hariç) gaz/petrol boru hatlarında kullanılan ince/kalın borular; dikişsiz, 73mm<dış çapı<=168,3mm",
       "tanim_en": "Thin/thick pipes made of iron (excluding cast iron) or steel (excluding stainless steel) used in gas/oil pipelines; seamless, 73mm < outer diameter <= 168.3mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730419300011",
       "tanim_tr": "Demir (döküm hariç) veya çelikten (paslanmaz hariç) gaz/petrol boru hatlarında kullanılan ince ve kalın borular; dikişsiz, 168,3mm < dış çapı <= 219mm",
       "tanim_en": "Thin and thick pipes made of iron (excluding cast iron) or steel (excluding stainless steel) used in gas/oil pipelines; seamless, 168.3mm < outer diameter <= 219mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730419300012",
       "tanim_tr": "Demir (döküm hariç) veya çelikten (paslanmaz hariç) gaz/petrol boru hatlarında kullanılan ince ve kalın borular; dikişsiz, 219mm < dış çapı <= 406.4mm",
       "tanim_en": "Thin and thick pipes made of iron (excluding cast iron) or steel (excluding stainless steel) used in gas/oil pipelines; seamless, 219mm < outer diameter <= 406.4mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730419900000",
       "tanim_tr": "Demir (döküm hariç) veya çelikten (paslanmaz hariç) gaz/petrol boru hatlarında kullanılan ince ve kalın borular; dikişsiz, dış çapı > 406.4mm",
       "tanim_en": "Thin and thick pipes made of iron (excluding cast iron) or steel (excluding stainless steel) used in gas/oil pipelines; seamless, outer diameter > 406.4mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730422001000",
       "tanim_tr": "Paslanmaz çelikten gaz veya petrol sondajında kullanılan boruIar; dikişsiz",
       "tanim_en": "Seamless stainless steel pipes used in gas or oil drilling.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730422009000",
       "tanim_tr": "Paslanmaz çelikten gaz veya petrol sondajında kullanılan boruIarın aksam ve parçaları; dikişsiz",
       "tanim_en": "Seamless stainless steel pipes and components used in gas or oil drilling.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730423001000",
       "tanim_tr": "Demir (döküm hariç) veya çelikten (paslanmaz hariç) gaz veya petrol sondajında kullanılan boruIar; dikişsiz",
       "tanim_en": "Pipes made of iron (excluding cast iron) or steel (excluding stainless steel) used in gas or oil drilling; seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730423009000",
       "tanim_tr": "Demir (döküm hariç) veya çelikten (paslanmaz hariç) gaz veya petrol sondajında kullanılan boruIarın aksam ve parçaları; dikişsiz",
       "tanim_en": "Parts and fittings of pipes used in gas or oil drilling, made of iron (excluding cast iron) or steel (excluding stainless steel); seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730424001000",
       "tanim_tr": "Paslanmaz çelikten gaz veya petrol mahfaza veya üretiminde kullanılan borular; dikişsiz",
       "tanim_en": "Seamless pipes made of stainless steel, used in gas or oil casing or production.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730424009000",
       "tanim_tr": "Paslanmaz çelikten gaz veya petrol mahfaza veya üretiminde kullanılan boruların aksam ve parçaları; dikişsiz",
       "tanim_en": "Stainless steel pipes and fittings used in gas or oil casing or production; seamless",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730429101000",
       "tanim_tr": "Demir (döküm hariç) veya çelikten (paslanmaz hariç) gaz/petrol mahfaza/üretiminde kullanılan borular (dış çapı <= 168,3mm); dikişsiz",
       "tanim_en": "Pipes of iron (excluding cast iron) or steel (excluding stainless steel) used in gas/oil containment/production (outer diameter <= 168.3mm); seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730429109000",
       "tanim_tr": "Demir (döküm hariç) veya çelikten (paslanmaz hariç) gaz/petrol mahfaza/üretiminde kullanılan boruların (dış çapı <= 168,3mm) aksam-parçaları; dikişsiz",
       "tanim_en": "Seamless parts/components of pipes (outer diameter <= 168.3mm) made of iron (excluding cast iron) or steel (excluding stainless steel) used in gas/oil casing/production.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730429301011",
       "tanim_tr": "Demir (döküm hariç) veya çelikten (paslanmaz hariç) gaz/petrol mahfaza/üretiminde kullanılan borular (168.3mm < dış çapı <= 244.5mm); dikişsiz",
       "tanim_en": "Pipes of iron (excluding cast iron) or steel (excluding stainless steel) used in gas/oil containment/production (168.3mm < outer diameter <= 244.5mm); seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730429301012",
       "tanim_tr": "Demir (döküm hariç) veya çelikten (paslanmaz hariç) gaz/petrol mahfaza/üretiminde kullanılan borular (244.5mm < dış çapı <= 406.4mm); dikişsiz",
       "tanim_en": "Pipes of iron (excluding cast iron) or steel (excluding stainless steel) used in gas/oil casing/production (244.5mm < outer diameter <= 406.4mm); seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730429309000",
       "tanim_tr": "Demir (döküm hariç) veya çelikten (paslanmaz hariç) gaz/petrol mahfaza/üretiminde kull. boruların (168.3mm<çapı<= 406.4mm) aksam-parçaları; dikişsiz",
       "tanim_en": "Seamless pipe fittings/components (168.3mm <diameter <= 406.4mm) made of iron (excluding cast iron) or steel (excluding stainless steel) used in gas/oil casing/production.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730429901000",
       "tanim_tr": "Demir (döküm hariç) veya çelikten (paslanmaz hariç) gaz/petrol mahfaza/üretiminde kull. borular (dış çapı > 406.4mm); dikişsiz",
       "tanim_en": "Pipes (except cast iron) or steel (except stainless steel) used in gas/oil containment/production (outer diameter > 406.4mm); seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730429909000",
       "tanim_tr": "Demir (döküm hariç) veya çelikten (paslanmaz hariç) gaz/petrol mahfaza/üretiminde kull. boruların (dış çapı > 406.4mm) aksam-parçaları; dikişsiz",
       "tanim_en": "Seamless components of pipes (outer diameter > 406.4mm) made of iron (excluding cast iron) or steel (excluding stainless steel) used in gas/oil casing/production.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730431201000",
       "tanim_tr": "Demir/alaşımsız çelikten kesiti daire şeklinde hassas borular; soğuk çekilmiş/soğuk haddelenmiş, sivil hava taşıtlarındaki gaz-sıvılar için, dikişsiz",
       "tanim_en": "Precision pipes with a circular cross-section, made of iron/non-alloy steel; cold-drawn/cold-rolled, seamless, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730431209000",
       "tanim_tr": "Demirden veya alaşımsız çelikten kesiti daire şeklinde hassas diğer borular; soğuk çekilmiş veya soğuk haddelenmiş, dikişsiz",
       "tanim_en": "Precision pipes of circular cross-section made of iron or non-alloy steel; cold-drawn or cold-rolled, seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730431801000",
       "tanim_tr": "Demir/alaşımsız çelikten kesiti daire şeklinde diğer borular; soğuk çekilmiş/soğuk haddelenmiş, sivil hava taşıtlarındaki gaz-sıvılar için, dikişsiz",
       "tanim_en": "Other pipes of iron/non-alloy steel with a circular cross-section; cold-drawn/cold-rolled, seamless, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730431809000",
       "tanim_tr": "Demirden veya alaşımsız çelikten kesiti daire şeklinde diğer borular; soğuk çekilmiş veya soğuk haddelenmiş, dikişsiz",
       "tanim_en": "Other pipes with a circular cross-section, made of iron or non-alloy steel; cold-drawn or cold-rolled, seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730439501000",
       "tanim_tr": "Demirden/alaşımsız çelikten kesiti daire, diş açılmış/açılabilen borular; sivil hava taşıt. gaz/sıvılar için, dikişsiz, bağlantı parçaları takılmış",
       "tanim_en": "Circular cross-section pipes of iron/non-alloy steel, threaded/threadable; for civil aircraft, gases/liquids, seamless, fitted with fittings.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730439509000",
       "tanim_tr": "Demirden (demir döküm hariç) veya alaşımsız çelikten kesiti daire, diş açılmış/açılabilen diğer gaz boruları; dikişsiz",
       "tanim_en": "Gas pipes of iron (excluding cast iron) or non-alloy steel with a circular cross-section, threaded or threadable; seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730439821000",
       "tanim_tr": "Demirden/alaşımsız çelikten kesiti daire diğer borular; dikişsiz, dış çapı <= 168.3 mm, sivil hava taşıt. gaz-sıvılar için, bağlantı parçası takılmış",
       "tanim_en": "Circular cross-section pipes of iron/non-alloy steel; seamless, outer diameter <= 168.3 mm, for civil aircraft gases and liquids, fitted with fittings.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730439829000",
       "tanim_tr": "Demirden (demir döküm hariç) veya alaşımsız çelikten kesiti daire şeklinde diğer borular; dikişsiz, dış çapı <= 168.3 mm",
       "tanim_en": "Circular pipes of iron (excluding cast iron) or non-alloy steel; seamless, outer diameter <= 168.3 mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730439831000",
       "tanim_tr": "Demirden/alaşımsız çelikten kesiti daire diğer boru; dikişsiz,168.3mm<dış çapı<=406.4 mm, sivil hava taşıt.gaz-sıvılar için, bağlantı parçası takılmış",
       "tanim_en": "Circular cross-section pipe of iron/non-alloy steel; seamless, 168.3 mm < outer diameter <= 406.4 mm, for civil aircraft, gases/liquids, fitted with fitting.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730439839000",
       "tanim_tr": "Demirden (demir döküm hariç) veya alaşımsız çelikten kesiti daire şeklinde diğer borular; dikişsiz, 168.3mm < dış çapı <= 406.4 mm",
       "tanim_en": "Circular-sectioned pipes of iron (excluding cast iron) or non-alloy steel; seamless, 168.3 mm < outer diameter <= 406.4 mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730439881000",
       "tanim_tr": "Demirden/alaşımsız çelikten kesiti daire şeklinde diğer boru; dikişsiz, dış çapı>406.4mm, sivil hava taşıt.gaz-sıvılar için, bağlantı parçası takılmış",
       "tanim_en": "Other pipe of circular cross-section made of iron/non-alloy steel; seamless, outer diameter >406.4mm, for civil aircraft gases/liquids, fitted with fitting.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730439889100",
       "tanim_tr": "Demirden (demir döküm hariç) veya alaşımsız çelikten kesiti daire şeklinde diğer borular; dikişsiz, dış çapı > 421 mm, et kalınlığı > 10.5 mm",
       "tanim_en": "Circular pipes of iron (excluding cast iron) or non-alloy steel; seamless, outer diameter > 421 mm, wall thickness > 10.5 mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730439889900",
       "tanim_tr": "Demirden/alaşımsız çelikten kesiti daire şeklinde diğer borular; dikişsiz, dış çapı > 406.4 mm (dış çapı <= 421 mm ve et kalınlığı <= 10,5 mm HARİÇ)",
       "tanim_en": "Other circular cross-section pipes of iron/non-alloy steel; seamless, outer diameter > 406.4 mm (EXCEPT outer diameter <= 421 mm and wall thickness <= 10.5 mm)",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730441001000",
       "tanim_tr": "Paslanmaz çelikten kesiti daire şeklinde borular; soğuk çekilmiş veya soğuk haddelenmiş, dikişsiz, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Circular cross-section pipes made of stainless steel; cold-drawn or cold-rolled, seamless, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730441009000",
       "tanim_tr": "Paslanmaz çelikten kesiti daire şeklinde diğer borular; soğuk çekilmiş veya soğuk haddelenmiş, dikişsiz",
       "tanim_en": "Other circular cross-sectional pipes of stainless steel; cold-drawn or cold-rolled, seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730449830000",
       "tanim_tr": "Paslanmaz çelikten kesiti daire şeklinde diğer ince ve kalın borular ve içi boş profiller; dikişsiz, dış çapı <= 168,3 mm",
       "tanim_en": "Circular cross-sectional, thin and thick pipes and hollow profiles of stainless steel; seamless, outer diameter <= 168.3 mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730449851000",
       "tanim_tr": "Paslanmaz çelikten kesiti daire ince ve kalın borular; dikişsiz, 168.3mm<dış çapı<=406.4mm, sivil hava taş. gaz-sıvılar için, bağlantı parçası takılı",
       "tanim_en": "Circular cross-section thin and thick pipes of stainless steel; seamless, 168.3mm < outer diameter <= 406.4mm, for civil aviation gas-liquid transport, with fitting attached.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730449859000",
       "tanim_tr": "Paslanmaz çelikten kesiti daire diğer ince ve kalın borular ve içi boş diğer profiller; dikişsiz, 168.3mm < dış çapı <= 406.4 mm",
       "tanim_en": "Circular cross-section, other thin and thick pipes and other hollow profiles of stainless steel; seamless, 168.3 mm < outer diameter <= 406.4 mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730449891000",
       "tanim_tr": "Paslanmaz çelikten kesiti daire diğer ince ve kalın borular; dikişsiz, dış çapı > 406.4 mm, sivil hava taş. gaz-sıvılar için, bağlantı parçası takılı",
       "tanim_en": "Circular cross-section of stainless steel, other thin and thick pipes; seamless, outer diameter > 406.4 mm, for civil aviation transport of gases and liquids, fitted with fitting.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730449899000",
       "tanim_tr": "Paslanmaz çelikten kesiti daire şeklinde diğer ince ve kalın borular ve içi boş diğer profiller; dikişsiz, dış çapı > 406.4 mm",
       "tanim_en": "Circular cross-sectional thin and thick pipes and other hollow profiles of stainless steel; seamless, outer diameter > 406.4 mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730451100000",
       "tanim_tr": "Alaşımlı çelikten daire diğer ince ve kalın borular; soğuk çekilmiş veya soğuk haddelenmiş, dikişsiz, % 0.9<=C<= % 1.15, % 0.5 <=Cr<= % 2 , M <=% 0.5",
       "tanim_en": "Circular, thin and thick pipes of alloy steel; cold drawn or cold rolled, seamless, 0.9% C <= 1.15%, 0.5% Cr <= 2%, M <= 0.5%",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730451811000",
       "tanim_tr": "Diğer alaşımlı çelikten kesiti daire şeklinde hassas borular; soğuk çekilmiş/soğuk haddelenmiş, dikişsiz, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Precision tubes with a circular cross-section made of other alloy steel; cold-drawn/cold-rolled, seamless, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730451819000",
       "tanim_tr": "Diğer alaşımlı çelikten kesiti daire şeklinde hassas diğer borular; soğuk çekilmiş veya soğuk haddelenmiş, dikişsiz",
       "tanim_en": "Other precision tubes with a circular cross-section made of other alloy steel; cold-drawn or cold-rolled, seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730451891000",
       "tanim_tr": "Diğer alaşımlı çelikten kesiti daire diğer borular; soğuk çekilmiş veya soğuk haddelenmiş, dikişsiz, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Other pipes of alloy steel with circular cross-section; cold-drawn or cold-rolled, seamless, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730451899000",
       "tanim_tr": "Diğer alaşımlı çelikten kesiti daire şeklinde diğer borular; soğuk çekilmiş veya soğuk haddelenmiş, dikişsiz",
       "tanim_en": "Other pipes of alloy steel with a circular cross-section; cold-drawn or cold-rolled, seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730459300000",
       "tanim_tr": "Alaşımlı çelikten kesiti daire diğer ince ve kalın borular; dikişsiz, % 0.9<=C <= % 1.15, % 0.5 <= Cr <= % 2 , Mo <= %",
       "tanim_en": "Circular cross-section, other thin and thick pipes of alloy steel; seamless, 0.9% C <= 1.15%, 0.5% Cr <= 2%, Mo <= %",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730459821000",
       "tanim_tr": "Alaşımlı çelikten kesiti daire diğer ince ve kalın borular; dikişsiz, dış çapı <= 168.3 mm, sivil hava taş. gaz-sıvılar için, bağlantı parçası takılı",
       "tanim_en": "Circular cross-section pipes of alloy steel, other thin and thick pipes; seamless, outer diameter <= 168.3 mm, for civil aviation transport of gases and liquids, fitted with fittings.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730459829000",
       "tanim_tr": "Alaşımlı çelikten kesiti daire şeklinde diğer ince ve kalın borular ve içi diğer boş profiller; dikişsiz, dış çapı <= 168.3 mm",
       "tanim_en": "Circular cross-sectional thin and thick pipes and other hollow profiles of alloy steel; seamless, outer diameter <= 168.3 mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730459831000",
       "tanim_tr": "Alaşımlı çelikten daire diğer ince ve kalın borular; dikişsiz, 168.3mm<dış çapı<=406.4mm, sivil hava taş. gaz-sıvılar için, bağlantı parçası takılı",
       "tanim_en": "Circular, thin and thick pipes made of alloy steel; seamless, 168.3mm < outer diameter <= 406.4mm, for civil aviation transport of gases and liquids, with fitting attached.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730459839000",
       "tanim_tr": "Alaşımlı çelikten kesiti daire şeklinde diğer ince ve kalın borular ve içi boş diğer profiller; dikişsiz, 168.3mm < dış çapı <= 406.4mm",
       "tanim_en": "Circular cross-sectional thin and thick pipes and other hollow profiles of alloy steel; seamless, 168.3mm < outer diameter <= 406.4mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730459891000",
       "tanim_tr": "Alaşımlı çelikten kesiti daire şeklinde diğer ince ve kalın; dikişsiz, dış çapı > 406.4mm, sivil hava taşıt. gaz-sıvılar için, bağlantı parçası takılı",
       "tanim_en": "Made of alloy steel, circular cross-section, other thin and thick; seamless, outer diameter > 406.4mm, for civil aircraft, gas-liquids, with fitting attached.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730459899000",
       "tanim_tr": "Alaşımlı çelikten kesiti daire şeklinde diğer ince ve kalın borular ve içi boş diğer profiller; dikişsiz, dış çapı > 406.4mm",
       "tanim_en": "Circular cross-sectional thin and thick pipes and other hollow profiles of alloy steel; seamless, outer diameter > 406.4mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730490001000",
       "tanim_tr": "Demir/çelikten (dökme demir hariç) diğer ince-kalın borular ve diğer profiller; daire olmayan, dikişsiz, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Other thin and thick pipes and profiles of iron/steel (excluding cast iron); non-circular, seamless, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730490009000",
       "tanim_tr": "Demir/çelikten (dökme demir hariç) diğer ince-kalın borular ve diğer profiller; daire olmayan, dikişsiz",
       "tanim_en": "Other thin and thick pipes and profiles of iron/steel (excluding cast iron); non-circular, seamless.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730511000000",
       "tanim_tr": "Demir/çelikten gaz/petrol boru hatlarında kullanılan ince-kalın borular; uzunlamasına toz altı ark kaynaklı, iç/dış kesitleri daire, dış çapı >406.4mm",
       "tanim_en": "Thin and thick pipes made of iron/steel used in gas/oil pipelines; longitudinally submerged arc welded, inner/outer cross-sections circular, outer diameter >406.4mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730512000000",
       "tanim_tr": "Demir/çelikten gaz/petrol boru hatlarında kullanılan ince-kalın borular; uzunlamasına kaynak yapılmış, iç/dış kesitleri daire, dış çapı >406.4mm",
       "tanim_en": "Thin or thick pipes made of iron/steel used in gas/oil pipelines; longitudinally welded, with circular inner/outer cross-sections, outer diameter >406.4mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730519000000",
       "tanim_tr": "Demir/çelikten gaz/petrol boru hatlarında kullanılan ince-kalın borular; perçinli vb. şekillerde kapatılmış, iç/dış kesitleri daire, dış çapı >406.4mm",
       "tanim_en": "Thin or thick pipes made of iron/steel used in gas/oil pipelines; sealed by riveting or similar methods, with circular inner/outer cross-sections and an outer diameter >406.4mm.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730520000000",
       "tanim_tr": "Demir/çelikten gaz/petrol sondajında kullanılan mahfaza boruları; kaynak, perçin vb. şekillerde kapatılmış, iç-dış kesitleri daire, dış çapı > 406.4mm",
       "tanim_en": "Casing pipes made of iron/steel used in gas/oil drilling; sealed by welding, riveting, etc., with circular inner and outer cross-sections, and an outer diameter > 406.4mm.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730531001000",
       "tanim_tr": "Demir/çelikten hidroelektrik tesisleri için basınca dayanıklı borular; uzunlamasına kaynak yapılmış, iç-dış kesitleri daire, dış çapı > 406.4mm",
       "tanim_en": "Pressure-resistant pipes made of iron/steel for hydroelectric power plants; longitudinally welded, inner and outer cross-sections circular, outer diameter > 406.4mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730531009000",
       "tanim_tr": "Demir/çelikten diğer ince ve kalın borular; uzunlamasına kaynak yapılmış, iç-dış kesitleri daire, dış çapı > 406.4mm",
       "tanim_en": "Other thin and thick pipes of iron/steel; longitudinally welded, inner and outer cross-sections circular, outer diameter > 406.4mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730539001000",
       "tanim_tr": "Demir/çelikten hidroelektrik tesisleri için basınca dayanıklı borular; diğer şekilde kaynak yapılmış, iç-dış kesitleri daire, dış çapı > 406.4mm",
       "tanim_en": "Pressure-resistant pipes of iron/steel for hydroelectric power plants; otherwise welded, with circular inner and outer cross-sections, outer diameter > 406.4mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730539009000",
       "tanim_tr": "Demir/çelikten diğer ince ve kalın borular; diğer şekilde kaynak yapılmış, iç-dış kesitleri daire, dış çapı > 406.4mm",
       "tanim_en": "Other thin and thick pipes of iron/steel; otherwise welded, inner and outer cross-sections circular, outer diameter > 406.4mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730590001000",
       "tanim_tr": "Demir/çelikten hidroelektrik tesisleri için basınca dayanıklı borular; perçinli vb. şekillerde kapatılmış, iç-dış kesitleri daire, dış çapı > 406.4mm",
       "tanim_en": "Pressure-resistant pipes made of iron/steel for hydroelectric power plants; sealed by riveting or other methods, with circular inner and outer cross-sections, and an outer diameter > 406.4mm.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730590009000",
       "tanim_tr": "Demir/çelikten diğer ince ve kalın borular; perçinli vb. şekillerde kapatılmış, iç-dış kesitleri daire, dış çapı > 406.4mm",
       "tanim_en": "Other thin and thick pipes of iron/steel; sealed by riveting or similar methods, with circular inner and outer cross-sections, and an outer diameter > 406.4 mm.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730611000000",
       "tanim_tr": "Paslanmaz çelikten gaz veya petrol boru hatlarında kullanılan diğer borular; kaynak yapılmış",
       "tanim_en": "Other pipes made of stainless steel used in gas or oil pipelines; welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730619000000",
       "tanim_tr": "Demir veya çelikten (paslanmaz çelik hariç) gaz veya petrol boru hatlarında kullanılan diğer borular; kaynak yapılmış",
       "tanim_en": "Other pipes made of iron or steel (excluding stainless steel) used in gas or oil pipelines; welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730621000000",
       "tanim_tr": "Paslanmaz çelikten gaz veya petrol sondajında kullanılan mahfaza veya üretim için diğer boruları; kaynak yapılmış",
       "tanim_en": "Stainless steel casings or other pipes used in gas or oil drilling or for production; welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730629000000",
       "tanim_tr": "Demir/çelikten (paslanmaz çelik hariç) gaz/petrol sondajında kullanılan mahfaza/üretim boruları; açık dikiş perçin yapılmış vb. şekillerde kapatılmış",
       "tanim_en": "Casing/production pipes made of iron/steel (excluding stainless steel) used in gas/oil drilling; closed with open seam rivets, etc.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630121000",
       "tanim_tr": "Demir/alaşımsız çelikten daire ince ve kalın hassas borular; soğuk çekilmiş/hadd., kaynaklı, sivil hava taş. gaz-sıvılar için, bağlantı parçası takılı",
       "tanim_en": "Circular thin and thick precision pipes of iron/non-alloy steel; cold drawn/rolled, welded, for civil aviation transport of gases and liquids, fitted with fittings.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630129000",
       "tanim_tr": "Demir veya alaşımsız çelikten kesiti daire şeklinde ince ve kalın hassas diğer borular; soğuk çekilmiş veya soğuk haddelenmiş, kaynaklı",
       "tanim_en": "Thin and thick precision pipes with a circular cross-section, made of iron or non-alloy steel; cold-drawn or cold-rolled, welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630181000",
       "tanim_tr": "Demir/alaşımsız çelikten kesiti daire ince ve kalın diğer hassas borular; kaynaklı, sivil hava taşıt. gaz-sıvılar için, bağlantı parçası takılmış",
       "tanim_en": "Circular cross-section, thin and thick, other precision pipes of iron/non-alloy steel; welded, for civil aircraft, gases and liquids, fitted with fittings.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630189000",
       "tanim_tr": "Demir veya alaşımsız çelikten kesiti daire şeklinde ince ve kalın hassas diğer borular; soğuk çekilmiş veya soğuk haddelenmiş HARİÇ, kaynaklı",
       "tanim_en": "Thin and thick precision pipes of circular cross-section, made of iron or non-alloy steel; EXCEPT cold-drawn or cold-rolled, welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630411000",
       "tanim_tr": "Demir/alaşımsız çelikten kesiti daire olan diş açılmış/açılabilir diğer gaz boruları; çinko kaplı, kaynak yapılmış, sivil hava taşıt. gaz-sıvılar için",
       "tanim_en": "Threaded/threadable gas pipes of iron/non-alloy steel with a circular cross-section; zinc-coated, welded, for civil aircraft gases and liquids.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630419000",
       "tanim_tr": "Demir/alaşımsız çelikten kesiti daire olan diş açılmış/açılabilir diğer gaz boruları; çinko ile kaplanmış, kaynak yapılmış",
       "tanim_en": "Threaded/threadable gas pipes of iron/non-alloy steel with a circular cross-section; zinc-coated, welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630491000",
       "tanim_tr": "Demir/alaşımsız çelikten kesiti daire olan diş açılmış/açılabilir diğer gaz boruları; kaynak yapılmış, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Threaded/threadable gas pipes of iron/non-alloy steel with a circular cross-section; welded, for gas-liquid use in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630499000",
       "tanim_tr": "Demir/alaşımsız çelikten kesiti daire olan diş açılmış/açılabilir diğer gaz boruları; kaynak yapılmış",
       "tanim_en": "Threaded/threadable gas pipes of iron/non-alloy steel with a circular cross-section; welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630721000",
       "tanim_tr": "Demir/alaşımsız çelikten kesiti daire diğer borular; çinko kaplanmış, kaynak yapılmış, dış çapı <= 168.3mm, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Circular cross-section pipes of iron/non-alloy steel; zinc coated, welded, outer diameter <= 168.3mm, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630729000",
       "tanim_tr": "Demir/alaşımsız çelikten kesiti daire olan diğer borular; çinko kaplanmış, kaynak yapılmış, dış çapı <= 168.3mm",
       "tanim_en": "Other circular pipes made of iron/non-alloy steel; zinc coated, welded, outer diameter <= 168.3mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630771000",
       "tanim_tr": "Demir/alaşımsız çelikten kesiti daire olan diğer borular; kaynak yapılmış, dış çapı <= 168.3mm, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Other circular cross-section pipes of iron/non-alloy steel; welded, outer diameter <= 168.3mm, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630779000",
       "tanim_tr": "Demir/alaşımsız çelikten kesiti daire olan diğer borular; kaynak yapılmış, dış çapı <= 168.3mm",
       "tanim_en": "Other pipes of iron/non-alloy steel with a circular cross-section; welded, outer diameter <= 168.3mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630801000",
       "tanim_tr": "Demir/alaşımsız çelikten kesiti daire olan diğer borular; kaynak yapılmış, 168.3mm < dış çapı <= 406.4mm, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Other circular cross-section pipes of iron/non-alloy steel; welded, 168.3mm < outer diameter <= 406.4mm, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730630809000",
       "tanim_tr": "Demir/alaşımsız çelikten kesiti daire olan diğer borular; kaynak yapılmış, 168.3mm < dış çapı <= 406.4mm",
       "tanim_en": "Other pipes of iron/non-alloy steel with a circular cross-section; welded, 168.3mm < outer diameter <= 406.4mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730640201000",
       "tanim_tr": "Paslanmaz çelikten kesiti daire olan diğer borular; kaynak yapılmış, soğuk çekilmiş/soğuk haddelenmiş, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Other circular cross-sectional pipes made of stainless steel; welded, cold-drawn/cold-rolled, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730640209000",
       "tanim_tr": "Paslanmaz çelikten kesiti daire şeklinde olan diğer borular; kaynak yapılmış, soğuk çekilmiş veya soğuk haddelenmiş",
       "tanim_en": "Other pipes made of stainless steel with a circular cross-section; welded, cold-drawn or cold-rolled.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730640801000",
       "tanim_tr": "Paslanmaz çelikten kesiti daire olan diğer borular; kaynak yapılmış, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Other circular cross-sectional pipes made of stainless steel; welded, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730640809000",
       "tanim_tr": "Paslanmaz çelikten kesiti daire şeklinde olan diğer borular; kaynak yapılmış",
       "tanim_en": "Other pipes made of stainless steel with a circular cross-section; welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730650211000",
       "tanim_tr": "Alaşımlı çelikten daire ince ve kalın hassas borular; soğuk çekilmiş/haddelenmiş, kaynaklı, sivil hava taş. gaz-sıvılar için, bağlantı parçası takılı",
       "tanim_en": "Circular thin and thick precision pipes of alloy steel; cold drawn/rolled, welded, for civil aviation transport of gases and liquids, with fittings attached.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730650219000",
       "tanim_tr": "Alaşımlı çelikten kesiti daire şeklinde ince ve kalın hassas diğer borular; soğuk çekilmiş veya soğuk haddelenmiş, kaynaklı",
       "tanim_en": "Thin and thick precision pipes with a circular cross-section made of alloy steel; cold-drawn or cold-rolled, welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730650291000",
       "tanim_tr": "Alaşımlı çelikten kesiti daire ince ve kalın diğer hassas borular; kaynaklı, sivil hava taşıtlarındaki gaz-sıvılar için, bağlantı parçası takılmış",
       "tanim_en": "Circular cross-section thin and thick precision pipes of alloy steel; welded, for gas-liquid transport in civil aircraft, fitted with fittings.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730650299000",
       "tanim_tr": "Alaşımlı çelikten kesiti daire şeklinde ince ve kalın hassas diğer borular; soğuk çekilmiş veya soğuk haddelenmiş HARİÇ, kaynaklı",
       "tanim_en": "Thin and thick precision pipes of alloy steel with a circular cross-section; EXCEPT cold-drawn or cold-rolled, welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730650801000",
       "tanim_tr": "Diğer alaşımlı çelikten kesiti daire şeklinde olan diğer borular; kaynak yapılmış, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Other pipes made of alloy steel with a circular cross-section; welded, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730650809000",
       "tanim_tr": "Diğer alaşımlı çelikten kesiti daire şeklinde olan diğer borular; kaynak yapılmış",
       "tanim_en": "Other pipes made of alloy steel with a circular cross-section; welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730661100000",
       "tanim_tr": "Paslanmaz çelikten kesiti kare veya dikdörtgen şeklinde olan borular; kaynak yapılmış",
       "tanim_en": "Stainless steel pipes with a square or rectangular cross-section; welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730661921000",
       "tanim_tr": "Demir/çelikten (paslanmaz hariç) kesiti kare/dikdörtgen olan borular; kaynak yapılmış, et kalınlığı <= 2mm, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Pipes made of iron/steel (excluding stainless steel) with a square/rectangular cross-section; welded, wall thickness <= 2mm, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730661929000",
       "tanim_tr": "Demir veya çelikten (paslanmaz hariç) kesiti kare veya dikdörtgen şeklinde olan diğer borular; kaynak yapılmış, et kalınlığı <= 2mm",
       "tanim_en": "Other pipes made of iron or steel (excluding stainless steel), with a square or rectangular cross-section; welded, wall thickness <= 2mm.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730661991000",
       "tanim_tr": "Demir/çelikten (paslanmaz hariç) kesiti kare/dikdörtgen olan borular; kaynak yapılmış, et kalınlığı > 2mm, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Pipes made of iron/steel (excluding stainless steel) with a square/rectangular cross-section; welded, wall thickness > 2mm, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730661999000",
       "tanim_tr": "Demir veya çelikten (paslanmaz hariç) kesiti kare veya dikdörtgen şeklinde olan diğer borular; kaynak yapılmış, et kalınlığı > 2mm",
       "tanim_en": "Other pipes made of iron or steel (excluding stainless steel), with a square or rectangular cross-section; welded, wall thickness > 2mm.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730669101000",
       "tanim_tr": "Paslanmaz çelikten kesiti kare, dikdörtgen, daire şeklinde olmayan diğer borular; kaynak yapılmış, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Other pipes made of stainless steel with non-square, rectangular, or circular cross-sections; welded, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730669109000",
       "tanim_tr": "Paslanmaz çelikten kesiti kare, dikdörtgen, daire şeklinde olmayan diğer borular; kaynak yapılmış",
       "tanim_en": "Other pipes made of stainless steel that do not have a square, rectangular, or circular cross-section; welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730669901000",
       "tanim_tr": "Demir/çelikten (paslanmaz hariç) kesiti kare, dikdörtgen, daire olmayan diğer borular; kaynak yapılmış, sivil hava taşıtlarındaki gaz-sıvılar için",
       "tanim_en": "Pipes made of iron/steel (excluding stainless steel) with non-square, rectangular, or non-circular cross-sections; welded, for gases and liquids in civil aircraft.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730669909000",
       "tanim_tr": "Demir veya çelikten (paslanmaz hariç) kesiti kare, dikdörtgen, daire şeklinde olmayan diğer borular; kaynak yapılmış",
       "tanim_en": "Pipes made of iron or steel (except stainless steel) whose cross-section is not square, rectangular or circular; welded.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730690000011",
       "tanim_tr": "Demir/çelikten hava kanalı; açık dikiş, perçin yapılmış veya benzeri şekillerde kapatılmış",
       "tanim_en": "Air duct made of iron/steel; open seam, riveted or similarly sealed.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730690000012",
       "tanim_tr": "Demir veya çelikten tıbbi iğne yapımında kullanılan borular (çapı 0,2 mm ila 3 mm)",
       "tanim_en": "Iron or steel tubes (0.2 mm to 3 mm in diameter) used in the manufacture of medical needles.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730690000019",
       "tanim_tr": "Demir/çelikten diğer ince ve kalın borular ve içi boş profiller; açık dikiş, perçin yapılmış veya benzeri şekillerde kapatılmış",
       "tanim_en": "Other thin and thick pipes and hollow profiles of iron/steel; closed with open seams, riveted or in similar ways.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730711100000",
       "tanim_tr": "Dövülemeyen demir dökümden boru bağlantı parçaları (rakorlar, dirsekler ve manşonlar gibi); basınç sistemlerinde kullanılanlar",
       "tanim_en": "Pipe fittings (such as connectors, elbows, and sleeves) made from non-malleable cast iron; used in pressure systems.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730711900000",
       "tanim_tr": "Dövülemeyen demir dökümden boru bağlantı parçaları (rakorlar, dirsekler ve manşonlar gibi); basınç sistemlerinde kullanılanlar HARİÇ",
       "tanim_en": "Pipe fittings made of non-malleable cast iron (such as couplings, elbows and sleeves); EXCEPT those used in pressure systems.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730719100000",
       "tanim_tr": "Demir dökümden (dövülemeyen HARİÇ) boru bağlantı parçaları (rakorlar, dirsekler ve manşonlar gibi)",
       "tanim_en": "Pipe fittings (such as connectors, elbows and sleeves) made of cast iron (EXCEPT for non-malleable iron)",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730719900000",
       "tanim_tr": "Çelik dökümden boru bağlantı parçaları (rakorlar, dirsekler ve manşonlar gibi)",
       "tanim_en": "Pipe fittings made of cast steel (such as connectors, elbows, and sleeves)",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730721000000",
       "tanim_tr": "Borular için paslanmaz çelikten flanşlar",
       "tanim_en": "Stainless steel flanges for pipes.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730722100000",
       "tanim_tr": "Borular için paslanmaz çelikten diş açılmış manşonlar",
       "tanim_en": "Threaded sleeves made of stainless steel for pipes.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730722900000",
       "tanim_tr": "Borular için paslanmaz çelikten diş açılmış dirsekler ve kavisler",
       "tanim_en": "Threaded elbows and bends made of stainless steel for pipes.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730723100000",
       "tanim_tr": "Borular için paslanmaz çelikten uç uca kaynak yapılacak dirsekler ve kavisler",
       "tanim_en": "Elbows and bends for pipes to be welded end-to-end from stainless steel.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730723900000",
       "tanim_tr": "Borular için paslanmaz çelikten uç uca kaynak yapılacak bağlantı parçaları; dirsekler ve kavisler HARİÇ",
       "tanim_en": "Stainless steel end-to-end welded fittings for pipes; EXCLUDING elbows and bends.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730729100000",
       "tanim_tr": "Borular için paslanmaz çelikten diş açılmış diğer bağlantı parçaları",
       "tanim_en": "Other threaded stainless steel fittings for pipes.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730729800000",
       "tanim_tr": "Borular için paslanmaz çelikten diş açılmamış diğer bağlantı parçaları",
       "tanim_en": "Other unthreaded stainless steel fittings for pipes",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730791000000",
       "tanim_tr": "Borular için demir veya çelikten (döküm ve paslanmaz hariç) flanşlar",
       "tanim_en": "Flanges for pipes made of iron or steel (excluding cast iron and stainless steel).",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730792100000",
       "tanim_tr": "Borular için demir veya çelikten (döküm ve paslanmaz hariç) diş açılmış manşonlar",
       "tanim_en": "Threaded sleeves for pipes made of iron or steel (excluding cast iron and stainless steel).",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730792900000",
       "tanim_tr": "Borular için demir veya çelikten (döküm ve paslanmaz hariç) diş açılmış dirsekler ve kavisler",
       "tanim_en": "Threaded elbows and bends for pipes made of iron or steel (excluding cast iron and stainless steel).",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730793110000",
       "tanim_tr": "Borular için demir veya çelikten (döküm ve paslanmaz hariç) uç uca kaynak yapılacak dirsekler ve kavisler; en büyük dış çapı <= 609.6mm",
       "tanim_en": "Elbows and bends for pipes, made of iron or steel (excluding cast iron and stainless steel), to be welded end-to-end; maximum outer diameter <= 609.6mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730793190000",
       "tanim_tr": "Borular için demir veya çelikten (döküm ve paslanmaz hariç) uç uca kaynak yapılacak diğer bağlantı parçaları; en büyük dış çapı <= 609.6mm",
       "tanim_en": "Other fittings for pipes to be welded end-to-end from iron or steel (excluding cast iron and stainless steel); maximum outer diameter <= 609.6mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730793910000",
       "tanim_tr": "Borular için demir veya çelikten (döküm ve paslanmaz hariç) uç uca kaynak yapılacak dirsekler ve kavisler; en büyük dış çapı > 609.6mm",
       "tanim_en": "Elbows and bends for pipes, made of iron or steel (excluding cast iron and stainless steel), to be welded end-to-end; maximum outer diameter > 609.6mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730793990000",
       "tanim_tr": "Borular için demir veya çelikten (döküm ve paslanmaz hariç) uç uca kaynak yapılacak diğer bağlantı parçaları; en büyük dış çapı > 609.6mm",
       "tanim_en": "Other fittings for pipes to be welded end-to-end from iron or steel (excluding cast iron and stainless steel); maximum outer diameter > 609.6mm",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730799100000",
       "tanim_tr": "Borular için demir veya çelikten (döküm ve paslanmaz hariç) diş açılmış diğer bağlantı parçaları",
       "tanim_en": "Other threaded fittings for pipes made of iron or steel (excluding cast iron and stainless steel).",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730799800000",
       "tanim_tr": "Borular için demir veya çelikten (döküm ve paslanmaz hariç) diş açılmamış diğer bağlantı parçaları",
       "tanim_en": "Other unthreaded fittings for pipes made of iron or steel (excluding cast iron and stainless steel).",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730810000000",
       "tanim_tr": "Demir veya çelikten köprüler ve köprü aksamı",
       "tanim_en": "Bridges and bridge components made of iron or steel.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730820100000",
       "tanim_tr": "Boru şeklinde rüzgar türbini çelik kuleleri ve kule bölümleri",
       "tanim_en": "Tubular wind turbine steel towers and tower sections",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730820900000",
       "tanim_tr": "Demir veya çelikten diğer kuleler ve pilonlar",
       "tanim_en": "Other towers and pylons made of iron or steel",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730830000011",
       "tanim_tr": "Soğuk hava depoları için demir veya çelikten kapılar, pencereler ve bunların çerçeveleri ile kapı eşikleri",
       "tanim_en": "Iron or steel doors, windows and their frames, and door thresholds for cold storage facilities.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730830000019",
       "tanim_tr": "Diğer inşaatlar için demir veya çelikten kapılar, pencereler ve bunların çerçeveleri ile kapı eşikleri",
       "tanim_en": "Doors, windows and their frames and door thresholds made of iron or steel for other constructions.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730840000000",
       "tanim_tr": "İnşaat için demir veya çelikten iskele kurmaya ve beton kalıplamaya, destek vurmaya veya maden direkleri yapmaya mahsus benzeri malzeme",
       "tanim_en": "Materials for erecting scaffolding from iron or steel for construction, for concrete molding, for driving supports, or for making mine props.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730890510000",
       "tanim_tr": "İnşaat için demir veya çelikten izole edilmiş iki oluklu sacdan müteşekkil kaplamalıklar",
       "tanim_en": "Construction cladding made of two corrugated sheets insulated from iron or steel.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730890590011",
       "tanim_tr": "Demir veya çelikten sadece veya esasen sac halinde olan inşaat aksamı",
       "tanim_en": "Construction components made of iron or steel, either solely or primarily in sheet form.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730890590019",
       "tanim_tr": "Demir veya çelikten sadece veya esasen sac halinde olan diğer inşaat malzemeleri",
       "tanim_en": "Other construction materials made of iron or steel, or primarily in sheet form.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730890980012",
       "tanim_tr": "İnşaat için demir veya çelikten izole edilmiş tek veya çift cidarlı metalik doğalgaz baca sistemi",
       "tanim_en": "Single or double-walled metallic natural gas flue systems insulated from iron or steel for construction.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730890980013",
       "tanim_tr": "İnşaat için demir veya çelikten perfore profiller",
       "tanim_en": "Perforated profiles made of iron or steel for construction.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730890980015",
       "tanim_tr": "İnşaat için demir veya çelikten tek yönlü yaylı klape",
       "tanim_en": "One-way spring-loaded damper made of iron or steel for construction.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730890980016",
       "tanim_tr": "İnşaat için demir veya çelikten sandviç panel",
       "tanim_en": "Sandwich panels made of iron or steel for construction.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730890980017",
       "tanim_tr": "İnşaat için demir veya çelikten çapı 2000 mm, yüksekliği 60 mm den büyük olan bağlantı elemanları",
       "tanim_en": "Construction fasteners made of iron or steel with a diameter greater than 2000 mm and a height greater than 60 mm.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730890980018",
       "tanim_tr": "Demir/çelikten diğer inşaat (94.06 pozisyonundaki prefabrik yapılar hariç), diğer inşaat aksamı ve inşaatta kullanılan diğer çubuk, profil, boru vb",
       "tanim_en": "Other construction materials of iron/steel (excluding prefabricated structures of heading 94.06), other construction components and other bars, profiles, pipes etc. used in construction.",
       "grup": "627",
-      "oran": 0.5
+      "oran": 0.5,
+      "oran_kesir": "5/10",
+      "ad_tr": "Demir-çelik ürünlerinin teslimi",
+      "kanun_dayanagi": "KDV Genel Uygulama Tebliği (I/C-2.1.3.3.8)"
     },
     {
       "kod": "730900100011",

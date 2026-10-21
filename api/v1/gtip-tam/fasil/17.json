@@ -17,8 +17,8 @@
         "ticaret"
       ]
     },
-    "surum": "2026.10.20",
-    "guncelleme": "2026-10-20",
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
     "yayin_durumu": "yayinda",
     "zaman": {
       "bazli": false,
@@ -44,8 +44,8 @@
       {
         "kod": "gib-kdv-oranlari",
         "ad": {
-          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
-          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
         },
         "tur": "bkk_eki_liste",
         "kurum_kod": "gib",
@@ -86,6 +86,24 @@
         "tarih": "2008-01-12"
       },
       {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
+          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
+        },
+        "resmi_gazete": "32241",
+        "tarih": "2023-07-07"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
+          "en": "Presidential Decision No. 9126 (amendment to List II)"
+        },
+        "resmi_gazete": "32722",
+        "tarih": "2024-11-14"
+      },
+      {
         "tur": "kanun",
         "ad": {
           "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
@@ -93,6 +111,24 @@
         },
         "resmi_gazete": "24783",
         "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
       }
     ],
     "uretim": {
@@ -104,13 +140,13 @@
         },
         {
           "servis_kod": "kdv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+          "surum": "2026.10.21",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
         },
         {
           "servis_kod": "otv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+          "surum": "2026.10.21",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
         },
         {
           "servis_kod": "tevkifat-oranlari",
@@ -121,13 +157,18 @@
           "servis_kod": "randiman",
           "surum": "2026.01.01",
           "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.21",
+          "checksum": "sha256:0d2f2bbedb7b830c36bc195160da59ef4ba6fc8245465e18cbfcc29d8cbd810f"
         }
       ],
       "kural_seti": {
         "kod": "coklu-kural",
-        "surum": "2026.10.20"
+        "surum": "2026.10.21"
       },
-      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "uretim_zamani": "2026-10-21T10:46:36.400758+00:00",
       "eslesme_ozeti": {
         "toplam": 15799,
         "eslesen": 15799,
@@ -146,8 +187,8 @@
       "tanim_tr": "Pancar şekeri (ham); ilave aroma veya renk verici madde içermeyen, rafine edilecek olanlar (katı halde)",
       "tanim_en": "Beet sugar (raw); that which is to be refined (in solid form) and contains no added flavoring or coloring agents.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -156,6 +197,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -175,8 +219,8 @@
       "tanim_tr": "Pancar şekeri (ham); ilave aroma veya renk verici madde içermeyen fakat rafine edilecek olanlar HARİÇ (katı halde)",
       "tanim_en": "Beet sugar (raw); excluding those that do not contain added flavorings or coloring agents but are to be refined (in solid form)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -185,6 +229,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -204,8 +251,8 @@
       "tanim_tr": "Kamış şekeri (ham); rafine edilecek olanlar, kuru halde sakkaroz miktarı polarimetre okuma olarak >= %69, fakat < %93 (katı halde)",
       "tanim_en": "Cane sugar (raw); those to be refined, dry sucrose content >= 69% as polarimeter reading, but < 93% (in solid state)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -214,6 +261,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -233,8 +283,8 @@
       "tanim_tr": "Kamış şekeri (ham); rafine edilecek olanlar HARİÇ, kuru halde sakkaroz miktarı polarimetre okuma olarak >= %69, fakat < %93 (katı halde)",
       "tanim_en": "Cane sugar (raw); EXCEPT those to be refined, sucrose content in dry state as a polarimeter reading >= 69%, but < 93% (in solid state)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -243,6 +293,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -262,8 +315,8 @@
       "tanim_tr": "Diğer kamış şekeri; rafine edilecek olanlar (katı halde)",
       "tanim_en": "Other cane sugar; those to be refined (in solid form)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -272,6 +325,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -291,8 +347,8 @@
       "tanim_tr": "Diğer kamış şekeri; rafine edilecek olanlar HARİÇ (katı halde)",
       "tanim_en": "Other cane sugar; EXCEPT that which is to be refined (in solid form)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -301,6 +357,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -320,8 +379,8 @@
       "tanim_tr": "Rafine edilmiş katı haldeki kamış veya pancar şekeri; ilave aroma veya renk verici maddeler içerenler",
       "tanim_en": "Refined solid cane or beet sugar; those containing added flavoring or coloring agents.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -330,6 +389,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -349,8 +411,8 @@
       "tanim_tr": "Kristal beyaz şeker; ilave aroma veya renk verici madde içerenler HARİÇ (katı halde)",
       "tanim_en": "Crystal white sugar; EXCEPT those containing added flavoring or coloring agents (in solid form)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -359,6 +421,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -378,8 +443,8 @@
       "tanim_tr": "Küp ve kesme beyaz şeker; ilave aroma veya renk verici madde içerenler HARİÇ (katı halde)",
       "tanim_en": "Cube and granulated white sugar; EXCEPT those containing added flavoring or coloring agents (in solid form)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -388,6 +453,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -407,8 +475,8 @@
       "tanim_tr": "Kimyaca saf sakkaroz (katı halde); ilave aroma veya renk verici madde içerenler HARİÇ (katı halde)",
       "tanim_en": "Chemically pure sucrose (in solid form); EXCEPT those containing added flavoring or coloring agents (in solid form)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -417,6 +485,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -436,8 +507,8 @@
       "tanim_tr": "Pudra şekeri, ; ilave aroma veya renk verici madde içerenler HARİÇ (katı halde)",
       "tanim_en": "Powdered sugar, excluding those containing added flavoring or coloring agents (in solid form).",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -446,6 +517,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -465,8 +539,8 @@
       "tanim_tr": "Diğer beyaz şeker; ilave aroma veya renk verici madde içerenler HARİÇ (katı halde)",
       "tanim_en": "Other white sugar; EXCEPT those containing added flavoring or coloring agents (in solid form)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -475,6 +549,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -494,8 +571,8 @@
       "tanim_tr": "Beyaz dışındaki şekerler; ilave aroma veya renk verici madde içerenler HARİÇ (katı halde)",
       "tanim_en": "Sugars other than white sugars; EXCEPT those containing added flavoring or coloring agents (in solid form)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -504,6 +581,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -523,8 +603,8 @@
       "tanim_tr": "Laktoz; kuru madde üzerinden hesaplandığında laktoz miktarı >= %99",
       "tanim_en": "Lactose; when calculated on a dry matter basis, the lactose content is >= 99%.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -533,6 +613,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -544,8 +627,8 @@
       "tanim_tr": "Laktoz şurubu; kuru madde üzerinden hesaplandığında laktoz miktarı >= %99",
       "tanim_en": "Lactose syrup; lactose content >= 99% when calculated on a dry matter basis.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -554,6 +637,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -565,8 +651,8 @@
       "tanim_tr": "Laktoz; kuru madde üzerinden hesaplandığında laktoz miktarı < %99",
       "tanim_en": "Lactose; when calculated on a dry matter basis, the lactose content is <99%.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -575,6 +661,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -586,8 +675,8 @@
       "tanim_tr": "Laktoz şurubu; kuru madde üzerinden hesaplandığında laktoz miktarı < %99",
       "tanim_en": "Lactose syrup; lactose content < 99% when calculated on a dry matter basis.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -596,6 +685,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -607,8 +699,8 @@
       "tanim_tr": "Akçaağaç şekeri; katı halde, ilave aroma/renk verici maddeler içeren",
       "tanim_en": "Maple sugar; in solid form, containing added flavoring/coloring agents.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -617,6 +709,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -628,8 +723,8 @@
       "tanim_tr": "Akçaağaç şekeri ve şurubu; katı halde, ilave aroma/renk verici maddeler içermeyen",
       "tanim_en": "Maple sugar and syrup; solid form, without added flavorings or coloring agents.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -638,6 +733,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -649,8 +747,8 @@
       "tanim_tr": "İzoglikoz; fruktoz içermeyenler veya kuru halde ağırlık itibariyle fruktoz oranı < % 20",
       "tanim_en": "Isoglucose; fructose-free or with a fructose content of <20% by weight in dry form.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -659,6 +757,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -670,8 +771,8 @@
       "tanim_tr": "Glikoz; beyaz kristal toz halinde (aglomere edilmiş olsun olmasın); kuru halde ağırlık itibariyle fruktoz oranı < % 20",
       "tanim_en": "Glucose; as a white crystalline powder (whether or not agglomerated); dry form with fructose content < 20% by weight.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -680,6 +781,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -691,8 +795,8 @@
       "tanim_tr": "Glikoz şurubu ve diğer glikoz; kuru halde ağırlık itibariyle fruktoz oranı < % 20",
       "tanim_en": "Glucose syrup and other glucose; fructose content by weight in dry form < 20%",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -701,6 +805,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -712,8 +819,8 @@
       "tanim_tr": "İzoglikoz; kuru halde ağırlık itibariyle fruktoz oranı >= % 20 fakat <%50",
       "tanim_en": "Isoglucose; in dry form, fructose content by weight >= 20% but <50%",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -722,6 +829,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -733,8 +843,8 @@
       "tanim_tr": "Glikoz şurubu ve diğer glikoz; kuru halde ağırlık itibariyle fruktoz oranı >= % 20 fakat <%50",
       "tanim_en": "Glucose syrup and other glucose; fructose content by weight in dry form >= 20% but <50%",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -743,6 +853,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -754,8 +867,8 @@
       "tanim_tr": "Kimyaca saf fruktoz; katı halde",
       "tanim_en": "Chemically pure fructose; in solid form.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -764,6 +877,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -775,8 +891,8 @@
       "tanim_tr": "İzoglikoz; kuru halde ağırlık itibariyle fruktoz oranı > %50 (invert şeker HARİÇ)",
       "tanim_en": "Isoglucose; fructose content by weight in dry form > 50% (excluding invert sugar)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -785,6 +901,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -796,8 +915,8 @@
       "tanim_tr": "İnülin şurubu; kuru halde ağırlık itibariyle fruktoz oranı > %50 (invert şeker HARİÇ)",
       "tanim_en": "Inulin syrup; fructose content by weight in dry form > 50% (excluding invert sugar)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -806,6 +925,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -817,8 +939,8 @@
       "tanim_tr": "Fruktoz şurubu ve diğer fruktoz; kuru halde ağırlık itibariyle fruktoz oranı > %50 (invert şeker HARİÇ)",
       "tanim_en": "Fructose syrup and other fructose; fructose content by weight in dry form > 50% (EXCLUDING invert sugar)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -827,6 +949,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -838,8 +963,8 @@
       "tanim_tr": "Kimyaca saf maltoz",
       "tanim_en": "Chemically pure maltose",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -848,6 +973,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -859,8 +987,8 @@
       "tanim_tr": "İzoglikoz; kuru halde ağırlık itibariyle fruktoz oranı = %50",
       "tanim_en": "Isoglucose; fructose content by weight in dry state = 50%",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -869,6 +997,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -880,8 +1011,8 @@
       "tanim_tr": "Diyet mamaları (Malto dekstrin ve malto dekstrin şurubu)",
       "tanim_en": "Dietary supplements (Malto dextrin and malto dextrin syrup)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -890,6 +1021,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -901,8 +1035,8 @@
       "tanim_tr": "Malto dekstrin ve malto dekstrin şurubu; diyet mamaları HARİÇ",
       "tanim_en": "Maltodextrin and maltodextrin syrup; EXCEPT for dietary supplements.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -911,6 +1045,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -922,8 +1059,8 @@
       "tanim_tr": "Karamel; kuru halde ağırlık itibariyle sakkaroz oranı >= %50",
       "tanim_en": "Caramel; in dry form, sucrose content by weight >= 50%",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -932,6 +1069,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -943,8 +1083,8 @@
       "tanim_tr": "Karamel; toz halinde, kuru halde ağırlık itibariyle sakkaroz oranı < %50",
       "tanim_en": "Caramel; in powder form, dry with sucrose content <50% by weight.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -953,6 +1093,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -964,8 +1107,8 @@
       "tanim_tr": "Karamel; toz halinde olmayan, kuru halde ağırlık itibariyle sakkaroz oranı < %50",
       "tanim_en": "Caramel; not in powder form, but in dry form with a sucrose content of <50% by weight.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -974,6 +1117,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -985,8 +1131,8 @@
       "tanim_tr": "İnülin şurubu",
       "tanim_en": "Inulin syrup",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -995,6 +1141,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1006,8 +1155,8 @@
       "tanim_tr": "Suni bal; diabetik olan",
       "tanim_en": "Artificial honey; for diabetics",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1016,6 +1165,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1027,8 +1179,8 @@
       "tanim_tr": "Suni bal; diabetik olan HARİÇ",
       "tanim_en": "Artificial honey; EXCEPT for diabetics.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1037,6 +1189,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1048,8 +1203,8 @@
       "tanim_tr": "Katı haldeki diğer şekerler",
       "tanim_en": "Other solid sugars",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1058,6 +1213,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1069,8 +1227,8 @@
       "tanim_tr": "Kamış melasları",
       "tanim_en": "Cane molasses",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1079,6 +1237,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1090,8 +1251,8 @@
       "tanim_tr": "Şeker ekstraksiyonundan veya rafinajından elde edilen melaslar; kamış melasları HARİÇ",
       "tanim_en": "Molasses obtained from sugar extraction or refining; EXCEPT cane molasses.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1100,6 +1261,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.81"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1111,8 +1275,8 @@
       "tanim_tr": "Ciklet; şerit şeklinde, sakkaroz oranı <% 60, şeker kaplanmış/kaplanmamış",
       "tanim_en": "Chewing gum; strip-shaped, sucrose content <60%, sugar-coated/uncoated.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1121,6 +1285,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1132,8 +1299,8 @@
       "tanim_tr": "Ciklet; şerit şeklinde olmayan, sakkaroz oranı <% 60, şeker kaplanmış/kaplanmamış",
       "tanim_en": "Chewing gum; non-strip-shaped, sucrose content <60%, sugar-coated/uncoated.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1142,6 +1309,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1153,8 +1323,8 @@
       "tanim_tr": "Ciklet; şerit şeklinde, sakkaroz oranı =>% 60, şeker kaplanmış/kaplanmamış",
       "tanim_en": "Chewing gum; strip-shaped, sucrose content =>60%, sugar-coated/uncoated.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1163,6 +1333,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1174,8 +1347,8 @@
       "tanim_tr": "Ciklet; şerit şeklinde olmayan, sakkaroz oranı =>% 60, şeker kaplanmış/kaplanmamış",
       "tanim_en": "Chewing gum; not in strip form, sucrose content => 60%, sugar coated/uncoated.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1184,6 +1357,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1195,8 +1371,8 @@
       "tanim_tr": "Meyan kökü hülasaları; sakkaroz oranı>%10 fakat diğer katı madde içermeyen",
       "tanim_en": "Licorice root extracts; sucrose content >10% but free of other solids.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1205,6 +1381,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1216,8 +1395,8 @@
       "tanim_tr": "Beyaz çikolata",
       "tanim_en": "White chocolate",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1226,6 +1405,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1237,8 +1419,8 @@
       "tanim_tr": "Ezmeler; net muhtevası =>1 kg, ambalajlarda (badem ezmesi dahil), kakao içermeyen",
       "tanim_en": "Spreads; net content => 1 kg, in packages (including almond spread), cocoa-free.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1247,6 +1429,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1258,8 +1443,8 @@
       "tanim_tr": "Boğaz pastilleri ve öksürük için şekerler; kakao içermeyen",
       "tanim_en": "Throat lozenges and cough drops; cocoa-free.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1268,6 +1453,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1279,8 +1467,8 @@
       "tanim_tr": "Drajeler; sadece fındık içerenler, kakao içermeyen",
       "tanim_en": "Coated tablets; those containing only hazelnuts, those without cocoa.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1289,6 +1477,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1300,8 +1491,8 @@
       "tanim_tr": "Drajeler; diğer, kakao içermeyen",
       "tanim_en": "Dragees; other, cocoa-free",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1310,6 +1501,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1321,8 +1515,8 @@
       "tanim_tr": "Sakızlı ve jöleli şekercilik mamulleri (şekercilik mamulü haline getirilmiş meyva ezmeleri dahil); kakao içermeyen",
       "tanim_en": "Gummy and jelly confectionery (including fruit purees processed into confectionery); not containing cocoa.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1331,6 +1525,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1342,8 +1539,8 @@
       "tanim_tr": "Kaynatılmış tatlılar; kakao içermeyen",
       "tanim_en": "Boiled desserts; those that do not contain cocoa.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1352,6 +1549,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1363,8 +1563,8 @@
       "tanim_tr": "Karameller vb. tatlılar; kakao içermeyen",
       "tanim_en": "Caramels and similar desserts; do not contain cocoa.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1373,6 +1573,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1384,8 +1587,8 @@
       "tanim_tr": "Şekercilik mamulleri; basınçla elde edilen tabletler halinde, kakao içermeyen",
       "tanim_en": "Confectionery products; in tablet form obtained by pressure processing, not containing cocoa.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1394,6 +1597,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1405,8 +1611,8 @@
       "tanim_tr": "Tahin helvası; kakao içermeyen",
       "tanim_en": "Tahini halva; does not contain cocoa.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1415,6 +1621,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1426,8 +1635,8 @@
       "tanim_tr": "Helvalar (tahin helvası HARİÇ); kakao içermeyen",
       "tanim_en": "Halva (EXCEPT tahini halva); does not contain cocoa.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1436,6 +1645,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1447,8 +1659,8 @@
       "tanim_tr": "Sade lokum; kakao içermeyen",
       "tanim_en": "Plain Turkish delight; does not contain cocoa.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1457,6 +1669,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1468,8 +1683,8 @@
       "tanim_tr": "Kaymaklı lokum; kakao içermeyen",
       "tanim_en": "Turkish delight with clotted cream; does not contain cocoa.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1478,6 +1693,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1489,8 +1707,8 @@
       "tanim_tr": "Fondan; kakao içermeyen",
       "tanim_en": "Fondant; does not contain cocoa.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1499,6 +1717,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1510,8 +1731,8 @@
       "tanim_tr": "Lokumlar; diğer, kakao içermeyen",
       "tanim_en": "Turkish delight; other types that do not contain cocoa.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1520,6 +1741,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1531,8 +1755,8 @@
       "tanim_tr": "Diğer şekercilik mamulleri; kakao içermeyen",
       "tanim_en": "Other confectionery products; those that do not contain cocoa.",
       "kdv": {
-        "grup": "II-B",
-        "oran": 0.1
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1541,6 +1765,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.51"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],

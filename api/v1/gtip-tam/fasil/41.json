@@ -17,8 +17,8 @@
         "ticaret"
       ]
     },
-    "surum": "2026.10.20",
-    "guncelleme": "2026-10-20",
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
     "yayin_durumu": "yayinda",
     "zaman": {
       "bazli": false,
@@ -44,8 +44,8 @@
       {
         "kod": "gib-kdv-oranlari",
         "ad": {
-          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
-          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
         },
         "tur": "bkk_eki_liste",
         "kurum_kod": "gib",
@@ -86,6 +86,24 @@
         "tarih": "2008-01-12"
       },
       {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
+          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
+        },
+        "resmi_gazete": "32241",
+        "tarih": "2023-07-07"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
+          "en": "Presidential Decision No. 9126 (amendment to List II)"
+        },
+        "resmi_gazete": "32722",
+        "tarih": "2024-11-14"
+      },
+      {
         "tur": "kanun",
         "ad": {
           "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
@@ -93,6 +111,24 @@
         },
         "resmi_gazete": "24783",
         "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
       }
     ],
     "uretim": {
@@ -104,13 +140,13 @@
         },
         {
           "servis_kod": "kdv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+          "surum": "2026.10.21",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
         },
         {
           "servis_kod": "otv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+          "surum": "2026.10.21",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
         },
         {
           "servis_kod": "tevkifat-oranlari",
@@ -121,13 +157,18 @@
           "servis_kod": "randiman",
           "surum": "2026.01.01",
           "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.21",
+          "checksum": "sha256:0d2f2bbedb7b830c36bc195160da59ef4ba6fc8245465e18cbfcc29d8cbd810f"
         }
       ],
       "kural_seti": {
         "kod": "coklu-kural",
-        "surum": "2026.10.20"
+        "surum": "2026.10.21"
       },
-      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "uretim_zamani": "2026-10-21T10:46:36.400758+00:00",
       "eslesme_ozeti": {
         "toplam": 15799,
         "eslesen": 15799,
@@ -146,8 +187,8 @@
       "tanim_tr": "Sığırların (buffalo dahil) ve at cinsi hayvanların taze ham post ve derileri; yaş ağırlık =< 15kg",
       "tanim_en": "Fresh raw hides and skins of cattle (including buffalo) and horses; wet weight =< 15kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -156,6 +197,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -167,8 +211,8 @@
       "tanim_tr": "Sığırların (buffalo dahil) ve at cinsi hayvanların taze ham post ve derilerii; 15kg < yaş ağırlık <= 16kg",
       "tanim_en": "Fresh raw hides and skins of cattle (including buffalo) and horses; 15kg < wet weight <= 16kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -177,6 +221,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -188,8 +235,8 @@
       "tanim_tr": "Sığır (buffalo dahil) ve at cinsi hayvanların yaş tuzlanmış ham post ve derileri; yaş ağırlık =< 15kg",
       "tanim_en": "Wet, salted raw hides and skins of cattle (including buffalo) and horses; wet weight =< 15kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -198,6 +245,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -209,8 +259,8 @@
       "tanim_tr": "Sığır (buffalo dahil) ve at cinsi hayvanların yaş tuzlanmış ham post ve derileri; 15kg < yaş ağırlık <= 16kg",
       "tanim_en": "Wet, salted raw hides and skins of cattle (including buffalo) and horses; 15kg < wet weight <= 16kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -219,6 +269,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -230,8 +283,8 @@
       "tanim_tr": "Sığır (buffalo dahil) ve at cinsi hayvanların kurutulmuş veya kuru tuzlanmış ham post ve derileri; ağırlık =< 9kg",
       "tanim_en": "Dried or dry-salted raw hides and skins of cattle (including buffalo) and horses; weight =< 9kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -240,6 +293,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -251,8 +307,8 @@
       "tanim_tr": "Sığır (buffalo dahil) ve at cinsi hayvanların kurutulmuş veya kuru tuzlanmış ham post ve derileri; 9kg < ağırlık <= 10kg",
       "tanim_en": "Dried or dry-salted raw hides and skins of cattle (including buffalo) and horses; weight < 9kg <= 10kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -261,6 +317,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -272,8 +331,8 @@
       "tanim_tr": "Sığır (buffalo dahil) ve atların bütün halindeki diğer ham post ve derileri; ağırlık <= 14 kg",
       "tanim_en": "Whole raw hides and skins of cattle (including buffalo) and horses; weight <= 14 kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -282,6 +341,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -293,8 +355,8 @@
       "tanim_tr": "Sığır (buffalo dahil) ve atların bütün halindeki diğer ham post ve derileri; 14 kg < ağırlık <= 16 kg",
       "tanim_en": "Whole raw hides and skins of cattle (including buffalo) and horses; 14 kg < weight <= 16 kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -303,6 +365,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -314,8 +379,8 @@
       "tanim_tr": "Sığır (buffalo dahil) cinsi hayvanların taze ham post ve derileri; ağırlık > 16kg",
       "tanim_en": "Fresh raw hides and skins of cattle (including buffalo); weight > 16kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -324,6 +389,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -335,8 +403,8 @@
       "tanim_tr": "At cinsi hayvanların taze ham post ve derileri; ağırlık > 16kg",
       "tanim_en": "Fresh raw hides and skins of equines; weight > 16kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -345,6 +413,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -356,8 +427,8 @@
       "tanim_tr": "Sığır (buffalo dahil) cinsi hayvanların yaş tuzlanmış ham post ve derileri; ağırlık > 16kg",
       "tanim_en": "Wet, salted raw hides and skins of cattle (including buffalo); weight > 16kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -366,6 +437,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -377,8 +451,8 @@
       "tanim_tr": "At cinsi hayvanların yaş tuzlanmış ham post ve derileri; ağırlık > 16kg",
       "tanim_en": "Wet, salted raw hides and skins of equines; weight > 16kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -387,6 +461,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -398,8 +475,8 @@
       "tanim_tr": "Sığır (buffalo dahil) cinsi hayvanların kurutulmuş veya kuru tuzlanmış ham post ve derileri; ağırlık > 16kg",
       "tanim_en": "Dried or dry-salted raw hides and skins of cattle (including buffalo); weight > 16kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -408,6 +485,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -419,8 +499,8 @@
       "tanim_tr": "At cinsi hayvanların kurutulmuş veya kuru tuzlanmış ham post ve derileri; ağırlık > 16kg",
       "tanim_en": "Dried or dry-salted raw hides and skins of equines; weight > 16kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -429,6 +509,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -440,8 +523,8 @@
       "tanim_tr": "Sığır (buffalo dahil) ve at cinsi hayvanların diğer ham post ve derileri; ağırlık >16kg",
       "tanim_en": "Raw hides and skins of cattle (including buffalo) and horses; weight >16kg",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -450,6 +533,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -461,8 +547,8 @@
       "tanim_tr": "Sığır (buffalo dahil) ve at cinsi hayvanların krupon ve yarım krupon derileri",
       "tanim_en": "Croupon and half-croupon hides of cattle (including buffalo) and horses.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -471,6 +557,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -482,8 +571,8 @@
       "tanim_tr": "Sığırların (buffalo dahil) taze veya yaş tuzlanmış derileri",
       "tanim_en": "Fresh or aged salted hides of cattle (including buffalo)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -492,6 +581,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -503,8 +595,8 @@
       "tanim_tr": "Sığırların (buffalo dahil) kurutulmuş veya kuru tuzlanmış derileri",
       "tanim_en": "Dried or dry-salted hides of cattle (including buffalo)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -513,6 +605,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -524,8 +619,8 @@
       "tanim_tr": "Sığırların (buffalo dahil) diğer şekillerde muhafaza edilmiş derileri",
       "tanim_en": "Other preserved hides of cattle (including buffalo)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -534,6 +629,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -545,8 +643,8 @@
       "tanim_tr": "Atların diğer derileri (diğer şekilde muhafaza edilmiş); ham",
       "tanim_en": "Other horse hides (otherwise preserved); raw",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -555,6 +653,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -566,8 +667,8 @@
       "tanim_tr": "Kuzuların yünü alınmamış ham derileri",
       "tanim_en": "Raw hides of lambs from which the wool has not been removed",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -576,6 +677,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -587,8 +691,8 @@
       "tanim_tr": "Koyunların yünü alınmamış ham derileri",
       "tanim_en": "Raw sheepskins from which the wool has not been removed",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -597,6 +701,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -608,8 +715,8 @@
       "tanim_tr": "Koyun ve kuzuların ham pikle derileri; yünü alınmış",
       "tanim_en": "Raw pickled skins of sheep and lambs; wool removed.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -618,6 +725,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -629,8 +739,8 @@
       "tanim_tr": "Koyun ve kuzuların diğer ham derileri; yünü alınmış",
       "tanim_en": "Other raw hides of sheep and lambs; with the wool removed.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -639,6 +749,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -650,8 +763,8 @@
       "tanim_tr": "Sürüngenlerin ham derileri",
       "tanim_en": "Raw hides of reptiles",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -660,6 +773,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -671,8 +787,8 @@
       "tanim_tr": "Domuzların ham derileri",
       "tanim_en": "Raw hides of pigs",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -681,6 +797,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -692,8 +811,8 @@
       "tanim_tr": "Diğer hayvanların ham yaş derileri",
       "tanim_en": "Raw skins of other animals",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -702,6 +821,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -713,8 +835,8 @@
       "tanim_tr": "Diğer hayvanların ham kuru derileri",
       "tanim_en": "Raw dried hides of other animals",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -723,6 +845,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -734,8 +859,8 @@
       "tanim_tr": "Diğer hayvanların ham pikle derileri",
       "tanim_en": "Raw pickled skins of other animals",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -744,6 +869,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -755,8 +883,8 @@
       "tanim_tr": "Diğer hayvanların ham diğer post ve derileri",
       "tanim_en": "Raw hides and skins of other animals",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "II-A",
+        "oran": 0.1
       },
       "otv": {
         "grup": "otv_yok",
@@ -765,6 +893,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -787,6 +918,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -807,6 +941,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -829,6 +966,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -849,6 +989,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -871,6 +1014,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -891,6 +1037,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -913,6 +1062,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -933,6 +1085,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -955,6 +1110,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -975,6 +1133,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -997,6 +1158,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1017,6 +1181,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1039,6 +1206,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1059,6 +1229,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1081,6 +1254,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1101,6 +1277,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1123,6 +1302,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1143,6 +1325,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1165,6 +1350,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1185,6 +1373,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1207,6 +1398,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1227,6 +1421,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1249,6 +1446,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1269,6 +1469,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1291,6 +1494,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1311,6 +1517,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1333,6 +1542,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1353,6 +1565,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1375,6 +1590,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1395,6 +1613,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1417,6 +1638,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1437,6 +1661,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1459,6 +1686,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1479,6 +1709,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1501,6 +1734,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1521,6 +1757,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1543,6 +1782,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1563,6 +1805,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1585,6 +1830,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1605,6 +1853,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1627,6 +1878,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1647,6 +1901,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1669,6 +1926,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1689,6 +1949,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1711,6 +1974,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1731,6 +1997,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1753,6 +2022,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1773,6 +2045,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1795,6 +2070,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1815,6 +2093,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1837,6 +2118,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1857,6 +2141,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1879,6 +2166,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1899,6 +2189,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1921,6 +2214,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1941,6 +2237,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1963,6 +2262,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -1983,6 +2285,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -2005,6 +2310,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2025,6 +2333,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -2047,6 +2358,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2067,6 +2381,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -2089,6 +2406,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2109,6 +2429,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -2131,6 +2454,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2151,6 +2477,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -2173,6 +2502,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "15.12"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -2193,6 +2525,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "15.12"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],

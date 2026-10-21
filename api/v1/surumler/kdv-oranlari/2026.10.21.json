@@ -1,0 +1,617 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "kdv-oranlari",
+      "ad": {
+        "tr": "KDV Oranları ve Listeleri",
+        "en": "VAT Rates and Lists"
+      }
+    },
+    "katman": "ham",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gib",
+      "kapsam": [
+        "vergi"
+      ]
+    },
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
+          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
+        },
+        "resmi_gazete": "32241",
+        "tarih": "2023-07-07"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
+          "en": "Presidential Decision No. 9126 (amendment to List II)"
+        },
+        "resmi_gazete": "32722",
+        "tarih": "2024-11-14"
+      }
+    ],
+    "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+  },
+  "kayitlar": [
+    {
+      "kod": "genel",
+      "ad_tr": "Genel Oran",
+      "ad_en": "Standard Rate",
+      "oran": 0.2,
+      "kategori": "genel",
+      "kanun_dayanagi": "KDV Kanunu md.28",
+      "kanun_dayanagi_en": "VAT Law, Article 28",
+      "kapsam_tr": "Özel oran uygulanmayan tüm mal ve hizmetler",
+      "kapsam_en": "All goods and services not covered by special rates",
+      "ornekler_tr": [
+        "Özel oran uygulanmayan tüm mal ve hizmetler",
+        "Sabun, şampuan, deterjan, ıslak mendil, tuvalet kâğıdı gibi hijyen ürünleri (10/07/2023'ten itibaren)"
+      ],
+      "ornekler_en": [
+        "All goods and services not covered by special rates",
+        "Hygiene products such as soap, shampoo, detergent, wet wipes, toilet paper (since 10/07/2023)"
+      ]
+    },
+    {
+      "kod": "I",
+      "ad_tr": "I Sayılı Liste (KDV %1)",
+      "ad_en": "List I (VAT 1%)",
+      "oran": 0.01,
+      "kategori": "indirimli",
+      "kanun_dayanagi": "2007/13033 s. BKK eki (I) sayılı liste",
+      "kanun_dayanagi_en": "Decision No. 2007/13033, List (I)",
+      "kapsam_tr": "Temel gıda, tarımsal ürünler, kültürel yayınlar, belirli konut teslimleri, bazı makine ve hizmetler",
+      "kapsam_en": "Basic food, agricultural products, cultural publications, certain residential deliveries, some machinery and services",
+      "ornekler_tr": [
+        "Canlı hayvanlar (01)",
+        "Et ve yenilebilir sakatat (02)",
+        "Balıklar (03)",
+        "Süt ve süt ürünleri (04)",
+        "Yumurta (0407-0408)",
+        "Sebze ve meyveler (07, 08)",
+        "Kahve, çay, baharat (09)",
+        "Hububat (10)",
+        "Değirmencilik ürünleri (11)",
+        "Yağlı tohumlar (12)",
+        "Bitkisel yağlar (15)",
+        "Et ve balık müstahzarları (16)",
+        "Şeker ve şekerleme (17)",
+        "Kakao ve müstahzarları (18)",
+        "Hububat, un, nişasta müstahzarları (19)",
+        "Sebze, meyve müstahzarları (20)",
+        "Muhtelif gıda müstahzarları (21)",
+        "Sular (2201)",
+        "Hayvan yemi (23)",
+        "Tuz, kükürt, topraklar (2501)",
+        "Kitap, dergi, gazete, broşür (4901-4904)",
+        "Kur'an-ı Kerim ve tefsir kitapları",
+        "Buğday, arpa, mısır, çavdar, yulaf (1001-1008)",
+        "Pamuk (5201)",
+        "Tütün (2401)",
+        "Şeker pancarı (1212)",
+        "Sertifikalı tohumluk ve fidanlar",
+        "Afet riski altındaki alanlardaki konutlar",
+        "Konut yapı kooperatifleri inşaat taahhüt işleri",
+        "Sosyal güvenlik kuruluşları ve belediyelere yapılan konut inşaat taahhüt işleri",
+        "Cenaze hizmetleri",
+        "KDV'den istisna araçların kiralanması",
+        "Finansal kiralama (makine ve teçhizat)",
+        "Belirli makine ve cihazlar (8402, 8403, 8501, 8701 vb.)",
+        "İl özel idareleri, belediyeler ve bağlı kuruluşlarına personel çalıştırılmasına dayalı hizmetler",
+        "Yenilenmiş cep telefonları (sertifikalı)",
+        "Tarım makineleri (8432, 8433, 8436, 8701 vb.)"
+      ],
+      "ornekler_en": [
+        "Live animals (01)",
+        "Meat and edible offal (02)",
+        "Fish (03)",
+        "Dairy produce (04)",
+        "Eggs (0407-0408)",
+        "Vegetables and fruits (07, 08)",
+        "Coffee, tea, spices (09)",
+        "Cereals (10)",
+        "Milling products (11)",
+        "Oil seeds (12)",
+        "Animal/vegetable fats and oils (15)",
+        "Preparations of meat/fish (16)",
+        "Sugars and confectionery (17)",
+        "Cocoa preparations (18)",
+        "Preparations of cereals (19)",
+        "Preparations of vegetables/fruits (20)",
+        "Miscellaneous edible preparations (21)",
+        "Waters (2201)",
+        "Animal feed (23)",
+        "Salt, sulphur, earths (2501)",
+        "Books, magazines, newspapers, brochures (4901-4904)",
+        "Quran and tafsir books",
+        "Wheat, barley, maize, rye, oats (1001-1008)",
+        "Cotton (5201)",
+        "Tobacco (2401)",
+        "Sugar beet (1212)",
+        "Certified seeds and saplings",
+        "Housing in disaster risk areas",
+        "Construction contracts for housing cooperatives",
+        "Housing construction contracts for social security institutions and municipalities",
+        "Funeral services",
+        "Leasing of VAT-exempt vehicles",
+        "Financial leasing (machinery and equipment)",
+        "Specific machinery (8402, 8403, 8501, 8701 etc.)",
+        "Personnel employment services for local administrations",
+        "Renewed mobile phones (certified)",
+        "Agricultural machinery (8432, 8433, 8436, 8701 etc.)"
+      ]
+    },
+    {
+      "kod": "II",
+      "ad_tr": "II Sayılı Liste (KDV %10)",
+      "ad_en": "List II (VAT 10%)",
+      "oran": 0.1,
+      "kategori": "indirimli",
+      "kanun_dayanagi": "2007/13033 s. BKK eki (II) sayılı liste",
+      "kanun_dayanagi_en": "Decision No. 2007/13033, List (II)",
+      "kapsam_tr": "Tekstil, hazır giyim, mobilya, sağlık, eğitim, konaklama, yiyecek-içecek hizmetleri, 150 m²'ye kadar konut, elektrik, LPG vb.",
+      "kapsam_en": "Textiles, apparel, furniture, health, education, accommodation, food & beverage services, residential up to 150 m², electricity, LPG etc.",
+      "ornekler_tr": [
+        "Pamuk, yün, ipek, sentetik iplikler (52, 54, 55)",
+        "Dokunmuş mensucat (52, 54, 55)",
+        "İç ve dış giyim eşyası (61, 62)",
+        "Ayakkabı, terlik, çizme (64)",
+        "Çanta, bavul, valiz (4202)",
+        "Ham post ve deriler (4101-4103)",
+        "İşlenmiş deri ve giyim eşyası (4203)",
+        "Halılar ve yer kaplamaları (57)",
+        "Fason tekstil, konfeksiyon, deri işleri",
+        "Lokanta, kafeterya, pastane, kebapçı vb. yerlerde verilen hizmetler (alkollü içecekler hariç)",
+        "Yemeği pakette satan yerler",
+        "Mobilyalar (9401-9403)",
+        "Yataklar, şilteler (9404)",
+        "Aydınlatma cihazları (9405)",
+        "Ev tekstili (6302)",
+        "Otel, motel, pansiyon, tatil köyü ve benzeri tesislerde geceleme hizmeti",
+        "Özel hastane, poliklinik, dişçilik hizmetleri",
+        "Beşeri tıbbi ürünler (ilaçlar) (30)",
+        "Aşılar, kan ürünleri",
+        "Tıbbi cihazlar (9018, 9019, 9021, 9022 vb.)",
+        "Veterinerlik ürünleri",
+        "Bitki koruma ürünleri",
+        "Üniversite ve yüksekokullar",
+        "Özel öğretim kurumları",
+        "Öğrenci taşıma servis hizmetleri",
+        "Özel öğrenci yurtları",
+        "Yolcu taşımacılığı hizmetleri",
+        "Sinema, tiyatro, opera, bale, müze giriş ücretleri",
+        "Köprü ve denizaltı karayolu tüneli geçiş ücretleri",
+        "Elektrik teslimleri (mesken ve tarımsal sulama)",
+        "Konut teslimleri (net 150 m²'ye kadar olan kısım)",
+        "Arsa ve arazi teslimleri",
+        "Diş fırçası, diş macunu, diş iplikleri (960321, 3306)",
+        "Avukatlık hizmetleri (belirli davalar)",
+        "LPG (otogaz hariç) (271119)",
+        "Atık su hizmetleri",
+        "Bakım ve hizmetler (yaşlı, sakat, huzurevi)",
+        "Ödeme kaydedici cihazlar",
+        "Takoğraf cihazları",
+        "Gazete kağıdı ve baskı kağıdı"
+      ],
+      "ornekler_en": [
+        "Cotton, wool, silk, synthetic yarns (52, 54, 55)",
+        "Woven fabrics (52, 54, 55)",
+        "Apparel (61, 62)",
+        "Footwear (64)",
+        "Bags, luggage (4202)",
+        "Raw hides and skins (4101-4103)",
+        "Leather apparel (4203)",
+        "Carpets and floor coverings (57)",
+        "Contract textile, apparel, leather work",
+        "Restaurant, cafeteria, patisserie, kebab shop services (excluding alcoholic beverages)",
+        "Takeaway food services",
+        "Furniture (9401-9403)",
+        "Beds, mattresses (9404)",
+        "Lighting equipment (9405)",
+        "Home textiles (6302)",
+        "Accommodation services in hotels, motels, guesthouses, holiday villages",
+        "Private hospital, polyclinic, dental services",
+        "Human medicinal products (30)",
+        "Vaccines, blood products",
+        "Medical devices (9018, 9019, 9021, 9022 etc.)",
+        "Veterinary products",
+        "Plant protection products",
+        "Universities and colleges",
+        "Private educational institutions",
+        "Student transport services",
+        "Private student dormitories",
+        "Passenger transport services",
+        "Cinema, theatre, opera, ballet, museum entrance fees",
+        "Bridge and undersea tunnel tolls",
+        "Electricity deliveries (residential and agricultural irrigation)",
+        "Residential deliveries (up to 150 m²)",
+        "Land and plot deliveries",
+        "Toothbrushes, toothpaste, dental floss (960321, 3306)",
+        "Legal services (specific cases)",
+        "LPG (excluding autogas) (271119)",
+        "Waste water services",
+        "Care services (elderly, disabled, nursing homes)",
+        "Cash registers",
+        "Tachographs",
+        "Newsprint and printing paper"
+      ]
+    },
+    {
+      "kod": "sifir",
+      "ad_tr": "Sıfır Oran ve İstisnalar",
+      "ad_en": "Zero Rate and Exemptions",
+      "oran": 0.0,
+      "kategori": "sifir",
+      "kanun_dayanagi": "KDV Kanunu md.11-13, md.17",
+      "kanun_dayanagi_en": "VAT Law, Articles 11-13, 17",
+      "kapsam_tr": "İhracat, transit taşımacılık, diplomatik, finansal ve sosyal istisnalar",
+      "kapsam_en": "Exports, transit transport, diplomatic, financial and social exemptions",
+      "ornekler_tr": [
+        "İhracat",
+        "Transit taşımacılık",
+        "Diplomatik istisnalar",
+        "Finansal istisnalar",
+        "Sosyal istisnalar"
+      ],
+      "ornekler_en": [
+        "Exports",
+        "Transit transport",
+        "Diplomatic exemptions",
+        "Financial exemptions",
+        "Social exemptions"
+      ]
+    }
+  ],
+  "kategoriler": [
+    {
+      "kod": "I-A",
+      "liste": "I",
+      "ad_tr": "Temel Gıda Maddeleri (Tüm Gıda Ürünleri Dahil)",
+      "ad_en": "Basic Foodstuffs (Including All Food Products)",
+      "ornekler_tr": [
+        "Canlı hayvanlar (01)",
+        "Et ve yenilebilir sakatat (02)",
+        "Balıklar (03)",
+        "Süt ve süt ürünleri (04)",
+        "Yumurta (0407-0408)",
+        "Sebze ve meyveler (07, 08)",
+        "Kahve, çay, baharat (09)",
+        "Hububat (10)",
+        "Değirmencilik ürünleri (11)",
+        "Yağlı tohumlar (12)",
+        "Bitkisel yağlar (15)",
+        "Et ve balık müstahzarları (16)",
+        "Şeker ve şekerleme (17)",
+        "Kakao ve müstahzarları (18)",
+        "Hububat, un, nişasta müstahzarları (19)",
+        "Sebze, meyve müstahzarları (20)",
+        "Muhtelif gıda müstahzarları (21)",
+        "Sular (2201)",
+        "Hayvan yemi (23)",
+        "Tuz, kükürt, topraklar (2501)"
+      ],
+      "ornekler_en": [
+        "Live animals (01)",
+        "Meat and edible offal (02)",
+        "Fish (03)",
+        "Dairy produce (04)",
+        "Eggs (0407-0408)",
+        "Vegetables and fruits (07, 08)",
+        "Coffee, tea, spices (09)",
+        "Cereals (10)",
+        "Milling products (11)",
+        "Oil seeds (12)",
+        "Animal/vegetable fats and oils (15)",
+        "Preparations of meat/fish (16)",
+        "Sugars and confectionery (17)",
+        "Cocoa preparations (18)",
+        "Preparations of cereals (19)",
+        "Preparations of vegetables/fruits (20)",
+        "Miscellaneous edible preparations (21)",
+        "Waters (2201)",
+        "Animal feed (23)",
+        "Salt, sulphur, earths (2501)"
+      ]
+    },
+    {
+      "kod": "I-B",
+      "liste": "I",
+      "ad_tr": "Kültürel Ürünler ve Yayınlar",
+      "ad_en": "Cultural Products and Publications",
+      "ornekler_tr": [
+        "Kitap, dergi, gazete, broşür (4901-4904)",
+        "Kur'an-ı Kerim ve tefsir kitapları",
+        "Gazete ve dergiler (elektronik satış hariç)"
+      ],
+      "ornekler_en": [
+        "Books, magazines, newspapers, brochures (4901-4904)",
+        "Quran and tafsir books",
+        "Newspapers and magazines (excluding electronic sales)"
+      ]
+    },
+    {
+      "kod": "I-C",
+      "liste": "I",
+      "ad_tr": "Tarımsal Ürün Teslimleri (Toptan ve Hammadde)",
+      "ad_en": "Agricultural Product Deliveries (Wholesale and Raw Materials)",
+      "ornekler_tr": [
+        "Canlı hayvanlar (0101-0106)",
+        "Buğday, arpa, mısır, çavdar, yulaf (1001-1008)",
+        "Pamuk (5201)",
+        "Tütün (2401)",
+        "Şeker pancarı (1212)",
+        "Sertifikalı tohumluk ve fidanlar"
+      ],
+      "ornekler_en": [
+        "Live animals (0101-0106)",
+        "Wheat, barley, maize, rye, oats (1001-1008)",
+        "Cotton (5201)",
+        "Tobacco (2401)",
+        "Sugar beet (1212)",
+        "Certified seeds and saplings"
+      ]
+    },
+    {
+      "kod": "I-D",
+      "liste": "I",
+      "ad_tr": "Konut Teslimleri (Belirli Koşullar Altında, Net 150 m²'ye Kadar)",
+      "ad_en": "Residential Deliveries (Under Specific Conditions, up to 150 m² net)",
+      "ornekler_tr": [
+        "Afet riski altındaki alanlardaki konutlar (6306 sayılı Kanun kapsamında)",
+        "Konut yapı kooperatifleri ve Darülaceze Başkanlığına yapılan inşaat taahhüt işleri",
+        "Sosyal güvenlik kuruluşları ve belediyelere yapılan konut inşaat taahhüt işleri"
+      ],
+      "ornekler_en": [
+        "Housing in disaster risk areas",
+        "Construction contracts for housing cooperatives and Darülaceze",
+        "Housing construction contracts for social security institutions and municipalities"
+      ]
+    },
+    {
+      "kod": "I-E",
+      "liste": "I",
+      "ad_tr": "Diğer Mal ve Hizmetler (%1)",
+      "ad_en": "Other Goods and Services (1%)",
+      "ornekler_tr": [
+        "Cenaze hizmetleri",
+        "KDV'den istisna araçların kiralanması",
+        "Finansal kiralama (makine ve teçhizat)",
+        "Belirli makine ve cihazlar (8402, 8403, 8501, 8701 vb.)",
+        "İl özel idareleri, belediyeler ve bağlı kuruluşlarına personel çalıştırılmasına dayalı hizmetler",
+        "Yenilenmiş cep telefonları (sertifikalı)",
+        "Tarım makineleri (8432, 8433, 8436, 8701 vb.)"
+      ],
+      "ornekler_en": [
+        "Funeral services",
+        "Leasing of VAT-exempt vehicles",
+        "Financial leasing (machinery and equipment)",
+        "Specific machinery (8402, 8403, 8501, 8701 etc.)",
+        "Personnel employment services for local administrations",
+        "Renewed mobile phones (certified)",
+        "Agricultural machinery"
+      ]
+    },
+    {
+      "kod": "II-A",
+      "liste": "II",
+      "ad_tr": "Tekstil, Hazır Giyim, Deri ve Ayakkabı",
+      "ad_en": "Textiles, Apparel, Leather and Footwear",
+      "ornekler_tr": [
+        "Pamuk, yün, ipek, sentetik iplikler (52, 54, 55)",
+        "Dokunmuş mensucat (52, 54, 55)",
+        "İç ve dış giyim eşyası (61, 62)",
+        "Ayakkabı, terlik, çizme (64)",
+        "Çanta, bavul, valiz (4202)",
+        "Ham post ve deriler (4101-4103)",
+        "İşlenmiş deri ve giyim eşyası (4203)",
+        "Halılar ve yer kaplamaları (57)",
+        "Fason tekstil, konfeksiyon, deri işleri"
+      ],
+      "ornekler_en": [
+        "Cotton, wool, silk, synthetic yarns (52, 54, 55)",
+        "Woven fabrics (52, 54, 55)",
+        "Apparel (61, 62)",
+        "Footwear (64)",
+        "Bags, luggage (4202)",
+        "Raw hides and skins (4101-4103)",
+        "Leather apparel (4203)",
+        "Carpets and floor coverings (57)",
+        "Contract textile, apparel, leather work"
+      ]
+    },
+    {
+      "kod": "II-B",
+      "liste": "II",
+      "ad_tr": "Yiyecek-İçecek Hizmetleri",
+      "ad_en": "Food and Beverage Services",
+      "ornekler_tr": [
+        "Lokanta, kafeterya, pastane, kebapçı vb. yerlerde verilen hizmetler (alkollü içecekler hariç)",
+        "Yemeği pakette satan yerler"
+      ],
+      "ornekler_en": [
+        "Restaurant, cafeteria, patisserie, kebab shop services (excluding alcoholic beverages)",
+        "Takeaway food services"
+      ]
+    },
+    {
+      "kod": "II-C",
+      "liste": "II",
+      "ad_tr": "Mobilya ve Ev Eşyaları",
+      "ad_en": "Furniture and Household Goods",
+      "ornekler_tr": [
+        "Mobilyalar (9401-9403)",
+        "Yataklar, şilteler (9404)",
+        "Aydınlatma cihazları (9405)",
+        "Ev tekstili (6302)"
+      ],
+      "ornekler_en": [
+        "Furniture (9401-9403)",
+        "Beds, mattresses (9404)",
+        "Lighting equipment (9405)",
+        "Home textiles (6302)"
+      ]
+    },
+    {
+      "kod": "II-D",
+      "liste": "II",
+      "ad_tr": "Konaklama Hizmetleri",
+      "ad_en": "Accommodation Services",
+      "ornekler_tr": [
+        "Otel, motel, pansiyon, tatil köyü ve benzeri tesislerde geceleme hizmeti"
+      ],
+      "ornekler_en": [
+        "Accommodation services in hotels, motels, guesthouses, holiday villages"
+      ]
+    },
+    {
+      "kod": "II-E",
+      "liste": "II",
+      "ad_tr": "Sağlık Hizmetleri ve Tıbbi Ürünler",
+      "ad_en": "Health Services and Medical Products",
+      "ornekler_tr": [
+        "Özel hastane, poliklinik, dişçilik hizmetleri",
+        "Beşeri tıbbi ürünler (ilaçlar) (30)",
+        "Aşılar, kan ürünleri",
+        "Tıbbi cihazlar (9018, 9019, 9021, 9022 vb.)",
+        "Veterinerlik ürünleri",
+        "Bitki koruma ürünleri"
+      ],
+      "ornekler_en": [
+        "Private hospital, polyclinic, dental services",
+        "Human medicinal products (30)",
+        "Vaccines, blood products",
+        "Medical devices (9018, 9019, 9021, 9022 etc.)",
+        "Veterinary products",
+        "Plant protection products"
+      ]
+    },
+    {
+      "kod": "II-F",
+      "liste": "II",
+      "ad_tr": "Eğitim ve Öğretim Hizmetleri",
+      "ad_en": "Education Services",
+      "ornekler_tr": [
+        "Üniversite ve yüksekokullar",
+        "Özel öğretim kurumları",
+        "Öğrenci taşıma servis hizmetleri",
+        "Özel öğrenci yurtları"
+      ],
+      "ornekler_en": [
+        "Universities and colleges",
+        "Private educational institutions",
+        "Student transport services",
+        "Private student dormitories"
+      ]
+    },
+    {
+      "kod": "II-G",
+      "liste": "II",
+      "ad_tr": "Ulaştırma ve Kültür Hizmetleri",
+      "ad_en": "Transport and Cultural Services",
+      "ornekler_tr": [
+        "Yolcu taşımacılığı hizmetleri",
+        "Sinema, tiyatro, opera, bale, müze giriş ücretleri",
+        "Köprü ve denizaltı karayolu tüneli geçiş ücretleri"
+      ],
+      "ornekler_en": [
+        "Passenger transport services",
+        "Cinema, theatre, opera, ballet, museum entrance fees",
+        "Bridge and undersea tunnel tolls"
+      ]
+    },
+    {
+      "kod": "II-H",
+      "liste": "II",
+      "ad_tr": "Diğer Mal ve Hizmetler (%10)",
+      "ad_en": "Other Goods and Services (10%)",
+      "ornekler_tr": [
+        "Elektrik teslimleri (mesken ve tarımsal sulama)",
+        "Konut teslimleri (net 150 m²'ye kadar olan kısım)",
+        "Arsa ve arazi teslimleri",
+        "Diş fırçası, diş macunu, diş iplikleri (960321, 3306)",
+        "Avukatlık hizmetleri (belirli davalar)",
+        "LPG (otogaz hariç) (271119)",
+        "Atık su hizmetleri",
+        "Bakım ve hizmetler (yaşlı, sakat, huzurevi)",
+        "Ödeme kaydedici cihazlar",
+        "Takoğraf cihazları",
+        "Gazete kağıdı ve baskı kağıdı"
+      ],
+      "ornekler_en": [
+        "Electricity deliveries (residential and agricultural irrigation)",
+        "Residential deliveries (up to 150 m²)",
+        "Land and plot deliveries",
+        "Toothbrushes, toothpaste, dental floss (960321, 3306)",
+        "Legal services (specific cases)",
+        "LPG (excluding autogas) (271119)",
+        "Waste water services",
+        "Care services",
+        "Cash registers",
+        "Tachographs",
+        "Newsprint and printing paper"
+      ]
+    }
+  ]
+}

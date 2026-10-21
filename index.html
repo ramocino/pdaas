@@ -258,6 +258,8 @@
     import { $, kacis, sayi, normKod, icNesneOzet, sayfaNumaralari } from './assets/pdaas-utils.js';
     import { t, dilBaslat, dilUygula, dilDegistir, copyToClipboard, UI } from './assets/pdaas-i18n.js';
     import { renderLayout } from './assets/pdaas-layout.js';
+    // ÖNEMLİ: Tüm modülleri kapsayan şema sözlüğü dışarıdan import ediliyor.
+    import { SCHEMA_ACIKLAMA_TR, SCHEMA_ACIKLAMA_EN } from './assets/pdaas-schema.js';
 
     Object.assign(UI.tr, {
       catalog_title: "Veri Kataloğu", catalog_search: "Veri seti ara...", catalog_loading: "Katalog yükleniyor...", live_connection: "Canlı Bağlantı",
@@ -299,9 +301,40 @@
       'tuik': { ad: { tr: 'TÜİK Verileri', en: 'TurkStat Data' }, ikon: '📈' }, 'diger': { ad: { tr: 'Diğer Veriler', en: 'Other Data' }, ikon: '🏛️' }
     };
     
-    // ÇEVİRİ EKSİKLİKLERİ GİDERİLDİ
-    const ALAN_ETIKET_TR = { kod: 'Kod', ust_kod: 'Üst Kod', seviye: 'Seviye', sira: 'Sıra', yaprak: 'Yaprak', ad_tr: 'Ad (TR)', ad_en: 'Ad (EN)', tanim_tr: 'Tanım (TR)', tanim_en: 'Tanım (EN)', aciklama_tr: 'Açıklama (TR)', aciklama_en: 'Açıklama (EN)', oran: 'Oran', olcu_birimi: 'Ölçü Birimi', para_birimi: 'Para Birimi', periyot: 'Periyot', deger: 'Değer', kdv_orani: 'KDV Oranı', kdv: 'KDV Bilgisi', otv: 'ÖTV Bilgisi', tevkifat: 'Tevkifat Bilgisi', randiman: 'Randıman Bilgisi', kayit_sayisi: 'Kayıt Sayısı', dosya: 'Dosya Yolu', bolum_kod: 'Bölüm Kodu' };
-    const ALAN_ETIKET_EN = { kod: 'Code', ust_kod: 'Parent Code', seviye: 'Level', sira: 'Order', yaprak: 'Leaf', ad_tr: 'Name (TR)', ad_en: 'Name (EN)', tanim_tr: 'Description (TR)', tanim_en: 'Description (EN)', aciklama_tr: 'Explanation (TR)', aciklama_en: 'Explanation (EN)', oran: 'Rate', olcu_birimi: 'Unit', para_birimi: 'Currency', periyot: 'Period', deger: 'Value', kdv_orani: 'VAT Rate', kdv: 'VAT Data', otv: 'SCT Data', tevkifat: 'Withholding Data', randiman: 'Yield Data', kayit_sayisi: 'Record Count', dosya: 'File Path', bolum_kod: 'Section Code' };
+    const ALAN_ETIKET_TR = {
+      kod: 'Kod', ust_kod: 'Üst Kod', seviye: 'Seviye', seviye_adi: 'Seviye Adı',
+      sira: 'Sıra', yaprak: 'Yaprak', ad_tr: 'Ad (TR)', ad_en: 'Ad (EN)',
+      tanim_tr: 'Tanım (TR)', tanim_en: 'Tanım (EN)',
+      baslik_tr: 'Başlık (TR)', baslik_en: 'Başlık (EN)',
+      aciklama_tr: 'Açıklama (TR)', aciklama_en: 'Açıklama (EN)',
+      oran: 'Oran', olcu_birimi: 'Ölçü Birimi', para_birimi: 'Para Birimi',
+      periyot: 'Periyot', deger: 'Değer', kdv_orani: 'KDV Oranı',
+      kdv: 'KDV Bilgisi', otv: 'ÖTV Bilgisi', tevkifat: 'Tevkifat Bilgisi',
+      randiman: 'Randıman Bilgisi', kayit_sayisi: 'Kayıt Sayısı',
+      dosya: 'Dosya Yolu', bolum_kod: 'Bölüm Kodu', yil: 'Yıl', tutar: 'Tutar',
+      derece: 'Derece', dereceler: 'Dereceler', engellilik_orani_min: 'Min. Engellilik Oranı',
+      kategoriler: 'Kategoriler', motor_silindir_hacmi: 'Motor Hacmi',
+      tasit_degeri_dilimleri: 'Değer Dilimleri', yasi_gruplari: 'Yaş Grupları',
+      esik_alt: 'Eşik (Alt)', esik_ust: 'Eşik (Üst)', yapilan: 'Durum',
+      arac_turu: 'Araç Türü', not: 'Not', kapsam_tr: 'Kapsam (TR)', kapsam_en: 'Kapsam (EN)'
+    };
+    const ALAN_ETIKET_EN = {
+      kod: 'Code', ust_kod: 'Parent Code', seviye: 'Level', seviye_adi: 'Level Name',
+      sira: 'Order', yaprak: 'Leaf', ad_tr: 'Name (TR)', ad_en: 'Name (EN)',
+      tanim_tr: 'Description (TR)', tanim_en: 'Description (EN)',
+      baslik_tr: 'Title (TR)', baslik_en: 'Title (EN)',
+      aciklama_tr: 'Explanation (TR)', aciklama_en: 'Explanation (EN)',
+      oran: 'Rate', olcu_birimi: 'Unit', para_birimi: 'Currency',
+      periyot: 'Period', deger: 'Value', kdv_orani: 'VAT Rate',
+      kdv: 'VAT', otv: 'SCT', tevkifat: 'Withholding',
+      randiman: 'Yield', kayit_sayisi: 'Record Count',
+      dosya: 'File Path', bolum_kod: 'Section Code', yil: 'Year', tutar: 'Amount',
+      derece: 'Degree', dereceler: 'Degrees', engellilik_orani_min: 'Min. Disability Rate',
+      kategoriler: 'Categories', motor_silindir_hacmi: 'Engine Volume',
+      tasit_degeri_dilimleri: 'Value Brackets', yasi_gruplari: 'Age Groups',
+      esik_alt: 'Threshold (Low)', esik_ust: 'Threshold (High)', yapilan: 'Status',
+      arac_turu: 'Vehicle Type', not: 'Note', kapsam_tr: 'Scope (TR)', kapsam_en: 'Scope (EN)'
+    };
 
     function tipEtiket(tip) {
       if (!tip) return '—';
@@ -317,6 +350,85 @@
     function grupEtiket(anahtar) {
       const g = KOD_SISTEMI_MAP[anahtar] || KOD_SISTEMI_MAP['diger'];
       return g.ad[document.documentElement.lang === 'en' ? 'en' : 'tr'];
+    }
+
+    const COLUMN_PRIORITY = ['kod', 'ad_tr', 'tanim_tr', 'baslik_tr', 'tutar', 'oran', 'deger', 'yil', 'periyot', 'para_birimi'];
+    const NO_DECIMAL_INT_KEYS = ['yil', 'seviye', 'sira', 'derece'];
+    const FORCE_DECIMAL_REGEX = /^(oran|tutar|fiyat|ucret|maas|prim|maliyet|deger)$/i;
+
+    function siraliKolonlar(keys) {
+      return [...keys].sort((a, b) => {
+        const ia = COLUMN_PRIORITY.indexOf(a);
+        const ib = COLUMN_PRIORITY.indexOf(b);
+        if (ia === -1 && ib === -1) return 0;
+        if (ia === -1) return 1;
+        if (ib === -1) return -1;
+        return ia - ib;
+      });
+    }
+
+    function isNestedValue(v) {
+      return (v !== null && typeof v === 'object' && !Array.isArray(v)) 
+        || (Array.isArray(v) && v.length > 0 && typeof v[0] === 'object');
+    }
+
+    function hucreRender(val, key, row, d) {
+      if (val === null || val === undefined || val === '') {
+        return `<span class="text-slate-600 italic">—</span>`;
+      }
+
+      if (key === 'dosya' && row.kod && (row.kayit_sayisi !== undefined || row.ad_tr !== undefined)) {
+        return `<span class="text-win-400 font-sans font-medium hover:underline flex items-center gap-1 group">
+          <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          ${kacis(String(val))}
+        </span>`;
+      }
+
+      if (typeof val === 'boolean') {
+        return val
+          ? `<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-sans font-bold border border-emerald-500/20">true</span>`
+          : `<span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 text-[10px] font-sans font-bold border border-rose-500/20">false</span>`;
+      }
+
+      if (typeof val === 'number') {
+        let formatted;
+        if (NO_DECIMAL_INT_KEYS.includes(key)) {
+          formatted = String(val);
+        } else if (FORCE_DECIMAL_REGEX.test(key)) {
+          formatted = val.toLocaleString(d, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        } else {
+          formatted = val.toLocaleString(d);
+        }
+        const suffix = (key === 'oran' || key === 'engellilik_orani_min') ? ' %' : '';
+        return `<span class="text-amber-300 font-medium">${formatted}${suffix}</span>`;
+      }
+
+      if (Array.isArray(val)) {
+        if (val.length === 0) return `<span class="text-slate-600 italic">[]</span>`;
+        
+        if (isNestedValue(val)) {
+          return `<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-win-500/10 border border-win-500/30 rounded text-win-400 text-[10px] font-sans font-semibold">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            ${val.length} öğe
+          </span>`;
+        }
+        const preview = val.slice(0, 4).map(v => String(v)).join(', ');
+        const more = val.length > 4 ? ` …+${val.length - 4}` : '';
+        return `<span class="text-slate-400 text-[11px]" title="${kacis(JSON.stringify(val))}">[${kacis(preview)}${kacis(more)}]</span>`;
+      }
+
+      if (typeof val === 'object') {
+        const keyCount = Object.keys(val).length;
+        return `<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-emerald-500/10 border border-emerald-500/30 rounded text-emerald-400 text-[10px] font-sans font-semibold">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+          ${keyCount} alan
+        </span>`;
+      }
+
+      const str = String(val);
+      const limit = key === 'kod' ? 24 : 70;
+      const shown = str.length > limit ? str.slice(0, limit) + '…' : str;
+      return `<span title="${kacis(str)}" class="${key === 'kod' ? 'text-white font-bold' : 'text-slate-300'}">${kacis(shown)}</span>`;
     }
 
     let KATALOG = [];
@@ -522,11 +634,14 @@
         return;
       }
 
-      currentFilteredData = currentData.filter(row => Object.values(row).some(v => String(v ?? '').toLocaleLowerCase('tr-TR').includes(filterVal)));
-      const keys = Object.keys(currentData[0]);
+      currentFilteredData = currentData.filter(row =>
+        Object.values(row).some(v => v !== null && v !== undefined && String(v).toLocaleLowerCase('tr-TR').includes(filterVal))
+      );
+
+      const keys = siraliKolonlar(Object.keys(currentData[0]));
 
       theadRow.innerHTML = `<th class="p-3 text-slate-400 font-semibold border-r border-win-border/50">#</th>` +
-        keys.map(k => `<th class="p-3 text-slate-300 font-semibold tracking-wider whitespace-nowrap">${kacis(alanEtiket(k))}</th>`).join('');
+        keys.map(k => `<th class="p-3 text-slate-300 font-semibold tracking-wider whitespace-nowrap" title="${kacis(k)}">${kacis(alanEtiket(k))}</th>`).join('');
 
       if (!currentFilteredData.length) {
         tbody.innerHTML = `<tr><td colspan="${keys.length + 1}" class="p-6 text-center text-slate-500">${t('filtered_none')}</td></tr>`;
@@ -535,7 +650,7 @@
       }
 
       renderedRowCount = ROW_CHUNK;
-      tbody.innerHTML = ''; 
+      tbody.innerHTML = '';
       appendNextChunk();
 
       $('tab-badge-table').textContent = currentFilteredData.length;
@@ -546,49 +661,75 @@
     function appendNextChunk() {
       const tbody = $('table-body-rows');
       const d = document.documentElement.lang === 'en' ? 'en-US' : 'tr-TR';
-      const keys = Object.keys(currentData[0]);
-      
+      const keys = siraliKolonlar(Object.keys(currentData[0]));
+
       const nextData = currentFilteredData.slice(renderedRowCount - ROW_CHUNK, renderedRowCount);
       if (!nextData.length) return;
 
       const html = nextData.map((row, idx) => {
         const globalNo = (renderedRowCount - ROW_CHUNK) + idx + 1;
-        
-        const isIndexRow = (row.dosya && row.kod && row.kayit_sayisi !== undefined) || (row.dosya && row.kod && row.ad_tr !== undefined);
+        const rowIdx = globalNo - 1;
+        const isIndexRow = !!(row.dosya && row.kod && (row.kayit_sayisi !== undefined || row.ad_tr !== undefined));
+        const hasNested = keys.some(k => isNestedValue(row[k]));
 
-        return `
-      <tr class="hover:bg-win-hover/50 transition ${isIndexRow ? 'cursor-pointer hover:bg-win-500/10' : ''}" ${isIndexRow ? `onclick="parcaAc('${row.dosya}')"` : ''}>
-        <td class="p-3 text-slate-500 border-r border-win-border/60 font-sans">${globalNo}</td>
-        ${keys.map(k => {
-          const val = row[k]; let cell = '';
-          
-          // "İçeriği Aç" yazısı yerine tıklanabilir dosya linki ve ikonu
-          if (k === 'dosya' && isIndexRow) {
-               cell = `<span class="text-win-400 font-sans font-medium hover:underline flex items-center gap-1 group">
-                         <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-                         ${row.dosya}
-                       </span>`;
-          }
-          else if (val === null || val === undefined || val === '') { cell = `<span class="text-slate-600 italic">—</span>`; }
-          else if (typeof val === 'boolean') {
-            cell = val ? `<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-sans font-bold border border-emerald-500/20">true</span>` : `<span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 text-[10px] font-sans font-bold border border-rose-500/20">false</span>`;
-          } else if (typeof val === 'number') { 
-            cell = `<span class="text-amber-300">${val.toLocaleString(d)}</span>`; 
-          } else if (typeof val === 'object') {
-            const ic = icNesneOzet(val);
-            cell = `<span class="text-slate-500 text-[11px]" title="${kacis(ic.title)}">${kacis(ic.label)}</span>`;
-          }
-          else {
-            const str = String(val); const goster = str.length > 80 ? str.slice(0, 80) + '…' : str;
-            cell = `<span class="${k === 'kod' ? 'text-white font-bold' : 'text-slate-300'}" title="${kacis(str)}">${kacis(goster)}</span>`;
-          }
-          return `<td class="p-3 align-top">${cell}</td>`;
-        }).join('')}
-      </tr>`;
+        const mainRow = `
+          <tr class="main-row hover:bg-win-hover/50 transition ${isIndexRow || hasNested ? 'cursor-pointer' : ''}"
+              data-row-idx="${rowIdx}"
+              ${isIndexRow ? `data-file="${kacis(row.dosya)}"` : ''}
+              ${hasNested ? 'data-expandable="1"' : ''}>
+            <td class="p-3 text-slate-500 border-r border-win-border/60 font-sans">
+              <span class="inline-flex items-center gap-1">
+                ${hasNested ? `<svg class="w-3 h-3 text-win-400 detail-chevron transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>` : ''}
+                ${globalNo}
+              </span>
+            </td>
+            ${keys.map(k => `<td class="p-3 align-top">${hucreRender(row[k], k, row, d)}</td>`).join('')}
+          </tr>`;
+
+        const detailRow = hasNested ? `
+          <tr class="detail-row hidden" data-detail-for="${rowIdx}">
+            <td colspan="${keys.length + 1}" class="p-3 bg-win-base/40 border-b border-win-border">
+              <div class="space-y-2">
+                ${keys.filter(k => isNestedValue(row[k])).map(k => `
+                  <div class="bg-win-card border border-win-border rounded-md overflow-hidden">
+                    <div class="px-3 py-1.5 bg-win-hover border-b border-win-border flex items-center justify-between">
+                      <span class="text-[10px] uppercase tracking-wider text-win-400 font-bold">${kacis(alanEtiket(k))}</span>
+                      <span class="text-[10px] text-slate-500 font-mono">${kacis(k)}</span>
+                    </div>
+                    <pre class="p-3 text-[11px] text-slate-300 font-mono overflow-x-auto max-h-[600px]">${kacis(JSON.stringify(row[k], null, 2))}</pre>
+                  </div>
+                `).join('')}
+              </div>
+            </td>
+          </tr>` : '';
+
+        return mainRow + detailRow;
       }).join('');
-      
+
       tbody.insertAdjacentHTML('beforeend', html);
     }
+
+    $('table-body-rows').addEventListener('click', (e) => {
+      if (window.getSelection().toString().length > 0) return;
+
+      const row = e.target.closest('tr.main-row');
+      if (!row) return;
+
+      if (row.dataset.file) {
+        window.parcaAc(row.dataset.file);
+        return;
+      }
+
+      if (row.dataset.expandable) {
+        const rowIdx = row.dataset.rowIdx;
+        const detail = $('table-body-rows').querySelector(`tr.detail-row[data-detail-for="${rowIdx}"]`);
+        const chevron = row.querySelector('.detail-chevron');
+        if (detail) {
+          detail.classList.toggle('hidden');
+          chevron?.classList.toggle('rotate-90');
+        }
+      }
+    });
 
     window.parcaAc = async function(dosyaYolu) {
       if (!currentService || !currentBaseUrl) return;
@@ -684,6 +825,7 @@
       }
       const ornek = currentData[0];
       const d = document.documentElement.lang === 'en' ? 'en' : 'tr';
+      // Modülden gelen kapsamlı sözlük kullanılıyor
       const sozluk = d === 'tr' ? SCHEMA_ACIKLAMA_TR : SCHEMA_ACIKLAMA_EN;
 
       $('docs-schema-tbody').innerHTML = Object.keys(ornek).map(key => {
@@ -704,9 +846,6 @@
         </tr>`;
       }).join('');
     }
-
-    const SCHEMA_ACIKLAMA_TR = { kod: 'Benzersiz kod', tanim_tr: 'Türkçe tanım', ad_tr: 'Türkçe ad', oran: 'Vergi oranı', kdv: 'KDV bilgisi', otv: 'ÖTV bilgisi', tevkifat: 'Tevkifat bilgisi', randiman: 'Randıman bilgisi', kayit_sayisi: 'Kayıt sayısı', dosya: 'Dosya yolu' };
-    const SCHEMA_ACIKLAMA_EN = { kod: 'Unique code', tanim_tr: 'Turkish description', ad_tr: 'Turkish name', oran: 'Tax rate', kdv: 'VAT data', otv: 'SCT data', tevkifat: 'Withholding data', randiman: 'Yield data', kayit_sayisi: 'Record count', dosya: 'File path' };
 
     function renderNotlar(body) {
       const d = document.documentElement.lang === 'en' ? 'en' : 'tr';
@@ -819,4 +958,5 @@
     katalogYukle();
   </script>
 </body>
+
 </html>

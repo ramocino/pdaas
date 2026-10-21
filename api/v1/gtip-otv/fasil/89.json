@@ -17,8 +17,8 @@
         "ticaret"
       ]
     },
-    "surum": "2026.10.20",
-    "guncelleme": "2026-10-20",
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
     "yayin_durumu": "yayinda",
     "zaman": {
       "bazli": false,
@@ -44,8 +44,8 @@
       {
         "kod": "gib-kdv-oranlari",
         "ad": {
-          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
-          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
         },
         "tur": "bkk_eki_liste",
         "kurum_kod": "gib",
@@ -86,6 +86,24 @@
         "tarih": "2008-01-12"
       },
       {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
+          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
+        },
+        "resmi_gazete": "32241",
+        "tarih": "2023-07-07"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
+          "en": "Presidential Decision No. 9126 (amendment to List II)"
+        },
+        "resmi_gazete": "32722",
+        "tarih": "2024-11-14"
+      },
+      {
         "tur": "kanun",
         "ad": {
           "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
@@ -93,6 +111,24 @@
         },
         "resmi_gazete": "24783",
         "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
       }
     ],
     "uretim": {
@@ -104,13 +140,13 @@
         },
         {
           "servis_kod": "kdv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+          "surum": "2026.10.21",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
         },
         {
           "servis_kod": "otv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+          "surum": "2026.10.21",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
         },
         {
           "servis_kod": "tevkifat-oranlari",
@@ -121,13 +157,18 @@
           "servis_kod": "randiman",
           "surum": "2026.01.01",
           "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.21",
+          "checksum": "sha256:0d2f2bbedb7b830c36bc195160da59ef4ba6fc8245465e18cbfcc29d8cbd810f"
         }
       ],
       "kural_seti": {
         "kod": "coklu-kural",
-        "surum": "2026.10.20"
+        "surum": "2026.10.21"
       },
-      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "uretim_zamani": "2026-10-21T10:46:36.400758+00:00",
       "eslesme_ozeti": {
         "toplam": 15799,
         "eslesen": 15799,
@@ -236,134 +277,1198 @@
       "kod": "890311000000",
       "tanim_tr": "Şişirilebilir yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; motorlu veya takılabilir, yüksüz (net) ağırlığı (motor hariç) <= 100 kg",
       "tanim_en": "Inflatable yachts and other recreational and sporting watercraft; with or without motor, unladen (net) weight (excluding motor) <= 100 kg",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890312000000",
       "tanim_tr": "Şişirilebilir yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; bir motorla kullanılmak üzere tasarlanmamış ve yüksüz (net) ağırlığı <= 100 kg",
       "tanim_en": "Inflatable yachts and other recreational and sporting watercraft; not designed to be used with a motor and with an unladen (net) weight <= 100 kg",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890319000000",
       "tanim_tr": "Şişirilebilir diğer yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; yüksüz (net) ağırlığı 100 kg'ı geçenler",
       "tanim_en": "Inflatable yachts and other recreational and sporting watercraft; those with an unladen (net) weight exceeding 100 kg.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890321000000",
       "tanim_tr": "Yelkenli tekneler (yardımcı motoru olsun olmasın) (şişirilebilir olanlar HARİÇ); uzunluğu <= 7.5 m",
       "tanim_en": "Sailing boats (with or without auxiliary engine) (EXCEPT inflatable ones); length <= 7.5 m",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890322100000",
       "tanim_tr": "Denizde seyretmeye mahsus yelkenli tekneler (yardımcı motoru olsun olmasın) (şişirilebilir olanlar HARİÇ); 7.5 m < uzunluğu <= 24 m",
       "tanim_en": "Sailing boats intended for cruising on the sea (with or without an auxiliary engine) (EXCEPT inflatable ones); 7.5 m < length <= 24 m",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890322900000",
       "tanim_tr": "Deniz dışındaki sularda seyretmeye mahsus yelkenli tekneler (yardımcı motoru olsun olmasın) (şişirilebilir olanlar HARİÇ); 7.5 m < uzunluğu <= 24 m",
       "tanim_en": "Sailing boats intended for navigation in waters other than the sea (whether or not equipped with an auxiliary motor) (EXCEPT inflatable ones); 7.5 m < length <= 24 m",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890323100000",
       "tanim_tr": "Denizde seyretmeye mahsus yelkenli tekneler (yardımcı motoru olsun olmasın) (şişirilebilir olanlar HARİÇ); uzunluğu > 24 m",
       "tanim_en": "Sailing boats intended for cruising on the sea (whether or not equipped with an auxiliary engine) (EXCEPT inflatable ones); length > 24 m",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890323900000",
       "tanim_tr": "Deniz dışındaki sularda seyretmeye mahsus yelkenli tekneler (yardımcı motoru olsun olmasın) (şişirilebilir olanlar HARİÇ); uzunluğu > 24 m",
       "tanim_en": "Sailing boats intended for navigation in waters other than the sea (whether or not equipped with an auxiliary engine) (EXCEPT inflatable boats); length > 24 m",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890331000000",
       "tanim_tr": "Eğlence veya spor amaçlı motorbotlar (dıştan takma motoru olanlar HARİÇ) (şişirilebilir olanlar HARİÇ); uzunluğu <= 7.5 m",
       "tanim_en": "Recreational or sport motorboats (excluding those with outboard motors) (excluding inflatable ones); length <= 7.5 m",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890332100000",
       "tanim_tr": "Denizde seyretmeye eğlence veya spor amaçlı motorbotlar (dıştan takma motoru olanlar HARİÇ) (şişirilebilir olanlar HARİÇ); 7.5 m < uzunluğu <= 24 m",
       "tanim_en": "Motorboats used for recreation or sport at sea (EXCEPT those with outboard motors) (EXCEPT inflatable ones); 7.5 m < length <= 24 m",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890332900000",
       "tanim_tr": "Deniz dışındaki sularda seyretmeye mahsus eğlence veya spor amaçlı motorbotlar (dıştan takma motorlu ve şişirilebilir HARİÇ); 7.5 m < uzunluğu <= 24 m",
       "tanim_en": "Motorboats intended for recreation or sporting purposes in waters other than the sea (EXCEPT those with outboard motors and inflatables); length < 7.5 m <= 24 m",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890333100000",
       "tanim_tr": "Denizde seyretmeye mahsus eğlence veya spor amaçlı motorbotlar (dıştan takma motoru olanlar HARİÇ) (şişirilebilir olanlar HARİÇ); uzunluğu > 24 m",
       "tanim_en": "Motorboats intended for recreation or sporting cruising at sea (EXCEPT those with outboard motors) (EXCEPT inflatable ones); length > 24 m",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890333900000",
       "tanim_tr": "Deniz dışındaki sularda seyretmeye mahsus eğlence veya spor amaçlı motorbotlar (dıştan takma motorlu ve şişirilebilir olanlar HARİÇ); uzunluğu > 24 m",
       "tanim_en": "Motorboats intended for recreation or sporting purposes in waters other than the sea (EXCEPT those with outboard motors and inflatables); length > 24 m",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890393100000",
       "tanim_tr": "Diğer yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; uzunluğu <= 7.5 m ve birim ağırlığı <= 100 kg",
       "tanim_en": "Other yachts and other recreational and sporting watercraft; with a length <= 7.5 m and a unit weight <= 100 kg",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890393900000",
       "tanim_tr": "Diğer yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; uzunluğu <= 7.5 m ve birim ağırlığı > 100 kg",
       "tanim_en": "Other yachts and other recreational and sporting watercraft; length <= 7.5 m and unit weight > 100 kg",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890399100011",
       "tanim_tr": "Kürekli kayık ve kanolar; uzunluğu > 7.5 m ve birim ağırlığı <= 100 kg",
       "tanim_en": "Rowboats and canoes; length > 7.5 m and unit weight <= 100 kg",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890399100019",
       "tanim_tr": "Diğer yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; uzunluğu > 7.5 m ve birim ağırlığı <= 100 kg",
       "tanim_en": "Other yachts and other recreational and sporting watercraft; length > 7.5 m and unit weight <= 100 kg",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890399990011",
       "tanim_tr": "Kürekli kayık ve kanolar; uzunluğu > 7.5 m ve birim ağırlığı > 100 kg",
       "tanim_en": "Rowboats and canoes; length > 7.5 m and unit weight > 100 kg",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890399990019",
       "tanim_tr": "Diğer yatlar ve diğer eğlence ve spor amaçlı deniz taşıtları; uzunluğu > 7.5 m ve birim ağırlığı > 100 kg",
       "tanim_en": "Other yachts and other recreational and sporting watercraft; length > 7.5 m and unit weight > 100 kg",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-II-TicariArac",
+      "oran": null,
+      "liste": "II",
+      "vergi_tipi": "oran",
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ]
     },
     {
       "kod": "890400100000",

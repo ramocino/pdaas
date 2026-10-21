@@ -1,0 +1,838 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-tevkifat",
+      "ad": {
+        "tr": "GTİP Tevkifat Eşleşmesi",
+        "en": "GTIP Withholding Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
+          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
+        },
+        "resmi_gazete": "32241",
+        "tarih": "2023-07-07"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
+          "en": "Presidential Decision No. 9126 (amendment to List II)"
+        },
+        "resmi_gazete": "32722",
+        "tarih": "2024-11-14"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.10.21",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.10.21",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.21",
+          "checksum": "sha256:9c1aa8e032c47268a9292ef5c3b40e6fb4683f7f58017307adc2decb0d8c4c16"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.21"
+      },
+      "uretim_zamani": "2026-10-21T10:31:05.319217+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "95",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:48915c6ed97ade267daadf4e25223659882520a7b65ec6ddcc780b1904b26f2f"
+  },
+  "kayitlar": [
+    {
+      "kod": "950300100011",
+      "tanim_tr": "Oyuncak bebekler için arabalar",
+      "tanim_en": "Cars for dolls",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300100012",
+      "tanim_tr": "Üç tekerlekli bisikletler",
+      "tanim_en": "Three-wheeled bicycles",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300100013",
+      "tanim_tr": "Skuterler",
+      "tanim_en": "Scooters",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300100019",
+      "tanim_tr": "Diğerleri",
+      "tanim_en": "Others",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300100029",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300210000",
+      "tanim_tr": "İnsan şeklinde oyuncak bebekler",
+      "tanim_en": "Human-shaped dolls",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300290000",
+      "tanim_tr": "Sadece insan şeklinde yapma bebekler için aksam, parça ve aksesuar",
+      "tanim_en": "Parts, accessories, and accessories for life-shaped dolls only.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300300011",
+      "tanim_tr": "Elektrikli trenler; birleştirilecek türden küçültülmüş modeller",
+      "tanim_en": "Electric trains; scaled-down models that can be combined.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300300019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300350011",
+      "tanim_tr": "Yapı setleri ve yapı oyuncakları (plastik maddelerden)",
+      "tanim_en": "Building sets and building toys (made of plastic materials)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300350019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300390011",
+      "tanim_tr": "Yapı setleri ve yapı oyuncakları (diğer maddelerden)",
+      "tanim_en": "Building sets and building toys (from other materials)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300390019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300410011",
+      "tanim_tr": "Hayvanları ve insan dışı yaratıkları tasvir eden oyuncaklar (içleri doldurulmuş)",
+      "tanim_en": "Toys depicting animals and non-human creatures (stuffed)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300410019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300490011",
+      "tanim_tr": "Hayvanları ve insan dışı yaratıkları tasvir eden oyuncaklar (diğerleri)",
+      "tanim_en": "Toys depicting animals and non-human creatures (others)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300490019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300550011",
+      "tanim_tr": "Oyuncak müzik alet ve cihazları",
+      "tanim_en": "Toy musical instruments and devices",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300550019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300610011",
+      "tanim_tr": "Bilmeceler (ahşap)",
+      "tanim_en": "Riddles (wooden)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300610019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300690011",
+      "tanim_tr": "Bilmeceler (diğerleri)",
+      "tanim_en": "Riddles (others)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300690019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300700011",
+      "tanim_tr": "Oyuncaklar (takım veya set halinde olanlar)",
+      "tanim_en": "Toys (those sold in sets or kits)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300700019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300750011",
+      "tanim_tr": "Oyuncak ve modeller, motorlu olanlar (plastik maddelerden)",
+      "tanim_en": "Toys and models, those with motors (made of plastic materials)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300750019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300790011",
+      "tanim_tr": "Oyuncak ve modeller, motorlu olanlar (plastik maddelerden)",
+      "tanim_en": "Toys and models, those with motors (made of plastic materials)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300790019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300810011",
+      "tanim_tr": "Oyuncak silahlar",
+      "tanim_en": "Toy guns",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300810019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300850011",
+      "tanim_tr": "Kalıplanarak elde edilen minyatür metal modeller",
+      "tanim_en": "Miniature metal models obtained through molding.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300850019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300870011",
+      "tanim_tr": "Esas olarak çocuklar için dizayn edilmiş taşınabilir interaktif elektronik eğitim cihazları",
+      "tanim_en": "Portable interactive electronic educational devices designed primarily for children.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300870019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300950011",
+      "tanim_tr": "Oyuncaklar (plastik maddelerden)",
+      "tanim_en": "Toys (made of plastic materials)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300950019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300990011",
+      "tanim_tr": "Oyuncaklar (diğerleri)",
+      "tanim_en": "Toys (others)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950300990019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950420001000",
+      "tanim_tr": "Bilardo tebeşirleri",
+      "tanim_en": "Billiard chalks",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950420009000",
+      "tanim_tr": "Her çeşit bilardo eşyası ve aksesuarı; bilardo tebeşirleri HARİÇ",
+      "tanim_en": "All types of billiard equipment and accessories; EXCEPT billiard chalk.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950430100000",
+      "tanim_tr": "Madeni para, banknot, banka kartları, jeton, vb. ödeme araçları ile çalışan diğer oyunlar (otomatik bowling oyunu hariç); ekranlı olanlar",
+      "tanim_en": "Other games that operate with payment methods such as coins, banknotes, bank cards, tokens, etc. (excluding automatic bowling games); those with screens.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950430200000",
+      "tanim_tr": "Madeni para, banknot, banka kartları, jeton, vb. ödeme araçları ile çalışan diğer oyunlar (otomatik bowling oyunu hariç); ekranlı olanlar HARİÇ",
+      "tanim_en": "Other games that operate with payment methods such as coins, banknotes, bank cards, tokens, etc. (excluding automatic bowling games); EXCEPT those with screens.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950430900000",
+      "tanim_tr": "Madeni para, banknot, banka kartları, jeton, vb. ödeme araçları ile çalışan diğer oyunlar (otomatik bowling oyunu hariç) için aksam ve parçalar",
+      "tanim_en": "Parts and accessories for other games (excluding automatic bowling games) that operate with payment methods such as coins, banknotes, bank cards, tokens, etc.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950440000000",
+      "tanim_tr": "Oyun kağıtları",
+      "tanim_en": "Playing cards",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950450000000",
+      "tanim_tr": "Video oyun konsolları ve makineleri (9504.30 alt pozisyonundakiler hariç)",
+      "tanim_en": "Video game consoles and machines (excluding those in subheading 9504.30)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950490100000",
+      "tanim_tr": "Takım halinde elektrikli yarış arabaları (yarış oyunları özelliğine sahip olanlar)",
+      "tanim_en": "Team electric racing cars (those with racing game features)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950490800000",
+      "tanim_tr": "Diğer eğlence makinaları, kumarhane masaları, salon veya masa oyunları, otomatik bowling ekipmanları",
+      "tanim_en": "Other amusement machines, casino tables, parlor or table games, automatic bowling equipment.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950510100000",
+      "tanim_tr": "Noel eğlenceleri için eşya; camdan olanlar",
+      "tanim_en": "Items for Christmas celebrations; those made of glass.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950510900000",
+      "tanim_tr": "Noel eğlenceleri için eşya; camdan olanlar HARİÇ",
+      "tanim_en": "Items for Christmas celebrations; EXCEPT those made of glass.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950590000000",
+      "tanim_tr": "Diğer bayramlar, karnaval veya diğer eğlenceler için eşya (sihirbazlık eşyası veya sürpriz eşyası dahil)",
+      "tanim_en": "Items for other festivals, carnivals or other celebrations (including magic tricks or surprise items)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950611100000",
+      "tanim_tr": "Uzun mesafe kar kayakları",
+      "tanim_en": "Long-distance snow skiing",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950611210000",
+      "tanim_tr": "Yokuş aşağı iniş için tek kar kayakları ve snowboardlar",
+      "tanim_en": "Single snow skis and snowboards for downhill riding.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950611290000",
+      "tanim_tr": "Yokuş aşağı iniş için kar kayakları; tek kar kayakları ve snowboardlar HARİÇ",
+      "tanim_en": "Snow skis for downhill riding; EXCLUDING single snow skis and snowboards.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950611800000",
+      "tanim_tr": "Diğer kar kayakları",
+      "tanim_en": "Other snow skis",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950612000000",
+      "tanim_tr": "Kayak bağlayıcıları",
+      "tanim_en": "Ski binders",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950619000000",
+      "tanim_tr": "Kar kayağı yapmaya mahsus diğer malzemeler",
+      "tanim_en": "Other equipment for snow skiing",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950621000000",
+      "tanim_tr": "Rüzgar sörfleri",
+      "tanim_en": "Windsurfing",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950629000000",
+      "tanim_tr": "Su kayakları, sörf tahtaları ve su sporları yapmak için diğer malzemeler",
+      "tanim_en": "Water skis, surfboards, and other equipment for water sports.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950631000000",
+      "tanim_tr": "Golf sopaları (komple)",
+      "tanim_en": "Golf clubs (complete)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950632000000",
+      "tanim_tr": "Golf topları",
+      "tanim_en": "Golf balls",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950639100000",
+      "tanim_tr": "Golf sopalarının aksam ve parçaları",
+      "tanim_en": "Parts and accessories of golf clubs",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950639900000",
+      "tanim_tr": "Golf oyunlarına mahsus diğer malzemeler",
+      "tanim_en": "Other equipment for golf games",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950640000011",
+      "tanim_tr": "Masa tenisi için masalar",
+      "tanim_en": "Tables for table tennis",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950640000019",
+      "tanim_tr": "Masa tenisi için eşya ve malzeme; masalar HARİÇ",
+      "tanim_en": "Table tennis equipment and supplies; EXCLUDING tables.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950651000000",
+      "tanim_tr": "Tenis raketleri (fileli olsun olmasın)",
+      "tanim_en": "Tennis rackets (with or without net)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950659000000",
+      "tanim_tr": "Badminton veya benzeri sporlar için raketler (fileli olsun olmasın); tenis raketleri HARİÇ",
+      "tanim_en": "Rackets for badminton or similar sports (with or without net); EXCEPT tennis rackets.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950661000000",
+      "tanim_tr": "Tenis topları",
+      "tanim_en": "Tennis balls",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950662000000",
+      "tanim_tr": "Şişirilebilen toplar",
+      "tanim_en": "Inflatable balls",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950669100000",
+      "tanim_tr": "Kriket ve polo topları",
+      "tanim_en": "Cricket and polo balls",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950669900000",
+      "tanim_tr": "Diğer toplar; golf, masa tenisi, tenis, kriket, polo ve şişirilebilen toplar HARİÇ",
+      "tanim_en": "Other balls are EXCLUDED from golf, table tennis, tennis, cricket, polo and inflatable balls.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950670100000",
+      "tanim_tr": "Buz patenleri",
+      "tanim_en": "Ice skates",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950670300000",
+      "tanim_tr": "Tekerlekli patenler",
+      "tanim_en": "Roller skates",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950670900000",
+      "tanim_tr": "Buz patenleri ve tekerlekli patenler için aksam, parça ve aksesuar",
+      "tanim_en": "Parts, accessories and components for ice skates and roller skates.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950691100000",
+      "tanim_tr": "Güç ayarlama mekanizmalı egzersiz aletleri",
+      "tanim_en": "Exercise equipment with power adjustment mechanisms.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950691900000",
+      "tanim_tr": "Kültür-fizik, jimnastik veya atletizm eşya ve malzemesi; güç ayarlama mekanizmalı egzersiz aletleri HARİÇ",
+      "tanim_en": "Physical education, gymnastics or athletics equipment and materials; EXCLUDING exercise equipment with power adjustment mechanisms.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950699100000",
+      "tanim_tr": "Kriket veya polo malzemesi (toplar hariç)",
+      "tanim_en": "Cricket or polo equipment (excluding balls)",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950699900000",
+      "tanim_tr": "Diğer sporlara veya diğer açık hava oyunlarına mahsus eşya ve malzeme, yüzme havuzları ve küçük oyun havuzları",
+      "tanim_en": "Equipment and materials for other sports or other outdoor games, swimming pools and small play pools.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950710000000",
+      "tanim_tr": "Olta değnekleri",
+      "tanim_en": "Fishing rods",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950720100000",
+      "tanim_tr": "Olta iğneleri; misina takılmamış olanlar",
+      "tanim_en": "Fishing hooks; those without line attached.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950720900000",
+      "tanim_tr": "Olta iğneleri; misina takılmış olanlar",
+      "tanim_en": "Fishing hooks; those with fishing line attached.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950730000000",
+      "tanim_tr": "Olta makaraları",
+      "tanim_en": "Fishing reels",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950790000000",
+      "tanim_tr": "Diğer olta takımları, balık yakalamaya mahsus el kepçeleri, kelebek ağları, vb. ağlar; kuş avcılığı için yapma kuşlar, vb. av ve atıcılık malzemesi",
+      "tanim_en": "Other fishing gear, hand nets for catching fish, butterfly nets, etc.; artificial birds for bird hunting, etc. hunting and shooting equipment.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950810000000",
+      "tanim_tr": "Gezici sirkler ve gezici hayvan sergileri",
+      "tanim_en": "Traveling circuses and traveling animal exhibitions",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950821000000",
+      "tanim_tr": "Hızlı trenler (roller coaster)",
+      "tanim_en": "Roller coasters",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950822000000",
+      "tanim_tr": "Atlı karıncalar, salıncaklar ve dönen platformlar",
+      "tanim_en": "Carousels, swings, and rotating platforms",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950823000000",
+      "tanim_tr": "Çarpışan arabalar",
+      "tanim_en": "bumper cars",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950824000000",
+      "tanim_tr": "Hareket simulatörleri ve hareketli sinemalar",
+      "tanim_en": "Motion simulators and motion cinemas",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950825000000",
+      "tanim_tr": "Su gezinti eşyası",
+      "tanim_en": "Watercraft",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950826000000",
+      "tanim_tr": "Su parkı eğlence eşyası",
+      "tanim_en": "Water park amusement park equipment",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950829000000",
+      "tanim_tr": "Diğer eğlence parkı gezinti eşyası",
+      "tanim_en": "Other amusement park ride items",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950830000000",
+      "tanim_tr": "Fuar ve panayır eğlencelerine mahsus eşya",
+      "tanim_en": "Items for fair and carnival entertainment.",
+      "grup": "tevkifat_yok",
+      "oran": null
+    },
+    {
+      "kod": "950840000000",
+      "tanim_tr": "Gezici tiyatrolar",
+      "tanim_en": "Traveling theaters",
+      "grup": "tevkifat_yok",
+      "oran": null
+    }
+  ]
+}

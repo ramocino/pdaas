@@ -1,0 +1,645 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "otv-kurallar",
+      "ad": {
+        "tr": "ÖTV Eşleme Kuralları",
+        "en": "SCT Mapping Rules"
+      }
+    },
+    "katman": "kurallar",
+    "yapi": {
+      "tip": "kural-seti",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
+      }
+    ],
+    "checksum": "sha256:eb0e2afff89a637cff62d16d61058dff00e538602dc192c54fdafdbce68fbf04"
+  },
+  "gruplar": {
+    "OTV-I-A-Akaryakit": {
+      "ad_tr": "Akaryakıt Ürünleri (I/A Cetveli)",
+      "ad_en": "Fuel Products (List I/A)",
+      "oran_kodu": "OTV-I-A-Akaryakit",
+      "ornekler_tr": [
+        "Kurşunsuz Benzin",
+        "Motorin",
+        "Gazyağı",
+        "Fuel Oil",
+        "Jet Yakıtı"
+      ],
+      "ornekler_en": [
+        "Unleaded Gasoline",
+        "Diesel",
+        "Kerosene",
+        "Fuel Oil",
+        "Jet Fuel"
+      ]
+    },
+    "OTV-I-A-MadeniYag": {
+      "ad_tr": "Madeni Yağlar (I/A Cetveli)",
+      "ad_en": "Mineral Oils (List I/A)",
+      "oran_kodu": "OTV-I-A-MadeniYag",
+      "ornekler_tr": [
+        "Motor Yağı",
+        "Diferansiyel Yağı",
+        "Baz Yağ",
+        "Gres",
+        "Hidrolik Yağ",
+        "İzolasyon Yağı"
+      ],
+      "ornekler_en": [
+        "Engine Oil",
+        "Differential Oil",
+        "Base Oil",
+        "Grease",
+        "Hydraulic Oil",
+        "Insulating Oil"
+      ]
+    },
+    "OTV-I-B-Solvent": {
+      "ad_tr": "Solventler ve Çözücüler (I/B Cetveli)",
+      "ad_en": "Solvents and Thinners (List I/B)",
+      "oran_kodu": "OTV-I-B-Solvent",
+      "ornekler_tr": [
+        "Toluen",
+        "Ksilen",
+        "Metanol",
+        "Aseton",
+        "Tiner",
+        "White Spirit"
+      ],
+      "ornekler_en": [
+        "Toluene",
+        "Xylene",
+        "Methanol",
+        "Acetone",
+        "Thinner",
+        "White Spirit"
+      ]
+    },
+    "OTV-II-BinekOtomobil": {
+      "ad_tr": "Binek Otomobiller (87.03)",
+      "ad_en": "Passenger Cars (87.03)",
+      "oran_kodu": "OTV-II-BinekOtomobil",
+      "ornekler_tr": [
+        "Binek Otomobil",
+        "SUV",
+        "Hibrit Otomobil",
+        "Elektrikli Otomobil"
+      ],
+      "ornekler_en": [
+        "Passenger Car",
+        "SUV",
+        "Hybrid Car",
+        "Electric Car"
+      ]
+    },
+    "OTV-II-TicariArac": {
+      "ad_tr": "Ticari Araçlar ve Diğer Taşıtlar (II)",
+      "ad_en": "Commercial Vehicles and Other Motor Vehicles (List II)",
+      "oran_kodu": "OTV-II-TicariArac",
+      "ornekler_tr": [
+        "Kamyonet",
+        "Minibüs",
+        "Otobüs",
+        "Kamyon",
+        "Motosiklet",
+        "ATV/UTV",
+        "Yat"
+      ],
+      "ornekler_en": [
+        "Pickup Truck",
+        "Minibus",
+        "Bus",
+        "Truck",
+        "Motorcycle",
+        "ATV/UTV",
+        "Yacht"
+      ]
+    },
+    "OTV-III-A-Bira": {
+      "ad_tr": "Bira (III/A Cetveli)",
+      "ad_en": "Beer (List III/A)",
+      "oran_kodu": "OTV-III-A-Bira",
+      "ornekler_tr": [
+        "Bira (malttan)"
+      ],
+      "ornekler_en": [
+        "Beer (from malt)"
+      ]
+    },
+    "OTV-III-A-Sarap": {
+      "ad_tr": "Şarap, Vermut ve Fermente İçkiler (III/A Cetveli)",
+      "ad_en": "Wine, Vermouth and Fermented Beverages (List III/A)",
+      "oran_kodu": "OTV-III-A-Sarap",
+      "ornekler_tr": [
+        "Şampanya",
+        "Köpüklü şarap",
+        "Taze üzüm şarabı",
+        "Vermut",
+        "Elma şarabı",
+        "Armut şarabı"
+      ],
+      "ornekler_en": [
+        "Champagne",
+        "Sparkling wine",
+        "Fresh grape wine",
+        "Vermouth",
+        "Cider",
+        "Perry"
+      ]
+    },
+    "OTV-III-A-EtilAlkol": {
+      "ad_tr": "Damıtımla Elde Edilen Diğer Alkollü İçkiler (2207.20) (III/A Cetveli)",
+      "ad_en": "Other Spirits Obtained by Distillation (2207.20) (List III/A)",
+      "oran_kodu": "OTV-III-A-EtilAlkol",
+      "ornekler_tr": [
+        "Damıtım yoluyla elde edilen diğer alkollü içkiler (2207.20)"
+      ],
+      "ornekler_en": [
+        "Other spirits obtained by distillation (2207.20)"
+      ]
+    },
+    "OTV-III-A-AlkolluIcecek": {
+      "ad_tr": "Rakı, Viski, Votka, Cin, Likör ve Diğer Alkollü İçkiler (III/A Cetveli)",
+      "ad_en": "Raki, Whisky, Vodka, Gin, Liqueur and Other Spirits (List III/A)",
+      "oran_kodu": "OTV-III-A-AlkolluIcecek",
+      "ornekler_tr": [
+        "Rakı",
+        "Viski",
+        "Votka",
+        "Cin",
+        "Likör",
+        "Konyak",
+        "Brendi",
+        "Tekila",
+        "Rom"
+      ],
+      "ornekler_en": [
+        "Raki",
+        "Whisky",
+        "Vodka",
+        "Gin",
+        "Liqueur",
+        "Cognac",
+        "Brandy",
+        "Tequila",
+        "Rum"
+      ]
+    },
+    "OTV-III-B-Tutun": {
+      "ad_tr": "Tütün Mamulleri (III/B Cetveli)",
+      "ad_en": "Tobacco Products (List III/B)",
+      "oran_kodu": "OTV-III-B-Tutun",
+      "ornekler_tr": [
+        "Sigara",
+        "Puro",
+        "Sarma Tütün",
+        "Makaron",
+        "Enfiye",
+        "Elektronik Sigara"
+      ],
+      "ornekler_en": [
+        "Cigarette",
+        "Cigar",
+        "Rolling Tobacco",
+        "Empty Cigarette Tubes",
+        "Snuff",
+        "E-Cigarette"
+      ]
+    },
+    "OTV-IV-BeyazEsya": {
+      "ad_tr": "Beyaz Eşya ve Küçük Ev Aletleri (IV)",
+      "ad_en": "White Goods and Small Appliances (List IV)",
+      "oran_kodu": "OTV-IV-BeyazEsya",
+      "ornekler_tr": [
+        "Klima",
+        "Buzdolabı",
+        "Çamaşır Makinesi",
+        "Bulaşık Makinesi",
+        "Süpürge",
+        "Tıraş Makinesi"
+      ],
+      "ornekler_en": [
+        "Air Conditioner",
+        "Refrigerator",
+        "Washing Machine",
+        "Dishwasher",
+        "Vacuum Cleaner",
+        "Shaver"
+      ]
+    },
+    "OTV-IV-Televizyon": {
+      "ad_tr": "Elektronik Cihazlar (TV, Ses Sistemleri) (IV)",
+      "ad_en": "Electronic Devices (TV, Audio) (List IV)",
+      "oran_kodu": "OTV-IV-Televizyon",
+      "ornekler_tr": [
+        "Televizyon",
+        "Monitör",
+        "Ses Sistemi"
+      ],
+      "ornekler_en": [
+        "Television",
+        "Monitor",
+        "Audio System"
+      ]
+    },
+    "OTV-IV-Telefon": {
+      "ad_tr": "Cep Telefonları (IV)",
+      "ad_en": "Mobile Phones (List IV)",
+      "oran_kodu": "OTV-IV-Telefon",
+      "ornekler_tr": [
+        "Cep Telefonu",
+        "Akıllı Telefon"
+      ],
+      "ornekler_en": [
+        "Mobile Phone",
+        "Smartphone"
+      ]
+    },
+    "OTV-IV-Kameralar": {
+      "ad_tr": "Televizyon ve Dijital Kameralar (IV)",
+      "ad_en": "Television and Digital Cameras (List IV)",
+      "oran_kodu": "OTV-IV-Kameralar",
+      "ornekler_tr": [
+        "Dijital Fotoğraf Makinesi",
+        "TV Kamerası"
+      ],
+      "ornekler_en": [
+        "Digital Camera",
+        "TV Camera"
+      ]
+    },
+    "OTV-IV-LuksUrunler": {
+      "ad_tr": "Lüks Tüketim, Kürk, Kıymetli Taş ve Silahlar (IV)",
+      "ad_en": "Luxury Goods, Furs, Precious Stones and Weapons (List IV)",
+      "oran_kodu": "OTV-IV-LuksUrunler",
+      "ornekler_tr": [
+        "Kürk",
+        "Havyar",
+        "Elmas",
+        "Altın Mücevher",
+        "Av Tüfeği",
+        "Oyun Konsolu"
+      ],
+      "ornekler_en": [
+        "Fur",
+        "Caviar",
+        "Diamond",
+        "Gold Jewelry",
+        "Hunting Rifle",
+        "Gaming Console"
+      ]
+    },
+    "otv_yok": {
+      "ad_tr": "ÖTV'ye Tabi Değil",
+      "ad_en": "Not Subject to SCT",
+      "ornekler_tr": [],
+      "ornekler_en": [],
+      "oran_kodu": "otv_yok"
+    },
+    "OTV-III-A-Mesrubat": {
+      "ad_tr": "Alkolsüz İçecekler ve Meyve Suları (III/A Cetveli, %10)",
+      "ad_en": "Soft Drinks and Fruit Juices (List III/A, 10%)",
+      "oran_kodu": "OTV-III-A-Mesrubat",
+      "ornekler_tr": [
+        "Gazlı içecek",
+        "Sade gazoz",
+        "Meyveli gazoz",
+        "Alkolsüz bira",
+        "Meyve suyu (%100 olmayan)"
+      ],
+      "ornekler_en": [
+        "Carbonated drink",
+        "Plain soda",
+        "Fruit-flavoured soda",
+        "Non-alcoholic beer",
+        "Fruit juice (non-100%)"
+      ]
+    },
+    "OTV-III-A-KolaliGazoz": {
+      "ad_tr": "Kolalı Gazozlar (III/A Cetveli, %35)",
+      "ad_en": "Cola Drinks (List III/A, 35%)",
+      "oran_kodu": "OTV-III-A-KolaliGazoz",
+      "ornekler_tr": [
+        "Kolalı gazoz"
+      ],
+      "ornekler_en": [
+        "Cola drink"
+      ]
+    }
+  },
+  "kurallar": [
+    {
+      "kod": "gtip-otv-yok",
+      "grup": "otv_yok",
+      "oncelik": 1,
+      "prefixler": [],
+      "varsayilan": true,
+      "aciklama_tr": "Hiçbir ÖTV listesine girmeyen tüm GTİP kodları — ÖTV uygulanmaz",
+      "aciklama_en": "All GTIP codes not covered by any SCT list — no SCT applies"
+    },
+    {
+      "kod": "gtip-akaryakit-I-A",
+      "grup": "OTV-I-A-Akaryakit",
+      "oncelik": 60,
+      "prefixler": [
+        "271012",
+        "2710191",
+        "2710192",
+        "2710193",
+        "2710194",
+        "2710195",
+        "2710196",
+        "271020",
+        "2711"
+      ],
+      "aciklama_tr": "Benzin, motorin, fuel-oil, jet yakıtı, LPG ve doğal gaz — ÖTV I/A Cetveli. 271019 altında 11-67 arası (gaz yağı, gaz oil, fuel oil) akaryakıt kapsamındadır; 81-99 arası madeni yağdır.",
+      "aciklama_en": "Gasoline, diesel, fuel oil, jet fuel, LPG and natural gas — SCT List I/A. Under 271019, subcodes 11-67 (kerosene, gas oil, fuel oil) are fuel; 81-99 are lubricating oils."
+    },
+    {
+      "kod": "gtip-madeni-yag-I-A",
+      "grup": "OTV-I-A-MadeniYag",
+      "oncelik": 65,
+      "prefixler": [
+        "2710198",
+        "2710199"
+      ],
+      "aciklama_tr": "Madeni yağlar (motor yağı, hidrolik yağ, izolasyon yağı, gres, baz yağ) — ÖTV I/A Cetveli. 271019 altında 81-99 arası alt pozisyonlar.",
+      "aciklama_en": "Mineral oils (engine oil, hydraulic oil, insulating oil, grease, base oil) — SCT List I/A. Subcodes 81-99 under 271019."
+    },
+    {
+      "kod": "gtip-solvent-I-B",
+      "grup": "OTV-I-B-Solvent",
+      "oncelik": 55,
+      "prefixler": [
+        "271011",
+        "2902",
+        "2905",
+        "2914",
+        "3814",
+        "2707"
+      ],
+      "aciklama_tr": "Solventler, tinerler, toluen, ksilen, metanol — ÖTV I/B Cetveli",
+      "aciklama_en": "Solvents, thinners, toluene, xylene, methanol — SCT List I/B"
+    },
+    {
+      "kod": "gtip-otomobil-II",
+      "grup": "OTV-II-BinekOtomobil",
+      "oncelik": 60,
+      "prefixler": [
+        "8703"
+      ],
+      "aciklama_tr": "Binek otomobiller — ÖTV II Sayılı Liste",
+      "aciklama_en": "Passenger cars — SCT List II"
+    },
+    {
+      "kod": "gtip-ticari-arac-II",
+      "grup": "OTV-II-TicariArac",
+      "oncelik": 50,
+      "prefixler": [
+        "870120",
+        "8702",
+        "8704",
+        "8705",
+        "8709",
+        "8711",
+        "8802",
+        "8903"
+      ],
+      "aciklama_tr": "Yarı römork çekicisi, minibüs/midibüs/otobüs, eşya taşıma araçları, özel amaçlı taşıtlar, motosiklet, helikopter/uçak, yat — ÖTV II Sayılı Liste (87.01 traktör ve 87.16 römork kapsam dışıdır)",
+      "aciklama_en": "Semi-trailer tractors, minibuses/midibuses/buses, goods vehicles, special-purpose vehicles, motorcycles, helicopters/aircraft, yachts — SCT List II (87.01 tractors and 87.16 trailers are out of scope)"
+    },
+    {
+      "kod": "gtip-bira-III-A",
+      "grup": "OTV-III-A-Bira",
+      "oncelik": 70,
+      "prefixler": [
+        "2203"
+      ],
+      "aciklama_tr": "Bira (malttan) — ÖTV III/A Cetveli (kombine yapı: nispi + maktu)",
+      "aciklama_en": "Beer (from malt) — SCT List III/A (combined structure: proportional + fixed)"
+    },
+    {
+      "kod": "gtip-sarap-III-A",
+      "grup": "OTV-III-A-Sarap",
+      "oncelik": 70,
+      "prefixler": [
+        "2204",
+        "2205",
+        "2206"
+      ],
+      "aciklama_tr": "Taze üzüm şarabı (şampanya dahil), vermut ve diğer fermente içkiler — ÖTV III/A Cetveli",
+      "aciklama_en": "Fresh grape wine (incl. champagne), vermouth and other fermented beverages — SCT List III/A"
+    },
+    {
+      "kod": "gtip-etilalkol-III-A",
+      "grup": "OTV-III-A-EtilAlkol",
+      "oncelik": 70,
+      "prefixler": [
+        "220720001015",
+        "220720009015"
+      ],
+      "aciklama_tr": "Damıtım yoluyla elde edilen diğer alkollü içkiler (2207.20.00.10.15 ve 2207.20.00.90.15) — ÖTV III/A Cetveli; tağyir edilmiş etil alkol ve 2207.10 kapsam dışıdır",
+      "aciklama_en": "Other spirits obtained by distillation (2207.20) — SCT List III/A"
+    },
+    {
+      "kod": "gtip-alkolluicecek-III-A",
+      "grup": "OTV-III-A-AlkolluIcecek",
+      "oncelik": 70,
+      "prefixler": [
+        "2208"
+      ],
+      "aciklama_tr": "Rakı, viski, votka, cin, likör, konyak, brendi ve diğer alkollü içkiler — ÖTV III/A Cetveli",
+      "aciklama_en": "Raki, whisky, vodka, gin, liqueur, cognac, brandy and other spirits — SCT List III/A"
+    },
+    {
+      "kod": "gtip-tutun-III-B",
+      "grup": "OTV-III-B-Tutun",
+      "oncelik": 60,
+      "prefixler": [
+        "2402",
+        "2403"
+      ],
+      "aciklama_tr": "Sigara, puro, sarma tütün, makaron, enfiye — ÖTV III/B Cetveli. 2404 kapsamı ayrı 'gtip-tutun-III-B-2404' kuralı ile yönetilir; 2404.92 (transdermal nikotin bantları) TİTCK ilaç ruhsatı nedeniyle kapsam dışıdır.",
+      "aciklama_en": "Cigarettes, cigars, rolling tobacco, empty tubes, snuff — SCT List III/B. 2404 scope is governed by the separate 'gtip-tutun-III-B-2404' rule; 2404.92 (transdermal nicotine patches) is out of scope as it is licensed by TİTCK."
+    },
+    {
+      "kod": "gtip-tutun-III-B-2404",
+      "grup": "OTV-III-B-Tutun",
+      "oncelik": 65,
+      "prefixler": [
+        "240411",
+        "240412",
+        "240419",
+        "240491",
+        "240499"
+      ],
+      "aciklama_tr": "Yanma olmadan solunan tütün/nikotin ürünleri (2404.11, 2404.12, 2404.19) ile ağız yoluyla ve diğer yollarla kullanılan nikotin ürünleri (2404.91, 2404.99) — ÖTV III/B Cetveli. 2404.92 (transdermal nikotin bantları) TİTCK tarafından beşeri tıbbi ürün olarak ruhsatlandırıldığından ÖTV kapsamı dışındadır ve bu kurala dahil edilmemiştir.",
+      "aciklama_en": "Tobacco/nicotine products for inhalation without combustion (2404.11, 2404.12, 2404.19) and nicotine products for oral/other use (2404.91, 2404.99) — SCT List III/B. 2404.92 (transdermal nicotine patches) is out of SCT scope as it is licensed as a medicinal product by TİTCK and is therefore excluded from this rule."
+    },
+    {
+      "kod": "gtip-kolali-gazoz-III-A",
+      "grup": "OTV-III-A-KolaliGazoz",
+      "oncelik": 80,
+      "prefixler": [
+        "220210000013"
+      ],
+      "aciklama_tr": "Kolalı gazozlar (2202.10.00.00.13) — ÖTV III/A Cetveli (%35)",
+      "aciklama_en": "Cola drinks (2202.10.00.00.13) — SCT List III/A (35%)"
+    },
+    {
+      "kod": "gtip-mesrubat-III-A",
+      "grup": "OTV-III-A-Mesrubat",
+      "oncelik": 70,
+      "prefixler": [
+        "2009",
+        "2202"
+      ],
+      "aciklama_tr": "Meyve suları ve alkolsüz içecekler (gazoz, alkolsüz bira dahil) — ÖTV III/A Cetveli (%10). Sebze suları, TGK'ya göre %100 meyve suyu, doğal mineralli maden suyuyla üretilmiş meyveli gazlı içecek, şalgam suyu ve içme sütleri kapsam dışıdır; bu ayrım prefix düzeyinde yapılamaz.",
+      "aciklama_en": "Fruit juices and non-alcoholic beverages (incl. sodas, non-alcoholic beer) — SCT List III/A (10%). Vegetable juices, 100% fruit juice, fruit sparkling drinks made with natural mineral water, turnip juice and drinking milk are out of scope; this cannot be separated at prefix level."
+    },
+    {
+      "kod": "gtip-beyazesya-IV",
+      "grup": "OTV-IV-BeyazEsya",
+      "oncelik": 50,
+      "prefixler": [
+        "8415",
+        "8418",
+        "842211",
+        "8450",
+        "8451",
+        "8508",
+        "8509",
+        "8510",
+        "8516"
+      ],
+      "aciklama_tr": "Klimalar, buzdolapları, çamaşır/bulaşık makineleri, süpürgeler — ÖTV IV Sayılı Liste",
+      "aciklama_en": "Air conditioners, refrigerators, washing/dish machines, vacuum cleaners — SCT List IV"
+    },
+    {
+      "kod": "gtip-televizyon-IV",
+      "grup": "OTV-IV-Televizyon",
+      "oncelik": 50,
+      "prefixler": [
+        "8528",
+        "8518",
+        "8519"
+      ],
+      "aciklama_tr": "Televizyonlar, monitörler ve ses sistemleri — ÖTV IV Sayılı Liste",
+      "aciklama_en": "Televisions, monitors and audio systems — SCT List IV"
+    },
+    {
+      "kod": "gtip-telefon-IV",
+      "grup": "OTV-IV-Telefon",
+      "oncelik": 50,
+      "prefixler": [
+        "851711",
+        "851712"
+      ],
+      "aciklama_tr": "Cep telefonları — ÖTV IV Sayılı Liste",
+      "aciklama_en": "Mobile phones — SCT List IV"
+    },
+    {
+      "kod": "gtip-kamera-IV",
+      "grup": "OTV-IV-Kameralar",
+      "oncelik": 55,
+      "prefixler": [
+        "85258011",
+        "85258019",
+        "85258030"
+      ],
+      "aciklama_tr": "Televizyon kameraları ve dijital kameralar — ÖTV IV Sayılı Liste",
+      "aciklama_en": "Television cameras and digital cameras — SCT List IV"
+    },
+    {
+      "kod": "gtip-luks-esya-IV",
+      "grup": "OTV-IV-LuksUrunler",
+      "oncelik": 50,
+      "prefixler": [
+        "4302",
+        "4303",
+        "7113",
+        "7114",
+        "7116",
+        "9302",
+        "9303",
+        "9304",
+        "9503",
+        "9504",
+        "9506"
+      ],
+      "aciklama_tr": "Kürkler, kıymetli taş/maden eşyaları, av tüfekleri, oyun konsolları — ÖTV IV Sayılı Liste",
+      "aciklama_en": "Furs, precious metal/stone articles, firearms, gaming consoles — SCT List IV"
+    }
+  ]
+}

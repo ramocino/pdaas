@@ -17,8 +17,8 @@
         "ticaret"
       ]
     },
-    "surum": "2026.10.20",
-    "guncelleme": "2026-10-20",
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
     "yayin_durumu": "yayinda",
     "zaman": {
       "bazli": false,
@@ -44,8 +44,8 @@
       {
         "kod": "gib-kdv-oranlari",
         "ad": {
-          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
-          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
         },
         "tur": "bkk_eki_liste",
         "kurum_kod": "gib",
@@ -86,6 +86,24 @@
         "tarih": "2008-01-12"
       },
       {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
+          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
+        },
+        "resmi_gazete": "32241",
+        "tarih": "2023-07-07"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
+          "en": "Presidential Decision No. 9126 (amendment to List II)"
+        },
+        "resmi_gazete": "32722",
+        "tarih": "2024-11-14"
+      },
+      {
         "tur": "kanun",
         "ad": {
           "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
@@ -93,6 +111,24 @@
         },
         "resmi_gazete": "24783",
         "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
       }
     ],
     "uretim": {
@@ -104,13 +140,13 @@
         },
         {
           "servis_kod": "kdv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+          "surum": "2026.10.21",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
         },
         {
           "servis_kod": "otv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+          "surum": "2026.10.21",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
         },
         {
           "servis_kod": "tevkifat-oranlari",
@@ -121,13 +157,18 @@
           "servis_kod": "randiman",
           "surum": "2026.01.01",
           "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.21",
+          "checksum": "sha256:0d2f2bbedb7b830c36bc195160da59ef4ba6fc8245465e18cbfcc29d8cbd810f"
         }
       ],
       "kural_seti": {
         "kod": "coklu-kural",
-        "surum": "2026.10.20"
+        "surum": "2026.10.21"
       },
-      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "uretim_zamani": "2026-10-21T10:46:36.400758+00:00",
       "eslesme_ozeti": {
         "toplam": 15799,
         "eslesen": 15799,
@@ -2133,715 +2174,919 @@
       "kod": "200911110000",
       "tanim_tr": "Portakal suyu (dondurulmuş); brix değeri 67'yi geçen, 100 kg için kıymeti =< 30 euro",
       "tanim_en": "Orange juice (frozen); brix value exceeding 67, value per 100 kg =< 30 euros",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200911190000",
       "tanim_tr": "Portakal suyu (dondurulmuş); brix değeri 67'yi geçen, 100 kg için kıymeti > 30 euro",
       "tanim_en": "Orange juice (frozen); brix value exceeding 67, price > 30 euros per 100 kg.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200911910000",
       "tanim_tr": "Portakal suyu (dondurulmuş); brixs değeri =<67, 100 kg için kıymeti =< 30 euro, ilave şeker oranı > %30",
       "tanim_en": "Orange juice (frozen); Brix value =<67, price per 100 kg =< 30 euros, added sugar content > 30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200911990000",
       "tanim_tr": "Portakal suyu (dondurulmuş); brixs değeri 67'den az, diğer",
       "tanim_en": "Orange juice (frozen); brix value less than 67, other",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200912000000",
       "tanim_tr": "Portakal suyu (dondurulmamış); brixs değeri 20'den az",
       "tanim_en": "Orange juice (not frozen); brix value less than 20.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200919110000",
       "tanim_tr": "Portakal suyu (dondurulmamış); brix değeri 67'yi geçen, 100 kg için kıymeti=<30 euro",
       "tanim_en": "Orange juice (not frozen); brix value exceeding 67, value per 100 kg = <30 ​​euros",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200919190000",
       "tanim_tr": "Portakal suyu (dondurulmamış); brix değeri 67'yi geçen, 100 kg için kıymeti > 30 euro",
       "tanim_en": "Orange juice (not frozen); brix value exceeding 67, price > 30 euros per 100 kg.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200919910000",
       "tanim_tr": "Portakal suyu (dondurulmamış); 20< brix değeri =<67, 100 kg için kıymet=<30 euro ilave şeker oranı>%30",
       "tanim_en": "Orange juice (non-frozen); 20< brix value =<67, value per 100 kg=<30 euros, added sugar content>30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200919980000",
       "tanim_tr": "Portakal suyu (dondurulmamış); brix değeri 67'yi geçmeyen, diğer",
       "tanim_en": "Orange juice (not frozen); brix value not exceeding 67, other",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200921000000",
       "tanim_tr": "Greyfurt suyu ve pomelo suyu; brixs değeri 20'den az",
       "tanim_en": "Grapefruit and pomelo juice; brix value less than 20.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200929110000",
       "tanim_tr": "Greyfurt suyu ve pomelo suyu (brix değeri 67'yi geçen, 100 kg için kıymeti=<30 euro)",
       "tanim_en": "Grapefruit juice and pomelo juice (with a brix value exceeding 67, value per 100 kg = <30 ​​euros)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200929190000",
       "tanim_tr": "Greyfurt suyu ve pomelo suyu (brix değeri 67'yi geçen, 100 kg için kıymeti > 30 euro)",
       "tanim_en": "Grapefruit juice and pomelo juice (with a brix value exceeding 67, valued at > 30 euros per 100 kg)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200929910000",
       "tanim_tr": "Diğer greyfurt suyu ve pomelo suyu (brixs değeri; 20-67 olan, 100 kg için kıymeti 30 euro'dan az)",
       "tanim_en": "Other grapefruit and pomelo juice (with a Brix value of 20-67, worth less than 30 euros per 100 kg)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200929990000",
       "tanim_tr": "Diğer greyfurt suyu ve diğer pomelo suyu (brixs değeri; 20-67 olan, diğer)",
       "tanim_en": "Other grapefruit juice and other pomelo juice (with a Brix value of 20-67)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200931110000",
       "tanim_tr": "Diğer turunçgil suları (brixs <= 20, 100 kg için kıymeti 30 euro'dan fazla, ilave şeker içeren)",
       "tanim_en": "Other citrus juices (brix <= 20, value over 30 euros per 100 kg, containing added sugar)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200931190000",
       "tanim_tr": "Diğer turunçgil suları (brixs <= 20, 100 kg için kıymeti 30 euro'dan fazla, ilave şeker içermeyen)",
       "tanim_en": "Other citrus juices (brix <= 20, value over 30 euros per 100 kg, no added sugar)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200931510000",
       "tanim_tr": "Limon suları (brixs <= 20, 100 kg için kıymeti 30 euro'dan az, ilave şeker içeren)",
       "tanim_en": "Lemon juices (brix <= 20, value less than 30 euros per 100 kg, containing added sugar)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200931590000",
       "tanim_tr": "Limon suları (brixs <= 20, 100 kg için kıymeti 30 euro'dan az, ilave şeker içermeyen)",
       "tanim_en": "Lemon juices (brix <= 20, value less than 30 euros per 100 kg, no added sugar)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200931910000",
       "tanim_tr": "Diğer turunçgil suları (brixs <= 20, 100 kg için kıymeti <= 30 euro, ilave şeker içeren)",
       "tanim_en": "Other citrus juices (brix <= 20, value per 100 kg <= 30 euros, containing added sugar)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200931990000",
       "tanim_tr": "Diğer turunçgil suları (brixs <= 20, 100 kg için kıymeti <= 30 euro, ilave şeker içermeyen)",
       "tanim_en": "Other citrus juices (brix <= 20, price per 100 kg <= 30 euros, no added sugar)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200939110000",
       "tanim_tr": "Diğer turunçgil suları (brixs değeri 67'den fazla, 100 kg için kıymeti 30 euro'dan az)",
       "tanim_en": "Other citrus juices (brix value greater than 67, value less than 30 euros per 100 kg)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200939190000",
       "tanim_tr": "Diğer turunçgil suları (brixs değeri 67'den fazla, 100 kg için kıymeti 30 euro'dan fazla)",
       "tanim_en": "Other citrus juices (brix value greater than 67, value greater than 30 euros per 100 kg)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200939310000",
       "tanim_tr": "Diğer turunçgil suları (20 <brixs değeri <= 67, 100 kg için kıymeti 30 euro'dan fazla, ilave şeker içeren)",
       "tanim_en": "Other citrus juices (20 <brixs value <= 67, value more than 30 euros per 100 kg, containing added sugar)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200939390000",
       "tanim_tr": "Diğer turunçgil suları (20 <brixs değeri <= 67, 100 kg için kıymeti 30 euro'dan fazla, ilave şeker içermeyen)",
       "tanim_en": "Other citrus juices (20 <brixs value <= 67, value more than 30 euros per 100 kg, no added sugar)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200939510000",
       "tanim_tr": "Limon suyu; 20 <brixs değeri <= 67, 100 kg için kıymeti 30 euro'dan az, şeker oranı> %30",
       "tanim_en": "Lemon juice; 20 <brixs value <= 67, value less than 30 euros per 100 kg, sugar content > 30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200939550000",
       "tanim_tr": "Limon suyu; 20 <brixs değeri <= 67, 100 kg için kıymeti 30 euro'dan az, ilave şeker içeren, şeker oranı <= %30",
       "tanim_en": "Lemon juice; 20 <brixs value <= 67, value less than 30 euros per 100 kg, containing added sugar, sugar content <= 30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200939590000",
       "tanim_tr": "Limon suyu; 20 <brixs değeri <= 67, 100 kg için kıymeti 30 euro'dan az, ilave şeker içermayen",
       "tanim_en": "Lemon juice; 20 brix value <= 67, value less than 30 euros per 100 kg, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200939910000",
       "tanim_tr": "Diğer turunçgil suları; 20 <brixs değeri <= 67, 100 kg için kıymeti 30 euro'dan az, şeker oranı> %30",
       "tanim_en": "Other citrus juices; 20 <brixs value <= 67, value less than 30 euros per 100 kg, sugar content >30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200939950000",
       "tanim_tr": "Diğer turunçgil suları; 20 <brixs değeri <= 67, 100 kg için kıymeti 30 euro'dan az, ilave şeker içeren, şeker oranı <= %30",
       "tanim_en": "Other citrus juices; 20 <brixs value <= 67, value less than 30 euros per 100 kg, containing added sugar, sugar content <= 30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200939990000",
       "tanim_tr": "Diğer turunçgil suları; 20 <brixs değeri <= 67, 100 kg için kıymeti 30 euro'dan az, ilave şeker içermeyen",
       "tanim_en": "Other citrus juices; 20 <brixs value <= 67, value less than 30 euros per 100 kg, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200941920000",
       "tanim_tr": "Ananas suyu; brix değeri <=20, ilave şeker içeren",
       "tanim_en": "Pineapple juice; brix value <=20, contains added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200941990000",
       "tanim_tr": "Ananas suyu; brix değeri <=20, ilave şeker içermeyen",
       "tanim_en": "Pineapple juice; brix value <=20, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200949110000",
       "tanim_tr": "Ananas suyu (brix değeri 67'den fazla, 100 kg için kıymeti <= 30 euro)",
       "tanim_en": "Pineapple juice (brix value greater than 67, price per 100 kg <= 30 euros)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200949190000",
       "tanim_tr": "Ananas suyu (brix değeri 67'den fazla, 100 kg için kıymeti > 30 euro)",
       "tanim_en": "Pineapple juice (brix value above 67, price > 30 euros per 100 kg)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200949300000",
       "tanim_tr": "Ananas suyu; 20 < brix değeri <=67, 100 kg için kıymeti > 30 euro, ilave şeker içeren",
       "tanim_en": "Pineapple juice; 20 < brix value <=67, price > 30 euros per 100 kg, contains added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200949910000",
       "tanim_tr": "Ananas suyu; 20 < brix değeri <=67, 100 kg için kıymeti <= 30 euro, ilave şeker içeren, ilave şeker oranı >%30",
       "tanim_en": "Pineapple juice; 20 < brix value <=67, value per 100 kg <= 30 euros, contains added sugar, added sugar content >30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200949930000",
       "tanim_tr": "Ananas suyu; 20 < brix değeri <=67, 100 kg için kıymeti <= 30 euro, ilave şeker içeren, ilave şeker oranı <=%30",
       "tanim_en": "Pineapple juice; 20 < brix value <=67, value per 100 kg <= 30 euros, contains added sugar, added sugar content <=30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200949990000",
       "tanim_tr": "Ananas suyu; 20 < brix değeri <=67, 100 kg için kıymeti <= 30 euro, ilave şeker içermeyen",
       "tanim_en": "Pineapple juice; 20 < brix value <=67, price per 100 kg <= 30 euros, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200950100000",
       "tanim_tr": "Domates suyu (ilave şeker içeren)",
       "tanim_en": "Tomato juice (with added sugar)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200950900000",
       "tanim_tr": "Domates suyu (ilave şeker içermeyen)",
       "tanim_en": "Tomato juice (without added sugar)",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200961100000",
       "tanim_tr": "Üzüm suyu; brix değeri <= 30, 100 kg için kıymeti > 18 euro",
       "tanim_en": "Grape juice; brix value <= 30, price > 18 euros per 100 kg.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200961900000",
       "tanim_tr": "Üzüm suyu; brix değeri <= 30, 100 kg için kıymeti <= 18 euro",
       "tanim_en": "Grape juice; brix value <= 30, price per 100 kg <= 18 euros",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200969110000",
       "tanim_tr": "Üzüm suyu; brix değeri > 30, 100 kg için kıymeti <= 22 euro",
       "tanim_en": "Grape juice; brix value > 30, price per 100 kg <= 22 euros",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200969190000",
       "tanim_tr": "Üzüm suyu; brix değeri > 30, 100 kg için kıymeti > 22 euro",
       "tanim_en": "Grape juice; brix value > 30, price per 100 kg > 22 euros",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200969510000",
       "tanim_tr": "Üzüm suyu; 30<brix değeri =<67, 100 kg için kıymeti > 18 euro, konsantre edilmiş",
       "tanim_en": "Grape juice; 30<brix value =<67, price per 100 kg > 18 euros, concentrated.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200969590000",
       "tanim_tr": "Üzüm suyu; 30<brix değeri =<67, 100 kg için kıymeti > 18 euro, konsantre edilmemiş",
       "tanim_en": "Grape juice; 30<brix value =<67, price per 100 kg > 18 euros, unconcentrated.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200969710000",
       "tanim_tr": "Üzüm suyu; 30<brix değeri =<67, 100 kg için kıymeti <= 18 euro, konsantre edilmiş, ilave şeker içeren, şeker oranı > %30",
       "tanim_en": "Grape juice; 30<brix value =<67, price per 100 kg <= 18 euros, concentrated, containing added sugar, sugar content >30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200969790000",
       "tanim_tr": "Üzüm suyu; 30<brix değeri =<67, 100 kg için kıymeti <=18 euro, konsantre edilmemiş, ilave şeker içeren, şeker oranı >%30",
       "tanim_en": "Grape juice; 30<brix value =<67, value per 100 kg <=18 euros, unconcentrated, containing added sugar, sugar content >30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200969900000",
       "tanim_tr": "Üzüm suyu; 30<brix değeri =<67, 100 kg için kıymeti <=18 euro, ilave şeker içeren, şeker oranı <= %30",
       "tanim_en": "Grape juice; 30<brix value =<67, value per 100 kg <=18 euros, containing added sugar, sugar content <= 30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200971200000",
       "tanim_tr": "Elma suyu; brix değeri <= 20, ilave şeker içeren",
       "tanim_en": "Apple juice; brix value <= 20, contains added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200971990000",
       "tanim_tr": "Elma suyu; brix değeri <= 20, ilave şeker içermeyen",
       "tanim_en": "Apple juice; brix value <= 20, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200979110000",
       "tanim_tr": "Elma suyu; brix değeri > 67, 100 kg için kıymeti <= 22 euro",
       "tanim_en": "Apple juice; brix value > 67, price per 100 kg <= 22 euros",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200979190000",
       "tanim_tr": "Elma suyu; brix değeri > 67, 100 kg için kıymeti > 22 euro",
       "tanim_en": "Apple juice; brix value > 67, price per 100 kg > 22 euros",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200979300000",
       "tanim_tr": "Elma suyu; 20 < brix değeri <= 67, 100 kg için kıymeti > 18 euro, ilave şeker içeren",
       "tanim_en": "Apple juice; 20 < brix value <= 67, value per 100 kg > 18 euros, containing added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200979910000",
       "tanim_tr": "Elma suyu; 20 < brix değeri <= 67, 100 kg için kıymeti <= 18 euro, ilave şeker içeren, ilave şeker > %30",
       "tanim_en": "Apple juice; 20 < brix value <= 67, value per 100 kg <= 18 euros, containing added sugar, added sugar > 30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200979980000",
       "tanim_tr": "Elma suyu; 20 < brix değeri <= 67, 100 kg için kıymeti <= 18 euro, ilave şeker içeren, ilave şeker <= %30",
       "tanim_en": "Apple juice; 20 < brix value <= 67, value per 100 kg <= 18 euros, containing added sugar, added sugar <= 30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200981110000",
       "tanim_tr": "Yaban Mersini suyu ve kekreyemiş suyu; brix değeri > 67, net 100 kg agırlık başına kıymeti <= 30 Euro",
       "tanim_en": "Blueberry juice and cranberry juice; brix value > 67, value per 100 kg net weight <= 30 Euro",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200981190000",
       "tanim_tr": "Yaban Mersini suyu ve kekreyemiş suyu; brix değeri > 67, net 100 kg agırlık başına kıymeti > 30 Euro",
       "tanim_en": "Blueberry juice and cranberry juice; brix value > 67, value per 100 kg net weight > 30 Euro",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200981310000",
       "tanim_tr": "Yaban Mersini suyu ve kekreyemiş suyu; brix değeri <= 67, net 100 kg agırlık başına kıymeti > 30 Euro, ilave şeker içeren",
       "tanim_en": "Blueberry juice and cranberry juice; brix value <= 67, value per 100 kg net weight > 30 Euro, containing added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200981510000",
       "tanim_tr": "Yaban Mersini suyu ve kekreyemiş suyu; brix değeri <= 67, net 100 kg agırlık başına kıymeti <= 30 Euro, ilave şeker > %30",
       "tanim_en": "Blueberry juice and cranberry juice; brix value <= 67, value per 100 kg net weight <= 30 Euro, added sugar > 30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200981590000",
       "tanim_tr": "Yaban Mersini suyu ve kekreyemiş suyu; brix değeri <= 67, net 100 kg agırlık başına kıymeti <= 30 Euro, ilave şeker <= %30",
       "tanim_en": "Blueberry juice and cranberry juice; brix value <= 67, value per 100 kg net weight <= 30 Euro, added sugar <= 30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200981950000",
       "tanim_tr": "Yaban Mersini suyu ve kekreyemiş suyu; brix değeri <= 67, ilave şeker içermeyen",
       "tanim_en": "Blueberry and cranberry juice; brix value <= 67, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200981990000",
       "tanim_tr": "Diğer yaban Mersini suyu ve kekreyemiş suyu; brix değeri <= 67, ilave şeker içermeyen",
       "tanim_en": "Other blueberry and cranberry juices; brix value <= 67, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989110000",
       "tanim_tr": "Armut suyu; brix değeri > 67, net 100 kg agırlık başına kıymeti <=22 Avro",
       "tanim_en": "Pear juice; brix value > 67, value per 100 kg net weight <= €22",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989190000",
       "tanim_tr": "Armut suyu; brix değeri > 67, net 100 kg agırlık başına kıymeti >22 Avro",
       "tanim_en": "Pear juice; brix value > 67, value per 100 kg net weight >22 Euros",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989340000",
       "tanim_tr": "Tropikal meyvaların suyu; brix değeri > 67, net 100 kg agırlık başına kıymeti <=30 Avro",
       "tanim_en": "Juice of tropical fruits; brix value > 67, value per 100 kg net weight <=30 Euros",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989350000",
       "tanim_tr": "Diğer meyvaların, sert kabuklu meyvaların ve sebzelerin suları; brix değeri > 67, net 100 kg agırlık başına kıymeti <=30 Avro",
       "tanim_en": "Juices of other fruits, nuts and vegetables; brix value > 67, value per 100 kg net weight <= €30",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989360000",
       "tanim_tr": "Tropikal meyvaların suyu; brix değeri > 67, net 100 kg agırlık başına kıymeti >30 Avro",
       "tanim_en": "Juice of tropical fruits; brix value > 67, value per 100 kg net weight >30 Euros",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989380000",
       "tanim_tr": "Diğer meyvaların, sert kabuklu meyvaların ve sebzelerin suları; brix değeri > 67, net 100 kg agırlık başına kıymeti >30 Avro",
       "tanim_en": "Juices of other fruits, nuts and vegetables; brix value > 67, value per 100 kg net weight > €30",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989500000",
       "tanim_tr": "Armut suyu; brix değeri <= 67, net 100 kg agırlık başına kıymeti >18 Avro, ilave şeker içeren",
       "tanim_en": "Pear juice; brix value <= 67, net value per 100 kg weight >18 Euros, containing added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989610000",
       "tanim_tr": "Armut suyu; brix değeri <= 67, net 100 kg agırlık başına kıymeti >18 Avro, ilave şeker > %30",
       "tanim_en": "Pear juice; brix value <= 67, net value per 100 kg weight >18 Euros, added sugar > 30%.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989630000",
       "tanim_tr": "Armut suyu; brix değeri <= 67, net 100 kg agırlık başına kıymeti >18 Avro, ilave şeker <= %30",
       "tanim_en": "Pear juice; brix value <= 67, net value per 100 kg weight >18 Euros, added sugar <= 30%.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989690000",
       "tanim_tr": "Armut suyu; brix değeri <= 67, ilave şeker içermeyenler",
       "tanim_en": "Pear juice; brix value <= 67, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989710000",
       "tanim_tr": "Kiraz suyu; brix değeri <= 67, net 100 kg agırlık başına kıymeti >30 Avro ve ilave şeker içerenler",
       "tanim_en": "Cherry juice; with a brix value <= 67, a net value per 100 kg weight >30 Euros, and containing added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989730000",
       "tanim_tr": "Tropikal meyvaların suyu; brix değeri <= 67, net 100 kg agırlık başına kıymeti >30 Avro ve ilave şeker içerenler",
       "tanim_en": "Juices of tropical fruits; with a brix value <= 67, a net value per 100 kg weight >30 Euros, and containing added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989790000",
       "tanim_tr": "Diğer meyvaların, sert kabuklu meyvaların ve sebzelerin suları; brix değeri <= 67, net 100 kg agırlık başına kıymeti >30 Avro ve ilave şeker içerenler",
       "tanim_en": "Juices of other fruits, nuts and vegetables; with a brix value <= 67, a net value >30 Euros per 100 kg weight and containing added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989850000",
       "tanim_tr": "Tropikal meyvaların suyu; brix değeri <= 67, net 100 kg agırlık başına kıymeti <=30 Avro, ilave şeker > %30",
       "tanim_en": "Tropical fruit juice; brix value <= 67, value per 100 kg net weight <= 30 Euros, added sugar > 30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989860000",
       "tanim_tr": "Diğer meyvaların suyu; brix değeri <= 67, net 100 kg agırlık başına kıymeti <=30 Avro, ilave şeker > %30",
       "tanim_en": "Juice of other fruits; brix value <= 67, value per 100 kg net weight <= 30 Euros, added sugar > 30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989880000",
       "tanim_tr": "Tropikal meyvaların suyu; brix değeri <= 67, net 100 kg agırlık başına kıymeti <=30 Avro, ilave şeker <= %30",
       "tanim_en": "Tropical fruit juice; brix value <= 67, net value per 100 kg weight <= €30, added sugar <= 30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989890000",
       "tanim_tr": "Diğer meyvaların, sert kabuklu meyvaların ve sebzelerin suları; brix değeri <= 67, net 100 kg agırlık başına kıymeti <=30 Avro, ilave şeker <= %30",
       "tanim_en": "Juices of other fruits, nuts and vegetables; brix value <= 67, value per 100 kg net weight <= 30 Euro, added sugar <= 30%",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989960000",
       "tanim_tr": "Kiraz suları; brix değeri <= 67, ilave şeker içermeyen",
       "tanim_en": "Cherry juices; brix value <= 67, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989970000",
       "tanim_tr": "Tropikal meyvaların suları; brix değeri <= 67, ilave şeker içermeyen",
       "tanim_en": "Tropical fruit juices; brix value <= 67, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200989990000",
       "tanim_tr": "Diğer meyvaların, sert kabuklu meyvaların ve sebzelerin suları; brix değeri <= 67, ilave şeker içermeyen",
       "tanim_en": "Juices of other fruits, nuts, and vegetables; brix value <= 67, without added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990110000",
       "tanim_tr": "Elma, armut suyu karışımı; brix değeri > 67, 100 kg için kıymeti <= 22 euro",
       "tanim_en": "Apple and pear juice mixture; brix value > 67, price per 100 kg <= 22 euros",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990190000",
       "tanim_tr": "Elma, armut suyu karışımı; brix değeri > 67, 100 kg için kıymeti > 22 euro",
       "tanim_en": "Apple and pear juice mixture; brix value > 67, price > 22 euros per 100 kg.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990210000",
       "tanim_tr": "Diğer sebze, meyve ve sert kabuklu meyvelerin sularının karışımı; brix değeri > 67, 100 kg için değer =< 30 euro",
       "tanim_en": "A mixture of juices from other vegetables, fruits, and nuts; brix value > 67, value per 100 kg =< 30 euros.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990290000",
       "tanim_tr": "Diğer sebze, meyve ve sert kabuklu meyvelerin sularının karışımı; brix değeri > 67, 100 kg için değer > 30 euro",
       "tanim_en": "A mixture of juices from other vegetables, fruits, and nuts; brix value > 67, value > 30 euros per 100 kg.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990310000",
       "tanim_tr": "Elma, armut suyu karışımı; brix değeri <= 67, 100 kg için kıymeti <= 18 euro, ilave şeker > % 30",
       "tanim_en": "Apple and pear juice mixture; brix value <= 67, price per 100 kg <= 18 euros, added sugar > 30%.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990390000",
       "tanim_tr": "Diğer elma, armut suyu karışımı; brix değeri <= 67",
       "tanim_en": "Other apple and pear juice mixture; brix value <= 67",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990410000",
       "tanim_tr": "Turunçgil ve ananas suyu karışımları; brix değeri <= 67, 100 kg için değer > 30 euro, ilave şeker içerenler",
       "tanim_en": "Citrus and pineapple juice blends; brix value <= 67, value > 30 euros per 100 kg, containing added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990490000",
       "tanim_tr": "Turunçgil ve ananas suyu karışımları; brix değeri <= 67, 100 kg için değer > 30 euro, ilave şeker içemeyen",
       "tanim_en": "Citrus and pineapple juice blends; brix value <= 67, value > 30 euros per 100 kg, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990510000",
       "tanim_tr": "Diğer sebze, meyve ve sert kabuklu meyvelerin sularının karışımı; brix değeri <= 67, 100 kg için değer <= 30 euro, ilave şeker içerenler",
       "tanim_en": "Mixture of juices from other vegetables, fruits and nuts; brix value <= 67, value per 100 kg <= 30 euros, containing added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990590000",
       "tanim_tr": "Diğer sebze, meyve ve sert kabuklu meyvelerin sularının karışımı; brix değeri <= 67, 100 kg için değer <= 30 euro, ilave şeker içermeyenler",
       "tanim_en": "A mixture of juices from other vegetables, fruits, and nuts; brix value <= 67, value per 100 kg <= 30 euros, without added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990710000",
       "tanim_tr": "Turunçgil ve ananas suyu karışımları; brix değeri <= 67, 100 kg için değer <= 30 euro, ilave şeker > %30",
       "tanim_en": "Citrus and pineapple juice blends; brix value <= 67, value per 100 kg <= 30 euros, added sugar > 30%.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990730000",
       "tanim_tr": "Turunçgil ve ananas suyu karışımları; brix değeri <= 67, 100 kg için değer <= 30 euro, ilave şeker <= %30",
       "tanim_en": "Citrus and pineapple juice blends; brix value <= 67, value per 100 kg <= 30 euros, added sugar <= 30%.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990790000",
       "tanim_tr": "Turunçgil ve ananas suyu karışımları; brix değeri <= 67, 100 kg için değer <= 30 euro, ilave şeker içermeyen",
       "tanim_en": "Citrus and pineapple juice blends; brix value <= 67, value per 100 kg <= 30 euros, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990920000",
       "tanim_tr": "Tropikal meyve sularının karışımları; brix değeri <= 67, 100 kg için değer <= 30 euro, ilave şeker > %30",
       "tanim_en": "Mixtures of tropical fruit juices; brix value <= 67, value per 100 kg <= 30 euros, added sugar > 30%.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990940000",
       "tanim_tr": "Diğer sebze, meyve ve sert kabuklu meyvelerin sularının karışımı; brix değeri <= 67, 100 kg için değer <= 30 euro, ilave şeker > %30",
       "tanim_en": "A mixture of juices from other vegetables, fruits, and nuts; brix value <= 67, value per 100 kg <= 30 euros, added sugar > 30%.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990950000",
       "tanim_tr": "Tropikal meyve sularının karışımları; brix değeri <= 67, 100 kg için değer <= 30 euro, ilave şeker <= %30",
       "tanim_en": "Mixtures of tropical fruit juices; brix value <= 67, value per 100 kg <= 30 euros, added sugar <= 30%.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990960000",
       "tanim_tr": "Diğer sebze, meyve ve sert kabuklu meyvelerin sularının karışımı; brix değeri <= 67, 100 kg için değer <= 30 euro, ilave şeker <= %30",
       "tanim_en": "A mixture of juices from other vegetables, fruits, and nuts; brix value <= 67, value per 100 kg <= 30 euros, added sugar <= 30%.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990970000",
       "tanim_tr": "Tropikal meyve sularının karışımları; brix değeri <= 67, 100 kg için değer <= 30 euro, ilave şeker içermeyen",
       "tanim_en": "Mixtures of tropical fruit juices; brix value <= 67, value per 100 kg <= 30 euros, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     },
     {
       "kod": "200990980000",
       "tanim_tr": "Diğer sebze, meyve ve sert kabuklu meyvelerin sularının karışımı; brix değeri <= 67, 100 kg için değer <= 30 euro, ilave şeker içermeyen",
       "tanim_en": "A mixture of juices from other vegetables, fruits, and nuts; brix value <= 67, value per 100 kg <= 30 euros, no added sugar.",
-      "grup": "otv_yok",
-      "oran": null
+      "grup": "OTV-III-A-Mesrubat",
+      "oran": 0.1,
+      "liste": "III/A",
+      "vergi_tipi": "oran"
     }
   ]
 }

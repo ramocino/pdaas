@@ -17,8 +17,8 @@
         "ticaret"
       ]
     },
-    "surum": "2026.10.20",
-    "guncelleme": "2026-10-20",
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
     "yayin_durumu": "yayinda",
     "zaman": {
       "bazli": false,
@@ -44,8 +44,8 @@
       {
         "kod": "gib-kdv-oranlari",
         "ad": {
-          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
-          "en": "VAT rates and Lists (I) and (II) annexed to Council of Ministers Decision No. 2007/13033"
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
         },
         "tur": "bkk_eki_liste",
         "kurum_kod": "gib",
@@ -86,6 +86,24 @@
         "tarih": "2008-01-12"
       },
       {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
+          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
+        },
+        "resmi_gazete": "32241",
+        "tarih": "2023-07-07"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
+          "en": "Presidential Decision No. 9126 (amendment to List II)"
+        },
+        "resmi_gazete": "32722",
+        "tarih": "2024-11-14"
+      },
+      {
         "tur": "kanun",
         "ad": {
           "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
@@ -93,6 +111,24 @@
         },
         "resmi_gazete": "24783",
         "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
       }
     ],
     "uretim": {
@@ -104,13 +140,13 @@
         },
         {
           "servis_kod": "kdv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+          "surum": "2026.10.21",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
         },
         {
           "servis_kod": "otv-oranlari",
-          "surum": "2026.01.02",
-          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+          "surum": "2026.10.21",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
         },
         {
           "servis_kod": "tevkifat-oranlari",
@@ -121,13 +157,18 @@
           "servis_kod": "randiman",
           "surum": "2026.01.01",
           "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.21",
+          "checksum": "sha256:0d2f2bbedb7b830c36bc195160da59ef4ba6fc8245465e18cbfcc29d8cbd810f"
         }
       ],
       "kural_seti": {
         "kod": "coklu-kural",
-        "surum": "2026.10.20"
+        "surum": "2026.10.21"
       },
-      "uretim_zamani": "2026-10-20T20:15:07.944946+00:00",
+      "uretim_zamani": "2026-10-21T10:46:36.400758+00:00",
       "eslesme_ozeti": {
         "toplam": 15799,
         "eslesen": 15799,
@@ -156,6 +197,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -186,6 +230,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "10.61"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": [
@@ -215,6 +262,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "10.61"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": [
@@ -233,8 +283,8 @@
       "tanim_tr": "Mısır unu; yağ oranı ağırlık itibariyle < = % 1,5",
       "tanim_en": "Corn flour; fat content by weight <= 1.5%",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -243,6 +293,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -254,8 +307,8 @@
       "tanim_tr": "Mısır unu; yağ oranı ağırlık itibariyle > % 1,5",
       "tanim_en": "Corn flour; fat content > 1.5% by weight.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -264,6 +317,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -275,8 +331,8 @@
       "tanim_tr": "Arpa unu",
       "tanim_en": "Barley flour",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -285,6 +341,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -296,8 +355,8 @@
       "tanim_tr": "Yulaf unu",
       "tanim_en": "Oat flour",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -306,6 +365,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -317,8 +379,8 @@
       "tanim_tr": "Pirinç unu",
       "tanim_en": "Rice flour",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -327,6 +389,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -338,8 +403,8 @@
       "tanim_tr": "Çavdar unu",
       "tanim_en": "Rye flour",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -348,6 +413,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -359,8 +427,8 @@
       "tanim_tr": "Diğer hububat unları",
       "tanim_en": "Other cereal flours",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -369,6 +437,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -391,6 +462,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "10.61"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -411,6 +485,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -433,6 +510,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "10.61"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -453,6 +533,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -475,6 +558,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "10.61"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -495,6 +581,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -517,6 +606,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "10.61"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -537,6 +629,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -559,6 +654,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "10.61"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -579,6 +677,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -601,6 +702,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "10.61"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -621,6 +725,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -643,6 +750,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "10.61"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -663,6 +773,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -685,6 +798,9 @@
         "grup": "tevkifat_yok",
         "oran": null
       },
+      "nace": {
+        "kod": "10.61"
+      },
       "randiman": {
         "girdi_oldugu_kurallar": [],
         "cikti_oldugu_kurallar": []
@@ -695,8 +811,8 @@
       "tanim_tr": "Yulaftan yassılaştırılmış taneler",
       "tanim_en": "Flattened grains of oats",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -705,6 +821,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -716,8 +835,8 @@
       "tanim_tr": "Yulaftan flokon halindeki taneler",
       "tanim_en": "Oat flakes",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -726,6 +845,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -737,8 +859,8 @@
       "tanim_tr": "Buğdaydan yassılaştırılmış taneler",
       "tanim_en": "Flattened grains of wheat",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -747,6 +869,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -758,8 +883,8 @@
       "tanim_tr": "Buğdaydan flokon halindeki taneler",
       "tanim_en": "Wheat grains in flake form",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -768,6 +893,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -779,8 +907,8 @@
       "tanim_tr": "Çavdardan yassılaştırılmış taneler",
       "tanim_en": "Flattened grains of rye",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -789,6 +917,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -800,8 +931,8 @@
       "tanim_tr": "Çavdardan flokon halindeki taneler",
       "tanim_en": "Rye grains in flake form",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -810,6 +941,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -821,8 +955,8 @@
       "tanim_tr": "Mısırdan yassılaştırılmış taneler",
       "tanim_en": "Flattened kernels from corn",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -831,6 +965,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -842,8 +979,8 @@
       "tanim_tr": "Mısırdan flokon halindeki taneler",
       "tanim_en": "Corn kernels in flake form",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -852,6 +989,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -863,8 +1003,8 @@
       "tanim_tr": "Arpadan yassılaştırılmış taneler",
       "tanim_en": "Flattened grains of barley",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -873,6 +1013,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -884,8 +1027,8 @@
       "tanim_tr": "Arpadan flokon halindeki taneler",
       "tanim_en": "Barley grains in flake form",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -894,6 +1037,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -905,8 +1051,8 @@
       "tanim_tr": "Pirinçten flokon halindeki taneler",
       "tanim_en": "Grains of rice in flake form",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -915,6 +1061,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -926,8 +1075,8 @@
       "tanim_tr": "Diğer hububattan yassılaştırılmış taneler",
       "tanim_en": "Flattened grains from other cereals",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -936,6 +1085,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -947,8 +1099,8 @@
       "tanim_tr": "Diğer hububattan flokon halindeki taneler",
       "tanim_en": "Grains in flake form from other cereals",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -957,6 +1109,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -968,8 +1123,8 @@
       "tanim_tr": "Yulaf taneleri; kabuğu veya kavuzu çıkarılmış, dilimlenmiş veya iri parçalar halinde ufalanmış olsun olmasın",
       "tanim_en": "Oat grains; whether hulled or dehulled, sliced ​​or coarsely crushed.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -978,6 +1133,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -989,8 +1147,8 @@
       "tanim_tr": "Yulaf taneleri; yuvarlatılmış",
       "tanim_en": "Oat grains; rounded",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -999,6 +1157,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1010,8 +1171,8 @@
       "tanim_tr": "Diğer yulaf taneleri:",
       "tanim_en": "Other oat grains:",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1020,6 +1181,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1031,8 +1195,8 @@
       "tanim_tr": "Mısır taneleri; kabuğu veya kavuzu çıkarılmış, dilimlenmiş, iri parçalar halinde ufalanmış olsun olmasın, yuvarlatılmış",
       "tanim_en": "Corn kernels; whether hulled or dehulled, sliced, coarsely crushed, or rounded.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1041,6 +1205,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1052,8 +1219,8 @@
       "tanim_tr": "Diğer mısır taneleri",
       "tanim_en": "Other corn kernels",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1062,6 +1229,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1073,8 +1243,8 @@
       "tanim_tr": "Arpa taneleri; kabuğu veya kavuzu çıkarılmış, dilimlenmiş veya iri parçalar halinde ufalanmış olsun olmasın",
       "tanim_en": "Barley grains; whether hulled or dehulled, sliced ​​or coarsely crushed.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1083,6 +1253,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1094,8 +1267,8 @@
       "tanim_tr": "Arpa taneleri; yuvarlatılmış",
       "tanim_en": "Barley grains; rounded",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1104,6 +1277,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1115,8 +1291,8 @@
       "tanim_tr": "Diğer arpa taneleri",
       "tanim_en": "Other barley grains",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1125,6 +1301,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1136,8 +1315,8 @@
       "tanim_tr": "Diğer hububat taneleri; kabuğu veya kavuzu çıkarılmış, dilimlenmiş veya iri parçalar halinde ufalanmış olsun olmasın",
       "tanim_en": "Other cereal grains; whether hulled or dehulled, sliced ​​or coarsely chopped.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1146,6 +1325,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1157,8 +1339,8 @@
       "tanim_tr": "Yuvarlatılmış diğer hububat taneleri",
       "tanim_en": "Other rounded cereal grains",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1167,6 +1349,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1178,8 +1363,8 @@
       "tanim_tr": "Buğday; sadece iri parçalar halinde ufalanmış",
       "tanim_en": "Wheat; simply crushed into large pieces.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1188,6 +1373,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1199,8 +1387,8 @@
       "tanim_tr": "Çavdar; sadece iri parçalar halinde ufalanmış",
       "tanim_en": "Rye; only coarsely ground.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1209,6 +1397,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1220,8 +1411,8 @@
       "tanim_tr": "Diğer hububat; sadece iri parçalar halinde ufalanmış",
       "tanim_en": "Other grains; only crushed into large pieces.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1230,6 +1421,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1241,8 +1435,8 @@
       "tanim_tr": "Diğer buğday taneleri",
       "tanim_en": "Other wheat grains",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1251,6 +1445,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1262,8 +1459,8 @@
       "tanim_tr": "Diğer çavdar taneleri",
       "tanim_en": "Other rye grains",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1272,6 +1469,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1283,8 +1483,8 @@
       "tanim_tr": "Diğer hububat taneleri",
       "tanim_en": "Other cereal grains",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1293,6 +1493,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1304,8 +1507,8 @@
       "tanim_tr": "Buğday embriyonları; bütün, yassılaştırılmış, flokon haline getirilmiş veya öğütülmüş",
       "tanim_en": "Wheat germ; whole, flattened, flaked or ground.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1314,6 +1517,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1325,8 +1531,8 @@
       "tanim_tr": "Mısır özü; bütün, yassılaştırılmış, flokon haline getirilmiş veya öğütülmüş",
       "tanim_en": "Corn extract; whole, flattened, flaked or ground.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1335,6 +1541,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1346,8 +1555,8 @@
       "tanim_tr": "Diğer hububat embriyonları; bütün, yassılaştırılmış, flokon haline getirilmiş veya öğütülmüş",
       "tanim_en": "Other cereal embryos; whole, flattened, flaked or ground.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1356,6 +1565,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1367,8 +1579,8 @@
       "tanim_tr": "Patates unu",
       "tanim_en": "Potato flour",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1377,6 +1589,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1388,8 +1603,8 @@
       "tanim_tr": "Patates ezmesi ve tozları",
       "tanim_en": "Mashed potatoes and potato powders",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1398,6 +1613,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1409,8 +1627,8 @@
       "tanim_tr": "Patates flokonları, granülleri ve pelletleri",
       "tanim_en": "Potato flakes, granules and pellets",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1419,6 +1637,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1430,8 +1651,8 @@
       "tanim_tr": "Kuru baklağillerin (07.13) unu, kaba unu ve tozları",
       "tanim_en": "Flour, coarse flour and powders of dried legumes (07.13)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1440,6 +1661,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1451,8 +1675,8 @@
       "tanim_tr": "Nişasta veya inülin içeren kök ve yumruların (07.14) başka maddeler katılmış (denature) unu, kaba unu ve tozları",
       "tanim_en": "Denatured flour, coarse flour and powders of roots and tubers (07.14) containing starch or inulin, mixed with other substances.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1461,6 +1685,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1472,8 +1699,8 @@
       "tanim_tr": "Salep",
       "tanim_en": "Salep",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1482,6 +1709,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1493,8 +1723,8 @@
       "tanim_tr": "Nişasta veya inülin içeren kök ve yumruların (07.14) diğer unu, kaba unu ve tozları",
       "tanim_en": "Other flours, coarse flours and powders of roots and tubers (07.14) containing starch or inulin",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1503,6 +1733,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1514,8 +1747,8 @@
       "tanim_tr": "Muzun unu, kaba unu ve tozu",
       "tanim_en": "Banana meal, coarse meal and powder.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1524,6 +1757,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1535,8 +1771,8 @@
       "tanim_tr": "Fındıktan un, kaba un ve tozlar",
       "tanim_en": "Hazelnut flour, coarse flour and powders",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1545,6 +1781,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1556,8 +1795,8 @@
       "tanim_tr": "Diğer meyvelerin ve sert kabuklu diğer meyvelerin (08) unu, kaba unu ve tozları",
       "tanim_en": "Flour, coarse flour and powders of other fruits and other nuts (08)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1566,6 +1805,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1577,8 +1819,8 @@
       "tanim_tr": "Buğday maltı (kavrulmamış); un şeklinde",
       "tanim_en": "Wheat malt (unroasted); in flour form.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1587,6 +1829,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1598,8 +1843,8 @@
       "tanim_tr": "Buğday maltı (kavrulmamış); un şeklinde olanlar HARİÇ",
       "tanim_en": "Wheat malt (unroasted); EXCEPT those in flour form.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1608,6 +1853,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1619,8 +1867,8 @@
       "tanim_tr": "Arpa maltı (kavrulmamış); un şeklinde",
       "tanim_en": "Barley malt (unroasted); in flour form.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1629,6 +1877,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1640,8 +1891,8 @@
       "tanim_tr": "Diğer maltlar (kavrulmamış); un şeklinde",
       "tanim_en": "Other malts (unroasted); in flour form.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1650,6 +1901,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1661,8 +1915,8 @@
       "tanim_tr": "Arpa maltı (kavrulmamış); un şeklinde olanlar HARİÇ",
       "tanim_en": "Barley malt (unroasted); EXCEPT those in flour form.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1671,6 +1925,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1682,8 +1939,8 @@
       "tanim_tr": "Diğer maltlar (kavrulmamış); un şeklinde olanlar HARİÇ",
       "tanim_en": "Other malts (unroasted); EXCEPT those in flour form.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1692,6 +1949,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1703,8 +1963,8 @@
       "tanim_tr": "Buğday maltı (kavrulmuş)",
       "tanim_en": "Roasted wheat malt",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1713,6 +1973,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1724,8 +1987,8 @@
       "tanim_tr": "Arpa maltı (kavrulmuş)",
       "tanim_en": "Roasted barley malt",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1734,6 +1997,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1745,8 +2011,8 @@
       "tanim_tr": "Diğer maltlar (kavrulmuş)",
       "tanim_en": "Other malts (roasted)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1755,6 +2021,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1766,8 +2035,8 @@
       "tanim_tr": "Buğday nişastası; torba içinde olanlar",
       "tanim_en": "Wheat starch; those in bags.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1776,6 +2045,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1787,8 +2059,8 @@
       "tanim_tr": "Buğday nişastası; torba içinde olanlar HARİÇ",
       "tanim_en": "Wheat starch; EXCEPT those in bags.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1797,6 +2069,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1808,8 +2083,8 @@
       "tanim_tr": "Mısır nişastası; torba içinde olanlar",
       "tanim_en": "Cornstarch; in bags.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1818,6 +2093,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1829,8 +2107,8 @@
       "tanim_tr": "Mısır nişastası; torba içinde olanlar HARİÇ",
       "tanim_en": "Cornstarch; EXCEPT those in bags.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1839,6 +2117,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1850,8 +2131,8 @@
       "tanim_tr": "Patates nişastası; torba içinde olanlar",
       "tanim_en": "Potato starch; the kind that comes in bags.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1860,6 +2141,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1871,8 +2155,8 @@
       "tanim_tr": "Patates nişastası; torba içinde olanlar HARİÇ",
       "tanim_en": "Potato starch; EXCEPT those in bags.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1881,6 +2165,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1892,8 +2179,8 @@
       "tanim_tr": "Manyok nişastası (cassava); torba içinde olanlar",
       "tanim_en": "Cassava starch; available in bags.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1902,6 +2189,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1913,8 +2203,8 @@
       "tanim_tr": "Manyok nişastası (cassava); torba içinde olanlar HARİÇ",
       "tanim_en": "Cassava starch; EXCEPT those in bags.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1923,6 +2213,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1934,8 +2227,8 @@
       "tanim_tr": "Pirinç nişastası; torba içinde olanlar",
       "tanim_en": "Rice starch; the kind that comes in bags.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1944,6 +2237,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1955,8 +2251,8 @@
       "tanim_tr": "Pirinç nişastası; torba içinde olanlar HARİÇ",
       "tanim_en": "Rice starch; EXCEPT those in bags.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1965,6 +2261,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1976,8 +2275,8 @@
       "tanim_tr": "Diğer nişastalar; torba içinde olanlar",
       "tanim_en": "Other starches; those in bags",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -1986,6 +2285,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -1997,8 +2299,8 @@
       "tanim_tr": "Diğer nişastalar; torba içinde olanlar HARİÇ",
       "tanim_en": "Other starches; EXCEPT those in bags.",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2007,6 +2309,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -2018,8 +2323,8 @@
       "tanim_tr": "İnülin",
       "tanim_en": "Inulin",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2028,6 +2333,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],
@@ -2039,8 +2347,8 @@
       "tanim_tr": "Buğday gluteni (kurutulmuş olsun olmasın)",
       "tanim_en": "Wheat gluten (whether dried or not)",
       "kdv": {
-        "grup": "genel",
-        "oran": 0.2
+        "grup": "I-A",
+        "oran": 0.01
       },
       "otv": {
         "grup": "otv_yok",
@@ -2049,6 +2357,9 @@
       "tevkifat": {
         "grup": "tevkifat_yok",
         "oran": null
+      },
+      "nace": {
+        "kod": "10.61"
       },
       "randiman": {
         "girdi_oldugu_kurallar": [],

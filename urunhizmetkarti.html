@@ -901,49 +901,53 @@
 
         if (kartTip.otvVar) {
           const otv = kayit.otv;
-          
+
           if (otv && otv.grup && otv.grup !== 'otv_yok') {
             let otvDeger = 'Uygulanır';
-            let otvAciklama = otv.ad_tr ? ` (${otv.ad_tr})` : '';
-            let bulundu = false;
+            let otvAciklama = '';
 
-            // 1. MATRAH DİLİMLERİ VARSA (Telefonlar, Otomobiller vb.)
-            if (otv.matrah_dilimleri && otv.matrah_dilimleri.length > 0) {
+            let oranMetin = '';
+            let maktuMetin = '';
+
+            // 1. NİSPİ ORAN KONTROLÜ (Doğrudan derle.py'den gelen kalem verisi)
+            if (otv.oran != null && otv.oran > 0) {
+              oranMetin = `%${(otv.oran * 100).toFixed(0)}`;
+            }
+            // Eğer oran yoksa Matrah Dilimlerine bak (Otomobil, Telefon vb.)
+            else if (otv.matrah_dilimleri && otv.matrah_dilimleri.length > 0) {
               const oranlar = otv.matrah_dilimleri.map(m => m.oran || 0).filter(o => o > 0);
               if (oranlar.length > 0) {
                 const minOran = Math.min(...oranlar);
                 const maxOran = Math.max(...oranlar);
                 if (minOran === maxOran) {
-                  otvDeger = `%${(minOran * 100).toFixed(1).replace('.0', '')}`;
+                  oranMetin = `%${(minOran * 100).toFixed(1).replace('.0', '')}`;
                 } else {
-                  otvDeger = `%${(minOran * 100).toFixed(0)} - %${(maxOran * 100).toFixed(0)}`;
-                  otvAciklama += ` - Matraha göre değişkenlik gösterir`;
+                  oranMetin = `%${(minOran * 100).toFixed(0)} - %${(maxOran * 100).toFixed(0)}`;
+                  otvAciklama += ` · Matraha göre değişkenlik gösterir`;
                 }
-                bulundu = true;
               }
-            }
-            
-            // 2. MAKTU TUTAR VARSA (Akaryakıt vb.)
-            if (!bulundu && otv.vergi_tipi === 'maktu') {
-              otvDeger = 'Maktu';
-              otvAciklama += ` - ${otv.birim_tr || 'Birim'} başına sabit tutar`;
-              bulundu = true;
-            } 
-            
-            // 3. KOMBİNE VERGİ VARSA (Sigaralar vb.)
-            if (!bulundu && otv.vergi_tipi === 'kombine') {
-              otvDeger = 'Kombine';
-              if (otv.matrah_dilimleri && otv.matrah_dilimleri.length > 0) {
-                const m = otv.matrah_dilimleri[0];
-                otvAciklama += ` - Nispi: %${(m.oran * 100).toFixed(0)}, Asgari Maktu: ${m.asgari_maktu || '0'} TL`;
-              }
-              bulundu = true;
             }
 
-            // 4. TEK BİR ORAN VARSA (Beyaz Eşya vb.)
-            if (!bulundu && otv.oran > 0) {
-              otvDeger = `%${(otv.oran * 100).toFixed(1).replace('.0', '')}`;
-              bulundu = true;
+            // 2. MAKTU VE ASGARİ MAKTU TUTARLARI KONTROLÜ
+            if (otv.asgari_maktu != null) {
+              maktuMetin += `Asgari Maktu: ${otv.asgari_maktu} TL`;
+            }
+            if (otv.maktu != null) {
+              if (maktuMetin) maktuMetin += ', ';
+              maktuMetin += `Maktu: ${otv.maktu} TL`;
+            }
+
+            // Eğer üst düzeyde maktu yoksa matrah dilimlerinin içine bak (yedek kontrol)
+            if (!maktuMetin && otv.matrah_dilimleri && otv.matrah_dilimleri.length > 0 && otv.matrah_dilimleri[0].asgari_maktu != null) {
+              maktuMetin = `Asgari Maktu: ${otv.matrah_dilimleri[0].asgari_maktu} TL`;
+            }
+
+            // Değerleri Birleştir
+            if (oranMetin) otvDeger = oranMetin;
+            else if (otv.vergi_tipi === 'maktu') otvDeger = 'Maktu';
+
+            if (maktuMetin) {
+              otvAciklama = ` · ${maktuMetin}${otvAciklama}`;
             }
 
             if (otv.ornekler_tr && otv.ornekler_tr.length > 0) {
@@ -966,6 +970,16 @@
               vurgu: 'muaf'
             });
           }
+        }
+        // TEVKİFAT BİLGİSİ
+        if (kartTip.kdvVar && kayit.tevkifat && kayit.tevkifat.grup && kayit.tevkifat.grup !== 'tevkifat_yok') {
+          const tevk = kayit.tevkifat;
+          satirlar.push({
+            alan: "KDV Tevkifatı",
+            deger: tevk.oran_kesir ? `%${(tevk.oran * 100).toFixed(0)} (${tevk.oran_kesir})` : `%${(tevk.oran * 100).toFixed(0)}`,
+            kurum: `${t('kurum_gib')} — ${tevk.ad_tr || tevk.grup}`,
+            vurgu: 'kdv' // Mavi renkte görünmesi için
+          });
         }
       }
 
@@ -1033,11 +1047,20 @@
       const adEN = kayit.tanim_en || kayit.ad_en || kayit.tanim || '';
       const satirlar = [];
 
-      const naceGrup = iliskili.find(g => g.kaynak === 'nace');
-      const naceKayit = naceGrup && naceGrup.kayitlar.length ? naceGrup.kayitlar[0] : null;
-      const naceKod = naceKayit ? normKod(naceKayit.kod) : '';
-      const naceTR = naceKayit ? (naceKayit.tanim_tr || naceKayit.ad_tr || naceKayit.tanim || '') : '';
-      const naceEN = naceKayit ? (naceKayit.tanim_en || naceKayit.ad_en || naceKayit.tanim || '') : '';
+            // YENİ KOD
+      const naceVerisi = kayit.nace;
+      const naceKod = naceVerisi ? naceVerisi.kod : '';
+      
+      // Arayüzde NACE adını göstermek için VERI.nace içinden bulalım
+      let naceTR = '';
+      let naceEN = '';
+      if (naceKod) {
+          const naceObj = VERI.nace.kayitlar.find(n => normKod(n.kod) === normKod(naceKod));
+          if (naceObj) {
+              naceTR = naceObj.tanim_tr || naceObj.ad_tr;
+              naceEN = naceObj.tanim_en || naceObj.ad_en;
+          }
+      }
 
       if (kaynak === 'gtip') {
         satirlar.push({ alan: t('gtip_kod'), deger: kod, kurum: `${t('kurum_ticaret')} / ${t('kurum_tuik')}`, vurgu: 'kod' });

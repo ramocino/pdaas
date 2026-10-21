@@ -1,0 +1,985 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-kdv",
+      "ad": {
+        "tr": "GTİP KDV Eşleşmesi",
+        "en": "GTIP VAT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
+          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
+        },
+        "resmi_gazete": "32241",
+        "tarih": "2023-07-07"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
+          "en": "Presidential Decision No. 9126 (amendment to List II)"
+        },
+        "resmi_gazete": "32722",
+        "tarih": "2024-11-14"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.10.21",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.10.21",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.21",
+          "checksum": "sha256:9c1aa8e032c47268a9292ef5c3b40e6fb4683f7f58017307adc2decb0d8c4c16"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.21"
+      },
+      "uretim_zamani": "2026-10-21T10:31:05.319217+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "94",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:7f08c2bd2e624a47e6ca3d9555b7819374d1f4a13d3dab9ad3377d11c445b72f"
+  },
+  "kayitlar": [
+    {
+      "kod": "940110001000",
+      "tanim_tr": "Sivil hava taşıtlarında kullanılan oturmaya mahsus deri kaplanmamış mobilyalar",
+      "tanim_en": "Non-leather upholstered seating furniture used in civil aircraft.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940110009000",
+      "tanim_tr": "Hava taşıtlarında kullanılan oturmaya mahsus mobilyalar; sivil hava taşıtlarında kullanılan oturmaya mahsus deri kaplanmamış mobilyalar HARİÇ",
+      "tanim_en": "Seating furniture used in aircraft; EXCLUDING non-leather upholstered seating furniture used in civil aircraft.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940120000000",
+      "tanim_tr": "Motorlu taşıtlarda kullanılan oturmaya mahsus mobilyalar",
+      "tanim_en": "Seating furniture used in motor vehicles.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940131000000",
+      "tanim_tr": "Yüksekliği ayarlanabilen oturmaya mahsus ahşaptan döner koltuk ve sandalyeler",
+      "tanim_en": "Height-adjustable swivel chairs and stools made of wood.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940139000000",
+      "tanim_tr": "Yüksekliği ayarlanabilen oturmaya mahsus döner koltuk ve sandalyeler; ahşaptan olanlar HARİÇ",
+      "tanim_en": "Height-adjustable swivel chairs and stools; EXCEPT those made of wood.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940141000000",
+      "tanim_tr": "Yatak haline getirilebilen oturmaya mahsus ahşaptan mobilyalar; kamp veya bahçede kullanılanlar HARİÇ",
+      "tanim_en": "Wooden seating furniture that can be converted into a bed; EXCEPT those used for camping or gardening.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940149000000",
+      "tanim_tr": "Yatak haline getirilebilen oturmaya mahsus mobilyalar; ahşaptan olanlar ve kamp veya bahçede kullanılanlar HARİÇ",
+      "tanim_en": "Furniture designed for sitting that can be converted into a bed; EXCEPT those made of wood and those used for camping or gardening.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940152000000",
+      "tanim_tr": "Bambudan oturmaya mahsus mobilyalar",
+      "tanim_en": "Bamboo seating furniture",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940153000000",
+      "tanim_tr": "Hintkamışından oturmaya mahsus mobilyalar",
+      "tanim_en": "Furniture for sitting made of rattan.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940159000000",
+      "tanim_tr": "Kamış, sepetçi söğüdü veya benzeri maddelerden oturmaya mahsus mobilyalar; bambudan ve hintkamışından olanlar HARİÇ)",
+      "tanim_en": "Furniture for seating made of reeds, willow, or similar materials; (EXCEPT those made of bamboo and rattan)",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940161000011",
+      "tanim_tr": "Ahşap iskeletli oturmaya mahsus içleri doldurulmuş, kaplanmış diğer mobilyalar; çocuklar için olanlar",
+      "tanim_en": "Wooden-framed seating furniture, filled and upholstered; those for children.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940161000019",
+      "tanim_tr": "Ahşap iskeletli oturmaya mahsus içleri doldurulmuş, kaplanmış diğer mobilyalar; çocuklar için olanlar HARİÇ",
+      "tanim_en": "Other upholstered and padded furniture of wooden frames intended for seating; EXCEPT those for children.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940169000011",
+      "tanim_tr": "Ahşap iskeletli oturmaya mahsus diğer mobilyalar; çocuklar için olanlar",
+      "tanim_en": "Other seating furniture with wooden frames; those for children.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940169000019",
+      "tanim_tr": "Ahşap iskeletli oturmaya mahsus diğer mobilyalar; çocuklar için olanlar HARİÇ",
+      "tanim_en": "Other seating furniture with a wooden frame; EXCEPT those for children.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940171000011",
+      "tanim_tr": "Metal iskeletli oturmaya mahsus içleri doldurulmuş, kaplanmış diğer mobilyalar; çocuklar için olanlar",
+      "tanim_en": "Other upholstered and padded furniture with metal frames intended for seating; those for children.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940171000019",
+      "tanim_tr": "Metal iskeletli oturmaya mahsus içleri doldurulmuş, kaplanmış diğer mobilyalar; çocuklar için olanlar HARİÇ",
+      "tanim_en": "Other upholstered and padded furniture with metal frames intended for seating; EXCEPT those for children.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940179000011",
+      "tanim_tr": "Metal iskeletli oturmaya mahsus diğer mobilyalar; çocuklar için olanlar",
+      "tanim_en": "Other furniture with metal frames intended for seating; those for children.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940179000019",
+      "tanim_tr": "Metal iskeletli oturmaya mahsus diğer mobilyalar; çocuklar için olanlar HARİÇ",
+      "tanim_en": "Other furniture with a metal frame intended for seating; EXCEPT those for children.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940180000011",
+      "tanim_tr": "Oturmaya mahsus diğer mobilyalar; çocuklar için olanlar",
+      "tanim_en": "Other furniture for seating; those for children.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940180000019",
+      "tanim_tr": "Oturmaya mahsus diğer mobilyalar; çocuklar için olanlar HARİÇ",
+      "tanim_en": "Other furniture intended for seating; EXCEPT those for children.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940191100000",
+      "tanim_tr": "Hava taşıtları için oturmaya mahsus mobilyaların ahşaptan aksam ve parçaları",
+      "tanim_en": "Wooden components and parts for seating furniture in aircraft.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940191900000",
+      "tanim_tr": "Oturmaya mahsus mobilyaların (hava taşıtlarında kullanılan türden olanlar HARİÇ) ahşaptan aksam ve parçaları",
+      "tanim_en": "Wooden parts and components of furniture intended for seating (excluding those used in aircraft).",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940199100000",
+      "tanim_tr": "Hava taşıtları için oturmaya mahsus mobilyaların aksam ve parçaları; ahşaptan olanlar HARİÇ",
+      "tanim_en": "Parts and components of seating furniture for aircraft; EXCEPT those made of wood.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940199200000",
+      "tanim_tr": "Motorlu taşıtlarda kullanılan türden oturmaya mahsus mobilyalara ait aksam ve parçalar; hava taşıtlarında kullanılanlar ve ahşaptan olanlar HARİÇ",
+      "tanim_en": "Parts and accessories of seating furniture of the type used in motor vehicles; EXCEPT those used in aircraft and those made of wood.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940199800000",
+      "tanim_tr": "Oturmaya mahsus mobilyaların (motorlu taşıtlarda ve hava taşıtlarında kullanılan türden olanlar HARİÇ) aksam ve parçaları; ahşaptan olanlar HARİÇ",
+      "tanim_en": "Parts and accessories of furniture intended for seating (excluding those used in motor vehicles and aircraft); excluding those made of wood.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940210000011",
+      "tanim_tr": "Dişçilik koltukları",
+      "tanim_en": "Dental chairs",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940210000019",
+      "tanim_tr": "Berber koltukları veya benzeri koltuklar; dişçilik koltukları HARİÇ",
+      "tanim_en": "Barber chairs or similar chairs; EXCEPT dental chairs.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940210000021",
+      "tanim_tr": "Dişçilik koltukları, berber koltukları veya benzeri koltuklar için aksam ve parçalar",
+      "tanim_en": "Parts and accessories for dental chairs, barber chairs, or similar chairs.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940290000011",
+      "tanim_tr": "Ameliyat masaları; eğme, döndürme, yükseltme, alçaltma gibi fonksiyonlara haiz mekanik tertibatlı olanlar",
+      "tanim_en": "Operating tables are those equipped with mechanical devices that allow for functions such as tilting, rotating, raising, and lowering.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940290000012",
+      "tanim_tr": "Tıpta, cerrahide, diş hekimliğinde ve veterinerlikte kullanılan ortopedik masalar",
+      "tanim_en": "Orthopedic tables used in medicine, surgery, dentistry, and veterinary medicine.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940290000013",
+      "tanim_tr": "Tıpta, cerrahide, diş hekimliğinde ve veterinerlikte kullanılan mekanik tertibatlı karyolalar",
+      "tanim_en": "Mechanically equipped beds used in medicine, surgery, dentistry, and veterinary medicine.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940290000019",
+      "tanim_tr": "Tıpta, cerrahide, diş hekimliğinde ve veterinerlikte kullanılan diğer mobilyalar",
+      "tanim_en": "Other furniture used in medicine, surgery, dentistry and veterinary medicine.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940290000021",
+      "tanim_tr": "Tıpta, cerrahide, diş hekimliğinde ve veterinerlikte kullanılan diğer mobilyalar için aksam ve parçalar",
+      "tanim_en": "Components and parts for other furniture used in medicine, surgery, dentistry and veterinary medicine.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940310510000",
+      "tanim_tr": "Bürolarda kullanılan metalden yazı masaları; yüksekliği <= 80 cm",
+      "tanim_en": "Metal writing desks used in offices; height <= 80 cm",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940310580000",
+      "tanim_tr": "Bürolarda kullanılan metalden diğer mobilyalar; yüksekliği <= 80 cm",
+      "tanim_en": "Other metal furniture used in offices; height <= 80 cm",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940310910000",
+      "tanim_tr": "Bürolarda kullanılan metalden kapılı, kanatlı veya sürgülü dolaplar; yüksekliği > 80 cm",
+      "tanim_en": "Metal cabinets with doors, hinged doors or sliding doors used in offices; height > 80 cm",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940310930000",
+      "tanim_tr": "Bürolarda kullanılan metalden çekmeceli dolaplar, dosya veya fiş dolapları; yüksekliği > 80 cm",
+      "tanim_en": "Metal drawer cabinets, file cabinets or receipt cabinets used in offices; height > 80 cm",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940310980000",
+      "tanim_tr": "Bürolarda kullanılan metalden diğer mobilyalar; yüksekliği > 80 cm",
+      "tanim_en": "Other metal furniture used in offices; height > 80 cm",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940320200011",
+      "tanim_tr": "Metalden çocuk karyolaları ve beşikler",
+      "tanim_en": "Metal baby beds and cribs",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940320200019",
+      "tanim_tr": "Metalden karyolalar; metalden çocuk karyolaları ve beşikler HARİÇ",
+      "tanim_en": "Metal beds; EXCEPT metal children's beds and cribs.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940320801000",
+      "tanim_tr": "Çinkodan, demir veya çelikten asma yemek dolapları",
+      "tanim_en": "Hanging food cabinets made of zinc, iron, or steel.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940320809000",
+      "tanim_tr": "Metalden diğer mobilyalar",
+      "tanim_en": "Other furniture made of metal",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940330110000",
+      "tanim_tr": "Bürolarda kullanılan ahşaptan yazı masaları; yüksekliği <= 80 cm",
+      "tanim_en": "Wooden writing desks used in offices; height <= 80 cm",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940330190000",
+      "tanim_tr": "Bürolarda kullanılan ahşaptan diğer mobilyalar; yüksekliği <= 80 cm",
+      "tanim_en": "Other wooden furniture used in offices; height <= 80 cm",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940330910000",
+      "tanim_tr": "Bürolarda kullanılan ahşaptan kapılı, kanatlı veya sürgülü dolaplar; çekmeceli dolaplar, dosya ve fiş dolapları; yüksekliği > 80 cm",
+      "tanim_en": "Wooden cabinets used in offices, with hinged or sliding doors; drawer cabinets, filing and receipt cabinets; height > 80 cm",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940330990000",
+      "tanim_tr": "Bürolarda kullanılan ahşaptan diğer mobilyalar; yüksekliği > 80 cm",
+      "tanim_en": "Other wooden furniture used in offices; height > 80 cm",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940340100000",
+      "tanim_tr": "Ahşaptan hazır mutfak üniteleri",
+      "tanim_en": "Ready-made wooden kitchen units",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940340900000",
+      "tanim_tr": "Mutfaklarda kullanılan ahşaptan mobilyalar; ahşaptan hazır mutfak üniteleri HARİÇ",
+      "tanim_en": "Wooden furniture used in kitchens; EXCLUDING ready-made wooden kitchen units.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940350000011",
+      "tanim_tr": "Yatak odalarında kullanılan ahşaptan çocuk karyolaları ve beşikler",
+      "tanim_en": "Wooden children's beds and cribs used in bedrooms.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940350000019",
+      "tanim_tr": "Yatak odalarında kullanılan ahşaptan mobilyalar; yatak odalarında kullanılan ahşaptan çocuk karyolaları ve beşikler HARİÇ",
+      "tanim_en": "Wooden furniture used in bedrooms; EXCLUDING wooden children's beds and cribs used in bedrooms.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940360100000",
+      "tanim_tr": "Yemek odalarında ve oturma odalarında kullanılan ahşaptan mobilyalar",
+      "tanim_en": "Wooden furniture used in dining rooms and living rooms.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940360300000",
+      "tanim_tr": "Mağazalarda kullanılan ahşaptan mobilyalar",
+      "tanim_en": "Wooden furniture used in stores",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940360901000",
+      "tanim_tr": "Asma ecza dolapları ve banyolarda kullanılan ahşaptan küçük dolaplar",
+      "tanim_en": "Wall-mounted medicine cabinets and small wooden cabinets used in bathrooms.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940360909000",
+      "tanim_tr": "Ahşaptan diğer mobilyalar",
+      "tanim_en": "Other furniture made of wood",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940370000011",
+      "tanim_tr": "Plastik maddelerden çocuk karyolaları ve beşikler",
+      "tanim_en": "Children's beds and cribs made from plastic materials.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940370000019",
+      "tanim_tr": "Plastik maddelerden mobilyalar; plastik maddelerden çocuk karyolaları ve beşikler HARİÇ",
+      "tanim_en": "Furniture made of plastic; EXCEPT for children's beds and cribs made of plastic.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940382000000",
+      "tanim_tr": "Bambudan diğer mobilyalar",
+      "tanim_en": "Other furniture made from bamboo",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940383000000",
+      "tanim_tr": "Hintkamışından diğer mobilyalar",
+      "tanim_en": "Other furniture made from rattan.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940389000000",
+      "tanim_tr": "Diğer maddelerden diğer mobilyalar",
+      "tanim_en": "Other furniture made from other materials",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940391000000",
+      "tanim_tr": "Diğer mobilyaların aksam ve parçaları; ahşaptan olanlar",
+      "tanim_en": "Parts and components of other furniture; those made of wood.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940399100000",
+      "tanim_tr": "Diğer mobilyaların metalden aksam ve parçaları",
+      "tanim_en": "Metal components and parts of other furniture.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940399900000",
+      "tanim_tr": "Diğer mobilyaların aksam ve parçaları; ahşaptan ve metalden olanlar HARİÇ",
+      "tanim_en": "Parts and accessories of other furniture; EXCEPT those made of wood and metal.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940410000000",
+      "tanim_tr": "Şilte mesnetleri",
+      "tanim_en": "Mattress supports",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940421100000",
+      "tanim_tr": "Gözenekli kauçuktan şilteler",
+      "tanim_en": "Mattresses made of porous rubber.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940421900000",
+      "tanim_tr": "Plastik maddelerden şilteler",
+      "tanim_en": "Mattresses made of plastic materials",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940429100000",
+      "tanim_tr": "Diğer maddelerden metal yaylı şilteler",
+      "tanim_en": "Metal spring mattresses made from other materials",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940429900000",
+      "tanim_tr": "Diğer maddelerden diğer şilteler",
+      "tanim_en": "Other mattresses made from other materials",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940430000000",
+      "tanim_tr": "Uyku tulumları",
+      "tanim_en": "Sleeping bags",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940440100000",
+      "tanim_tr": "Yorganlar, yatak örtüleri, yatak kılıfları ve duvetler; kuş tüyüyle doldurulmuş olanlar",
+      "tanim_en": "Quilts, bedspreads, mattress covers, and duvets; those filled with goose down.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940440900000",
+      "tanim_tr": "Yorganlar, yatak örtüleri, yatak kılıfları ve duvetler; kuş tüyüyle doldurulmuş olanlar HARİÇ",
+      "tanim_en": "Quilts, bedspreads, bed covers and duvets; EXCEPT those filled with down.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940490100000",
+      "tanim_tr": "Kuş tüyüyle doldurulmuş diğer yatak eşyası vb. diğer eşya",
+      "tanim_en": "Other bedding and other items filled with bird feathers, etc.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940490900000",
+      "tanim_tr": "Gözenekli kauçuk, plastik veya başka malzeme ile donatılmış/doldurulmuş diğer yatak takımı eşyası vb. eşya; kuş tüyüyle doldurulmuş olanlar HARİÇ",
+      "tanim_en": "Other bedding articles fitted/filled with porous rubber, plastic or other material; EXCEPT those filled with down.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940511400000",
+      "tanim_tr": "Plastikten veya seramik maddelerden avizeler, tavan ve duvar için aydınlatma cihazları; LED ışık kaynağı ile kullanılmaya mahsus olanlar",
+      "tanim_en": "Chandeliers, ceiling and wall lighting fixtures made of plastic or ceramic materials; those intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940511500011",
+      "tanim_tr": "Kristal avizeler; LED ışık kaynağı ile kullanılmaya mahsus olanlar",
+      "tanim_en": "Crystal chandeliers; those intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940511500019",
+      "tanim_tr": "Camdan avizeler (kristal avizeler HARİÇ), tavan ve duvar için aydınlatma cihazları; LED ışık kaynağı ile kullanılmaya mahsus olanlar",
+      "tanim_en": "Glass chandeliers (EXCEPT crystal chandeliers), ceiling and wall lighting fixtures; those intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940511900000",
+      "tanim_tr": "Diğer maddelerden avizeler, tavan ve duvar için aydınlatma cihazları; LED ışık kaynağı ile kullanılmaya mahsus olanlar",
+      "tanim_en": "Other items include chandeliers, ceiling and wall lighting fixtures; those intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940519400000",
+      "tanim_tr": "Plastikten veya seramik maddelerden avizeler, tavan ve duvar için aydınlatma cihazları; LED ışık kaynağı ile kullanılmaya mahsus olanlar HARİÇ",
+      "tanim_en": "Chandeliers, ceiling and wall lighting fixtures made of plastic or ceramic materials; EXCEPT those intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940519500011",
+      "tanim_tr": "Kristal avizeler; LED ışık kaynağı ile kullanılmaya mahsus olanlar HARİÇ",
+      "tanim_en": "Crystal chandeliers; EXCEPT those intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940519500019",
+      "tanim_tr": "Camdan avizeler (kristal avizeler HARİÇ), tavan ve duvar için aydınlatma cihazları; LED ışık kaynağı ile kullanılmaya mahsus olanlar HARİÇ",
+      "tanim_en": "Glass chandeliers (EXCEPT crystal chandeliers), ceiling and wall lighting fixtures; EXCEPT those intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940519900000",
+      "tanim_tr": "Diğer maddelerden avizeler, tavan ve duvar için aydınlatma cihazları; LED ışık kaynağı ile kullanılmaya mahsus olanlar HARİÇ",
+      "tanim_en": "Other materials include chandeliers, ceiling and wall lighting fixtures; EXCEPT those intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940521400000",
+      "tanim_tr": "Masa, komodin, vb. üzerine konulan plastik veya seramik maddelerden elektrikli lambalar ve ayaklı lambalar; LED ışık kaynağı ile kullanılanlar",
+      "tanim_en": "Electric lamps and floor lamps made of plastic or ceramic materials that are placed on tables, bedside tables, etc.; those used with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940521500000",
+      "tanim_tr": "Masa, yatak odası komodinleri, vb. üzerine konulan camdan elektrikli lambalar ve ayaklı lambalar; LED ışık kaynağı ile kullanılmaya mahsus olanlar",
+      "tanim_en": "Glass electric lamps and floor lamps placed on tables, bedside tables, etc.; those intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940521900000",
+      "tanim_tr": "Masa, yatak odası komodinleri, vb. üzerine konulan diğer maddelerden elektrikli lambalar ve ayaklı lambalar; LED ışık kaynağı ile kullanılanlar",
+      "tanim_en": "Electric lamps and floor lamps placed on tables, bedside tables, etc.; those using LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940529400000",
+      "tanim_tr": "Masa, komodin, vb. üzerine konulan plastik veya seramik maddelerden elektrikli lambalar ve ayaklı lambalar; LED ışık kaynağı ile kullanılanlar HARİÇ",
+      "tanim_en": "Electric lamps and floor lamps made of plastic or ceramic materials, placed on tables, bedside tables, etc.; EXCEPT those used with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940529500000",
+      "tanim_tr": "Masa, yatak odası komodinleri, vb. üzerine konulan camdan elektrikli lambalar ve ayaklı lambalar; LED ışık kaynağı ile kullanılanlar HARİÇ",
+      "tanim_en": "Glass electric lamps and floor lamps placed on tables, bedside tables, etc.; EXCEPT those used with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940529900000",
+      "tanim_tr": "Masa, yatak odası komodinleri, vb. üzerine konulan diğer maddelerden elektrikli lambalar ve ayaklı lambalar; LED ışık kaynağı ile kullanılanlar HARİÇ",
+      "tanim_en": "Electric lamps and floor lamps placed on tables, bedside tables, etc., EXCEPT those using LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940531000000",
+      "tanim_tr": "Noel ağaçlarında kullanılan türden elektrikli aydınlatıcılar; LED ışık kaynağı ile kullanılmaya mahsus olanlar",
+      "tanim_en": "Electric lights of the type used on Christmas trees; those intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940539000000",
+      "tanim_tr": "Noel ağaçlarında kullanılan türden elektrikli aydınlatıcılar; LED ışık kaynağı ile kullanılmaya mahsus olanlar HARİÇ",
+      "tanim_en": "Electric lights of the type used on Christmas trees; EXCEPT those intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940541100000",
+      "tanim_tr": "Fotovoltaik, LED ışık kaynağı ile kullanılmaya mahsus olan projektörler",
+      "tanim_en": "Projectors designed for use with photovoltaic, LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940541310000",
+      "tanim_tr": "Fotovoltaik, LED ışık kaynağı ile kullanılmaya mahsus plastikten elektrikli diğer aydınlatma cihazları",
+      "tanim_en": "Photovoltaic, LED light sources and other electrical lighting devices made of plastic for use with them.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940541390000",
+      "tanim_tr": "Fotovoltaik, LED ışık kaynağı ile kullanılmaya mahsus diğer maddelerden elektrikli diğer aydınlatma cihazları",
+      "tanim_en": "Photovoltaic, LED light sources and other electrical lighting devices made from other materials intended for use with them.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940542100000",
+      "tanim_tr": "LED ışık kaynağı ile kullanılmaya mahsus olan diğer projektörler",
+      "tanim_en": "Other projectors intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940542310000",
+      "tanim_tr": "LED ışık kaynağı ile kullanılmaya mahsus plastikten elektrikli diğer aydınlatma cihazları",
+      "tanim_en": "Other electrical lighting devices made of plastic, intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940542390000",
+      "tanim_tr": "LED ışık kaynağı ile kullanılmaya mahsus diğer maddelerden elektrikli diğer aydınlatma cihazları",
+      "tanim_en": "Other electrical lighting devices made from materials intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940549100000",
+      "tanim_tr": "Elektrikli diğer projektörler",
+      "tanim_en": "Other electric projectors",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940549400000",
+      "tanim_tr": "Plastikten elektrikli diğer aydınlatma cihazları",
+      "tanim_en": "Other electrical lighting devices made of plastic.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940549900000",
+      "tanim_tr": "Diğer maddelerden elektrikli diğer aydınlatma cihazları",
+      "tanim_en": "Other electrical lighting devices made from other materials.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940550000000",
+      "tanim_tr": "Elektrikli olmayan aydınlatma cihazları",
+      "tanim_en": "Non-electric lighting devices",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940561200000",
+      "tanim_tr": "LED ışık kaynağı ile kullanılmaya mahsus plastikten ışıklı panolar, ışıklı tabelalar ve ışıklı isim tabelaları ve benzeri eşya",
+      "tanim_en": "Plastic illuminated panels, illuminated signs, illuminated nameplates and similar items intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940561800000",
+      "tanim_tr": "LED ışık kaynağı ile kullanılmaya mahsus diğer maddelerden ışıklı panolar, ışıklı tabelalar ve ışıklı isim tabelaları ve benzeri eşya",
+      "tanim_en": "Illuminated panels, illuminated signs, illuminated nameplates and similar items made from other materials intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940569200000",
+      "tanim_tr": "Plastikten ışıklı panolar, ışıklı tabelalar ve ışıklı isim tabelaları ve benzeri eşya; LED ışık kaynağı ile kullanılmaya mahsus olanlar HARİÇ",
+      "tanim_en": "Plastic illuminated signs, illuminated billboards and illuminated nameplates and similar articles; EXCEPT those intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940569800000",
+      "tanim_tr": "Diğer maddelerden ışıklı panolar, ışıklı tabelalar ve ışıklı isim tabelaları ve benzeri eşya; LED ışık kaynağı ile kullanılmaya mahsus olanlar HARİÇ",
+      "tanim_en": "Other materials include illuminated signs, illuminated billboards, illuminated nameplates and similar articles; EXCEPT those intended for use with LED light sources.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940591100000",
+      "tanim_tr": "Elektrikli aydınlatma cihazları (projektörler hariç) için camdan aksam ve parçalar",
+      "tanim_en": "Glass components and parts for electrical lighting devices (excluding projectors).",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940591901000",
+      "tanim_tr": "Projektörlere ait camdan aksam ve parçalar",
+      "tanim_en": "Glass components and parts for projectors.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940591909011",
+      "tanim_tr": "Lüks lambası camları",
+      "tanim_en": "Luxury lamp glass",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940591909018",
+      "tanim_tr": "Aydınlatma cihazlarının (projektörler ve sahne projektörleri dahil) camdan diğer aksam ve parçaları",
+      "tanim_en": "Glass parts and components of lighting devices (including spotlights and stage projectors).",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940592000000",
+      "tanim_tr": "Aydınlatma cihazları, sabit bir ışık kaynağına sahip ışıklı panolar, ışıklı isim tabelaları, vb. eşya için plastikten aksam ve parçalar",
+      "tanim_en": "Plastic components and parts for lighting devices, illuminated signs with a fixed light source, illuminated nameplates, etc.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940599000000",
+      "tanim_tr": "Aydınlatma cihazlarının, ışıklı panoların ve benzerlerinin aksam ve parçaları; camdan ve plastik maddelerden olanlar HARİÇ",
+      "tanim_en": "Parts and accessories of lighting devices, illuminated signs and the like; EXCEPT those made of glass and plastic materials.",
+      "grup": "II-C",
+      "oran": 0.1
+    },
+    {
+      "kod": "940610000000",
+      "tanim_tr": "Ahşaptan prefabrik yapıIar",
+      "tanim_en": "Prefabricated wooden structures",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "940620000000",
+      "tanim_tr": "Çelikten modüler yapı üniteleri",
+      "tanim_en": "Modular building units made of steel.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "940690100000",
+      "tanim_tr": "Taşınabilir (mobil) evler",
+      "tanim_en": "Portable (mobile) homes",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "940690310000",
+      "tanim_tr": "Demir veya çelikten seralar",
+      "tanim_en": "Greenhouses made of iron or steel.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "940690380000",
+      "tanim_tr": "Demir veya çelikten diğer prefabrik yapıIar",
+      "tanim_en": "Other prefabricated structures made of iron or steel",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "940690900000",
+      "tanim_tr": "Diğer maddelerden diğer prefabrik yapıIar",
+      "tanim_en": "Other prefabricated structures made from other materials",
+      "grup": "genel",
+      "oran": 0.2
+    }
+  ]
+}

@@ -1,0 +1,619 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-nace",
+      "ad": {
+        "tr": "GTİP NACE Eşleşmesi",
+        "en": "GTIP NACE Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
+          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
+        },
+        "resmi_gazete": "32241",
+        "tarih": "2023-07-07"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
+          "en": "Presidential Decision No. 9126 (amendment to List II)"
+        },
+        "resmi_gazete": "32722",
+        "tarih": "2024-11-14"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.10.21",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.10.21",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.21",
+          "checksum": "sha256:7a4d627762d258ac85e97c98d7a3369a3725a6a87088f69278d6dd36a8ae6b49"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.21"
+      },
+      "uretim_zamani": "2026-10-21T10:43:59.554060+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "33",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:863c627ebb189576f997298ffce5d006a66c16c0901ef407622470d530c0cb76"
+  },
+  "kayitlar": [
+    {
+      "kod": "330112100000",
+      "tanim_tr": "Portakaldan elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Essential oils obtained from oranges (terpenes not removed)",
+      "nace": null
+    },
+    {
+      "kod": "330112900000",
+      "tanim_tr": "Portakaldan elde edilen uçucu yağlar (terpeni alınmış)",
+      "tanim_en": "Essential oils obtained from oranges (terpenes removed)",
+      "nace": null
+    },
+    {
+      "kod": "330113100000",
+      "tanim_tr": "Limondan elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Essential oils obtained from lemons (terpenes not removed)",
+      "nace": null
+    },
+    {
+      "kod": "330113900000",
+      "tanim_tr": "Limondan elde edilen uçucu yağlar (terpeni alınmış)",
+      "tanim_en": "Essential oils obtained from lemons (terpenes removed)",
+      "nace": null
+    },
+    {
+      "kod": "330119200000",
+      "tanim_tr": "Diğer turunçgillerden elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Essential oils obtained from other citrus fruits (without terpenes removed)",
+      "nace": null
+    },
+    {
+      "kod": "330119800000",
+      "tanim_tr": "Diğer turunçgillerden elde edilen uçucu yağlar (terpeni alınmış)",
+      "tanim_en": "Essential oils obtained from other citrus fruits (terpenes removed)",
+      "nace": null
+    },
+    {
+      "kod": "330124100000",
+      "tanim_tr": "Naneden (Mentha piperita) elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Essential oils (without terpenes) obtained from peppermint (Mentha piperita)",
+      "nace": null
+    },
+    {
+      "kod": "330124900000",
+      "tanim_tr": "Naneden (Mentha piperita) elde edilen uçucu yağlar (terpeni alınmış)",
+      "tanim_en": "Essential oils (terpenetrated) obtained from mint (Mentha piperita)",
+      "nace": null
+    },
+    {
+      "kod": "330125100000",
+      "tanim_tr": "Diğer nanelerden elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Essential oils obtained from other mints (terpenes not extracted)",
+      "nace": null
+    },
+    {
+      "kod": "330125900000",
+      "tanim_tr": "Diğer nanelerden elde edilen uçucu yağlar (terpeni alınmış)",
+      "tanim_en": "Essential oils obtained from other mints (terpenes removed)",
+      "nace": null
+    },
+    {
+      "kod": "330129111000",
+      "tanim_tr": "Yılang - yılang'dan elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Ylang-ylang essential oils (with terpenes not removed)",
+      "nace": null
+    },
+    {
+      "kod": "330129119000",
+      "tanim_tr": "Karanfil ve niyauliden elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Essential oils obtained from cloves and niaouli (terpenes not removed)",
+      "nace": null
+    },
+    {
+      "kod": "330129311000",
+      "tanim_tr": "Yılang - yılang'dan elde edilen uçucu yağlar (terpeni alınmış)",
+      "tanim_en": "Ylang-ylang essential oils (terpenetrated)",
+      "nace": null
+    },
+    {
+      "kod": "330129319000",
+      "tanim_tr": "Karanfil ve niyauliden elde edilen uçucu yağlar (terpeni alınmış)",
+      "tanim_en": "Essential oils obtained from cloves and niaouli (terpenes removed)",
+      "nace": null
+    },
+    {
+      "kod": "330129420000",
+      "tanim_tr": "Gülden elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Essential oils obtained from roses (terpenes not removed)",
+      "nace": null
+    },
+    {
+      "kod": "330129491000",
+      "tanim_tr": "Oğul otundan (stronel) elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Essential oils obtained from lemon balm (stronel) (terpenes not removed)",
+      "nace": null
+    },
+    {
+      "kod": "330129492000",
+      "tanim_tr": "Stearopten elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Essential oils obtained from stearopten (terpenes not removed)",
+      "nace": null
+    },
+    {
+      "kod": "330129499011",
+      "tanim_tr": "Kekikten elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Essential oils obtained from thyme (terpenes not removed)",
+      "nace": null
+    },
+    {
+      "kod": "330129499013",
+      "tanim_tr": "Biberiyeden elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Essential oils obtained from rosemary (terpenes not removed)",
+      "nace": null
+    },
+    {
+      "kod": "330129499014",
+      "tanim_tr": "Ada çayından elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Essential oils obtained from sage (terpenes not removed)",
+      "nace": null
+    },
+    {
+      "kod": "330129499015",
+      "tanim_tr": "Okaliptustan elde edilen uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Essential oils obtained from eucalyptus (terpenes not removed)",
+      "nace": null
+    },
+    {
+      "kod": "330129499018",
+      "tanim_tr": "Diğer uçucu yağlar (terpeni alınmamış)",
+      "tanim_en": "Other essential oils (without terpenes)",
+      "nace": null
+    },
+    {
+      "kod": "330129710000",
+      "tanim_tr": "Itır çiçeğinden (germenyum), yaseminden ve güve otundan (vetiver) elde edilen uçucu yağlar (terpeni alınmış)",
+      "tanim_en": "Essential oils (terpenetrated) obtained from geranium, jasmine, and vetiver.",
+      "nace": null
+    },
+    {
+      "kod": "330129790000",
+      "tanim_tr": "Lavanta veya lavandinden (melez lavanta) elde edilen uçucu yağlar (terpeni alınmış)",
+      "tanim_en": "Essential oils obtained from lavender or lavandin (hybrid lavender) (terpene-free)",
+      "nace": null
+    },
+    {
+      "kod": "330129911000",
+      "tanim_tr": "Oğul otundan elde edilen uçucu yağlar (terpeni alınmış)",
+      "tanim_en": "Essential oils obtained from lemon balm (terpenes removed)",
+      "nace": null
+    },
+    {
+      "kod": "330129919000",
+      "tanim_tr": "Diğer uçucu yağlar (terpeni alınmış)",
+      "tanim_en": "Other essential oils (terpene-free)",
+      "nace": null
+    },
+    {
+      "kod": "330130000000",
+      "tanim_tr": "Rezinoitler",
+      "tanim_en": "Resinoids",
+      "nace": null
+    },
+    {
+      "kod": "330190100000",
+      "tanim_tr": "Uçucu yağların terpeninin alınmasından arta kalan yan ürünleri",
+      "tanim_en": "By-products remaining after terpene extraction from essential oils",
+      "nace": null
+    },
+    {
+      "kod": "330190211100",
+      "tanim_tr": "Meyan kökünden ekstraksiyonla elde edilen yağ reçineleri; ilaç sanayiinde kullanılanlar",
+      "tanim_en": "Oil resins obtained by extraction from licorice root; those used in the pharmaceutical industry.",
+      "nace": null
+    },
+    {
+      "kod": "330190211900",
+      "tanim_tr": "Meyan kökünden ekstraksiyonla elde edilen yağ reçineleri; ilaç sanayiinde kullanılanlar HARİÇ",
+      "tanim_en": "Oil resins obtained by extraction from licorice root; EXCEPT those used in the pharmaceutical industry.",
+      "nace": null
+    },
+    {
+      "kod": "330190212000",
+      "tanim_tr": "Şerbetçi otundan ekstraksiyonla elde edilen yağ reçineleri",
+      "tanim_en": "Oil resins obtained by extraction from hops",
+      "nace": null
+    },
+    {
+      "kod": "330190301000",
+      "tanim_tr": "Ekstraksiyonla elde edilen diğer yağ reçineleri; tıbbi",
+      "tanim_en": "Other oil resins obtained by extraction; medicinal.",
+      "nace": null
+    },
+    {
+      "kod": "330190309000",
+      "tanim_tr": "Ekstraksiyonla elde edilen diğer yağ reçineleri",
+      "tanim_en": "Other oil resins obtained by extraction",
+      "nace": null
+    },
+    {
+      "kod": "330190901000",
+      "tanim_tr": "Uçucu yağların damıtılmış aromatik suları ve sulu çözeltileri",
+      "tanim_en": "Distilled aromatic waters and aqueous solutions of essential oils",
+      "nace": null
+    },
+    {
+      "kod": "330190909000",
+      "tanim_tr": "Uçucu yağların,katı yağlar/sabit yağlar/mumlarda vb.lerinde \"enflurage\"/ \"maceration\"suretiyle elde edilen konsantreleri",
+      "tanim_en": "Concentrates of essential oils obtained by \"enflurage\"/\"maceration\" of solid fats/fixed oils/wax etc.",
+      "nace": null
+    },
+    {
+      "kod": "330210100000",
+      "tanim_tr": "İçecek sanayiinde tat verici ajanları (aromatizanları) içeren müstahzarlar; alkol oranı > % 0.5",
+      "tanim_en": "Preparations containing flavoring agents (aromatizers) used in the beverage industry; alcohol content > 0.5%",
+      "nace": null
+    },
+    {
+      "kod": "330210210000",
+      "tanim_tr": "İçecek sanayiinde aromatizanları içeren müstahzarlar; alkol =< %0.5, süt yağı < %1.5, sakkoroz veya izogilikoz <%5, glikoz veya nişasta < %5",
+      "tanim_en": "Preparations containing flavorings in the beverage industry; alcohol < 0.5%, milk fat < ​​1.5%, sucrose or isoglycose < 5%, glucose or starch < 5%",
+      "nace": null
+    },
+    {
+      "kod": "330210290000",
+      "tanim_tr": "İçecek sanayiinde tat verici ajanları (aromatizanları) içeren diğer müstahzarlar; alkol <= %0.5",
+      "tanim_en": "Other preparations containing flavoring agents (aromatizers) used in the beverage industry; alcohol <= 0.5%",
+      "nace": null
+    },
+    {
+      "kod": "330210401000",
+      "tanim_tr": "İçeceklerin imalinde kullanılan türden esası koku verici maddeler olan müstahzarlar",
+      "tanim_en": "Preparations used in the manufacture of beverages, the main type of which consists of flavoring agents.",
+      "nace": null
+    },
+    {
+      "kod": "330210409000",
+      "tanim_tr": "İçeceklerin imalinde kullanılan diğer müstahzarlar",
+      "tanim_en": "Other preparations used in the manufacture of beverages",
+      "nace": null
+    },
+    {
+      "kod": "330210900000",
+      "tanim_tr": "Yiyecek sanayiinde kullanılan esası koku veya tat verici maddeler olan müstahzarlar",
+      "tanim_en": "Preparations used in the food industry whose main component is flavoring or taste-enhancing substances.",
+      "nace": null
+    },
+    {
+      "kod": "330290100000",
+      "tanim_tr": "İçecek ve yiyecek sanayii dışındaki sanayiilerde kullanılan esası koku veya tat verici maddeler olan alkollü çözeltiler",
+      "tanim_en": "Alcoholic solutions, primarily containing fragrance or flavoring agents, used in industries other than the beverage and food industry.",
+      "nace": null
+    },
+    {
+      "kod": "330290900000",
+      "tanim_tr": "İçecek ve yiyecek sanayii dışındaki sanayiilerde kullanılan esası koku veya tat verici maddeler olan diğer müstahzarlar",
+      "tanim_en": "Other preparations used in industries other than the beverage and food industry, whose main component is flavoring or taste-enhancing substances.",
+      "nace": null
+    },
+    {
+      "kod": "330300100000",
+      "tanim_tr": "Parfümler",
+      "tanim_en": "Perfumes",
+      "nace": null
+    },
+    {
+      "kod": "330300900011",
+      "tanim_tr": "Kolonyalar",
+      "tanim_en": "Colognes",
+      "nace": null
+    },
+    {
+      "kod": "330300900019",
+      "tanim_tr": "Diğer tuvalet suları",
+      "tanim_en": "Other toilet waters",
+      "nace": null
+    },
+    {
+      "kod": "330410000000",
+      "tanim_tr": "Dudak makyaj müstahzarları",
+      "tanim_en": "Lip makeup preparations",
+      "nace": null
+    },
+    {
+      "kod": "330420000000",
+      "tanim_tr": "Göz makyaj müstahzarları",
+      "tanim_en": "Eye makeup preparations",
+      "nace": null
+    },
+    {
+      "kod": "330430000000",
+      "tanim_tr": "Manikür ve pedikür müstahzarları",
+      "tanim_en": "Manicure and pedicure preparations",
+      "nace": null
+    },
+    {
+      "kod": "330491000000",
+      "tanim_tr": "Pudralar",
+      "tanim_en": "Powders",
+      "nace": null
+    },
+    {
+      "kod": "330499001000",
+      "tanim_tr": "Allıklar",
+      "tanim_en": "Blushes",
+      "nace": null
+    },
+    {
+      "kod": "330499009000",
+      "tanim_tr": "Diğer makyaj ve güzellik bakım müstahzarları (ilaçlar hariç, güneş kremleri dahil)",
+      "tanim_en": "Other makeup and beauty care products (excluding medicines, including sunscreens)",
+      "nace": null
+    },
+    {
+      "kod": "330510000000",
+      "tanim_tr": "Şampuanlar",
+      "tanim_en": "Shampoos",
+      "nace": null
+    },
+    {
+      "kod": "330520000000",
+      "tanim_tr": "Perma ve defrize müstahzarları",
+      "tanim_en": "Perming and straightening preparations",
+      "nace": null
+    },
+    {
+      "kod": "330530000000",
+      "tanim_tr": "Saç spreyleri",
+      "tanim_en": "Hair sprays",
+      "nace": null
+    },
+    {
+      "kod": "330590001000",
+      "tanim_tr": "Saç boyaları",
+      "tanim_en": "Hair dyes",
+      "nace": null
+    },
+    {
+      "kod": "330590009000",
+      "tanim_tr": "Diğer saç müstahzarları",
+      "tanim_en": "Other hair preparations",
+      "nace": null
+    },
+    {
+      "kod": "330610000000",
+      "tanim_tr": "Diş macunları veya tozları",
+      "tanim_en": "Toothpastes or powders",
+      "nace": null
+    },
+    {
+      "kod": "330620000000",
+      "tanim_tr": "Diş aralarını temizlemekte kullanılan iplikler",
+      "tanim_en": "Threads used to clean between teeth",
+      "nace": null
+    },
+    {
+      "kod": "330690000000",
+      "tanim_tr": "Ağız veya diş sağlığını korumaya mahsus diğer müstahzarlar",
+      "tanim_en": "Other preparations intended to protect oral or dental health.",
+      "nace": null
+    },
+    {
+      "kod": "330710001000",
+      "tanim_tr": "Traş losyonları",
+      "tanim_en": "Shaving lotions",
+      "nace": null
+    },
+    {
+      "kod": "330710009011",
+      "tanim_tr": "Traş kremleri",
+      "tanim_en": "Shaving creams",
+      "nace": null
+    },
+    {
+      "kod": "330710009019",
+      "tanim_tr": "Traş öncesi, traş sırasında veya traştan sonra kullanılan diğer müstahzarlar",
+      "tanim_en": "Other preparations used before, during or after shaving.",
+      "nace": null
+    },
+    {
+      "kod": "330720000000",
+      "tanim_tr": "Vücut deodorantları ve ter kokusunu önleyici deodorantlar",
+      "tanim_en": "Body deodorants and antiperspirant deodorants",
+      "nace": null
+    },
+    {
+      "kod": "330730000000",
+      "tanim_tr": "Parfümlü banyo tuzları ve diğer banyo müstahzarları",
+      "tanim_en": "Scented bath salts and other bath preparations",
+      "nace": null
+    },
+    {
+      "kod": "330741000000",
+      "tanim_tr": "Agarbatti ve yakılarak kullanılan kokulu diğer müstahzarlar",
+      "tanim_en": "Agarbatti and other fragrant preparations used by burning.",
+      "nace": null
+    },
+    {
+      "kod": "330749000000",
+      "tanim_tr": "Kapalı yerlerin güzel kokmasında kullanılan diğer müstahzarlar",
+      "tanim_en": "Other preparations used to make enclosed spaces smell pleasant.",
+      "nace": null
+    },
+    {
+      "kod": "330790001000",
+      "tanim_tr": "Sabun veya diğer yüzey aktif organik maddeler içeren banyo müstahzarları",
+      "tanim_en": "Bath preparations containing soap or other organic surfactants",
+      "nace": null
+    },
+    {
+      "kod": "330790002000",
+      "tanim_tr": "Parfüm veya kozmetik emdirilmiş, sıvanmış veya kaplanmış vatka ve keçe",
+      "tanim_en": "Wadding and felt that have been impregnated, coated, or covered with perfume or cosmetics.",
+      "nace": null
+    },
+    {
+      "kod": "330790003000",
+      "tanim_tr": "Parfüm veya kozmetik emdirilmiş, sıvanmış veya kaplanmış dokunmamış mensucat",
+      "tanim_en": "Nonwoven fabrics impregnated, coated or covered with perfume or cosmetics.",
+      "nace": null
+    },
+    {
+      "kod": "330790009011",
+      "tanim_tr": "Kontakt-lens veya suni göz solüsyonları",
+      "tanim_en": "Contact lenses or artificial eye solutions",
+      "nace": null
+    },
+    {
+      "kod": "330790009019",
+      "tanim_tr": "Tüy dökücüler ve tarifenin başka yerinde yer almayan veya belirtilmeyen diğer parfümeri, kozmetik ve tuvalet müstahzarları",
+      "tanim_en": "Hair removal products and other perfumery, cosmetic and toilet preparations not listed or specified elsewhere in the tariff.",
+      "nace": null
+    }
+  ]
+}

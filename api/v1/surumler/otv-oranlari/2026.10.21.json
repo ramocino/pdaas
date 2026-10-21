@@ -1,0 +1,893 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "otv-oranlari",
+      "ad": {
+        "tr": "Özel Tüketim Vergisi (ÖTV) Oran ve Tutarları",
+        "en": "Special Consumption Tax (SCT) Rates and Amounts"
+      }
+    },
+    "katman": "ham",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gib",
+      "kapsam": [
+        "vergi"
+      ]
+    },
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": true,
+      "baslangic": "2026-01-01",
+      "bitis": "2026-12-31"
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
+      }
+    ],
+    "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+  },
+  "kayitlar": [
+    {
+      "kod": "OTV-I-A-Akaryakit",
+      "liste": "I/A",
+      "ad_tr": "Akaryakıt Ürünleri (Benzin, Motorin, Fuel Oil)",
+      "ad_en": "Fuel Products (Gasoline, Diesel, Fuel Oil)",
+      "vergi_tipi": "maktu",
+      "para_birimi": "TRY",
+      "birim_tr": "Litre",
+      "birim_en": "Litre",
+      "not_tr": "Maktu tutarlar Cumhurbaşkanı Kararı ile güncellenir (örn. kurşunsuz benzin 95 oktan 14,8277 TL/litre). 2026 Temmuz–Aralık döneminde (I) sayılı listede ÜFE artışı uygulanmamıştır; eşel mobil sistemi 1 Ekim 2026'da sona ermiştir, güncel tutar için GİB/EPDK'ya bakınız.",
+      "not_en": "Fixed amounts are updated by Presidential Decree (e.g. unleaded gasoline 95 octane 14.8277 TL/litre). No PPI indexation applied to List I for July–December 2026; the sliding-scale (eşel mobil) system ended on 1 October 2026 — check GIB/EPDK for current amounts.",
+      "ornekler_tr": [
+        "Kurşunsuz Benzin",
+        "Motorin",
+        "Gazyağı",
+        "Fuel Oil",
+        "Jet Yakıtı"
+      ],
+      "ornekler_en": [
+        "Unleaded Gasoline",
+        "Diesel",
+        "Kerosene",
+        "Fuel Oil",
+        "Jet Fuel"
+      ]
+    },
+    {
+      "kod": "OTV-I-A-MadeniYag",
+      "liste": "I/A",
+      "ad_tr": "Madeni Yağlar ve Yağlama Müstahzarları",
+      "ad_en": "Mineral Oils and Lubricating Preparations",
+      "vergi_tipi": "maktu",
+      "para_birimi": "TRY",
+      "birim_tr": "Kg",
+      "birim_en": "Kg",
+      "not_tr": "Yağlama yağları ve baz yağlar Kg başına maktu vergiye tabidir.",
+      "not_en": "Lubricating oils and base oils are subject to fixed tax per Kg.",
+      "ornekler_tr": [
+        "Motor Yağı",
+        "Diferansiyel Yağı",
+        "Baz Yağ",
+        "Gres"
+      ],
+      "ornekler_en": [
+        "Engine Oil",
+        "Differential Oil",
+        "Base Oil",
+        "Grease"
+      ]
+    },
+    {
+      "kod": "OTV-I-B-Solvent",
+      "liste": "I/B",
+      "ad_tr": "Solventler ve Çözücüler",
+      "ad_en": "Solvents and Thinners",
+      "vergi_tipi": "maktu",
+      "para_birimi": "TRY",
+      "birim_tr": "Litre / Kg",
+      "birim_en": "Litre / Kg",
+      "not_tr": "Toluen, ksilen, metanol, aseton ve tiner gibi ürünler maktu vergiye tabidir.",
+      "not_en": "Products such as toluene, xylene, methanol, acetone and thinner are subject to fixed tax.",
+      "ornekler_tr": [
+        "Toluen",
+        "Ksilen",
+        "Metanol",
+        "Aseton",
+        "Tiner",
+        "White Spirit"
+      ],
+      "ornekler_en": [
+        "Toluene",
+        "Xylene",
+        "Methanol",
+        "Acetone",
+        "Thinner",
+        "White Spirit"
+      ]
+    },
+    {
+      "kod": "OTV-II-BinekOtomobil",
+      "liste": "II",
+      "ad_tr": "Binek Otomobiller (87.03)",
+      "ad_en": "Passenger Cars (87.03)",
+      "vergi_tipi": "oran",
+      "not_tr": "Motor silindir hacmi, ÖTV matrahı ve (elektrikli araçlarda) motor gücüne göre kademeli nispi oran uygulanır (10115 sayılı CB Kararı, 24/07/2025). Hibrit ve şarj edilebilir hibrit satırları bu tabloda yer almaz; GİB (II) sayılı listeye bakınız.",
+      "not_en": "Progressive proportional rates apply by engine displacement, SCT base and (for EVs) motor power (Decision No. 10115, 24/07/2025). Hybrid and plug-in hybrid rows are not included; see GIB List II.",
+      "ornekler_tr": [
+        "Binek Otomobil",
+        "SUV",
+        "Hibrit Otomobil",
+        "Elektrikli Otomobil"
+      ],
+      "ornekler_en": [
+        "Passenger Car",
+        "SUV",
+        "Hybrid Car",
+        "Electric Car"
+      ],
+      "matrah_dilimleri": [
+        {
+          "motor_hacmi": "≤1400 cc",
+          "matrah_ust": 650000,
+          "oran": 0.7,
+          "aciklama": "1400 cm³'e kadar, matrah 650.000 TL'yi aşmayanlar"
+        },
+        {
+          "motor_hacmi": "≤1400 cc",
+          "matrah_ust": 900000,
+          "oran": 0.75,
+          "aciklama": "1400 cm³'e kadar, matrah 650.000–900.000 TL"
+        },
+        {
+          "motor_hacmi": "≤1400 cc",
+          "matrah_ust": 1100000,
+          "oran": 0.8,
+          "aciklama": "1400 cm³'e kadar, matrah 900.000–1.100.000 TL"
+        },
+        {
+          "motor_hacmi": "≤1400 cc",
+          "matrah_ust": null,
+          "oran": 0.9,
+          "aciklama": "1400 cm³'e kadar, matrah 1.100.000 TL'yi aşanlar"
+        },
+        {
+          "motor_hacmi": "1401-1600 cc",
+          "matrah_ust": 850000,
+          "oran": 0.75,
+          "aciklama": "1400–1600 cm³, matrah 850.000 TL'yi aşmayanlar"
+        },
+        {
+          "motor_hacmi": "1401-1600 cc",
+          "matrah_ust": 1100000,
+          "oran": 0.8,
+          "aciklama": "1400–1600 cm³, matrah 850.000–1.100.000 TL"
+        },
+        {
+          "motor_hacmi": "1401-1600 cc",
+          "matrah_ust": 1650000,
+          "oran": 0.9,
+          "aciklama": "1400–1600 cm³, matrah 1.100.000–1.650.000 TL"
+        },
+        {
+          "motor_hacmi": "1401-1600 cc",
+          "matrah_ust": null,
+          "oran": 1.0,
+          "aciklama": "1400–1600 cm³, matrah 1.650.000 TL'yi aşanlar"
+        },
+        {
+          "motor_hacmi": "1601-2000 cc",
+          "matrah_ust": 1650000,
+          "oran": 1.5,
+          "aciklama": "1600–2000 cm³, matrah 1.650.000 TL ve altı"
+        },
+        {
+          "motor_hacmi": "1601-2000 cc",
+          "matrah_ust": null,
+          "oran": 1.7,
+          "aciklama": "1600–2000 cm³, matrah 1.650.000 TL'yi aşanlar"
+        },
+        {
+          "motor_hacmi": ">2000 cc",
+          "matrah_ust": null,
+          "oran": 2.2,
+          "aciklama": "2000 cm³'ün üzerinde olanlar"
+        },
+        {
+          "motor_hacmi": "Sadece elektrik motorlu",
+          "matrah_ust": 1650000,
+          "oran": 0.25,
+          "aciklama": "Motor gücü 160 kW'ı geçmeyenler, matrah 1.650.000 TL ve altı",
+          "motor_gucu": "≤160 kW"
+        },
+        {
+          "motor_hacmi": "Sadece elektrik motorlu",
+          "matrah_ust": null,
+          "oran": 0.55,
+          "aciklama": "Motor gücü 160 kW'ı geçmeyenler, matrah 1.650.000 TL'yi aşanlar",
+          "motor_gucu": "≤160 kW"
+        },
+        {
+          "motor_hacmi": "Sadece elektrik motorlu",
+          "matrah_ust": 1650000,
+          "oran": 0.65,
+          "aciklama": "Motor gücü 160 kW'ı geçenler, matrah 1.650.000 TL ve altı",
+          "motor_gucu": ">160 kW"
+        },
+        {
+          "motor_hacmi": "Sadece elektrik motorlu",
+          "matrah_ust": null,
+          "oran": 0.75,
+          "aciklama": "Motor gücü 160 kW'ı geçenler, matrah 1.650.000 TL'yi aşanlar",
+          "motor_gucu": ">160 kW"
+        }
+      ],
+      "gecerli_baslangic": "2025-07-24"
+    },
+    {
+      "kod": "OTV-II-TicariArac",
+      "liste": "II",
+      "ad_tr": "Ticari Araçlar ve Diğer Taşıtlar",
+      "ad_en": "Commercial Vehicles and Other Motor Vehicles",
+      "vergi_tipi": "oran",
+      "not_tr": "Taşıt tipine göre farklı oranlar uygulanır. 87.01 traktörler (ATV/UTV hariç) ve 87.16 römorklar (II) sayılı listede yer almaz, ÖTV'ye tabi değildir. Kamyonet/kamyon (87.04) oranları motor hacmine göre kademelidir; ayrıntı için GİB (II) sayılı listeye bakınız.",
+      "not_en": "Rates differ by vehicle type. 87.01 tractors (excl. ATV/UTV) and 87.16 trailers are not in List II and are not subject to SCT. Goods vehicle (87.04) rates are tiered by engine displacement; see GIB List II for details.",
+      "ornekler_tr": [
+        "Kamyonet",
+        "Minibüs",
+        "Otobüs",
+        "Kamyon",
+        "Motosiklet",
+        "ATV/UTV",
+        "Yat"
+      ],
+      "ornekler_en": [
+        "Pickup Truck",
+        "Minibus",
+        "Bus",
+        "Truck",
+        "Motorcycle",
+        "ATV/UTV",
+        "Yacht"
+      ],
+      "matrah_dilimleri": [
+        {
+          "oran": 0.04,
+          "aciklama": "8701.20 Yarı römorklar için çekiciler"
+        },
+        {
+          "oran": 0.25,
+          "aciklama": "87.01 ATV ve UTV"
+        },
+        {
+          "oran": 0.01,
+          "aciklama": "87.02 Otobüs"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.02 Midibüs"
+        },
+        {
+          "oran": 0.09,
+          "aciklama": "87.02 Minibüs"
+        },
+        {
+          "oran": 0.1,
+          "aciklama": "87.04(a) Motor hacmi 3000 cm³'ü geçmeyenler (elektrikli: ≤85 kW)"
+        },
+        {
+          "oran": 0.52,
+          "aciklama": "87.04(a) 3000–4000 cm³ (elektrikli: 85–120 kW)"
+        },
+        {
+          "oran": 0.75,
+          "aciklama": "87.04(a) 4000 cm³'ü geçenler (elektrikli: >120 kW)"
+        },
+        {
+          "oran": 0.04,
+          "aciklama": "87.05 Özel amaçlı motorlu taşıtlar ve 87.09 kendinden hareketli yük arabaları"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçmeyenler"
+        },
+        {
+          "oran": 0.37,
+          "aciklama": "87.11 Motosiklet, motor hacmi 250 cm³'ü geçenler"
+        },
+        {
+          "oran": 0.005,
+          "aciklama": "88.02 Helikopter ve uçaklar (yalnızca belirli olanlar)"
+        },
+        {
+          "oran": 0.08,
+          "aciklama": "89.03 Yatlar, kotralar, tekneler ve gezinti gemileri"
+        }
+      ],
+      "gecerli_baslangic": "2025-07-24"
+    },
+    {
+      "kod": "OTV-III-A-Bira",
+      "liste": "III/A",
+      "ad_tr": "Bira (III/A Cetveli)",
+      "ad_en": "Beer (List III/A)",
+      "vergi_tipi": "kombine",
+      "para_birimi": "TRY",
+      "birim_tr": "Litre",
+      "birim_en": "Litre",
+      "oran": 0.63,
+      "not_tr": "Bira; nispi ÖTV oranı %63 olup ayrıca litre başına asgari maktu vergi uygulanır (03/07/2026 itibarıyla 14,4937 TL/litre; önceki tutar 12,4849 TL). Tutarlar ÜFE ve Cumhurbaşkanı Kararı ile güncellenir.",
+      "not_en": "Beer; proportional SCT rate is 63% plus a minimum fixed amount per litre (14.4937 TL/litre as of 03/07/2026; previous 12.4849 TL). Amounts are updated by PPI indexation and Presidential Decree.",
+      "ornekler_tr": [
+        "Bira (malttan)"
+      ],
+      "ornekler_en": [
+        "Beer (from malt)"
+      ],
+      "matrah_dilimleri": [
+        {
+          "oran": 0.63,
+          "maktu": null,
+          "asgari_maktu": 14.4937,
+          "aciklama": "Bira: nispi %63 + litre başına asgari maktu (03/07/2026)"
+        }
+      ],
+      "gecerli_baslangic": "2026-07-03"
+    },
+    {
+      "kod": "OTV-III-A-Sarap",
+      "liste": "III/A",
+      "ad_tr": "Şarap, Vermut ve Fermente İçkiler (III/A Cetveli)",
+      "ad_en": "Wine, Vermouth and Fermented Beverages (List III/A)",
+      "vergi_tipi": "maktu",
+      "para_birimi": "TRY",
+      "birim_tr": "Litre",
+      "birim_en": "Litre",
+      "oran": 0,
+      "not_tr": "Şarap, vermut ve fermente içkilerde nispi oran %0'dır; litre başına asgari maktu vergi uygulanır (03/07/2026 tutarları).",
+      "not_en": "Wine, vermouth and fermented beverages carry a 0% proportional rate; a minimum fixed amount per litre applies (amounts as of 03/07/2026).",
+      "ornekler_tr": [
+        "Şampanya",
+        "Köpüklü şarap",
+        "Taze üzüm şarabı",
+        "Vermut",
+        "Elma şarabı",
+        "Armut şarabı"
+      ],
+      "ornekler_en": [
+        "Champagne",
+        "Sparkling wine",
+        "Fresh grape wine",
+        "Vermouth",
+        "Cider",
+        "Perry"
+      ],
+      "gecerli_baslangic": "2026-07-03",
+      "kalemler": [
+        {
+          "gtip": "2204",
+          "ad_tr": "Taze üzüm şarabı (köpüklü ve 2204.30 hariç)",
+          "asgari_maktu": 71.2692
+        },
+        {
+          "gtip": "2204.10",
+          "ad_tr": "Köpüklü şaraplar",
+          "asgari_maktu": 481.5146
+        },
+        {
+          "gtip": "2205",
+          "ad_tr": "Vermut ve aromalandırılmış diğer taze üzüm şarapları",
+          "asgari_maktu": 726.7254
+        },
+        {
+          "gtip": "2205.10.10.00.00",
+          "ad_tr": "Alkol derecesi hacmen %18 veya daha az",
+          "asgari_maktu": 577.1023
+        },
+        {
+          "gtip": "2205.10.90.00.12",
+          "ad_tr": "Alkol derecesi hacmen %22 ve fazla",
+          "asgari_maktu": 2227.9277
+        },
+        {
+          "gtip": "2206",
+          "ad_tr": "Fermente edilmiş diğer içecekler (elma/armut şarabı, bal şarabı, sake vb.)",
+          "asgari_maktu": 157.227
+        }
+      ]
+    },
+    {
+      "kod": "OTV-III-A-EtilAlkol",
+      "liste": "III/A",
+      "ad_tr": "Etil Alkol (Tağyir Edilmemiş, >= %80) (III/A Cetveli)",
+      "ad_en": "Undenatured Ethyl Alcohol (>= 80%) (List III/A)",
+      "vergi_tipi": "maktu",
+      "para_birimi": "TRY",
+      "birim_tr": "Litre",
+      "birim_en": "Litre",
+      "oran": 0,
+      "not_tr": "2207.20 kapsamındaki damıtımla elde edilen diğer alkollü içkilerde nispi oran %0'dır; litre başına asgari maktu vergi uygulanır (03/07/2026).",
+      "not_en": "Other spirits under 2207.20 carry a 0% proportional rate; a minimum fixed amount per litre applies (03/07/2026).",
+      "ornekler_tr": [
+        "Etil alkol (tağyir edilmemiş, >= %80)"
+      ],
+      "ornekler_en": [
+        "Undenatured ethyl alcohol (>= 80%)"
+      ],
+      "gecerli_baslangic": "2026-07-03",
+      "kalemler": [
+        {
+          "gtip": "2207.20",
+          "ad_tr": "Damıtım yoluyla elde edilen diğer alkollü içkiler",
+          "asgari_maktu": 2227.9277
+        }
+      ]
+    },
+    {
+      "kod": "OTV-III-A-AlkolluIcecek",
+      "liste": "III/A",
+      "ad_tr": "Rakı, Viski, Votka, Cin, Likör ve Diğer Alkollü İçkiler (III/A Cetveli)",
+      "ad_en": "Raki, Whisky, Vodka, Gin, Liqueur and Other Spirits (List III/A)",
+      "vergi_tipi": "maktu",
+      "para_birimi": "TRY",
+      "birim_tr": "Litre",
+      "birim_en": "Litre",
+      "oran": 0,
+      "not_tr": "Rakı, viski, votka, cin, likör, konyak, brendi, tekila, rom ve diğer alkollü içkilerde nispi oran %0'dır; litre başına asgari maktu vergi uygulanır (03/07/2026). Rakı için ayrı tutar vardır.",
+      "not_en": "Raki, whisky, vodka, gin, liqueur, cognac, brandy, tequila, rum and other spirits carry a 0% proportional rate; a minimum fixed amount per litre applies (03/07/2026). Raki has a separate amount.",
+      "ornekler_tr": [
+        "Rakı",
+        "Viski",
+        "Votka",
+        "Cin",
+        "Likör",
+        "Konyak",
+        "Brendi",
+        "Tekila",
+        "Rom"
+      ],
+      "ornekler_en": [
+        "Raki",
+        "Whisky",
+        "Vodka",
+        "Gin",
+        "Liqueur",
+        "Cognac",
+        "Brandy",
+        "Tequila",
+        "Rum"
+      ],
+      "gecerli_baslangic": "2026-07-03",
+      "kalemler": [
+        {
+          "gtip": "2208",
+          "ad_tr": "Etil alkol (%80'den az, tağyir edilmemiş) ve damıtımla elde edilen alkollü içkiler, likörler, diğerleri",
+          "asgari_maktu": 2227.9277
+        },
+        {
+          "gtip": "2208.20",
+          "ad_tr": "Üzüm şarabı veya cibresinin damıtılmasıyla elde edilen içkiler",
+          "asgari_maktu": 2227.9277
+        },
+        {
+          "gtip": "2208.50",
+          "ad_tr": "Cin ve geneva",
+          "asgari_maktu": 2227.9277
+        },
+        {
+          "gtip": "2208.60",
+          "ad_tr": "Votka",
+          "asgari_maktu": 2227.9277
+        },
+        {
+          "gtip": "2208.70",
+          "ad_tr": "Likörler",
+          "asgari_maktu": 2227.9277
+        },
+        {
+          "gtip": "2208.90",
+          "ad_tr": "Diğerleri",
+          "asgari_maktu": 2227.9277
+        },
+        {
+          "gtip": "2208.90.48.00.11",
+          "ad_tr": "Rakı (2 litreyi geçmeyen kaplarda)",
+          "asgari_maktu": 1980.3822
+        },
+        {
+          "gtip": "2208.90.71.00.11",
+          "ad_tr": "Rakı (2 litreyi geçen kaplarda)",
+          "asgari_maktu": 1980.3822
+        }
+      ]
+    },
+    {
+      "kod": "OTV-III-A-Mesrubat",
+      "liste": "III/A",
+      "ad_tr": "Alkolsüz İçecekler ve Meyve Suları (III/A Cetveli)",
+      "ad_en": "Soft Drinks and Fruit Juices (List III/A)",
+      "vergi_tipi": "oran",
+      "oran": 0.1,
+      "para_birimi": "Yuzde",
+      "birim_tr": "Litre",
+      "birim_en": "Litre",
+      "not_tr": "2009 (meyve suları), 2202 (gazlı içecekler, sade/meyveli gazoz) ve 2202.91 (alkolsüz bira) %10 ÖTV'ye tabidir; yalnızca ambalajlı olanlar ve/veya toptan teslime konu edilenler. Sebze suları ve TGK'ya göre %100 meyve suyu kapsam dışıdır.",
+      "not_en": "2009 (fruit juices), 2202 (carbonated drinks, plain/fruit sodas) and 2202.91 (non-alcoholic beer) are subject to 10% SCT; packaged and/or wholesale deliveries only. Vegetable juices and 100% fruit juice are out of scope.",
+      "ornekler_tr": [
+        "Gazlı içecek",
+        "Sade gazoz",
+        "Meyveli gazoz",
+        "Alkolsüz bira",
+        "Meyve suyu (%100 olmayan)"
+      ],
+      "ornekler_en": [
+        "Carbonated drink",
+        "Plain soda",
+        "Fruit-flavoured soda",
+        "Non-alcoholic beer",
+        "Fruit juice (non-100%)"
+      ]
+    },
+    {
+      "kod": "OTV-III-A-KolaliGazoz",
+      "liste": "III/A",
+      "ad_tr": "Kolalı Gazozlar (III/A Cetveli)",
+      "ad_en": "Cola Drinks (List III/A)",
+      "vergi_tipi": "oran",
+      "oran": 0.35,
+      "para_birimi": "Yuzde",
+      "birim_tr": "Litre",
+      "birim_en": "Litre",
+      "not_tr": "2202.10.00.00.13 kolalı gazozlar %35 ÖTV'ye tabidir (III/A Cetveli).",
+      "not_en": "Cola drinks (2202.10.00.00.13) are subject to 35% SCT (List III/A).",
+      "ornekler_tr": [
+        "Kolalı gazoz"
+      ],
+      "ornekler_en": [
+        "Cola drink"
+      ]
+    },
+    {
+      "kod": "OTV-III-B-Tutun",
+      "liste": "III/B",
+      "ad_tr": "Tütün Mamulleri (III/B Cetveli)",
+      "ad_en": "Tobacco Products (List III/B)",
+      "vergi_tipi": "kombine",
+      "para_birimi": "TRY",
+      "birim_tr": "Paket (maktu vergi) / Adet-gram (asgari maktu vergi)",
+      "birim_en": "Pack (fixed tax) / Piece-gram (minimum fixed tax)",
+      "not_tr": "Sigara, sarma/diğer mamul tütün ve enfiyede nispi oran %42; purolarda %45; sarma tütün (2403.19) %55; nargile tütünü ve makaronda %0. 2404.11, 2404.12, 2404.19, 2404.91 ve 2404.99 kapsamındaki ürünlerde nispi oran %42 olup asgari maktu ve maktu vergi sigara ile aynı yapıdadır. 2404.92 (transdermal nikotin bantları) TİTCK tarafından beşeri tıbbi ürün olarak ruhsatlandırıldığından ÖTV'ye tabi değildir ve bu kayda dahil edilmemiştir. Asgari maktu ve maktu tutarlar kalemlere göre değişir (03/07/2026). Asgari maktu vergi adet/gram başına, maktu vergi paket başınadır.",
+      "not_en": "Proportional rate 42% for cigarettes, other manufactured tobacco and snuff; 45% for cigars; 55% for rolling tobacco (2403.19); 0% for waterpipe tobacco and empty tubes. Products under 2404.11, 2404.12, 2404.19, 2404.91 and 2404.99 carry a 42% proportional rate with the same minimum fixed and fixed tax structure as cigarettes. 2404.92 (transdermal nicotine patches) is out of SCT scope as it is licensed as a medicinal product by TİTCK and is therefore excluded from this record. Minimum fixed and fixed amounts vary by item (03/07/2026). Minimum fixed tax is per piece/gram; fixed tax is per pack.",
+      "ornekler_tr": [
+        "Sigara",
+        "Puro",
+        "Sarma Tütün",
+        "Makaron",
+        "Enfiye",
+        "Elektronik Sigara",
+        "Isıtmalı Tütün",
+        "Nikotin Kesecikleri"
+      ],
+      "ornekler_en": [
+        "Cigarette",
+        "Cigar",
+        "Rolling Tobacco",
+        "Empty Cigarette Tubes",
+        "Snuff",
+        "E-Cigarette",
+        "Heated Tobacco",
+        "Nicotine Pouches"
+      ],
+      "matrah_dilimleri": [
+        {
+          "oran": 0.42,
+          "asgari_maktu": 2.2953,
+          "maktu": 23.7404,
+          "aciklama": "Sigara (2402.20) — 03/07/2026; diğer kalemler için 'kalemler' alanına bakınız"
+        }
+      ],
+      "gecerli_baslangic": "2026-07-03",
+      "kalemler": [
+        {
+          "gtip": "2402.10",
+          "ad_tr": "Tütün içeren purolar, uçları açık purolar, sigarillolar",
+          "oran": 0.45,
+          "asgari_maktu": 2.1643,
+          "maktu": 3.1238
+        },
+        {
+          "gtip": "2402.20",
+          "ad_tr": "Tütün içeren sigaralar",
+          "oran": 0.42,
+          "asgari_maktu": 2.2953,
+          "maktu": 23.7404
+        },
+        {
+          "gtip": "2402.90",
+          "ad_tr": "Tütün yerine geçen maddelerden purolar/sigarillolar",
+          "oran": 0.45,
+          "asgari_maktu": 2.1643,
+          "maktu": 3.1238
+        },
+        {
+          "gtip": "2402.90",
+          "ad_tr": "Tütün yerine geçen maddelerden sigaralar",
+          "oran": 0.42,
+          "asgari_maktu": 2.2953,
+          "maktu": 23.7404
+        },
+        {
+          "gtip": "2403",
+          "ad_tr": "Diğer mamul tütün ve mamul tütün yerine geçen maddeler",
+          "oran": 0.42,
+          "asgari_maktu": 2.2953,
+          "maktu": 23.7404
+        },
+        {
+          "gtip": "2403.11",
+          "ad_tr": "Nargile tütünleri",
+          "oran": 0.0,
+          "asgari_maktu": 0.8135,
+          "maktu": 3.0257
+        },
+        {
+          "gtip": "2403.19",
+          "ad_tr": "Sarma tütün (diğerleri)",
+          "oran": 0.55,
+          "asgari_maktu": 0.3078,
+          "maktu": 3.0257
+        },
+        {
+          "gtip": "2403.99.10",
+          "ad_tr": "Enfiye ve çiğnemeye mahsus tütün",
+          "oran": 0.42,
+          "asgari_maktu": 2.2953,
+          "maktu": 23.7404
+        },
+        {
+          "gtip": "2404.11",
+          "ad_tr": "Yanma olmadan solunan, tütün veya yeniden terkip edilmiş tütün içeren ürünler (ısıtmalı tütün)",
+          "oran": 0.42,
+          "asgari_maktu": 2.2953,
+          "maktu": 23.7404
+        },
+        {
+          "gtip": "2404.12",
+          "ad_tr": "Yanma olmadan solunan, nikotin içeren ürünler",
+          "oran": 0.42,
+          "asgari_maktu": 2.2953,
+          "maktu": 23.7404
+        },
+        {
+          "gtip": "2404.19",
+          "ad_tr": "Yanma olmadan solunan diğer nikotin ürünleri",
+          "oran": 0.42,
+          "asgari_maktu": 2.2953,
+          "maktu": 23.7404
+        },
+        {
+          "gtip": "2404.91",
+          "ad_tr": "Ağız yoluyla kullanılan nikotin ürünleri (nikotin kesecikleri vb.)",
+          "oran": 0.42,
+          "asgari_maktu": 2.2953,
+          "maktu": 23.7404
+        },
+        {
+          "gtip": "2404.99",
+          "ad_tr": "İnsan vücuduna nikotin almak için kullanılan diğer ürünler",
+          "oran": 0.42,
+          "asgari_maktu": 2.2953,
+          "maktu": 23.7404
+        },
+        {
+          "gtip": "4813.10",
+          "ad_tr": "Makaron",
+          "oran": 0.0,
+          "asgari_maktu": 0.3321,
+          "maktu": null
+        }
+      ]
+    },
+    {
+      "kod": "OTV-IV-BeyazEsya",
+      "liste": "IV",
+      "ad_tr": "Beyaz Eşya ve Küçük Ev Aletleri",
+      "ad_en": "White Goods and Small Appliances",
+      "vergi_tipi": "oran",
+      "oran": 0.067,
+      "para_birimi": "Yuzde",
+      "birim_tr": "Adet",
+      "birim_en": "Piece",
+      "not_tr": "Beyaz eşya ve küçük ev aletleri için standart ÖTV oranı.",
+      "not_en": "Standard SCT rate for white goods and small appliances.",
+      "ornekler_tr": [
+        "Klima",
+        "Buzdolabı",
+        "Çamaşır Makinesi",
+        "Bulaşık Makinesi",
+        "Süpürge",
+        "Tıraş Makinesi"
+      ],
+      "ornekler_en": [
+        "Air Conditioner",
+        "Refrigerator",
+        "Washing Machine",
+        "Dishwasher",
+        "Vacuum Cleaner",
+        "Shaver"
+      ]
+    },
+    {
+      "kod": "OTV-IV-Televizyon",
+      "liste": "IV",
+      "ad_tr": "Televizyonlar ve Ses Sistemleri",
+      "ad_en": "Televisions and Audio Systems",
+      "vergi_tipi": "oran",
+      "oran": 0.2,
+      "para_birimi": "Yuzde",
+      "birim_tr": "Adet",
+      "birim_en": "Piece",
+      "not_tr": "Televizyon, monitör ve ses sistemleri için ÖTV oranı.",
+      "not_en": "SCT rate for televisions, monitors and audio systems.",
+      "ornekler_tr": [
+        "Televizyon",
+        "Monitör",
+        "Ses Sistemi"
+      ],
+      "ornekler_en": [
+        "Television",
+        "Monitor",
+        "Audio System"
+      ]
+    },
+    {
+      "kod": "OTV-IV-Telefon",
+      "liste": "IV",
+      "ad_tr": "Cep Telefonları",
+      "ad_en": "Mobile Phones",
+      "vergi_tipi": "oran",
+      "para_birimi": "Yuzde",
+      "birim_tr": "Adet",
+      "birim_en": "Piece",
+      "not_tr": "Cep telefonlarında matrah tutarına göre kademeli ÖTV oranı uygulanır.",
+      "not_en": "Progressive SCT rate is applied based on the tax base bracket for mobile phones.",
+      "ornekler_tr": [
+        "Cep Telefonu",
+        "Akıllı Telefon"
+      ],
+      "ornekler_en": [
+        "Mobile Phone",
+        "Smartphone"
+      ],
+      "matrah_dilimleri": [
+        {
+          "segment": "Alt Matrah",
+          "oran": 0.25
+        },
+        {
+          "segment": "Orta Matrah",
+          "oran": 0.4
+        },
+        {
+          "segment": "Üst Matrah",
+          "oran": 0.5
+        }
+      ]
+    },
+    {
+      "kod": "OTV-IV-Kameralar",
+      "liste": "IV",
+      "ad_tr": "Televizyon ve Dijital Kameralar",
+      "ad_en": "Television and Digital Cameras",
+      "vergi_tipi": "oran",
+      "oran": 0.2,
+      "para_birimi": "Yuzde",
+      "birim_tr": "Adet",
+      "birim_en": "Piece",
+      "not_tr": "8525.80.11, 8525.80.19 ve 8525.80.30 GTİP kodlu kameralar %20 ÖTV'ye tabidir. Görüntü kaydedici diğer kameralar (8525.80.91, 8525.80.99) ÖTV'den muaftır.",
+      "not_en": "Cameras with GTIP codes 8525.80.11, 8525.80.19 and 8525.80.30 are subject to 20% SCT. Other video recording cameras are exempt.",
+      "ornekler_tr": [
+        "Dijital Fotoğraf Makinesi",
+        "TV Kamerası"
+      ],
+      "ornekler_en": [
+        "Digital Camera",
+        "TV Camera"
+      ]
+    },
+    {
+      "kod": "OTV-IV-LuksUrunler",
+      "liste": "IV",
+      "ad_tr": "Lüks Tüketim, Kürk, Kıymetli Taş ve Silahlar",
+      "ad_en": "Luxury Goods, Furs, Precious Stones and Weapons",
+      "vergi_tipi": "oran",
+      "para_birimi": "Yuzde",
+      "birim_tr": "Adet",
+      "birim_en": "Piece",
+      "not_tr": "Lüks tüketim ürünleri ve av silahları için yüksek oranlı ÖTV uygulanır.",
+      "not_en": "High-rate SCT is applied for luxury consumer goods and hunting firearms.",
+      "ornekler_tr": [
+        "Kürk",
+        "Havyar",
+        "Elmas",
+        "Altın Mücevher",
+        "Av Tüfeği",
+        "Oyun Konsolu"
+      ],
+      "ornekler_en": [
+        "Fur",
+        "Caviar",
+        "Diamond",
+        "Gold Jewelry",
+        "Hunting Rifle",
+        "Gaming Console"
+      ],
+      "matrah_dilimleri": [
+        {
+          "segment": "Lüks Eşya, Kürk ve Mücevher",
+          "oran": 0.2
+        },
+        {
+          "segment": "Av Tüfekleri ve Silahlar",
+          "oran": 0.5
+        }
+      ]
+    }
+  ]
+}

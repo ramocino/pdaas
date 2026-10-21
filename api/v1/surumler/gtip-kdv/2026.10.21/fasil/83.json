@@ -1,0 +1,663 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-kdv",
+      "ad": {
+        "tr": "GTİP KDV Eşleşmesi",
+        "en": "GTIP VAT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
+          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
+        },
+        "resmi_gazete": "32241",
+        "tarih": "2023-07-07"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
+          "en": "Presidential Decision No. 9126 (amendment to List II)"
+        },
+        "resmi_gazete": "32722",
+        "tarih": "2024-11-14"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.10.21",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.10.21",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.21",
+          "checksum": "sha256:9c1aa8e032c47268a9292ef5c3b40e6fb4683f7f58017307adc2decb0d8c4c16"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.21"
+      },
+      "uretim_zamani": "2026-10-21T10:31:05.319217+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "83",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:4dda3793d3bd2b2ffad977c99b64ac1baf12de60b429b81ed96d85e26f54692b"
+  },
+  "kayitlar": [
+    {
+      "kod": "830110000011",
+      "tanim_tr": "Şifreli olanlar",
+      "tanim_en": "The encrypted ones",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830110000012",
+      "tanim_tr": "Gövdesi pirinçten olanlar",
+      "tanim_en": "Those with brass bodies",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830110000019",
+      "tanim_tr": "Diğerleri",
+      "tanim_en": "Others",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830120000000",
+      "tanim_tr": "Nakil vasıtalarında kullanılan türden kilitler",
+      "tanim_en": "Locks of the type used in transport vehicles",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830130000000",
+      "tanim_tr": "Mobilyalar için kullanılan türden kilitler",
+      "tanim_en": "Locks of the type used for furniture.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830140110000",
+      "tanim_tr": "Adi metallerden kapı kilitleri; silindirli olanlar",
+      "tanim_en": "Door locks made of base metals; those with cylinders.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830140190011",
+      "tanim_tr": "Soğuk hava depolarına mahsus adi metallerden kapı kilitleri; silindirli olanlar HARİÇ",
+      "tanim_en": "Door locks made of base metals, intended for cold storage facilities; EXCEPT those with cylinders.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830140190019",
+      "tanim_tr": "Adi metallerden diğer kapı kilitleri; silindirli olanlar HARİÇ",
+      "tanim_en": "Other door locks made of base metals; EXCEPT those with cylinders.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830140900000",
+      "tanim_tr": "Adi metallerden diğer kilitler",
+      "tanim_en": "Other locks made from base metals",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830150000000",
+      "tanim_tr": "Kilidi olan, mesnetli veya mesnetsiz kancalar",
+      "tanim_en": "Hooks with or without locks, with or without supports",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830160000011",
+      "tanim_tr": "Kapı kilidi silindirleri (barel)",
+      "tanim_en": "Door lock cylinders (barrels)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830160000019",
+      "tanim_tr": "Adi metallerden kilitlerin aksam ve parçaları; kapı kilidi silindirleri (barel) HARİÇ",
+      "tanim_en": "Parts and components of locks made of base metals; EXCLUDING door lock cylinders (barrels)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830170000000",
+      "tanim_tr": "Kilidi ile birlikte olmayan anahtarlar",
+      "tanim_en": "Keys without locks",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830210000011",
+      "tanim_tr": "Soğuk hava depolarına mahsus adi metallerden menteşeler",
+      "tanim_en": "Hinges made of base metals, suitable for cold storage facilities.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830210000012",
+      "tanim_tr": "Nakil vasıtalarına mahsus adi metallerden menteşeler",
+      "tanim_en": "Hinges made of base metals for transport vehicles.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830210000019",
+      "tanim_tr": "Adi metallerden diğer menteşeler",
+      "tanim_en": "Other hinges made from base metals",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830220000000",
+      "tanim_tr": "Adi metallerden donanımları ile birlikte olan küçük tekerlekler",
+      "tanim_en": "Small wheels made of base metals, along with their hardware.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830230000000",
+      "tanim_tr": "Nakil vasıtaları için adi metallerden diğer donanım, tertibat vb. eşya",
+      "tanim_en": "Other equipment, fittings, etc. made of base metals for vehicles.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830241100011",
+      "tanim_tr": "Soğuk hava depolarının kapılarına mahsus adi metallerden diğer donanım, tertibat vb. eşya",
+      "tanim_en": "Other hardware, fixtures, etc., made of base metals, specifically for the doors of cold storage facilities.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830241100019",
+      "tanim_tr": "Diğer binaların kapılarına mahsus adi metallerden diğer donanım, tertibat vb. eşya",
+      "tanim_en": "Other hardware, fixtures, etc., made of base metals intended for doors of other buildings.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830241500000",
+      "tanim_tr": "Pencere ve Fransız pencereleri için adi metallerden diğer donanım, tertibat vb. eşya",
+      "tanim_en": "Other hardware, fittings, etc., made of base metals for windows and French windows.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830241900000",
+      "tanim_tr": "Binalar için adi metallerden diğer donanım, tertibat vb. eşya",
+      "tanim_en": "Other equipment, fittings, etc. made of base metals for buildings.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830242000011",
+      "tanim_tr": "Adi metallerden koltuk amörtisörleri",
+      "tanim_en": "Seat shock absorbers made from base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830242000019",
+      "tanim_tr": "Mobilyalar için adi metallerden diğer donanım, tertibat vb. eşya",
+      "tanim_en": "Other hardware, fittings, etc. made of base metals for furniture.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830249000000",
+      "tanim_tr": "Adi metallerden diğer donanım, tertibat vb. eşya",
+      "tanim_en": "Other equipment, fittings, etc. made of base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830250000000",
+      "tanim_tr": "Adi metallerden sabit askılıklar, şapka askıları, dirsekler ve benzeri eşya",
+      "tanim_en": "Fixed hooks, hat racks, brackets and similar items made from base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830260000000",
+      "tanim_tr": "Adi metallerden otomatik kapı kapayıcıları",
+      "tanim_en": "Automatic door closers made from base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830300400000",
+      "tanim_tr": "Adi metallerden kasalar, kasa daireleri için zırhlı kapı ve bölmeler",
+      "tanim_en": "Safes made from base metals, armored doors and partitions for vault rooms.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830300900011",
+      "tanim_tr": "Adi metallerden emniyetli çekmeceler ve kutular",
+      "tanim_en": "Safety drawers and boxes made from base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830300900012",
+      "tanim_tr": "Adi metallerden telefon kumbaraları",
+      "tanim_en": "Phone piggy banks made from base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830300900019",
+      "tanim_tr": "Adi metallerden emniyetli diğer eşya",
+      "tanim_en": "Other safety articles of base metals",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830400000000",
+      "tanim_tr": "Adi metallerden dosya-fiş kutusu, tasnif-ayırım kutusu, kağıtlık, kalem kutuları, kaşe askılıkları vb. büro eşyası (94.03'teki büro mobilyaları hariç)",
+      "tanim_en": "Office supplies made of base metals, such as file and receipt boxes, sorting and separation boxes, paper holders, pen cases, stamp holders, etc. (excluding office furniture in section 94.03)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830510000000",
+      "tanim_tr": "Adi metallerden dosya, klasör ve ciltler için kağıt takılabilen mekanizmalar",
+      "tanim_en": "Paper loading mechanisms for files, folders and binders made from base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830520001000",
+      "tanim_tr": "Adi metallerden bürolarda kullanılan şerit halinde zımba telleri",
+      "tanim_en": "Staple wires in strip form, made from base metals, used in offices.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830520002100",
+      "tanim_tr": "Demir veya çelikten döşemecilik ve ambalaj işlerinde kullanılan şerit halinde zımba telleri",
+      "tanim_en": "Staple wires in strip form, made of iron or steel, used in upholstery and packaging applications.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830520002500",
+      "tanim_tr": "Bakırdan döşemecilik ve ambalaj işlerinde kullanılan şerit halinde zımba telleri",
+      "tanim_en": "Staple wires in copper strips, used in upholstery and packaging.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830590000000",
+      "tanim_tr": "Adi metallerden kağıt raptiyeleri, kağıt köşebentleri, endeks kartekslerine mahsus işaret maşaları ve benzeri diğer büro eşyası ve aksam-parçaları",
+      "tanim_en": "Paper staples, paper corner protectors, index card holders and other similar office supplies and accessories made of base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830610000000",
+      "tanim_tr": "Adi metalden elektrikli olmayan ziller, çanlar, gonglar ve benzerleri",
+      "tanim_en": "Non-electric bells, chimes, gongs and the like, made of base metal.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830621000000",
+      "tanim_tr": "Adi metalden yapılmış olup kıymetli metallerle kaplanmış heykelcikler ve diğer süs eşyası",
+      "tanim_en": "Figurines and other ornaments made of base metal and coated with precious metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830629000000",
+      "tanim_tr": "Adi metalden yapılmış heykelcikler ve diğer süs eşyası; kıymetli metallerle kaplanmış olanlar HARİÇ",
+      "tanim_en": "Figurines and other ornaments made of base metal; EXCEPT those coated with precious metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830630000000",
+      "tanim_tr": "Adi metallerden fotoğraf, resim ve benzerleri için çerçeveler ile adi metallerden aynalar",
+      "tanim_en": "Frames for photographs, pictures and the like, made from base metals, and mirrors made from base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830710000011",
+      "tanim_tr": "Demir veya çelikten eğilip bükülebilen metal körükler",
+      "tanim_en": "Flexible metal bellows made of iron or steel.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830710000012",
+      "tanim_tr": "Çelikten eğilip bükülebilen hava kanalı",
+      "tanim_en": "Flexible steel air duct",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830710000018",
+      "tanim_tr": "Demir veya çelikten eğilip bükülebilen diğer borular (boru bağlantı parçalarıyla birlikte olsun olmasın)",
+      "tanim_en": "Other flexible pipes made of iron or steel (whether or not including pipe fittings)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830790000011",
+      "tanim_tr": "Diğer adi metallerden eğilip bükülebilen metal körükler",
+      "tanim_en": "Flexible metal bellows made from other base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830790000012",
+      "tanim_tr": "Diğer adi metallerden eğilip bükülebilen bağlantı fişli gaz hortumları ve gaz bağlantı armatürleri (10 KPA'ya kadar) (gaz tüketim cihazları için)",
+      "tanim_en": "Gas hoses and gas connection fittings with flexible connection plugs made from other base metals (up to 10 kPa) (for gas consumption appliances)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830790000013",
+      "tanim_tr": "Alüminyumdan eğilip bükülebilen hava kanalı (izoleli olsun olmasın)",
+      "tanim_en": "Flexible aluminum air duct (insulated or not)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830790000018",
+      "tanim_tr": "Diğer adi metallerden eğilip bükülebilen diğer borular (boru bağlantı parçalarıyla birlikte olsun olmasın)",
+      "tanim_en": "Other flexible pipes made from other base metals (with or without pipe fittings)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830810000011",
+      "tanim_tr": "Adi metallerden kopçalar (çengelli olanlar dahil)",
+      "tanim_en": "Buckles (including clasp types) made of base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830810000012",
+      "tanim_tr": "Adi metallerden bağ deliği kapsülleri",
+      "tanim_en": "Bond hole capsules made of base metals",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830820000000",
+      "tanim_tr": "Adi metallerden boru şeklinde veya yarık saplı perçinler",
+      "tanim_en": "Tubular or split shank rivets made of base metals",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830890001000",
+      "tanim_tr": "Adi metallerden boncuklar ve kesilmiş ince pullar",
+      "tanim_en": "Beads and thinly sliced ​​flakes made from base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830890009000",
+      "tanim_tr": "Adi metallerden giyim eşyası, ayakkabı, el çantası ve benzerleri için kancalar, mesnetli kanca, toka, ve benzerleri",
+      "tanim_en": "Hooks, back hooks, buckles, and similar items made from base metals for clothing, footwear, handbags, and the like.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830910000000",
+      "tanim_tr": "Adi metallerden dişli tıpalar",
+      "tanim_en": "Threaded plugs made of base metals",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830990100000",
+      "tanim_tr": "Şişeler için kurşun kapsüller ve çapı 21 mm. yi geçen aluminyum kapsüller",
+      "tanim_en": "Lead caps for bottles and aluminum caps with a diameter exceeding 21 mm.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830990901000",
+      "tanim_tr": "Demir veya çelikten diğer tıpalar, diğer kapsüller, dişli kapaklar, kapak plakaları, mühür kurşunları ve ambalajlamada kullanılan benzeri teferruat",
+      "tanim_en": "Other stoppers, capsules, threaded caps, cap plates, sealing leads and similar accessories used in packaging, made of iron or steel.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830990909100",
+      "tanim_tr": "Diğer adi metallerden dişli kapaklar",
+      "tanim_en": "Threaded covers made from other base metals",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "830990909900",
+      "tanim_tr": "Diğer adi metallerden diğer tıpalar, diğer kapsüller, kapak plakaları, mühür kurşunları ve ambalajlamada kullanılan benzeri diğer teferruat",
+      "tanim_en": "Other stoppers, other capsules, cap plates, sealing leads and other similar accessories used in packaging, made from other base metals.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "831000000000",
+      "tanim_tr": "Adi metallerden işaret levhaları, tabelalar, adres levhaları ve benzeri levhalar, rakamlar, harfler ve diğer işaretler (94.05 pozisyonundakiler hariç)",
+      "tanim_en": "Signboards, billboards, address boards and similar plates, numbers, letters and other markings of base metals (excluding those of heading 94.05)",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "831110001000",
+      "tanim_tr": "Elektrikli ark kaynağı yapmak için, çekirdeği nikel esaslı, adi metallerden kaplanmış elektrotlar",
+      "tanim_en": "For electric arc welding, electrodes with a nickel-based core and coated with base metals are used.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "831110002000",
+      "tanim_tr": "Elektrikli ark kaynağı yapmak için, çekirdeği paslanmaz çelikten, adi metallerden kaplanmış elektrotlar",
+      "tanim_en": "For electric arc welding, electrodes with cores made of stainless steel and coated with base metals are used.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "831110009011",
+      "tanim_tr": "Elektrikli ark kaynağı yapmak için, örtüsü titandioksit esaslı, adi metallerden kaplanmış elektrotlar",
+      "tanim_en": "For electric arc welding, electrodes coated with titanium dioxide-based coating and made of base metals are used.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "831110009012",
+      "tanim_tr": "Elektrikli ark kaynağı yapmak için, örtüsü toprak alkali metal bileşiği esaslı, adi metallerden kaplanmış elektrotlar",
+      "tanim_en": "For electric arc welding, electrodes coated with base metals, based on alkaline earth metal compounds, are used.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "831110009013",
+      "tanim_tr": "Elektrikli ark kaynağı yapmak için, örtüsü selüloz esaslı, adi metallerden kaplanmış elektrotlar",
+      "tanim_en": "For electric arc welding, electrodes coated with cellulose-based, base metals are used.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "831110009019",
+      "tanim_tr": "Elektrikli ark kaynağı yapmak için, adi metallerden kaplanmış diğer elektrotlar",
+      "tanim_en": "For electric arc welding, other electrodes coated with base metals are used.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "831120000000",
+      "tanim_tr": "Elektrikli ark kaynağı yapmak için, adi metallerden içi doldurulmuş teller",
+      "tanim_en": "To perform electric arc welding, filled wires made of base metals are used.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "831130000000",
+      "tanim_tr": "Alevle lehim veya kaynak yapmak için, adi metallerden kaplanmış çubuklar ve içi doldurulmuş teller",
+      "tanim_en": "For flame soldering or welding, coated rods and filled wires made of base metals are used.",
+      "grup": "genel",
+      "oran": 0.2
+    },
+    {
+      "kod": "831190000000",
+      "tanim_tr": "Adi metallerden veya metal karbürlerden diğer teller, çubuklar, ince borular, levhalar vb. ile aglomere adi metal tozlarından teller, çubuklar",
+      "tanim_en": "Wires, rods, thin tubes, sheets, etc. from base metals or metal carbides, and wires, rods from agglomerated base metal powders.",
+      "grup": "genel",
+      "oran": 0.2
+    }
+  ]
+}

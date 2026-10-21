@@ -1,0 +1,1286 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-otv",
+      "ad": {
+        "tr": "GTİP ÖTV Eşleşmesi",
+        "en": "GTIP SCT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli (I), (II), (III) ve (IV) sayılı listeler",
+          "en": "Lists (I), (II), (III) and (IV) annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": null,
+        "erisim_tarihi": null
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26786",
+        "tarih": "2008-01-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
+          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
+        },
+        "resmi_gazete": "32241",
+        "tarih": "2023-07-07"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
+          "en": "Presidential Decision No. 9126 (amendment to List II)"
+        },
+        "resmi_gazete": "32722",
+        "tarih": "2024-11-14"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "10115 sayılı Cumhurbaşkanı Kararı (binek otomobil matrah/oranları)",
+          "en": "Presidential Decision No. 10115 (passenger car SCT bases/rates)"
+        },
+        "resmi_gazete": "32965",
+        "tarih": "2025-07-24"
+      },
+      {
+        "tur": "cb_karari",
+        "ad": {
+          "tr": "11488 ve 11489 sayılı Cumhurbaşkanı Kararları (akaryakıt, tütün)",
+          "en": "Presidential Decisions No. 11488 and 11489 (fuel, tobacco)"
+        },
+        "resmi_gazete": "33299",
+        "tarih": "2026-07-03"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.10.21",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.10.21",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:8640c889f4b45214ede38df577eb347d709a4d69d72394f7741a471780fc1899"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.21",
+          "checksum": "sha256:9c1aa8e032c47268a9292ef5c3b40e6fb4683f7f58017307adc2decb0d8c4c16"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.21"
+      },
+      "uretim_zamani": "2026-10-21T10:31:05.319217+00:00",
+      "eslesme_ozeti": {
+        "toplam": 15799,
+        "eslesen": 15799,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "08",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:80eea360988a181e78f930adceb2f281375b5e71a133a249278267ffe1a45673"
+  },
+  "kayitlar": [
+    {
+      "kod": "080111000000",
+      "tanim_tr": "Hindistan cevizi (kurutulmuş)",
+      "tanim_en": "Dried coconut",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080112000000",
+      "tanim_tr": "Hindistan cevizi; iç kabuklu (endokarp), taze",
+      "tanim_en": "Coconut; in its inner shell (endocarp), fresh.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080119000000",
+      "tanim_tr": "Hindistan cevizi (taze); diğer",
+      "tanim_en": "fresh coconut; other",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080121000000",
+      "tanim_tr": "Brezilya cevizi; kabuklu (taze veya kurutulmuş)",
+      "tanim_en": "Brazil nuts; in shell (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080122000000",
+      "tanim_tr": "Brezilya cevizi; kabuksuz (taze veya kurutulmuş)",
+      "tanim_en": "Brazil nuts; shelled (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080131000000",
+      "tanim_tr": "Kaju cevizi; kabuklu (taze veya kurutulmuş)",
+      "tanim_en": "Cashew nuts; in shell (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080132000000",
+      "tanim_tr": "Kaju cevizi; kabuksuz (taze veya kurutulmuş)",
+      "tanim_en": "Cashew nuts; shelled (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080211100000",
+      "tanim_tr": "Acı badem; kabuklu (taze veya kurutulmuş)",
+      "tanim_en": "Bitter almonds; in shell (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080211900000",
+      "tanim_tr": "Diğer bademler; kabuklu (taze veya kurutulmuş)",
+      "tanim_en": "Other almonds; shelled (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080212100000",
+      "tanim_tr": "Acı bademler; kabuksuz (taze veya kurutulmuş)",
+      "tanim_en": "Bitter almonds; shelled (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080212900000",
+      "tanim_tr": "Diğer bademler; kabuksuz (taze veya kurutulmuş)",
+      "tanim_en": "Other almonds; shelled (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080221000000",
+      "tanim_tr": "Fındık; kabuklu (taze veya kurutulmuş)",
+      "tanim_en": "Hazelnuts; in shell (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080222000000",
+      "tanim_tr": "Fındık;kabuksuz (taze veya kurutulmuş)",
+      "tanim_en": "Hazelnuts; shelled (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080231000000",
+      "tanim_tr": "Ceviz; kabuklu (taze veya kurutulmuş)",
+      "tanim_en": "Walnuts; in shell (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080232000000",
+      "tanim_tr": "Ceviz; kabuksuz (taze veya kurutulmuş)",
+      "tanim_en": "Walnuts; shelled (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080241000000",
+      "tanim_tr": "Kestane; kabuklu (taze veya kurutulmuş)",
+      "tanim_en": "Chestnuts; in shell (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080242000000",
+      "tanim_tr": "Kestane; kabuksuz (taze veya kurutulmuş)",
+      "tanim_en": "Chestnuts; shelled (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080251000000",
+      "tanim_tr": "Antep Fıstığı; kabuklu (taze veya kurutulmuş)",
+      "tanim_en": "Pistachios; in shells (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080252000000",
+      "tanim_tr": "Antep fıstığı; kabuksuz (taze veya kurutulmuş)",
+      "tanim_en": "Pistachios; shelled (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080261000000",
+      "tanim_tr": "Avustralya fındığı (makadamya cevizi); kabuklu (taze veya kurutulmuş)",
+      "tanim_en": "Australian macadamia nuts; in shells (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080262000000",
+      "tanim_tr": "Avustralya fındığı (makadamya cevizi); kabuksuz (taze veya kurutulmuş)",
+      "tanim_en": "Australian macadamia nuts; shelled (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080270000000",
+      "tanim_tr": "Kola cevizi; (taze veya kurutulmuş)",
+      "tanim_en": "Kola nuts (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080280000000",
+      "tanim_tr": "Arek cevizi; (taze veya kurutulmuş)",
+      "tanim_en": "Arec nut (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080291000000",
+      "tanim_tr": "Çam fıstığı (kabuklu); taze veya kurutulmuş",
+      "tanim_en": "Pine nuts (in shell); fresh or dried.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080292000000",
+      "tanim_tr": "Çam fıstığı (kabuksuz); taze veya kurutulmuş",
+      "tanim_en": "Pine nuts (shelled); fresh or dried.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080299100000",
+      "tanim_tr": "Pekan cevizi; taze veya kurutulmuş (kabuğu çıkarılmış veya soyulmuş olsun olmasın)",
+      "tanim_en": "Pecan nuts; fresh or dried (whether shelled or unshelled)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080299900000",
+      "tanim_tr": "Diğer sert kabuklu meyveler; taze veya kurutulmuş (kabuğu çıkarılmış veya soyulmuş olsun olmasın)",
+      "tanim_en": "Other nuts; fresh or dried (whether peeled or unpeeled)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080310100000",
+      "tanim_tr": "Muz (plantain); taze",
+      "tanim_en": "Plantains; fresh",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080310900000",
+      "tanim_tr": "Muz (plantain); kurutulmuş",
+      "tanim_en": "Dried plantains",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080390110000",
+      "tanim_tr": "Muz (Plátano de Canarias); taze",
+      "tanim_en": "Banana (Plátano de Canarias); fresh",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080390190000",
+      "tanim_tr": "Muz (Plantain ve Plátano de Canarias HARİÇ); taze",
+      "tanim_en": "Bananas (EXCEPT Plantain and Plátano de Canarias); fresh",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080390900000",
+      "tanim_tr": "Muz (plantain hariç); kurutulmuş",
+      "tanim_en": "Dried bananas (excluding plantains);",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080410000000",
+      "tanim_tr": "Hurma (taze veya kurutulmuş)",
+      "tanim_en": "Dates (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080420100000",
+      "tanim_tr": "İncir (taze)",
+      "tanim_en": "figs (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080420900011",
+      "tanim_tr": "Kurutulmuş incirin ezmesi",
+      "tanim_en": "Dried fig paste",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080420900019",
+      "tanim_tr": "Kurutulmuş incir (kurutulmuş incirin ezmesi HARİÇ)",
+      "tanim_en": "Dried figs (EXCEPT dried fig paste)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080430000000",
+      "tanim_tr": "Ananas (taze veya kurutulmuş)",
+      "tanim_en": "Pineapple (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080440000000",
+      "tanim_tr": "Avokado armudu (taze veya kurutulmuş)",
+      "tanim_en": "Avocado pear (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080450000011",
+      "tanim_tr": "Mango (taze veya kurutulmuş)",
+      "tanim_en": "Mango (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080450000019",
+      "tanim_tr": "Guava armudu ve mangost (taze veya kurutulmuş)",
+      "tanim_en": "Guava pear and mangosteen (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080510220000",
+      "tanim_tr": "Navel (göbekli) portakallar; tatlı, taze",
+      "tanim_en": "Navel oranges; sweet, fresh.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080510240000",
+      "tanim_tr": "Beyaz portakallar; tatlı, taze",
+      "tanim_en": "White oranges; sweet, fresh.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080510280000",
+      "tanim_tr": "Diğer portakallar; tatlı, taze",
+      "tanim_en": "Other oranges are sweet and fresh.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080510800000",
+      "tanim_tr": "Diğer portakallar",
+      "tanim_en": "Other oranges",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080521100000",
+      "tanim_tr": "Mandarin (Satsuma); taze veya kurutulmuş",
+      "tanim_en": "Mandarin (Satsuma); fresh or dried",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080521900000",
+      "tanim_tr": "Mandarin (Satsuma HARİÇ); taze veya kurutulmuş",
+      "tanim_en": "Mandarin (EXCEPT satsuma); fresh or dried.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080522000000",
+      "tanim_tr": "Klemantin; taze veya kurutulmuş",
+      "tanim_en": "Clementine; fresh or dried",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080529000000",
+      "tanim_tr": "Vilking ve benzeri turunçgil melezleri; taze veya kurutulmuş",
+      "tanim_en": "Vilking and similar citrus hybrids; fresh or dried.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080540000000",
+      "tanim_tr": "Greyfurt ve pomelolar; taze veya kurutulmuş",
+      "tanim_en": "Grapefruits and pomelos; fresh or dried.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080550100000",
+      "tanim_tr": "Limon (Citrus limon, Citrus limonum) (taze veya kurutulmuş)",
+      "tanim_en": "Lemon (Citrus limon, Citrus limonum) (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080550900000",
+      "tanim_tr": "Tatlı limon (Citrus aurantifolia, Citrus latifolia) (taze veya kurutulmuş)",
+      "tanim_en": "Sweet lemon (Citrus aurantifolia, Citrus latifolia) (fresh or dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080590000011",
+      "tanim_tr": "Diğer taze turunçgiller",
+      "tanim_en": "Other fresh citrus fruits",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080590000012",
+      "tanim_tr": "Diğer kurutulmuş turunçgiller",
+      "tanim_en": "Other dried citrus fruits",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080610100000",
+      "tanim_tr": "Üzüm; sofralık, taze",
+      "tanim_en": "Grapes; table grapes, fresh.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080610900000",
+      "tanim_tr": "Üzüm; sofralık olmayan, taze",
+      "tanim_en": "Grapes; not for table consumption, fresh.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080620100000",
+      "tanim_tr": "Üzüm; korint (kurutulmuş)",
+      "tanim_en": "Grapes; Corinthian (dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080620300000",
+      "tanim_tr": "Üzüm; sultani (kurutulmuş)",
+      "tanim_en": "Grapes; sultani (dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080620900000",
+      "tanim_tr": "Üzüm, diğerleri (kurutulmuş)",
+      "tanim_en": "Grapes, others (dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080711000000",
+      "tanim_tr": "Karpuzlar (taze)",
+      "tanim_en": "Watermelons (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080719000000",
+      "tanim_tr": "Kavunlar (taze)",
+      "tanim_en": "Melons (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080720000000",
+      "tanim_tr": "Papaya (taze)",
+      "tanim_en": "Papaya (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080810100000",
+      "tanim_tr": "Elma; şaraplık (taze), yığın halinde, 16 Eylül'den 15 Aralık'a kadar",
+      "tanim_en": "Apples; for winemaking (fresh), in bulk, from September 16th to December 15th.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080810800011",
+      "tanim_tr": "Elma; Golden (taze)",
+      "tanim_en": "Apple; Golden (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080810800013",
+      "tanim_tr": "Elma; Starking (taze)",
+      "tanim_en": "Apple; Starking (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080810800014",
+      "tanim_tr": "Elma; Starkrimson (taze)",
+      "tanim_en": "Apple; Starkrimson (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080810800019",
+      "tanim_tr": "Diğer elmalar (taze)",
+      "tanim_en": "Other apples (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080830100000",
+      "tanim_tr": "Şaraplık armut, yığın halinde, 1 Ağustos'tan 31 Aralık'a kadar (taze)",
+      "tanim_en": "Wine pears, in bulk, fresh from August 1st to December 31st.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080830900000",
+      "tanim_tr": "Diğer armut (taze)",
+      "tanim_en": "Other pears (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080840000000",
+      "tanim_tr": "Ayva (taze)",
+      "tanim_en": "Quince (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080910000000",
+      "tanim_tr": "Kayısı (zerdali dahil) (taze)",
+      "tanim_en": "Apricots (including peaches) (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080921000000",
+      "tanim_tr": "Vişne (Prunus cerasus) (taze)",
+      "tanim_en": "Sour cherry (Prunus cerasus) (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080929000000",
+      "tanim_tr": "Kiraz (taze)",
+      "tanim_en": "Cherries (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080930200000",
+      "tanim_tr": "Yassı şeftaliler (Prunus persica var. platycarpa) ve yassı nektarinler (Prunus persica var. platerina); taze",
+      "tanim_en": "Flat peaches (Prunus persica var. platycarpa) and flat nectarines (Prunus persica var. platerina); fresh",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080930300000",
+      "tanim_tr": "Nektarinler; taze (yassı olanlar HARİÇ)",
+      "tanim_en": "Nectarines; fresh (EXCEPT flat ones)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080930800000",
+      "tanim_tr": "Şeftaliler; taze (yassı olanlar HARİÇ)",
+      "tanim_en": "Peaches; fresh (EXCEPT flat ones)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080940050011",
+      "tanim_tr": "Can eriği (taze)",
+      "tanim_en": "Fresh plums",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080940050012",
+      "tanim_tr": "Malta eriği (yeni dünya) (taze)",
+      "tanim_en": "Loquat (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080940050013",
+      "tanim_tr": "Mürdüm eriği (taze)",
+      "tanim_en": "Fresh plums",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080940050019",
+      "tanim_tr": "Diğer erikler (taze)",
+      "tanim_en": "Other plums (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "080940900000",
+      "tanim_tr": "Çakal eriği (taze)",
+      "tanim_en": "Wild plum (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081010000000",
+      "tanim_tr": "Çilek (taze)",
+      "tanim_en": "Strawberries (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081020100000",
+      "tanim_tr": "Ahududu (taze)",
+      "tanim_en": "Raspberries (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081020900000",
+      "tanim_tr": "Böğürtlen, dut, loganberiler (taze)",
+      "tanim_en": "Blackberries, mulberries, loganberries (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081030100000",
+      "tanim_tr": "Siyah Frenk üzümü (taze)",
+      "tanim_en": "Blackcurrant (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081030300000",
+      "tanim_tr": "Kırmızı Frenk üzümü (taze)",
+      "tanim_en": "Red currants (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081030900000",
+      "tanim_tr": "Beyaz frenk üzümü ve bektaşi üzümü (taze)",
+      "tanim_en": "White currants and gooseberries (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081040100000",
+      "tanim_tr": "Noktalı kırmızı yaban mersinleri (Vaccinium vitis-idea türü meyve) (taze)",
+      "tanim_en": "Spotted red cranberries (Vaccinium vitis-idea species fruit) (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081040300000",
+      "tanim_tr": "Adi yaban mersini (taze) (Vaccinium myrtillus)",
+      "tanim_en": "Common blueberry (fresh) (Vaccinium myrtillus)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081040500000",
+      "tanim_tr": "İri meyveli bataklık yaban mersini ( Vaccinium macrocarpan) ve bataklık yaban mersini (Vaccinium corymbosum) (taze)",
+      "tanim_en": "Large-fruited marsh blueberry (Vaccinium macrocarpan) and marsh blueberry (Vaccinium corymbosum) (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081040900000",
+      "tanim_tr": "Yaban mersininin diğer kültür cinsleri (taze)",
+      "tanim_en": "Other cultivated varieties of blueberry (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081050000000",
+      "tanim_tr": "Kivi (taze)",
+      "tanim_en": "Fresh kiwi",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081060000000",
+      "tanim_tr": "Durian (taze)",
+      "tanim_en": "Durian (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081070000000",
+      "tanim_tr": "Persimmon (Trabzon hurması) (taze)",
+      "tanim_en": "Persimmon (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081090200011",
+      "tanim_tr": "Demirhindi, mahun elması, lychees, ekmek ağacı meyvesi, sapodillo meyvesi (taze)",
+      "tanim_en": "Tamarind, mahogany apple, lychees, breadfruit, sapodillo fruit (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081090200012",
+      "tanim_tr": "Çarkıfelek meyvesi, karambola ve pitahaya (taze)",
+      "tanim_en": "Passion fruit, carambola, and pitahaya (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081090750011",
+      "tanim_tr": "Nar (taze)",
+      "tanim_en": "Pomegranate (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081090750012",
+      "tanim_tr": "Muşmula (taze)",
+      "tanim_en": "Fresh medlar",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081090750013",
+      "tanim_tr": "Kuşburnu (taze)",
+      "tanim_en": "Rosehip (fresh)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081090750017",
+      "tanim_tr": "Taze diğer meyveler",
+      "tanim_en": "Other fresh fruits",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081110110000",
+      "tanim_tr": "Çilek; şeker oranı >% 13 (ilave şeker içeren) (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş, dondurulmuş)",
+      "tanim_en": "Strawberries; sugar content >13% (containing added sugar) (uncooked or steamed or boiled, frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081110190000",
+      "tanim_tr": "Çilek; şeker oranı <= %13 (ilave şeker içeren) (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş, dondurulmuş)",
+      "tanim_en": "Strawberries; sugar content <= 13% (containing added sugar) (uncooked or steamed or boiled, frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081110900000",
+      "tanim_tr": "Diğer çilekler (ilave şeker içermeyen) (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş, dondurulmuş)",
+      "tanim_en": "Other strawberries (without added sugar) (uncooked or steamed or boiled in water, frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081120110000",
+      "tanim_tr": "Ahududu, böğürtlen, dut, loganberrier, siyah, beyaz, kırmızı Frenk ve Bektaşi üzümü; şeker > %13 (ilave şeker veya tatlandırıcı içeren) (dondurulmuş)",
+      "tanim_en": "Raspberries, blackberries, mulberries, loganberries, black, white, red currants, and gooseberries; sugar > 13% (contains added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081120190000",
+      "tanim_tr": "Ahududu, böğürtlen, dut, loganberrier, siyah, beyaz, kırmızı Frenk ve Bektaşi üzümü; şeker <= %13 (ilave şeker veya tatlandırıcı içeren) (dondurulmuş)",
+      "tanim_en": "Raspberries, blackberries, mulberries, loganberries, black, white, red currants, and gooseberries; sugar <= 13% (contains added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081120310000",
+      "tanim_tr": "Ahududu; ilave şeker veya tatlandırıcı içermeyen, dondurulmuş",
+      "tanim_en": "Raspberries; frozen, with no added sugar or sweeteners.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081120390000",
+      "tanim_tr": "Siyah Frenk üzümü; ilave şeker veya tatlandırıcı içermeyen, dondurulmuş",
+      "tanim_en": "Blackcurrants; frozen, with no added sugar or sweeteners.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081120510000",
+      "tanim_tr": "Kırmızı Frenk üzümü; ilave şeker veya tatlandırıcı içermeyen, dondurulmuş",
+      "tanim_en": "Red currants; frozen, with no added sugar or sweeteners.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081120590000",
+      "tanim_tr": "Böğürtlen, dut ve loganberrier; ilave şeker veya tatlandırıcı içermeyen, dondurulmuş",
+      "tanim_en": "Blackberries, mulberries, and loganberries; frozen, with no added sugar or sweeteners.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081120900000",
+      "tanim_tr": "Beyaz Frenk üzümü ve Bektaşi üzümü; ilave şeker veya tatlandırıcı içermeyen, dondurulmuş",
+      "tanim_en": "White currants and gooseberries; frozen, with no added sugar or sweeteners.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190110000",
+      "tanim_tr": "Tropikal meyveler ve sert kabuklu tropikal meyveler; şeker > %13 (ilave şeker veya tatlandırıcı içerenler) (dondurulmuş)",
+      "tanim_en": "Tropical fruits and nuts; sugar > 13% (containing added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190190000",
+      "tanim_tr": "Diğer meyveler ve sert kabuklu diğer meyveler; şeker oranı > %13 (ilave şeker veya tatlandırıcı içerenler) (dondurulmuş)",
+      "tanim_en": "Other fruits and nuts; sugar content > 13% (containing added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190310000",
+      "tanim_tr": "Tropikal meyveler ve sert kabuklu tropikal meyveler; şeker <= %13 (ilave şeker veya tatlandırıcı içerenler) (dondurulmuş)",
+      "tanim_en": "Tropical fruits and nuts; sugar <= 13% (containing added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190390000",
+      "tanim_tr": "Diğer meyveler ve sert kabuklu diğer meyveler; şeker oranı <= %13 (ilave şeker veya tatlandırıcı içerenler) (dondurulmuş)",
+      "tanim_en": "Other fruits and nuts; sugar content <= 13% (containing added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190500000",
+      "tanim_tr": "Adi yaban mersini (ilave şeker veya tatlandırıcı içermeyenler) (dondurulmuş)",
+      "tanim_en": "Common blueberries (those without added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190700000",
+      "tanim_tr": "Vaccinium myrtilloides ve vaccinium angustifolium türü meyveler (ilave şeker veya tatlandırıcı içermeyenler) (dondurulmuş)",
+      "tanim_en": "Fruits of the species Vaccinium myrtilloides and Vaccinium angustifolium (those without added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190750000",
+      "tanim_tr": "Vişne (prunus cerasus) (ilave şeker veya tatlandırıcı içermeyenler) (dondurulmuş)",
+      "tanim_en": "Sour cherries (Prunus cerasus) (those without added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190800000",
+      "tanim_tr": "Kiraz (ilave şeker veya tatlandırıcı içermeyenler) (dondurulmuş)",
+      "tanim_en": "Cherries (those without added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190850000",
+      "tanim_tr": "Tropikal meyveler ve sert kabuklu tropikal meyveler (ilave şeker veya tatlandırıcı içermeyenler) (dondurulmuş)",
+      "tanim_en": "Tropical fruits and nuts (those without added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190950011",
+      "tanim_tr": "Erik (ilave şeker veya tatlandırıcı içermeyenler) (dondurulmuş)",
+      "tanim_en": "Plums (those without added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190950012",
+      "tanim_tr": "Kayısı (zerdali dahil) (ilave şeker veya tatlandırıcı içermeyenler) (dondurulmuş)",
+      "tanim_en": "Apricots (including peaches) (those without added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190950013",
+      "tanim_tr": "Şeftali (ilave şeker veya tatlandırıcı içermeyenler) (dondurulmuş)",
+      "tanim_en": "Peaches (those without added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190950014",
+      "tanim_tr": "Elma (ilave şeker veya tatlandırıcı içermeyenler) (dondurulmuş)",
+      "tanim_en": "Apples (those without added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190950015",
+      "tanim_tr": "Üzüm (ilave şeker veya tatlandırıcı içermeyenler) (dondurulmuş)",
+      "tanim_en": "Grapes (those without added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081190950019",
+      "tanim_tr": "Meyveler ve sert kabuklu meyvelerin diğerleri (ilave şeker veya tatlandırıcı içermeyenler) (dondurulmuş)",
+      "tanim_en": "Fruits and other nuts (those without added sugar or sweeteners) (frozen)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081210000000",
+      "tanim_tr": "Kiraz, vişne; geçici olarak konserve edilmiş fakat bu halleri ile derhal yenilmeye elverişli olmayan",
+      "tanim_en": "Cherries and sour cherries; temporarily preserved but not immediately suitable for consumption in that state.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081290250000",
+      "tanim_tr": "Kayısı (zerdali dahil), portakal; geçici olarak konserve edilmiş fakat bu halleri ile derhal yenilmeye elverişli olmayan",
+      "tanim_en": "Apricots (including peaches), oranges; temporarily preserved but not immediately suitable for consumption in that state.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081290300000",
+      "tanim_tr": "Papaya; geçici olarak konserve edilmiş fakat bu halleri ile derhal yenilmeye elverişli olmayan",
+      "tanim_en": "Papaya; temporarily preserved, but not yet suitable for immediate consumption in that state.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081290400000",
+      "tanim_tr": "Adi yaban mersini; geçici olarak konserve edilmiş fakat bu halleri ile derhal yenilmeye elverişli olmayan",
+      "tanim_en": "Common blueberries; temporarily preserved but not yet ready to eat.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081290700000",
+      "tanim_tr": "Guava, mango, mangost, demirhindi, vb. sert kabuklu tropikal meyveler; geçici konserve edilmiş, bu halleri ile yenilmeye elverişli olmayan",
+      "tanim_en": "Guava, mango, mangosteen, tamarind, etc., hard-shelled tropical fruits; temporarily preserved fruits that are not suitable for consumption in this state.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081290980011",
+      "tanim_tr": "Şeftali; geçici olarak konserve edilmiş fakat bu halleri ile derhal yenilmeye elverişli olmayan",
+      "tanim_en": "Peaches; temporarily preserved but not immediately suitable for consumption in that state.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081290980012",
+      "tanim_tr": "Erik; geçici olarak konserve edilmiş fakat bu halleri ile derhal yenilmeye elverişli olmayan",
+      "tanim_en": "Plums are those that have been temporarily preserved but are not yet suitable for immediate consumption in that state.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081290980013",
+      "tanim_tr": "Elma; geçici olarak konserve edilmiş fakat bu halleri ile derhal yenilmeye elverişli olmayan",
+      "tanim_en": "Apples; temporarily preserved but not yet suitable for immediate consumption in that state.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081290980014",
+      "tanim_tr": "Turunç; geçici olarak konserve edilmiş fakat bu halleri ile derhal yenilmeye elverişli olmayan",
+      "tanim_en": "Bitter oranges; temporarily preserved but not yet suitable for immediate consumption.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081290980015",
+      "tanim_tr": "Çilek; geçici olarak konserve edilmiş fakat bu halleri ile derhal yenilmeye elverişli olmayan",
+      "tanim_en": "Strawberries; temporarily preserved but not yet suitable for immediate consumption in that state.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081290980016",
+      "tanim_tr": "Siyah Frenk üzümü; geçici olarak konserve edilmiş fakat bu halleri ile derhal yenilmeye elverişli olmayan",
+      "tanim_en": "Blackcurrants; temporarily preserved but not yet suitable for immediate consumption in that state.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081290980017",
+      "tanim_tr": "Ahududu; geçici olarak konserve edilmiş fakat bu halleri ile derhal yenilmeye elverişli olmayan",
+      "tanim_en": "Raspberries; temporarily preserved but not yet suitable for immediate consumption.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081290980018",
+      "tanim_tr": "Diğer meyveler ve sert kabuklu diğer meyveler; geçici olarak konserve edilmiş fakat bu halleri ile derhal yenilmeye elverişli olmayan",
+      "tanim_en": "Other fruits and nuts; temporarily preserved but not immediately suitable for consumption in that state.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081310000000",
+      "tanim_tr": "Kayısı (zerdali dahil) kurutulmuş",
+      "tanim_en": "Dried apricots (including peaches)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081320000000",
+      "tanim_tr": "Erik (kurutulmuş)",
+      "tanim_en": "Dried plums",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081330000000",
+      "tanim_tr": "Elma (kurutulmuş)",
+      "tanim_en": "Apple (dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081340100000",
+      "tanim_tr": "Şeftali (nektarınlar dahil) (kurutulmuş)",
+      "tanim_en": "Peaches (including nectarines) (dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081340300000",
+      "tanim_tr": "Armut (kurutulmuş)",
+      "tanim_en": "Pear (dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081340500000",
+      "tanim_tr": "Papaya (kurutulmuş)",
+      "tanim_en": "Papaya (dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081340650000",
+      "tanim_tr": "Demir hindi, mahun elması, ''lychees'', ekmek ağacı meyvesi, sapadillo eriği, çarkıfelek meyvesi, karambola ve pitahaya (kurutulmuş)",
+      "tanim_en": "Tamarind, mahogany apple, lychees, breadfruit, sapadillo plum, passion fruit, carambola, and pitahaya (dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081340950011",
+      "tanim_tr": "Dut (kurutulmuş)",
+      "tanim_en": "Mulberry (dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081340950012",
+      "tanim_tr": "Ayva (kurutulmuş)",
+      "tanim_en": "Quince (dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081340950019",
+      "tanim_tr": "Diğer meyveler (kurutulmuş) (0801 ila 0806 pozisyonlarındakiler HARİÇ)",
+      "tanim_en": "Other fruits (dried) (EXCEPT those in headings 0801 to 0806)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081350120000",
+      "tanim_tr": "Papaya, demirhindi, mahun elması, ''lychees'', ekmek ağacı meyvesi, sapadillo eriği ,çarkıfelek meyvesi, vb.ni içeren karışımlar (kurutulmuş); eriksiz",
+      "tanim_en": "Mixtures containing papaya, tamarind, mahogany apple, lychees, breadfruit, sapadillo plum, passion fruit, etc. (dried); without plums.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081350150000",
+      "tanim_tr": "Diğer meyvaların birbirleriyle olan karışımları (sert kabuklu meyvalar HARİÇ); (kurutulmuş); eriksiz",
+      "tanim_en": "Mixtures of other fruits (EXCEPT nuts); (dried); without plums",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081350190000",
+      "tanim_tr": "Meyvaların birbirleriyle olan karışımları (sert kabuklu meyvalar HARİÇ); (kurutulmuş); erikli olanlar",
+      "tanim_en": "Mixtures of fruits (EXCEPT nuts); (dried); those containing plums.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081350311000",
+      "tanim_tr": "Hindistan cevizi, brezilya cevizi ve kaju içeren karışımlar (kurutulmuş)",
+      "tanim_en": "Mixtures containing coconut, Brazil nut and cashew (dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081350319000",
+      "tanim_tr": "Sert kabuklu diğer tropikal meyvelerin karışımları (kurutulmuş)",
+      "tanim_en": "Mixtures of other tropical fruits with hard shells (dried)",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081350390000",
+      "tanim_tr": "0801 ve 0802 pozisyonlarında yer alan diğer meyvelerin karışımları (kurutulmuş)",
+      "tanim_en": "Mixtures of other fruits (dried) falling under headings 0801 and 0802",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081350910000",
+      "tanim_tr": "Kurutulmuş meyvelerin karışımları (0801 ve 0802 pozisyonundakiler HARİÇ); erik veya incir içermeyen",
+      "tanim_en": "Mixtures of dried fruit (excluding those in headings 0801 and 0802); not containing plums or figs.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081350991000",
+      "tanim_tr": "Kurutulmuş hurma, muz, ananas, avokado armudu, mango, mangost içeren karışımlar; erik veya incir içerenler",
+      "tanim_en": "Mixtures containing dried dates, bananas, pineapples, avocados, pears, mangoes, and mangosteens; those containing plums or figs.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081350999000",
+      "tanim_tr": "Kurutulmuş diğer meyvelerin karışımları (0801 ve 0802 pozisyonundakiler HARİÇ); erik veya incir içerenler",
+      "tanim_en": "Mixtures of other dried fruits (excluding those in headings 0801 and 0802); those containing plums or figs.",
+      "grup": "otv_yok",
+      "oran": null
+    },
+    {
+      "kod": "081400000000",
+      "tanim_tr": "Turunçgillerin veya kavunların (karpuzlar dahil) kabukları (taze, dondurulmuş, kurutulmuş veya geçici olarak konserve edilmiş)",
+      "tanim_en": "Peels of citrus fruits or melons (including watermelons) (fresh, frozen, dried or temporarily preserved)",
+      "grup": "otv_yok",
+      "oran": null
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "schema_surumu": "1.0.0",
-  "guncelleme": "2026-10-20",
+  "guncelleme": "2026-10-21",
   "servisler": [
     {
       "kod": "asgari-ucret",
@@ -54,6 +54,23 @@
       }
     },
     {
+      "kod": "engellilik-indirimi",
+      "ad": {
+        "tr": "Engellilik İndirimi Tutarları",
+        "en": "Disability Deduction Amounts"
+      },
+      "tip": "liste",
+      "kod_sistemi": "gib",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/engellilik-indirimi.json",
+          "surumler_url": "/surumler/engellilik-indirimi/",
+          "checksum": "sha256:11ac816534fbd69d5bf102f8ad5ab14f4964153db31adfdce7fb68df0ecf5aef"
+        }
+      }
+    },
+    {
       "kod": "gelir-vergisi-dilimleri",
       "ad": {
         "tr": "Gelir Vergisi Tarifesi Dilimleri",
@@ -80,10 +97,10 @@
       "kod_sistemi": "gtip",
       "katmanlar": {
         "konsolide": {
-          "son": "2026.10.20",
+          "son": "2026.10.21",
           "url": "/gtip-kdv.json",
           "surumler_url": "/surumler/gtip-kdv/",
-          "checksum": "sha256:83766391cf164174ad107ee1f381ff1393f3303ec7a8a45472612f8a364cce49"
+          "checksum": "sha256:5088ee20367c6742be51765151408f3da52ea332c979ad92e9cc942174b6db12"
         }
       }
     },
@@ -105,6 +122,23 @@
       }
     },
     {
+      "kod": "gtip-nace",
+      "ad": {
+        "tr": "GTİP NACE Eşleşmesi",
+        "en": "GTIP NACE Mapping"
+      },
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "katmanlar": {
+        "konsolide": {
+          "son": "2026.10.21",
+          "url": "/gtip-nace.json",
+          "surumler_url": "/surumler/gtip-nace/",
+          "checksum": "sha256:e62b5c94acff64a0fadfb631777ee111c938758e9c461e90db2c4eb8ed07532f"
+        }
+      }
+    },
+    {
       "kod": "gtip-otv",
       "ad": {
         "tr": "GTİP ÖTV Eşleşmesi",
@@ -114,10 +148,10 @@
       "kod_sistemi": "gtip",
       "katmanlar": {
         "konsolide": {
-          "son": "2026.10.20",
+          "son": "2026.10.21",
           "url": "/gtip-otv.json",
           "surumler_url": "/surumler/gtip-otv/",
-          "checksum": "sha256:33c15be326a821f8c267d6121e2d8d7339f83d4a9f2c7896646e05c29b33f749"
+          "checksum": "sha256:aed8d90d06cb2a51ff430911e870cc88dd2bfba910d59f35ed448a8d815b5312"
         }
       }
     },
@@ -131,7 +165,7 @@
       "kod_sistemi": "gtip",
       "katmanlar": {
         "konsolide": {
-          "son": "2026.10.20",
+          "son": "2026.10.21",
           "url": "/gtip-randiman.json",
           "surumler_url": "/surumler/gtip-randiman/",
           "checksum": "sha256:1d124390a54ff503ed323df4321f64fd13b0b2e83a764ee411c008648d7da359"
@@ -148,10 +182,10 @@
       "kod_sistemi": "gtip",
       "katmanlar": {
         "konsolide": {
-          "son": "2026.10.20",
+          "son": "2026.10.21",
           "url": "/gtip-tam.json",
           "surumler_url": "/surumler/gtip-tam/",
-          "checksum": "sha256:5beaec092254ebdb0bf69f75463d0d9f2d77d027e118dc6aa250e21ad3f090e2"
+          "checksum": "sha256:e3f0979aa4e0cc7a42935999d7e8c47857628268dd4733d9d24b680c5b0829c1"
         }
       }
     },
@@ -165,10 +199,10 @@
       "kod_sistemi": "gtip",
       "katmanlar": {
         "konsolide": {
-          "son": "2026.10.20",
+          "son": "2026.10.21",
           "url": "/gtip-tevkifat.json",
           "surumler_url": "/surumler/gtip-tevkifat/",
-          "checksum": "sha256:1a2690a356e56e47ecc7c6892d314f1944d0542b14b599c00e1339b195c57c0b"
+          "checksum": "sha256:42d55dd350bee9537cec9df5e14489c1b39786cef22631b3ea77cd5983cff001"
         }
       }
     },
@@ -216,10 +250,10 @@
       "kod_sistemi": "gtip",
       "katmanlar": {
         "kurallar": {
-          "son": "2026.01.02",
+          "son": "2026.10.21",
           "url": "/kdv-kurallar.json",
           "surumler_url": "/surumler/kdv-kurallar/",
-          "checksum": "sha256:bf746caea9c60af8c35cb9875ce609b4ef1bb1c4b9f5c8b7a8802616e07861c4"
+          "checksum": "sha256:8fa973d0cb2c4cf8896c1ff4ec327b241e54f53223bc0fbd0d2bfd3f000e65a6"
         }
       }
     },
@@ -233,10 +267,10 @@
       "kod_sistemi": "gib",
       "katmanlar": {
         "ham": {
-          "son": "2026.01.02",
+          "son": "2026.10.21",
           "url": "/kdv-oranlari.json",
           "surumler_url": "/surumler/kdv-oranlari/",
-          "checksum": "sha256:9fae566398f813f40ed273692919e331f43d89cee82a01636c0ff7824710f19e"
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
         }
       }
     },
@@ -258,6 +292,23 @@
       }
     },
     {
+      "kod": "mtv-tarifeleri",
+      "ad": {
+        "tr": "Motorlu Taşıtlar Vergisi Tarifeleri",
+        "en": "Motor Vehicle Tax Tariffs"
+      },
+      "tip": "liste",
+      "kod_sistemi": "gib",
+      "katmanlar": {
+        "ham": {
+          "son": "2026.01.01",
+          "url": "/mtv-tarifeleri.json",
+          "surumler_url": "/surumler/mtv-tarifeleri/",
+          "checksum": "sha256:d4df805eaaed7ad77b7d7e7c7b40fac054792f6fd0c72e177576f6827145e2e5"
+        }
+      }
+    },
+    {
       "kod": "nace-kodlari",
       "ad": {
         "tr": "NACE Kodları",
@@ -275,6 +326,23 @@
       }
     },
     {
+      "kod": "nace-kurallar",
+      "ad": {
+        "tr": "NACE Eşleme Kuralları",
+        "en": "NACE Mapping Rules"
+      },
+      "tip": "kural-seti",
+      "kod_sistemi": "gtip",
+      "katmanlar": {
+        "kurallar": {
+          "son": "2026.10.21",
+          "url": "/nace-kurallar.json",
+          "surumler_url": "/surumler/nace-kurallar/",
+          "checksum": "sha256:d768546b577f82717267bdd67c7bd47c7c3df5b410ec2856c08bee3419c93131"
+        }
+      }
+    },
+    {
       "kod": "otv-kurallar",
       "ad": {
         "tr": "ÖTV Eşleme Kuralları",
@@ -284,10 +352,10 @@
       "kod_sistemi": "gtip",
       "katmanlar": {
         "kurallar": {
-          "son": "2026.01.02",
+          "son": "2026.10.21",
           "url": "/otv-kurallar.json",
           "surumler_url": "/surumler/otv-kurallar/",
-          "checksum": "sha256:26b818daae21b878f12069df91b8bdb81df9dada97d28914f0722699f092f1da"
+          "checksum": "sha256:eb0e2afff89a637cff62d16d61058dff00e538602dc192c54fdafdbce68fbf04"
         }
       }
     },
@@ -301,10 +369,10 @@
       "kod_sistemi": "gib",
       "katmanlar": {
         "ham": {
-          "son": "2026.01.02",
+          "son": "2026.10.21",
           "url": "/otv-oranlari.json",
           "surumler_url": "/surumler/otv-oranlari/",
-          "checksum": "sha256:bade3986a7013fd2587fa53b6019ee874d05bb279c4cc49b0566a31eefee12bd"
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
         }
       }
     },
