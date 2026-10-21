@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": { "kod": "zorunlu-belgeler-kurallar", "ad": { "tr": "Zorunlu Belge Eşleme Kuralları", "en": "Mandatory Document Mapping Rules" } },
+    "katman": "kurallar",
+    "yapi": { "tip": "kural-seti", "kod_sistemi": "gtip", "kapsam": ["ticaret"] },
+    "surum": "2026.10.21",
+    "guncelleme": "2026-10-21",
+    "yayin_durumu": "yayinda",
+    "zaman": { "bazli": false, "baslangic": null, "bitis": null },
+    "yayinci": { "kod": "ticaret", "ad": { "tr": "Ticaret Bakanlığı", "en": "Ministry of Trade" }, "kurumlar": ["ticaret"] },
+    "kaynaklar": [],
+    "mevzuat_ref": []
+  },
+  "gruplar": {
+    "belge-gruplari": { "ad_tr": "Belge Eşleşmeleri", "ad_en": "Document Mappings", "aciklama_tr": "Kural seti", "aciklama_en": "Rule set" }
+  },
+  "kurallar": [
+    {
+      "kod": "gtip-belge-eczacilik",
+      "prefixler": ["30"],
+      "belge_kodlari": ["titck-ruhsat"],
+      "aciklama_tr": "Eczacılık ürünleri",
+      "aciklama_en": "Pharmaceutical products"
+    },
+    {
+      "kod": "gtip-belge-elektronik-makine",
+      "prefixler": ["84", "85", "90"],
+      "belge_kodlari": ["ce-belgesi", "tse-belgesi"],
+      "aciklama_tr": "Makine, elektrikli cihazlar ve tıbbi aletler",
+      "aciklama_en": "Machinery, electrical devices and medical instruments"
+    },
+    {
+      "kod": "gtip-belge-otomotiv",
+      "prefixler": ["87"],
+      "belge_kodlari": ["ce-belgesi", "tse-belgesi"],
+      "aciklama_tr": "Kara taşıtları",
+      "aciklama_en": "Land vehicles"
+    },
+    {
+      "kod": "gtip-belge-gida-alkol-tutun",
+      "prefixler": ["02", "04", "2203", "2204", "2205", "2206", "2207", "2208", "2402", "2403", "2404"],
+      "belge_kodlari": ["tarim-izin"],
+      "aciklama_tr": "Gıda, içki ve tütün mamulleri",
+      "aciklama_en": "Food, beverages and tobacco products"
+    },
+    {
+      "kod": "gtip-belge-metal-ithalat",
+      "prefixler": ["72", "73", "76"],
+      "belge_kodlari": ["ithal-izin"],
+      "aciklama_tr": "Demir-çelik ve alüminyum ithalatı",
+      "aciklama_en": "Iron, steel and aluminum imports"
+    },
+    {
+      "kod": "gtip-belge-maden",
+      "prefixler": ["25", "26"],
+      "belge_kodlari": ["maden-ruhsati", "ced-raporu", "ithalat-gozetim"],
+      "aciklama_tr": "Tuz, kükürt, toprak, taş, metal cevherleri (Madencilik ürünleri)",
+      "aciklama_en": "Salt, sulfur, earths, stone, metal ores (Mining products)"
+    },
+    {
+      "kod": "gtip-belge-komur-linyit",
+      "prefixler": ["2701", "2702", "2703"],
+      "belge_kodlari": ["maden-ruhsati", "ced-raporu", "ithalat-gozetim"],
+      "aciklama_tr": "Taş kömürü, linyit ve turba",
+      "aciklama_en": "Coal, lignite and peat"
+    },
+    {
+      "kod": "gtip-belge-kok-petrol",
+      "prefixler": ["2704", "2709", "2710"],
+      "belge_kodlari": ["epdk-lisans", "ced-raporu", "ithalat-gozetim"],
+      "aciklama_tr": "Kok kömürü, ham petrol ve rafine petrol ürünleri",
+      "aciklama_en": "Coke, crude petroleum and refined petroleum products"
+    },
+    {
+      "kod": "gtip-belge-dogalgaz-lpg",
+      "prefixler": ["2711"],
+      "belge_kodlari": ["epdk-lisans", "ced-raporu"],
+      "aciklama_tr": "Doğal gaz, LPG ve gaz halindeki diğer hidrokarbonlar",
+      "aciklama_en": "Natural gas, LPG and other gaseous hydrocarbons"
+    }
+  ]
+}

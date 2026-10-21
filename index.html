@@ -920,9 +920,9 @@
     $('btn-copy-url').addEventListener('click', () => { if (currentService) copyToClipboard($('endpoint-url-text').textContent, t('copied_url')); });
     $('btn-copy-code').addEventListener('click', () => { copyToClipboard($('code-snippet-box').textContent, t('copied_code')); });
     $('btn-copy-json').addEventListener('click', () => { if (currentRawBody) copyToClipboard(JSON.stringify(currentRawBody, null, 2), t('copied_json')); });
-    $('btn-run-query').addEventListener('click', () => { 
-      const endpoint = $('endpoint-url-text').textContent.replace(window.location.origin, '').replace('/pdaas/api/v2', '');
-      if (endpoint) servisDetayYukle(endpoint);
+        $('btn-run-query').addEventListener('click', () => { 
+      const fullUrl = $('endpoint-url-text').textContent.trim();
+      if (fullUrl) servisDetayYukle(fullUrl);
     });
 
     $('btn-bc-home').addEventListener('click', () => {

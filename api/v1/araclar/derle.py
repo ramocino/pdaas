@@ -186,6 +186,8 @@ def eslesme_yap(kok):
     randiman_oran_doc, randiman_oran_hash = dosya_bul(kok, "randiman.json")
     randiman_kural_doc, randiman_kural_hash = dosya_bul(kok, "randiman-kurallar.json")
     nace_kural_doc, nace_kural_hash = dosya_bul(kok, "nace-kurallar.json")
+    belge_oran_doc, belge_oran_hash = dosya_bul(kok, "zorunlu-belgeler.json")
+    belge_kural_doc, belge_kural_hash = dosya_bul(kok, "zorunlu-belgeler-kurallar.json")
 
     def oran_dict(doc):
         return {k["kod"]: k for k in doc.get("kayitlar", [])}
@@ -194,6 +196,7 @@ def eslesme_yap(kok):
     otv_oranlar = oran_dict(otv_oran_doc)
     tevkifat_oranlar = oran_dict(tevkifat_oran_doc)
     randiman_oranlar = oran_dict(randiman_oran_doc)
+    belge_oranlar = oran_dict(belge_oran_doc)
 
     def kurallari_hazirla(doc):
         varsayilan, aktif = None, []
@@ -303,6 +306,18 @@ def eslesme_yap(kok):
                     nace_kodu = k["nace_kodu"]
         
         nace_data = {"kod": nace_kodu} if nace_kodu else None
+
+        # --- ZORUNLU BELGE EŞLEŞTİRME ---
+        belge_listesi = []
+        for k in belge_kural_doc.get("kurallar", []):
+            for p in k.get("prefixler", []):
+                clean_p = str(p).replace(".", "")
+                if kod.startswith(clean_p):
+                    # Eşleşen belgelerin detaylarını oran dosyasından çek
+                    for b_kod in k.get("belge_kodlari", []):
+                        if b_kod in belge_oranlar:
+                            belge_listesi.append(belge_oranlar[b_kod])
+                    break # Aynı kurala birden fazla uymasın
         
         # YENİ EKLENEN: NACE listesine ekleme yapılıyor!
         sonuc_nace.append({"kod": kod, "tanim_tr": tanim_tr, "tanim_en": tanim_en, "nace": nace_data})
@@ -312,18 +327,35 @@ def eslesme_yap(kok):
         for k in randiman_kural_doc.get("kurallar", []):
             r_kod = k.get("randiman_kodu")
             r_veri = randiman_oranlar.get(r_kod, {})
+            
+            # 1. Girdi (Ham madde) kontrolü
             if any(kod.startswith(p.replace(".", "")) for p in k.get("girdi_prefixler", [])):
                 rd_girdi.append({
                     "kural_kod": k["kod"],
                     "cikti_prefixler": k.get("cikti_prefixler"),
-                    "randiman": r_veri.get("randiman_orani"),
+                    "randiman_orani": r_veri.get("randiman_orani"),
+                    "fire_orani": r_veri.get("fire_orani"),
+                    "ad_tr": r_veri.get("ad_tr"),
+                    "ad_en": r_veri.get("ad_en"),
+                    "birim": r_veri.get("birim"),
+                    "aciklama_tr": r_veri.get("aciklama_tr"),
+                    "aciklama_en": r_veri.get("aciklama_en")
                 })
+            
+            # 2. Çıktı (Mamul) kontrolü
             if any(kod.startswith(p.replace(".", "")) for p in k.get("cikti_prefixler", [])):
                 rd_cikti.append({
                     "kural_kod": k["kod"],
                     "girdi_prefixler": k.get("girdi_prefixler"),
-                    "randiman": r_veri.get("randiman_orani"),
+                    "randiman_orani": r_veri.get("randiman_orani"),
+                    "fire_orani": r_veri.get("fire_orani"),
+                    "ad_tr": r_veri.get("ad_tr"),
+                    "ad_en": r_veri.get("ad_en"),
+                    "birim": r_veri.get("birim"),
+                    "aciklama_tr": r_veri.get("aciklama_tr"),
+                    "aciklama_en": r_veri.get("aciklama_en")
                 })
+        
         rd_data = {"girdi_oldugu_kurallar": rd_girdi, "cikti_oldugu_kurallar": rd_cikti}
         sonuc_randiman.append({"kod": kod, "tanim_tr": tanim_tr, "tanim_en": tanim_en, **rd_data})
 
@@ -336,7 +368,8 @@ def eslesme_yap(kok):
             "otv": otv_data,
             "tevkifat": tevk_data,
             "nace": nace_data,
-            "randiman": rd_data
+            "randiman": rd_data,
+            "belgeler": belge_listesi
         })
 
         # --- SANITY CHECK ---
