@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDaaS · Muhtasar Beyanname</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/pdaas-tailwind.js"></script>
+  <link rel="stylesheet" href="assets/pdaas.css">
+  <style>
+    select { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+  </style>
+</head>
+
+<body class="bg-win-base text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-win-500 selection:text-white">
+
+  <div id="pdaas-header"></div>
+
+  <div class="flex-1 flex overflow-hidden relative min-h-0">
+    <main id="main-content" class="flex-1 overflow-y-auto overscroll-contain bg-win-base flex flex-col min-h-0">
+      <div class="max-w-[1400px] w-full mx-auto p-4 lg:p-8 space-y-6">
+
+        <!-- Sayfa başlığı -->
+        <div>
+          <div class="flex items-center gap-3 flex-wrap">
+            <h1 class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight" data-i18n="muh_baslik"></h1>
+            <span id="donem-badge" class="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider bg-win-500/20 text-win-400 rounded border border-win-500/30">2026 / 10</span>
+          </div>
+          <p class="text-sm text-slate-400 mt-1" data-i18n="muh_aciklama"></p>
+        </div>
+
+        <!-- Durum -->
+        <div id="durum-alani" class="hidden"></div>
+
+        <!-- Referans Veriler -->
+        <section>
+          <h2 class="text-sm font-semibold tracking-tight text-white uppercase flex items-center gap-2 mb-3">
+            <svg class="w-4 h-4 text-win-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            <span data-i18n="muh_ref_baslik"></span>
+          </h2>
+          <div id="ref-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3"></div>
+        </section>
+
+        <!-- Muhtasar Tablosu -->
+        <section class="bg-win-card border border-win-border rounded-xl overflow-hidden shadow-xl">
+          <div class="flex items-center gap-3 px-5 py-3 border-b border-win-border bg-win-dark flex-wrap">
+            <span class="text-base">📊</span>
+            <h2 class="text-sm font-bold text-white" data-i18n="muh_tablo_baslik"></h2>
+          </div>
+          <div class="overflow-x-auto custom-scrollbar">
+            <table class="w-full table-fixed text-left text-sm">
+              <thead class="bg-win-hover border-b border-win-border text-slate-400 font-semibold uppercase tracking-wider text-[10px]">
+                <tr>
+                  <th class="px-2 py-3 w-[100px] whitespace-normal leading-tight align-middle" data-i18n="muh_th_belge"></th>
+                  <th class="px-2 py-3 w-[100px] whitespace-normal leading-tight align-middle" data-i18n="muh_th_tc"></th>
+                  <th class="px-2 py-3 w-[100px] whitespace-normal leading-tight align-middle" data-i18n="muh_th_ad"></th>
+                  <th class="px-2 py-3 w-[100px] whitespace-normal leading-tight align-middle" data-i18n="muh_th_soyad"></th>
+                  <th class="px-2 py-3 w-[70px] whitespace-normal leading-tight text-center align-middle" data-i18n="muh_th_gun"></th>
+                  <th class="px-2 py-3 w-[100px] whitespace-normal leading-tight text-right align-middle" data-i18n="muh_th_ucret"></th>
+                  <th class="px-2 py-3 w-[100px] whitespace-normal leading-tight align-middle" data-i18n="muh_th_cikis"></th>
+                  <th class="px-2 py-3 w-[100px] whitespace-normal leading-tight align-middle" data-i18n="muh_th_eksik"></th>
+                  <th class="px-2 py-3 w-[100px] whitespace-normal leading-tight align-middle" data-i18n="muh_th_meslek"></th>
+                  <th class="px-2 py-3 w-[100px] whitespace-normal leading-tight text-right align-middle" data-i18n="muh_th_brut10"></th>
+                  <th class="px-2 py-3 w-[100px] whitespace-normal leading-tight text-right align-middle" data-i18n="muh_th_gv_matrah"></th>
+                  <th class="px-2 py-3 w-[100px] whitespace-normal leading-tight text-right align-middle" data-i18n="muh_th_gv"></th>
+                  <th class="px-2 py-3 w-[100px] whitespace-normal leading-tight text-right align-middle" data-i18n="muh_th_dv"></th>
+                </tr>
+              </thead>
+              <tbody id="muh-tbody" class="divide-y divide-win-border/40"></tbody>
+              <tfoot id="muh-tfoot" class="bg-win-dark/60 font-bold text-white border-t-2 border-win-500/40"></tfoot>
+            </table>
+          </div>
+        </section>
+
+        <!-- Veri Kaynakları -->
+        <section class="bg-win-card border border-win-border rounded-xl overflow-hidden shadow-xl">
+          <div class="flex items-center gap-3 px-5 py-3 border-b border-win-border bg-win-dark">
+            <span class="text-base">🔗</span>
+            <h2 class="text-sm font-bold text-white" data-i18n="muh_kaynak_baslik"></h2>
+          </div>
+          <div id="kaynak-listesi" class="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2"></div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script type="module">
+    import { CONFIG, apiUrl, apiFetch } from './assets/pdaas-config.js';
+    import { $, kacis, sayi, tr_lower } from './assets/pdaas-utils.js';
+    import { t, dilBaslat, dilUygula, UI, getDil } from './assets/pdaas-i18n.js';
+    import { renderLayout } from './assets/pdaas-layout.js';
+
+    const dil = () => getDil();
+
+    // ============================================================
+    // i18n
+    // ============================================================
+    Object.assign(UI.tr, {
+      muh_baslik: "Muhtasar Beyanname Tablosu",
+      muh_aciklama: "Personel verilerini girin veya seçin. Tüm oranlar ve kodlar API üzerinden çekilir.",
+      muh_ref_baslik: "Referans Veriler",
+      muh_kaynak_baslik: "Veri Kaynakları (API)",
+      muh_tablo_baslik: "Beyanname Detayları (2026 / 10)",
+      muh_th_belge: "Belge Türü",
+      muh_th_tc: "TC Kimlik No",
+      muh_th_ad: "Adı",
+      muh_th_soyad: "Soyadı",
+      muh_th_gun: "Gün",
+      muh_th_ucret: "Ücret (Brüt)",
+      muh_th_cikis: "İşten Çıkış Nedeni",
+      muh_th_eksik: "Eksik Gün Nedeni",
+      muh_th_meslek: "Meslek Kodu",
+      muh_th_brut10: "Brüt Ücret (10 Aylık)",
+      muh_th_gv_matrah: "Gelir Vergisi Matrahı (Bu Ay)",
+      muh_th_gv: "Gelir Vergisi Kesintisi",
+      muh_th_dv: "Damga Vergisi Kesintisi",
+      muh_toplam: "TOPLAM",
+      muh_yukleniyor: "Referans veriler yükleniyor…",
+      muh_hazir: "Referans veriler hazır",
+      muh_sec: "Seçiniz",
+      muh_kaynak_ok: "yüklendi",
+      muh_kaynak_hata: "yüklenemedi",
+      muh_placeholder_tc: "11 Haneli TC",
+      muh_placeholder_ad: "Adı",
+      muh_placeholder_soyad: "Soyadı",
+      muh_asgari_aylik_brut: "Aylık Brüt Asgari Ücret",
+      muh_asgari_aylik_net: "Aylık Net Asgari Ücret",
+      muh_asgari_gunluk_brut: "Günlük Brüt Asgari Ücret",
+      muh_asgari_gunluk_net: "Günlük Net Asgari Ücret",
+      muh_damga: "Damga Vergisi",
+      muh_sgk_isci: "İşçi SGK Payı",
+      muh_issizlik_isci: "İşçi İşsizlik Payı",
+    });
+
+    Object.assign(UI.en, {
+      muh_baslik: "Withholding Tax Return Table",
+      muh_aciklama: "Enter or select employee data. All rates and codes are fetched via API.",
+      muh_ref_baslik: "Reference Data",
+      muh_kaynak_baslik: "Data Sources (API)",
+      muh_tablo_baslik: "Return Details (2026 / 10)",
+      muh_th_belge: "Document Type",
+      muh_th_tc: "ID Number",
+      muh_th_ad: "First Name",
+      muh_th_soyad: "Last Name",
+      muh_th_gun: "Days",
+      muh_th_ucret: "Wage (Gross)",
+      muh_th_cikis: "Termination Reason",
+      muh_th_eksik: "Missing Days Reason",
+      muh_th_meslek: "Occupation Code",
+      muh_th_brut10: "Gross Wage (10 Months)",
+      muh_th_gv_matrah: "Income Tax Base (This Month)",
+      muh_th_gv: "Income Tax Deduction",
+      muh_th_dv: "Stamp Tax Deduction",
+      muh_toplam: "TOTAL",
+      muh_yukleniyor: "Loading reference data…",
+      muh_hazir: "Reference data ready",
+      muh_sec: "Select",
+      muh_kaynak_ok: "loaded",
+      muh_kaynak_hata: "failed",
+      muh_placeholder_tc: "11 Digit ID",
+      muh_placeholder_ad: "First Name",
+      muh_placeholder_soyad: "Last Name",
+      muh_asgari_aylik_brut: "Monthly Gross Min. Wage",
+      muh_asgari_aylik_net: "Monthly Net Min. Wage",
+      muh_asgari_gunluk_brut: "Daily Gross Min. Wage",
+      muh_asgari_gunluk_net: "Daily Net Min. Wage",
+      muh_damga: "Stamp Tax",
+      muh_sgk_isci: "Employee SGK Share",
+      muh_issizlik_isci: "Employee Unemployment Share",
+    });
+
+    dilBaslat();
+    renderLayout({ activePage: 'muhtasar.html' });
+    dilUygula();
+
+    // ============================================================
+    // YARDIMCILAR
+    // ============================================================
+    const para = n => {
+      if (n == null || isNaN(n)) return '—';
+      return Number(n).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    };
+    const binde = n => (n == null || isNaN(n)) ? '—' : `‰${(n * 1000).toFixed(2).replace('.', ',')}`;
+    const yuvarla2 = n => Math.round((n + Number.EPSILON) * 100) / 100;
+
+    // ============================================================
+    // REFERANS VERİLER (Yedekli: JSON gelmezse bunlarla hesaplar)
+    // ============================================================
+    const REF = {
+      asgariBrutAylik: 33030.0,
+      asgariNetAylik: 28075.5,
+      asgariBrutGunluk: 1101.0,
+      asgariNetGunluk: 935.85,
+      sgkIsci: 0.14,
+      issizlikIsci: 0.01,
+      damgaOran: 0.00759,
+      gvDilimleri: [
+        { ust: 190000, oran: 0.15 },
+        { ust: 400000, oran: 0.20 },
+        { ust: 1500000, oran: 0.27 },
+        { ust: 5300000, oran: 0.35 },
+        { ust: Infinity, oran: 0.40 },
+      ]
+    };
+
+    const LOOKUP = { belge: {}, cikis: {}, eksik: {}, meslek: {} };
+    const KAYNAK_REF = { asgari: 'yedek', sgk: 'yedek', damga: 'yedek', gv: 'yedek' };
+    const HAM_VERI = {};
+
+    // ============================================================
+    // VERİ YÜKLEME
+    // ============================================================
+    const KAYNAK_DOSYALAR = [
+      { key: 'asgari-ucret', path: '/asgari-ucret.json', ad: 'Asgari Ücret' },
+      { key: 'sgk-prim-oranlari', path: '/sgk-prim-oranlari.json', ad: 'SGK Prim Oranları' },
+      { key: 'damga-vergisi', path: '/damga-vergisi.json', ad: 'Damga Vergisi' },
+      { key: 'gelir-vergisi-dilimleri', path: '/gelir-vergisi-dilimleri.json', ad: 'Gelir Vergisi Dilimleri' },
+      { key: 'sgk-belge-turleri', path: '/sgk-belge-turleri.json', ad: 'Belge Türleri' },
+      { key: 'sgk-isten-ayrilis-nedenleri', path: '/sgk-isten-ayrilis-nedenleri.json', ad: 'İşten Çıkış Nedenleri' },
+      { key: 'sgk-eksik-gun-nedenleri', path: '/sgk-eksik-gun-nedenleri.json', ad: 'Eksik Gün Nedenleri' },
+      { key: 'sgk-meslek-kodlari', path: '/sgk-meslek-kodlari.json', ad: 'Meslek Kodları' }
+    ];
+
+    const KAYNAK_DURUM = {};
+
+    async function fetchGuvenli(yol) {
+      try {
+        const r = await apiFetch(yol);
+        if (!r.ok) return null;
+        return await r.json();
+      } catch (e) { return null; }
+    }
+
+    async function referanslariYukle() {
+      const durum = $('durum-alani');
+      durum.classList.remove('hidden');
+      durum.innerHTML = `
+        <div class="bg-win-card border border-win-border rounded-lg p-3 flex items-center gap-3 text-win-100 text-xs">
+          <div class="inline-block w-4 h-4 border-2 border-win-500 border-t-transparent rounded-full animate-spin"></div>
+          <span>${kacis(t('muh_yukleniyor'))}</span>
+        </div>`;
+
+      try {
+        const KATALOG_ENDPOINT = CONFIG?.KATALOG_ENDPOINT || '/katalog.json';
+        const kat = await fetchGuvenli(KATALOG_ENDPOINT);
+        
+        if (kat && kat.servisler) {
+          const getUrl = (kod) => {
+            const s = kat.servisler.find(x => x.kod === kod);
+            if (!s) return null;
+            const k = s.katmanlar?.ham || s.katmanlar?.konsolide || s.katmanlar?.kurallar;
+            return k ? k.url : null;
+          };
+
+          KAYNAK_DOSYALAR.forEach(item => {
+            const apiPath = getUrl(item.key);
+            if (apiPath) item.path = apiPath;
+          });
+        }
+      } catch (err) { console.warn("Katalog okunamadı, statik yollar kullanılacak.", err); }
+
+      const sonuclar = await Promise.all(KAYNAK_DOSYALAR.map(async (k) => {
+        const data = await fetchGuvenli(k.path);
+        return { key: k.key, data };
+      }));
+
+      for (const { key, data } of sonuclar) {
+        KAYNAK_DURUM[key] = { yuklendi: !!data };
+        if (!data) continue;
+        parseEt(key, data);
+      }
+
+      ROWS.forEach((row, idx) => {
+        if (idx === 0 || idx === 2) {
+          row.ucret = row.gun * REF.asgariBrutGunluk;
+        }
+      });
+
+      durum.innerHTML = `
+        <div class="bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-3 flex items-center gap-3 text-emerald-400 text-xs">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>${kacis(t('muh_hazir'))}</span>
+        </div>`;
+      setTimeout(() => { durum.classList.add('hidden'); durum.innerHTML = ''; }, 2500);
+
+      renderRefGrid();
+      renderKaynakListesi();
+      renderTablo(); 
+    }
+
+    function parseEt(key, data) {
+      const kayitlar = data.kayitlar || [];
+
+      if (key === 'asgari-ucret' && Array.isArray(kayitlar)) {
+        if (kayitlar.length) KAYNAK_REF.asgari = 'json';
+        for (const k of kayitlar) {
+          if (k.kod === 'brut_asgari_ucret_aylik' && k.deger != null) REF.asgariBrutAylik = Number(k.deger);
+          if (k.kod === 'net_asgari_ucret_aylik' && k.deger != null) REF.asgariNetAylik = Number(k.deger);
+          if (k.kod === 'brut_asgari_ucret_gunluk' && k.deger != null) REF.asgariBrutGunluk = Number(k.deger);
+          if (k.kod === 'net_asgari_ucret_gunluk' && k.deger != null) REF.asgariNetGunluk = Number(k.deger);
+        }
+      }
+
+      if (key === 'sgk-prim-oranlari' && Array.isArray(kayitlar)) {
+        let sgk = null, iss = null;
+        for (const k of kayitlar) {
+          const ad = tr_lower(k.ad_tr || k.ad || '');
+          const ham = Number(k.oran ?? k.deger ?? 0);
+          if (!ham) continue;
+          const oran = ham >= 1 ? ham / 100 : ham;
+          if (ad.includes('işçi') && ad.includes('işsizlik')) iss = oran;
+          else if (ad.includes('işçi') && (ad.includes('malullük') || ad.includes('yaşlılık'))) sgk = oran;
+        }
+        if (sgk != null && iss != null && sgk > 0 && iss > 0 && sgk + iss < 0.5) {
+          REF.sgkIsci = sgk; REF.issizlikIsci = iss; KAYNAK_REF.sgk = 'json';
+        }
+      }
+
+      if (key === 'damga-vergisi' && Array.isArray(kayitlar)) {
+        const k = kayitlar.find(x => x.kod === 'DV-IV-1-b')
+               || kayitlar.find(x => { const ad = tr_lower(x.ad_tr || ''); return ad.includes('maaş') || ad.includes('ücret'); });
+        if (k) {
+          if (k.oran_binde != null) { REF.damgaOran = Number(k.oran_binde) / 1000; KAYNAK_REF.damga = 'json'; }
+          else if (k.oran != null) { REF.damgaOran = Number(k.oran) / 100; KAYNAK_REF.damga = 'json'; }
+        }
+      }
+
+      if (key === 'gelir-vergisi-dilimleri' && Array.isArray(kayitlar) && kayitlar.length) {
+        const d = kayitlar
+          .filter(k => (k.kategori ?? 'ucret') === 'ucret')
+          .map(k => {
+            const ham = Number(k.oran ?? k.rate ?? 0);
+            const ustHam = k.matrah_ust_sinir_tl ?? k.ust ?? k.limit ?? k.ust_limit;
+            return {
+              ust: (ustHam == null || ustHam === '') ? Infinity : Number(ustHam),
+              oran: ham > 1 ? ham / 100 : ham
+            };
+          })
+          .filter(x => x.oran > 0)
+          .sort((a, b) => a.ust - b.ust);
+        if (d.length) { d[d.length - 1].ust = Infinity; REF.gvDilimleri = d; KAYNAK_REF.gv = 'json'; }
+      }
+
+      if (key === 'sgk-belge-turleri') { HAM_VERI.belge = data; parseLookup('belge', data); }
+      if (key === 'sgk-isten-ayrilis-nedenleri') { HAM_VERI.cikis = data; parseLookup('cikis', data); }
+      if (key === 'sgk-eksik-gun-nedenleri') { HAM_VERI.eksik = data; parseLookup('eksik', data); }
+      if (key === 'sgk-meslek-kodlari') { HAM_VERI.meslek = data; parseLookup('meslek', data); }
+    }
+
+    function parseLookup(target, data) {
+      const kayitlar = data.kayitlar || [];
+      const map = {};
+      if (Array.isArray(kayitlar)) {
+        for (const k of kayitlar) {
+          const kod = String(k.kod ?? k.deger ?? '').trim();
+          if (!kod) continue;
+          map[kod] = dil() === 'en' ? (k.ad_en || k.ad_tr || kod) : (k.ad_tr || k.ad_en || kod);
+        }
+        if (Object.keys(map).length) LOOKUP[target] = map;
+      }
+    }
+
+    // ============================================================
+    // EKRANA ÇİZİM
+    // ============================================================
+    function kaynakEtiketi(yol) {
+      const k = yol.includes('asgari') ? KAYNAK_REF.asgari : yol.includes('damga') ? KAYNAK_REF.damga : yol.includes('sgk') ? KAYNAK_REF.sgk : null;
+      return k === 'json' ? `${yol} · JSON ✓` : `${yol} · yedek değer`;
+    }
+
+    function renderRefGrid() {
+      const grid = $('ref-grid');
+      if (!grid) return;
+
+      const items = [
+        { etiket: t('muh_asgari_aylik_brut'), deger: REF.asgariBrutAylik != null ? `${para(REF.asgariBrutAylik)} ₺` : 'Yüklenemedi', kaynak: '/asgari-ucret.json', ikon: '💵', renk: 'text-emerald-400' },
+        { etiket: t('muh_asgari_aylik_net'),  deger: REF.asgariNetAylik != null ? `${para(REF.asgariNetAylik)} ₺` : 'Yüklenemedi',  kaynak: '/asgari-ucret.json', ikon: '💰', renk: 'text-win-300' },
+        { etiket: t('muh_asgari_gunluk_brut'), deger: REF.asgariBrutGunluk != null ? `${para(REF.asgariBrutGunluk)} ₺` : 'Yüklenemedi', kaynak: '/asgari-ucret.json', ikon: '📅', renk: 'text-emerald-400' },
+        { etiket: t('muh_asgari_gunluk_net'),  deger: REF.asgariNetGunluk != null ? `${para(REF.asgariNetGunluk)} ₺` : 'Yüklenemedi',  kaynak: '/asgari-ucret.json', ikon: '📆', renk: 'text-win-300' },
+        { etiket: t('muh_damga'),              deger: REF.damgaOran != null ? binde(REF.damgaOran) : 'Yüklenemedi',  kaynak: '/damga-vergisi.json', ikon: '📑', renk: 'text-amber-400' },
+        { etiket: t('muh_sgk_isci'),           deger: `%${(REF.sgkIsci * 100).toFixed(2).replace('.', ',')}`,       kaynak: '/sgk-prim-oranlari.json', ikon: '🏛️', renk: 'text-win-300' },
+        { etiket: t('muh_issizlik_isci'),      deger: `%${(REF.issizlikIsci * 100).toFixed(2).replace('.', ',')}`,  kaynak: '/sgk-prim-oranlari.json', ikon: '🛡️', renk: 'text-win-300' },
+      ];
+
+      grid.innerHTML = items.map(it => `
+        <div class="bg-win-card border border-win-border rounded-lg p-3">
+          <div class="flex items-center gap-1.5 mb-1">
+            <span class="text-sm">${it.ikon}</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 truncate" title="${kacis(it.etiket)}">${kacis(it.etiket)}</span>
+          </div>
+          <div class="text-base font-bold ${it.renk} font-mono">${kacis(it.deger)}</div>
+          <div class="text-[9px] text-slate-600 mt-1 truncate font-mono">${kacis(kaynakEtiketi(it.kaynak))}</div>
+        </div>`).join('');
+    }
+
+    function renderKaynakListesi() {
+      const el = $('kaynak-listesi');
+      if (!el) return;
+      el.innerHTML = KAYNAK_DOSYALAR.map(k => {
+        const ok = KAYNAK_DURUM[k.key]?.yuklendi;
+        return `
+          <div class="flex items-center gap-2 bg-win-base border border-win-border rounded-lg px-3 py-2">
+            <span class="w-2 h-2 rounded-full ${ok ? 'bg-emerald-400' : 'bg-amber-400'} flex-none"></span>
+            <code class="text-[10px] font-mono text-win-100 truncate flex-1" title="${k.path}">${k.path}</code>
+            <span class="text-[10px] font-semibold ${ok ? 'text-emerald-400' : 'text-amber-400'} whitespace-nowrap">
+              ${ok ? '✓' : '!'}
+            </span>
+          </div>`;
+      }).join('');
+    }
+
+    // ============================================================
+    // TABLO HESAPLAMALARI VE ÇİZİMİ
+    // ============================================================
+    
+    // 1. ve 3. Satır Asgari Ücretli, 2. Satır 70.000 TL
+    const ROWS = [
+      { belge: '01', tc: '11111111111', ad: 'aaaaaa', soyad: 'bbbbbb', gun: 30, ucret: 0, cikis: '', eksik: '', meslek: '2512.01' }, 
+      { belge: '01', tc: '22222222222', ad: 'cccccc', soyad: 'dddddd', gun: 30, ucret: 70000, cikis: '', eksik: '', meslek: '2411.01' }, 
+      { belge: '01', tc: '33333333333', ad: 'eeeeee', soyad: 'ffffff', gun: 30, ucret: 0, cikis: '', eksik: '', meslek: '2512.01' } 
+    ];
+
+    function gelirVergisiHesapla(matrah) {
+      if (!matrah || matrah <= 0 || !REF.gvDilimleri.length) return 0;
+      let vergi = 0, kalan = matrah, oncekiUst = 0;
+      for (const d of REF.gvDilimleri) {
+        if (kalan <= 0) break;
+        const dilimUst = d.ust === Infinity ? Number.MAX_SAFE_INTEGER : d.ust;
+        const genislik = Math.max(0, dilimUst - oncekiUst);
+        const buDilim = Math.min(kalan, genislik);
+        vergi += buDilim * d.oran;
+        kalan -= buDilim;
+        oncekiUst = dilimUst;
+      }
+      return vergi;
+    }
+
+    const AY_NO = 10; // Dönem: 2026 / 10
+
+    function hesapla(row) {
+      const brut = Number(row.ucret) || 0;
+      const gun = Number(row.gun) || 0;
+      const isciKesintiOrani = (REF.sgkIsci || 0.14) + (REF.issizlikIsci || 0.01);
+
+      // Aylık gelir vergisi matrahı
+      const aylikGvMatrah = Math.max(0, brut * (1 - isciKesintiOrani));
+
+      // Kümülatif matrah (1. aydan 10. aya kadar)
+      const kumulatifMatrah = aylikGvMatrah * AY_NO;
+      const oncekiKumulatifMatrah = aylikGvMatrah * (AY_NO - 1);
+
+      // Bu ayın gelir vergisi = (10. ay kümülatif vergisi) - (9. ay kümülatif vergisi)
+      const gvTam = gelirVergisiHesapla(kumulatifMatrah) - gelirVergisiHesapla(oncekiKumulatifMatrah);
+
+      // Asgari ücret gelir vergisi istisnası
+      const istisnaMatrah = gun * (REF.asgariBrutGunluk || 1101);
+      const asgariAylikGvMatrah = Math.max(0, istisnaMatrah * (1 - isciKesintiOrani));
+      const gvIstisna = gelirVergisiHesapla(asgariAylikGvMatrah * AY_NO)
+                      - gelirVergisiHesapla(asgariAylikGvMatrah * (AY_NO - 1));
+
+      const gvKesinti = yuvarla2(Math.max(0, gvTam - gvIstisna));
+
+      // Damga vergisi
+      const dvMatrah = Math.max(0, brut - istisnaMatrah);
+      const dvKesinti = yuvarla2(dvMatrah * (REF.damgaOran || 0.00759));
+
+      return { 
+        brut, 
+        brut10Aylik: yuvarla2(brut * AY_NO), 
+        aylikGvMatrah: yuvarla2(aylikGvMatrah), // Tabloda bu ayın matrahını göstereceğiz
+        kumulatifMatrah: yuvarla2(kumulatifMatrah), 
+        gvKesinti, 
+        dvKesinti 
+      };
+    }
+
+    function renderTablo() {
+      const tbody = $('muh-tbody');
+      const tfoot = $('muh-tfoot');
+      if (!tbody) return;
+
+      const opt = (map, selected) => Object.entries(map).map(([val, text]) => {
+        const isSel = selected === val;
+        const label = isSel ? val : `${val} - ${text}`;
+        return `<option value="${val}" ${isSel ? 'selected' : ''} title="${kacis(text)}">${kacis(label)}</option>`;
+      }).join('');
+
+      let toplamBrut = 0;
+      let toplamBrut10 = 0;
+      let toplamAylikGvMatrah = 0;
+      let toplamGv = 0;
+      let toplamDv = 0;
+
+      const tag = (...adlar) => adlar.map(txt => `<div class="text-[8px] text-slate-500 font-mono mt-0.5 break-all leading-tight whitespace-normal" title="${txt}">${txt}</div>`).join('');
+
+      tbody.innerHTML = ROWS.map((row, i) => {
+        const h = hesapla(row);
+        toplamBrut += h.brut;
+        toplamBrut10 += h.brut10Aylik;
+        toplamAylikGvMatrah += h.aylikGvMatrah;
+        toplamGv += h.gvKesinti;
+        toplamDv += h.dvKesinti;
+
+        const inputCls = "w-full bg-win-base border border-win-border rounded px-2 py-1.5 text-xs text-white focus:outline-none focus:border-win-500 transition";
+        const selectCls = "w-full bg-win-base border border-win-border rounded px-2 py-1.5 text-xs text-white focus:outline-none focus:border-win-500 transition cursor-pointer";
+
+        return `
+          <tr class="hover:bg-win-hover/20 transition whitespace-nowrap">
+            <!-- Belge Türü -->
+            <td class="px-2 py-2 align-top">
+              <select class="${selectCls} kod-select" data-idx="${i}" data-field="belge" data-map="belge">
+                <option value="">${kacis(t('muh_sec'))}</option>
+                ${opt(LOOKUP.belge, row.belge)}
+              </select>
+              ${tag('/sgk-belge-turleri.json')}
+            </td>
+            <!-- TC -->
+            <td class="px-2 py-2 align-top">
+              <input type="text" class="${inputCls}" placeholder="${kacis(t('muh_placeholder_tc'))}" value="${kacis(row.tc)}" data-idx="${i}" data-field="tc" maxlength="11">
+            </td>
+            <!-- Ad -->
+            <td class="px-2 py-2 align-top">
+              <input type="text" class="${inputCls}" placeholder="${kacis(t('muh_placeholder_ad'))}" value="${kacis(row.ad)}" data-idx="${i}" data-field="ad">
+            </td>
+            <!-- Soyad -->
+            <td class="px-2 py-2 align-top">
+              <input type="text" class="${inputCls}" placeholder="${kacis(t('muh_placeholder_soyad'))}" value="${kacis(row.soyad)}" data-idx="${i}" data-field="soyad">
+            </td>
+            <!-- Gün -->
+            <td class="px-2 py-2 align-top">
+              <input type="number" class="${inputCls} text-center gun-input" value="${row.gun}" min="0" max="30" data-idx="${i}" data-field="gun">
+            </td>
+            <!-- Ücret -->
+            <td class="px-2 py-2 align-top">
+              <input type="text" inputmode="decimal" class="${inputCls} text-right font-mono ucret-input" value="${row.ucret > 0 ? para(row.ucret) : ''}" data-idx="${i}" data-field="ucret">
+              ${(i === 0 || i === 2) ? tag('/asgari-ucret.json') : ''}
+            </td>
+            <!-- İşten Çıkış -->
+            <td class="px-2 py-2 align-top">
+              <select class="${selectCls} kod-select" data-idx="${i}" data-field="cikis" data-map="cikis">
+                <option value="">${kacis(t('muh_sec'))}</option>
+                ${opt(LOOKUP.cikis, row.cikis)}
+              </select>
+              ${tag('/sgk-isten-ayrilis-nedenleri.json')}
+            </td>
+            <!-- Eksik Gün -->
+            <td class="px-2 py-2 align-top">
+              <select class="${selectCls} kod-select" data-idx="${i}" data-field="eksik" data-map="eksik">
+                <option value="">${kacis(t('muh_sec'))}</option>
+                ${opt(LOOKUP.eksik, row.eksik)}
+              </select>
+              ${tag('/sgk-eksik-gun-nedenleri.json')}
+            </td>
+            <!-- Meslek Kodu -->
+            <td class="px-2 py-2 align-top">
+              <select class="${selectCls} kod-select" data-idx="${i}" data-field="meslek" data-map="meslek">
+                <option value="">${kacis(t('muh_sec'))}</option>
+                ${opt(LOOKUP.meslek, row.meslek)}
+              </select>
+              ${tag('/sgk-meslek-kodlari.json')}
+            </td>
+            <!-- 10 Aylık Brüt Ücret -->
+            <td class="px-2 py-2 align-top text-right font-mono text-xs text-slate-300 bg-win-dark/20">
+              <div class="py-1.5">${para(h.brut10Aylik)}</div>
+            </td>
+            <!-- Bu Ayki Gelir Vergisi Matrahı -->
+            <td class="px-2 py-2 align-top text-right font-mono text-xs text-win-300 bg-win-dark/20">
+              <div class="py-1.5">${para(h.aylikGvMatrah)}</div>
+              ${tag('/sgk-prim-oranlari.json')}
+            </td>
+            <td class="px-2 py-2 align-top text-right font-mono text-xs text-amber-400 font-bold bg-win-dark/20">
+              <div class="py-1.5">${para(h.gvKesinti)}</div>
+              ${tag('/gelir-vergisi-dilimleri.json', '/asgari-ucret.json')}
+            </td>
+            <td class="px-2 py-2 align-top text-right font-mono text-xs text-amber-400 bg-win-dark/20">
+              <div class="py-1.5">${para(h.dvKesinti)}</div>
+              ${tag('/damga-vergisi.json', '/asgari-ucret.json')}
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      tfoot.innerHTML = `
+        <tr class="whitespace-nowrap">
+          <td colspan="5" class="px-3 py-3 text-right uppercase tracking-wider text-xs text-slate-300">
+            ${kacis(t('muh_toplam'))}
+          </td>
+          <td class="px-2 py-3 text-right font-mono text-sm text-white">${para(toplamBrut)}</td>
+          <td colspan="3" class="px-2 py-3"></td>
+          <td class="px-2 py-3 text-right font-mono text-sm text-slate-300">${para(toplamBrut10)}</td>
+          <td class="px-2 py-3 text-right font-mono text-sm text-win-300">${para(toplamAylikGvMatrah)}</td>
+          <td class="px-2 py-3 text-right font-mono text-sm text-amber-400">${para(toplamGv)}</td>
+          <td class="px-2 py-3 text-right font-mono text-sm text-amber-400">${para(toplamDv)}</td>
+        </tr>
+      `;
+
+      tbody.querySelectorAll('input, select').forEach(el => {
+        const eventType = el.tagName === 'SELECT' ? 'change' : 'input';
+        
+        el.addEventListener(eventType, (e) => {
+          const idx = Number(e.target.dataset.idx);
+          const field = e.target.dataset.field;
+          let val = e.target.value;
+
+          if (field === 'gun') {
+            const gun = Number(val) || 0;
+            ROWS[idx].gun = gun;
+            if (idx === 0 || idx === 2) {
+              const hesaplananUcret = (REF.asgariBrutGunluk != null) ? gun * REF.asgariBrutGunluk : 0;
+              ROWS[idx].ucret = hesaplananUcret;
+              const ucretInput = e.target.closest('tr').querySelector('input[data-field="ucret"]');
+              if (ucretInput) ucretInput.value = para(hesaplananUcret);
+            }
+          } 
+          else if (field === 'ucret') {
+            const temizVal = String(val).replace(/\./g, '').replace(',', '.');
+            ROWS[idx].ucret = parseFloat(temizVal) || 0;
+          } 
+          else {
+            ROWS[idx][field] = val;
+          }
+
+          if (e.target.tagName === 'SELECT') {
+            const mapName = e.target.dataset.map;
+            const map = LOOKUP[mapName] || {};
+            Array.from(e.target.options).forEach(opt => {
+              if (!opt.value) return;
+              const text = map[opt.value] || '';
+              if (opt.value === val) {
+                opt.textContent = opt.value; 
+              } else {
+                opt.textContent = `${opt.value} - ${text}`;
+              }
+            });
+          }
+
+          hesaplariGuncelle(tbody, tfoot, idx, e.target.closest('tr'));
+        });
+
+        if (el.dataset.field === 'ucret') {
+          el.addEventListener('focus', (e) => {
+            const idx = Number(e.target.dataset.idx);
+            e.target.value = ROWS[idx].ucret > 0 ? ROWS[idx].ucret : '';
+          });
+          el.addEventListener('blur', (e) => {
+            const idx = Number(e.target.dataset.idx);
+            e.target.value = ROWS[idx].ucret > 0 ? para(ROWS[idx].ucret) : '';
+          });
+        }
+      });
+    }
+
+    function hesaplariGuncelle(tbody, tfoot, idx, tr) {
+      const h = hesapla(ROWS[idx]);
+      const tds = tr.querySelectorAll('td');
+      
+      tds[9].querySelector('div').textContent = para(h.brut10Aylik);
+      tds[10].querySelector('div').textContent = para(h.aylikGvMatrah);
+      tds[11].querySelector('div').textContent = para(h.gvKesinti);
+      tds[12].querySelector('div').textContent = para(h.dvKesinti);
+
+      let tBrut = 0, tBrut10 = 0, tAylikGvMatrah = 0, tGv = 0, tDv = 0;
+      ROWS.forEach((r) => {
+        const ch = hesapla(r);
+        tBrut += ch.brut;
+        tBrut10 += ch.brut10Aylik;
+        tAylikGvMatrah += ch.aylikGvMatrah;
+        tGv += ch.gvKesinti;
+        tDv += ch.dvKesinti;
+      });
+      
+      const tfootTds = tfoot.querySelectorAll('td');
+      tfootTds[1].textContent = para(tBrut);
+      tfootTds[3].textContent = para(tBrut10);
+      tfootTds[4].textContent = para(tAylikGvMatrah);
+      tfootTds[5].textContent = para(tGv);
+      tfootTds[6].textContent = para(tDv);
+    }
+
+    document.addEventListener('pdaas:dil', () => {
+      if (HAM_VERI.belge) parseLookup('belge', HAM_VERI.belge);
+      if (HAM_VERI.cikis) parseLookup('cikis', HAM_VERI.cikis);
+      if (HAM_VERI.eksik) parseLookup('eksik', HAM_VERI.eksik);
+      if (HAM_VERI.meslek) parseLookup('meslek', HAM_VERI.meslek);
+
+      renderRefGrid();
+      renderKaynakListesi();
+      renderTablo();
+    });
+
+    // Başlat
+    referanslariYukle();
+  </script>
+</body>
+
+</html>
