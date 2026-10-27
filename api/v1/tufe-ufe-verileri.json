@@ -3,28 +3,67 @@
     "schema_surumu": "1.0.0",
     "servis": {
       "kod": "tufe-ufe-verileri",
-      "ad": { "tr": "TÜFE ve Yİ-ÜFE Verileri", "en": "CPI and D-PPI Data" }
+      "ad": {
+        "tr": "TÜFE ve Yİ-ÜFE Verileri",
+        "en": "CPI and D-PPI Data"
+      }
     },
     "katman": "ham",
     "yapi": {
       "tip": "liste",
       "kod_sistemi": "tuik",
-      "kapsam": ["calisma"]
+      "kapsam": [
+        "ekonomi",
+        "finans"
+      ]
     },
-    "surum": "2026.01.01",
+    "surum": "2026.01.03",
     "guncelleme": "2026-01-03",
     "yayin_durumu": "yayinda",
-    "zaman": { "bazli": true, "baslangic": "2025-12-01", "bitis": "2025-12-31" },
+    "zaman": {
+      "bazli": true,
+      "baslangic": "2025-12-01",
+      "bitis": "2026-12-31"
+    },
     "yayinci": {
       "kod": "tuik",
-      "ad": { "tr": "Türkiye İstatistik Kurumu" },
-      "kurumlar": ["tuik"]
+      "ad": {
+        "tr": "Türkiye İstatistik Kurumu",
+        "en": "Turkish Statistical Institute"
+      },
+      "birim": {
+        "tr": "Fiyat İstatistikleri Daire Başkanlığı",
+        "en": "Price Statistics Department"
+      },
+      "kurumlar": [
+        "tuik"
+      ]
     },
     "kaynaklar": [
-      { "kod": "tuik-tufe-aralik-2025", "tur": "istatistik",
-        "erisim_tarihi": "2026-01-03" }
+      {
+        "kod": "tuik-tufe-aralik-2025",
+        "ad": {
+          "tr": "TÜİK Tüketici Fiyat Endeksi ve Yurt İçi Üretici Fiyat Endeksi Veri Tabanı (MEDAS)",
+          "en": "TurkStat Consumer Price Index and Domestic Producer Price Index Database"
+        },
+        "tur": "istatistik",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-01-03"
+      }
     ],
-    "mevzuat_ref": []
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      }
+    ]
   },
   "kayitlar": [
     {

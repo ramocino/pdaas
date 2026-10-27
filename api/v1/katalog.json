@@ -1,6 +1,6 @@
 {
   "schema_surumu": "1.0.0",
-  "guncelleme": "2026-10-21",
+  "guncelleme": "2026-10-27",
   "servisler": [
     {
       "kod": "asgari-ucret",
@@ -20,6 +20,23 @@
       }
     },
     {
+      "kod": "cpc-kdv",
+      "ad": {
+        "tr": "CPC KDV Eşleşmesi",
+        "en": "CPC VAT Mapping"
+      },
+      "tip": "liste",
+      "kod_sistemi": "cpc",
+      "katmanlar": {
+        "konsolide": {
+          "son": "2026.10.27",
+          "url": "/cpc-kdv/index.json",
+          "surumler_url": "/surumler/cpc-kdv/",
+          "checksum": "sha256:20ab9ef874dfff537b6720078edbb8207c8bf032811b34d1a2c2ab681d29a27d"
+        }
+      }
+    },
+    {
       "kod": "cpc-kodlari",
       "ad": {
         "tr": "CPC Kodları",
@@ -30,9 +47,60 @@
       "katmanlar": {
         "ham": {
           "son": "2026.01.01",
-          "url": "/cpc-kodlari.json",
+          "url": "/cpc-kodlari/index.json",
           "surumler_url": "/surumler/cpc-kodlari/",
-          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+          "checksum": "sha256:415482851f06e08f5b9f6d598822c498190f693d4fdcede148992b168655d625"
+        }
+      }
+    },
+    {
+      "kod": "cpc-otv",
+      "ad": {
+        "tr": "CPC ÖTV Eşleşmesi",
+        "en": "CPC SCT Mapping"
+      },
+      "tip": "liste",
+      "kod_sistemi": "cpc",
+      "katmanlar": {
+        "konsolide": {
+          "son": "2026.10.27",
+          "url": "/cpc-otv/index.json",
+          "surumler_url": "/surumler/cpc-otv/",
+          "checksum": "sha256:20ab9ef874dfff537b6720078edbb8207c8bf032811b34d1a2c2ab681d29a27d"
+        }
+      }
+    },
+    {
+      "kod": "cpc-tam",
+      "ad": {
+        "tr": "CPC Tüm Vergiler",
+        "en": "CPC All Taxes"
+      },
+      "tip": "liste",
+      "kod_sistemi": "cpc",
+      "katmanlar": {
+        "konsolide": {
+          "son": "2026.10.27",
+          "url": "/cpc-tam/index.json",
+          "surumler_url": "/surumler/cpc-tam/",
+          "checksum": "sha256:20ab9ef874dfff537b6720078edbb8207c8bf032811b34d1a2c2ab681d29a27d"
+        }
+      }
+    },
+    {
+      "kod": "cpc-tevkifat",
+      "ad": {
+        "tr": "CPC Tevkifat Eşleşmesi",
+        "en": "CPC Withholding Mapping"
+      },
+      "tip": "liste",
+      "kod_sistemi": "cpc",
+      "katmanlar": {
+        "konsolide": {
+          "son": "2026.10.27",
+          "url": "/cpc-tevkifat/index.json",
+          "surumler_url": "/surumler/cpc-tevkifat/",
+          "checksum": "sha256:20ab9ef874dfff537b6720078edbb8207c8bf032811b34d1a2c2ab681d29a27d"
         }
       }
     },
@@ -97,10 +165,10 @@
       "kod_sistemi": "gtip",
       "katmanlar": {
         "konsolide": {
-          "son": "2026.10.21",
-          "url": "/gtip-kdv.json",
+          "son": "2026.10.27",
+          "url": "/gtip-kdv/index.json",
           "surumler_url": "/surumler/gtip-kdv/",
-          "checksum": "sha256:5088ee20367c6742be51765151408f3da52ea332c979ad92e9cc942174b6db12"
+          "checksum": "sha256:88242be00ba9bb0dce8fa6184582b5a9108f4cad547123e8dfe0135fefb49d92"
         }
       }
     },
@@ -115,9 +183,9 @@
       "katmanlar": {
         "ham": {
           "son": "2026.01.01",
-          "url": "/gtip-kodlari.json",
+          "url": "/gtip-kodlari/index.json",
           "surumler_url": "/surumler/gtip-kodlari/",
-          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+          "checksum": "sha256:1299fccc5e840e4b2290c9ac3272fd3fd74b30293669f4a5e0a6d454cb8db7df"
         }
       }
     },
@@ -131,10 +199,10 @@
       "kod_sistemi": "gtip",
       "katmanlar": {
         "konsolide": {
-          "son": "2026.10.21",
-          "url": "/gtip-nace.json",
+          "son": "2026.10.27",
+          "url": "/gtip-nace/index.json",
           "surumler_url": "/surumler/gtip-nace/",
-          "checksum": "sha256:e62b5c94acff64a0fadfb631777ee111c938758e9c461e90db2c4eb8ed07532f"
+          "checksum": "sha256:88242be00ba9bb0dce8fa6184582b5a9108f4cad547123e8dfe0135fefb49d92"
         }
       }
     },
@@ -148,10 +216,10 @@
       "kod_sistemi": "gtip",
       "katmanlar": {
         "konsolide": {
-          "son": "2026.10.21",
-          "url": "/gtip-otv.json",
+          "son": "2026.10.27",
+          "url": "/gtip-otv/index.json",
           "surumler_url": "/surumler/gtip-otv/",
-          "checksum": "sha256:aed8d90d06cb2a51ff430911e870cc88dd2bfba910d59f35ed448a8d815b5312"
+          "checksum": "sha256:88242be00ba9bb0dce8fa6184582b5a9108f4cad547123e8dfe0135fefb49d92"
         }
       }
     },
@@ -165,10 +233,10 @@
       "kod_sistemi": "gtip",
       "katmanlar": {
         "konsolide": {
-          "son": "2026.10.21",
-          "url": "/gtip-randiman.json",
+          "son": "2026.10.27",
+          "url": "/gtip-randiman/index.json",
           "surumler_url": "/surumler/gtip-randiman/",
-          "checksum": "sha256:ad1d3e08a9a2c2e1f1f2820a489281b85cfb962a53c28d550dc692c1ce9a54cd"
+          "checksum": "sha256:88242be00ba9bb0dce8fa6184582b5a9108f4cad547123e8dfe0135fefb49d92"
         }
       }
     },
@@ -182,10 +250,10 @@
       "kod_sistemi": "gtip",
       "katmanlar": {
         "konsolide": {
-          "son": "2026.10.21",
-          "url": "/gtip-tam.json",
+          "son": "2026.10.27",
+          "url": "/gtip-tam/index.json",
           "surumler_url": "/surumler/gtip-tam/",
-          "checksum": "sha256:ee5c9e2febe1f839455fa4b6dc6d43a7d0ec09e00a0c602808cb13aec951f6a2"
+          "checksum": "sha256:88242be00ba9bb0dce8fa6184582b5a9108f4cad547123e8dfe0135fefb49d92"
         }
       }
     },
@@ -199,10 +267,10 @@
       "kod_sistemi": "gtip",
       "katmanlar": {
         "konsolide": {
-          "son": "2026.10.21",
-          "url": "/gtip-tevkifat.json",
+          "son": "2026.10.27",
+          "url": "/gtip-tevkifat/index.json",
           "surumler_url": "/surumler/gtip-tevkifat/",
-          "checksum": "sha256:42d55dd350bee9537cec9df5e14489c1b39786cef22631b3ea77cd5983cff001"
+          "checksum": "sha256:88242be00ba9bb0dce8fa6184582b5a9108f4cad547123e8dfe0135fefb49d92"
         }
       }
     },
@@ -217,9 +285,26 @@
       "katmanlar": {
         "ham": {
           "son": "2026.01.01",
-          "url": "/isco-kodlari.json",
+          "url": "/isco-kodlari/index.json",
           "surumler_url": "/surumler/isco-kodlari/",
-          "checksum": "sha256:7c6cdca0d5590ec41600a99eee578cad647fa80a43be76d831d1353d61dbc932"
+          "checksum": "sha256:4af6921c327ca7b8d980ad36936abcc5eaeadcea1b3ba5c446c8c83e91653ea7"
+        }
+      }
+    },
+    {
+      "kod": "isco-tam",
+      "ad": {
+        "tr": "ISCO Tüm Belgeler",
+        "en": "ISCO All Documents"
+      },
+      "tip": "liste",
+      "kod_sistemi": "isco",
+      "katmanlar": {
+        "konsolide": {
+          "son": "2026.10.27",
+          "url": "/isco-tam/index.json",
+          "surumler_url": "/surumler/isco-tam/",
+          "checksum": "sha256:f18ca190ffc67edcab649019527fc7fce6116a99ef518dc7596054d87f0702c6"
         }
       }
     },
@@ -247,13 +332,13 @@
         "en": "VAT Mapping Rules"
       },
       "tip": "kural-seti",
-      "kod_sistemi": "diger",
+      "kod_sistemi": "gib",
       "katmanlar": {
         "kurallar": {
-          "son": "2026.10.21",
+          "son": "2026.10.01",
           "url": "/kdv-kurallar.json",
           "surumler_url": "/surumler/kdv-kurallar/",
-          "checksum": "sha256:8fa973d0cb2c4cf8896c1ff4ec327b241e54f53223bc0fbd0d2bfd3f000e65a6"
+          "checksum": "sha256:9803a413fc7d443bbc42583a515e696b8086c0b1065d2bc7b3b022c1f68f11bf"
         }
       }
     },
@@ -267,7 +352,7 @@
       "kod_sistemi": "gib",
       "katmanlar": {
         "ham": {
-          "son": "2026.10.21",
+          "son": "2026.01.01",
           "url": "/kdv-oranlari.json",
           "surumler_url": "/surumler/kdv-oranlari/",
           "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
@@ -319,9 +404,9 @@
       "katmanlar": {
         "ham": {
           "son": "2026.01.01",
-          "url": "/nace-kodlari.json",
+          "url": "/nace-kodlari/index.json",
           "surumler_url": "/surumler/nace-kodlari/",
-          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+          "checksum": "sha256:7c9e3227d84d795a8863ead26b46e75cc2000f3af90d025457628489723d4cbd"
         }
       }
     },
@@ -332,13 +417,30 @@
         "en": "NACE Mapping Rules"
       },
       "tip": "kural-seti",
-      "kod_sistemi": "diger",
+      "kod_sistemi": "tuik",
       "katmanlar": {
         "kurallar": {
-          "son": "2026.10.21",
+          "son": "2026.10.01",
           "url": "/nace-kurallar.json",
           "surumler_url": "/surumler/nace-kurallar/",
-          "checksum": "sha256:d768546b577f82717267bdd67c7bd47c7c3df5b410ec2856c08bee3419c93131"
+          "checksum": "sha256:d782b74e0cffb461b3d9aaca1d699c04e719c6c684760b342f032833975ebdac"
+        }
+      }
+    },
+    {
+      "kod": "nace-tam",
+      "ad": {
+        "tr": "NACE Tüm Belgeler",
+        "en": "NACE All Documents"
+      },
+      "tip": "liste",
+      "kod_sistemi": "nace",
+      "katmanlar": {
+        "konsolide": {
+          "son": "2026.10.27",
+          "url": "/nace-tam/index.json",
+          "surumler_url": "/surumler/nace-tam/",
+          "checksum": "sha256:8bb1cd185e51eb35d6346b4e1aa7d4f48136095f4f4055e14c127b746757b870"
         }
       }
     },
@@ -349,13 +451,13 @@
         "en": "SCT Mapping Rules"
       },
       "tip": "kural-seti",
-      "kod_sistemi": "diger",
+      "kod_sistemi": "gib",
       "katmanlar": {
         "kurallar": {
-          "son": "2026.10.21",
+          "son": "2026.10.01",
           "url": "/otv-kurallar.json",
           "surumler_url": "/surumler/otv-kurallar/",
-          "checksum": "sha256:eb0e2afff89a637cff62d16d61058dff00e538602dc192c54fdafdbce68fbf04"
+          "checksum": "sha256:7807a7aa19fd178591d12966c65e538bc46a5131664ec67144c772671fb282e3"
         }
       }
     },
@@ -369,7 +471,7 @@
       "kod_sistemi": "gib",
       "katmanlar": {
         "ham": {
-          "son": "2026.10.21",
+          "son": "2026.01.01",
           "url": "/otv-oranlari.json",
           "surumler_url": "/surumler/otv-oranlari/",
           "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
@@ -400,13 +502,13 @@
         "en": "Yield Mapping Rules"
       },
       "tip": "kural-seti",
-      "kod_sistemi": "diger",
+      "kod_sistemi": "gib",
       "katmanlar": {
         "kurallar": {
-          "son": "2026.01.01",
+          "son": "2026.10.01",
           "url": "/randiman-kurallar.json",
           "surumler_url": "/surumler/randiman-kurallar/",
-          "checksum": "sha256:565824e5e6f70d796edc33a3c1789096215d3ec2515c250994273b4b81ab3459"
+          "checksum": "sha256:46204691446d67f8b06527ae48f65372a9725bc2c08fb2325ee0b21967509f66"
         }
       }
     },
@@ -423,7 +525,7 @@
           "son": "2026.01.01",
           "url": "/sgk-aylik-gun-sayisi-kurallari.json",
           "surumler_url": "/surumler/sgk-aylik-gun-sayisi-kurallari/",
-          "checksum": "sha256:b385f9328e1866110ac5ead1481b52c3f5baff14fab2a87493b2608ef459f8e0"
+          "checksum": "sha256:29852c78ca9632ee8045922e0c0a96235c39c8c30825515e16400832bf684630"
         }
       }
     },
@@ -590,7 +692,7 @@
       "kod_sistemi": "sgk",
       "katmanlar": {
         "ham": {
-          "son": "2026.01.01",
+          "son": "2026.01.05",
           "url": "/sgk-tavani.json",
           "surumler_url": "/surumler/sgk-tavani/",
           "checksum": "sha256:740171024269331e7399badcd31ef7212dcd695286b3ff8a8acd77ba64b5159a"
@@ -621,13 +723,13 @@
         "en": "VAT Withholding Mapping Rules"
       },
       "tip": "kural-seti",
-      "kod_sistemi": "diger",
+      "kod_sistemi": "gib",
       "katmanlar": {
         "kurallar": {
-          "son": "2026.01.02",
+          "son": "2026.10.01",
           "url": "/tevkifat-kurallar.json",
           "surumler_url": "/surumler/tevkifat-kurallar/",
-          "checksum": "sha256:f91bc039e331700e81d86e71e5ab41b368a44afe89d2fed8ef2a69211da3fe0c"
+          "checksum": "sha256:16b9f970316e4827f304400742638948f30ff6a61257b9b86cef2dfc7229f869"
         }
       }
     },
@@ -658,7 +760,7 @@
       "kod_sistemi": "tuik",
       "katmanlar": {
         "ham": {
-          "son": "2026.01.01",
+          "son": "2026.01.03",
           "url": "/tufe-ufe-verileri.json",
           "surumler_url": "/surumler/tufe-ufe-verileri/",
           "checksum": "sha256:c1a5b1f3969ece24024d4682e49120be648eab0a4d75df6b05139f7f049f1def"
@@ -672,13 +774,13 @@
         "en": "Mandatory Documents and Permits"
       },
       "tip": "liste",
-      "kod_sistemi": "gib",
+      "kod_sistemi": "kamu",
       "katmanlar": {
         "ham": {
-          "son": "2026.10.21",
+          "son": "2026.01.01",
           "url": "/zorunlu-belgeler.json",
           "surumler_url": "/surumler/zorunlu-belgeler/",
-          "checksum": "sha256:2069e22c4eea8ccd0d9dba103f7db31587c50998ed329e20ad7f00fa6960784d"
+          "checksum": "sha256:eb1343d2b824708c139a06ac65c306b86c6f229702c9a84f2c3a638dd18ad3f7"
         }
       }
     },
@@ -689,13 +791,13 @@
         "en": "Mandatory Document Mapping Rules"
       },
       "tip": "kural-seti",
-      "kod_sistemi": "gtip",
+      "kod_sistemi": "kamu",
       "katmanlar": {
         "kurallar": {
-          "son": "2026.10.21",
+          "son": "2026.10.01",
           "url": "/zorunlu-belgeler-kurallar.json",
           "surumler_url": "/surumler/zorunlu-belgeler-kurallar/",
-          "checksum": "sha256:5d6a71e4189a4620102124d1abbb2dae3c3d938bbd9ee7d59f3b19b2745c2d4f"
+          "checksum": "sha256:a30feb29da677eaa41d27674077cdf3aa467ba6f980051265dadc3b02319769a"
         }
       }
     }

@@ -1,0 +1,1768 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-tevkifat",
+      "ad": {
+        "tr": "GTİP Tevkifat Eşleşmesi",
+        "en": "GTIP Withholding Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.27",
+    "guncelleme": "2026-10-27",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.27"
+      },
+      "uretim_zamani": "2026-10-27T13:33:06.673129+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "10",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:10fb89cfd02fc47d166a98c1a54d4421fe57b9a90bafeac2d0e1a60caaca51e2"
+  },
+  "kayitlar": [
+    {
+      "kod": "100111000000",
+      "tanim_tr": "Makarnalık buğday (durum buğdayı); tohumluk",
+      "tanim_en": "Durum wheat (pasta wheat); seed wheat",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100119000000",
+      "tanim_tr": "Makarnalık buğday (durum buğdayı); tohumluk olanlar HARİÇ",
+      "tanim_en": "Durum wheat (pasta wheat); EXCEPT for seed wheat.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100191100000",
+      "tanim_tr": "Kaplıca (kızıl) buğday; tohumluk",
+      "tanim_en": "Spa (red) wheat; seed",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100191200011",
+      "tanim_tr": "Adi buğday; tohumluk",
+      "tanim_en": "Common wheat; seed wheat.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100191200012",
+      "tanim_tr": "Mahlut; tohumluk",
+      "tanim_en": "Mixed seed; seed",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100191900000",
+      "tanim_tr": "Tohumluk diğer buğdaylar",
+      "tanim_en": "Other wheat varieties for seed",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100199000011",
+      "tanim_tr": "Adi buğday; tohumluk olanlar HARİÇ",
+      "tanim_en": "Common wheat; EXCEPT for seed wheat.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100199000012",
+      "tanim_tr": "Mahlut; tohumluk olanlar HARİÇ",
+      "tanim_en": "Mixed grains; EXCEPT those intended for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100199000013",
+      "tanim_tr": "Kaplıca (kızıl) buğday; tohumluk olanlar HARİÇ",
+      "tanim_en": "Spa (red) wheat; EXCEPT those intended for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100210000000",
+      "tanim_tr": "Çavdar; tohumluk",
+      "tanim_en": "Rye; for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100290000000",
+      "tanim_tr": "Çavdar; tohumluk olanlar HARİÇ",
+      "tanim_en": "Rye; EXCEPT for seed rye.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100310000011",
+      "tanim_tr": "Beyaz arpa; tohumluk",
+      "tanim_en": "White barley; for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100310000019",
+      "tanim_tr": "Arpa (beyaz arpa HARİÇ); tohumluk",
+      "tanim_en": "Barley (EXCEPT white barley); for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100390000011",
+      "tanim_tr": "Beyaz arpa; tohumluk olanlar HARİÇ",
+      "tanim_en": "White barley; EXCEPT for seed barley.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100390000012",
+      "tanim_tr": "Arpa; maltlık",
+      "tanim_en": "Barley; for malting.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100390000019",
+      "tanim_tr": "Diğer arpa; tohumluk olanlar HARİÇ",
+      "tanim_en": "Other barley; EXCEPT those intended for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100410000000",
+      "tanim_tr": "Yulaf; tohumluk",
+      "tanim_en": "Oats; seed",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100490000000",
+      "tanim_tr": "Yulaf; tohumluk olanlar HARİÇ",
+      "tanim_en": "Oats; EXCEPT those intended for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100510130000",
+      "tanim_tr": "Mısır (üçlü melez); tohumluk",
+      "tanim_en": "Maize (triple hybrid); seed",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100510150000",
+      "tanim_tr": "Mısır (tek melez); tohumluk",
+      "tanim_en": "Maize (single hybrid); seed",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100510180000",
+      "tanim_tr": "Mısır (diğer melezler); tohumluk",
+      "tanim_en": "Maize (and other hybrids); seed",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100510900000",
+      "tanim_tr": "Mısır (melezler HARİÇ); tohumluk",
+      "tanim_en": "Maize (excluding hybrids); for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100590000011",
+      "tanim_tr": "Cin mısırı (patlamış mısır-pop corn yapımında kullanılan mısır); tohumluk olanlar HARİÇ",
+      "tanim_en": "Popcorn (corn used in making popcorn); EXCEPT for seed corn.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100590000019",
+      "tanim_tr": "Tohumluk olmayan diğer mısırlar",
+      "tanim_en": "Other non-seed maize",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100610100000",
+      "tanim_tr": "Pirinç (kavuz içinde bulunan (çeltik)); tohumluk",
+      "tanim_en": "Rice (paddy rice in the husk); seed rice",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100610300000",
+      "tanim_tr": "Pirinç (yuvarlak taneli, kavuz içinde (çeltik)); tohumluk olanlar HARİÇ",
+      "tanim_en": "Rice (round grain, in husk (paddy)); EXCEPT those intended for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100610500000",
+      "tanim_tr": "Pirinç (orta taneli, kavuz içinde (çeltik)); tohumluk olanlar HARİÇ",
+      "tanim_en": "Rice (medium grain, hulled (paddy)); EXCEPT seed rice.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100610710000",
+      "tanim_tr": "Pirinç (uzun taneli, uzunluk/genişlik oranı 2'den büyük fakat 3'ten küçük, kavuz içinde (çeltik)); tohumluk olanlar HARİÇ",
+      "tanim_en": "Rice (long-grain, length/width ratio greater than 2 but less than 3, in husk (paddy)); EXCEPT those intended for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100610790000",
+      "tanim_tr": "Pirinç (uzun taneli, uzunluk/genişlik oranı >=3, kavuz içinde (çeltik)); tohumluk olanlar HARİÇ",
+      "tanim_en": "Rice (long-grain, length/width ratio >=3, in husk (paddy)); EXCEPT those intended for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100610900000",
+      "tanim_tr": "Pirinç (kavuz içinde (çeltik)); yuvarlak taneli, orta taneli, uzun taneli ve tohumluk olanlar HARİÇ",
+      "tanim_en": "Rice (in husk (paddy)); EXCEPT round-grained, medium-grained, long-grained and seed varieties.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100620110000",
+      "tanim_tr": "Pirinç (kavuzu çıkarılmış, yuvarlak taneli, yarı haşlanmış)",
+      "tanim_en": "Rice (hulled, round grains, partially cooked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100620130000",
+      "tanim_tr": "Pirinç (kavuzu çıkarılmış, orta taneli, yarı haşlanmış)",
+      "tanim_en": "Rice (hulled, medium-grain, semi-boiled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100620150000",
+      "tanim_tr": "Pirinç (kavuzu çıkarılmış, uzun taneli, yarı haşlanmış, 2 < uzunluk/genişlik oranı < 3 )",
+      "tanim_en": "Rice (hulled, long-grain, semi-boiled, length/width ratio < 2 < 3 )",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100620170000",
+      "tanim_tr": "Pirinç (kavuzu çıkarılmış, uzun taneli, yarı haşlanmış, uzunluk/genişlik oranı >=3 )",
+      "tanim_en": "Rice (hulled, long-grain, semi-boiled, length-to-width ratio >=3)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100620190000",
+      "tanim_tr": "Pirinç (kahverengi, kavuzu çıkarılmış, yarı haşlanmış); yuvarlak taneli, orta taneli ve uzun taneli olanlar HARİÇ",
+      "tanim_en": "Rice (brown, hulled, semi-boiled); EXCEPT round-grain, medium-grain and long-grain varieties.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100620920000",
+      "tanim_tr": "Pirinç (kavuzu çıkarılmış, yuvarlak taneli); yarı haşlanmış HARİÇ",
+      "tanim_en": "Rice (hulled, round grains); EXCEPT for semi-boiled rice.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100620940000",
+      "tanim_tr": "Pirinç (kavuzu çıkarılmış, orta taneli); yarı haşlanmış HARİÇ",
+      "tanim_en": "Rice (hulled, medium grain); EXCEPT for semi-boiled rice.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100620960000",
+      "tanim_tr": "Pirinç (kavuzu çıkarılmış, uzun taneli, 2 < uzunluk/genişlik oranı < 3); yarı haşlanmış HARİÇ",
+      "tanim_en": "Rice (hulled, long-grain, 2 < length/width ratio < 3); EXCEPT for semi-boiled rice.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100620980000",
+      "tanim_tr": "Pirinç (kavuzu çıkarılmış, uzun taneli, uzunluk/genişlik oranı eşit >= 3); yarı haşlanmış HARİÇ",
+      "tanim_en": "Rice (hulled, long-grain, length/width ratio equal >= 3); EXCEPT for semi-boiled rice.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100620990000",
+      "tanim_tr": "Pirinç (kahverengi, kavuzu çıkarılmış); yarı haşlanmış, yuvarlak taneli, orta taneli ve uzun taneli olanlar HARİÇ",
+      "tanim_en": "Rice (brown, hulled); semi-boiled, EXCEPT round-grain, medium-grain and long-grain varieties.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630210000",
+      "tanim_tr": "Pirinç (yuvarlak taneli, yarı olarak değirmenden geçirilmiş, yarı haşlanmış)",
+      "tanim_en": "Rice (round grains, partially milled, partially boiled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630230000",
+      "tanim_tr": "Pirinç (orta taneli, yarı olarak değirmenden geçirilmiş, yarı haşlanmış)",
+      "tanim_en": "Rice (medium grain, partially milled, partially boiled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630250000",
+      "tanim_tr": "Pirinç (uzun taneli, yarı olarak değirmenden geçirilmiş, 2 < uzunluk/genişlik oranı < 3, yarı haşlanmış)",
+      "tanim_en": "Rice (long-grain, partially milled, length/width ratio < 3, semi-boiled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630270000",
+      "tanim_tr": "Pirinç (uzun taneli, yarı olarak değirmenden geçirilmiş, uzunluk/genişlik oranı >= 3, yarı haşlanmış)",
+      "tanim_en": "Rice (long-grain, partially milled, length-to-width ratio >= 3, semi-boiled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630290000",
+      "tanim_tr": "Pirinç (yarı haşlanmış, yarı olarak değirmenden geçirilmiş); yuvarlak taneli, orta taneli ve uzun taneli olanlar HARİÇ",
+      "tanim_en": "Rice (partially boiled, partially milled); EXCEPT round-grain, medium-grain and long-grain varieties.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630420000",
+      "tanim_tr": "Pirinç (yuvarlak taneli, yarı olarak değirmenden geçirilmiş); yarı haşlanmış HARİÇ",
+      "tanim_en": "Rice (round grain, partially milled); EXCEPT for semi-boiled rice.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630440000",
+      "tanim_tr": "Pirinç (orta taneli, yarı olarak değirmenden geçirilmiş); yarı haşlanmış HARİÇ",
+      "tanim_en": "Rice (medium grain, partially milled); EXCEPT for semi-boiled rice.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630460000",
+      "tanim_tr": "Pirinç (uzun taneli, yarı olarak değirmenden geçirilmiş, 2 < uzunluk/genişlik < 3); yarı haşlanmış HARİÇ",
+      "tanim_en": "Rice (long-grain, partially milled, 2 < length/width < 3); EXCEPT for semi-boiled rice.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630480000",
+      "tanim_tr": "Pirinç (uzun taneli, yarı olarak değirmenden geçirilmiş, uzunluk/genişlik >= 3); yarı haşlanmış HARİÇ",
+      "tanim_en": "Rice (long-grain, partially milled, length/width >= 3); EXCEPT for semi-boiled rice.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630490000",
+      "tanim_tr": "Pirinç (yarı olarak değirmenden geçirilmiş); yarı haşlanmış, yuvarlak taneli, orta taneli ve uzun taneli olanlar HARİÇ",
+      "tanim_en": "Rice (partially milled); EXCEPT for semi-boiled, round-grain, medium-grain and long-grain varieties.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630610000",
+      "tanim_tr": "Pirinç (yuvarlak taneli, tam olarak değirmenden geçirilmiş, yarı haşlanmış)",
+      "tanim_en": "Rice (round grains, fully milled, semi-boiled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630630000",
+      "tanim_tr": "Pirinç (orta taneli, tam olarak değirmenden geçirilmiş, yarı haşlanmış)",
+      "tanim_en": "Rice (medium grain, fully milled, semi-boiled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630650000",
+      "tanim_tr": "Pirinç (uzun taneli, tam olarak değirmenden geçirilmiş, 2 < uzunluk/genişlik < 3, yarı haşlanmış)",
+      "tanim_en": "Rice (long-grain, fully milled, 2 < length/width < 3, semi-cooked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630670000",
+      "tanim_tr": "Pirinç (uzun taneli, tam olarak değirmenden geçirilmiş, uzunluk/genişlik >= 3, yarı haşlanmış)",
+      "tanim_en": "Rice (long-grain, fully milled, length/width >= 3, semi-boiled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630690000",
+      "tanim_tr": "Pirinç (yarı haşlanmış, tam olarak değirmenden geçirilmiş); yuvarlak taneli, orta taneli ve uzun taneli olanlar HARİÇ",
+      "tanim_en": "Rice (partially boiled, fully milled); EXCEPT round-grain, medium-grain and long-grain varieties.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630920000",
+      "tanim_tr": "Pirinç (yuvarlak taneli, tam olarak değirmenden geçirilmiş); yarı haşlanmış HARİÇ",
+      "tanim_en": "Rice (round grain, fully milled); EXCEPT for semi-boiled rice.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630940000",
+      "tanim_tr": "Pirinç (orta taneli, tam olarak değirmenden geçirilmiş); yarı haşlanmış HARİÇ",
+      "tanim_en": "Rice (medium grain, fully milled); EXCEPT for semi-boiled rice.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630960000",
+      "tanim_tr": "Pirinç (uzun taneli, tam olarak değirmenden geçirilmiş, 2 < uzunluk/genişlik < 3); yarı haşlanmış HARİÇ",
+      "tanim_en": "Rice (long-grain, fully milled, 2 < length/width < 3); EXCEPT for semi-boiled rice.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630980000",
+      "tanim_tr": "Pirinç (uzun taneli, tam olarak değirmenden geçirilmiş, uzunluk/genişlik >= 3); yarı haşlanmış HARİÇ",
+      "tanim_en": "Rice (long-grain, fully milled, length/width >= 3); EXCEPT for semi-boiled rice.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100630990000",
+      "tanim_tr": "Pirinç (tam olarak değirmenden geçirilmiş); yarı haşlanmış, yuvarlak taneli, orta taneli ve uzun taneli olanlar HARİÇ",
+      "tanim_en": "Rice (fully milled); semi-boiled, EXCEPT round-grain, medium-grain and long-grain varieties.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100640000000",
+      "tanim_tr": "Pirinç; kırık",
+      "tanim_en": "Rice; broken",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100710100000",
+      "tanim_tr": "Koca darı (Grain Sorghum); melezler, tohumluk",
+      "tanim_en": "Grain sorghum; hybrids, seed",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100710900000",
+      "tanim_tr": "Koca darı (Grain Sorghum); melezler olmayan, tohumluk",
+      "tanim_en": "Grain sorghum; non-hybrid, seed-producing variety.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100790000000",
+      "tanim_tr": "Koca darı (Grain Sorghum); tohumluk olanlar HARİÇ",
+      "tanim_en": "Grain sorghum; EXCEPT those used for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100810000000",
+      "tanim_tr": "Kara buğday",
+      "tanim_en": "Buckwheat",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100821000011",
+      "tanim_tr": "Darı; tohumluk",
+      "tanim_en": "Millet; seed",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100821000012",
+      "tanim_tr": "Akdarı; tohumluk",
+      "tanim_en": "Millet; for seed",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100829000011",
+      "tanim_tr": "Darı; tohumluk olanlar HARİÇ",
+      "tanim_en": "Millet; EXCEPT for seed varieties.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100829000012",
+      "tanim_tr": "Akdarı; tohumluk olanlar HARİÇ",
+      "tanim_en": "Millet; EXCEPT for those intended for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100830000000",
+      "tanim_tr": "Kuş yemi",
+      "tanim_en": "Birdseed",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100840000000",
+      "tanim_tr": "Çatal otu (Fonio) (Digitaria spp.)",
+      "tanim_en": "Forkweed (Fonio) (Digitaria spp.)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100850000000",
+      "tanim_tr": "Kinoa (Chenopodium quinoa)",
+      "tanim_en": "Quinoa (Chenopodium quinoa)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100860000011",
+      "tanim_tr": "Buğday ve çavdar melezi; tohumluk",
+      "tanim_en": "Wheat and rye hybrid; for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100860000019",
+      "tanim_tr": "Buğday ve çavdar melezi; tohumluk olanlar HARİÇ",
+      "tanim_en": "Wheat and rye hybrids; EXCEPT those intended for seed.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "100890000000",
+      "tanim_tr": "Diğer hububat",
+      "tanim_en": "Other cereals",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    }
+  ]
+}

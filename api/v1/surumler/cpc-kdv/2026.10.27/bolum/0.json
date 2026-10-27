@@ -1,0 +1,6304 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "cpc-kdv",
+      "ad": {
+        "tr": "CPC KDV Eşleşmesi",
+        "en": "CPC VAT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "cpc",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.27",
+    "guncelleme": "2026-10-27",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.27"
+      },
+      "uretim_zamani": "2026-10-27T13:33:06.673129+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "bolum",
+      "kod": "0",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:8ec79f88dd6bb5ac5b9d6a0c906e119378b4ea6ee6983de2b61696caa8b36cfa"
+  },
+  "kayitlar": [
+    {
+      "kod": "01111",
+      "tanim_tr": "Buğday,tohum",
+      "tanim_en": "Wheat, seed",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01112",
+      "tanim_tr": "Buğday, diğer",
+      "tanim_en": "Wheat, other",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01121",
+      "tanim_tr": "Mısır, tohum",
+      "tanim_en": "Corn, seed",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01122",
+      "tanim_tr": "Mısır, diğer",
+      "tanim_en": "Egypt, other",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01131",
+      "tanim_tr": "Çeltik, tohum",
+      "tanim_en": "Rice, seed",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01132",
+      "tanim_tr": "Çeltik, diğer (kabuksuz pirinç hariç)",
+      "tanim_en": "Paddy rice, other (excluding hulled rice)",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01141",
+      "tanim_tr": "Süpürge darısı (sorgum), tohum",
+      "tanim_en": "Sorghum (broomcorn), seed",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01142",
+      "tanim_tr": "Süpürge darısı (sorgum), diğer",
+      "tanim_en": "Sorghum, other",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01151",
+      "tanim_tr": "Arpa, tohum",
+      "tanim_en": "Barley, seed",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01152",
+      "tanim_tr": "Arpa, diğer",
+      "tanim_en": "Barley, other",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01161",
+      "tanim_tr": "Çavdar, tohum",
+      "tanim_en": "Rye, seed",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01162",
+      "tanim_tr": "Çavdar, diğer",
+      "tanim_en": "Rye, other",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01171",
+      "tanim_tr": "Yulaf, tohum",
+      "tanim_en": "Oats, seeds",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01172",
+      "tanim_tr": "Yulaf, diğer",
+      "tanim_en": "Oats, other",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01181",
+      "tanim_tr": "Darı, tohum",
+      "tanim_en": "Millet, seeds",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01182",
+      "tanim_tr": "Darı, diğer",
+      "tanim_en": "Millet, other",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01191",
+      "tanim_tr": "Tritikale",
+      "tanim_en": "Triticale",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01192",
+      "tanim_tr": "Karabuğday",
+      "tanim_en": "Buckwheat",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01193",
+      "tanim_tr": "Fonio",
+      "tanim_en": "Fonio",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01194",
+      "tanim_tr": "Kinoa",
+      "tanim_en": "Quinoa",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01195",
+      "tanim_tr": "Kuş yemi",
+      "tanim_en": "Birdseed",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01199",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer tahıllar",
+      "tanim_en": "Other cereals not classified elsewhere",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01211",
+      "tanim_tr": "Kuşkonmaz",
+      "tanim_en": "Asparagus",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01212",
+      "tanim_tr": "Lahana",
+      "tanim_en": "Cabbage",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01213",
+      "tanim_tr": "Karnıbahar ve brokoli",
+      "tanim_en": "Cauliflower and broccoli",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01214",
+      "tanim_tr": "Marul ve hindiba",
+      "tanim_en": "Lettuce and endive",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01215",
+      "tanim_tr": "Ispanak",
+      "tanim_en": "Spinach",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01216",
+      "tanim_tr": "Enginar",
+      "tanim_en": "Artichoke",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01219",
+      "tanim_tr": "Diğer yeşil yapraklı veya saplı sebzeler",
+      "tanim_en": "Other leafy or stemmed vegetables",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01221",
+      "tanim_tr": "Karpuz",
+      "tanim_en": "Watermelon",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01229",
+      "tanim_tr": "Kantalıp ve diğer kavunlar",
+      "tanim_en": "Cantalip and other melons",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01231",
+      "tanim_tr": "Kırmızı ve yeşil biber - taze",
+      "tanim_en": "Red and green peppers - fresh",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01232",
+      "tanim_tr": "Hıyar (salatalık) ve kornişon",
+      "tanim_en": "Cucumber and gherkin",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01233",
+      "tanim_tr": "Patlıcan",
+      "tanim_en": "Aubergine",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01234",
+      "tanim_tr": "Domates",
+      "tanim_en": "Tomatoes",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01235",
+      "tanim_tr": "Balkabağı, kabak ve sukabağı (cucurbita)",
+      "tanim_en": "Pumpkin, squash, and gourd (cucurbita)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01239",
+      "tanim_tr": "Diğer meyveli sebzeler",
+      "tanim_en": "Other fruits and vegetables",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01241",
+      "tanim_tr": "Fasulye, taze",
+      "tanim_en": "Fresh beans",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01242",
+      "tanim_tr": "Bezelye, taze",
+      "tanim_en": "Peas, fresh",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01243",
+      "tanim_tr": "Bakla ve kuru bakla,yeşil",
+      "tanim_en": "Broad beans and dried broad beans, green",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01249",
+      "tanim_tr": "Diğer taze baklagil sebzeleri",
+      "tanim_en": "Other fresh legume vegetables",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01251",
+      "tanim_tr": "Havuç ve şalgam",
+      "tanim_en": "Carrots and turnips",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01252",
+      "tanim_tr": "Yeşil sarmısak",
+      "tanim_en": "Green garlic",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01253",
+      "tanim_tr": "Soğan",
+      "tanim_en": "Onion",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01254",
+      "tanim_tr": "Pırasa ve diğer soğanımsı veya kokulu sebzeler",
+      "tanim_en": "Leeks and other bulbous or pungent vegetables",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01259",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer kök, soğansı veya yumru sebzeler",
+      "tanim_en": "Other root, bulbous or tuberous vegetables not classified elsewhere.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01260",
+      "tanim_tr": "Sebze tohumları, pancar tohumları hariç",
+      "tanim_en": "Vegetable seeds, excluding beet seeds.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01271",
+      "tanim_tr": "Mantarlar, çiftlikte yetiştirilen",
+      "tanim_en": "Mushrooms, grown on the farm.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01272",
+      "tanim_tr": "Yer mantarı, çiftlikte yetiştirilen",
+      "tanim_en": "truffles, farm-grown",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01290",
+      "tanim_tr": "Başka yerde sınıflandırılmamış taze sebzeler",
+      "tanim_en": "Fresh vegetables not classified elsewhere.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01311",
+      "tanim_tr": "Avakado",
+      "tanim_en": "Avocado",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01312",
+      "tanim_tr": "Muz",
+      "tanim_en": "Banana",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01313",
+      "tanim_tr": "Plantain (bir çeşit muz) ve diğerleri",
+      "tanim_en": "Plantain (a type of banana) and others",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01314",
+      "tanim_tr": "Hurma",
+      "tanim_en": "Date",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01315",
+      "tanim_tr": "İncir",
+      "tanim_en": "Fig",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01316",
+      "tanim_tr": "Mango",
+      "tanim_en": "Mango",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01317",
+      "tanim_tr": "Papaya",
+      "tanim_en": "Papaya",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01318",
+      "tanim_tr": "Ananas",
+      "tanim_en": "Pineapple",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01319",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer tropikal ve subtropikal meyveler",
+      "tanim_en": "Other tropical and subtropical fruits not classified elsewhere.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01321",
+      "tanim_tr": "Greyfurt ve pomelo",
+      "tanim_en": "Grapefruit and pomelo",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01322",
+      "tanim_tr": "Limon ve misket limonu",
+      "tanim_en": "Lemon and lime",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01323",
+      "tanim_tr": "Portakal",
+      "tanim_en": "Orange",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01324",
+      "tanim_tr": "Tangarin, mandalina, klementin",
+      "tanim_en": "Tangerine, mandarin, clementine",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01329",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer turunçgiller",
+      "tanim_en": "Other citrus fruits not classified elsewhere",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01330",
+      "tanim_tr": "Üzüm",
+      "tanim_en": "Grape",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01341",
+      "tanim_tr": "Kuşüzümü (frenk üzümü) ve bektaşi üzümü",
+      "tanim_en": "Currants and gooseberries",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01342",
+      "tanim_tr": "Kivi",
+      "tanim_en": "Kiwi",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01343",
+      "tanim_tr": "Ahududu",
+      "tanim_en": "Raspberry",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01344",
+      "tanim_tr": "Çilek",
+      "tanim_en": "Strawberry",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01345",
+      "tanim_tr": "Şeftali ve nektarin",
+      "tanim_en": "Peach and nectarine",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01346",
+      "tanim_tr": "Erik ve çakal eriği (dağ eriği)",
+      "tanim_en": "Plum and wild plum (mountain plum)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01349",
+      "tanim_tr": "Başka yede sınıflandırılmamış diğer üzümsü meyveler ve yabanmersini familyası meyveleri",
+      "tanim_en": "Other berry fruits and berries of the blueberry family not classified elsewhere.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01351",
+      "tanim_tr": "Elma",
+      "tanim_en": "Apple",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01352",
+      "tanim_tr": "Armut ve ayva",
+      "tanim_en": "Pear and quince",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01353",
+      "tanim_tr": "Kayısı",
+      "tanim_en": "Apricot",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01354",
+      "tanim_tr": "Kiraz",
+      "tanim_en": "Cherry",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01355",
+      "tanim_tr": "Şeftali ve nektarin",
+      "tanim_en": "Peach and nectarine",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01356",
+      "tanim_tr": "Erik ve çakal eriği (dağ eriği)",
+      "tanim_en": "Plum and wild plum (mountain plum)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01359",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer yumuşak çekirdekli meyveler ve sert çekirdekli meyveler",
+      "tanim_en": "Other soft-seeded and hard-seeded fruits not classified elsewhere.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01360",
+      "tanim_tr": "Meyve tohumları",
+      "tanim_en": "Fruit seeds",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01371",
+      "tanim_tr": "Badem, kabuklu",
+      "tanim_en": "Almonds, in their shells",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01372",
+      "tanim_tr": "Baladur ağacı cevizi, kabuklu",
+      "tanim_en": "Baladur tree walnut, in shell",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01373",
+      "tanim_tr": "Kestane, kabuklu",
+      "tanim_en": "Chestnut, in shell",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01374",
+      "tanim_tr": "Fındık, kabuklu",
+      "tanim_en": "Hazelnuts, in their shells",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01375",
+      "tanim_tr": "Şam fıstığı (antep fıstığı), kabuklu",
+      "tanim_en": "Pistachio (or pistachio in shell)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01376",
+      "tanim_tr": "Ceviz, kabuklu",
+      "tanim_en": "Walnuts, in their shells",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01377",
+      "tanim_tr": "Brezilya kestanesi, kabuklu",
+      "tanim_en": "Brazil nuts, in shells",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01379",
+      "tanim_tr": "Diğer sert kabuklu meyveler (yabani yenilebilir sert kabuklu meyveler, yer fıstığı ve hindistan cevizi hariç), kabuklu",
+      "tanim_en": "Other nuts (excluding wild edible nuts, peanuts and coconuts), shelled",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01411",
+      "tanim_tr": "Soya fasulyesi (diğer tüm kullanımlar)",
+      "tanim_en": "Soybeans (all other uses)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01412",
+      "tanim_tr": "Soya fasulyesi (yetiştirme için tohum)",
+      "tanim_en": "Soybeans (seeds for growing)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01421",
+      "tanim_tr": "Yerfıstığı, kabuklu (yetiştirmek için tohum)",
+      "tanim_en": "Peanuts, in their shells (seeds for growing)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01422",
+      "tanim_tr": "Yerfıstığı, kabuklu, diğer",
+      "tanim_en": "Peanuts, in shells, other",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01431",
+      "tanim_tr": "Pamuk çekirdeği (çiğit) (yetiştirmek için tohum)",
+      "tanim_en": "Cottonseed (seed for growing)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01432",
+      "tanim_tr": "Pamuk çekirdeği (çiğit) diğer",
+      "tanim_en": "Cottonseed (cottonseed) other",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01441",
+      "tanim_tr": "Keten tohumu",
+      "tanim_en": "Flaxseed",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01442",
+      "tanim_tr": "Hardal tohumu",
+      "tanim_en": "Mustard seeds",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01443",
+      "tanim_tr": "Kanola veya kolza tohumu",
+      "tanim_en": "Rapeseed or canola seeds",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01444",
+      "tanim_tr": "Susam tohumu",
+      "tanim_en": "Sesame seeds",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01445",
+      "tanim_tr": "Ayçiçeği tohumu",
+      "tanim_en": "Sunflower seeds",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01446",
+      "tanim_tr": "Aspir tohumu",
+      "tanim_en": "Safflower seeds",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01447",
+      "tanim_tr": "Hintyağı tohumları",
+      "tanim_en": "Castor oil seeds",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01448",
+      "tanim_tr": "Haşhaş tohumu",
+      "tanim_en": "Poppy seeds",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01449",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer yağlı tohumlar",
+      "tanim_en": "Other oilseeds not classified elsewhere",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01450",
+      "tanim_tr": "Zeytin",
+      "tanim_en": "Olive",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01460",
+      "tanim_tr": "Hindistan cevizi, kabuklu",
+      "tanim_en": "Coconut, in its shell",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01491",
+      "tanim_tr": "Palmiye fındığı ve içleri",
+      "tanim_en": "Palm nuts and their kernels",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01492",
+      "tanim_tr": "Kurutulmuş hindistancevizi çekirdeği/içi",
+      "tanim_en": "Dried coconut kernels/seeds",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01499",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer yağlı meyveler",
+      "tanim_en": "Other oilseeds not classified elsewhere",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01510",
+      "tanim_tr": "Patates",
+      "tanim_en": "Potatoes",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01520",
+      "tanim_tr": "Manyok",
+      "tanim_en": "Manioc",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01530",
+      "tanim_tr": "Tatlı patates",
+      "tanim_en": "Sweet potato",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01540",
+      "tanim_tr": "Hint yer elması",
+      "tanim_en": "yam",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01550",
+      "tanim_tr": "Gölevez",
+      "tanim_en": "Golevez",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01591",
+      "tanim_tr": "Tatlı patates",
+      "tanim_en": "Sweet potato",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01599",
+      "tanim_tr": "Başka yerde sınıflandırılmamış yenilebilir kök ve yumrular, yüksek nişasta veya inulin içerenler",
+      "tanim_en": "Edible roots and tubers not classified elsewhere, those high in starch or inulin.",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01610",
+      "tanim_tr": "Kahve, yeşil",
+      "tanim_en": "Coffee, green",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01620",
+      "tanim_tr": "Çay yaprakları",
+      "tanim_en": "Tea leaves",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01630",
+      "tanim_tr": "Paraguay çayı (Maté) yaprakları",
+      "tanim_en": "Paraguayan tea (Maté) leaves",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01640",
+      "tanim_tr": "Kakao çekirdekleri",
+      "tanim_en": "Cocoa beans",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01651",
+      "tanim_tr": "Karabiber, işlenmemiş",
+      "tanim_en": "Black pepper, unprocessed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01652",
+      "tanim_tr": "Biber, kuru, işlenmemiş",
+      "tanim_en": "Pepper, dried, unprocessed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01653",
+      "tanim_tr": "Küçük hindistan cevizi, kabuğu ile kakule, işlenmemiş",
+      "tanim_en": "Nutmeg, with its shell, and cardamom, unprocessed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01654",
+      "tanim_tr": "Anason, çin anasonu (badian), kişniş, kimyon, karaman kimyonu, rezene ve ardıç meyvesi, işlenmemiş",
+      "tanim_en": "Anise, Chinese anise (badian), coriander, cumin, caraway, fennel, and juniper berries, unprocessed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01655",
+      "tanim_tr": "Tarçın, işlenmemiş",
+      "tanim_en": "Unprocessed cinnamon.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01656",
+      "tanim_tr": "Karanfil, işlenmemiş",
+      "tanim_en": "Cloves, unprocessed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01657",
+      "tanim_tr": "Zencefil, kuru, işlenmemiş",
+      "tanim_en": "Ginger, dried, unprocessed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01658",
+      "tanim_tr": "Vanilya, işlenmemiş",
+      "tanim_en": "Unprocessed vanilla.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01659",
+      "tanim_tr": "Şerbetçiotu kozalağı",
+      "tanim_en": "Hop cone",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01691",
+      "tanim_tr": "Hindiba kökleri",
+      "tanim_en": "Chicory roots",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01699",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer uyarıcı, baharat ve aromatik bitkiler",
+      "tanim_en": "Other stimulants, spices, and aromatic plants not classified elsewhere.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01701",
+      "tanim_tr": "Fasulye, kuru",
+      "tanim_en": "Beans, dried",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01702",
+      "tanim_tr": "Bakla, kuru",
+      "tanim_en": "Broad beans, dried",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01703",
+      "tanim_tr": "Nohut, kuru",
+      "tanim_en": "Chickpeas, dried",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01704",
+      "tanim_tr": "Mercimek, kuru",
+      "tanim_en": "Lentils, dried",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01705",
+      "tanim_tr": "Bezelye, kuru",
+      "tanim_en": "Peas, dried",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01706",
+      "tanim_tr": "Börülce, kuru",
+      "tanim_en": "Dried black-eyed peas",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01707",
+      "tanim_tr": "Güvercin bezelye, kuru",
+      "tanim_en": "Pigeon peas, dried",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01708",
+      "tanim_tr": "Bambara bezelyesi, kuru",
+      "tanim_en": "Bambara peas, dried",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01709",
+      "tanim_tr": "Başka yerde sınıflandırılmamış baklagiller",
+      "tanim_en": "Legumes not classified elsewhere",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01801",
+      "tanim_tr": "Şeker pancarı",
+      "tanim_en": "Sugar beet",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01802",
+      "tanim_tr": "Şeker kamışı",
+      "tanim_en": "Sugarcane",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01803",
+      "tanim_tr": "Şeker pancarı tohumları",
+      "tanim_en": "Sugar beet seeds",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01809",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer şeker bitkileri",
+      "tanim_en": "Other sugar plants not classified elsewhere.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01911",
+      "tanim_tr": "Mısır, yem ve silaj için",
+      "tanim_en": "Corn for feed and silage.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01912",
+      "tanim_tr": "Alflafa, yem ve silaj için",
+      "tanim_en": "Alflafa, for feed and silage.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01913",
+      "tanim_tr": "Tahılların samanı, kabukları, hazılanmamış, arazide, preslenmiş veya top halinde",
+      "tanim_en": "Grain straw, husks, unprocessed, in the field, pressed or in balls.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01919",
+      "tanim_tr": "Başka yerde sınıflandırılmamış yem ürünleri",
+      "tanim_en": "Feed products not classified elsewhere",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01921",
+      "tanim_tr": "Pamuk, çırçırlanmış olsun ya da olmasın",
+      "tanim_en": "Cotton, whether ginned or not.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01922",
+      "tanim_tr": "Jüt, kenaf ve bitki kabuklarından tekstil amaçlı diğer bitki lifleri, ham veya suda yumuşatılmış (keten, saf hint keneviri ve rami hariç)",
+      "tanim_en": "Jute, kenaf and other plant fibers derived from plant bark for textile purposes, raw or water-softened (excluding flax, pure hemp and ramie).",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01929",
+      "tanim_tr": "Başka yerde sınıflandırılmamış lifli bitkiler, işlenmemiş",
+      "tanim_en": "Fibrous plants not classified elsewhere, unprocessed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01930",
+      "tanim_tr": "Çeşitli bitkiler ve bunların parçaları; genellikle parfümeri ve eczacılıkta kullanılan veya böcek ve mantar öldürücü olarak kullanılan bitkiler veya benzer amaçlar için kullanılan bitkiler",
+      "tanim_en": "Various plants and their parts; plants commonly used in perfumery and pharmacy, or as insecticides and fungicides, or for similar purposes.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01940",
+      "tanim_tr": "Pancar tohumları (şeker pancarı tohumları hariç) ve yem bitkilerinin tohumları",
+      "tanim_en": "Beet seeds (excluding sugar beet seeds) and forage crop seeds.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01950",
+      "tanim_tr": "Doğal kauçuk, birincil formlarda veya plaka, tabaka ve şerit halinde olanlar",
+      "tanim_en": "Natural rubber comes in its primary forms or in sheets, plates, and strips.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01961",
+      "tanim_tr": "Canlı bitkiler; soğanlı bitkiler, yumrular ve kökler, aşı kalemi ve çelikler; mantar tohumu",
+      "tanim_en": "Live plants; bulbous plants, tubers and roots, grafting scions and cuttings; mushroom seeds",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01962",
+      "tanim_tr": "Kesme çiçek ve çiçek goncaları, buketler, örmeler, çiçek seleleri ve benzeri ürünler dahil",
+      "tanim_en": "Including cut flowers and flower buds, bouquets, knitted items, flower baskets and similar products.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01963",
+      "tanim_tr": "Çiçek tohumları",
+      "tanim_en": "Flower seeds",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01970",
+      "tanim_tr": "Tütün, işlenmemiş",
+      "tanim_en": "Tobacco, unprocessed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "01990",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer işlenmemiş bitkisel ürünler",
+      "tanim_en": "Other unprocessed plant products not classified elsewhere.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02111",
+      "tanim_tr": "Sığır, canlı",
+      "tanim_en": "Live cattle",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02112",
+      "tanim_tr": "Manda, canlı",
+      "tanim_en": "Buffalo, live",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02119",
+      "tanim_tr": "Diğer büyükbaş hayvanlar",
+      "tanim_en": "Other cattle",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02121",
+      "tanim_tr": "Deve ve devegiller",
+      "tanim_en": "Camels and camelids",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02122",
+      "tanim_tr": "Koyun",
+      "tanim_en": "Sheep",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02123",
+      "tanim_tr": "Keçi",
+      "tanim_en": "Goat",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02129",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer geviş getiriciler",
+      "tanim_en": "Other ruminants not classified elsewhere",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02131",
+      "tanim_tr": "Atlar",
+      "tanim_en": "Horses",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02132",
+      "tanim_tr": "Eşekler",
+      "tanim_en": "Donkeys",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02133",
+      "tanim_tr": "Katırlar ve bardolar",
+      "tanim_en": "Mules and bardos",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02140",
+      "tanim_tr": "Domuz",
+      "tanim_en": "Pig",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02151",
+      "tanim_tr": "Tavuk",
+      "tanim_en": "Chicken",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02152",
+      "tanim_tr": "Hindi",
+      "tanim_en": "Turkey",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02153",
+      "tanim_tr": "Kaz",
+      "tanim_en": "Goose",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02154",
+      "tanim_tr": "Ördek",
+      "tanim_en": "Duck",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02155",
+      "tanim_tr": "Beç tavuğu",
+      "tanim_en": "Guinea fowl",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02191",
+      "tanim_tr": "Tavşan (evcil) ve yabani tavşan",
+      "tanim_en": "Rabbits (domestic) and wild rabbits",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02192",
+      "tanim_tr": "Diğer memeliler",
+      "tanim_en": "Other mammals",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02193",
+      "tanim_tr": "Devekuşu",
+      "tanim_en": "Ostrich",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02194",
+      "tanim_tr": "Diğer kuşlar",
+      "tanim_en": "Other birds",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02195",
+      "tanim_tr": "Sürüngenler",
+      "tanim_en": "Reptiles",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02196",
+      "tanim_tr": "Arılar",
+      "tanim_en": "Bees",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02199",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer canlı hayvanlar",
+      "tanim_en": "Other live animals not classified elsewhere",
+      "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02211",
+      "tanim_tr": "İşlenmemiş sığır sütü",
+      "tanim_en": "Unprocessed cow's milk",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02212",
+      "tanim_tr": "İşlenmemiş manda sütü",
+      "tanim_en": "Unprocessed buffalo milk",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02291",
+      "tanim_tr": "İşlenmemiş koyun sütü",
+      "tanim_en": "Unprocessed sheep's milk",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02292",
+      "tanim_tr": "İşlenmemiş keçi sütü",
+      "tanim_en": "Unprocessed goat milk",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02293",
+      "tanim_tr": "İşlenmemiş deve sütü",
+      "tanim_en": "Unprocessed camel milk",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02299",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer işlenmemiş süt",
+      "tanim_en": "Other unprocessed milk not classified elsewhere",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02311",
+      "tanim_tr": "Tavuk yumurtaları, kabuklu, taze, kuluçka için",
+      "tanim_en": "Chicken eggs, in shells, fresh, for incubation.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02312",
+      "tanim_tr": "Diğer tavuk yumurtaları, kabuklu, taze",
+      "tanim_en": "Other chicken eggs, in their shells, fresh.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02321",
+      "tanim_tr": "Diğer kuşların yumurtaları, kabuklu, taze, kuluçka için",
+      "tanim_en": "Eggs of other birds, in shells, fresh, for incubation.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02322",
+      "tanim_tr": "Diğer kuşların diğer yumurtaları, kabuklu, taze",
+      "tanim_en": "Other birds' other eggs, in shells, fresh.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02411",
+      "tanim_tr": "Büyükbaş hayvan spermaları",
+      "tanim_en": "Cattle semen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02419",
+      "tanim_tr": "Başka yerde sınıflandırılmamış spermalar",
+      "tanim_en": "Sperm not classified elsewhere",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02420",
+      "tanim_tr": "Embriyo",
+      "tanim_en": "Embryo",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02910",
+      "tanim_tr": "Doğal bal",
+      "tanim_en": "Natural honey",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02920",
+      "tanim_tr": "Salyangoz; taze, soğutulmuş, dondurulmuş, kurutulmuş, tuzlanmış veya salamura yapılmış (deniz salyangozu hariç)",
+      "tanim_en": "Snails; fresh, chilled, frozen, dried, salted or pickled (excluding sea snails)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02931",
+      "tanim_tr": "Yenilebilir böcekler, cansız",
+      "tanim_en": "Edible insects, inanimate.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02939",
+      "tanim_tr": "Başka yerde sınıflandırılmamış hayvansal kaynaklı diğer yenilebilir ürünler",
+      "tanim_en": "Other edible products of animal origin not classified elsewhere",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02941",
+      "tanim_tr": "Kırkılmış yün, yağlı, tüm halde yıkanmış yapağı dahil",
+      "tanim_en": "Shorn wool, oiled, including whole washed fleece.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02942",
+      "tanim_tr": "Posttan elde edilen yağlı yünler, yıkanmış yapağı dahil; işlenmemiş hayvan kılları",
+      "tanim_en": "Oily wool obtained from hides, including washed fleece; unprocessed animal hair.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02943",
+      "tanim_tr": "İnce hayvan kılları, kardelenmemiş veya taranmamış",
+      "tanim_en": "Fine animal hair, unsnowed or uncombed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02944",
+      "tanim_tr": "İpek böceği kozası, çile yapmaya uygun olanlar",
+      "tanim_en": "Silkworm cocoons, those suitable for spinning.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02951",
+      "tanim_tr": "Sığırların ham post ve derileri (büyükbaş hayvanların)",
+      "tanim_en": "Raw hides and skins of cattle (bovine animals)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02952",
+      "tanim_tr": "At ve atlara benzer ham hayvan post ve derileri",
+      "tanim_en": "Horse and similar animal hides and skins",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02953",
+      "tanim_tr": "Ham post ve deriler (koyun ve kuzuların)",
+      "tanim_en": "Raw hides and skins (of sheep and lambs)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02954",
+      "tanim_tr": "Ham post ve deriler (keçi ve oğlakların)",
+      "tanim_en": "Raw hides and skins (of goats and kids)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02955",
+      "tanim_tr": "İşlenmemiş kürklü deriler",
+      "tanim_en": "Unprocessed fur skins",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02959",
+      "tanim_tr": "Başka yerde sınıflandırılmamış işlenmemiş diğer hayvan derileri (taze veya muhafaza edilmiş, fakat daha fazla işlenmemiş olanlar) (büyükbaş ve küçükbaş hayvanlardan elde edilenler hariç)",
+      "tanim_en": "Other unprocessed animal hides not classified elsewhere (fresh or preserved, but not further processed) (excluding those from cattle and sheep)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "02960",
+      "tanim_tr": "Böcek balmumu ve ispermeçet (balina yağı), rafine edilmiş veya renklendirilmiş olsun ya da olmasın",
+      "tanim_en": "Insect wax and spermaceti (whale oil), whether refined or colored.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03111",
+      "tanim_tr": "Yuvarlak odun, kerestelik tomruklar ve kaplama kütükleri, iğne yapraklı ağaçlardan elde edilenler",
+      "tanim_en": "Roundwood, timber logs and veneer logs, obtained from coniferous trees.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03112",
+      "tanim_tr": "Yuvarlak odun, kağıt hamuru odunu ve ahşap bazlı paneller için odun, iğne yapraklı ağaçlardan elde edilenler",
+      "tanim_en": "Roundwood, pulpwood, and wood for wood-based panels are obtained from coniferous trees.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03119",
+      "tanim_tr": "Diğer yuvarlak odunlar, iğne yapraklı ağaçlardan elde edilenler",
+      "tanim_en": "Other roundwoods are obtained from coniferous trees.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03121",
+      "tanim_tr": "Yuvarlak odun, kerestelik tomruklar ve kaplama kütükleri, iğne yapraklı olmayan ağaçlardan elde edilenler",
+      "tanim_en": "Roundwood, timber logs and veneer logs obtained from non-coniferous trees.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03122",
+      "tanim_tr": "Yuvarlak odun, kağıt hamuru odunu ve ahşap bazlı paneller için odun, iğne yapraklı olmayan ağaçlardan elde edilenler",
+      "tanim_en": "Roundwood, pulpwood, and wood for wood-based panels are obtained from non-coniferous trees.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03129",
+      "tanim_tr": "Diğer yuvarlak odunlar, iğne yapraklı olmayan ağaçlardan elde edilenler",
+      "tanim_en": "Other roundwoods are obtained from non-coniferous trees.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03131",
+      "tanim_tr": "Yakacak odun, iğne yapraklı ağaçlardan elde edilenler",
+      "tanim_en": "Firewood is obtained from coniferous trees.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03132",
+      "tanim_tr": "Yakacak odun, iğne yapraklı olmayan ağaçlardan elde edilenler",
+      "tanim_en": "Firewood is obtained from non-coniferous trees.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03211",
+      "tanim_tr": "Balata, sumatra zamkı, guayula, çam sakızı ve benzer doğal zamklar, temel halde veya şerit, plaka veya çizgi halinde",
+      "tanim_en": "Gums such as gum arabic, Sumatran gum, guayula, pine gum, and similar natural gums are available in base form or in strips, plates, or lines.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03219",
+      "tanim_tr": "Başka yerde sınıflandırılmamış laka, kına çiçeği (belesan) ve doğal zamklar ve diğer reçineler",
+      "tanim_en": "Lacquer, henna flower (belesan), and natural gums and other resins not classified elsewhere.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03220",
+      "tanim_tr": "Doğal mantar (tıpa, yer karosu vb. yapımında kullanılan), ham veya basitçe işlenmiş",
+      "tanim_en": "Natural cork (used in the manufacture of corkscrews, floor tiles, etc.), raw or simply processed.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03231",
+      "tanim_tr": "Yabani yenilebilir sert kabuklu meyveler",
+      "tanim_en": "Wild edible hard-shelled fruits",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03232",
+      "tanim_tr": "Yabani yenilebilir mantarlar",
+      "tanim_en": "Wild edible mushrooms",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03233",
+      "tanim_tr": "Yabani yenilebilir yer mantarları",
+      "tanim_en": "Wild edible truffles",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03234",
+      "tanim_tr": "Yabani yenilebilir üzümsü meyveler",
+      "tanim_en": "Wild edible berry fruits",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03239",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer yabani yenilebilir ürünler",
+      "tanim_en": "Other wild edible products not classified elsewhere",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03241",
+      "tanim_tr": "Yılbaşı ağaçları (süsleme amaçlı kesilmiş)",
+      "tanim_en": "Christmas trees (cut down for decoration)",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03249",
+      "tanim_tr": "Bitkilerin, çiçekler veya çiçek tomurcukları hariç, diğer parçaları ve çim, yosun ve likenlerin süslemeye uygun kısımları",
+      "tanim_en": "Ornamental parts of plants, excluding flowers or flower buds, and the parts of grasses, moss, and lichens suitable for decoration.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03251",
+      "tanim_tr": "Pamuk linterleri",
+      "tanim_en": "Cotton linters",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "03252",
+      "tanim_tr": "Bitkisel materyaller; genellikle örgü, dolgu veya yastıklamada gibi kullanımlar için olanlar; pamuk linterleri hariç diğer bitkisel ürünler",
+      "tanim_en": "Plant-based materials; generally those intended for uses such as knitting, stuffing, or cushioning; other plant-based products excluding cotton linters.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04111",
+      "tanim_tr": "Yabani süs balıkları",
+      "tanim_en": "Wild ornamental fish",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04112",
+      "tanim_tr": "Süs balıkları, çiftlikte yetiştirilen",
+      "tanim_en": "Ornamental fish are farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04191",
+      "tanim_tr": "İnsan tüketimi için olmayan diğer yabani canlı balıklar, su ürünleri yetiştiriciliği için olan yavrular ve yemler dahil",
+      "tanim_en": "Other wild live fish not intended for human consumption, including fry and feed for aquaculture.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04192",
+      "tanim_tr": "İnsan tüketimi için olmayan diğer çiftlikte yetiştirilen canlı balıklar, su ürünleri yetiştiriciliği için olan yavrular ve yemler dahil",
+      "tanim_en": "Other farm-raised live fish not intended for human consumption, including fry and feed for aquaculture.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04211",
+      "tanim_tr": "Yabani tatlı su balıkları, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild freshwater fish, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04212",
+      "tanim_tr": "Tatlı su balıkları, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Freshwater fish, live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04221",
+      "tanim_tr": "Yabani somon balıkları, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild salmon, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04222",
+      "tanim_tr": "Somon balıkları, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Salmon, live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04231",
+      "tanim_tr": "Yabani yassı balıklar, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild flatfish, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04232",
+      "tanim_tr": "Yassı balıklar, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Flatfish, live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04241",
+      "tanim_tr": "Yabani mezgit balıkları, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild cod, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04242",
+      "tanim_tr": "Mezgit balıkları, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Haddock, live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04251",
+      "tanim_tr": "Yabani ton balığı, yazılı orkinos veya çizgili palamut, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild tuna, striped tuna, or bonito, live, fresh, or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04252",
+      "tanim_tr": "Ton balığı, yazılı orkinos veya çizgili palamut, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Tuna, striped tuna, or bonito, live, fresh, or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04261",
+      "tanim_tr": "Diğer yabani pelajik balıklar (ton balığı, yazılı orkinos veya çizgili bonito hariç), canlı, taze veya soğutulmuş",
+      "tanim_en": "Other wild pelagic fish (excluding tuna, striped tuna or striped bonito), live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04262",
+      "tanim_tr": "Diğer pelajik balıklar (ton balığı, yazılı orkinos veya çizgili bonito hariç), canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Other pelagic fish (excluding tuna, striped tuna or striped bonito), live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04291",
+      "tanim_tr": "Diğer yumuşakçalar, canlı, taze veya soğutulmuş",
+      "tanim_en": "Other mollusks, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04292",
+      "tanim_tr": "Diğer çiftlik balıkları, canlı, taze veya soğutulmuş",
+      "tanim_en": "Other farmed fish, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04311",
+      "tanim_tr": "Yabani yengeçler, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild crabs, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04312",
+      "tanim_tr": "Yengeçler, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Crabs, live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04321",
+      "tanim_tr": "Yabani kaya ıstakozu ve diğer deniz kerevitleri, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild rock lobster and other sea crayfish, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04322",
+      "tanim_tr": "Kaya ıstakozu ve diğer deniz kerevitleri, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Rock lobster and other crayfish, live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04331",
+      "tanim_tr": "Yabani ıstakozlar (Homarus spp.), canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild lobsters (Homarus spp.), live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04332",
+      "tanim_tr": "Istakozlar (Homarus spp.), canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Lobsters (Homarus spp.), live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04341",
+      "tanim_tr": "Yabani Norveç ıstakozu, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild Norwegian lobster, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04342",
+      "tanim_tr": "Norveç ıstakozu, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Norwegian lobster, live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04351",
+      "tanim_tr": "Yabani soğuk su karidesleri ve jumbo karidesler (Pandalus spp., Crangon crangon), canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild coldwater shrimp and jumbo prawns (Pandalus spp., Crangon crangon), live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04352",
+      "tanim_tr": "Soğuk su karidesleri ve jumbo karidesler (Pandalus spp., Crangon crangon), canlı, taze veya soğutulmuş, çiflikte yetiştirilen",
+      "tanim_en": "Coldwater shrimp and jumbo shrimp (Pandalus spp., Crangon crangon), live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04361",
+      "tanim_tr": "Diğer yabani karidesler ve jumbo karidesler, canlı, taze veya soğutulmuş",
+      "tanim_en": "Other wild shrimp and jumbo shrimp, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04362",
+      "tanim_tr": "Diğer çiftlik karidesleri ve jumbo karidesler, canlı, taze veya soğutulmuş",
+      "tanim_en": "Other farmed shrimp and jumbo shrimp, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04391",
+      "tanim_tr": "Diğer yabani kabuklu deniz ürünleri, canlı, taze veya soğutulmuş",
+      "tanim_en": "Other wild shellfish, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04392",
+      "tanim_tr": "Diğer çiftlik kabuklu deniz ürünleri, canlı, taze veya soğutulmuş",
+      "tanim_en": "Other farmed shellfish, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04411",
+      "tanim_tr": "Yabani deniz kulağı, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild abalone, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04412",
+      "tanim_tr": "Deniz kulağı, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Abalone, live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04421",
+      "tanim_tr": "Yabani istiridye, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild oysters, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04422",
+      "tanim_tr": "İstiridye, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Oysters, live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04431",
+      "tanim_tr": "Yabani midye, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild mussels, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04432",
+      "tanim_tr": "Midye, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Mussels, live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04441",
+      "tanim_tr": "Yabani deniz tarağı, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild scallops, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04442",
+      "tanim_tr": "Deniz tarağı, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Scallops, live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04451",
+      "tanim_tr": "Yabani kalın kabuklu midyeler, kum midyeleri ve kalkan midyeleri türünden deniz ürünleri, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild clams, mussels, and turbot are among the seafood options available live, fresh, or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04452",
+      "tanim_tr": "Çiftlikte yetiştirilen kalın kabuklu midyeler, kum midyeleri ve kalkan midyeleri türünden deniz ürünleri, canlı, taze veya soğutulmuş",
+      "tanim_en": "Farm-raised mussels, clams, and turbot are available as live, fresh, or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04461",
+      "tanim_tr": "Yabani mürekkep balığı ve kalamar, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild squid and cuttlefish, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04462",
+      "tanim_tr": "Mürekkep balığı ve kalamar, canlı, taze veya soğutulmuş çiftlikte yetiştirilen",
+      "tanim_en": "Cuttlefish and squid are available live, fresh, or chilled from farms.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04471",
+      "tanim_tr": "Yabani ahtapot, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild octopus, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04472",
+      "tanim_tr": "Ahtapot, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Octopus, live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04491",
+      "tanim_tr": "Diğer yabani yumuşakçalar, canlı, taze veya soğutulmuş",
+      "tanim_en": "Other wild mollusks, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04492",
+      "tanim_tr": "Diğer çiftlik yumuşakçaları, canlı, taze veya soğutulmuş",
+      "tanim_en": "Other farmed mollusks, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04511",
+      "tanim_tr": "Yabani deniz hıyarı, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild sea cucumber, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04512",
+      "tanim_tr": "Deniz hıyarı, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Sea cucumbers, live, fresh or chilled, farm-grown.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04521",
+      "tanim_tr": "Yabani deniz kestanesi, canlı, taze veya soğutulmuş",
+      "tanim_en": "Wild sea urchin, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04522",
+      "tanim_tr": "Deniz kestanesi, canlı, taze veya soğutulmuş, çiftlikte yetiştirilen",
+      "tanim_en": "Sea urchins, live, fresh or chilled, farm-raised.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04530",
+      "tanim_tr": "Deniz anası, canlı, taze veya soğutulmuş",
+      "tanim_en": "Jellyfish, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04590",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer su omurgasızları, canlı, taze veya soğutulmuş",
+      "tanim_en": "Other aquatic invertebrates not classified elsewhere, live, fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04911",
+      "tanim_tr": "Mercan ve benzeri ürünler, yumuşakçaların, kabukluların veya derisi dikenlilerin kabukları ve mürekkep balığı kemiği",
+      "tanim_en": "Coral and similar products, shells of mollusks, crustaceans or echinoderms, and cuttlefish bone.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04912",
+      "tanim_tr": "Yabani süs amaçlı canlı su bitkileri ve hayvanları",
+      "tanim_en": "Wild ornamental aquatic plants and animals",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04913",
+      "tanim_tr": "Süs amaçlı canlı su bitkileri ve hayvanları, çiftlikte yetiştirilen",
+      "tanim_en": "Ornamental live aquatic plants and animals, raised on the farm.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04920",
+      "tanim_tr": "Doğal süngerler, akuatik hayvan kökenli",
+      "tanim_en": "Natural sponges originate from aquatic animals.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04931",
+      "tanim_tr": "Yabani deniz yosunları ve diğer algler, taze, dondurulmuş veya kurutulmuş, öğütülmüş olsun veya olmasın, insan tüketimine uygun",
+      "tanim_en": "Wild seaweed and other algae, whether fresh, frozen or dried, ground or not, are suitable for human consumption.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04932",
+      "tanim_tr": "Çiftlik deniz yosunları ve diğer algler, taze, dondurulmuş veya kurutulmuş, öğütülmüş olsun veya olmasın, insan tüketimine uygun",
+      "tanim_en": "Farmed seaweed and other algae, fresh, frozen or dried, whether ground or not, are suitable for human consumption.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04933",
+      "tanim_tr": "Yabani deniz yosunları ve diğer algler, taze, dondurulmuş veya kurutulmuş, öğütülmüş olsun veya olmasın, insan tüketimine uygun olmayan",
+      "tanim_en": "Wild seaweed and other algae, whether fresh, frozen or dried, ground or not, are unsuitable for human consumption.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "04934",
+      "tanim_tr": "Çiftlik deniz yosunları ve diğer algler, taze, dondurulmuş veya kurutulmuş, öğütülmüş olsun veya olmasın, insan tüketimine uygun olmayan",
+      "tanim_en": "Farmed seaweed and other algae, whether fresh, frozen or dried, ground or not, are unsuitable for human consumption.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    }
+  ]
+}

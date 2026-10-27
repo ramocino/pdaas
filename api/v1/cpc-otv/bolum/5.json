@@ -1,0 +1,2106 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "cpc-otv",
+      "ad": {
+        "tr": "CPC ÖTV Eşleşmesi",
+        "en": "CPC SCT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "cpc",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.27",
+    "guncelleme": "2026-10-27",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.27"
+      },
+      "uretim_zamani": "2026-10-27T13:33:06.673129+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "bolum",
+      "kod": "5",
+      "ana_dosya": "index.json"
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "53111",
+      "tanim_tr": "Bir ve iki konutlu ikamet amaçlı binalar",
+      "tanim_en": "Residential buildings with one or two dwellings.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53112",
+      "tanim_tr": "Çok konutlu ikamet amaçlı binalar",
+      "tanim_en": "Multi-unit residential buildings",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53121",
+      "tanim_tr": "Sanayi binaları",
+      "tanim_en": "Industrial buildings",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53122",
+      "tanim_tr": "Ticari binalar",
+      "tanim_en": "Commercial buildings",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53129",
+      "tanim_tr": "İkamet amaçlı olmayan diğer binalar",
+      "tanim_en": "Other non-residential buildings",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53211",
+      "tanim_tr": "Otoyol (yükseltilmiş otoyollar hariç), cadde ve sokaklar, karayolları",
+      "tanim_en": "Motorways (excluding elevated motorways), streets and roads, highways",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53212",
+      "tanim_tr": "Demiryolları",
+      "tanim_en": "Railways",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53213",
+      "tanim_tr": "Havaalanı pistleri",
+      "tanim_en": "Airport runways",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53221",
+      "tanim_tr": "Köprü, yükseltilmiş otoyolu",
+      "tanim_en": "Bridge, elevated highway",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53222",
+      "tanim_tr": "Tünel",
+      "tanim_en": "Tunnel",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53231",
+      "tanim_tr": "Su kemerleri ve diğer su temini kanalları (boru hatları hariç)",
+      "tanim_en": "Aqueducts and other water supply channels (excluding pipelines)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53232",
+      "tanim_tr": "Limanlar, su yolları ve ilgili tesisler",
+      "tanim_en": "Ports, waterways and related facilities",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53233",
+      "tanim_tr": "Barajlar",
+      "tanim_en": "Dams",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53234",
+      "tanim_tr": "Sulama ve sel kontrol su işleri",
+      "tanim_en": "Irrigation and flood control waterworks.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53241",
+      "tanim_tr": "Uzun mesafe boru hattı",
+      "tanim_en": "Long-distance pipeline",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53242",
+      "tanim_tr": "Uzun mesafe iletişim ve elektrik hatları (kablolar)",
+      "tanim_en": "Long-distance communication and power lines (cables)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53251",
+      "tanim_tr": "Yerel (kentsel) boru hatları",
+      "tanim_en": "Local (urban) pipelines",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53252",
+      "tanim_tr": "Yerel (kentsel) kablolar ve ilgili işler",
+      "tanim_en": "Local (urban) cabling and related works.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53253",
+      "tanim_tr": "Atık su ve su işleme santralleri",
+      "tanim_en": "Wastewater and water treatment plants",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53261",
+      "tanim_tr": "Maden inşaatları",
+      "tanim_en": "Mining constructions",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53262",
+      "tanim_tr": "Elektrik santralı inşaatları",
+      "tanim_en": "Power plant constructions",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53269",
+      "tanim_tr": "Diğer imalat için inşaatları",
+      "tanim_en": "Construction for other manufacturing",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53270",
+      "tanim_tr": "Açık alan spor ve rekreasyon tesisleri",
+      "tanim_en": "Outdoor sports and recreation facilities",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "53290",
+      "tanim_tr": "Diğer bina dışı yapı inşaat çalışmaları",
+      "tanim_en": "Other building exterior construction works",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54111",
+      "tanim_tr": "Bir ve iki konutlu ikamet amaçlı binalarin genel inşaat hizmetleri",
+      "tanim_en": "General construction services for single and two-unit residential buildings.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54112",
+      "tanim_tr": "Çok konutlu ikamet amaçlı binalarin genel inşaat hizmetleri",
+      "tanim_en": "General construction services for multi-unit residential buildings.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54121",
+      "tanim_tr": "Sanayi binalarının genel inşaat hizmetleri",
+      "tanim_en": "General construction services for industrial buildings.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54122",
+      "tanim_tr": "Ticari binaların genel inşaat hizmetleri",
+      "tanim_en": "General construction services for commercial buildings.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54129",
+      "tanim_tr": "İkamet amaçlı olmayan diğer binaların genel inşaat hizmetleri",
+      "tanim_en": "General construction services for other non-residential buildings.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54211",
+      "tanim_tr": "Otoyol (yükseltilmiş otoyollar hariç), cadde ve sokak genel inşaat hizmetleri",
+      "tanim_en": "General construction services for highways (excluding elevated highways), streets and roads.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54212",
+      "tanim_tr": "Karayolu genel inşaat hizmetleri",
+      "tanim_en": "General road construction services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54213",
+      "tanim_tr": "Havaalanı pisti genel inşaat hizmetleri",
+      "tanim_en": "Airport runway general construction services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54221",
+      "tanim_tr": "Köprü ve yükseltilmiş otoyol genel inşaat hizmetleri",
+      "tanim_en": "Bridge and elevated highway general construction services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54222",
+      "tanim_tr": "Tünellerin genel inşaat hizmetleri",
+      "tanim_en": "General construction services for tunnels",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54231",
+      "tanim_tr": "Barajlar, limanlar ve benzerleri için genel inşaat hizmetleri",
+      "tanim_en": "General construction services for dams, ports, and similar structures.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54232",
+      "tanim_tr": "Sulama, atık sistemleri ve su işleme ve arıtma tesisleri için genel inşaat hizmetleri",
+      "tanim_en": "General construction services for irrigation, waste systems, and water treatment and purification facilities.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54233",
+      "tanim_tr": "Barajların genel inşaat hizmetleri",
+      "tanim_en": "General construction services for dams",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54234",
+      "tanim_tr": "Sulama ve sel kontrol su işlerinin genel inşaat hizmetleri",
+      "tanim_en": "General construction services for irrigation and flood control waterworks.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54241",
+      "tanim_tr": "Uzun mesafe boru hatları için genel inşaat hizmetleri",
+      "tanim_en": "General construction services for long-distance pipelines.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54242",
+      "tanim_tr": "Uzun mesafe iletişim ve elektrik hattı (yüksek gerilim hattı) için genel inşaat hizmetleri",
+      "tanim_en": "General construction services for long-distance communication and power lines (high-voltage lines).",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54251",
+      "tanim_tr": "Yerel (kentsel) boru hatları için genel inşaat hizmetleri",
+      "tanim_en": "General construction services for local (urban) pipelines.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54252",
+      "tanim_tr": "Yerel (kentsel) kablolar ve ilgili işler için genel inşaat hizmetleri",
+      "tanim_en": "General construction services for local (urban) cabling and related works.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54253",
+      "tanim_tr": "Atık su ve su işleme santrallerinin genel inşaat hizmetleri",
+      "tanim_en": "General construction services for wastewater and water treatment plants.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54261",
+      "tanim_tr": "Maden için genel inşaat hizmetleri",
+      "tanim_en": "General construction services for mining.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54262",
+      "tanim_tr": "Enerji santrallerinin genel inşaat hizmetleri",
+      "tanim_en": "General construction services for power plants.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54269",
+      "tanim_tr": "Diğer sanayi santrallerinin genel inşaat hizmetleri",
+      "tanim_en": "General construction services for other industrial plants.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54270",
+      "tanim_tr": "Maden ve sanayi santralleri (elektrik hariç) için genel inşaat hizmetleri",
+      "tanim_en": "General construction services for mines and industrial plants (excluding electricity).",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54290",
+      "tanim_tr": "Başka yerde sınıflandırılımamış bina dışı diğer yapı inşaatları için genel inşaat hizmetleri",
+      "tanim_en": "General construction services for other non-building constructions not classified elsewhere.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54310",
+      "tanim_tr": "Yıkım hizmetleri",
+      "tanim_en": "Demolition services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54320",
+      "tanim_tr": "Arazi düzenleme ve temizleme hizmetleri",
+      "tanim_en": "Land preparation and clearing services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54330",
+      "tanim_tr": "Kazı ve harfiyat hizmetleri",
+      "tanim_en": "Excavation and earthmoving services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54341",
+      "tanim_tr": "Su kuyusu açma hizmetleri",
+      "tanim_en": "Water well drilling services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54342",
+      "tanim_tr": "Septik (lağım) sistemi kurulum hizmetleri",
+      "tanim_en": "Septic (sewer) system installation services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54400",
+      "tanim_tr": "Prefabrik yapıların montajı ve kurulması",
+      "tanim_en": "Assembly and installation of prefabricated structures.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54511",
+      "tanim_tr": "Kazık çakma hizmetleri",
+      "tanim_en": "Pile driving services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54512",
+      "tanim_tr": "İnşaat temel hizmetleri",
+      "tanim_en": "Construction basic services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54521",
+      "tanim_tr": "Bina iskelet hizmetleri",
+      "tanim_en": "Building framing services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54522",
+      "tanim_tr": "Çatı iskeleti hizmetleri",
+      "tanim_en": "Roof frame services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54530",
+      "tanim_tr": "Çatı yalıtımı ve su yalıtımı hizmetleri",
+      "tanim_en": "Roof insulation and waterproofing services.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54540",
+      "tanim_tr": "Beton hizmetleri",
+      "tanim_en": "Concrete services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54550",
+      "tanim_tr": "Yapısal çelik kurma hizmetleri",
+      "tanim_en": "Structural steel erection services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54560",
+      "tanim_tr": "Duvarcılık hizmetleri",
+      "tanim_en": "Masonry services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54570",
+      "tanim_tr": "İnşaat iskelesi hizmetleri",
+      "tanim_en": "Construction scaffolding services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54590",
+      "tanim_tr": "Diğer uzmanlaşmış ticari inşaat hizmetleri",
+      "tanim_en": "Other specialized commercial construction services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54611",
+      "tanim_tr": "Elektrik teli ve bağlantı hizmetleri",
+      "tanim_en": "Electrical wiring and connection services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54612",
+      "tanim_tr": "Yangın alarmı kurulum hizmetleri",
+      "tanim_en": "Fire alarm installation services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54613",
+      "tanim_tr": "Hırsızlık alarm kurulum hizmetleri",
+      "tanim_en": "Burglar alarm installation services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54614",
+      "tanim_tr": "İkamet amaçlı anten kurulum hizmetleri",
+      "tanim_en": "Residential antenna installation services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54619",
+      "tanim_tr": "Diğer elektrik kurulum hizmetleri",
+      "tanim_en": "Other electrical installation services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54621",
+      "tanim_tr": "Su tesisatı hizmetleri",
+      "tanim_en": "Plumbing services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54622",
+      "tanim_tr": "Atık boşaltma döşeme hizmetleri",
+      "tanim_en": "Waste disposal and laying services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54631",
+      "tanim_tr": "Isıtma ekipmanları kurulum hizmetleri",
+      "tanim_en": "Heating equipment installation services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54632",
+      "tanim_tr": "Havalandırma ve iklimlendirme ekipmanları kurulum hizmetleri",
+      "tanim_en": "Ventilation and air conditioning equipment installation services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54640",
+      "tanim_tr": "Gaz tesisatı hizmetleri",
+      "tanim_en": "Gas installation services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54651",
+      "tanim_tr": "Ses veya titreşim yalıtım hizmetleri",
+      "tanim_en": "Sound or vibration insulation services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54652",
+      "tanim_tr": "Isı yalıtım hizmetleri",
+      "tanim_en": "Thermal insulation services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54659",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer yalıtım hizmetleri",
+      "tanim_en": "Other insulation services not classified elsewhere.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54691",
+      "tanim_tr": "Asansör ve yürüyen merdiven kurulum hizmetleri",
+      "tanim_en": "Elevator and escalator installation services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54699",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer kurulum hizmetleri",
+      "tanim_en": "Other installation services not classified elsewhere.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54710",
+      "tanim_tr": "Cam takma hizmetleri",
+      "tanim_en": "Glass installation services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54720",
+      "tanim_tr": "Sıva hizmetleri",
+      "tanim_en": "Plastering services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54730",
+      "tanim_tr": "Boyama hizmetleri",
+      "tanim_en": "Painting services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54740",
+      "tanim_tr": "Zemin ve duvar döşeme hizmetleri",
+      "tanim_en": "Floor and wall tiling services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54750",
+      "tanim_tr": "Diğer yer döşeme ve kaplama, duvar kaplama ve duvar kağıdı kaplama işleri",
+      "tanim_en": "Other flooring and cladding, wall covering and wallpapering works.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54760",
+      "tanim_tr": "Doğrama ve marangozluk hizmetleri",
+      "tanim_en": "Joinery and carpentry services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54770",
+      "tanim_tr": "Parmaklık ve korkuluk hizmetleri",
+      "tanim_en": "Railing and balustrade services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "54790",
+      "tanim_tr": "Diğer bina tamamlama ve bitirme hizmetleri",
+      "tanim_en": "Other building completion and finishing services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    }
+  ]
+}

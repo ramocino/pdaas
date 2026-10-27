@@ -1,0 +1,825 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-nace",
+      "ad": {
+        "tr": "GTİP NACE Eşleşmesi",
+        "en": "GTIP NACE Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.27",
+    "guncelleme": "2026-10-27",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.27"
+      },
+      "uretim_zamani": "2026-10-27T13:33:06.673129+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "59",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:2bf21af2e1b48cb048b1c62f349479df4cd92dff84f4409041ccdfb4c311064f"
+  },
+  "kayitlar": [
+    {
+      "kod": "590110000000",
+      "tanim_tr": "Zamk veya nişastalı maddelerle sıvanmış mensucat (kitap kapağı, vb. yerlerde kullanılan)",
+      "tanim_en": "Textiles coated with gum or starch-based substances (used in book covers, etc.)",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590190001000",
+      "tanim_tr": "Mühendis muşambası, şeffaf bezler ve hazır tualler",
+      "tanim_en": "Engineer's tarpaulins, transparent fabrics, and ready-made canvases.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590190009000",
+      "tanim_tr": "Şapkalıkta kullanılan bukran vb. sertleştirilmiş mensucat",
+      "tanim_en": "stiffened textiles such as bukran used in hat making",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590210100000",
+      "tanim_tr": "Nakil aracı iç ve dış lastiği için kauçuk emdirilmiş mensucat (Kord bezi); naylondan veya diğer poliamidlerden yüksek mukavemetli",
+      "tanim_en": "Rubber-impregnated fabric (cord cloth) for vehicle inner and outer tires; high strength from nylon or other polyamides.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590210901000",
+      "tanim_tr": "Nakil aracı iç ve dış lastiği için mensucat (Kord bezi); naylondan/diğer poliamidlerden yüksek mukavemetli (emdirilmemiş, sıvanmamış veya kaplanmamış)",
+      "tanim_en": "Textiles for vehicle inner and outer tires (Cord fabric); high strength (unimpregnated, uncoated or uncoated) of nylon/other polyamides.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590210909000",
+      "tanim_tr": "Nakil aracı iç ve dış lastiği için diğer mensucat (Kord bezi); naylondan veya diğer poliamidlerden yüksek mukavemetli",
+      "tanim_en": "Other textiles for vehicle inner and outer tires (cord fabric); high strength nylon or other polyamides.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590220100000",
+      "tanim_tr": "Nakil aracı iç ve dış lastiği için kauçuk emdirilmiş mensucat (Kord bezi); poliesterlerden yüksek mukavemetli",
+      "tanim_en": "Rubber-impregnated fabric (cord cloth) for vehicle inner and outer tires; high-strength polyester.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590220901000",
+      "tanim_tr": "Nakil aracı iç ve dış lastiği için mensucat (Kord bezi); poliesterlerden yüksek mukavemetli (emdirilmemiş, sıvanmamış veya kaplanmamış)",
+      "tanim_en": "Textiles (cord fabric) for inner and outer tires of transport vehicles; high strength polyesters (unimpregnated, uncoated or uncoated)",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590220909000",
+      "tanim_tr": "Nakil aracı iç ve dış lastiği için diğer mensucat (Kord bezi); poliesterlerden yüksek mukavemetli",
+      "tanim_en": "Other textiles for vehicle inner and outer tires (cord fabric); high strength polyesters.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590290100000",
+      "tanim_tr": "Nakil aracı iç ve dış lastiği için kauçuk emdirilmiş mensucat (Kord bezi); viskoz ipeğinden yüksek mukavemetli",
+      "tanim_en": "Rubber-impregnated fabric (cord cloth) for vehicle inner and outer tires; high-strength viscose silk.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590290901000",
+      "tanim_tr": "Nakil aracı iç ve dış lastiği için mensucat (Kord bezi); viskoz ipeğinden yüksek mukavemetli (emdirilmemiş, sıvanmamış veya kaplanmamış)",
+      "tanim_en": "Textiles (cord fabric) for inner and outer tires of transport vehicles; high-strength (unimpregnated, uncoated or uncoated) viscose silk.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590290909000",
+      "tanim_tr": "Nakil aracı iç ve dış lastiği için diğer mensucat (Kord bezi); viskoz ipeğinden yüksek mukavemetli",
+      "tanim_en": "Other textiles for vehicle inner and outer tires (cord fabric); high strength viscose silk.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590310101000",
+      "tanim_tr": "Polivinil klorür emdirilmiş deri taklidi mensucat",
+      "tanim_en": "Polyvinyl chloride impregnated imitation leather fabrics",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590310109000",
+      "tanim_tr": "Polivinil klorür emdirilmiş diğer mensucat",
+      "tanim_en": "Other textiles impregnated with polyvinyl chloride",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590310901000",
+      "tanim_tr": "Polivinil klorürle sıvanmış, kaplanmış veya bununla lamine edilmiş deri taklidi mensucat",
+      "tanim_en": "Leather imitation fabrics coated, covered or laminated with polyvinyl chloride.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590310909000",
+      "tanim_tr": "Polivinil klorürle sıvanmış, kaplanmış veya bununla lamine edilmiş diğer mensucat",
+      "tanim_en": "Other textiles coated, coated or laminated with polyvinyl chloride",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590320101000",
+      "tanim_tr": "Poliüretan emdirilmiş deri taklidi mensucat",
+      "tanim_en": "Polyurethane-impregnated imitation leather fabrics",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590320109000",
+      "tanim_tr": "Poliüretan emdirilmiş diğer mensucat",
+      "tanim_en": "Other polyurethane-impregnated textiles",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590320901000",
+      "tanim_tr": "Poliüretanla sıvanmış, kaplanmış veya bununla lamine edilmiş deri taklidi mensucat",
+      "tanim_en": "Leather imitation fabrics coated, covered or laminated with polyurethane.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590320909000",
+      "tanim_tr": "Poliüretanla sıvanmış, kaplanmış veya bununla lamine edilmiş diğer mensucat",
+      "tanim_en": "Other textiles coated, coated or laminated with polyurethane",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590390101000",
+      "tanim_tr": "Diğer plastikler emdirilmiş deri taklidi mensucat",
+      "tanim_en": "Other plastics impregnated imitation leather fabrics",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590390109000",
+      "tanim_tr": "Diğer plastikler emdirilmiş diğer mensucat",
+      "tanim_en": "Other plastics impregnated other textiles",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590390911000",
+      "tanim_tr": "Selüloz türevleri veya diğer plastiklerle sıvanmış, kaplanmış veya bunarla lamine edilmiş deri taklidi mensucat; dokuması ön yüzü teşkil eden",
+      "tanim_en": "Leather imitation textiles coated, covered or laminated with cellulose derivatives or other plastics; the weave forming the front surface.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590390919000",
+      "tanim_tr": "Selüloz türevleri veya diğer plastiklerle sıvanmış, kaplanmış veya bunarla lamine edilmiş diğer mensucat; dokuması ön yüzü teşkil eden",
+      "tanim_en": "Other textiles coated, covered or laminated with cellulose derivatives or other plastics; the weave of which constitutes the front surface.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590390991000",
+      "tanim_tr": "Diğer plastiklerle sıvanmış, kaplanmış veya bunarla lamine edilmiş deri taklidi diğer mensucat",
+      "tanim_en": "Other imitation leather textiles coated, covered or laminated with other plastics.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590390999000",
+      "tanim_tr": "Diğer plastiklerle sıvanmış, kaplanmış veya bunarla lamine edilmiş diğer mensucat",
+      "tanim_en": "Other textiles coated, covered or laminated with other plastics",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590410000000",
+      "tanim_tr": "Linoleum",
+      "tanim_en": "Linoleum",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590490000000",
+      "tanim_tr": "Sıvama veya kaplama maddesinin dokumaya elverişli mesnet üzerine tatbiki suretiyle elde edilen yer kaplamaları",
+      "tanim_en": "Floor coverings obtained by applying a coating or covering material onto a woven backing.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500100000",
+      "tanim_tr": "Duvar kaplamaları; herhangi bir maddeden mesnet üzerine sabitleştirilmiş, paralel ipliklerden oluşanlar",
+      "tanim_en": "Wall coverings are materials consisting of parallel threads fixed to a support of any material.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500300000",
+      "tanim_tr": "Duvar kaplamaları; ketenden",
+      "tanim_en": "Wall coverings; made of linen.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500500000",
+      "tanim_tr": "Duvar kaplamaları; jütten",
+      "tanim_en": "Wall coverings; jute",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500700011",
+      "tanim_tr": "Duvar kaplamaları; sentetik liflerden dokunmuş (devamsız veya döküntü)",
+      "tanim_en": "Wall coverings; woven from synthetic fibers (discontinuous or waste)",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500700012",
+      "tanim_tr": "Duvar kaplamaları; suni devamlı liflerden dokunmuş",
+      "tanim_en": "Wall coverings; woven from artificial continuous fibers.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500700013",
+      "tanim_tr": "Duvar kaplamaları; suni devamsız liflerden dokunmuş",
+      "tanim_en": "Wall coverings; woven from artificial discontinuous fibers.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500700014",
+      "tanim_tr": "Duvar kaplamaları; suni veya sentetik liflerden, dokunmamış",
+      "tanim_en": "Wall coverings; made of artificial or synthetic fibers, non-woven.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500700015",
+      "tanim_tr": "Duvar kaplamaları; suni veya sentetik liflerden yapılmış keçeden",
+      "tanim_en": "Wall coverings; felt made from artificial or synthetic fibers.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500700019",
+      "tanim_tr": "Diğer duvar kaplamaları; suni veya sentetik liflerden",
+      "tanim_en": "Other wall coverings are made from artificial or synthetic fibers.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500901011",
+      "tanim_tr": "Duvar kaplamaları; ipekten",
+      "tanim_en": "Wall coverings; made of silk.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500901012",
+      "tanim_tr": "Duvar kaplamaları; şap ve buretten",
+      "tanim_en": "Wall coverings; screed and burette.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500902000",
+      "tanim_tr": "Duvar kaplamaları; rami mensucattan",
+      "tanim_en": "Wall coverings; made of ramie fabric.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500903100",
+      "tanim_tr": "Duvar kaplamaları; kağıt ipliğinden mamul mensucattan",
+      "tanim_en": "Wall coverings; textiles made from paper yarn.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500903900",
+      "tanim_tr": "Duvar kaplamaları; dokunabilir diğer bitkisel liflerden",
+      "tanim_en": "Wall coverings; made from other woven plant fibers.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500904000",
+      "tanim_tr": "Duvar kaplamaları; keçeden (suni veya sentetik liflerden yapılmış keçeden olanlar HARİÇ)",
+      "tanim_en": "Wall coverings; made of felt (EXCEPT felt made of artificial or synthetic fibers)",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590500905000",
+      "tanim_tr": "Duvar kaplamaları; dokunmamış diğer mensucattan veya kauçuklu mensucattan (örme hariç) olanlar",
+      "tanim_en": "Wall coverings; made of non-woven fabrics or rubberized fabrics (excluding knitted fabrics).",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590610000000",
+      "tanim_tr": "Yapışkan kauçuklu bant; en <= 20cm",
+      "tanim_en": "Adhesive rubber tape; width <= 20cm",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590691000000",
+      "tanim_tr": "Kauçuklu örme veya kroşe mensucat; 59.02 pozisyonundakiler HARİÇ",
+      "tanim_en": "Knitted or crocheted fabrics with rubberized backing; EXCEPT those in heading 59.02.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590699100000",
+      "tanim_tr": "Kauçukla aglomere edilmiş birbirine paralel dokunabilir ipliklerden mensucat; 59.02 pozisyonundakiler HARİÇ",
+      "tanim_en": "Textiles of parallel woven yarns agglomerated with rubber; EXCEPT those in heading 59.02.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590699900000",
+      "tanim_tr": "Kauçuklu diğer mensucat; 59.02 pozisyonundakiler HARİÇ",
+      "tanim_en": "Other rubberized textiles; EXCEPT those in heading 59.02",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590700000000",
+      "tanim_tr": "Emdirilmiş, sıvanmış veya kaplanmış diğer mensucat; tiyatro dekorları, atölye fonları, vb. için boyanmış bezler \"tualler\"",
+      "tanim_en": "Other textiles that have been impregnated, coated, or covered; dyed fabrics for theatre sets, workshop backdrops, etc., \"canvases\".",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590800001000",
+      "tanim_tr": "Beyaz alevli lambalar için gömlekler",
+      "tanim_en": "Shirts for white flame lamps",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590800009000",
+      "tanim_tr": "Dokunmuş veya örülmüş fitiller (lamba, ocak, çakmak, mum, vb. için)",
+      "tanim_en": "Woven or braided wicks (for lamps, stoves, lighters, candles, etc.)",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590900100011",
+      "tanim_tr": "Sentetik liflerden yangın hortumları",
+      "tanim_en": "Fire hoses made from synthetic fibers.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590900100019",
+      "tanim_tr": "Sentetik liflerden tulumba hortumları ve benzeri hortumlar; yangın hortumları HARİÇ",
+      "tanim_en": "Pump hoses and similar hoses made of synthetic fibers; EXCEPT fire hoses.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590900901011",
+      "tanim_tr": "Yün veya kıldan yangın hortumları",
+      "tanim_en": "Fire hoses made of wool or hair.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590900901019",
+      "tanim_tr": "Yün veya kıldan tulumba hortumları ve benzeri hortumlar; yangın hortumları HARİÇ",
+      "tanim_en": "Wool or hair pump hoses and similar hoses; EXCEPT fire hoses.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590900909011",
+      "tanim_tr": "Dokumaya elverişli diğer maddelerden yangın hortumları",
+      "tanim_en": "Fire hoses made from other textile-suitable materials.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590900909012",
+      "tanim_tr": "Pamuktan tulumba hortumları ve benzeri hortumlar; yangın hortumları HARİÇ",
+      "tanim_en": "Cotton pump hoses and similar hoses; EXCEPT fire hoses.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590900909013",
+      "tanim_tr": "Ketenden tulumba hortumları ve benzeri hortumlar; yangın hortumları HARİÇ",
+      "tanim_en": "Linen pump hoses and similar hoses; EXCEPT fire hoses.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "590900909019",
+      "tanim_tr": "Dokumaya elverişli diğer maddelerden tulumba hortumları ve benzeri hortumlar; yangın hortumları HARİÇ",
+      "tanim_en": "Pump hoses and similar hoses made of other textile materials; EXCEPT fire hoses.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591000000000",
+      "tanim_tr": "Dokumaya elverişli maddelerden taşıyıcı kolanlar ve transmisyon kolonları",
+      "tanim_en": "Conveyor belts and transmission belts made from textile-suitable materials.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591110000000",
+      "tanim_tr": "Kard garnitürlerinin imalinde kullanılan kauçuk, deri ve diğer maddelerle kaplanmış, sıvanmış veya lamine edilmiş mensucat, keçe, keçeli mensucat, vb.",
+      "tanim_en": "Textiles, felt, felted fabrics, etc., coated, laminated with rubber, leather and other materials used in the manufacture of card fittings.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591120000011",
+      "tanim_tr": "İpekten eleklik mensucat ve gaz mensucat",
+      "tanim_en": "Silk mesh fabrics and gauze fabrics",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591120000012",
+      "tanim_tr": "Şap liflerinden eleklik mensucat ve gaz mensucat",
+      "tanim_en": "Screening fabrics and gauze fabrics made from alum fibers.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591120000013",
+      "tanim_tr": "Suni ve sentetik lifden eleklik mensucat ve gaz mensucat",
+      "tanim_en": "Screening fabrics and gauze fabrics made from artificial and synthetic fibers.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591120000019",
+      "tanim_tr": "Dokumaya elverişli diğer maddelerden eleklik mensucat ve gaz mensucat",
+      "tanim_en": "Other textile materials include screen fabrics and gauze fabrics.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591131110000",
+      "tanim_tr": "Kağıt imal makinalarında kullanılan nihayetsiz veya bağlayıcı tertibata uygun sentetik liflerden mensucat ve keçeler; m2 < 650gr",
+      "tanim_en": "Textiles and felts made from synthetic fibers suitable for continuous or binding applications in paper manufacturing machines; < 650 gr/m²",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591131190011",
+      "tanim_tr": "Kağıt imal makinalarında, vb. makinalarda kullanılan nihayetsiz veya bağlayıcı tertibata uygun ipekten mensucat ve keçeler; m2 < 650gr",
+      "tanim_en": "Silk fabrics and felts suitable for continuous or binding applications in paper manufacturing machines, etc.; < 650 gr/m²",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591131190012",
+      "tanim_tr": "Kağıt imal makinaları, vb. makinalar için nihayetsiz veya bağlayıcı tertibata uygun sentetik ve suni liflerden mensucat ve keçeler; m2 <650gr",
+      "tanim_en": "Textiles and felts made from synthetic and artificial fibers, suitable for continuous or binding applications in paper manufacturing machines, etc.; <650 gr/m²",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591131900000",
+      "tanim_tr": "Kağıt imal makinaları, vb. makinalar için nihayetsiz/bağlayıcı tertibata uygun dokumaya elverişli diğer maddelerden mensucat ve keçeler; m2 <650gr",
+      "tanim_en": "Textiles and felts made from other woven materials suitable for continuous/binding devices for paper making machines, etc.; <650 gr/m²",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591132110000",
+      "tanim_tr": "Kağıt makinalarında kullanılan mensucat; üzerine dolgu tabakası iğnelenmiş,sentetik liflerden dokunmuş, m2>650gr",
+      "tanim_en": "Textile used in paper machines; woven from synthetic fibers with a filler layer needle-punched, >650 gr/m².",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591132190000",
+      "tanim_tr": "Kağıt imal makinaları, vb. makinalar için nihayetsiz/bağlayıcı tertibata uygun ipekten, sentetik ve suni liflerden mensucat ve keçeler; m2 >=650gr",
+      "tanim_en": "Textiles and felts made of silk, synthetic and artificial fibers, suitable for endless/binding devices for paper manufacturing machines, etc.; m2 >=650gr",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591132900000",
+      "tanim_tr": "Kağıt imal makinaları, vb. makinalar için nihayetsiz/bağlayıcı tertibata uygun dokumaya elverişli diğer maddelerden mensucat ve keçeler; m2 >=650gr",
+      "tanim_en": "Textiles and felts made from other woven materials suitable for continuous/binding devices for paper manufacturing machines, etc.; m2 >=650gr",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591140000000",
+      "tanim_tr": "Yağ presinde veya benzeri işlerde kullanılan filtre veya tasir torbaları (insan saçından olanlar dahil)",
+      "tanim_en": "Filters or bags used in oil presses or similar applications (including those made from human hair)",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591190100011",
+      "tanim_tr": "Polisaj keçesi",
+      "tanim_en": "Polishing pad",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591190100019",
+      "tanim_tr": "Keçeden diğer teknik eşya",
+      "tanim_en": "Other technical articles made of felt",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591190910000",
+      "tanim_tr": "Dairesel cilalama pedleri; yarı iletken waferların üretiminde kullanılan türde kendinden yapışkanlı",
+      "tanim_en": "Circular polishing pads; self-adhesive, of the type used in the production of semiconductor wafers.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591190990011",
+      "tanim_tr": "Basma makinalarına mahsus blanketler",
+      "tanim_en": "Blankets for printing machines",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591190990012",
+      "tanim_tr": "Filtre torbaları; dokumaya elverişli maddelerden, teknik işlerde kullanılmaya mahsus",
+      "tanim_en": "Filter bags; made of textile materials, intended for use in technical applications.",
+      "nace": {
+        "kod": "13.10"
+      }
+    },
+    {
+      "kod": "591190990019",
+      "tanim_tr": "Dokumaya elverişli maddelerden teknik işlerde kullanılmaya mahsus diğer eşya",
+      "tanim_en": "Other articles of textile materials intended for technical use.",
+      "nace": {
+        "kod": "13.10"
+      }
+    }
+  ]
+}

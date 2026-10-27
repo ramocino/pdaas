@@ -36,7 +36,7 @@ META_SEMA = {
             "properties": {
                 "tip": {"enum": ["liste", "agac", "kural-seti"]},
                 "kod_sistemi": {"enum": ["gtip", "cpc", "nace", "isco", "sgk", "csgb",
-                                          "gib", "hvmb", "tuik", "diger"]},
+                                        "gib", "hvmb", "tuik", "kamu", "diger"]}, 
                 "kapsam": {"type": "array", "minItems": 1, "uniqueItems": True,
                            "items": {"type": "string", "minLength": 1}},
             },
@@ -90,6 +90,9 @@ META_SEMA = {
                     "madde": {"type": ["string", "null"]},
                     "resmi_gazete": {"type": ["string", "null"]},
                     "tarih": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/tarih"}]},
+                    "kurum": {"type": ["string", "null"]},                       
+                    "kabul_tarihi": {"oneOf": [{"type": "null"},               
+                                                {"$ref": "#/$defs/tarih"}]},
                 },
             },
         },
@@ -227,6 +230,9 @@ def icerik_verisi(doc, meta):
     tip = (meta.get("yapi") or {}).get("tip")
     if tip == "kural-seti":
         return {"gruplar": doc.get("gruplar", {}), "kurallar": doc.get("kurallar", [])}
+    # Yeni: index.json dosyaları için parça listesi hash'e dahil edilir
+    if doc.get("parcalar") is not None:
+        return {"parcalar": doc.get("parcalar", [])}
     return doc.get("kayitlar", [])
 
 def yukle(yol):
@@ -425,31 +431,45 @@ def analiz(kok, kaynak, semalar, rapor, force):
 
 def katalog_uret(bilgiler):
     servisler = {}
-    hiyerarsik_servisler = ["gtip-kodlari", "nace-kodlari", "cpc-kodlari", "isco-kodlari"]
-    
+
+    # PASS 1: index.json (parça listeleri) — ÖNCELİKLİ
     for b in bilgiler:
         m = b["meta"]
         kod = m["servis"]["kod"]
-        
-        # Parça dosyalarını (fasil/01.json vb.) kataloğa ekleme
-        if "parca" in m:
-            continue
-            
-        # Hiyerarşik servislerin index.json dosyasını kataloğa ekleme!
-        # Bunun yerine doğrudan ana .json dosyasını (tüm listeyi) göstereceğiz.
-        if kod in hiyerarsik_servisler and b["yol"].name == "index.json":
-            continue
-            
-        s = servisler.setdefault(kod, {
-            "kod": kod, "ad": m["servis"]["ad"], "tip": m["yapi"]["tip"], "kod_sistemi": m["yapi"]["kod_sistemi"], "katmanlar": {},
-        })
-        
-        # URL her zaman tek ve büyük olan ana json dosyasını gösterecek
-        url = f"/{kod}.json"
 
+        if "parca" not in m:
+            continue
+        if m["parca"].get("tur") != "index":
+            continue  # sadece index.json
+
+        s = servisler.setdefault(kod, {
+            "kod": kod, "ad": m["servis"]["ad"], "tip": m["yapi"]["tip"],
+            "kod_sistemi": m["yapi"]["kod_sistemi"], "katmanlar": {},
+        })
         s["katmanlar"][m["katman"]] = {
-            "son": m["surum"], "url": url, "surumler_url": f"/surumler/{kod}/", "checksum": b["hash"],
+            "son": m["surum"], "url": f"/{kod}/index.json",
+            "surumler_url": f"/surumler/{kod}/", "checksum": b["hash"],
         }
+
+    # PASS 2: index.json'ı OLMAYANLAR için tek dosya yedeği
+    for b in bilgiler:
+        m = b["meta"]
+        kod = m["servis"]["kod"]
+
+        if "parca" in m:
+            continue  # parça dosyaları (fasil/01.json vb.) atla
+        if kod in servisler and m["katman"] in servisler[kod]["katmanlar"]:
+            continue  # zaten PASS 1'de kaydedilmiş
+
+        s = servisler.setdefault(kod, {
+            "kod": kod, "ad": m["servis"]["ad"], "tip": m["yapi"]["tip"],
+            "kod_sistemi": m["yapi"]["kod_sistemi"], "katmanlar": {},
+        })
+        s["katmanlar"][m["katman"]] = {
+            "son": m["surum"], "url": f"/{kod}.json",
+            "surumler_url": f"/surumler/{kod}/", "checksum": b["hash"],
+        }
+
     return {
         "schema_surumu": "1.0.0",
         "guncelleme": max(b["meta"]["guncelleme"] for b in bilgiler),

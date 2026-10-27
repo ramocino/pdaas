@@ -1,0 +1,3826 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-kdv",
+      "ad": {
+        "tr": "GTİP KDV Eşleşmesi",
+        "en": "GTIP VAT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.27",
+    "guncelleme": "2026-10-27",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.27"
+      },
+      "uretim_zamani": "2026-10-27T13:33:06.673129+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "07",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:08c8734535caad7e96b04ea1765fa6c800cead78ae9ae620f4f0bb57a672c838"
+  },
+  "kayitlar": [
+    {
+      "kod": "070110000000",
+      "tanim_tr": "Patates; tohumluk",
+      "tanim_en": "Potatoes; for seed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070190100000",
+      "tanim_tr": "Patates (taze/soğutulmuş); nişasta imalinde kullanılan",
+      "tanim_en": "Potatoes (fresh/chilled); used in starch production.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070190500000",
+      "tanim_tr": "Patates (taze (1 Ocak'tan 30 Haziran'a kadar olanlar); tohumluk olanlar HARİÇ",
+      "tanim_en": "Potatoes (fresh (those between January 1st and June 30th); EXCLUDING seed potatoes)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070190900000",
+      "tanim_tr": "Patates (soğutulmuş olanlar ve taze olup 1 Temmuz'dan 31 Aralığa kadar olanlar); tohumluk olanlar HARİÇ",
+      "tanim_en": "Potatoes (both chilled and fresh, available between July 1st and December 31st); EXCLUDING those intended for seed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070200100000",
+      "tanim_tr": "Domates (taze veya soğutulmuş); en büyük çapı 47 mm'den az ve bütün halinde",
+      "tanim_en": "Tomatoes (fresh or chilled); whole, with a maximum diameter of less than 47 mm.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070200910000",
+      "tanim_tr": "Domates (taze veya soğutulmuş); salkımlar halinde",
+      "tanim_en": "Tomatoes (fresh or chilled); in bunches",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070200990000",
+      "tanim_tr": "Diğer domatesler (taze veya soğutulmuş)",
+      "tanim_en": "Other tomatoes (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070310110000",
+      "tanim_tr": "Arpacık soğanı (taze/soğutulmuş)",
+      "tanim_en": "Shallots (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070310190011",
+      "tanim_tr": "Kuru soğan",
+      "tanim_en": "Dry onions",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070310190012",
+      "tanim_tr": "Taze (yeşil) soğan",
+      "tanim_en": "Fresh (green) onions",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070310900000",
+      "tanim_tr": "Şalotlar (taze/soğutulmuş)",
+      "tanim_en": "Shalots (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070320000011",
+      "tanim_tr": "Taze (yeşil) sarımsak",
+      "tanim_en": "Fresh (green) garlic",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070320000012",
+      "tanim_tr": "Kuru sarımsak",
+      "tanim_en": "Dried garlic",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070390000011",
+      "tanim_tr": "Pırasa (taze/soğutulmuş)",
+      "tanim_en": "Leeks (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070390000012",
+      "tanim_tr": "Diğer soğanımsı sebzeler (taze/soğutulmuş)",
+      "tanim_en": "Other onion-like vegetables (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070410100011",
+      "tanim_tr": "Karnabahar (taze/soğutulmuş)",
+      "tanim_en": "Cauliflower (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070410100012",
+      "tanim_tr": "Başlı brokoli; taze veya soğutulmuş",
+      "tanim_en": "Broccoli florets; fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070410900000",
+      "tanim_tr": "Brokoli (başlı brokoli HARİÇ); taze veya soğutulmuş",
+      "tanim_en": "Broccoli (EXCEPT broccoli florets); fresh or chilled",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070420000000",
+      "tanim_tr": "Brüksel lahanası (taze/soğutulmuş)",
+      "tanim_en": "Brussels sprouts (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070490100011",
+      "tanim_tr": "Beyaz lahana (taze/soğutulmuş)",
+      "tanim_en": "White cabbage (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070490100012",
+      "tanim_tr": "Kırmızı lahana (taze/soğutulmuş)",
+      "tanim_en": "Red cabbage (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070490900000",
+      "tanim_tr": "Alabaşlar ve benzeri yenilen diğer brassikalar (taze/soğutulmuş)",
+      "tanim_en": "Kohlrabi and other similar edible brassicas (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070511000000",
+      "tanim_tr": "Baş marul (taze/soğutulmuş)",
+      "tanim_en": "Head of lettuce (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070519000000",
+      "tanim_tr": "Diğer marullar (taze/soğutulmuş)",
+      "tanim_en": "Other lettuces (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070521000000",
+      "tanim_tr": "Başlı hindiba (taze/soğutulmuş)",
+      "tanim_en": "Chicory (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070529000000",
+      "tanim_tr": "Diğer hindiba (taze/soğutulmuş)",
+      "tanim_en": "Other endive (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070610000011",
+      "tanim_tr": "Havuçlar (taze/soğutulmuş)",
+      "tanim_en": "Carrots (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070610000012",
+      "tanim_tr": "Şalgamlar (taze/soğutulmuş)",
+      "tanim_en": "Turnips (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070690100000",
+      "tanim_tr": "Kök kereviz (taze/soğutulmuş)",
+      "tanim_en": "Celery root (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070690300000",
+      "tanim_tr": "Bayır turbu (taze/soğutulmuş)",
+      "tanim_en": "Wild radish (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070690900000",
+      "tanim_tr": "Diğer turp, kırmızı pancar vb yenilen diğer kökler (taze/soğutulmuş)",
+      "tanim_en": "Other edible root vegetables such as radishes, red beets, etc. (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070700050000",
+      "tanim_tr": "Hıyarlar (taze/soğutulmuş)",
+      "tanim_en": "Cucumbers (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070700900000",
+      "tanim_tr": "Kornişonlar (taze/soğutulmuş)",
+      "tanim_en": "Pickles (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070810000011",
+      "tanim_tr": "Bezelye; kabuklu (taze/soğutulmuş)",
+      "tanim_en": "Peas; in shells (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070810000012",
+      "tanim_tr": "Bezelye; kabuksuz (taze/soğutulmuş)",
+      "tanim_en": "Peas; shelled (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070820000011",
+      "tanim_tr": "Fasulye (taze/soğutulmuş)",
+      "tanim_en": "Beans (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070820000012",
+      "tanim_tr": "Barbunya; kabuklu (taze/soğutulmuş)",
+      "tanim_en": "Red mullet; in shell (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070820000013",
+      "tanim_tr": "Barbunya; kabuksuz (taze/soğutulmuş)",
+      "tanim_en": "Red mullet; shelled (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070890000011",
+      "tanim_tr": "Kabuklu diğer baklagiller (taze/soğutulmuş)",
+      "tanim_en": "Other shelled legumes (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070890000012",
+      "tanim_tr": "Kabuksuz diğer baklagiller (taze/soğutulmuş)",
+      "tanim_en": "Other hulled legumes (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070920000000",
+      "tanim_tr": "Kuşkonmaz (taze/soğutulmuş)",
+      "tanim_en": "Asparagus (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070930000000",
+      "tanim_tr": "Patlıcanlar (taze/soğutulmuş)",
+      "tanim_en": "Eggplants (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070940000000",
+      "tanim_tr": "Yaprak kerevizleri (kök kerevizleri hariç) (taze/soğutulmuş)",
+      "tanim_en": "Leaf celery (excluding root celery) (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070951000000",
+      "tanim_tr": "Agaricus cinsi mantarlar (taze/soğutulmuş)",
+      "tanim_en": "Mushrooms of the genus Agaricus (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070952000000",
+      "tanim_tr": "Boletus cinsi mantarlar; taze veya soğutulmuş",
+      "tanim_en": "Mushrooms of the genus Boletus; fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070953000000",
+      "tanim_tr": "Cantharellus cinsi mantarlar; taze veya soğutulmuş",
+      "tanim_en": "Mushrooms of the genus Cantharellus; fresh or chilled.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070954000000",
+      "tanim_tr": "Shiitake (Lentinus edodes); taze veya soğutulmuş",
+      "tanim_en": "Shiitake (Lentinus edodes); fresh or chilled",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070955000000",
+      "tanim_tr": "Matsutake (Tricholoma matsutake, Tricholoma magnivelare, Tricholoma anatolicum, Tricholoma dulciolens, Tricholoma caligatum); taze veya soğutulmuş",
+      "tanim_en": "Matsutake (Tricholoma matsutake, Tricholoma magnivelare, Tricholoma anatolicum, Tricholoma dulciolens, Tricholoma caligatum); fresh or chilled",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070956000000",
+      "tanim_tr": "Domalanlar (Tuber spp.); taze veya soğutulmuş",
+      "tanim_en": "Trout (Tuber spp.); fresh or chilled",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070959000000",
+      "tanim_tr": "Diğer mantarlar ve diğer domalanlar; taze veya soğutulmuş",
+      "tanim_en": "Other mushrooms and other truffles; fresh or chilled",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070960100011",
+      "tanim_tr": "Sivri biber (taze/soğutulmuş); tatlı",
+      "tanim_en": "Pointed peppers (fresh/chilled); sweet",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070960100012",
+      "tanim_tr": "Dolmalık biber (taze/soğutulmuş); tatlı",
+      "tanim_en": "Bell peppers (fresh/chilled); sweet",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070960100013",
+      "tanim_tr": "Çarliston biber (taze/soğutulmuş); tatlı",
+      "tanim_en": "Charleston peppers (fresh/chilled); sweet",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070960100014",
+      "tanim_tr": "Kırmızı biber (paprika) (taze/soğutulmuş); tatlı",
+      "tanim_en": "Paprika (fresh/chilled); sweet",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070960100019",
+      "tanim_tr": "Diğer tatlı biberler (taze/soğutulmuş)",
+      "tanim_en": "Other sweet peppers (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070960910000",
+      "tanim_tr": "Capsicum oleoresin boyaları ve capsisin imali için capsicum cinsi biber (taze/soğutulmuş)",
+      "tanim_en": "Capsicum peppers (fresh/chilled) are used for the production of capsicum oleoresin dyes and capsicin.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070960950000",
+      "tanim_tr": "Rezinoit, uçucu yağların imali için capsicum cinsi biber (taze/soğutulmuş)",
+      "tanim_en": "Resinoid is used to produce essential oils from Capsicum peppers (fresh/chilled).",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070960990000",
+      "tanim_tr": "Capsicum veya pimenta cinsi diğer meyveler (taze/soğutulmuş)",
+      "tanim_en": "Fruits of the genus Capsicum or Pimenta (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070970000011",
+      "tanim_tr": "Ispanak (taze/soğutulmuş)",
+      "tanim_en": "Spinach (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070970000012",
+      "tanim_tr": "Yeni zelanda ıspanağı (taze/soğutulmuş)",
+      "tanim_en": "New Zealand spinach (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070970000013",
+      "tanim_tr": "Bahçe ıspanağı (kara pazı) (taze/soğutulmuş)",
+      "tanim_en": "Garden spinach (black chard) (fresh/chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070991000000",
+      "tanim_tr": "Enginarlar (taze veya soğutulmuş)",
+      "tanim_en": "Artichokes (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070992100000",
+      "tanim_tr": "Zeytin (yağ üretiminde kullanılmayanlar) (taze veya soğutulmuş)",
+      "tanim_en": "Olives (those not used in oil production) (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070992900000",
+      "tanim_tr": "Zeytin (yağ üretiminde kullanılanlar) (taze veya soğutulmuş)",
+      "tanim_en": "Olives (used in oil production) (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070993100000",
+      "tanim_tr": "Dolmalık kabak (taze veya soğutulmuş)",
+      "tanim_en": "Zucchini for stuffing (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070993900000",
+      "tanim_tr": "Diğer kabaklar (taze veya soğutulmuş)",
+      "tanim_en": "Other zucchini (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070999100000",
+      "tanim_tr": "Salatalık sebzeler, (marul (Lactuca sativa) ve hindiba (Cichorium spp.) hariç) (taze veya soğutulmuş)",
+      "tanim_en": "Cucumber vegetables (excluding lettuce (Lactuca sativa) and endive (Cichorium spp.)) (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070999200000",
+      "tanim_tr": "Pazı ve yaban enginarı (taze veya soğutulmuş)",
+      "tanim_en": "Swiss chard and wild artichokes (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070999400000",
+      "tanim_tr": "Kebere (taze veya soğutulmuş)",
+      "tanim_en": "Capere (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070999500000",
+      "tanim_tr": "Rezene (taze veya soğutulmuş)",
+      "tanim_en": "Fennel (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070999600000",
+      "tanim_tr": "Tatlı mısır (taze veya soğutulmuş)",
+      "tanim_en": "Sweet corn (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070999900011",
+      "tanim_tr": "Bamya (taze veya soğutulmuş)",
+      "tanim_en": "Okra (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070999900012",
+      "tanim_tr": "Semizotu (taze veya soğutulmuş)",
+      "tanim_en": "Purslane (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070999900013",
+      "tanim_tr": "Maydanoz (taze veya soğutulmuş)",
+      "tanim_en": "Parsley (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070999900014",
+      "tanim_tr": "Asma yaprağı (taze veya soğutulmuş)",
+      "tanim_en": "Vine leaves (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "070999900018",
+      "tanim_tr": "Diğer sebzeler (taze veya soğutulmuş)",
+      "tanim_en": "Other vegetables (fresh or chilled)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071010000000",
+      "tanim_tr": "Patates (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Potatoes (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071021000000",
+      "tanim_tr": "Bezelye (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Peas (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071022000000",
+      "tanim_tr": "Fasulye (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Beans (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071029000000",
+      "tanim_tr": "Diğer baklagiller (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Other legumes (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071030000000",
+      "tanim_tr": "Ispanak, Yeni Zelanda Ispanağı ve bahçe ıspanağı (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Spinach, New Zealand spinach and garden spinach (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071040000000",
+      "tanim_tr": "Tatlı mısır (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Sweet corn (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080100000",
+      "tanim_tr": "Zeytin (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Olives (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080510000",
+      "tanim_tr": "Tatlı biberler (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Sweet peppers (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080590000",
+      "tanim_tr": "Capsicum ve pimenta cinsi diğer meyveler (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Fruits of the genera Capsicum and Pimenta (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080610000",
+      "tanim_tr": "Agaricus cinsi mantarlar (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Mushrooms of the genus Agaricus (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080690000",
+      "tanim_tr": "Diğer mantarlar (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Other mushrooms (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080700000",
+      "tanim_tr": "Domatesler (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Tomatoes (raw or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080800000",
+      "tanim_tr": "Enginarlar (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Artichokes (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080850000",
+      "tanim_tr": "Kuşkonmazlar (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Asparagus (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080950011",
+      "tanim_tr": "Soğan (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Onions (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080950012",
+      "tanim_tr": "Havuç (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Carrots (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080950013",
+      "tanim_tr": "Pırasa (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Leeks (raw or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080950014",
+      "tanim_tr": "Karnabahar (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Cauliflower (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080950015",
+      "tanim_tr": "Lahana (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Cabbage (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071080950019",
+      "tanim_tr": "Diğer sebzeler (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Other vegetables (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071090000000",
+      "tanim_tr": "Sebze karışımları (pişirilmemiş veya buharda veya suda kaynatılarak pişirilmiş); dondurulmuş",
+      "tanim_en": "Vegetable mixes (uncooked or steamed or boiled); frozen",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071120100000",
+      "tanim_tr": "Zeytin, yemeklik (geçici olarak konserve edilmiş fakat bu halleriyle yenilmeye elverişli olmayan)",
+      "tanim_en": "Olives, for consumption (temporarily preserved but not suitable for eating in that state)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071120900000",
+      "tanim_tr": "Zeytin; yağlık (geçici olarak konserve edilmiş fakat bu halleriyle yenilmeye elverişli olmayan)",
+      "tanim_en": "Olives; oil olives (temporarily preserved but not suitable for consumption in this state)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071140000000",
+      "tanim_tr": "Hıyarlar ve kornişonlar (geçici olarak konserve edilmiş fakat bu halleriyle yenilmeye elverişli olmayan)",
+      "tanim_en": "Cucumbers and gherkins (temporarily preserved but not suitable for consumption in that state)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071151000000",
+      "tanim_tr": "Mantar; agaricus cinsi (geçici olarak konserve edilmiş fakat bu halleriyle yenilmeye elverişli olmayan)",
+      "tanim_en": "Mushroom; genus Agaricus (temporarily preserved but not suitable for consumption in that state)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071159000000",
+      "tanim_tr": "Diğer mantar ve domalanlar (geçici olarak konserve edilmiş fakat bu halleriyle yenilmeye elverişli olmayan)",
+      "tanim_en": "Other mushrooms and truffles (temporarily preserved but not suitable for consumption in that state)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071190100000",
+      "tanim_tr": "Capsicum ve pimenta cinsi meyveler (tatlı biber hariç) (geçici olarak konserve edilmiş fakat bu halleriyle yenilmeye elverişli olmayan)",
+      "tanim_en": "Fruits of the Capsicum and Pimenta genera (excluding sweet peppers) (temporarily preserved but not suitable for consumption in that state)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071190300000",
+      "tanim_tr": "Tatlı mısır (geçici olarak konserve edilmiş fakat bu halleriyle yenilmeye elverişli olmayan)",
+      "tanim_en": "Sweet corn (temporarily preserved but not suitable for consumption in that state)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071190500000",
+      "tanim_tr": "Soğanlar (geçici olarak konserve edilmiş fakat bu halleriyle yenilmeye elverişli olmayan)",
+      "tanim_en": "Onions (temporarily preserved but not suitable for consumption in that state)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071190700000",
+      "tanim_tr": "Kebere (geçici olarak konserve edilmiş fakat bu halleriyle yenilmeye elverişli olmayan)",
+      "tanim_en": "Capere (temporarily preserved, but not suitable for consumption in that state)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071190800000",
+      "tanim_tr": "Diğer sebzeler (geçici olarak konserve edilmiş fakat bu halleriyle yenilmeye elverişli olmayan)",
+      "tanim_en": "Other vegetables (temporarily preserved but not suitable for consumption in that state)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071190900000",
+      "tanim_tr": "Sebze karışımları (geçici olarak konserve edilmiş fakat bu halleriyle yenilmeye elverişli olmayan)",
+      "tanim_en": "Vegetable mixes (temporarily preserved but not suitable for consumption in that state)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071220000000",
+      "tanim_tr": "Soğanlar (kurutulmuş)",
+      "tanim_en": "Onions (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071231000000",
+      "tanim_tr": "Agaricus cinsi mantarlar (kurutulmuş)",
+      "tanim_en": "Agaricus genus mushrooms (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071232000000",
+      "tanim_tr": "Yahudi kulağı (kurutulmuş)",
+      "tanim_en": "Jewish ear (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071233000000",
+      "tanim_tr": "Jöle mantarı (kurutulmuş)",
+      "tanim_en": "Dried jelly mushrooms",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071234000000",
+      "tanim_tr": "Shiitake (Lentinus edodes); kurutulmuş",
+      "tanim_en": "Shiitake (Lentinus edodes); dried",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071239000000",
+      "tanim_tr": "Diğer mantar ve domalanlar (kurutulmuş)",
+      "tanim_en": "Other mushrooms and truffles (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290050000",
+      "tanim_tr": "Patates (kurutulmuş)",
+      "tanim_en": "Potatoes (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290110000",
+      "tanim_tr": "Tatlı mısır (tohumluk) (melez) (kurutulmuş)",
+      "tanim_en": "Sweet corn (for seed) (hybrid) (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290190000",
+      "tanim_tr": "Tatlı mısır; diğer (kurutulmuş)",
+      "tanim_en": "Sweet corn; other (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290300000",
+      "tanim_tr": "Domates (kurutulmuş)",
+      "tanim_en": "Tomatoes (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290500000",
+      "tanim_tr": "Havuç (kurutulmuş)",
+      "tanim_en": "Dried carrots",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290900011",
+      "tanim_tr": "Sarımsak (kurutulmuş)",
+      "tanim_en": "Garlic (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290900012",
+      "tanim_tr": "Pırasa (kurutulmuş)",
+      "tanim_en": "Leeks (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290900013",
+      "tanim_tr": "Ispanak (kurutulmuş)",
+      "tanim_en": "Dried spinach",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290900014",
+      "tanim_tr": "Kuşkonmaz (kurutulmuş)",
+      "tanim_en": "Asparagus (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290900015",
+      "tanim_tr": "Bamya (kurutulmuş)",
+      "tanim_en": "Dried okra",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290900016",
+      "tanim_tr": "Bezelye (kurutulmuş)",
+      "tanim_en": "Peas (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290900017",
+      "tanim_tr": "Kabak (kurutulmuş)",
+      "tanim_en": "Dried pumpkin",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290900018",
+      "tanim_tr": "Karnabahar (kurutulmuş)",
+      "tanim_en": "Cauliflower (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290900021",
+      "tanim_tr": "Lahana (kurutulmuş)",
+      "tanim_en": "Cabbage (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290900022",
+      "tanim_tr": "Patlıcan (kurutulmuş)",
+      "tanim_en": "Dried eggplant",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071290900029",
+      "tanim_tr": "Diğer sebzeler ve sebze karışımları (kurutulmuş)",
+      "tanim_en": "Other vegetables and vegetable mixtures (dried)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071310100011",
+      "tanim_tr": "Yem bezelyesi; kabuksuz (kuru, tohumluk)",
+      "tanim_en": "Feed peas; hulled (dry, seed)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071310100019",
+      "tanim_tr": "Diğer bezelye; kabuksuz (kuru, tohumluk)",
+      "tanim_en": "Other peas; hulled (dry, seed)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071310900011",
+      "tanim_tr": "Yem bezelyesi; kabuksuz (kuru, tohumluk olmayan)",
+      "tanim_en": "Feed peas; hulled (dry, non-seed)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071310900019",
+      "tanim_tr": "Diğer bezelye; kabuksuz (kuru, tohumluk olmayan)",
+      "tanim_en": "Other peas; hulled (dry, non-seed)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071320000011",
+      "tanim_tr": "Nohut; kabuksuz (kuru, tohumluk)",
+      "tanim_en": "Chickpeas; hull-less (dry, seed)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071320000019",
+      "tanim_tr": "Nohut; kabuksuz (kuru, tohumluk olmayan)",
+      "tanim_en": "Chickpeas; hull-less (dry, not for seed)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071331000011",
+      "tanim_tr": "Fasulye (Vigna mungo (L.) Hepper veya vignaradiata (L.) wilczek türleri; kuru, kabuksuz, tohumluk",
+      "tanim_en": "Beans (Vigna mungo (L.) Hepper or vignaradiata (L.) wilczek species; dry, hulled, seed)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071331000019",
+      "tanim_tr": "Fasulye (Vigna mungo (L.) Hepper veya vignaradiata (L.) wilczek türleri; kuru, kabuksuz fakat tohumluk olanlar HARİÇ",
+      "tanim_en": "Beans (Vigna mungo (L.) Hepper or vignaradiata (L.) wilczek species; EXCEPT those that are dry, hull-less but suitable for seed)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071332000011",
+      "tanim_tr": "Küçük kırmızı (Adzuki) fasulye; kuru, kabuksuz, tohumluk",
+      "tanim_en": "Small red (Adzuki) beans; dried, hulled, seed-grade.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071332000019",
+      "tanim_tr": "Küçük kırmızı (Adzuki) fasulye; kuru, kabuksuz fakat tohumluk olan HARİÇ",
+      "tanim_en": "Small red (Adzuki) beans; dried, hulled but seed-only varieties EXCEPT",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071333100011",
+      "tanim_tr": "Barbunya; kabuksuz, kuru, tohumluk",
+      "tanim_en": "Red mullet; shelled, dried, seed-producing.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071333100019",
+      "tanim_tr": "Adi fasulye (beyaz fasulye dahil) (Phaseolus vulgaris); barbunya HARİÇ, kuru, kabuksuz, tohumluk",
+      "tanim_en": "Common beans (including white beans) (Phaseolus vulgaris); dried, hulled, seed beans, EXCEPT for kidney beans.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071333900011",
+      "tanim_tr": "Barbunya; kabuksuz, kuru fakat tohumluk olanlar HARİÇ",
+      "tanim_en": "Red mullet; excluding those that are shell-less, dried, but suitable for seed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071333900019",
+      "tanim_tr": "Adi fasulye (beyaz fasulye dahil) (Phaseolus vulgaris); kuru, kabuksuz fakat tohumluk olanlar ve barbunya HARİÇ",
+      "tanim_en": "Common beans (including white beans) (Phaseolus vulgaris); EXCLUDING dried, hulled but seed beans and kidney beans.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071334000011",
+      "tanim_tr": "Bambara Fasulyesi (Vigna subterranea or Voandzeia subterranea); kabuksuz, kuru, tohumluk",
+      "tanim_en": "Bambara Bean (Vigna subterranea or Voandzeia subterranea); shellless, dry, seed",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071334000019",
+      "tanim_tr": "Bambara Fasulyesi (Vigna subterranea or Voandzeia subterranea); kabuksuz, kuru fakat tohumluk olanlar HARİÇ",
+      "tanim_en": "Bambara Beans (Vigna subterranea or Voandzeia subterranea); excluding those that are hull-less, dried, but suitable for seed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071335000011",
+      "tanim_tr": "Börülce (Vigna unguiculata); kabuksuz, kuru, tohumluk",
+      "tanim_en": "Cowpea (Vigna unguiculata); hulled, dried, seed-producing.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071335000019",
+      "tanim_tr": "Börülce (Vigna unguiculata); kabuksuz, kuru fakat tohumluk olanlar HARİÇ",
+      "tanim_en": "Cowpea (Vigna unguiculata); excluding those that are hull-less, dried, but suitable for seed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071339000011",
+      "tanim_tr": "Diğer fasulyeler; kabuksuz, kuru, tohumluk",
+      "tanim_en": "Other beans; hulled, dried, seed beans.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071339000019",
+      "tanim_tr": "Diğer fasulyeler; kabuksuz, kuru fakat tohumluk olanlar HARİÇ",
+      "tanim_en": "Other beans; excluding those that are hull-less, dried, but suitable for seed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071340000011",
+      "tanim_tr": "Mercimek; kabuksuz, kuru, tohumluk",
+      "tanim_en": "Lentils; hulled, dried, seed-producing.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071340000012",
+      "tanim_tr": "Yeşil mercimek; kabuksuz, kuru fakat tohumluk olanlar HARİÇ",
+      "tanim_en": "Green lentils; excluding those that are hull-less, dried, but intended for seed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071340000013",
+      "tanim_tr": "Kırmızı mercimek; kabuksuz, kuru fakat tohumluk olanlar HARİÇ",
+      "tanim_en": "Red lentils; hulled, dried, EXCLUDING those intended for seed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071340000019",
+      "tanim_tr": "Diğer mercimekler; kabuksuz, kuru fakat tohumluk olanlar HARİÇ",
+      "tanim_en": "Other lentils; excluding those that are hulled, dry, but suitable for seed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071350000011",
+      "tanim_tr": "Bakla, at baklası; kabuksuz, kuru, tohumluk",
+      "tanim_en": "Broad bean, horse broad bean; hulled, dried, seed-bearing.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071350000019",
+      "tanim_tr": "Bakla, at baklası; kabuksuz, kuru fakat tohumluk olanlar HARİÇ",
+      "tanim_en": "Broad beans, horse beans; EXCLUDING those that are shelled, dried, but intended for seed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071360000011",
+      "tanim_tr": "Güvercin bezelye (Cajanus cajan); kabuksuz, kuru, tohumluk",
+      "tanim_en": "Pigeon pea (Cajanus cajan); hulled, dried, seed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071360000012",
+      "tanim_tr": "Güvercin bezelye (Cajanus cajan); kabuksuz, kuru fakat tohumluk olanlar HARİÇ",
+      "tanim_en": "Pigeon peas (Cajanus cajan); hulled, dried, EXCLUDING those intended for seed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071390000013",
+      "tanim_tr": "Diğer baklagiller; kabuksuz, kuru, tohumluk",
+      "tanim_en": "Other legumes; hulled, dried, seed-bearing.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071390000019",
+      "tanim_tr": "Diğer baklagiller; kabuksuz, kuru fakat tohumluk olanlar HARİÇ",
+      "tanim_en": "Other legumes; EXCEPT those that are shelled, dry, but used for seed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071410000011",
+      "tanim_tr": "Manyok (cassava); taze ve bütün halde veya kabuksuz ve dondurulmuş, ambalajlı <= 28 kg, insan gıdası olmaya uygun",
+      "tanim_en": "Cassava; fresh and whole, or peeled and frozen, packaged <= 28 kg, suitable for human consumption.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071410000019",
+      "tanim_tr": "Diper manyok (cassava); taze, soğutulmuş, dondurulmuş veya kurutulmuş",
+      "tanim_en": "Diper cassava; fresh, chilled, frozen or dried.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071420100000",
+      "tanim_tr": "Tatlı patates taze, bütün (insan gıdası olarak kullanılmaya uygun halde)",
+      "tanim_en": "Sweet potatoes, fresh and whole (suitable for human consumption)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071420901000",
+      "tanim_tr": "Tatlı patates (dondurulmuş)",
+      "tanim_en": "Sweet potatoes (frozen)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071420909000",
+      "tanim_tr": "Tatlı patates; diğer",
+      "tanim_en": "Sweet potatoes; other",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071430000000",
+      "tanim_tr": "Hint Patatesi (Dioscorea spp.); taze, soğutulmuş, dondurulmuş veya kurutulmuş",
+      "tanim_en": "Indian Potato (Dioscorea spp.); fresh, chilled, frozen or dried.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071440000000",
+      "tanim_tr": "Kulkas Kökü (Taro) (Colocasia spp.); taze, soğutulmuş, dondurulmuş veya kurutulmuş",
+      "tanim_en": "Taro root (Colocasia spp.); fresh, chilled, frozen or dried.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071450000000",
+      "tanim_tr": "Yautiya (Xanthosoma spp.); taze, soğutulmuş, dondurulmuş veya kurutulmuş",
+      "tanim_en": "Yautiya (Xanthosoma spp.); fresh, chilled, frozen or dried.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071490200011",
+      "tanim_tr": "Ararot; taze, soğutulmuş, dondurulmuş veya kurutulmuş",
+      "tanim_en": "Arrowroot; fresh, chilled, frozen or dried.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071490200012",
+      "tanim_tr": "Salep; taze, soğutulmuş, dondurulmuş veya kurutulmuş",
+      "tanim_en": "Salep can be fresh, chilled, frozen, or dried.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071490200019",
+      "tanim_tr": "Diğer kök ve yumrular; yüksek oranda nişasta veya inülin içeren",
+      "tanim_en": "Other roots and tubers contain high levels of starch or inulin.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071490901000",
+      "tanim_tr": "Diğer nişastalı kök, yumrular; diğer (dondurulmuş)",
+      "tanim_en": "Other starchy roots, tubers; other (frozen)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "071490909000",
+      "tanim_tr": "Diğer nişastalı kök, yumrular",
+      "tanim_en": "Other starchy roots and tubers",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    }
+  ]
+}

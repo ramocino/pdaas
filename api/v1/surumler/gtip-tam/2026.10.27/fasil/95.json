@@ -1,0 +1,7939 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-tam",
+      "ad": {
+        "tr": "GTİP Tüm Vergiler",
+        "en": "GTIP All Taxes"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.27",
+    "guncelleme": "2026-10-27",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.27"
+      },
+      "uretim_zamani": "2026-10-27T13:33:06.673129+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "95",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:4dce880e7292386bc54af242c9deaf797fa28b1ce4284faf7ca56c53537e65cf"
+  },
+  "kayitlar": [
+    {
+      "kod": "950300100011",
+      "tanim_tr": "Oyuncak bebekler için arabalar",
+      "tanim_en": "Cars for dolls",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300100012",
+      "tanim_tr": "Üç tekerlekli bisikletler",
+      "tanim_en": "Three-wheeled bicycles",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300100013",
+      "tanim_tr": "Skuterler",
+      "tanim_en": "Scooters",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300100019",
+      "tanim_tr": "Diğerleri",
+      "tanim_en": "Others",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300100029",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300210000",
+      "tanim_tr": "İnsan şeklinde oyuncak bebekler",
+      "tanim_en": "Human-shaped dolls",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300290000",
+      "tanim_tr": "Sadece insan şeklinde yapma bebekler için aksam, parça ve aksesuar",
+      "tanim_en": "Parts, accessories, and accessories for life-shaped dolls only.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300300011",
+      "tanim_tr": "Elektrikli trenler; birleştirilecek türden küçültülmüş modeller",
+      "tanim_en": "Electric trains; scaled-down models that can be combined.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300300019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300350011",
+      "tanim_tr": "Yapı setleri ve yapı oyuncakları (plastik maddelerden)",
+      "tanim_en": "Building sets and building toys (made of plastic materials)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300350019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300390011",
+      "tanim_tr": "Yapı setleri ve yapı oyuncakları (diğer maddelerden)",
+      "tanim_en": "Building sets and building toys (from other materials)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300390019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300410011",
+      "tanim_tr": "Hayvanları ve insan dışı yaratıkları tasvir eden oyuncaklar (içleri doldurulmuş)",
+      "tanim_en": "Toys depicting animals and non-human creatures (stuffed)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300410019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300490011",
+      "tanim_tr": "Hayvanları ve insan dışı yaratıkları tasvir eden oyuncaklar (diğerleri)",
+      "tanim_en": "Toys depicting animals and non-human creatures (others)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300490019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300550011",
+      "tanim_tr": "Oyuncak müzik alet ve cihazları",
+      "tanim_en": "Toy musical instruments and devices",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300550019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300610011",
+      "tanim_tr": "Bilmeceler (ahşap)",
+      "tanim_en": "Riddles (wooden)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300610019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300690011",
+      "tanim_tr": "Bilmeceler (diğerleri)",
+      "tanim_en": "Riddles (others)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300690019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300700011",
+      "tanim_tr": "Oyuncaklar (takım veya set halinde olanlar)",
+      "tanim_en": "Toys (those sold in sets or kits)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300700019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300750011",
+      "tanim_tr": "Oyuncak ve modeller, motorlu olanlar (plastik maddelerden)",
+      "tanim_en": "Toys and models, those with motors (made of plastic materials)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300750019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300790011",
+      "tanim_tr": "Oyuncak ve modeller, motorlu olanlar (plastik maddelerden)",
+      "tanim_en": "Toys and models, those with motors (made of plastic materials)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300790019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300810011",
+      "tanim_tr": "Oyuncak silahlar",
+      "tanim_en": "Toy guns",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300810019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300850011",
+      "tanim_tr": "Kalıplanarak elde edilen minyatür metal modeller",
+      "tanim_en": "Miniature metal models obtained through molding.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300850019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300870011",
+      "tanim_tr": "Esas olarak çocuklar için dizayn edilmiş taşınabilir interaktif elektronik eğitim cihazları",
+      "tanim_en": "Portable interactive electronic educational devices designed primarily for children.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300870019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300950011",
+      "tanim_tr": "Oyuncaklar (plastik maddelerden)",
+      "tanim_en": "Toys (made of plastic materials)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300950019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300990011",
+      "tanim_tr": "Oyuncaklar (diğerleri)",
+      "tanim_en": "Toys (others)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950300990019",
+      "tanim_tr": "Aksam, parça ve aksesuarlar",
+      "tanim_en": "Evening, parts and accessories",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950420001000",
+      "tanim_tr": "Bilardo tebeşirleri",
+      "tanim_en": "Billiard chalks",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950420009000",
+      "tanim_tr": "Her çeşit bilardo eşyası ve aksesuarı; bilardo tebeşirleri HARİÇ",
+      "tanim_en": "All types of billiard equipment and accessories; EXCEPT billiard chalk.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950430100000",
+      "tanim_tr": "Madeni para, banknot, banka kartları, jeton, vb. ödeme araçları ile çalışan diğer oyunlar (otomatik bowling oyunu hariç); ekranlı olanlar",
+      "tanim_en": "Other games that operate with payment methods such as coins, banknotes, bank cards, tokens, etc. (excluding automatic bowling games); those with screens.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950430200000",
+      "tanim_tr": "Madeni para, banknot, banka kartları, jeton, vb. ödeme araçları ile çalışan diğer oyunlar (otomatik bowling oyunu hariç); ekranlı olanlar HARİÇ",
+      "tanim_en": "Other games that operate with payment methods such as coins, banknotes, bank cards, tokens, etc. (excluding automatic bowling games); EXCEPT those with screens.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950430900000",
+      "tanim_tr": "Madeni para, banknot, banka kartları, jeton, vb. ödeme araçları ile çalışan diğer oyunlar (otomatik bowling oyunu hariç) için aksam ve parçalar",
+      "tanim_en": "Parts and accessories for other games (excluding automatic bowling games) that operate with payment methods such as coins, banknotes, bank cards, tokens, etc.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950440000000",
+      "tanim_tr": "Oyun kağıtları",
+      "tanim_en": "Playing cards",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950450000000",
+      "tanim_tr": "Video oyun konsolları ve makineleri (9504.30 alt pozisyonundakiler hariç)",
+      "tanim_en": "Video game consoles and machines (excluding those in subheading 9504.30)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950490100000",
+      "tanim_tr": "Takım halinde elektrikli yarış arabaları (yarış oyunları özelliğine sahip olanlar)",
+      "tanim_en": "Team electric racing cars (those with racing game features)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950490800000",
+      "tanim_tr": "Diğer eğlence makinaları, kumarhane masaları, salon veya masa oyunları, otomatik bowling ekipmanları",
+      "tanim_en": "Other amusement machines, casino tables, parlor or table games, automatic bowling equipment.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950510100000",
+      "tanim_tr": "Noel eğlenceleri için eşya; camdan olanlar",
+      "tanim_en": "Items for Christmas celebrations; those made of glass.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950510900000",
+      "tanim_tr": "Noel eğlenceleri için eşya; camdan olanlar HARİÇ",
+      "tanim_en": "Items for Christmas celebrations; EXCEPT those made of glass.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950590000000",
+      "tanim_tr": "Diğer bayramlar, karnaval veya diğer eğlenceler için eşya (sihirbazlık eşyası veya sürpriz eşyası dahil)",
+      "tanim_en": "Items for other festivals, carnivals or other celebrations (including magic tricks or surprise items)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950611100000",
+      "tanim_tr": "Uzun mesafe kar kayakları",
+      "tanim_en": "Long-distance snow skiing",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950611210000",
+      "tanim_tr": "Yokuş aşağı iniş için tek kar kayakları ve snowboardlar",
+      "tanim_en": "Single snow skis and snowboards for downhill riding.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950611290000",
+      "tanim_tr": "Yokuş aşağı iniş için kar kayakları; tek kar kayakları ve snowboardlar HARİÇ",
+      "tanim_en": "Snow skis for downhill riding; EXCLUDING single snow skis and snowboards.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950611800000",
+      "tanim_tr": "Diğer kar kayakları",
+      "tanim_en": "Other snow skis",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950612000000",
+      "tanim_tr": "Kayak bağlayıcıları",
+      "tanim_en": "Ski binders",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950619000000",
+      "tanim_tr": "Kar kayağı yapmaya mahsus diğer malzemeler",
+      "tanim_en": "Other equipment for snow skiing",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950621000000",
+      "tanim_tr": "Rüzgar sörfleri",
+      "tanim_en": "Windsurfing",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950629000000",
+      "tanim_tr": "Su kayakları, sörf tahtaları ve su sporları yapmak için diğer malzemeler",
+      "tanim_en": "Water skis, surfboards, and other equipment for water sports.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950631000000",
+      "tanim_tr": "Golf sopaları (komple)",
+      "tanim_en": "Golf clubs (complete)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950632000000",
+      "tanim_tr": "Golf topları",
+      "tanim_en": "Golf balls",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950639100000",
+      "tanim_tr": "Golf sopalarının aksam ve parçaları",
+      "tanim_en": "Parts and accessories of golf clubs",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950639900000",
+      "tanim_tr": "Golf oyunlarına mahsus diğer malzemeler",
+      "tanim_en": "Other equipment for golf games",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950640000011",
+      "tanim_tr": "Masa tenisi için masalar",
+      "tanim_en": "Tables for table tennis",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950640000019",
+      "tanim_tr": "Masa tenisi için eşya ve malzeme; masalar HARİÇ",
+      "tanim_en": "Table tennis equipment and supplies; EXCLUDING tables.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950651000000",
+      "tanim_tr": "Tenis raketleri (fileli olsun olmasın)",
+      "tanim_en": "Tennis rackets (with or without net)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950659000000",
+      "tanim_tr": "Badminton veya benzeri sporlar için raketler (fileli olsun olmasın); tenis raketleri HARİÇ",
+      "tanim_en": "Rackets for badminton or similar sports (with or without net); EXCEPT tennis rackets.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950661000000",
+      "tanim_tr": "Tenis topları",
+      "tanim_en": "Tennis balls",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950662000000",
+      "tanim_tr": "Şişirilebilen toplar",
+      "tanim_en": "Inflatable balls",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950669100000",
+      "tanim_tr": "Kriket ve polo topları",
+      "tanim_en": "Cricket and polo balls",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950669900000",
+      "tanim_tr": "Diğer toplar; golf, masa tenisi, tenis, kriket, polo ve şişirilebilen toplar HARİÇ",
+      "tanim_en": "Other balls are EXCLUDED from golf, table tennis, tennis, cricket, polo and inflatable balls.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950670100000",
+      "tanim_tr": "Buz patenleri",
+      "tanim_en": "Ice skates",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950670300000",
+      "tanim_tr": "Tekerlekli patenler",
+      "tanim_en": "Roller skates",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950670900000",
+      "tanim_tr": "Buz patenleri ve tekerlekli patenler için aksam, parça ve aksesuar",
+      "tanim_en": "Parts, accessories and components for ice skates and roller skates.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950691100000",
+      "tanim_tr": "Güç ayarlama mekanizmalı egzersiz aletleri",
+      "tanim_en": "Exercise equipment with power adjustment mechanisms.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950691900000",
+      "tanim_tr": "Kültür-fizik, jimnastik veya atletizm eşya ve malzemesi; güç ayarlama mekanizmalı egzersiz aletleri HARİÇ",
+      "tanim_en": "Physical education, gymnastics or athletics equipment and materials; EXCLUDING exercise equipment with power adjustment mechanisms.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950699100000",
+      "tanim_tr": "Kriket veya polo malzemesi (toplar hariç)",
+      "tanim_en": "Cricket or polo equipment (excluding balls)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950699900000",
+      "tanim_tr": "Diğer sporlara veya diğer açık hava oyunlarına mahsus eşya ve malzeme, yüzme havuzları ve küçük oyun havuzları",
+      "tanim_en": "Equipment and materials for other sports or other outdoor games, swimming pools and small play pools.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "OTV-IV-LuksUrunler",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {
+          "vergi_tipi": "nispi"
+        },
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "liste": "IV",
+        "vergi_tipi": "oran",
+        "matrah_dilimleri": [
+          {
+            "segment": "Lüks Eşya, Kürk ve Mücevher",
+            "oran": 0.2
+          },
+          {
+            "segment": "Av Tüfekleri ve Silahlar",
+            "oran": 0.5
+          }
+        ]
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950710000000",
+      "tanim_tr": "Olta değnekleri",
+      "tanim_en": "Fishing rods",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950720100000",
+      "tanim_tr": "Olta iğneleri; misina takılmamış olanlar",
+      "tanim_en": "Fishing hooks; those without line attached.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950720900000",
+      "tanim_tr": "Olta iğneleri; misina takılmış olanlar",
+      "tanim_en": "Fishing hooks; those with fishing line attached.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950730000000",
+      "tanim_tr": "Olta makaraları",
+      "tanim_en": "Fishing reels",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950790000000",
+      "tanim_tr": "Diğer olta takımları, balık yakalamaya mahsus el kepçeleri, kelebek ağları, vb. ağlar; kuş avcılığı için yapma kuşlar, vb. av ve atıcılık malzemesi",
+      "tanim_en": "Other fishing gear, hand nets for catching fish, butterfly nets, etc.; artificial birds for bird hunting, etc. hunting and shooting equipment.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950810000000",
+      "tanim_tr": "Gezici sirkler ve gezici hayvan sergileri",
+      "tanim_en": "Traveling circuses and traveling animal exhibitions",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950821000000",
+      "tanim_tr": "Hızlı trenler (roller coaster)",
+      "tanim_en": "Roller coasters",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950822000000",
+      "tanim_tr": "Atlı karıncalar, salıncaklar ve dönen platformlar",
+      "tanim_en": "Carousels, swings, and rotating platforms",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950823000000",
+      "tanim_tr": "Çarpışan arabalar",
+      "tanim_en": "bumper cars",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950824000000",
+      "tanim_tr": "Hareket simulatörleri ve hareketli sinemalar",
+      "tanim_en": "Motion simulators and motion cinemas",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950825000000",
+      "tanim_tr": "Su gezinti eşyası",
+      "tanim_en": "Watercraft",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950826000000",
+      "tanim_tr": "Su parkı eğlence eşyası",
+      "tanim_en": "Water park amusement park equipment",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950829000000",
+      "tanim_tr": "Diğer eğlence parkı gezinti eşyası",
+      "tanim_en": "Other amusement park ride items",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950830000000",
+      "tanim_tr": "Fuar ve panayır eğlencelerine mahsus eşya",
+      "tanim_en": "Items for fair and carnival entertainment.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "950840000000",
+      "tanim_tr": "Gezici tiyatrolar",
+      "tanim_en": "Traveling theaters",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": {
+        "kod": "32.40"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    }
+  ]
+}

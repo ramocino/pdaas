@@ -22,13 +22,8 @@
   <div id="pdaas-header"></div>
 
   <div class="flex-1 flex overflow-hidden relative min-h-0">
-
-    <!-- ============================================================ -->
-    <!-- SIDEBAR                                                       -->
-    <!-- ============================================================ -->
     <aside id="sidebar"
       class="w-72 lg:w-80 flex-none bg-win-dark border-r border-win-border flex flex-col fixed lg:static top-16 bottom-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
-
       <div class="p-4 border-b border-win-border space-y-2 flex-none">
         <div class="flex items-center justify-between">
           <h2 class="text-sm font-semibold tracking-tight text-white uppercase flex items-center gap-2">
@@ -43,9 +38,7 @@
         </div>
         <p class="text-[11px] text-slate-500" data-i18n="kategoriler_desc">Kaynak türüne göre filtreleyin</p>
       </div>
-
       <div id="filter-list" class="flex-1 overflow-y-auto overscroll-contain p-3 space-y-2 min-h-0"></div>
-
       <div
         class="p-3 border-t border-win-border bg-win-dark/50 text-[11px] text-slate-500 flex items-center justify-between flex-none">
         <span>REST JSON API</span>
@@ -58,22 +51,13 @@
 
     <div id="mobile-overlay" class="fixed inset-0 bg-black/60 z-20 hidden lg:hidden mica-panel"></div>
 
-    <!-- ============================================================ -->
-    <!-- MAIN                                                          -->
-    <!-- ============================================================ -->
     <main id="main-content" class="flex-1 overflow-y-auto overscroll-contain bg-win-base flex flex-col min-h-0">
       <div class="max-w-6xl w-full mx-auto p-4 lg:p-8 space-y-6">
-
-        <!-- Sayfa başlığı -->
         <div>
           <h1 class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight" data-i18n="sayfa_baslik"></h1>
           <p class="text-sm text-slate-400 mt-1" data-i18n="sayfa_aciklama"></p>
         </div>
-
-        <!-- Durum / bildirim -->
         <div id="durum-alani" class="hidden"></div>
-
-        <!-- Arama kartı (sticky) -->
         <div
           class="bg-win-card border border-win-border rounded-xl shadow-xl overflow-hidden sticky top-4 z-30 backdrop-blur-md">
           <div class="p-4 space-y-3">
@@ -90,8 +74,6 @@
             <div id="filtre-notu" class="hidden text-[11px] text-slate-500 flex items-center gap-2"></div>
           </div>
         </div>
-
-        <!-- Sonuçlar -->
         <div id="sonuc-alani" class="space-y-4">
           <div class="flex-1 flex flex-col items-center justify-center py-16 text-center max-w-lg mx-auto">
             <div
@@ -101,7 +83,6 @@
             <p class="text-sm text-slate-400 leading-relaxed" data-i18n="bos_aciklama"></p>
           </div>
         </div>
-
         <div id="yukleniyor-spinner" class="hidden py-6 text-center">
           <div class="inline-block w-6 h-6 border-2 border-win-500 border-t-transparent rounded-full animate-spin">
           </div>
@@ -110,7 +91,6 @@
     </main>
   </div>
 
-  <!-- Yukarı git -->
   <button id="btn-scroll-top" type="button" aria-label="Yukarı git"
     class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-xl bg-win-500 hover:bg-win-600 text-white shadow-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -118,7 +98,6 @@
     </svg>
   </button>
 
-  <!-- Detay modal -->
   <div id="detay-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
     <div id="detay-overlay" class="absolute inset-0 bg-black/70 glass-panel"></div>
     <div id="detay-icerik" class="relative max-w-5xl w-full max-h-[92vh] overflow-y-auto modal-anim"></div>
@@ -127,177 +106,15 @@
   <script type="module">
     import { CONFIG, apiUrl, apiFetch } from './assets/pdaas-config.js';
     import { $, kacis, sayi, normKod, kodTemiz, tr_lower } from './assets/pdaas-utils.js';
-    import { t, dilBaslat, dilUygula, alanSec, kayitAdi, UI, getDil } from './assets/pdaas-i18n.js';
+    import { t, dilBaslat, dilUygula, kayitAdi, UI, getDil } from './assets/pdaas-i18n.js';
     import { renderLayout } from './assets/pdaas-layout.js';
 
     const dil = () => getDil();
 
-    // ============================================================
-    // i18n
-    // ============================================================
-    Object.assign(UI.tr, {
-      sayfa_baslik: "Ürün & Hizmet Kartı",
-      sayfa_aciklama: "Kaynak türüne göre kart üretilir: GTİP (Ürün), CPC (Hizmet), NACE (Faaliyet), ISCO (Meslek). Bir kaydı seçerek detay kartını görüntüleyin.",
-      arama_yer: "Ürün/hizmet adı, kod veya GTİP/CPC/NACE/ISCO ara…",
-      filtre_hepsi: "Tümü",
-      kategoriler_title: "Kategoriler",
-      kategoriler_desc: "Kaynak türüne göre filtreleyin",
-      kategori_hepsi_desc: "Tüm kaynaklar",
-      kategori_gtip_desc: "Ürünler (KDV + ÖTV)",
-      kategori_cpc_desc: "Hizmetler (KDV)",
-      kategori_nace_desc: "Faaliyet sınıfları",
-      kategori_isco_desc: "Meslek sınıfları",
-      bos_baslik: "Aramaya başlayın",
-      bos_aciklama: "Yukarıdaki arama kutusuna yazın; sonuçlar listede görünür. Bir kayda tıkladığınızda kaynağına uygun kart (Ürün / Hizmet / Faaliyet / Meslek) modal içinde açılır.",
-      yukleniyor: "Veriler yükleniyor…",
-      yuklendi: "Veriler hazır",
-      yukleme_hatasi: "Veri kaynakları yüklenemedi",
-      sonuc_yok_b: "Sonuç bulunamadı",
-      sonuc_yok_p: "Farklı bir kelime veya kod deneyin.",
-      satir: "satır",
-      agac_gorunumu: "ağaç görünümü",
-      baglam_not: "Soluk satırlar bağlam · Koyu satırlar arama eşleşmesi",
-      kod_baslik: "Kodları",
-      gerekce_baslik: "Karar Gerekçesi",
-      guven: "Güven Skoru",
-      kapat: "Kapat",
-      kart_urun: "Ürün Kartı", kart_hizmet: "Hizmet Kartı",
-      kart_faaliyet: "Faaliyet Kartı", kart_meslek: "Meslek Kartı",
-      kart_urun_desc: "Fiziki mal — KDV ve ÖTV'ye tabidir",
-      kart_hizmet_desc: "Verilen hizmet — yalnızca KDV'ye tabidir",
-      kart_faaliyet_desc: "Sektör/faaliyet kodu — vergi dışıdır",
-      kart_meslek_desc: "Meslek sınıflaması — vergi dışıdır",
-      alan_adi: "Standart Alan Adı", deger: "Değer / Standart",
-      kurum: "Sorumlu Kurum", vergi: "Vergi Bilgileri",
-      kdv_orani: "KDV Oranı", otv_orani: "ÖTV Oranı",
-      kdv_yok: "Bu kayıt KDV'ye tabi değildir",
-      otv_yok: "Bu kayıt ÖTV'ye tabi değildir",
-      otv_muaf: "Muaf", muaf: "Muaf",
-      kdv_listesi: "Liste", kdv_genel: "Genel Oran",
-      kdv_tevkifat_oran: "KDV Tevkifat Oranı",
-      kdv_tevkifat: "KDV Tevkifatı",
-      uygulanmaz: "Uygulanmaz",
-      tevkifat_uyari: "Alıcı-satıcı ilişkisine göre teyit edilmeli",
-      tevkifat_satici_beyan: "KDV'nin tamamı satıcı tarafından beyan edilir",
-      hizmet_otv_aciklama: "Hizmetler yalnızca KDV'ye tabidir",
-      gtip_kod: "GTİP Kodu", cpc_kod: "CPC Kodu",
-      nace_kod: "NACE Kodu", isco_kod: "ISCO Kodu",
-      urun_ad_tr: "Ürün Adı (TR)", urun_ad_en: "Ürün Adı (EN)",
-      hizmet_ad_tr: "Hizmet Adı (TR)", hizmet_ad_en: "Hizmet Adı (EN)",
-      faaliyet_ad_tr: "Faaliyet Adı (TR)", faaliyet_ad_en: "Faaliyet Adı (EN)",
-      meslek_ad_tr: "Meslek Adı (TR)", meslek_ad_en: "Meslek Adı (EN)",
-      olcu_birimi: "Ölçü Birimi", seviye: "Hiyerarşi Seviyesi",
-      seviye_adi: "Seviye Adı", ust_kod: "Üst Kod",
-      zorunlu_standart: "Zorunlu Standart Kodu",
-      tolerans: "Tolerans / Sapma Limiti (%)",
-      tehlike_sinifi: "Tehlike Sınıfı",
-      zorunlu_sigorta: "Zorunlu Sigorta",
-      gorev_tanimi: "Görev Tanımı",
-      beceri_seviyesi: "Beceri Seviyesi",
-      belge_baslik: "Zorunlu Belgeler ve İzinler",
-      belge_yok: "Bu kayıt için tanımlanmış belge bulunamadı",
-      belge_zorunlu: "ZORUNLU", belge_kosullu: "KOŞULLU", belge_opsiyonel: "OPSİYONEL",
-      randiman_baslik: "Fire ve Randıman Oranları",
-      randiman_oran: "Randıman", fire_oran: "Fire",
-      verimlilik_baslik: "Hizmet Verimlilik Göstergeleri",
-      hedef_deger: "Hedef",
-      iliskili: "İlişkili Kodlar",
-      iliskili_yok: "Bu kayıtla ilişkili başka kod bulunamadı",
-      iliskili_tikla: "Bu koda git",
-      vergi_disi_aciklama: "Sektör/meslek kodu — KDV/ÖTV konusu değildir",
-      filtre_notu_urun: "Ürün kayıtları (GTİP): KDV ve ÖTV gösterilir.",
-      filtre_notu_hizmet: "Hizmet kayıtları (CPC): KDV gösterilir; ÖTV uygulanmaz.",
-      filtre_notu_nace: "NACE sektör kodları: vergi bilgisi yoktur (faaliyet alanı tanımlayıcısı).",
-      filtre_notu_isco: "ISCO meslek kodları: vergi bilgisi yoktur (çalışan meslek sınıfı).",
-      kurum_tuik: "TÜİK", kurum_ticaret: "Ticaret Bakanlığı",
-      kurum_gib: "GİB", kurum_tse: "TSE",
-      kurum_calisma: "Çalışma Bakanlığı", kurum_tobb: "TOBB",
-      kurum_seddk: "SEDDK", kurum_isg: "İSGGM",
-      live_connection: "Canlı Bağlantı",
-    });
-
-    Object.assign(UI.en, {
-      sayfa_baslik: "Product & Service Card",
-      sayfa_aciklama: "Card is generated by source type: GTİP (Product), CPC (Service), NACE (Business), ISCO (Occupation). Select a record to view its detail card.",
-      arama_yer: "Search product/service name, code or GTİP/CPC/NACE/ISCO…",
-      filtre_hepsi: "All",
-      kategoriler_title: "Categories",
-      kategoriler_desc: "Filter by source type",
-      kategori_hepsi_desc: "All sources",
-      kategori_gtip_desc: "Products (VAT + SCT)",
-      kategori_cpc_desc: "Services (VAT)",
-      kategori_nace_desc: "Business classes",
-      kategori_isco_desc: "Occupation classes",
-      bos_baslik: "Start searching",
-      bos_aciklama: "Type in the search box above; results appear in the list. Click a record to open its matching card (Product / Service / Business / Occupation) in a modal.",
-      yukleniyor: "Loading data sources…", yuklendi: "Data ready",
-      yukleme_hatasi: "Could not load data sources",
-      sonuc_yok_b: "No results found", sonuc_yok_p: "Try a different keyword or code.",
-      satir: "rows", agac_gorunumu: "tree view",
-      baglam_not: "Faded rows are context · Highlighted rows are matches",
-      kod_baslik: "Codes", gerekce_baslik: "Decision Reasoning",
-      guven: "Confidence", kapat: "Close",
-      kart_urun: "Product Card", kart_hizmet: "Service Card",
-      kart_faaliyet: "Business Card", kart_meslek: "Occupation Card",
-      kart_urun_desc: "Physical good — subject to VAT and SCT",
-      kart_hizmet_desc: "Provided service — subject to VAT only",
-      kart_faaliyet_desc: "Sector/activity code — tax-exempt",
-      kart_meslek_desc: "Occupational classification — tax-exempt",
-      alan_adi: "Standard Field Name", deger: "Value / Standard",
-      kurum: "Responsible Agency", vergi: "Tax Information",
-      kdv_orani: "VAT Rate", otv_orani: "SCT Rate",
-      kdv_yok: "Not subject to VAT", otv_yok: "Not subject to SCT",
-      otv_muaf: "Exempt", muaf: "Exempt",
-      kdv_listesi: "List", kdv_genel: "General Rate",
-      kdv_tevkifat: "VAT Withholding",
-      uygulanmaz: "Not Applicable",
-      tevkifat_satici_beyan: "Full VAT is declared by the seller",
-      kdv_tevkifat_oran: "VAT Withholding Rate",
-      tevkifat_uyari: "Should be confirmed based on buyer-seller relationship",
-      hizmet_otv_aciklama: "Services are subject to VAT only",
-      gtip_kod: "GTİP Code", cpc_kod: "CPC Code",
-      nace_kod: "NACE Code", isco_kod: "ISCO Code",
-      urun_ad_tr: "Product Name (TR)", urun_ad_en: "Product Name (EN)",
-      hizmet_ad_tr: "Service Name (TR)", hizmet_ad_en: "Service Name (EN)",
-      faaliyet_ad_tr: "Activity Name (TR)", faaliyet_ad_en: "Activity Name (EN)",
-      meslek_ad_tr: "Occupation Name (TR)", meslek_ad_en: "Occupation Name (EN)",
-      olcu_birimi: "Unit of Measure", seviye: "Hierarchy Level",
-      seviye_adi: "Level Name", ust_kod: "Parent Code",
-      zorunlu_standart: "Mandatory Standard Code",
-      tolerans: "Tolerance / Deviation Limit (%)",
-      tehlike_sinifi: "Hazard Class", zorunlu_sigorta: "Mandatory Insurance",
-      gorev_tanimi: "Task Description", beceri_seviyesi: "Skill Level",
-      belge_baslik: "Mandatory Documents and Permits",
-      belge_yok: "No documents defined for this record",
-      belge_zorunlu: "MANDATORY", belge_kosullu: "CONDITIONAL", belge_opsiyonel: "OPTIONAL",
-      randiman_baslik: "Shrinkage and Yield Rates",
-      randiman_oran: "Yield", fire_oran: "Shrinkage",
-      verimlilik_baslik: "Service Productivity Indicators",
-      hedef_deger: "Target",
-      iliskili: "Related Codes", iliskili_yok: "No related codes found",
-      iliskili_tikla: "Go to this code",
-      vergi_disi_aciklama: "Sector/occupation code — not subject to VAT/SCT",
-      filtre_notu_urun: "Product records (GTİP): VAT and SCT are shown.",
-      filtre_notu_hizmet: "Service records (CPC): VAT is shown; SCT does not apply.",
-      filtre_notu_nace: "NACE sector codes: no tax info (business activity identifier).",
-      filtre_notu_isco: "ISCO occupation codes: no tax info (employee occupation).",
-      kurum_tuik: "TURKSTAT", kurum_ticaret: "Ministry of Trade",
-      kurum_gib: "Revenue Administration", kurum_tse: "Turkish Standards Institution",
-      kurum_calisma: "Ministry of Labour", kurum_tobb: "TOBB",
-      kurum_seddk: "SEDDK", kurum_isg: "OHS Administration",
-      live_connection: "Live Connection",
-    });
-
-    // ============================================================
-    // BAŞLAT
-    // ============================================================
     dilBaslat();
     renderLayout({ activePage: 'urunhizmetkarti.html' });
     dilUygula();
 
-    // ============================================================
-    // SABİTLER
-    // ============================================================
     const KAYNAK_ETIKET = { gtip: 'GTİP', isco: 'ISCO', cpc: 'CPC', nace: 'NACE' };
     const KAYNAK_SINIF = { gtip: 'etiket-hs', isco: 'etiket-isco', cpc: 'etiket-cpc', nace: 'etiket-nace' };
     const KAYNAK_IKON = { gtip: '📦', cpc: '⚙️', nace: '🏭', isco: '👤' };
@@ -310,39 +127,7 @@
     };
 
     const VERGI_KAYNAKLARI = new Set(['gtip', 'cpc']);
-    const OTV_KAYNAKLARI = new Set(['gtip']);
 
-    // ============================================================
-    // STOP WORDS
-    // ============================================================
-    const STOP_WORDS = new Set([
-      've', 'ile', 'için', 'bir', 'bu', 'şu', 'veya', 'göre', 'dahil', 'hariç',
-      'olmayan', 'olmak', 'üzere', 'ait', 'ilişkin', 'yönelik', 'gibi', 'kadar',
-      'yeni', 'eski', 'kullanılmış', 'kullanılmamış', 'orijinal', 'sadece',
-      'diğer', 'çok', 'az', 'büyük', 'küçük', 'hafif', 'ağır', 'uzun', 'kısa',
-      'ince', 'kalın', 'sert', 'yumuşak', 'sıvı', 'katı', 'kuru', 'yaş',
-      'taze', 'doğal', 'yapay', 'suni', 'sentetik', 'saf', 'karışık',
-      'imal', 'edilmiş', 'yapılmış', 'imalatı', 'yapımı', 'üretimi',
-      'the', 'and', 'for', 'a', 'an', 'of', 'to', 'in', 'on', 'or', 'with',
-      'other', 'than', 'not', 'including', 'excluding', 'new', 'old', 'used',
-    ]);
-
-    function kelimelereAyir(metin) {
-      return String(metin || '')
-        .toLocaleLowerCase('tr-TR')
-        .split(/[^\p{L}\p{N}]+/u)
-        .map(w => w.trim())
-        .filter(w => w.length >= 4 && !STOP_WORDS.has(w) && !/^\d+$/.test(w));
-    }
-    function kelimeSeti(metin) {
-      const set = new Set();
-      for (const w of kelimelereAyir(metin)) set.add(w);
-      return set;
-    }
-
-    // ============================================================
-    // VERİ KAYNAKLARI
-    // ============================================================
     const VERI = {
       gtip: { kayitlar: [], yuklendi: false, kaynak: '/api/v1/ham/gtip-kodlari.json' },
       cpc: { kayitlar: [], yuklendi: false, kaynak: '/api/v1/ham/cpc-kodlari.json' },
@@ -371,9 +156,6 @@
       isco: { belge: null, randiman: null },
     };
 
-    // ============================================================
-    // SIDEBAR FİLTRE LİSTESİ
-    // ============================================================
     const FILTRE_ITEMS = [
       { tip: 'hepsi', ikon: '🗂️', etiketKey: 'filtre_hepsi', altKey: 'kategori_hepsi_desc' },
       { tip: 'gtip', ikon: '📦', etiket: 'GTİP', altKey: 'kategori_gtip_desc' },
@@ -398,12 +180,8 @@
         const aktif = item.tip === AKTIF_FILTRE;
         const etiket = item.etiket || t(item.etiketKey);
         const altEtiket = t(item.altKey);
-        const btnCls = aktif
-          ? 'bg-win-500/20 border-win-500/40 text-win-400'
-          : 'bg-win-card border-win-border text-slate-200 hover:bg-win-hover';
-        const badgeCls = aktif
-          ? 'bg-win-500/30 text-win-300'
-          : 'bg-win-base text-slate-400';
+        const btnCls = aktif ? 'bg-win-500/20 border-win-500/40 text-win-400' : 'bg-win-card border-win-border text-slate-200 hover:bg-win-hover';
+        const badgeCls = aktif ? 'bg-win-500/30 text-win-300' : 'bg-win-base text-slate-400';
         return `
           <button class="filter-btn w-full px-3 py-2.5 rounded-md border transition text-left flex items-center justify-between group ${btnCls}" data-tip="${item.tip}">
             <div class="flex items-center gap-2.5 min-w-0">
@@ -430,9 +208,6 @@
       });
     }
 
-    // ============================================================
-    // VERİ YÜKLEME
-    // ============================================================
     async function fetchGuvenli(yol) {
       try {
         const r = await apiFetch(yol);
@@ -479,11 +254,7 @@
     async function tumVeriYukle() {
       const durum = $('durum-alani');
       durum.classList.remove('hidden');
-      durum.innerHTML = `
-        <div class="bg-win-card border border-win-border rounded-lg p-3 flex items-center gap-3 text-win-100 text-xs">
-          <div class="inline-block w-4 h-4 border-2 border-win-500 border-t-transparent rounded-full animate-spin"></div>
-          <span>${t('yukleniyor')}</span>
-        </div>`;
+      durum.innerHTML = `<div class="bg-win-card border border-win-border rounded-lg p-3 flex items-center gap-3 text-win-100 text-xs"><div class="inline-block w-4 h-4 border-2 border-win-500 border-t-transparent rounded-full animate-spin"></div><span>${t('yukleniyor')}</span></div>`;
 
       try {
         const KATALOG_ENDPOINT = CONFIG?.KATALOG_ENDPOINT || '/katalog.json';
@@ -494,20 +265,30 @@
             const s = kat.servisler.find(x => x.kod === kod);
             if (!s) return null;
             const k = s.katmanlar.ham || s.katmanlar.konsolide;
-            return k ? k.url : null;
+            if (!k || !k.url) return null;
+            // Katalog index.json (parça listesi) döndürüyorsa, aynı klasördeki
+            // tek dosyayı tercih et — çünkü bu sayfa "kayitlar" bekliyor.
+            if (k.url.endsWith('/index.json')) {
+              return k.url.replace('/index.json', '.json');
+            }
+            return k.url;
           };
 
-          // GTİP İÇİN DOĞRUDAN BİRLEŞTİRİLMİŞ gtit-tam DOSYASINI KULLANIYORUZ
-          const tamUrl = getUrl('gtip-tam');
-          if (tamUrl) {
-            VERI.gtip.kaynak = tamUrl;
-          } else {
-            VERI.gtip.kaynak = getUrl('gtip-kodlari'); // Geriye dönük uyumluluk
-          }
+          const gtipTamUrl = getUrl('gtip-tam');
+          if (gtipTamUrl) VERI.gtip.kaynak = gtipTamUrl;
+          else if (getUrl('gtip-kodlari')) VERI.gtip.kaynak = getUrl('gtip-kodlari');
 
-          if (getUrl('cpc-kodlari')) VERI.cpc.kaynak = getUrl('cpc-kodlari');
-          if (getUrl('nace-kodlari')) VERI.nace.kaynak = getUrl('nace-kodlari');
-          if (getUrl('isco-kodlari')) VERI.isco.kaynak = getUrl('isco-kodlari');
+          const cpcTamUrl = getUrl('cpc-tam');
+          if (cpcTamUrl) VERI.cpc.kaynak = cpcTamUrl;
+          else if (getUrl('cpc-kodlari')) VERI.cpc.kaynak = getUrl('cpc-kodlari');
+
+          const naceTamUrl = getUrl('nace-tam');
+          if (naceTamUrl) VERI.nace.kaynak = naceTamUrl;
+          else if (getUrl('nace-kodlari')) VERI.nace.kaynak = getUrl('nace-kodlari');
+
+          const iscoTamUrl = getUrl('isco-tam');
+          if (iscoTamUrl) VERI.isco.kaynak = iscoTamUrl;
+          else if (getUrl('isco-kodlari')) VERI.isco.kaynak = getUrl('isco-kodlari');
 
           if (getUrl('gtip-ozel-izin-belge')) EK_KAYNAK.gtipBelge = getUrl('gtip-ozel-izin-belge');
           if (getUrl('gtip-randiman')) EK_KAYNAK.gtipRandiman = getUrl('gtip-randiman');
@@ -517,12 +298,8 @@
           if (getUrl('isco-ozel-izin-belge')) EK_KAYNAK.iscoBelge = getUrl('isco-ozel-izin-belge');
         }
 
-        // Sadece 4 temel listeyi indiriyoruz. (KDV/ÖTV dosyalarını indirmeye gerek kalmadı)
         const [gtipR, cpcR, naceR, iscoR] = await Promise.all([
-          fetchGuvenli(VERI.gtip.kaynak),
-          fetchGuvenli(VERI.cpc.kaynak),
-          fetchGuvenli(VERI.nace.kaynak),
-          fetchGuvenli(VERI.isco.kaynak),
+          fetchGuvenli(VERI.gtip.kaynak), fetchGuvenli(VERI.cpc.kaynak), fetchGuvenli(VERI.nace.kaynak), fetchGuvenli(VERI.isco.kaynak),
         ]);
 
         if (gtipR) { VERI.gtip.kayitlar = gtipR.kayitlar || []; VERI.gtip.yuklendi = true; }
@@ -533,27 +310,12 @@
         kurumlariYukle();
         updateFilterCounts();
 
-        durum.innerHTML = `
-          <div class="bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-3 flex items-center gap-3 text-emerald-400 text-xs">
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span>${t('yuklendi')}</span>
-          </div>`;
+        durum.innerHTML = `<div class="bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-3 flex items-center gap-3 text-emerald-400 text-xs"><span class="w-2 h-2 rounded-full bg-emerald-400"></span><span>${t('yuklendi')}</span></div>`;
         setTimeout(() => { durum.classList.add('hidden'); durum.innerHTML = ''; }, 2000);
       } catch (e) {
         console.error("Veri yükleme hatası:", e);
-        durum.innerHTML = `
-          <div class="bg-rose-500/10 border border-rose-500/20 rounded-lg p-3 text-rose-400 text-xs">
-            ${t('yukleme_hatasi')}
-          </div>`;
+        durum.innerHTML = `<div class="bg-rose-500/10 border border-rose-500/20 rounded-lg p-3 text-rose-400 text-xs">${t('yukleme_hatasi')}</div>`;
       }
-    }
-
-    // ============================================================
-    // YARDIMCILAR
-    // ============================================================
-    function kayitAdiKisa(k) {
-      const ad = kayitAdi(k);
-      return ad.length > 120 ? ad.slice(0, 120) + '…' : ad;
     }
 
     function kurumAdi(kurum_kod) {
@@ -565,30 +327,6 @@
       return kurum_kod;
     }
 
-    function iliskiliKodlarBul(secilenKaynak, secilenKayit) {
-      const kelimeler = kelimelereAyir(kayitAdi(secilenKayit));
-      if (!kelimeler.length) return [];
-      const kaynaklar = ['gtip', 'cpc', 'nace', 'isco'].filter(k => k !== secilenKaynak);
-      const sonuc = [];
-      for (const k of kaynaklar) {
-        const eslesenler = [];
-        for (const r of VERI[k].kayitlar) {
-          const hedefSet = kelimeSeti(kayitAdi(r));
-          const ortak = kelimeler.filter(w => hedefSet.has(w));
-          const anlamli = ortak.filter(w => w.length >= 5);
-          if (ortak.length >= 2 || anlamli.length >= 1) {
-            eslesenler.push(r);
-            if (eslesenler.length >= 3) break;
-          }
-        }
-        if (eslesenler.length) sonuc.push({ kaynak: k, kayitlar: eslesenler });
-      }
-      return sonuc;
-    }
-
-    // ============================================================
-    // ARAMA + LİSTE
-    // ============================================================
     function gtipZinciri(kod) {
       const tk = kodTemiz(kod);
       if (!/^\d+$/.test(tk)) return [normKod(kod)];
@@ -641,8 +379,6 @@
 
     function kaynaklariTara(q, filtre) {
       const sorgu = tr_lower(q || '').trim();
-      const tekKaynak = filtre !== 'hepsi';
-
       const kaynaklar = [];
       if (filtre === 'hepsi' || filtre === 'gtip') kaynaklar.push(['gtip', VERI.gtip]);
       if (filtre === 'hepsi' || filtre === 'isco') kaynaklar.push(['isco', VERI.isco]);
@@ -669,25 +405,21 @@
         }
 
         if (!sorgu) {
-          // Arama yoksa ağaç kurmadan direkt listele
           for (const k of veri.kayitlar) {
             if (eslesenKodlar.includes(normKod(k.kod))) {
               tumSonuclar.push({ kaynak: kaynakTip, kayit: k, eslesme: true });
             }
           }
         } else {
-          // Arama varsa ağaç yapısını kur
           tumSonuclar.push(...agacKur(kaynakTip, veri.kayitlar, eslesenKodlar));
         }
       }
       return tumSonuclar;
     }
+
     function filtreNotunuGuncelle() {
       const not = $('filtre-notu');
-      const notlar = {
-        gtip: t('filtre_notu_urun'), cpc: t('filtre_notu_hizmet'),
-        nace: t('filtre_notu_nace'), isco: t('filtre_notu_isco'), hepsi: ''
-      };
+      const notlar = { gtip: t('filtre_notu_urun'), cpc: t('filtre_notu_hizmet'), nace: t('filtre_notu_nace'), isco: t('filtre_notu_isco'), hepsi: '' };
       const metin = notlar[AKTIF_FILTRE] || '';
       if (metin) { not.classList.remove('hidden'); not.innerHTML = `<span class="text-win-400">ℹ️</span> <span>${kacis(metin)}</span>`; }
       else { not.classList.add('hidden'); not.innerHTML = ''; }
@@ -712,9 +444,7 @@
 
       let html = `
         <div class="flex items-center justify-between text-xs text-slate-400 px-1 flex-wrap gap-2 mb-3">
-          <span class="font-semibold">
-            ${sayi(Math.min(GORUNEN_LIMIT, TUM_SONUCLAR.length))} / ${sayi(TUM_SONUCLAR.length)} ${kacis(t('satir'))} — ${kacis(t('agac_gorunumu'))}
-          </span>
+          <span class="font-semibold">${sayi(Math.min(GORUNEN_LIMIT, TUM_SONUCLAR.length))} / ${sayi(TUM_SONUCLAR.length)} ${kacis(t('satir'))} — ${kacis(t('agac_gorunumu'))}</span>
           <span class="text-slate-500 hidden sm:inline">${kacis(t('baglam_not'))}</span>
         </div>`;
 
@@ -737,9 +467,7 @@
           const globalIdx = TUM_SONUCLAR.indexOf(s);
           const ad = kayitAdi(s.kayit);
           const kod = normKod(s.kayit.kod);
-          const eslesme = s.eslesme;
-          const opak = eslesme ? 'text-slate-100 font-semibold bg-win-dark/40' : 'text-slate-400 opacity-60';
-
+          const opak = s.eslesme ? 'text-slate-100 font-semibold bg-win-dark/40' : 'text-slate-400 opacity-60';
           return `
                   <div class="px-4 py-3 hover:bg-win-hover transition cursor-pointer flex items-center justify-between gap-3 kart-tikla ${opak}" data-idx="${globalIdx}">
                     <div class="min-w-0 flex items-center gap-3 flex-1">
@@ -759,15 +487,12 @@
 
     function aramayiBaslat() {
       const q = $('arama').value.trim();
-      GORUNEN_LIMIT = 100; // İlk açılışta sadece 100 kayıt göster
+      GORUNEN_LIMIT = 100;
       TUM_SONUCLAR = kaynaklariTara(q, AKTIF_FILTRE);
-      filtreNotunuGuncelle(); // EKLENDİ (Arama çubuğunun altındaki notu günceller)
-      sonuclariCiz();         // EKLENDİ (Veriyi ekrana basar)
+      filtreNotunuGuncelle();
+      sonuclariCiz();
     }
 
-    // ============================================================
-    // MODAL
-    // ============================================================
     async function detayGoster(s) {
       SECILI = s;
       const { kaynak, kayit } = s;
@@ -788,18 +513,8 @@
       $('kapat-btn')?.addEventListener('click', detayKapat);
 
       await ekVeriYukle(kaynak);
-      const iliskili = iliskiliKodlarBul(kaynak, kayit);
-      $('detay-icerik').innerHTML = kartUret(s, iliskili);
+      $('detay-icerik').innerHTML = kartUret(s);
       $('kapat-btn')?.addEventListener('click', detayKapat);
-
-      document.querySelectorAll('#detay-icerik .iliskili-tikla').forEach(el => {
-        el.addEventListener('click', () => {
-          const k = el.dataset.kaynak;
-          const kd = el.dataset.kod;
-          const hedef = VERI[k].kayitlar.find(r => normKod(r.kod) === kd);
-          if (hedef) detayGoster({ kaynak: k, kayit: hedef });
-        });
-      });
     }
 
     function detayKapat() {
@@ -810,217 +525,335 @@
       $('main-content').style.overflow = '';
     }
 
-    function kartUret(secim, iliskili) {
+    function kartUret(secim) {
       const { kaynak, kayit } = secim;
       const kod = normKod(kayit.kod);
       const kartTip = KART_TIPI[kaynak];
-      const satirlar = [];
-      satirlar.push(...kaynakBazliAlanlar(secim, iliskili));
 
-      // VERGİ
+      const temelSatirlar = kaynakBazliAlanlar(secim);
+      const temelHtml = birlesikTabloCiz(temelSatirlar);
+
+      let vergiHtml = '';
+
       if (kartTip.kdvVar || kartTip.otvVar) {
-        satirlar.push({ tip: 'baslik', metin: t('vergi') });
+        const kdv = kayit.kdv || { oran: 0.20, grup: 'genel' };
+        const otv = kayit.otv || { grup: 'otv_yok' };
+        const tevk = kayit.tevkifat || { grup: 'tevkifat_yok' };
 
-        if (kartTip.kdvVar) {
-          // DOĞRUDAN gtit-tam İÇİNDEKİ kdv OBJESİNİ OKUYORUZ
-          let kdvSonuc = kayit.kdv;
+        let kdvOranStr = `%${(kdv.oran * 100).toFixed(0)}`;
+        let kdvAciklama = kdv.grup ? `Grup: ${kdv.grup}` : 'Genel Oran';
 
-          // Eğer gtit-tam değil de eski bir dosya gelirse (yedek mekanizma)
-          if (!kdvSonuc) {
-            const oran = kayit.kdv_kodu ? oranBul(kayit.kdv_kodu) : 0.20;
-            kdvSonuc = { oran: oran, aciklama: 'Genel Oran', grup: null };
-          }
-
-          const kdvOran = kdvSonuc.oran != null ? kdvSonuc.oran : 0.20;
-          const kdvAciklamaMetin = kdvSonuc.grup ? `Grup: ${kdvSonuc.grup}` : 'Genel Oran';
-
-          satirlar.push({
-            alan: t('kdv_orani'),
-            deger: `%${(kdvOran * 100).toFixed(0)}`,
-            kurum: `${t('kurum_gib')} — ${kdvAciklamaMetin}`,
-            vurgu: 'kdv'
-          });
-        }
-
-        if (kartTip.otvVar) {
-          const otv = kayit.otv;
-
-          if (otv && otv.grup && otv.grup !== 'otv_yok') {
-            let otvDeger = 'Uygulanır';
-            let otvAciklama = '';
-
-            let oranMetin = '';
-            let maktuMetin = '';
-
-            // 1. NİSPİ ORAN KONTROLÜ (Doğrudan derle.py'den gelen kalem verisi)
-            if (otv.oran != null && otv.oran > 0) {
-              oranMetin = `%${(otv.oran * 100).toFixed(0)}`;
+        let otvDeger = t('otv_muaf');
+        let otvAciklama = t('otv_yok');
+        if (otv.grup && otv.grup !== 'otv_yok') {
+          if (otv.oran) {
+            otvDeger = `%${(otv.oran * 100).toFixed(0)}`;
+          } else if (otv.matrah_dilimleri && otv.matrah_dilimleri.length > 0) {
+            const oranlar = otv.matrah_dilimleri.map(m => m.oran || 0).filter(o => o > 0);
+            if (oranlar.length > 0) {
+              const minO = Math.min(...oranlar);
+              const maxO = Math.max(...oranlar);
+              if (minO === maxO) otvDeger = `%${(minO * 100).toFixed(1).replace('.0', '')}`;
+              else otvDeger = `%${(minO * 100).toFixed(0)} - %${(maxO * 100).toFixed(0)}`;
+            } else {
+              otvDeger = 'Uygulanır';
             }
-            // Eğer oran yoksa Matrah Dilimlerine bak (Otomobil, Telefon vb.)
-            else if (otv.matrah_dilimleri && otv.matrah_dilimleri.length > 0) {
-              const oranlar = otv.matrah_dilimleri.map(m => m.oran || 0).filter(o => o > 0);
-              if (oranlar.length > 0) {
-                const minOran = Math.min(...oranlar);
-                const maxOran = Math.max(...oranlar);
-                if (minOran === maxOran) {
-                  oranMetin = `%${(minOran * 100).toFixed(1).replace('.0', '')}`;
-                } else {
-                  oranMetin = `%${(minOran * 100).toFixed(0)} - %${(maxOran * 100).toFixed(0)}`;
-                  otvAciklama += ` · Matraha göre değişkenlik gösterir`;
-                }
-              }
-            }
-
-            // 2. MAKTU VE ASGARİ MAKTU TUTARLARI KONTROLÜ
-            if (otv.asgari_maktu != null) {
-              maktuMetin += `Asgari Maktu: ${otv.asgari_maktu} TL`;
-            }
-            if (otv.maktu != null) {
-              if (maktuMetin) maktuMetin += ', ';
-              maktuMetin += `Maktu: ${otv.maktu} TL`;
-            }
-
-            // Eğer üst düzeyde maktu yoksa matrah dilimlerinin içine bak (yedek kontrol)
-            if (!maktuMetin && otv.matrah_dilimleri && otv.matrah_dilimleri.length > 0 && otv.matrah_dilimleri[0].asgari_maktu != null) {
-              maktuMetin = `Asgari Maktu: ${otv.matrah_dilimleri[0].asgari_maktu} TL`;
-            }
-
-            // Değerleri Birleştir
-            if (oranMetin) otvDeger = oranMetin;
-            else if (otv.vergi_tipi === 'maktu') otvDeger = 'Maktu';
-
-            if (maktuMetin) {
-              otvAciklama = ` · ${maktuMetin}${otvAciklama}`;
-            }
-
-            if (otv.ornekler_tr && otv.ornekler_tr.length > 0) {
-              otvAciklama += ` · Örn: ${otv.ornekler_tr.slice(0, 2).join(', ')}`;
-            }
-
-            const listeAdi = otv.liste ? `${otv.liste} Sayılı Liste` : 'ÖTV Listesi';
-
-            satirlar.push({
-              alan: t('otv_orani'),
-              deger: otvDeger,
-              kurum: `${t('kurum_gib')} — ${listeAdi}${otvAciklama}`,
-              vurgu: 'otv'
-            });
+          } else if (otv.vergi_tipi === 'maktu' || otv.ek_kriterler?.vergi_tipi === 'maktu') {
+            otvDeger = 'Maktu';
           } else {
-            satirlar.push({
-              alan: t('otv_orani'),
-              deger: t('otv_muaf'),
-              kurum: `${t('kurum_gib')} — ${t('otv_yok')}`,
-              vurgu: 'muaf'
-            });
+            otvDeger = 'Uygulanır';
+          }
+          otvAciklama = otv.liste ? `${otv.liste} Sayılı Liste` : 'ÖTV Listesi';
+          if (otv.matrah_dilimleri && otv.matrah_dilimleri.length > 0) {
+            otvAciklama += ' · Matraha göre değişkenlik gösterir';
           }
         }
-        // TEVKİFAT BİLGİSİ
-        if (kartTip.kdvVar) {
-          const tevk = kayit.tevkifat;
-          if (tevk && tevk.grup && tevk.grup !== 'tevkifat_yok') {
-            // Tevkifat VARSA
-            satirlar.push({
-              alan: t('kdv_tevkifat'),
-              deger: tevk.oran_kesir ? `%${(tevk.oran * 100).toFixed(0)} (${tevk.oran_kesir})` : `%${(tevk.oran * 100).toFixed(0)}`,
-              kurum: `${t('kurum_gib')} — ${dil() === 'en' ? (tevk.ad_en || tevk.ad_tr) : (tevk.ad_tr || tevk.grup)}`,
-              vurgu: 'kdv'
-            });
-          } else {
-            // Tevkifat YOKSA
-            satirlar.push({
-              alan: t('kdv_tevkifat'),
-              deger: t('uygulanmaz'),
-              kurum: `${t('kurum_gib')} — ${t('tevkifat_satici_beyan')}`,
-              vurgu: 'muaf' // Yeşil renkte görünmesi için
-            });
-          }
+
+        let tevkKam = t('uygulanmaz');
+        let tevkSir = t('uygulanmaz');
+        let tevkSah = t('uygulanmaz');
+        let tevkAciklama = '';
+
+        if (tevk.grup && tevk.grup !== 'tevkifat_yok') {
+          const oranStr = tevk.oran_kesir ? `%${(tevk.oran * 100).toFixed(0)} (${tevk.oran_kesir})` : `%${(tevk.oran * 100).toFixed(0)}`;
+          tevkAciklama = tevk.ad_tr || tevk.grup;
+
+          const alicilar = tevk.alici_tipleri || ['*'];
+          if (alicilar.includes('*') || alicilar.includes('kamu')) tevkKam = oranStr;
+          if (alicilar.includes('*') || alicilar.includes('sirket')) tevkSir = oranStr;
+          if (alicilar.includes('*') || alicilar.includes('sahis')) tevkSah = oranStr;
         }
+
+        const renderTevkSatir = (tip, deger) => {
+          const isUygulanmaz = deger === t('uygulanmaz');
+          const color = isUygulanmaz ? 'text-emerald-400' : 'text-win-100 font-bold';
+          const icon = tip === 'kamu' ? '🏛️' : tip === 'sirket' ? '🏢' : '👤';
+          return `
+            <div class="flex justify-between items-center text-[11px] py-1 border-b border-win-border/30 last:border-0">
+              <span class="text-slate-400 flex items-center gap-1.5"><span class="text-xs">${icon}</span> ${t('tip_' + tip)}</span>
+              <span class="font-mono ${color}">${deger}</span>
+            </div>
+          `;
+        };
+
+        vergiHtml = `
+          <div class="border-b border-win-border bg-win-dark/20 p-5">
+            <h3 class="text-[11px] font-bold uppercase tracking-wider text-win-400 mb-4 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              ${t('vergi')}
+            </h3>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-win-500"></div>
+                <div class="flex items-center justify-between mb-4 pl-2">
+                  <h4 class="font-bold text-white text-sm">${t('islem_yurtici')}</h4>
+                  <span class="bg-win-500/20 text-win-300 text-[10px] px-2 py-0.5 rounded border border-win-500/30">Türkiye</span>
+                </div>
+                
+                <div class="space-y-3 pl-2">
+                  <div class="flex justify-between items-start gap-4">
+                    <span class="text-xs text-slate-400 font-medium">${t('kdv_orani')}</span>
+                    <div class="text-right">
+                      <div class="font-mono text-sm font-bold text-win-100">${kdvOranStr}</div>
+                      <div class="text-[10px] text-slate-500">${kdvAciklama}</div>
+                    </div>
+                  </div>
+                  
+                  <div class="flex justify-between items-start gap-4">
+                    <span class="text-xs text-slate-400 font-medium">${t('otv_orani')}</span>
+                    <div class="text-right">
+                      <div class="font-mono text-sm font-bold ${otvDeger === t('otv_muaf') ? 'text-emerald-400' : 'text-rose-400'}">${otvDeger}</div>
+                      <div class="text-[10px] text-slate-500">${otvAciklama}</div>
+                    </div>
+                  </div>
+
+                  <div class="pt-2 border-t border-win-border/50">
+                    <div class="flex justify-between items-start gap-4 mb-2">
+                      <span class="text-xs text-slate-400 font-medium">${t('kdv_tevkifat')}</span>
+                      <span class="text-[10px] text-slate-500 text-right max-w-[150px] leading-tight">${tevkAciklama}</span>
+                    </div>
+                    <div class="bg-win-dark/30 rounded border border-win-border/50 p-2">
+                      ${renderTevkSatir('kamu', tevkKam)}
+                      ${renderTevkSatir('sirket', tevkSir)}
+                      ${renderTevkSatir('sahis', tevkSah)}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+                <div class="flex items-center justify-between mb-4 pl-2">
+                  <h4 class="font-bold text-white text-sm">${t('islem_ihracat')}</h4>
+                  <span class="bg-emerald-500/20 text-emerald-300 text-[10px] px-2 py-0.5 rounded border border-emerald-500/30">Yurt Dışı</span>
+                </div>
+                
+                <div class="space-y-3 pl-2">
+                  <div class="flex justify-between items-start gap-4">
+                    <span class="text-xs text-slate-400 font-medium">${t('kdv_orani')}</span>
+                    <div class="text-right">
+                      <div class="font-mono text-sm font-bold text-emerald-400">%0</div>
+                      <div class="text-[10px] text-slate-500">Tam İstisna (md.11)</div>
+                    </div>
+                  </div>
+                  
+                  <div class="flex justify-between items-start gap-4">
+                    <span class="text-xs text-slate-400 font-medium">${t('otv_orani')}</span>
+                    <div class="text-right">
+                      <div class="font-mono text-sm font-bold text-emerald-400">${t('muaf')}</div>
+                      <div class="text-[10px] text-slate-500">İhracat İstisnası</div>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-between items-start gap-4">
+                    <span class="text-xs text-slate-400 font-medium">${t('kdv_tevkifat')}</span>
+                    <div class="text-right">
+                      <div class="font-mono text-sm font-bold text-emerald-400">${t('uygulanmaz')}</div>
+                      <div class="text-[10px] text-slate-500">İhracatta tevkifat olmaz</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
       }
 
-      // RANDIMAN
+      let sgkHtml = '';
+      if (kaynak === 'nace' && kayit.sgk_prim) {
+        const sgk = kayit.sgk_prim;
+
+        // Teşvik adını dil dosyasından çek
+        const tesvikAdi = sgk.tesvik_kodu === '5510' && sgk.isveren_pay_tevkisli < 20
+          ? t('sgk_tesvik_imalat')
+          : t('sgk_tesvik_diger');
+
+        sgkHtml = `
+          <div class="border-b border-win-border bg-win-dark/20 p-5">
+            <h3 class="text-[11px] font-bold uppercase tracking-wider text-win-400 mb-4 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+              ${t('sgk_prim_baslik')}
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <!-- İşçi Payı -->
+              <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-win-500"></div>
+                <div class="pl-2">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs text-slate-400 font-medium">${t('sgk_isci_payi')}</span>
+                    <span class="text-[10px] bg-win-500/20 text-win-300 px-1.5 py-0.5 rounded">${t('sgk_sabit')}</span>
+                  </div>
+                  <div class="font-mono text-lg font-bold text-win-100">%${sgk.isci_pay}</div>
+                  <div class="text-[10px] text-slate-500 mt-1">${t('sgk_isci_aciklama')}</div>
+                </div>
+              </div>
+
+              <!-- İşveren Payı (Teşviksiz) -->
+              <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-rose-500"></div>
+                <div class="pl-2">
+                  <span class="text-xs text-slate-400 font-medium block mb-2">${t('sgk_isveren_tevkisiz')}</span>
+                  <div class="font-mono text-lg font-bold text-rose-400">%${sgk.isveren_pay_tevkisiz}</div>
+                  <div class="text-[10px] text-slate-500 mt-1">${t('sgk_standart_oran')}</div>
+                </div>
+              </div>
+
+              <!-- İşveren Payı (Teşvikli) -->
+              <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+                <div class="pl-2">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs text-slate-400 font-medium">${t('sgk_isveren_tevkisli')}</span>
+                    <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-1.5 py-0.5 rounded">${t('sgk_indirimli')}</span>
+                  </div>
+                  <div class="font-mono text-lg font-bold text-emerald-400">%${sgk.isveren_pay_tevkisli}</div>
+                  <div class="text-[10px] text-win-400 mt-1">${tesvikAdi}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      let randimanHtml = '';
       if (kartTip.randimanVar) {
         const rd = kayit.randiman;
-        
-        // Eğer ürünün girdi veya çıktı olduğu bir randıman kuralı varsa
         if (rd && (rd.girdi_oldugu_kurallar?.length || rd.cikti_oldugu_kurallar?.length)) {
-          satirlar.push({ tip: 'baslik', metin: (kaynak === 'gtip' ? t('randiman_baslik') : t('verimlilik_baslik')) });
-          
-          const kurumAd = t('kurum_gib'); // Randıman oranları ÖTV Tebliği'ne tabidir
-          
+          const rdSatirlar = [];
+          const kurumAd = t('kurum_gib');
           if (kaynak === 'gtip') {
-            // 1. Ürün Girdi (Ham madde) ise
             if (rd.girdi_oldugu_kurallar?.length) {
               for (const r of rd.girdi_oldugu_kurallar) {
                 const ad = dil() === 'en' ? (r.ad_en || r.ad_tr) : (r.ad_tr || '');
-                const aciklama = dil() === 'en' ? (r.aciklama_en || '') : (r.aciklama_tr || '');
-                
-                if (r.randiman_orani != null) {
-                  satirlar.push({ 
-                    alan: `${ad} — ${t('randiman_oran')}`, 
-                    deger: `%${(r.randiman_orani * 100).toFixed(1)}`, 
-                    kurum: `${kurumAd} · ${aciklama}`, 
-                    vurgu: r.randiman_orani >= 0.75 ? 'muaf' : '' 
-                  });
-                }
-                if (r.fire_orani != null) {
-                  satirlar.push({ 
-                    alan: `${ad} — ${t('fire_oran')}`, 
-                    deger: `%${(r.fire_orani * 100).toFixed(1)}`, 
-                    kurum: kurumAd, 
-                    vurgu: r.fire_orani > 0.30 ? 'otv' : '' 
-                  });
-                }
+                if (r.randiman_orani != null) rdSatirlar.push({ alan: `${ad} — ${t('randiman_oran')}`, deger: `%${(r.randiman_orani * 100).toFixed(1)}`, kurum: kurumAd, vurgu: 'muaf' });
+                if (r.fire_orani != null) rdSatirlar.push({ alan: `${ad} — ${t('fire_oran')}`, deger: `%${(r.fire_orani * 100).toFixed(1)}`, kurum: kurumAd, vurgu: 'otv' });
               }
             }
-            
-            // 2. Ürün Çıktı (İşlenmiş Mamul) ise
             if (rd.cikti_oldugu_kurallar?.length) {
               for (const r of rd.cikti_oldugu_kurallar) {
                 const ad = dil() === 'en' ? (r.ad_en || r.ad_tr) : (r.ad_tr || '');
-                const aciklama = dil() === 'en' ? (r.aciklama_en || '') : (r.aciklama_tr || '');
-                
-                satirlar.push({ 
-                  alan: `${ad} — ${t('randiman_oran')}`, 
-                  deger: `%${(r.randiman_orani * 100).toFixed(1)}`, 
-                  kurum: `${kurumAd} · ${aciklama}`, 
-                  vurgu: r.randiman_orani >= 0.75 ? 'muaf' : '' 
-                });
+                rdSatirlar.push({ alan: `${ad} — ${t('randiman_oran')}`, deger: `%${(r.randiman_orani * 100).toFixed(1)}`, kurum: kurumAd, vurgu: 'muaf' });
               }
             }
-          } else {
-            // CPC (Hizmet) randıman kuralları için eski yedek kod (Şimdilik gerekmiyor)
-            const hedef = '—';
-            satirlar.push({ alan: `— ${t('hedef_deger')}`, deger: hedef, kurum: kurumAd });
+          }
+          if (rdSatirlar.length) {
+            randimanHtml = `
+              <div class="border-b border-win-border">
+                <div class="px-4 py-2 bg-win-dark/60 text-[10px] font-bold uppercase tracking-wider text-win-400">${t('randiman_baslik')}</div>
+                <table class="w-full text-left"><tbody class="divide-y divide-win-border/40">${rdSatirlar.map(s => `
+                  <tr class="hover:bg-win-hover/40 transition">
+                    <td class="px-4 py-2.5 text-slate-300 text-xs font-medium">${kacis(s.alan)}</td>
+                    <td class="px-4 py-2.5 font-mono text-xs text-emerald-400 font-semibold">${kacis(s.deger)}</td>
+                    <td class="px-4 py-2.5 text-[11px] text-slate-500">${kacis(s.kurum || '')}</td>
+                  </tr>
+                `).join('')}</tbody></table>
+              </div>
+            `;
           }
         }
       }
 
-      // BELGELER
+      let belgeHtml = '';
       if (kartTip.belgeVar) {
-        const belgeler = kayit.belgeler || []; // derle.py'den hazır gelen belgeler
-        satirlar.push({ tip: 'baslik', metin: belgeler.length ? `${t('belge_baslik')} (${belgeler.length})` : t('belge_baslik') });
-        if (!belgeler.length) {
-          satirlar.push({ alan: '—', deger: t('belge_yok'), kurum: '' });
-        } else {
-          for (const b of belgeler) {
-            const seviyeEtiket = b.seviye === 'zorunlu' ? t('belge_zorunlu') : b.seviye === 'kosullu' ? t('belge_kosullu') : t('belge_opsiyonel');
+        const belgeler = kayit.belgeler || { yurtici: [], ithalat: [], ihracat: [] };
+
+        const ilkHane = String(kod).charAt(0);
+        const hizmetMi = (kaynak === 'cpc' && ['5', '6', '7', '8', '9'].includes(ilkHane));
+        const isNaceVeyaIsco = (kaynak === 'nace' || kaynak === 'isco' || hizmetMi);
+        const gridCols = isNaceVeyaIsco ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-3';
+
+        const renderBelgeListesi = (liste) => {
+          if (!liste || liste.length === 0) {
+            return `<div class="text-[11px] text-slate-500 italic py-2">Bu işlem için özel belge şartı bulunmamaktadır.</div>`;
+          }
+          return `<div class="space-y-2">` + liste.map(b => {
+            const seviye = b.seviye || 'opsiyonel';
+            const kosul = b.kosul_tr || '';
+
+            const seviyeEtiket = seviye === 'zorunlu' ? t('belge_zorunlu') : seviye === 'kosullu' ? t('belge_kosullu') : t('belge_opsiyonel');
             const adMetin = dil() === 'en' ? (b.ad_en || b.ad_tr) : b.ad_tr;
             const kurumAd = kurumAdi(b.kurum_kod) || b.kurum || '—';
-            const aciklama = dil() === 'en' ? (b.kosul_en || b.kosul_tr) : b.kosul_tr;
+            const seviyeRenk = seviye === 'zorunlu' ? 'bg-rose-500/10 border-rose-500/20 text-rose-400' : (seviye === 'kosullu' ? 'bg-amber-500/10 border-amber-500/20 text-amber-400' : 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400');
 
-            satirlar.push({
-              alan: `${adMetin} [${seviyeEtiket}]`,
-              deger: aciklama || '—',
-              kurum: kurumAd,
-              vurgu: b.seviye === 'zorunlu' ? 'otv' : (b.seviye === 'kosullu' ? '' : 'muaf')
-            });
-          }
-        }
+            return `<div class="bg-win-card border border-win-border rounded p-2.5 flex flex-col gap-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="text-xs font-semibold text-slate-200">${kacis(adMetin)}</span>
+                <span class="px-1.5 py-0.5 text-[9px] font-bold rounded border ${seviyeRenk} whitespace-nowrap">${seviyeEtiket}</span>
+              </div>
+              ${kosul ? `<div class="text-[10px] text-slate-400">${kacis(kosul)}</div>` : ''}
+              <div class="text-[10px] text-slate-500 mt-1 flex items-center gap-1"><span class="text-win-400">🏛️</span> ${kacis(kurumAd)}</div>
+            </div>`;
+          }).join('') + `</div>`;
+        };
+
+        belgeHtml = `
+          <div class="border-b border-win-border bg-win-dark/20 p-5">
+            <h3 class="text-[11px] font-bold uppercase tracking-wider text-win-400 mb-4 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              ${t('belge_baslik')}
+            </h3>
+            
+            <div class="grid ${gridCols} gap-4">
+              <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-win-500"></div>
+                <div class="flex items-center justify-between mb-3 pl-2">
+                  <h4 class="font-bold text-white text-xs">${t('islem_yurtici')}</h4>
+                  <span class="bg-win-500/20 text-win-300 text-[9px] px-1.5 py-0.5 rounded border border-win-500/30">Türkiye</span>
+                </div>
+                <div class="pl-2">
+                  ${renderBelgeListesi(belgeler.yurtici)}
+                </div>
+              </div>
+
+              ${!isNaceVeyaIsco ? `
+              <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
+                <div class="flex items-center justify-between mb-3 pl-2">
+                  <h4 class="font-bold text-white text-xs">${dil() === 'en' ? 'Import' : 'İthalat'}</h4>
+                  <span class="bg-amber-500/20 text-amber-300 text-[9px] px-1.5 py-0.5 rounded border border-amber-500/30">${dil() === 'en' ? 'Foreign' : 'Dış Alım'}</span>
+                </div>
+                <div class="pl-2">
+                  ${renderBelgeListesi(belgeler.ithalat)}
+                </div>
+              </div>
+
+              <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+                <div class="flex items-center justify-between mb-3 pl-2">
+                  <h4 class="font-bold text-white text-xs">${t('islem_ihracat')}</h4>
+                  <span class="bg-emerald-500/20 text-emerald-300 text-[9px] px-1.5 py-0.5 rounded border border-emerald-500/30">${dil() === 'en' ? 'Export' : 'Yurt Dışı'}</span>
+                </div>
+                <div class="pl-2">
+                  ${renderBelgeListesi(belgeler.ihracat)}
+                </div>
+              </div>
+              ` : ''}
+            </div>
+          </div>
+        `;
       }
-
-
-      const tabloHtml = birlesikTabloCiz(satirlar);
-      const iliskiliHtml = iliskiliBlogu(iliskili);
 
       return `
         <div class="bg-win-card border border-win-border rounded-xl shadow-2xl overflow-hidden modal-anim">
@@ -1032,91 +865,94 @@
             </div>
             <button id="kapat-btn" type="button" title="${t('kapat')}" class="flex-none w-9 h-9 rounded-lg bg-win-dark hover:bg-rose-500/20 hover:text-rose-400 text-slate-400 flex items-center justify-center transition">✕</button>
           </div>
-          ${tabloHtml}
-          ${iliskiliHtml}
-          <div class="px-5 py-3 bg-win-dark border-t border-win-border flex items-center justify-between text-xs text-slate-400">
-            <span>${t('gerekce_baslik')}</span>
-            <span class="font-mono text-emerald-400">${t('guven')}: %95</span>
-          </div>
+          ${temelHtml}
+          ${vergiHtml}
+          ${sgkHtml}
+          ${randimanHtml}
+          ${belgeHtml}
         </div>`;
     }
-
-    function kaynakBazliAlanlar(secim, iliskili) {
+    function kaynakBazliAlanlar(secim) {
       const { kaynak, kayit } = secim;
       const kod = normKod(kayit.kod);
-      const adTR = kayit.tanim_tr || kayit.ad_tr || kayit.tanim || '';
-      const adEN = kayit.tanim_en || kayit.ad_en || kayit.tanim || '';
+      const adTR = kayit.tanim_tr || kayit.ad_tr || '';
+      const adEN = kayit.tanim_en || kayit.ad_en || '';
       const satirlar = [];
 
-      // YENİ KOD
-      const naceVerisi = kayit.nace;
-      const naceKod = naceVerisi ? naceVerisi.kod : '';
+      // NACE verisini hazırla
+      let naceKod = '', naceTR = '', naceEN = '';
+      if (kayit.nace && kayit.nace.kod) {
+        naceKod = kayit.nace.kod;
 
-      // Arayüzde NACE adını göstermek için VERI.nace içinden bulalım
-      let naceTR = '';
-      let naceEN = '';
-      if (naceKod) {
-        const naceObj = VERI.nace.kayitlar.find(n => normKod(n.kod) === normKod(naceKod));
+        // Noktaları kaldırarak eşleştir (01.11 ile 0111'i eşitler)
+        const hedefKod = String(naceKod).replace(/\./g, '');
+        const naceObj = VERI.nace.kayitlar.find(n => String(n.kod).replace(/\./g, '') === hedefKod);
+
         if (naceObj) {
-          naceTR = naceObj.tanim_tr || naceObj.ad_tr;
-          naceEN = naceObj.tanim_en || naceObj.ad_en;
+          // Farklı veri setlerindeki olası alan adlarını kontrol et
+          naceTR = naceObj.tanim_tr || naceObj.ad_tr || naceObj.ad || '';
+          naceEN = naceObj.tanim_en || naceObj.ad_en || '';
         }
       }
 
+      // --- GTİP KARTI ---
       if (kaynak === 'gtip') {
         satirlar.push({ alan: t('gtip_kod'), deger: kod, kurum: `${t('kurum_ticaret')} / ${t('kurum_tuik')}`, vurgu: 'kod' });
         satirlar.push({ alan: t('urun_ad_tr'), deger: adTR, kurum: t('kurum_ticaret') });
         satirlar.push({ alan: t('urun_ad_en'), deger: adEN, kurum: t('kurum_ticaret') });
+
         if (naceKod) {
           satirlar.push({ alan: t('nace_kod'), deger: naceKod, kurum: t('kurum_tuik'), vurgu: 'kod' });
           satirlar.push({ alan: t('faaliyet_ad_tr'), deger: naceTR, kurum: t('kurum_tuik') });
           satirlar.push({ alan: t('faaliyet_ad_en'), deger: naceEN, kurum: t('kurum_tuik') });
+        } else {
+          satirlar.push({ alan: t('nace_kod'), deger: '—', kurum: t('kurum_tuik'), vurgu: 'bos' });
         }
-        if (kayit.olcu_birimi) satirlar.push({ alan: t('olcu_birimi'), deger: kayit.olcu_birimi, kurum: t('kurum_ticaret') });
-        if (kayit.standart_kodu || kayit.zorunlu_standart) satirlar.push({ alan: t('zorunlu_standart'), deger: kayit.standart_kodu || kayit.zorunlu_standart, kurum: t('kurum_tse') });
       }
+
+
+      // --- CPC KARTI ---
       if (kaynak === 'cpc') {
+        const ilkHane = String(kod).charAt(0);
+        const hizmetMi = (kaynak === 'cpc' && ['5', '6', '7', '8', '9'].includes(ilkHane));
+        const isNaceVeyaIsco = (kaynak === 'nace' || kaynak === 'isco' || hizmetMi);
+        const gridCols = isNaceVeyaIsco ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-3';
+
         satirlar.push({ alan: t('cpc_kod'), deger: kod, kurum: t('kurum_tuik'), vurgu: 'kod' });
         satirlar.push({ alan: t('hizmet_ad_tr'), deger: adTR, kurum: t('kurum_ticaret') });
         satirlar.push({ alan: t('hizmet_ad_en'), deger: adEN, kurum: t('kurum_ticaret') });
+
         if (naceKod) {
           satirlar.push({ alan: t('nace_kod'), deger: naceKod, kurum: t('kurum_tuik'), vurgu: 'kod' });
           satirlar.push({ alan: t('faaliyet_ad_tr'), deger: naceTR, kurum: t('kurum_tuik') });
           satirlar.push({ alan: t('faaliyet_ad_en'), deger: naceEN, kurum: t('kurum_tuik') });
+        } else {
+          satirlar.push({ alan: t('nace_kod'), deger: '—', kurum: t('kurum_tuik'), vurgu: 'bos' });
         }
-        if (kayit.olcu_birimi) satirlar.push({ alan: t('olcu_birimi'), deger: kayit.olcu_birimi, kurum: t('kurum_tuik') });
-        if (kayit.tolerans || kayit.sapma_limiti) satirlar.push({ alan: t('tolerans'), deger: kayit.tolerans || kayit.sapma_limiti, kurum: t('kurum_tobb') });
-        if (kayit.tehlike_sinifi) satirlar.push({ alan: t('tehlike_sinifi'), deger: kayit.tehlike_sinifi, kurum: t('kurum_calisma') });
-        if (kayit.zorunlu_sigorta) satirlar.push({ alan: t('zorunlu_sigorta'), deger: kayit.zorunlu_sigorta, kurum: t('kurum_seddk') });
       }
+
+      // --- NACE KARTI ---
       if (kaynak === 'nace') {
         satirlar.push({ alan: t('nace_kod'), deger: kod, kurum: t('kurum_tuik'), vurgu: 'kod' });
         satirlar.push({ alan: t('faaliyet_ad_tr'), deger: adTR, kurum: t('kurum_tuik') });
         satirlar.push({ alan: t('faaliyet_ad_en'), deger: adEN, kurum: t('kurum_tuik') });
-        if (kayit.seviye) satirlar.push({ alan: t('seviye'), deger: kayit.seviye, kurum: t('kurum_tuik') });
-        if (kayit.seviye_adi) satirlar.push({ alan: t('seviye_adi'), deger: kayit.seviye_adi, kurum: t('kurum_tuik') });
-        if (kayit.ust_kod) satirlar.push({ alan: t('ust_kod'), deger: kayit.ust_kod, kurum: t('kurum_tuik') });
-        if (kayit.tehlike_sinifi) satirlar.push({ alan: t('tehlike_sinifi'), deger: kayit.tehlike_sinifi, kurum: `${t('kurum_calisma')} / ${t('kurum_isg')}` });
       }
+
+      // --- ISCO KARTI ---
       if (kaynak === 'isco') {
         satirlar.push({ alan: t('isco_kod'), deger: kod, kurum: `${t('kurum_tuik')} / ${t('kurum_calisma')}`, vurgu: 'kod' });
         satirlar.push({ alan: t('meslek_ad_tr'), deger: adTR, kurum: t('kurum_calisma') });
         satirlar.push({ alan: t('meslek_ad_en'), deger: adEN, kurum: t('kurum_calisma') });
-        if (kayit.seviye) satirlar.push({ alan: t('seviye'), deger: kayit.seviye, kurum: t('kurum_tuik') });
-        if (kayit.seviye_adi) satirlar.push({ alan: t('seviye_adi'), deger: kayit.seviye_adi, kurum: t('kurum_tuik') });
-        if (kayit.ust_kod) satirlar.push({ alan: t('ust_kod'), deger: kayit.ust_kod, kurum: t('kurum_tuik') });
-        if (kayit.gorev_tanimi) satirlar.push({ alan: t('gorev_tanimi'), deger: kayit.gorev_tanimi, kurum: t('kurum_calisma') });
-        if (kayit.beceri_seviyesi) satirlar.push({ alan: t('beceri_seviyesi'), deger: kayit.beceri_seviyesi, kurum: t('kurum_tuik') });
       }
+
       return satirlar;
     }
+
 
     function birlesikTabloCiz(satirlar) {
       const rowsHtml = satirlar.map(s => {
         if (s.tip === 'baslik') {
-          return `<tr class="bg-win-dark/60 border-t border-win-border/40">
-            <td colspan="3" class="px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-win-400">${kacis(s.metin)}</td>
-          </tr>`;
+          return `<tr class="bg-win-dark/60 border-t border-win-border/40"><td colspan="3" class="px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-win-400">${kacis(s.metin)}</td></tr>`;
         }
         const bosMu = !s.deger || s.deger === '' || s.deger === '—';
         if (s.vurgu === 'kod') {
@@ -1126,10 +962,7 @@
             <td class="px-4 py-3 align-top text-[11px] text-slate-500">${kacis(s.kurum || '')}</td>
           </tr>`;
         }
-        const degerClass = s.vurgu === 'kdv' ? 'text-win-100 font-bold'
-          : s.vurgu === 'otv' ? 'text-rose-400 font-bold'
-            : s.vurgu === 'muaf' ? 'text-emerald-400 font-semibold'
-              : 'text-slate-100';
+        const degerClass = s.vurgu === 'kdv' ? 'text-win-100 font-bold' : s.vurgu === 'otv' ? 'text-rose-400 font-bold' : s.vurgu === 'muaf' ? 'text-emerald-400 font-semibold' : 'text-slate-100';
         const degerGoster = bosMu ? '—' : s.deger;
         return `<tr class="hover:bg-win-hover/40 transition">
           <td class="px-4 py-2.5 align-top text-slate-300 text-xs font-medium">${kacis(s.alan)}</td>
@@ -1153,52 +986,6 @@
         </div>`;
     }
 
-    function iliskiliBlogu(iliskili) {
-      if (!iliskili.length) {
-        return `
-          <div class="p-4">
-            <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-2 flex items-center gap-2">
-              🔗 ${t('iliskili')}
-            </div>
-            <div class="text-xs text-slate-500 py-3 text-center">${t('iliskili_yok')}</div>
-          </div>`;
-      }
-      return `
-        <div class="p-4">
-          <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-3 flex items-center gap-2">
-            🔗 ${t('iliskili')}
-          </div>
-          ${iliskili.map(grup => {
-        const kartTip = KART_TIPI[grup.kaynak];
-        return `
-              <div class="mb-3 last:mb-0">
-                <div class="flex items-center gap-2 mb-2 flex-wrap">
-                  <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-bold tracking-wider border ${KAYNAK_SINIF[grup.kaynak]}">
-                    ${KAYNAK_IKON[grup.kaynak]} ${KAYNAK_ETIKET[grup.kaynak]}
-                  </span>
-                  <span class="text-[10px] text-slate-500 italic">${t(kartTip.baslikKey)}</span>
-                  <span class="text-[10px] text-slate-600">· ${grup.kayitlar.length}</span>
-                </div>
-                <div class="space-y-1">
-                  ${grup.kayitlar.map(r => {
-          const rKod = normKod(r.kod);
-          const rAd = kayitAdiKisa(r);
-          return `
-                      <div class="flex items-center gap-2 bg-win-base border border-win-border rounded px-3 py-2 hover:bg-win-hover hover:border-win-500/40 transition cursor-pointer iliskili-tikla" title="${t('iliskili_tikla')}" data-kaynak="${grup.kaynak}" data-kod="${kacis(rKod)}">
-                        <code class="text-[11px] font-mono text-win-100 whitespace-nowrap">${kacis(rKod)}</code>
-                        <span class="text-xs text-slate-300 truncate flex-1">${kacis(rAd)}</span>
-                        <span class="text-[10px] text-win-400">→</span>
-                      </div>`;
-        }).join('')}
-                </div>
-              </div>`;
-      }).join('')}
-        </div>`;
-    }
-
-    // ============================================================
-    // MOBİL SIDEBAR
-    // ============================================================
     function toggleMobileSidebar() {
       const sidebar = $('sidebar'); const overlay = $('mobile-overlay');
       const acik = !sidebar.classList.contains('-translate-x-full');
@@ -1211,9 +998,6 @@
     $('btn-mobile-menu')?.addEventListener('click', toggleMobileSidebar);
     $('mobile-overlay')?.addEventListener('click', closeMobileSidebar);
 
-    // ============================================================
-    // OLAYLAR
-    // ============================================================
     document.addEventListener('pdaas:dil', () => {
       renderFilterList();
       if (SECILI) detayGoster(SECILI);
@@ -1236,7 +1020,6 @@
       if (TUM_SONUCLAR[idx]) detayGoster(TUM_SONUCLAR[idx]);
     });
 
-    // Sonsuz kaydırma - main-content içinde
     const mainEl = $('main-content');
     const scrollTopBtn = $('btn-scroll-top');
     mainEl.addEventListener('scroll', () => {
@@ -1249,11 +1032,11 @@
     });
     scrollTopBtn.addEventListener('click', () => mainEl.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    // ============================================================
-    // BAŞLAT
-    // ============================================================
     renderFilterList();
-    tumVeriYukle();
+    tumVeriYukle().then(() => {
+      // Veriler yüklendikten sonra listeyi otomatik çiz
+      aramayiBaslat();
+    });
   </script>
 </body>
 

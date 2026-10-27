@@ -71,6 +71,7 @@
             "gib",
             "hvmb",
             "tuik",
+            "kamu",
             "diger"
           ]
         },
@@ -274,6 +275,22 @@
             ]
           },
           "tarih": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/$defs/tarih"
+              }
+            ]
+          },
+          "kurum": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "kabul_tarihi": {
             "oneOf": [
               {
                 "type": "null"

@@ -1,0 +1,4897 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-tevkifat",
+      "ad": {
+        "tr": "GTİP Tevkifat Eşleşmesi",
+        "en": "GTIP Withholding Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.27",
+    "guncelleme": "2026-10-27",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.27"
+      },
+      "uretim_zamani": "2026-10-27T13:33:06.673129+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "15",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:e2f3ec7c7b0c42a3ef150801aa566569738b0ff77c8cc71c5eed6e953aab7f77"
+  },
+  "kayitlar": [
+    {
+      "kod": "150110100000",
+      "tanim_tr": "Lard; sınai amaçlar için kullanılanlar (insan gıdası olarak kullanılan ürünlerin imalinde kullanılanlar HARİÇ)",
+      "tanim_en": "Lard; those used for industrial purposes (EXCEPT those used in the manufacture of products consumed as human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150110900000",
+      "tanim_tr": "Diğer amaçlar için kullanılan katı Lard (15.03 pozisyonlarındakiler hariç)",
+      "tanim_en": "Solid lard used for other purposes (excluding those in headings 15.03)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150120100000",
+      "tanim_tr": "Katı domuz yağı (lard HARİÇ); sınai amaçlar için kullanılanlar (insan gıdası olarak kullanılan ürünlerin imalinde kullanılanlar HARİÇ)",
+      "tanim_en": "Solid pork fat (excluding lard); those used for industrial purposes (excluding those used in the manufacture of products intended for human consumption)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150120900000",
+      "tanim_tr": "Diğer amaçlar için kullanılan domuzların diğer katı yağları",
+      "tanim_en": "Other pork fats used for other purposes",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150190000000",
+      "tanim_tr": "Diğer kümes hayvanlarının katı yağları",
+      "tanim_en": "Solid fats of other poultry",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150210100000",
+      "tanim_tr": "Sığır, koyun veya keçilerin don yağları (15.03 pozisyonundakiler hariç); sınai amaçlı (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Tallow of cattle, sheep or goats (excluding those in heading 15.03); for industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150210900000",
+      "tanim_tr": "Sığır, koyun veya keçilerden donyağı; diğer amaçlar için kullanılan",
+      "tanim_en": "Tallow from cattle, sheep, or goats; used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150290100000",
+      "tanim_tr": "Sığır, koyun veya keçi yağları (donyağı HARİÇ); sınai amaçlar için (insan gıdası olarak kullanılan ürünlerin imalinde kullanılanlar hariç)",
+      "tanim_en": "Beef, sheep or goat fats (EXCEPT tallow); for industrial purposes (excluding those used in the manufacture of products for human consumption)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150290900011",
+      "tanim_tr": "Sığırlardan elde edilen yağlar; diğer amaçlar için kullanılan",
+      "tanim_en": "Fats obtained from cattle are used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150290900012",
+      "tanim_tr": "Koyun veya keçilerden elde edilen yağlar; diğer amaçlar için kullanılan",
+      "tanim_en": "Fats obtained from sheep or goats; used for other purposes",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150300111000",
+      "tanim_tr": "Lard stearini; sınai amaçlar için kullanılan",
+      "tanim_en": "Lard stearin; used for industrial purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150300112000",
+      "tanim_tr": "Lard oleostearini; sınai amaçlar için kullanılan",
+      "tanim_en": "Lard oleostearini; used for industrial purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150300191000",
+      "tanim_tr": "Lard stearini; sınai amaçlar için kullanılan HARİÇ",
+      "tanim_en": "Lard stearin; EXCEPT for use for industrial purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150300192000",
+      "tanim_tr": "Lard oleostearini; sınai amaçlar için kullanılan HARİÇ",
+      "tanim_en": "Lard oleostearini; EXCEPT for use for industrial purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150300300000",
+      "tanim_tr": "Sıvı donyağı; sınai amaçlar için kullanılan (insan gıdası olarak kullanılan ürünlerin imalatında kullanılanlar hariç)",
+      "tanim_en": "Liquid tallow; used for industrial purposes (excluding that used in the manufacture of products consumed as human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150300901000",
+      "tanim_tr": "Sıvı lard (emülsiyon haline getirilmemiş, karıştırılmamış veya başka şekilde hazırlanmamış)",
+      "tanim_en": "Liquid lard (unemulsified, unmixed or otherwise prepared)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150300909000",
+      "tanim_tr": "Oleoyağ ve diğer donyağı (emülsiyon haline getirilmemiş, karıştırılmamış veya başka şekilde hazırlanmamış)",
+      "tanim_en": "Oleofat and other tallow (not emulsified, mixed or otherwise prepared)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150410101000",
+      "tanim_tr": "Balık karaciğerlerinin sıvı yağları ve bunların fraksiyonları; gramında A vitamini <= 2500 ünite, tababette kullanılan",
+      "tanim_en": "Fish liver oils and their fractions; containing <= 2500 units of vitamin A per gram, used in medicine.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150410109000",
+      "tanim_tr": "Balık karaciğerlerinin sıvı yağları ve bunların fraksiyonları; gramında A vitamini <= 2500 ünite, tababette kullanılanlar HARİÇ",
+      "tanim_en": "Oils of fish livers and their fractions; containing <= 2500 units of vitamin A per gram, EXCEPT those used in medicine.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150410910000",
+      "tanim_tr": "Tütün balık karaciğerlerinin sıvı yağları ve bunların fraksiyonları; gramında A vitamini <= 2500 ünite olanlar HARİÇ",
+      "tanim_en": "Tobacco, fish liver oils and their fractions; EXCEPT those containing <= 2500 units of vitamin A per gram.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150410991000",
+      "tanim_tr": "Diğer balık karaciğerlerinin sıvı yağları ve bunların fraksiyonları; gramında A vitamini <= 2500 ünite olanlar HARİÇ, tababette kullanılan",
+      "tanim_en": "Liquid oils of other fish livers and their fractions; EXCEPT those containing <= 2500 units of vitamin A per gram, used in medicine.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150410999000",
+      "tanim_tr": "Diğer balık karaciğerlerinin sıvı yağları ve bunların fraksiyonları; gramında A vitamini <= 2500 ünite olanlar ve tababette kullanılanlar HARİÇ",
+      "tanim_en": "Liquid oils of other fish livers and their fractions; excluding those containing <= 2500 units of vitamin A per gram and those used in medicine.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150420100000",
+      "tanim_tr": "Balık yağlarının katı fraksiyonları",
+      "tanim_en": "Solid fractions of fish oils",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150420900000",
+      "tanim_tr": "Balıkların sıvı yağları ve bunların sıvı fraksiyonları (karaciğerlerin sıvı yağları hariç)",
+      "tanim_en": "Fish oils and their liquid fractions (excluding liver oils)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150430100000",
+      "tanim_tr": "Deniz memelilerinin yağlarının katı fraksiyonları",
+      "tanim_en": "Solid fractions of marine mammal fats",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150430900011",
+      "tanim_tr": "Balina yağı",
+      "tanim_en": "Whale oil",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150430900019",
+      "tanim_tr": "Deniz memelilerinin yağlarının diğer fraksiyonları (balina yağı hariç)",
+      "tanim_en": "Other fractions of marine mammal fats (excluding whale oil)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150500100000",
+      "tanim_tr": "Yapağı yağı; ham",
+      "tanim_en": "Wool fat; raw",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150500900011",
+      "tanim_tr": "Lanolin",
+      "tanim_en": "Lanolin",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150500900019",
+      "tanim_tr": "Yapağı yağı ve bundan elde edilen yağlı maddeler (lanolin ve ham yapağı yağı HARİÇ)",
+      "tanim_en": "Wool fat and oily substances derived therefrom (EXCEPT lanolin and crude wool fat)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150600000011",
+      "tanim_tr": "At, hipopotam, ayı, tavşan, kara yengeci, kaplumbağa ve benzerlerinin katı yağları",
+      "tanim_en": "Solid fats of horses, hippos, bears, rabbits, black crabs, turtles and the like.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150600000012",
+      "tanim_tr": "Paça yağları",
+      "tanim_en": "Trotter fats",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150600000013",
+      "tanim_tr": "Sıvı kemik yağı",
+      "tanim_en": "liquid bone fat",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150600000019",
+      "tanim_tr": "Diğer hayvansal katı ve sıvı yağlar ve bunların fraksiyonları",
+      "tanim_en": "Other animal fats and their fractions.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150710100000",
+      "tanim_tr": "Soya yağı (ham); teknik veya sınai amaçlar için kullanılan (insan gıdası olarak kullanılan ürünlerin imalinde kullanılanlar hariç)",
+      "tanim_en": "Soybean oil (crude); used for technical or industrial purposes (excluding that used in the manufacture of products consumed as human food).",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150710900000",
+      "tanim_tr": "Soya yağı (ham); diğer amaçlar için kullanılan",
+      "tanim_en": "Soybean oil (crude); used for other purposes",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150790100000",
+      "tanim_tr": "Soya yağı ve fraksiyonları (ham olanlar HARİÇ); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Soybean oil and its fractions (EXCEPT crude oil); used for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150790900000",
+      "tanim_tr": "Soya yağı ve fraksiyonları (ham olanlar HARİÇ); diğer amaçlar için kullanılanlar",
+      "tanim_en": "Soybean oil and its fractions (EXCEPT crude oil); those used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150810100000",
+      "tanim_tr": "Yer fıstığı yağı (ham); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç",
+      "tanim_en": "Peanut oil (crude); used for technical or industrial purposes (excluding that used for the manufacture of human food).",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150810900000",
+      "tanim_tr": "Yer fıstığı yağı (ham); diğer amaçlar için kullanılan",
+      "tanim_en": "Peanut oil (crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150890100000",
+      "tanim_tr": "Yer fıstığı yağı ve fraksiyonları (ham olanlar HARİÇ); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Peanut oil and its fractions (EXCEPT crude); used for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150890900000",
+      "tanim_tr": "Yer fıstığı yağı ve fraksiyonları (ham olanlar HARİÇ); diğer amaçlar için kullanılan",
+      "tanim_en": "Peanut oil and its fractions (EXCEPT crude oil); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150920000011",
+      "tanim_tr": "Natürel sızma zeytinyağı (Extra virgin olive oil); net ağırlığı 5 kg.ı geçmeyen hazır ambalajlarda olanlar",
+      "tanim_en": "Extra virgin olive oil; available in pre-packaged containers with a net weight not exceeding 5 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150920000012",
+      "tanim_tr": "Natürel sızma zeytinyağı (Extra virgin olive oil); net ağırlığı 5 kg.ı geçen 18 kg.ı geçmeyen hazır ambalajlarda olanlar",
+      "tanim_en": "Extra virgin olive oil; available in pre-packaged containers with a net weight exceeding 5 kg but not exceeding 18 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150920000019",
+      "tanim_tr": "Natürel sızma zeytinyağı (Extra virgin olive oil); net ağırlığı 18 kg.ı geçmeyen hazır ambalajlarda olanlar HARİÇ",
+      "tanim_en": "Extra virgin olive oil; EXCEPT those in pre-packaged containers with a net weight not exceeding 18 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150930000015",
+      "tanim_tr": "Natürel birinci zeytinyağı (Virgin olive oil); net ağırlığı 5 kg.ı geçmeyen hazır ambalajlarda olanlar",
+      "tanim_en": "Virgin olive oil; available in pre-packaged containers with a net weight not exceeding 5 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150930000016",
+      "tanim_tr": "Natürel birinci zeytinyağı (Virgin olive oil); net ağırlığı 5 kg.ı geçen 18 kg.ı geçmeyen hazır ambalajlarda olanlar",
+      "tanim_en": "Virgin olive oil; those in ready-made packages with a net weight exceeding 5 kg but not exceeding 18 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150930000019",
+      "tanim_tr": "Natürel birinci zeytinyağı (Virgin olive oil); net ağırlığı 18 kg.ı geçmeyen hazır ambalajlarda olanlar HARİÇ",
+      "tanim_en": "Virgin olive oil; EXCEPT those in pre-packaged containers with a net weight not exceeding 18 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150940000000",
+      "tanim_tr": "Diğer saf zeytinyağı (EU cat. 3)",
+      "tanim_en": "Other pure olive oil (EU cat. 3)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150990000021",
+      "tanim_tr": "Riviera zeytinyağı; net ağırlığı 5 kg.ı geçmeyen hazır ambalajlarda olanlar",
+      "tanim_en": "Riviera olive oil; available in pre-packaged containers with a net weight not exceeding 5 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150990000022",
+      "tanim_tr": "Riviera zeytinyağı; net ağırlığı 5 kg.ı geçen 18 kg.ı geçmeyen hazır ambalajlarda olanlar",
+      "tanim_en": "Riviera olive oil; available in pre-packaged containers with a net weight exceeding 5 kg but not exceeding 18 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150990000029",
+      "tanim_tr": "Riviera zeytinyağı; net ağırlığı 18 kg.ı geçmeyen hazır ambalajlarda olanlar HARİÇ",
+      "tanim_en": "Riviera olive oil; EXCEPT those in pre-packaged containers with a net weight not exceeding 18 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150990000031",
+      "tanim_tr": "Rafine zeytinyağı; net ağırlığı 5 kg.ı geçmeyen hazır ambalajlarda olanlar",
+      "tanim_en": "Refined olive oil; available in pre-packaged containers with a net weight not exceeding 5 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150990000032",
+      "tanim_tr": "Rafine zeytinyağı; net ağırlığı 5 kg.ı geçen 18 kg.ı geçmeyen hazır ambalajlarda olanlar",
+      "tanim_en": "Refined olive oil; available in pre-packaged containers with a net weight exceeding 5 kg but not exceeding 18 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150990000039",
+      "tanim_tr": "Rafine zeytinyağı; net ağırlığı 18 kg.ı geçmeyen hazır ambalajlarda olanlar HARİÇ",
+      "tanim_en": "Refined olive oil; EXCEPT those in pre-packaged containers with a net weight not exceeding 18 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "150990000049",
+      "tanim_tr": "Zeytinyağı; natürel sızma, birinci, riviera ve rafine olanlar HARİÇ",
+      "tanim_en": "Olive oil; EXCEPT for extra virgin, virgin, Riviera and refined varieties.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151010000000",
+      "tanim_tr": "Ham prina yağı",
+      "tanim_en": "Raw pomace oil",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151090000011",
+      "tanim_tr": "Karma prina yağı; net ağırlığı 5 kg.ı geçmeyen hazır ambalajlarda olanlar",
+      "tanim_en": "Mixed olive pomace oil; those in pre-packaged containers with a net weight not exceeding 5 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151090000012",
+      "tanim_tr": "Karma prina yağı; net ağırlığı 5 kg.ı geçen 18 kg.ı geçmeyen hazır ambalajlarda olanlar",
+      "tanim_en": "Mixed olive pomace oil; those in pre-packaged containers with a net weight exceeding 5 kg but not exceeding 18 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151090000019",
+      "tanim_tr": "Karma prina yağı; net ağırlığı 18 kg.ı geçmeyen hazır ambalajlarda olanlar HARİÇ",
+      "tanim_en": "Mixed olive pomace oil; EXCEPT those in pre-packaged containers with a net weight not exceeding 18 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151090000021",
+      "tanim_tr": "Rafine prina yağı; net ağırlığı 5 kg.ı geçmeyen hazır ambalajlarda olanlar",
+      "tanim_en": "Refined olive pomace oil; available in pre-packaged containers with a net weight not exceeding 5 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151090000022",
+      "tanim_tr": "Rafine prina yağı; net ağırlığı 5 kg.ı geçen 18 kg.ı geçmeyen hazır ambalajlarda olanlar",
+      "tanim_en": "Refined olive pomace oil; in pre-packaged containers with a net weight exceeding 5 kg but not exceeding 18 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151090000029",
+      "tanim_tr": "Rafine prina yağı; net ağırlığı 18 kg.ı geçmeyen hazır ambalajlarda olanlar HARİÇ",
+      "tanim_en": "Refined olive pomace oil; EXCEPT those in pre-packaged containers with a net weight not exceeding 18 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151090000039",
+      "tanim_tr": "Sadece zeytinden elde edilen diğer sıvı yağlar ve bunların diğer fraksiyonları; kimyasal olarak değiştirilmemiş",
+      "tanim_en": "Other liquid oils obtained solely from olives and their fractions; chemically unaltered.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151110100000",
+      "tanim_tr": "Palm yağı (ham); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Palm oil (crude); used for technical or industrial purposes (excluding that used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151110900000",
+      "tanim_tr": "Palm yağı (ham); diğer amaçlar için kullanılan",
+      "tanim_en": "Palm oil (crude); used for other purposes",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151190110011",
+      "tanim_tr": "Palm yağı katı fraksiyonları (hazır ambalajda net <= 1 kg); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Solid fractions of palm oil (net <= 1 kg in pre-packaged form); used for technical or industrial purposes (excluding those used for the manufacture of human food).",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151190110019",
+      "tanim_tr": "Palm yağı katı fraksiyonları (hazır ambalajda net <= 1 kg); diğer amaçlar için kullanılanlar",
+      "tanim_en": "Solid fractions of palm oil (in pre-packaged form, net <= 1 kg); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151190190011",
+      "tanim_tr": "Palm yağı katı fraksiyonları (hazır ambalajda net > 1 kg); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Solid fractions of palm oil (net > 1 kg in pre-packaged form); used for technical or industrial purposes (excluding those used for the manufacture of human food).",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151190190021",
+      "tanim_tr": "Palm yağı katı fraksiyonları (hazır ambalajda 1 kg < net <= 25 000 kg); diğer amaçlar için kullanılan",
+      "tanim_en": "Solid fractions of palm oil (in ready-packaged form, 1 kg < net <= 25,000 kg); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151190190029",
+      "tanim_tr": "Palm yağı katı fraksiyonları (hazır ambalajlarda veya kaplarda net > 25 000 kg); diğer amaçlar için kullanılan",
+      "tanim_en": "Solid fractions of palm oil (net > 25,000 kg in pre-packaged or containers); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151190910000",
+      "tanim_tr": "Palm yağı ve fraksiyonları (ham ve katı fraksiyonları HARİÇ); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Palm oil and its fractions (excluding crude and solid fractions); used for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151190990011",
+      "tanim_tr": "Süper olein",
+      "tanim_en": "Super olein",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151190990019",
+      "tanim_tr": "Diğer palm yağı ve fraksiyonları",
+      "tanim_en": "Other palm oils and fractions",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151211100000",
+      "tanim_tr": "Ayçiçeği tohumu yağı veya aspir yağı (ham); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Sunflower seed oil or safflower oil (crude); used for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151211910000",
+      "tanim_tr": "Ayçiçeği tohumu yağı (ham); diğer amaçlar için kullanılanlar",
+      "tanim_en": "Sunflower seed oil (crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151211990000",
+      "tanim_tr": "Aspir yağı (ham); diğer amaçlar için kullanılanlar",
+      "tanim_en": "Safflower oil (crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151219100000",
+      "tanim_tr": "Ayçiçeği tohumu ve aspir yağları ve fraksiyonları (ham HARİÇ); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Sunflower seed and safflower oils and their fractions (EXCEPT crude); used for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151219900011",
+      "tanim_tr": "Ayçiçeği tohumu yağları ve fraksiyonları (ham HARİÇ); diğer amaçlar için kullanılan",
+      "tanim_en": "Sunflower seed oils and fractions (EXCEPT crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151219900019",
+      "tanim_tr": "Aspir yağları ve fraksiyonları (ham HARİÇ); diğer amaçlar için kullanılan",
+      "tanim_en": "Safflower oils and fractions (EXCEPT crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151221100000",
+      "tanim_tr": "Pamuk tohumu yağları (ham); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Cottonseed oils (crude); used for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151221900000",
+      "tanim_tr": "Pamuk tohumu yağları (ham); diğer amaçlar için kullanılan",
+      "tanim_en": "Cottonseed oil (crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151229100000",
+      "tanim_tr": "Pamuk tohumu yağı ve fraksiyonları (ham olanlar HARİÇ)); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Cottonseed oil and its fractions (EXCEPT crude oil); used for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151229900000",
+      "tanim_tr": "Pamuk tohumu yağı ve fraksiyonları (ham olanlar HARİÇ)); diğer amaçlar için kullanılan",
+      "tanim_en": "Cottonseed oil and its fractions (EXCEPT crude oil); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151311100000",
+      "tanim_tr": "Hindistan cevizi yağları (kopra) (ham); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Coconut oils (copra) (crude); used for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151311910000",
+      "tanim_tr": "Hindistan cevizi yağları (kopra) (ham); ambalajlarda net <= 1 kg, diğer amaçlar için kullanılan",
+      "tanim_en": "Coconut oil (copra) (crude); net <= 1 kg in packages, for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151311990000",
+      "tanim_tr": "Hindistan cevizi yağları (kopra) (ham); ambalajlarda veya kaplarda net > 1 kg, diğer amaçlar için kullanılan",
+      "tanim_en": "Coconut oil (copra) (raw); in packs or containers net > 1 kg, for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151319110000",
+      "tanim_tr": "Hindistan cevizi yağının katı fraksiyonları (ham HARİÇ); ambalajlarda net <= 1 kg",
+      "tanim_en": "Solid fractions of coconut oil (excluding crude); in packages with a net weight of <= 1 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151319190011",
+      "tanim_tr": "Hindistan cevizi yağının katı fraksiyonları (ham HARİÇ); ambalajlarda veya kaplarda 1 kg < net <= 25 000 kg",
+      "tanim_en": "Solid fractions of coconut oil (excluding crude); in packages or containers 1 kg < net <= 25,000 kg",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151319190019",
+      "tanim_tr": "Hindistan cevizi yağının katı fraksiyonları (ham HARİÇ); ambalajlarda veya kaplarda net > 25 000 kg",
+      "tanim_en": "Solid fractions of coconut oil (excluding crude); net > 25,000 kg in packages or containers.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151319300000",
+      "tanim_tr": "Hindistan cevizi yağı (kopra) ve sıvı fraksiyonları (ham HARİÇ); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Coconut oil (copra) and its liquid fractions (EXCEPT crude); used for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151319910000",
+      "tanim_tr": "Hindistan cevizi yağı (kopra) ve sıvı fraksiyonları (ham HARİÇ); ambalajlarda net <= 1 kg, diğer amaçlar için kullanılan",
+      "tanim_en": "Coconut oil (copra) and its liquid fractions (excluding crude); in packages net <= 1 kg, for use other than those intended.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151319990011",
+      "tanim_tr": "Hindistan cevizi yağı (kopra) ve sıvı fraksiyonları (ham HARİÇ); ambalajlarda veya kaplarda 1 kg < net <= 25 000 kg, diğer amaçlar için kullanılan",
+      "tanim_en": "Coconut oil (copra) and its liquid fractions (excluding crude); in packages or containers 1 kg < net <= 25,000 kg, used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151319990019",
+      "tanim_tr": "Hindistan cevizi yağı (kopra) ve sıvı fraksiyonları (ham HARİÇ); ambalajlarda veya kaplarda net > 25 000 kg, diğer amaçlar için kullanılan",
+      "tanim_en": "Coconut oil (copra) and its liquid fractions (excluding crude); in packages or containers net > 25,000 kg, used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151321100011",
+      "tanim_tr": "Palm çekirdeği yağları (ham); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Palm kernel oils (crude); used for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151321100019",
+      "tanim_tr": "Babassu yağları (ham); teknik veya sınai amaçlar için kullanılan (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Babassu oils (crude); used for technical or industrial purposes (excluding those used in the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151321300000",
+      "tanim_tr": "Palm çekirdeği veya babassu yağları (ham); ambalajlarda net <= 1 kg, diğer amaçlar için",
+      "tanim_en": "Palm kernel or babassu oils (crude); in packages net <= 1 kg, for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151321900011",
+      "tanim_tr": "Palm çekirdeği yağları (ham); ambalajlarda net > 1 kg, diğer amaçlar için",
+      "tanim_en": "Palm kernel oils (crude); in packages net > 1 kg, for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151321900012",
+      "tanim_tr": "Babassu yağları (ham); ambalajlarda net > 1 kg, diğer amaçlar için",
+      "tanim_en": "Babassu oils (crude); in packages net > 1 kg, for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151329110000",
+      "tanim_tr": "Palm çekirdeği veya babassu yağlarının katı fraksiyonları (ham HARİÇ); ambalajlarda net <= 1 kg",
+      "tanim_en": "Solid fractions of palm kernel or babassu oils (EXCEPT crude); in packages net <= 1 kg",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151329190011",
+      "tanim_tr": "Palm çekirdeği yağlarının katı fraksiyonları (ham HARİÇ); ambalajlarda veya kaplarda 1 kg < net <= 25 000 kg",
+      "tanim_en": "Solid fractions of palm kernel oil (excluding crude); in packages or containers 1 kg < net <= 25,000 kg",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151329190019",
+      "tanim_tr": "Palm çekirdeği yağlarının katı fraksiyonları (ham HARİÇ); ambalajlarda veya kaplarda net > 25 000 kg",
+      "tanim_en": "Solid fractions of palm kernel oil (excluding crude); net > 25,000 kg in packages or containers.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151329190029",
+      "tanim_tr": "Babassu yağlarının katı fraksiyonları (ham HARİÇ); ambalajlarda net > 1 kg",
+      "tanim_en": "Solid fractions of babassu oils (EXCEPT crude); in packages with a net weight of > 1 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151329300000",
+      "tanim_tr": "Palm çekirdeği veya babassu yağları ve sıvı fraksiyonları (ham HARİÇ); teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Palm kernel or babassu oils and liquid fractions (EXCEPT crude); for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151329500000",
+      "tanim_tr": "Palm çekirdeği veya babassu yağları ve sıvı fraksiyonları (ham HARİÇ); ambalajlarda net <= 1 kg, diğer amaçlar için",
+      "tanim_en": "Palm kernel or babassu oils and liquid fractions (EXCEPT crude); in packages net <= 1 kg, for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151329900011",
+      "tanim_tr": "Palm çekirdeği yağları ve sıvı fraksiyonları (ham HARİÇ); ambalajlarda veya kaplarda net > 1 kg, diğer amaçlar için",
+      "tanim_en": "Palm kernel oils and liquid fractions (EXCEPT crude); in packs or containers net > 1 kg, for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151329900019",
+      "tanim_tr": "Babassu yağları ve sıvı fraksiyonları (ham HARİÇ); ambalajlarda veya kaplarda net > 1 kg, diğer amaçlar için",
+      "tanim_en": "Babassu oils and liquid fractions (EXCEPT crude); in packs or containers net > 1 kg, for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151411100000",
+      "tanim_tr": "Rep veya kolza yağı (ham); düşük erusik asit içeren, teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Rapeseed oil (crude); low in erucic acid, for technical or industrial purposes (excluding those used for the manufacture of human food).",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151411900000",
+      "tanim_tr": "Rep veya kolza yağı (ham); düşük erusik asit içeren, diğer amaçlar için kullanılan",
+      "tanim_en": "Rapeseed oil (crude); low in erucic acid, used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151419100000",
+      "tanim_tr": "Rep veya kolza yağı ve fraksiyonları (ham HARİÇ); düşük erusik asit içeren, teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Rapeseed oil or canola oil and its fractions (EXCEPT crude); low erucic acid content, for technical or industrial purposes (excluding those used for the manufacture of human food).",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151419900000",
+      "tanim_tr": "Rep veya kolza yağı ve fraksiyonları (ham HARİÇ); düşük erusik asit içeren, diğer amaçlar için kullanılan",
+      "tanim_en": "Rapeseed oil or canola oil and its fractions (EXCEPT crude); containing low erucic acid, used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151491100000",
+      "tanim_tr": "Hardal yağı ve yüksek erusik asit içeren rep veya kolza yağı (ham); teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Mustard oil and rapeseed oil with high erucic acid content (crude); for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151491900000",
+      "tanim_tr": "Hardal yağı ve yüksek erusik asit içeren rep veya kolza yağı (ham); diğer amaçlar için kullanılan",
+      "tanim_en": "Mustard oil and rapeseed or canola oil (crude) with high erucic acid content; used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151499100000",
+      "tanim_tr": "Hardal yağı ve yüksek erusik asitli rep veya kolza yağı ve fraksiyonları (ham HARİÇ); teknik/sınai amaçlı (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Mustard oil and rapeseed oil or canola oil with high erucic acid content and their fractions (EXCEPT crude); for technical/industrial purposes (excluding those used in the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151499900000",
+      "tanim_tr": "Hardal yağı ve yüksek erusik asit içeren rep veya kolza yağı ve fraksiyonları (ham HARİÇ); diğer amaçlar için kullanılan",
+      "tanim_en": "Mustard oil and rapeseed oil or canola oil and fractions thereof containing high erucic acid (EXCEPT crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151511001000",
+      "tanim_tr": "Keten tohumu yağı (ham); teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Flaxseed oil (crude); for technical or industrial purposes (excluding those used in the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151511009000",
+      "tanim_tr": "Keten tohumu yağı (ham); diğer amaçlar için kullanılan",
+      "tanim_en": "Flaxseed oil (crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151519100000",
+      "tanim_tr": "Keten tohumu yağı ve fraksiyonları (ham HARİÇ); teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Flaxseed oil and its fractions (EXCEPT crude); for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151519900000",
+      "tanim_tr": "Keten tohumu yağı ve fraksiyonları (ham HARİÇ); diğer amaçlar için kullanılan",
+      "tanim_en": "Flaxseed oil and its fractions (EXCEPT crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151521100000",
+      "tanim_tr": "Mısır yağı (ham); teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Corn oil (crude); for technical or industrial purposes (excluding that used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151521900011",
+      "tanim_tr": "Degum (sakızı giderilmiş) mısır yağı (ham); diğer amaçlar için kullanılan",
+      "tanim_en": "Degum (gum-free) corn oil (crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151521900019",
+      "tanim_tr": "Mısır yağı (degum (sakızı giderilmiş) mısır yağı HARİÇ) (ham); diğer amaçlar için kullanılan",
+      "tanim_en": "Corn oil (EXCEPT degumed corn oil) (crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151529100000",
+      "tanim_tr": "Mısır yağı ve fraksiyonları (ham HARİÇ); teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Corn oil and its fractions (EXCEPT crude); for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151529900000",
+      "tanim_tr": "Mısır yağı ve fraksiyonları (ham HARİÇ); diğer amaçlar için kullanılan",
+      "tanim_en": "Corn oil and its fractions (EXCEPT crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151530100000",
+      "tanim_tr": "Hint yağı ve fraksiyonları; dokumaya elverişli sentetik liflerin veya plastik maddelerin imalinde kullanılan aminoundekanoik asit üretimine mahsus",
+      "tanim_en": "Castor oil and its fractions are used in the production of aminoundecanoic acid, which is used in the manufacture of textile synthetic fibers or plastics.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151530900000",
+      "tanim_tr": "Hint yağı ve fraksiyonları; diğer amaçlar için kullanılan",
+      "tanim_en": "Castor oil and its fractions; used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151550110000",
+      "tanim_tr": "Susam yağı (ham); teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Sesame oil (crude); for technical or industrial purposes (excluding those used in the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151550190000",
+      "tanim_tr": "Susam yağı (ham); diğer amaçlar için kullanılan",
+      "tanim_en": "Sesame oil (crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151550910000",
+      "tanim_tr": "Susam yağı ve fraksiyonları (ham HARİÇ); teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Sesame oil and its fractions (EXCEPT crude); for technical or industrial purposes (excluding those used in the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151550990000",
+      "tanim_tr": "Susam yağı ve fraksiyonları (ham HARİÇ); diğer amaçlar için kullanılan",
+      "tanim_en": "Sesame oil and its fractions (EXCEPT crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151560110000",
+      "tanim_tr": "Mikrobiyal katı ve sıvı ham yağlar; teknik veya sınai amaçlarla kullanılanlar (insan gıdası olarak kullanılan ürünlerin imalinde kullanılanlar HARİÇ)",
+      "tanim_en": "Microbial solid and liquid crude oils; those used for technical or industrial purposes (EXCEPT those used in the manufacture of products intended for human consumption)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151560510000",
+      "tanim_tr": "Mikrobiyal katı ham yağlar; hazır ambalajlarda net ağırlığı <= 1 kg; teknik veya sınai amaçlarla kullanılanlar HARİÇ",
+      "tanim_en": "Microbial solid crude oils; in pre-packaged form, net weight <= 1 kg; EXCLUDING those used for technical or industrial purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151560590000",
+      "tanim_tr": "Mikrobiyal katı ham yağlar (hazır ambalajlarda net ağırlığı > 1 kg) ve mikrobiyal sıvı ham yağlar; teknik veya sınai amaçlarla kullanılanlar HARİÇ",
+      "tanim_en": "Microbial solid crude oils (net weight > 1 kg in pre-packaged goods) and microbial liquid crude oils; EXCLUDING those used for technical or industrial purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151560600000",
+      "tanim_tr": "Mikrobiyal katı ve sıvı yağlar ve fraksiyonları (ham HARİÇ); teknik/sınai amaçlı (insan gıdası olarak kullanılan ürünlerin imalinde kullanılan HARİÇ)",
+      "tanim_en": "Microbial oils and fats and their fractions (EXCEPT crude); for technical/industrial purposes (EXCEPT those used in the manufacture of products intended for human consumption)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151560910000",
+      "tanim_tr": "Mikrobiyal katı yağlar ve fraksiyonları (ham HARİÇ); hazır ambalajlarda net ağırlığı <= 1 kg (teknik/sınai amaçlarla kullanılanlar HARİÇ)",
+      "tanim_en": "Microbial fats and their fractions (excluding crude); in ready-packaged form, net weight <= 1 kg (excluding those used for technical/industrial purposes)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151560990000",
+      "tanim_tr": "Mikrobiyal katı yağlar ve fraksiyonları (ham HARİÇ); hazır ambalajlarda net ağırlığı > 1 kg (teknik/sınai amaçlarla kullanılanlar HARİÇ)",
+      "tanim_en": "Microbial fats and their fractions (excluding crude); in ready-packaged form with a net weight > 1 kg (excluding those used for technical/industrial purposes)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151590111100",
+      "tanim_tr": "Jojoba yağı (ham)",
+      "tanim_en": "Jojoba oil (raw)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151590111900",
+      "tanim_tr": "Jojoba yağı ve fraksiyonları (ham HARİÇ)",
+      "tanim_en": "Jojoba oil and its fractions (EXCEPT crude)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151590119000",
+      "tanim_tr": "Çin ağacı yağı, outikika yağı, mersin ağacı mumu, japon mumu ve fraksiyonları",
+      "tanim_en": "Chinese tree oil, outikika oil, myrtle wax, Japanese wax and its fractions.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151590210000",
+      "tanim_tr": "Tütün tohumu yağı (ham); teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Tobacco seed oil (crude); for technical or industrial purposes (excluding those used in the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151590290000",
+      "tanim_tr": "Tütün tohumu yağı (ham); diğer amaçlar için kullanılan",
+      "tanim_en": "Tobacco seed oil (crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151590310000",
+      "tanim_tr": "Tütün tohumu yağı ve fraksiyonları (ham HARİÇ); teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Tobacco seed oil and its fractions (EXCEPT crude); for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151590390000",
+      "tanim_tr": "Tütün tohumu yağı ve fraksiyonları (ham HARİÇ); diğer amaçlar için kullanılan",
+      "tanim_en": "Tobacco seed oil and its fractions (EXCEPT crude); used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151590400000",
+      "tanim_tr": "Diğer bitkisel yağlar (ham); teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Other vegetable oils (crude); for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151590510000",
+      "tanim_tr": "Diğer bitkisel yağlar (ham); katı halde ambalajlarda net <= 1 kg, diğer amaçlar için kullanılan",
+      "tanim_en": "Other vegetable oils (crude); solid form in packages net <= 1 kg, for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151590590000",
+      "tanim_tr": "Diğer bitkisel yağlar (ham); katı halde ambalajlarda net > 1 kg, diğer amaçlar için kullanılan",
+      "tanim_en": "Other vegetable oils (crude); solid form in packages net > 1 kg, for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151590600000",
+      "tanim_tr": "Diğer bitkisel yağlar ve bunların fraksiyonları (ham HARİÇ); teknik veya sınai amaçlar için (insan gıdası imalinde kullanılanlar hariç)",
+      "tanim_en": "Other vegetable oils and their fractions (EXCEPT crude oil); for technical or industrial purposes (excluding those used for the manufacture of human food)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151590910000",
+      "tanim_tr": "Diğer bitkisel yağlar ve bunların fraksiyonları (ham HARİÇ); katı halde ambalajlarda net <= 1 kg, diğer amaçlar için kullanılan",
+      "tanim_en": "Other vegetable oils and their fractions (EXCEPT crude oil); in solid form in packages net <= 1 kg, used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151590990000",
+      "tanim_tr": "Diğer bitkisel yağlar ve bunların fraksiyonları (ham HARİÇ); katı halde ambalajlarda net > 1 kg, diğer amaçlar için kullanılan",
+      "tanim_en": "Other vegetable oils and their fractions (EXCEPT crude oil); in solid form in packages net > 1 kg, used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151610100011",
+      "tanim_tr": "Balık veya deniz memelilerinin yağları ve bunların fraksiyonları (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <=1kg",
+      "tanim_en": "Oils of fish or marine mammals and their fractions (hydrogenated, intermediate-esterified or elaidic acidified); net weight <=1kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151610100012",
+      "tanim_tr": "Domuz yağları ve bunların fraksiyonları (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <=1kg",
+      "tanim_en": "Pork fats and their fractions (hydrogenated, intermediate-esterified or elaidic acidified); net weight <=1kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151610100019",
+      "tanim_tr": "Diğer hayvanların katı ve sıvı yağları ve bunların fraksiyonları (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <=1kg",
+      "tanim_en": "Fats and oils of other animals and their fractions (hydrogenated, intermediate-esterified or elaidic acidified); net weight <=1kg in the package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151610901000",
+      "tanim_tr": "Hidrojenize edilmiş balina yağı; ambalajda net > 1 kg, sanayide kullanılan",
+      "tanim_en": "Hydrogenated whale oil; packaged net > 1 kg, for industrial use.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151610909011",
+      "tanim_tr": "Balık veya deniz memelilerinin yağları ve bunların fraksiyonları (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net > 1kg",
+      "tanim_en": "Oils of fish or marine mammals and their fractions (hydrogenated, intermediate-esterified or elaidic acidified); net weight > 1kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151610909012",
+      "tanim_tr": "Domuz yağları ve bunların fraksiyonları (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net > 1 kg",
+      "tanim_en": "Pork fats and their fractions (hydrogenated, intermediate-esterified or elaidic acidified); net weight > 1 kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151610909019",
+      "tanim_tr": "Diğer hayvanların katı ve sıvı yağları ve bunların fraksiyonları (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net > 1kg",
+      "tanim_en": "Fats and oils of other animals and their fractions (hydrogenated, intermediate-esterified or elaidic acidified); net weight > 1kg per package",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620100000",
+      "tanim_tr": "Hidrojene Hint yağı (opalwax)",
+      "tanim_en": "Hydrogenated castor oil (opalwax)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910011",
+      "tanim_tr": "Pamuk yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Cottonseed oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg in packaging.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910012",
+      "tanim_tr": "Soya yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Soybean oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910013",
+      "tanim_tr": "Yerfıstığı yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Peanut oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910014",
+      "tanim_tr": "Zeytinyağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Olive oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg in packaging.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910015",
+      "tanim_tr": "Palm yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Palm oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg in the package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910016",
+      "tanim_tr": "Ayçiçeği tohumu yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Sunflower seed oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg in packaging.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910017",
+      "tanim_tr": "Hindistan cevizi (kopra) yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Coconut (copra) oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910018",
+      "tanim_tr": "Rep yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Rep oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg in packaging.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910021",
+      "tanim_tr": "Kolza yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Rapeseed oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg in packaging.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910022",
+      "tanim_tr": "Hardal yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Mustard oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910023",
+      "tanim_tr": "Keten tohumu yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Flaxseed oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910024",
+      "tanim_tr": "Mısır yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Corn oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910025",
+      "tanim_tr": "Hint yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Castor oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910026",
+      "tanim_tr": "Susam yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Sesame oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910027",
+      "tanim_tr": "Babassu yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Babassu oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg in packaging.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910028",
+      "tanim_tr": "Palm çekirdeği yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Palm kernel oil (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620910029",
+      "tanim_tr": "Diğer bitkisel yağlar ve bunların fraksiyonları (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); ambalajda net <= 1 kg",
+      "tanim_en": "Other vegetable oils and their fractions (hydrogenated, intermediate-esterified or elaidic acidified); net weight <= 1 kg in the package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620950011",
+      "tanim_tr": "Kolza yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); teknik veya sınai amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Rapeseed oil (hydrogenated, intermediate-esterified or elaidic acidified); for technical or industrial purposes, in packages with a net weight of > 1 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620950012",
+      "tanim_tr": "Keten tohumu yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); teknik veya sınai amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Flaxseed oil (hydrogenated, intermediate-esterified or elaidic acidified); for technical or industrial purposes, net weight > 1 kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620950013",
+      "tanim_tr": "Rep tohumu yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); teknik veya sınai amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Rapeseed oil (hydrogenated, intermediate-esterified or elaidic acidified); for technical or industrial purposes, net weight > 1 kg per pack.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620950014",
+      "tanim_tr": "Ayçiçeği tohumu yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); teknik veya sınai amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Sunflower seed oil (hydrogenated, intermediate-esterified or elaidic acidified); for technical or industrial purposes, in packages with a net weight of > 1 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620950015",
+      "tanim_tr": "Babassu yağı (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); teknik veya sınai amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Babassu oil (hydrogenated, intermediate-esterified or elaidic acidified); for technical or industrial purposes, in packages with a net weight of > 1 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620950019",
+      "tanim_tr": "Bitkisel diğer yağlar ve fraksiyonları (hidrojenize edilmiş, ara - esterlenmiş veya elaidik asitleşmiş); teknik/sınai amaçlı, ambalajda net > 1 kg",
+      "tanim_en": "Other vegetable oils and fractions (hydrogenated, intermediate-esterified or elaidic acidified); for technical/industrial purposes, net weight > 1 kg in packaging.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620960011",
+      "tanim_tr": "Yerfıstığı yağı (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Peanut oil (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, in packages with a net weight of > 1 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620960012",
+      "tanim_tr": "Pamuk yağı (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Cottonseed oil (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, in packages net > 1 kg",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620960013",
+      "tanim_tr": "Soya yağı (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Soybean oil (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, in packages with a net weight of > 1 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620960014",
+      "tanim_tr": "Ayçiçeği tohumu yağı (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1kg",
+      "tanim_en": "Sunflower seed oil (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, in packages net > 1kg",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620960019",
+      "tanim_tr": "Bitkisel diğer yağlar ve fraksiyonları (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Other vegetable oils and fractions (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, in packaging net > 1 kg",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620980011",
+      "tanim_tr": "Zeytinyağı (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Olive oil (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, net weight > 1 kg in the package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620980012",
+      "tanim_tr": "Palm yağı (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Palm oil (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, net weight > 1 kg per package.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620980013",
+      "tanim_tr": "Palm çekirdeği yağı (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Palm kernel oil (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, in packages net > 1 kg",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620980014",
+      "tanim_tr": "Hardal yağı (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Mustard oil (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, in packages net > 1 kg",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620980015",
+      "tanim_tr": "Mısır yağı (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Corn oil (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, in packages with a net weight of > 1 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620980016",
+      "tanim_tr": "Hint yağı (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Castor oil (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, in packages net > 1 kg",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620980017",
+      "tanim_tr": "Susam yağı (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Sesame oil (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, in packages with a net weight of > 1 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620980018",
+      "tanim_tr": "Hindistan cevizi yağı (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Coconut oil (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, in packages with a net weight of > 1 kg.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620980021",
+      "tanim_tr": "Rep yağı (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg",
+      "tanim_en": "Rep oil (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, net weight > 1 kg per pack.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151620980029",
+      "tanim_tr": "Bitkisel diğer yağlar (hidrojenize edilmiş, ara-esterlenmiş veya elaidik asitleşmiş); diğer amaçlar için, ambalajda net > 1 kg (15162096 HARİÇ)",
+      "tanim_en": "Other vegetable oils (hydrogenated, intermediate-esterified or elaidic acidified); for other purposes, in packaging net > 1 kg (EXCEPT 15162096)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151630910000",
+      "tanim_tr": "Mikrobiyal katı ve sıvı yağlar ve fraksiyonları; ambalajda net <=1kg, kısmen/tamamen hidrojenize edil., ara/tekrar esterlenmiş veya elaidik asitleşmiş",
+      "tanim_en": "Microbial fats and oils and their fractions; net weight <=1kg in packaging, partially/completely hydrogenated, intermediate/re-esterified or elaidic acidified.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151630980000",
+      "tanim_tr": "Mikrobiyal katı ve sıvı diğer yağlar ve diğer fraksiyonları; kısmen/tamamen hidrojenize edilmiş, ara/tekrar esterlenmiş veya elaidik asitleşmiş",
+      "tanim_en": "Microbial solid and liquid oils and other fractions; partially/completely hydrogenated, intermediate/re-esterified or elaidic acidified",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151710100000",
+      "tanim_tr": "Margarin (sıvı margarin hariç); % 10 < katı süt yağı oranı <= % 15",
+      "tanim_en": "Margarine (excluding liquid margarine); 10% < solid milk fat content <= 15%",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151710900000",
+      "tanim_tr": "Margarin (sıvı margarin hariç); katı süt yağı oranı <= % 10",
+      "tanim_en": "Margarine (excluding liquid margarine); solid milk fat content <= 10%",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151790100000",
+      "tanim_tr": "Sıvı margarin ve hayvansal, bitkisel veya diğer yağların karışımları veya müstahzarları; %10 < katı süt yağı oranı <= % 15",
+      "tanim_en": "Liquid margarine and mixtures or preparations of animal, vegetable or other fats; 10% < solid milk fat content <= 15%",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151790910000",
+      "tanim_tr": "Sabit bitkisel sıvı yağlar (akışkan, karıştırılmış); katı süt yağı oranı <= % 10",
+      "tanim_en": "Fixed vegetable oils (liquid, blended); solid milk fat content <= 10%",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151790930000",
+      "tanim_tr": "Eşyanın kalıptan çıkarılmasında kullanılan yenilen karışım veya müstahzar yağlar; katı süt yağı oranı <= % 10",
+      "tanim_en": "Renewed mixtures or prepared oils used in the removal of the goods from the mold; solid milk fat content <= 10%",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151790990000",
+      "tanim_tr": "Sıvı margarin ve hayvansal, bitkisel diğer yağların diğer karışımları veya diğer müstahzarları; katı süt yağı oranı <= % 10",
+      "tanim_en": "Liquid margarine and other mixtures or preparations of animal and vegetable fats; solid milk fat content <= 10%",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151800100000",
+      "tanim_tr": "Linoksin",
+      "tanim_en": "Linoxin",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151800310000",
+      "tanim_tr": "Başka yerde belirtilmemiş ham hayvansal ve bitkisel yağlar ve fraksiyonları; teknik veya sınai amaçlı",
+      "tanim_en": "Crude animal and vegetable oils and fractions thereof, not specified elsewhere; for technical or industrial purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151800390000",
+      "tanim_tr": "Başka yerde belirtilmemiş hayvansal ve bitkisel yağlar ve fraksiyonları; farklı şekillerde işlenmiş, teknik veya sınai amaçlı",
+      "tanim_en": "Animal and vegetable oils and their fractions, not specified elsewhere; processed in various ways, for technical or industrial purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151800910000",
+      "tanim_tr": "Başka yerde belirtilmemiş hayvansal, bitkisel veya mikrobiyal yağlar ve fraksiyonları; farklı şekillerde işlenmiş, diğer amaçlar için kullanılan",
+      "tanim_en": "Animal, vegetable or microbial oils and fractions thereof, not specified elsewhere; processed in various ways and used for other purposes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151800951000",
+      "tanim_tr": "Hayvansal diğer yağlar veya bunların bitkisel ve/veya mikrobiyal yağlarla karışımları, bunların fraksiyonları ve karışımları;sanayide kullanılan, sıvı",
+      "tanim_en": "Other animal fats or mixtures thereof with vegetable and/or microbial oils, their fractions and mixtures; liquid oils used in industry.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151800959000",
+      "tanim_tr": "Hayvansal diğer yağlar veya bunların bitkisel ve/veya mikrobiyal yağlarla karışımları, bunların fraksiyonları ve karışımları; yenilmeyen",
+      "tanim_en": "Other animal fats or mixtures thereof with vegetable and/or microbial fats, their fractions and mixtures; inedible",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "151800990000",
+      "tanim_tr": "15. fasılın başka yerinde sınıflandırılmamış hayvansal, bitkisel veya karışımlarından veya fraksiyonlarının yenilmeyen yağları",
+      "tanim_en": "Inedible oils of animal, vegetable or mixtures thereof or fractions thereof, not classified elsewhere in Chapter 15.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152000001000",
+      "tanim_tr": "Ham gliserol",
+      "tanim_en": "Crude glycerol",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152000009000",
+      "tanim_tr": "Gliserollü sular ve gliserollü lesivler",
+      "tanim_en": "Glycerol-containing waters and glycerol-containing lecithins",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152110001000",
+      "tanim_tr": "Bitkisel mumlar (trigliseritler hariç); ham olanlar",
+      "tanim_en": "Vegetable waxes (excluding triglycerides); raw waxes.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152110009000",
+      "tanim_tr": "Bitkisel mumlar (trigliseritler hariç); ham olanlar HARİÇ",
+      "tanim_en": "Vegetable waxes (excluding triglycerides); EXCEPT those that are raw.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152190100000",
+      "tanim_tr": "İspermeçet (rafine edilmiş veya boyanmış olsun olmasın)",
+      "tanim_en": "Spermaceti (whether refined or dyed)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152190910011",
+      "tanim_tr": "Balmumu; ham olanlar",
+      "tanim_en": "Beeswax; raw beeswax.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152190910019",
+      "tanim_tr": "Diğer böcek mumları; ham olanlar",
+      "tanim_en": "Other insect waxes; the raw ones.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152190990011",
+      "tanim_tr": "Balmumu; ham olanlar HARİÇ",
+      "tanim_en": "Beeswax; EXCEPT raw beeswax.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152190990019",
+      "tanim_tr": "Diğer böcek mumları; ham olanlar HARİÇ",
+      "tanim_en": "Other insect waxes; EXCEPT the raw ones.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152200100000",
+      "tanim_tr": "Degra",
+      "tanim_en": "Degra",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152200310000",
+      "tanim_tr": "Sabun ham maddeleri; zeytinyağı karakterine haiz sıvı yağ içerenler",
+      "tanim_en": "Soap raw materials; those containing liquid oils with olive oil characteristics.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152200390000",
+      "tanim_tr": "Zeytinyağı karakterine haiz sıvı yağ içeren diğer artıklar",
+      "tanim_en": "Other residues containing liquid oil with olive oil characteristics",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152200910000",
+      "tanim_tr": "Yağ tortuları, posaları ve sabun için diğer hammaddeler",
+      "tanim_en": "Oil residues, pulp, and other raw materials for soap.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "152200990000",
+      "tanim_tr": "Yağlı maddeler veya hayvansal veya bitkisel mumların işlenmesinden meydana gelen diğer artıklar",
+      "tanim_en": "Oily substances or other residues resulting from the processing of animal or vegetable waxes",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    }
+  ]
+}

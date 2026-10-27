@@ -1,0 +1,7331 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-tam",
+      "ad": {
+        "tr": "GTİP Tüm Vergiler",
+        "en": "GTIP All Taxes"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.27",
+    "guncelleme": "2026-10-27",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.27"
+      },
+      "uretim_zamani": "2026-10-27T13:33:06.673129+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "76",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:19d03b3ec7957dd0fe9ebcfe7985d0a245754a5af19e4a35683d330400422762"
+  },
+  "kayitlar": [
+    {
+      "kod": "760000000000",
+      "tanim_tr": "Aluminyum ve aluminyum eşya",
+      "tanim_en": "Aluminum and aluminum products",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760110100000",
+      "tanim_tr": "Dilimler halinde işlenmemiş alaşımsız aluminyum",
+      "tanim_en": "Unprocessed, non-alloyed aluminum in slices.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760110900000",
+      "tanim_tr": "İşlenmemiş alaşımsız aluminyum; dilimler halinde olan HARİÇ",
+      "tanim_en": "Unprocessed, unalloyed aluminum; EXCEPT that which is in slices.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760120300000",
+      "tanim_tr": "Dilimler halinde işlenmemiş aluminyum alaşımları",
+      "tanim_en": "Unprocessed aluminum alloys in slice form.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760120400000",
+      "tanim_tr": "Kütükler halinde işlenmemiş aluminyum alaşımları",
+      "tanim_en": "Unprocessed aluminum alloys in the form of billets.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760120800000",
+      "tanim_tr": "İşlenmemiş aluminyum alaşımları; dilim ve kütükler HARİÇ",
+      "tanim_en": "Unprocessed aluminum alloys; EXCLUDING sheets and billets.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760200110000",
+      "tanim_tr": "Aluminyumdan torna-freze talaşı, kıymıklar, öğütme artıkları, testere-eğe talaşı, ince yaprak ve şeritlerin döküntüleri; kalınlık <=0.2mm",
+      "tanim_en": "Aluminum lathe and milling chips, splinters, grinding residues, saw and file chips, and waste from thin sheets and strips; thickness <=0.2mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "820",
+        "vergi_turu": "tevkifat",
+        "oran": 1.0,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "10/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760200190000",
+      "tanim_tr": "Aluminyumdan diğer döküntüler (imalat ıskartaları dahil)",
+      "tanim_en": "Other aluminum waste (including manufacturing scraps)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "820",
+        "vergi_turu": "tevkifat",
+        "oran": 1.0,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "10/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760200900000",
+      "tanim_tr": "Aluminyumdan hurdalar",
+      "tanim_en": "Aluminum scrap",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "820",
+        "vergi_turu": "tevkifat",
+        "oran": 1.0,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "10/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760310000000",
+      "tanim_tr": "Aluminyumdan pul bünyeli olmayan tozlar",
+      "tanim_en": "Non-flake aluminum powders",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760320000011",
+      "tanim_tr": "Aluminyumdan pul bünyeli tozlar",
+      "tanim_en": "Aluminum flake powders",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760320000012",
+      "tanim_tr": "Aluminyumdan ince pullar",
+      "tanim_en": "Thin aluminum flakes",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760410100000",
+      "tanim_tr": "Alaşımsız aluminyumdan çubuklar",
+      "tanim_en": "Rods made of unalloyed aluminum",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760410900000",
+      "tanim_tr": "Alaşımsız aluminyumdan profiller",
+      "tanim_en": "Profiles made of unalloyed aluminum.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760421000000",
+      "tanim_tr": "Aluminyum alaşımlarından içi boş profiller",
+      "tanim_en": "Hollow profiles made from aluminum alloys.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760429100000",
+      "tanim_tr": "Aluminyum alaşımlarından çubuklar",
+      "tanim_en": "Rods made of aluminum alloys",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760429900000",
+      "tanim_tr": "Aluminyum alaşımlarından diğer profiller",
+      "tanim_en": "Other profiles made from aluminum alloys.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760511000000",
+      "tanim_tr": "Alaşımsız aluminyumdan teller; enine kesitinin en geniş yeri > 7mm",
+      "tanim_en": "Wires made of unalloyed aluminum; widest part of cross-section > 7mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760519000000",
+      "tanim_tr": "Alaşımsız aluminyumdan teller; enine kesitinin en geniş yeri <= 7mm",
+      "tanim_en": "Wires made of unalloyed aluminum; widest part of cross-section <= 7mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760521000000",
+      "tanim_tr": "Aluminyum alaşımlarından teller; enine kesitinin en geniş yeri > 7mm",
+      "tanim_en": "Wires made from aluminum alloys; widest part of cross-section > 7mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760529000000",
+      "tanim_tr": "Aluminyum alaşımlarından teller; enine kesitinin en geniş yeri <= 7mm",
+      "tanim_en": "Wires made from aluminum alloys; widest part of cross-section <= 7mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760611300000",
+      "tanim_tr": "Alaşımsız aluminyumdan dikdörtgen (kare dahil) şeklinde kompozit paneller; kalınlığı > 0.2 mm",
+      "tanim_en": "Rectangular (including square) composite panels made of unalloyed aluminum; thickness > 0.2 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760611500000",
+      "tanim_tr": "Alaşımsız aluminyumdan dikdörtgen (kare dahil), boyanmış, verniklenmiş veya plastik maddeyle kaplanmış saclar, levhalar, şeritler; kalınlığı > 0.2 mm",
+      "tanim_en": "Rectangular (including square) sheets, plates, and strips of unalloyed aluminum, painted, varnished, or coated with plastic; thickness > 0.2 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760611910000",
+      "tanim_tr": "Alaşımsız aluminyumdan dikdörtgen (kare dahil) şeklinde diğer saclar, levhalar, şeritler; 0.2 mm < kalınlığı < 3 mm",
+      "tanim_en": "Other rectangular (including square) sheets, plates, and strips of unalloyed aluminum; thickness < 0.2 mm < 3 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760611930000",
+      "tanim_tr": "Alaşımsız aluminyumdan dikdörtgen (kare dahil) şeklinde diğer saclar, levhalar, şeritler; 3 mm <= kalınlığı < 6 mm",
+      "tanim_en": "Rectangular (including square) sheets, plates, and strips of unalloyed aluminum; thickness <3 mm <= <6 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760611990000",
+      "tanim_tr": "Alaşımsız aluminyumdan dikdörtgen (kare dahil) şeklinde diğer saclar, levhalar, şeritler; kalınlığı >= 6 mm",
+      "tanim_en": "Rectangular (including square) sheets, plates, and strips of unalloyed aluminum; thickness >= 6 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760612110000",
+      "tanim_tr": "Aluminyum alaşımlarından dikdörtgen (kare dahil) şeklinde saclar, levhalar, şeritler; içecek kutularına ait gövde imali için, kalınlık > 0.2 mm",
+      "tanim_en": "Rectangular (including square) sheets, plates, and strips of aluminum alloys; for the manufacture of beverage can bodies, thickness > 0.2 mm.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760612190000",
+      "tanim_tr": "Aluminyum alaşımlarından dikdörtgen (kare dahil) şeklinde saclar, levhalar, şeritler; içecek kutularının alt ve üst kapak imali için, kalınlık > 0.2mm",
+      "tanim_en": "Rectangular (including square) sheets, plates, and strips of aluminum alloys; for the manufacture of bottom and top lids for beverage cans, thickness > 0.2mm.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760612300000",
+      "tanim_tr": "Aluminyum alaşımlarından dikdörtgen (kare dahil) şeklinde kompozit paneller; kalınlığı > 0.2 mm",
+      "tanim_en": "Rectangular (including square) composite panels made from aluminum alloys; thickness > 0.2 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760612500000",
+      "tanim_tr": "Aluminyum alaşımlarından dikdörtgen (kare dahil), boyanmış, verniklenmiş veya plastik maddeyle kaplanmış saclar, levhalar, şeritler; kalınlığı > 0.2mm",
+      "tanim_en": "Rectangular (including square) sheets, plates, and strips of aluminum alloys, painted, varnished, or coated with plastic; thickness > 0.2mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760612920000",
+      "tanim_tr": "Aluminyum alaşımlarından dikdörtgen (kare dahil) şeklinde diğer saclar, levhalar, şeritler; 0.2 mm < kalınlık < 3 mm",
+      "tanim_en": "Rectangular (including square) shaped sheets, plates, and strips of aluminum alloys; thickness < 0.2 mm < 3 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760612930000",
+      "tanim_tr": "Aluminyum alaşımlarından dikdörtgen (kare dahil) şeklinde diğer saclar, levhalar, şeritler; 3 mm <= kalınlık < 6 mm",
+      "tanim_en": "Rectangular (including square) sheets, plates, and strips of aluminum alloys; thickness <3 mm <= <6 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760612990000",
+      "tanim_tr": "Aluminyum alaşımlarından dikdörtgen (kare dahil) şeklinde diğer saclar, levhalar, şeritler; kalınlık >= 6 mm",
+      "tanim_en": "Rectangular (including square) sheets, plates, and strips of aluminum alloys; thickness >= 6 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760691000000",
+      "tanim_tr": "Alaşımsız aluminyumdan saclar, levhalar, şeritler (dikdörtgen (kare dahil) şeklinde olanlar HARİÇ); kalınlık > 0.2 mm",
+      "tanim_en": "Sheets, plates, and strips of unalloyed aluminum (EXCEPT those in rectangular (including square) shape); thickness > 0.2 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760692000000",
+      "tanim_tr": "Aluminyum alaşımlarından saclar, levhalar, şeritler (dikdörtgen (kare dahil) şeklinde olanlar HARİÇ); kalınlık > 0.2 mm",
+      "tanim_en": "Sheets, plates, and strips of aluminum alloys (EXCEPT those in rectangular (including square) shape); thickness > 0.2 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760711110000",
+      "tanim_tr": "Aluminyumdan sadece haddelenmiş yapraklar ve şeritler; mesnetsiz, rulo halinde, ağırlık <= 10kg, kalınlık < 0.021 mm",
+      "tanim_en": "Only rolled sheets and strips of aluminum; unbacked, in rolls, weight <= 10 kg, thickness < 0.021 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760711190000",
+      "tanim_tr": "Aluminyumdan sadece haddelenmiş diğer yapraklar ve şeritler; mesnetsiz, rulo halinde, kalınlık < 0.021 mm",
+      "tanim_en": "Other rolled sheets and strips of aluminum; unbacked, in rolls, thickness < 0.021 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760711900000",
+      "tanim_tr": "Aluminyumdan sadece haddelenmiş yapraklar ve şeritler; mesnetsiz, 0.021 mm <= kalınlık <= 0.2 mm",
+      "tanim_en": "Only rolled sheets and strips of aluminum; unbacked, 0.021 mm <= thickness <= 0.2 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760719100000",
+      "tanim_tr": "Aluminyumdan diğer yapraklar ve şeritler; mesnetsiz, kalınlık < 0.021 mm",
+      "tanim_en": "Other aluminum sheets and strips; unsupported, thickness < 0.021 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760719900000",
+      "tanim_tr": "Aluminyumdan diğer yapraklar ve şeritler; mesnetsiz, 0.021 mm <= kalınlık <= 0.2 mm",
+      "tanim_en": "Other aluminum sheets and strips; unsupported, 0.021 mm <= thickness <= 0.2 mm",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760720100000",
+      "tanim_tr": "Aluminyumdan yapraklar ve şeritler; mesnetli olanlar, mesnedi hariç kalınlık < 0.021 mm",
+      "tanim_en": "Aluminum sheets and strips; those with supports, thickness excluding support < 0.021 mm.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760720910000",
+      "tanim_tr": "Aluminyumdan kompozit paneller; mesnetli olanlar, mesnedi hariç kalınlığı 0.021 mm. veya daha fazla, fakat 0.2 mm.yi geçmeyenler",
+      "tanim_en": "Composite panels made of aluminum; those with supports, with a thickness excluding the support of 0.021 mm or more, but not exceeding 0.2 mm.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760720990021",
+      "tanim_tr": "Aluminyumdan kendinden yapışkanlı bantlar; mesnetli olanlar, mesnedi hariç kalınlığı 0.021 mm. veya daha fazla, fakat 0.2 mm.yi geçmeyenler",
+      "tanim_en": "Self-adhesive aluminum tapes; those with a backing, with a thickness excluding the backing of 0.021 mm or more, but not exceeding 0.2 mm.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760720990029",
+      "tanim_tr": "Aluminyumdan diğer yaprak ve şeritler; mesnetli olanlar, mesnedi hariç kalınlığı 0.021 mm. veya daha fazla, fakat 0.2 mm.yi geçmeyenler",
+      "tanim_en": "Other aluminum sheets and strips; those with supports, with a thickness excluding the support of 0.021 mm or more, but not exceeding 0.2 mm.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760810001011",
+      "tanim_tr": "Alaşımsız aluminyumdan dikişli ince ve kalın borular; sivil hava taşıtlarındaki gaz ve sıvılar için, bağlantı parçaları takılmış",
+      "tanim_en": "Welded thin and thick tubes made of unalloyed aluminum; for gases and liquids in civil aircraft, fitted with fittings.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760810001012",
+      "tanim_tr": "Alaşımsız aluminyumdan dikişsiz ince ve kalın borular; sivil hava taşıtlarındaki gaz ve sıvılar için, bağlantı parçaları takılmış",
+      "tanim_en": "Seamless thin and thick tubes made of unalloyed aluminum; for gases and liquids in civil aircraft, fitted with fittings.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760810009011",
+      "tanim_tr": "Alaşımsız aluminyumdan dikişli ince ve kalın diğer borular",
+      "tanim_en": "Other thin and thick welded pipes made of unalloyed aluminum.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760810009012",
+      "tanim_tr": "Alaşımsız aluminyumdan dikişsiz ince ve kalın diğer borular",
+      "tanim_en": "Seamless thin and thick pipes made of unalloyed aluminum.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760820201000",
+      "tanim_tr": "Aluminyum alaşımlarından dikişli ince ve kalın borular; sivil hava taşıtlarındaki gaz ve sıvılar için, bağlantı parçaları takılmış",
+      "tanim_en": "Thin and thick welded tubes made of aluminum alloys; for gases and liquids in civil aircraft, fitted with fittings.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760820209000",
+      "tanim_tr": "Aluminyum alaşımlarından dikişli ince ve kalın diğer borular",
+      "tanim_en": "Other thin and thick welded pipes made of aluminum alloys.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760820811000",
+      "tanim_tr": "Aluminyum alaşımından ekstrüzyon yapılmış dikişsiz ince ve kalın borular; sivil hava taşıtlarındaki gaz ve sıvılar için, bağlantı parçaları takılmış",
+      "tanim_en": "Seamless thin and thick extruded aluminum alloy tubes; for gases and liquids in civil aircraft, fitted with fittings.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760820819000",
+      "tanim_tr": "Aluminyum alaşımından ekstrüzyon yapılmış dikişsiz ince ve kalın diğer borular",
+      "tanim_en": "Seamless thin and thick pipes extruded from aluminum alloy.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760820891000",
+      "tanim_tr": "Aluminyum alaşımından dikişsiz ince ve kalın diğer borular; sivil hava taşıtlarındaki gaz ve sıvılar için, bağlantı parçaları takılmış",
+      "tanim_en": "Seamless thin and thick aluminum alloy pipes; for gases and liquids in civil aircraft, fitted with fittings.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760820899000",
+      "tanim_tr": "Aluminyum alaşımından dikişsiz ince ve kalın diğer borular",
+      "tanim_en": "Seamless thin and thick other tubes made of aluminum alloy.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "760900000000",
+      "tanim_tr": "Aluminyumdan boru bağlantı parçaları; rakorlar, dirsekler, manşonlar, vb.",
+      "tanim_en": "Aluminum pipe fittings; connectors, elbows, sleeves, etc.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761010000011",
+      "tanim_tr": "Aluminyumdan soğuk hava depolarına mahsus inşaat için kapılar, pencereler ve bunların çerçeveleri, pervazları ve kapı eşikleri",
+      "tanim_en": "Aluminum doors, windows and their frames, sills and door thresholds for cold storage construction.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761010000019",
+      "tanim_tr": "Aluminyumdan inşaat için kapılar, pencereler ve bunların çerçeveleri, pervazları ve kapı eşikleri; soğuk hava depolarına mahsus olanlar HARİÇ",
+      "tanim_en": "Doors, windows and their frames, sills and door thresholds made of aluminum for construction; EXCEPT those intended for cold storage.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761090100011",
+      "tanim_tr": "Aluminyumdan köprüler ve köprü aksamı",
+      "tanim_en": "Aluminum bridges and bridge components.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761090100012",
+      "tanim_tr": "Aluminyumdan kuleler ve pilonlar",
+      "tanim_en": "Towers and pylons made of aluminum.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761090900012",
+      "tanim_tr": "Aluminyumdan sandviç panel",
+      "tanim_en": "Aluminum sandwich panel",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761090900018",
+      "tanim_tr": "Aluminyumdan diğer inşaat (94.06'daki prefabrik yapılar hariç), diğer inşaat aksamı ve inşaat için aluminyum saclar, çubuklar,profiller, borular vb.",
+      "tanim_en": "Other construction materials of aluminum (excluding prefabricated structures under section 94.06), other construction components, and aluminum sheets, bars, profiles, pipes, etc. for construction.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761100001000",
+      "tanim_tr": "Aluminyumdan eşyanın taşınması/ambalajlanması için depolar, sarnıçlar, küvler ve benzeri kaplar; hacmi > 300 Lt, mekanik/termik tertibatı bulunmayan",
+      "tanim_en": "Containers, tanks, vats and similar vessels for transporting/packaging aluminum goods; volume > 300 Lt, without mechanical/thermal equipment.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761100009000",
+      "tanim_tr": "Aluminyumdan diğer depolar, sarnıçlar, küvler vb. kaplar (sıkıştırılmış/sıvı gaz için olmayan); hacmi > 300 Lt, mekanik/termik tertibatı bulunmayan",
+      "tanim_en": "Other aluminum tanks, cisterns, vats, etc. (not for compressed/liquefied gas); volume > 300 Lt, without mechanical/thermal equipment.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761210000000",
+      "tanim_tr": "Aluminyumdan tüp şeklinde esnek kaplar; hacmi <= 300 Lt, mekanik/termik tertibatı bulunmayan",
+      "tanim_en": "Flexible aluminum tube containers; volume <= 300 Lt, without mechanical/thermal devices.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761290200000",
+      "tanim_tr": "Aluminyumdan aerosollerde kullanılacak türdeki kaplar; hacmi <= 300 Lt, mekanik/termik tertibatı bulunmayan",
+      "tanim_en": "Aluminum containers for use with aerosols; volume <= 300 Lt, without mechanical/thermal devices.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761290300000",
+      "tanim_tr": "Kalınlığı 0.2 mm yi geçmeyen aluminyum yapraklardan mamül kaplar; hacmi <= 300 Lt, mekanik/termik tertibatı bulunmayan",
+      "tanim_en": "Containers made of aluminum foil with a thickness not exceeding 0.2 mm; volume <= 300 Lt, without mechanical/thermal devices.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761290800000",
+      "tanim_tr": "Aluminyumdan depo, fıçı, varil, bidon vb. diğer kaplar (sıkıştırılmış/sıvı gaz için olmayan); hacmi <= 300 Lt, mekanik/termik tertibatı olmayan",
+      "tanim_en": "Aluminum tanks, barrels, drums, canisters, etc. (not for compressed/liquefied gas); volume <= 300 Lt, without mechanical/thermal equipment.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761300000000",
+      "tanim_tr": "Sıkıştırılmış veya sıvılaştırılmış gaz için aluminyumdan kaplar",
+      "tanim_en": "Aluminum containers for compressed or liquefied gas.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761410000000",
+      "tanim_tr": "Aluminyumdan çelik özlü demetlenmiş teller, kablolar, örme halatlar ve benzerleri (elektrik için izole edilmemiş olanlar)",
+      "tanim_en": "Bundled aluminum wires, cables, braided ropes and similar materials with a steel core (those not insulated for electrical use)",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761490000000",
+      "tanim_tr": "Aluminyumdan demetlenmiş teller, kablolar, örme halatlar ve benzerleri (elektrik için izole edilmemiş olanlar); çelik özlü olanlar HARİÇ",
+      "tanim_en": "Bundled aluminum wires, cables, braided ropes and the like (those not insulated for electrical use); EXCEPT those with a steel core.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761510100000",
+      "tanim_tr": "Döküm aluminyumdan sofra, mutfak ve ev işlerinde kullanılan eşya ve bunların aksamı, süngerler, temizlik ve parlatma eşyası, eldivenler vb.",
+      "tanim_en": "Tableware, kitchenware and household items and their parts, sponges, cleaning and polishing equipment, gloves, etc., made from cast aluminum.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761510300000",
+      "tanim_tr": "Aluminyum yapraklardan (kalınlık <= 0.2mm) sofra, mutfak ve ev işlerinde kullanılan eşya ve aksamı, sünger, temizlik-parlatma eşyası, eldiven vb.",
+      "tanim_en": "Made from aluminum sheets (thickness <= 0.2mm) for tableware, kitchenware and household items and accessories, sponges, cleaning and polishing equipment, gloves, etc.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761510800000",
+      "tanim_tr": "Diğer aluminyumdan sofra, mutfak ve ev işlerinde kullanılan eşya ve bunların aksamı, süngerler, temizlik ve parlatma eşyası, eldivenler vb.",
+      "tanim_en": "Other aluminum tableware, kitchenware and household items and their parts, sponges, cleaning and polishing equipment, gloves, etc.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761520000011",
+      "tanim_tr": "Aluminyumdan sağlığı koruyucu eşya",
+      "tanim_en": "Health protection items made of aluminum.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761520000015",
+      "tanim_tr": "Aluminyumdan sağlığı koruyucu eşyanın aksamı",
+      "tanim_en": "Components of health protective equipment made of aluminum.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761610000011",
+      "tanim_tr": "Aluminyumdan vida, somun, perçin çivileri ve rondelelar; kütle halinde kesilmiş olan ve sap kalınlığı veya delik çapı <= 6 mm",
+      "tanim_en": "Aluminum screws, nuts, rivets, and washers; cut in bulk, with a shank thickness or hole diameter <= 6 mm.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761610000019",
+      "tanim_tr": "Aluminyumdan çivi, yivli çivi (83.05 pozisyonundakiler hariç), civata, pim, kama, kama pimleri, vb eşya ve diğer vida, somun, perçin çivileri, rondela",
+      "tanim_en": "Nails, threaded nails (excluding those in heading 83.05), bolts, pins, wedges, wedge pins, etc., and other screws, nuts, rivets, washers made of aluminum.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761691000000",
+      "tanim_tr": "Aluminyum tellerden mensucat, örgüler ve kafeslikler",
+      "tanim_en": "Textiles, braids, and mesh made from aluminum wires.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761699100000",
+      "tanim_tr": "Aluminyumdan döküm olan diğer mamuller",
+      "tanim_en": "Other products made from aluminum casting.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761699901000",
+      "tanim_tr": "Aluminyumdan metal depluvayye",
+      "tanim_en": "Metal deposit from aluminum",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761699909011",
+      "tanim_tr": "Aluminyumdan iplik ve dokuma sanayi için masura, makara, bobinler vb mesnetler",
+      "tanim_en": "Aluminum supports for bobbins, reels, bobbins, etc., for the yarn and weaving industry.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761699909012",
+      "tanim_tr": "Aluminyumdan fotoğraf, sinema filmleri ve pelikülleri veya 85.23 / 85.24'teki bantlar, filmler ve benzerlerinin sarılması için bobinler vb. mesnetler",
+      "tanim_en": "Aluminum backings for winding photographic, motion pictures and films or tapes, films and the like in 85.23 / 85.24 gauge.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761699909013",
+      "tanim_tr": "Aluminyumdan zincirler",
+      "tanim_en": "Aluminum chains",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "761699909019",
+      "tanim_tr": "Aluminyumdan diğer mamuller",
+      "tanim_en": "Other aluminum products",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "619",
+        "vergi_turu": "tevkifat",
+        "oran": 0.7,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false,
+        "oran_kesir": "7/10"
+      },
+      "nace": {
+        "kod": "24.42"
+      },
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [
+          {
+            "kod": "ithal-izin",
+            "ad_tr": "İthalat İzni (Demir-Çelik)",
+            "ad_en": "Import License (Iron-Steel)",
+            "kurum_kod": "tb",
+            "seviye": "kosullu",
+            "kosul_tr": "Demir-çelik, hurda ve bazı kimyasalların ithalatında özel ithalat izni aranır.",
+            "kosul_en": "Special import license is required for imports of iron-steel, scrap and certain chemicals.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": []
+      }
+    }
+  ]
+}

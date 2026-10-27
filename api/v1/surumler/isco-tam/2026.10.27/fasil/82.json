@@ -1,0 +1,653 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "isco-tam",
+      "ad": {
+        "tr": "ISCO Tüm Belgeler",
+        "en": "ISCO All Documents"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "isco",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.27",
+    "guncelleme": "2026-10-27",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.27"
+      },
+      "uretim_zamani": "2026-10-27T13:33:06.673129+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "82",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:90d85cc71519d3d00f08cea10e4b66dd015aa6aee801f049155f07ac6b1028fa"
+  },
+  "kayitlar": [
+    {
+      "kod": "82",
+      "tanim_tr": "MAKİNE OPERATÖRLERİ VE MONTAJCILARI",
+      "tanim_en": "MACHINE OPERATORS AND ASSEMBLERS",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "821",
+      "tanim_tr": "METAL VE MİNERAL ÜRÜNLERİ MAKİNE OPERATÖRLERİ",
+      "tanim_en": "METAL AND MINERAL PRODUCTS MACHINE OPERATORS",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8211",
+      "tanim_tr": "Takım tezgahı operatörleri",
+      "tanim_en": "Machine tool operators",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8212",
+      "tanim_tr": "Çimento ve diğer mineral ürünler ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators working with cement and other mineral products.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "822",
+      "tanim_tr": "KİMYASAL ÜRÜNLER İLE İLGİLİ MAKİNE OPERATÖRLERİ",
+      "tanim_en": "MACHINE OPERATORS INVOLVED IN CHEMICAL PRODUCTS",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8221",
+      "tanim_tr": "Eczacılık ve tuvalet malzemeleri ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators related to pharmaceuticals and toiletries.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8222",
+      "tanim_tr": "Cephane ve patlayıcı maddeler ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators working with ammunition and explosives.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8223",
+      "tanim_tr": "Metal kaplama ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators involved in metal plating.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8224",
+      "tanim_tr": "Fotoğrafçılık ürünleri ile ilgili makine operatörleri",
+      "tanim_en": "Camera operators related to photographic equipment.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8229",
+      "tanim_tr": "Başka yerde sınıflandırılmamış kimyasal ürünler ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators dealing with chemical products not classified elsewhere.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "823",
+      "tanim_tr": "KAUÇUK VE PLASTİK ÜRÜNLERİ MAKİNE OPERATÖRLERİ",
+      "tanim_en": "RUBBER AND PLASTIC PRODUCTS MACHINE OPERATORS",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8231",
+      "tanim_tr": "Kauçuk ürünleri makine operatörleri",
+      "tanim_en": "Rubber products machine operators",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8232",
+      "tanim_tr": "Plastik ürünleri makine operatörleri",
+      "tanim_en": "Plastic products machine operators",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "824",
+      "tanim_tr": "AĞAÇ ÜRÜNLERİ MAKİNE OPERATÖRLERİ",
+      "tanim_en": "WOOD PRODUCTS MACHINE OPERATORS",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8240",
+      "tanim_tr": "Ağaç ürünleri makine operatörleri",
+      "tanim_en": "Wood products machinery operators",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "825",
+      "tanim_tr": "BASKI, CİLTLEME VE KAĞIT ÜRÜNLERİ İLE İLGİLİ MAKİNE OPERATÖRLERİ",
+      "tanim_en": "PRINTING, BINDING AND PAPER PRODUCTS MACHINE OPERATORS",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8251",
+      "tanim_tr": "Baskı makinesi operatörleri",
+      "tanim_en": "Printing machine operators",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8252",
+      "tanim_tr": "Ciltleme makinesi operatörleri",
+      "tanim_en": "Binding machine operators",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8253",
+      "tanim_tr": "Kağıt ürünleri makinesi operatörleri",
+      "tanim_en": "Paper products machine operators",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "826",
+      "tanim_tr": "TEKSTİL, KÜRK VE DERİ ÜRÜNLERİ İLE İLGİLİ MAKİNE OPERATÖRLERİ",
+      "tanim_en": "MACHINE OPERATORS RELATED TO TEXTILE, FUR AND LEATHER PRODUCTS",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8261",
+      "tanim_tr": "Elyaf hazırlama, bükme ve sarma makineleri operatörleri",
+      "tanim_en": "Fiber preparation, twisting and winding machine operators",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8262",
+      "tanim_tr": "Dokuma ve örme makineleri operatörleri",
+      "tanim_en": "Weaving and knitting machine operators",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8263",
+      "tanim_tr": "Dikiş makinesi operatörleri",
+      "tanim_en": "Sewing machine operators",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8264",
+      "tanim_tr": "Ağartma, boyama ve temizleme makineleri operatörleri",
+      "tanim_en": "Bleaching, dyeing and cleaning machine operators",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8265",
+      "tanim_tr": "Kürk ve deri hazırlama makineleri operatörleri",
+      "tanim_en": "Fur and leather processing machine operators",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8266",
+      "tanim_tr": "Ayakkabı yapımı ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators involved in shoe manufacturing.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8269",
+      "tanim_tr": "Başka yerde sınıflandırılmamış tekstil, kürk ve deri ürünleri ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators for textile, fur and leather products not classified elsewhere.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "827",
+      "tanim_tr": "GIDA VE İLGİLİ ÜRÜNLERİN MAKİNE OPERATÖRLERİ",
+      "tanim_en": "MACHINE OPERATORS OF FOOD AND RELATED PRODUCTS",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8271",
+      "tanim_tr": "Et ve balık işleme ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators involved in meat and fish processing.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8272",
+      "tanim_tr": "Süt ürünleri ile ilgili makine operatörleri",
+      "tanim_en": "Dairy-related machine operators",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8273",
+      "tanim_tr": "Hububat ve baharat öğütme ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators involved in grain and spice grinding.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8274",
+      "tanim_tr": "Fırıncılık mamulleri, tahıl ve çikolata ürünleri ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators related to bakery products, cereals, and chocolate products.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8275",
+      "tanim_tr": "Meyve, sebze ve sert kabuklu meyveleri işleme ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators involved in processing fruits, vegetables, and nuts.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8276",
+      "tanim_tr": "Şeker üretimi ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators involved in sugar production.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8277",
+      "tanim_tr": "Çay, kahve ve kakao işleme ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators involved in tea, coffee, and cocoa processing.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8278",
+      "tanim_tr": "Bira, şarap ve diğer içeceklerle ilgili makine operatörleri",
+      "tanim_en": "Machine operators working with beer, wine, and other beverages.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8279",
+      "tanim_tr": "Tütün işleme ile ilgili makine operatörleri",
+      "tanim_en": "Machine operators involved in tobacco processing.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "828",
+      "tanim_tr": "MONTAJCILAR",
+      "tanim_en": "ASSEMBLERS",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8281",
+      "tanim_tr": "Mekanik makine montajcıları",
+      "tanim_en": "Mechanical machine assemblers",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8282",
+      "tanim_tr": "Elektrikli teçhizat montajcıları",
+      "tanim_en": "Electrical equipment installers",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8283",
+      "tanim_tr": "Elektronik teçhizat montajcıları",
+      "tanim_en": "Electronic equipment installers",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8284",
+      "tanim_tr": "Metal, kauçuk ve plastik ürünleri montajcıları",
+      "tanim_en": "Installers of metal, rubber and plastic products",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8285",
+      "tanim_tr": "Ağaç ve ilgili ürünlerin montajcıları",
+      "tanim_en": "Installers of wood and related products",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8286",
+      "tanim_tr": "Mukavva, tekstil ve ilgili ürünlerin montajcıları",
+      "tanim_en": "Assemblers of cardboard, textiles and related products.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "829",
+      "tanim_tr": "DİĞER MAKİNE OPERATÖRLERİ VE MONTAJCILARI",
+      "tanim_en": "OTHER MACHINE OPERATORS AND ASSEMBLERS",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    },
+    {
+      "kod": "8290",
+      "tanim_tr": "Diğer makine operatörleri ve montajcıları",
+      "tanim_en": "Other machine operators and assemblers",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      }
+    }
+  ]
+}

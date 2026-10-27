@@ -1,71 +1,95 @@
 {
-    "meta": {
-        "schema_surumu": "1.0.0",
-        "servis": {
-            "kod": "randiman",
-            "ad": {
-                "tr": "Randıman Oranları Kataloğu",
-                "en": "Product Yield Rates Catalog"
-            }
-        },
-        "katman": "ham",
-        "yapi": {
-            "tip": "liste",
-            "kod_sistemi": "diger",
-            "kapsam": [
-                "vergi",
-                "ticaret"
-            ]
-        },
-        "surum": "2026.01.01",
-        "guncelleme": "2026-01-01",
-        "yayin_durumu": "yayinda",
-        "zaman": {
-            "bazli": true,
-            "baslangic": "2026-01-01",
-            "bitis": "2026-12-31"
-        },
-        "yayinci": {
-            "kod": "hvmb",
-            "ad": {
-                "tr": "T.C. Hazine ve Maliye Bakanlığı",
-                "en": "Republic of Türkiye Ministry of Treasury and Finance"
-            },
-            "birim": {
-                "tr": "Gelir İdaresi Başkanlığı",
-                "en": "Revenue Administration"
-            },
-            "kurumlar": [
-                "hvmb",
-                "gib"
-            ]
-        },
-        "kaynaklar": [
-            {
-                "kod": "gib-otv-randiman",
-                "ad": {
-                    "tr": "ÖTV Genel Tebliği — Randıman Oranları",
-                    "en": "SCT General Communiqué — Yield Rates"
-                },
-                "tur": "genel_teblig",
-                "kurum_kod": "gib",
-                "url": null,
-                "erisim_tarihi": null
-            }
-        ],
-        "mevzuat_ref": [
-            {
-                "tur": "kanun",
-                "ad": {
-                    "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu (md. 45)",
-                    "en": "Special Consumption Tax Law No. 4760 (Art. 45)"
-                },
-                "madde": "45",
-                "resmi_gazete": "24783",
-                "tarih": "2002-06-12"
-            }
-        ]
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "randiman",
+      "ad": {
+        "tr": "Randıman Oranları Kataloğu",
+        "en": "Product Yield Rates Catalog"
+      }
     },
+    "katman": "ham",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "diger",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.01.01",
+    "guncelleme": "2026-01-01",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": true,
+      "baslangic": "2026-01-01",
+      "bitis": "2026-12-31"
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib",
+        "tobb"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "tobb-fire-randiman",
+        "ad": {
+          "tr": "TOBB Fire ve Randıman Oranları Kataloğu",
+          "en": "TOBB Waste and Yield Rates Catalog"
+        },
+        "tur": "katalog",
+        "kurum_kod": "tobb",
+        "url": "https://tobb.org.tr",
+        "erisim_tarihi": "2026-01-01"
+      },
+      {
+        "kod": "gib-vuk-randiman-rehberi",
+        "ad": {
+          "tr": "GİB Vergi İncelemelerinde Randıman Analizleri Rehberi",
+          "en": "RA Guide on Yield Analysis in Tax Audits"
+        },
+        "tur": "rehber",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-01-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "213 sayılı Vergi Usul Kanunu",
+          "en": "Tax Procedure Law No. 213"
+        },
+        "madde": "30, 134",
+        "kabul_tarihi": "1961-01-04",
+        "resmi_gazete": "10703",
+        "tarih": "1961-01-10"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "madde": "13",
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      }
+    ]
+  },
     "kayitlar": [
         {
             "kod": "bugday_un",

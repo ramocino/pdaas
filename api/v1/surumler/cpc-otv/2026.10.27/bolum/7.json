@@ -1,0 +1,2371 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "cpc-otv",
+      "ad": {
+        "tr": "CPC ÖTV Eşleşmesi",
+        "en": "CPC SCT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "cpc",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.27",
+    "guncelleme": "2026-10-27",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.27"
+      },
+      "uretim_zamani": "2026-10-27T13:33:06.673129+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "bolum",
+      "kod": "7",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:d65361a405f09e1268b10769f4e32ac498dfd8732de877afca1af529cf30fefb"
+  },
+  "kayitlar": [
+    {
+      "kod": "71110",
+      "tanim_tr": "Merkez bankası hizmetleri",
+      "tanim_en": "Central bank services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71121",
+      "tanim_tr": "Mevduat hizmetleri, tüzel veya kurumsal mudilere verilen",
+      "tanim_en": "Deposit services are provided to legal or institutional depositors.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71122",
+      "tanim_tr": "Mevduat hizmetleri, diğer mudilere verilen",
+      "tanim_en": "Deposit services are provided to other depositors.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71131",
+      "tanim_tr": "İpotekli konut kredisi (tut-sat) verme hizmetleri",
+      "tanim_en": "Mortgage-backed home loan (buy-sell) services.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71132",
+      "tanim_tr": "İpotekli konut dışı kredi (tut-sat) verme hizmetleri",
+      "tanim_en": "Mortgage-backed non-residential loan (buy-sell) services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71133",
+      "tanim_tr": "İpoteksiz kişisel kredi hizmetleri - ticaret amaçlı olmayan",
+      "tanim_en": "Unsecured personal loan services - non-commercial",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71134",
+      "tanim_tr": "Kredi kartı hizmetleri",
+      "tanim_en": "Credit card services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71139",
+      "tanim_tr": "Diğer kredi verme hizmetleri",
+      "tanim_en": "Other lending services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71151",
+      "tanim_tr": "Ticari amaçlı kredi hizmetleri",
+      "tanim_en": "Commercial loan services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71152",
+      "tanim_tr": "Finansal kiralama hizmetleri",
+      "tanim_en": "Financial leasing services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71153",
+      "tanim_tr": "Uluslararası ticaret finansmanı faaliyetleri",
+      "tanim_en": "International trade financing activities",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71154",
+      "tanim_tr": "Menkul kıymetleştirme faaliyetleri",
+      "tanim_en": "Securitization activities",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71155",
+      "tanim_tr": "Faktoring hizmetleri",
+      "tanim_en": "Factoring services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71159",
+      "tanim_tr": "Diğer ticari kredi hizmetleri",
+      "tanim_en": "Other business credit services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71190",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer mali hizmetler - yatırım bankacılığı, sigorta ve emeklilik hizmetleri hariç",
+      "tanim_en": "Other financial services not classified elsewhere - excluding investment banking, insurance and pension services.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71311",
+      "tanim_tr": "Hayat sigortası hizmetleri",
+      "tanim_en": "Life insurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71312",
+      "tanim_tr": "Bireysel emeklilik hizmetleri",
+      "tanim_en": "Individual retirement services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71313",
+      "tanim_tr": "Grup emeklilik hizmetleri",
+      "tanim_en": "Group pension services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71321",
+      "tanim_tr": "Kaza ölümleri ve sakatlıkları sigortası hizmetleri",
+      "tanim_en": "Accidental death and disability insurance services.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71322",
+      "tanim_tr": "Sağlık sigortası hizmetleri",
+      "tanim_en": "Health insurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71331",
+      "tanim_tr": "Motorlu araçlar sigorta hizmetleri",
+      "tanim_en": "Motor vehicle insurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71332",
+      "tanim_tr": "Deniz, hava ve diğer taşımacılık sigorta hizmetleri",
+      "tanim_en": "Marine, air and other transportation insurance services.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71333",
+      "tanim_tr": "Yük sigortası hizmetleri",
+      "tanim_en": "Cargo insurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71334",
+      "tanim_tr": "Diğer mallar sigorta hizmetleri",
+      "tanim_en": "Other goods insurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71335",
+      "tanim_tr": "Genel mali sorumluluk sigortası hizmetleri",
+      "tanim_en": "General financial liability insurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71336",
+      "tanim_tr": "Kredi ve kefalet sigortası hizmetleri",
+      "tanim_en": "Credit and surety insurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71337",
+      "tanim_tr": "Yolculuk sigortası hizmetleri",
+      "tanim_en": "Travel insurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71339",
+      "tanim_tr": "Hayat sigortası dışındaki diğer sigorta hizmetleri",
+      "tanim_en": "Insurance services other than life insurance.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71410",
+      "tanim_tr": "Hayat reasürans hizmetleri",
+      "tanim_en": "Life reinsurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71420",
+      "tanim_tr": "Kaza ve sağlık reasürans hizmetleri",
+      "tanim_en": "Accident and health reinsurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71431",
+      "tanim_tr": "Motorlu araçlar reasürans hizmetleri",
+      "tanim_en": "Motor vehicle reinsurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71432",
+      "tanim_tr": "Deniz, hava ve diğer taşımacılık reasürans hizmetleri",
+      "tanim_en": "Marine, air and other transportation reinsurance services.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71433",
+      "tanim_tr": "Yük reasürans hizmetleri",
+      "tanim_en": "Cargo reinsurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71434",
+      "tanim_tr": "Diğer mülkiyet reasürans hizmetleri",
+      "tanim_en": "Other property reinsurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71435",
+      "tanim_tr": "Genel mali sorumluluk reasürans hizmetleri",
+      "tanim_en": "General financial liability reinsurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71436",
+      "tanim_tr": "Kredi ve kefalet reasürans hizmetleri",
+      "tanim_en": "Credit and guarantee reinsurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71439",
+      "tanim_tr": "Hayat dışı diğer reasürans hizmetleri",
+      "tanim_en": "Other non-life reinsurance services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71511",
+      "tanim_tr": "Birleşme ve devir hizmetleri",
+      "tanim_en": "Mergers and acquisitions services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71512",
+      "tanim_tr": "İşletme finansmanı ve risk sermayesi hizmetleri",
+      "tanim_en": "Business finance and venture capital services.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71519",
+      "tanim_tr": "Yatırım bankacılığına ilişkin diğer hizmetler",
+      "tanim_en": "Other services related to investment banking",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71521",
+      "tanim_tr": "Menkul kıymet aracılık hizmetleri",
+      "tanim_en": "Securities brokerage services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71522",
+      "tanim_tr": "Emtia sözleşmesi aracılık hizmetleri",
+      "tanim_en": "Commodity contract brokerage services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71523",
+      "tanim_tr": "Menkul kıymetlerin operasyon ve takas işlemleri hizmetleri",
+      "tanim_en": "Securities trading and clearing services.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71530",
+      "tanim_tr": "Portföy yönetim hizmetleri - emeklilik fonu hariç",
+      "tanim_en": "Portfolio management services - excluding pension funds.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71541",
+      "tanim_tr": "Yatırım ortaklığı hizmetleri",
+      "tanim_en": "Investment partnership services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71542",
+      "tanim_tr": "Koruma hizmetleri",
+      "tanim_en": "Protection services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71551",
+      "tanim_tr": "Finansal piyasalarda operasyonel hizmetler",
+      "tanim_en": "Operational services in financial markets",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71552",
+      "tanim_tr": "Finansal piyasaları düzenleme hizmetleri",
+      "tanim_en": "Financial market regulation services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71559",
+      "tanim_tr": "Mali piyasaların yönetimine ilişkin diğer hizmetler",
+      "tanim_en": "Other services related to the management of financial markets",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71591",
+      "tanim_tr": "Finansal danışmanlık hizmetleri",
+      "tanim_en": "Financial advisory services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71592",
+      "tanim_tr": "Kambiyo hizmetleri (döviz büroları da dahil)",
+      "tanim_en": "Foreign exchange services (including currency exchange bureaus)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71593",
+      "tanim_tr": "Finansal işlemler, operasyon ve takas merkezi hizmetleri",
+      "tanim_en": "Financial transactions, operations and clearinghouse services.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71594",
+      "tanim_tr": "Mobil para operatörlerinin ve finansal bilgileri kullanan dijital cüzdanların hizmetleri",
+      "tanim_en": "Services of mobile money operators and digital wallets that use financial information.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71599",
+      "tanim_tr": "Başka yerde sınıflandırılmamış, mali hizmetlere yardımcı diğer servisler",
+      "tanim_en": "Other services assisting financial services, not classified elsewhere.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71610",
+      "tanim_tr": "Sigorta komisyonculuğu ve acente hizmetleri",
+      "tanim_en": "Insurance brokerage and agency services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71620",
+      "tanim_tr": "Sigorta tazminatları kararlaştırma hizmetleri",
+      "tanim_en": "Insurance compensation settlement services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71630",
+      "tanim_tr": "Aktüeryaya ilişkin hizmetler",
+      "tanim_en": "Actuarial services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71640",
+      "tanim_tr": "Emeklilik fonu yönetim hizmetleri",
+      "tanim_en": "Pension fund management services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71690",
+      "tanim_tr": "Sigorta ve emeklilik fonunana ilişkin diğer yardımcı hizmetler",
+      "tanim_en": "Insurance and other auxiliary services related to pension funds.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71701",
+      "tanim_tr": "Holding şirketlerinin hizmetleri",
+      "tanim_en": "Services of holding companies",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "71702",
+      "tanim_tr": "Tröstler, fonlar ve benzeri mali varlıkların hizmetleri",
+      "tanim_en": "Services of trusts, funds and similar financial entities.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "72111",
+      "tanim_tr": "Kiralama veya leasing hizmetleri, kendine ait veya kiralanmış olan ikamet amaçlı malların",
+      "tanim_en": "Rental or leasing services cover the rental or leasing of residential properties, whether owned or rented.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "72112",
+      "tanim_tr": "Konut dışı binaların kiralaması veya finansal işletilmesi hizmetleri, -kendine ait veya kiralanmış olan konut dışı malların",
+      "tanim_en": "Services for the leasing or financial management of non-residential buildings, - non-residential properties owned or leased",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "72121",
+      "tanim_tr": "Konut binaları ticareti hizmetleri",
+      "tanim_en": "Residential building trading services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "72122",
+      "tanim_tr": "Konut dışı binaların ticareti hizmetleri",
+      "tanim_en": "Trading services for non-residential buildings.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "72123",
+      "tanim_tr": "Devremülk malların ticareti hizmetleri",
+      "tanim_en": "Timeshare property trading services",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "72130",
+      "tanim_tr": "Boş ve bölünmüş arazilerin ticareti hizmetleri",
+      "tanim_en": "Trading services for vacant and subdivided land plots.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "72211",
+      "tanim_tr": "İkamet amaçlı gayri menkullerin yönetim hizmetleri, bir ücret veya sözleşmeye dayalı olarak (kendine ait devremülk mallar hariç)",
+      "tanim_en": "Management services for residential properties are provided on a fee or contract basis (excluding privately owned timeshare properties).",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "72212",
+      "tanim_tr": "Konut dışı mülklerin yönetim hizmetleri, bir ücret veya sözleşmeye dayalı olarak",
+      "tanim_en": "Management services for non-residential properties are provided on a fee or contract basis.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "72213",
+      "tanim_tr": "Devremülklerin yönetim hizmetleri, bir ücret veya sözleşmeye dayalı olarak",
+      "tanim_en": "Timeshare management services are provided on a fee or contract basis.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "72240",
+      "tanim_tr": "Gayrimenkul ekspertiz hizmetleri, bir ücret veya sözleşmeye dayalı olarak",
+      "tanim_en": "Real estate appraisal services are provided on a fee or contract basis.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73111",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, operatörü olmaksızın otomobil ve hafif kamyonetler için",
+      "tanim_en": "Leasing or rental services for cars and light vans without an operator.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73112",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, operatörü olmaksızın eşya taşıma araçları için",
+      "tanim_en": "Leasing or rental services for goods transport vehicles without an operator.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73113",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, operatörü olmaksızın demiryolu araçları için",
+      "tanim_en": "Leasing or rental services for railway vehicles without an operator.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73114",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, operatörü olmaksızın diğer kara taşıma ekipmanları için",
+      "tanim_en": "Leasing or rental services for other land transportation equipment without an operator.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73115",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, mürettebatı olmaksızın deniz taşıtları için",
+      "tanim_en": "Leasing or charter services for marine vessels without a crew.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73116",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, mürettabatı olmaksızın hava taşıtları için",
+      "tanim_en": "Leasing or charter services for aircraft without crew.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73117",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, konteynerler için",
+      "tanim_en": "Leasing or rental services for containers.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73121",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, operatörü olmaksızın tarım makineleri ve ekipmanları için",
+      "tanim_en": "Leasing or rental services for agricultural machinery and equipment without an operator.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73122",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, operatörü olmaksızın inşaat makineleri ve ekipmanları için",
+      "tanim_en": "Leasing or rental services for construction machinery and equipment without an operator.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73123",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, büro makine ve ekipmanları için (bilgisayarlar hariç)",
+      "tanim_en": "Leasing or rental services for office machinery and equipment (excluding computers)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73124",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, bilgisayarlar için",
+      "tanim_en": "Leasing or rental services for computers.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73125",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, operatörü olmaksızın telekomünikasyon ekipmanları için",
+      "tanim_en": "Leasing or rental services for telecommunications equipment without an operator.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73129",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer makine ve ekipmanların operatörü olmaksızın leasingi ve kiralanması",
+      "tanim_en": "Leasing and rental of other machinery and equipment not classified elsewhere without operator.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73210",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, televizyon, radyo, video ve ilgili ekipman ve aksesuarlar için",
+      "tanim_en": "Leasing or rental services for televisions, radios, videos, and related equipment and accessories.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73220",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, video kaset ve diski",
+      "tanim_en": "Leasing or rental services for video cassettes and discs.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73230",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, mobilya ve diğer ev eşyaları için",
+      "tanim_en": "Leasing or rental services for furniture and other household items.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73240",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, eğlenme ve dinlenme ekipmanları için",
+      "tanim_en": "Leasing or rental services for recreational and leisure equipment.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73250",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, ev mefruşatı için",
+      "tanim_en": "Leasing or rental services for home furnishings.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73260",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, tekstil, giysi ve ayakkabı için",
+      "tanim_en": "Leasing or rental services for textiles, clothing and footwear.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73270",
+      "tanim_tr": "Leasing veya kiralama hizmetleri, hobi faaliyetlerinde amatörlerin kullanabileceği makine ve ekipmanlar için",
+      "tanim_en": "Leasing or rental services are available for machinery and equipment that amateurs can use in their hobby activities.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73290",
+      "tanim_tr": "Başka yerde sınıflandırılmamış, diğer malların leasingi ve kiralama hizmetleri",
+      "tanim_en": "Leasing and rental services of other goods not classified elsewhere.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73311",
+      "tanim_tr": "Lisanslama hizmetleri, bilgisayar yazılımları kullanım hakkı için",
+      "tanim_en": "Licensing services are for the right to use computer software.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73312",
+      "tanim_tr": "Lisanslama hizmetleri, veritabanları kullanım hakkı için",
+      "tanim_en": "Licensing services are for the right to use databases.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73320",
+      "tanim_tr": "Lisanslama hizmetleri, eğlence, edebi veya orijinal ses kayıtlarını kullanım hakkı için",
+      "tanim_en": "Licensing services provide the right to use entertainment, literary, or original sound recordings.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73330",
+      "tanim_tr": "Lisanslama hizmetleri, araştırma ve geliştirme ürünlerinin kullanım hakkı için",
+      "tanim_en": "Licensing services are for the right to use research and development products.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73340",
+      "tanim_tr": "Lisanslama hizmetleri, ticari markanın ve imtiyazın (franchise) kullanım hakkı için",
+      "tanim_en": "Licensing services are for the right to use a trademark and franchise.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73350",
+      "tanim_tr": "Lisanslama hizmetleri, maden çıkarım ve değerleme kullanım hakkı için",
+      "tanim_en": "Licensing services for mining, extraction and evaluation usage rights.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "73390",
+      "tanim_tr": "Lisans hizmetleri, diğer fikri mülkiyet ürünlerinin kullanım hakkı için",
+      "tanim_en": "Licensing services are for the right to use other intellectual property products.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    }
+  ]
+}

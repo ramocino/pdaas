@@ -4,9 +4,7 @@ import { dilDegistir } from './pdaas-i18n.js';
 const NAV = [
   { href: 'index.html',           key: 'nav_portal' },
   { href: 'urunhizmetkarti.html', key: 'nav_urunhizmetkarti' },
-  { href: 'personel.html',        key: 'nav_personel' },
   { href: 'muhtasar.html',        key: 'nav_muhtasar' },
-  { href: 'konsolide.html',       key: "Konsolide", },
 ];
 
 export function renderLayout({ activePage = 'index.html' } = {}) {

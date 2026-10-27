@@ -11,11 +11,14 @@
     "katman": "kurallar",
     "yapi": {
       "tip": "kural-seti",
-      "kod_sistemi": "diger",
-      "kapsam": [ "vergi", "ticaret" ]
+      "kod_sistemi": "gib",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
     },
-    "surum": "2026.10.21",
-    "guncelleme": "2026-10-21",
+    "surum": "2026.10.01",
+    "guncelleme": "2026-10-01",
     "yayin_durumu": "yayinda",
     "zaman": {
       "bazli": false,
@@ -32,19 +35,22 @@
         "tr": "Gelir İdaresi Başkanlığı",
         "en": "Revenue Administration"
       },
-      "kurumlar": [ "hvmb", "gib" ]
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
     },
     "kaynaklar": [
       {
         "kod": "gib-kdv-oranlari",
         "ad": {
-          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler (10/07/2023 güncel)",
-          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033 (updated 10/07/2023)"
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
         },
         "tur": "bkk_eki_liste",
         "kurum_kod": "gib",
-        "url": null,
-        "erisim_tarihi": null
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
       }
     ],
     "mevzuat_ref": [
@@ -55,6 +61,7 @@
           "en": "Value Added Tax Law No. 3065"
         },
         "madde": "28",
+        "kabul_tarihi": "1984-10-25",
         "resmi_gazete": "18563",
         "tarih": "1984-11-02"
       },
@@ -65,48 +72,30 @@
           "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
         },
         "karar_sayisi": "2007/13033",
-        "resmi_gazete": "26786",
-        "tarih": "2008-01-12"
-      },
-      {
-        "tur": "cb_karari",
-        "ad": {
-          "tr": "7346 sayılı Cumhurbaşkanı Kararı (KDV oranları, 10/07/2023)",
-          "en": "Presidential Decision No. 7346 (VAT rates, 10/07/2023)"
-        },
-        "resmi_gazete": "32241",
-        "tarih": "2023-07-07"
-      },
-      {
-        "tur": "cb_karari",
-        "ad": {
-          "tr": "9126 sayılı Cumhurbaşkanı Kararı (II sayılı liste değişikliği)",
-          "en": "Presidential Decision No. 9126 (amendment to List II)"
-        },
-        "resmi_gazete": "32722",
-        "tarih": "2024-11-14"
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
       }
     ]
   },
   "gruplar": {
     "I-A": {
       "ad_tr": "Temel Gıda Maddeleri (Tüm Gıda Ürünleri)",
-      "ad_en": "Basic Foodstuffs (All Food Products)",
+      "ad_en": "Basic Foodstuffs",
       "oran_kodu": "I"
     },
     "I-B": {
       "ad_tr": "Kültürel Ürünler ve Yayınlar",
-      "ad_en": "Cultural Products and Publications",
+      "ad_en": "Cultural Products",
       "oran_kodu": "I"
     },
     "I-C": {
       "ad_tr": "Tarımsal Ürün Teslimleri",
-      "ad_en": "Agricultural Product Deliveries",
+      "ad_en": "Agricultural Deliveries",
       "oran_kodu": "I"
     },
     "I-D": {
-      "ad_tr": "Konut Teslimleri (Belirli Koşullar, 150 m²'ye Kadar)",
-      "ad_en": "Residential Deliveries (Specific Conditions, up to 150 m²)",
+      "ad_tr": "Konut Teslimleri (150 m²'ye Kadar)",
+      "ad_en": "Residential Deliveries (up to 150 m²)",
       "oran_kodu": "I"
     },
     "I-E": {
@@ -116,7 +105,7 @@
     },
     "II-A": {
       "ad_tr": "Tekstil, Hazır Giyim, Deri ve Ayakkabı",
-      "ad_en": "Textiles, Apparel, Leather and Footwear",
+      "ad_en": "Textiles, Apparel",
       "oran_kodu": "II"
     },
     "II-B": {
@@ -126,7 +115,7 @@
     },
     "II-C": {
       "ad_tr": "Mobilya ve Ev Eşyaları",
-      "ad_en": "Furniture and Household Goods",
+      "ad_en": "Furniture",
       "oran_kodu": "II"
     },
     "II-D": {
@@ -136,7 +125,7 @@
     },
     "II-E": {
       "ad_tr": "Sağlık Hizmetleri ve Tıbbi Ürünler",
-      "ad_en": "Health Services and Medical Products",
+      "ad_en": "Health Services",
       "oran_kodu": "II"
     },
     "II-F": {
@@ -146,7 +135,7 @@
     },
     "II-G": {
       "ad_tr": "Ulaştırma ve Kültür Hizmetleri",
-      "ad_en": "Transport and Cultural Services",
+      "ad_en": "Transport and Culture",
       "oran_kodu": "II"
     },
     "II-H": {
@@ -167,19 +156,38 @@
   },
   "kurallar": [
     {
-      "kod": "gtip-genel-20",
+      "kod": "kdv-genel-20",
       "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.20,
+      "oran_kodu": "genel",
       "oncelik": 1,
-      "prefixler": [],
+      "gtip_prefixler": [],
+      "cpc_prefixler": [],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "kosullu": false,
       "varsayilan": true,
-      "aciklama_tr": "Listede eşleşmeyen tüm GTİP kodları — %20 genel oran",
-      "aciklama_en": "All GTIP codes not matched by any list — 20% standard rate"
+      "aciklama_tr": "Listede eşleşmeyen tüm GTİP/CPC kodları için genel oran",
+      "aciklama_en": "Standard VAT rate for unmatched GTIP/CPC codes"
     },
     {
-      "kod": "gtip-gida-I-A",
+      "kod": "kdv-gida-I-A",
       "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "oran_kodu": "I",
       "oncelik": 50,
-      "prefixler": [
+      "gtip_prefixler": [
         "01",
         "02",
         "03",
@@ -204,22 +212,71 @@
         "23",
         "2501"
       ],
-      "aciklama_tr": "(I) sayılı listenin A) GIDA MADDELERİ bölümü — %1 KDV (Tüm gıda fasılları)",
-      "aciklama_en": "List (I) Section A) FOODSTUFFS — VAT 1% (All food chapters)"
+      "cpc_prefixler": [
+        "01",
+        "02",
+        "04",
+        "21",
+        "22",
+        "23"
+      ],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "kosullu": false,
+      "varsayilan": false,
+      "aciklama_tr": "(I) sayılı listenin A) GIDA MADDELERİ bölümü",
+      "aciklama_en": "List (I) Section A) FOODSTUFFS"
     },
     {
-      "kod": "gtip-kulturel-I-B",
+      "kod": "kdv-kulturel-I-B",
       "grup": "I-B",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "oran_kodu": "I",
       "oncelik": 60,
-      "prefixler": [ "4901", "4902", "4903", "4904" ],
-      "aciklama_tr": "Kitap, dergi, gazete, broşür, Kur'an-ı Kerim ve tefsir kitapları — %1 KDV",
-      "aciklama_en": "Books, magazines, newspapers, brochures, Quran and tafsir — VAT 1%"
+      "gtip_prefixler": [
+        "4901",
+        "4902",
+        "4903",
+        "4904"
+      ],
+      "cpc_prefixler": [
+        "322",
+        "323"
+      ],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "kosullu": false,
+      "varsayilan": false,
+      "aciklama_tr": "Kitap, dergi, gazete, broşür, Kur'an-ı Kerim",
+      "aciklama_en": "Books, magazines, newspapers, brochures"
     },
     {
-      "kod": "gtip-tarimsal-I-C",
+      "kod": "kdv-tarimsal-I-C",
       "grup": "I-C",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "oran_kodu": "I",
       "oncelik": 55,
-      "prefixler": [
+      "gtip_prefixler": [
         "0101",
         "0102",
         "0103",
@@ -239,111 +296,392 @@
         "5202",
         "5203"
       ],
-      "aciklama_tr": "Tarımsal ürün teslimleri (canlı hayvan, buğday, arpa, mısır, tütün, şeker pancarı, pamuk) — %1 KDV",
-      "aciklama_en": "Agricultural product deliveries (live animals, wheat, barley, maize, tobacco, sugar beet, cotton) — VAT 1%"
+      "cpc_prefixler": [
+        "011",
+        "015",
+        "021",
+        "250",
+        "263"
+      ],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "kosullu": false,
+      "varsayilan": false,
+      "aciklama_tr": "Tarımsal ürün teslimleri (canlı hayvan, buğday, tütün vb.)",
+      "aciklama_en": "Agricultural product deliveries"
     },
     {
       "kod": "gtip-konut-I-D",
       "grup": "I-D",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "oran_kodu": "I",
       "oncelik": 65,
-      "prefixler": [ "hizmet_konut_i" ],
-      "aciklama_tr": "Konut teslimleri (afet riski, kooperatifler, belediyeler) — %1 KDV (belirli koşullar)",
-      "aciklama_en": "Residential deliveries (disaster risk, cooperatives, municipalities) — VAT 1% (specific conditions)"
+      "gtip_prefixler": [
+        "hizmet_konut_i"
+      ],
+      "cpc_prefixler": [],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {
+        "m2_ust_limiti": 150,
+        "afet_riski": true
+      },
+      "istisna": false,
+      "kosullu": true,
+      "varsayilan": false,
+      "aciklama_tr": "Konut teslimleri (belirli koşullar, 150 m²'ye kadar)",
+      "aciklama_en": "Residential deliveries (specific conditions, up to 150 m²)"
     },
     {
-      "kod": "gtip-diger-I-E",
+      "kod": "kdv-diger-I-E",
       "grup": "I-E",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "oran_kodu": "I",
       "oncelik": 55,
-      "prefixler": [ "8402", "8403", "8501", "8432", "8433", "8436", "8701" ],
-      "aciklama_tr": "Belirli makine ve cihazlar, personel hizmetleri, yenilenmiş telefonlar, tarım makineleri — %1 KDV",
-      "aciklama_en": "Specific machinery, personnel services, renewed phones, agricultural machinery — VAT 1%"
+      "gtip_prefixler": [
+        "8402",
+        "8403",
+        "8501",
+        "8432",
+        "8433",
+        "8436",
+        "8701"
+      ],
+      "cpc_prefixler": [
+        "423",
+        "433",
+        "461"
+      ],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "kosullu": false,
+      "varsayilan": false,
+      "aciklama_tr": "Belirli makine ve cihazlar, personel hizmetleri, yenilenmiş telefonlar",
+      "aciklama_en": "Specific machinery, personnel services, renewed phones"
     },
     {
-      "kod": "gtip-tekstil-II-A",
+      "kod": "kdv-tekstil-II-A",
       "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.10,
+      "oran_kodu": "II",
       "oncelik": 50,
-      "prefixler": [ "4101", "4102", "4103", "4202", "4203", "52", "54", "55", "57", "61", "62", "64" ],
-      "aciklama_tr": "Tekstil hammaddeleri, hazır giyim, deri, ayakkabı, halı — %10 KDV",
-      "aciklama_en": "Textile raw materials, apparel, leather, footwear, carpets — VAT 10%"
+      "gtip_prefixler": [
+        "4101",
+        "4102",
+        "4103",
+        "4202",
+        "4203",
+        "52",
+        "54",
+        "55",
+        "57",
+        "61",
+        "62",
+        "64"
+      ],
+      "cpc_prefixler": [
+        "26",
+        "27",
+        "28",
+        "29"
+      ],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "kosullu": false,
+      "varsayilan": false,
+      "aciklama_tr": "Tekstil hammaddeleri, hazır giyim, deri, ayakkabı, halı",
+      "aciklama_en": "Textile raw materials, apparel, leather, footwear"
     },
     {
-      "kod": "gtip-yiyecek-icecek-II-B",
+      "kod": "kdv-yiyecek-icecek-II-B",
       "grup": "II-B",
+      "vergi_turu": "kdv",
+      "oran": 0.10,
+      "oran_kodu": "II",
       "oncelik": 50,
-      "prefixler": [ "hizmet_yiyecek_icecek" ],
-      "aciklama_tr": "Lokanta, kafeterya, pastane vb. hizmetler — %10 KDV",
-      "aciklama_en": "Restaurant, cafeteria, patisserie services — VAT 10%"
+      "gtip_prefixler": [],
+      "cpc_prefixler": [
+        "632",
+        "633"
+      ],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "kosullu": false,
+      "varsayilan": false,
+      "aciklama_tr": "Lokanta, kafeterya, pastane vb. hizmetler",
+      "aciklama_en": "Restaurant, cafeteria and similar services"
     },
     {
-      "kod": "gtip-mobilya-II-C",
+      "kod": "kdv-mobilya-II-C",
       "grup": "II-C",
+      "vergi_turu": "kdv",
+      "oran": 0.10,
+      "oran_kodu": "II",
       "oncelik": 50,
-      "prefixler": [ "9401", "9402", "9403", "9404", "9405", "6302" ],
-      "aciklama_tr": "Mobilya, yatak, aydınlatma, ev tekstili — %10 KDV",
-      "aciklama_en": "Furniture, bedding, lighting, home textiles — VAT 10%"
+      "gtip_prefixler": [
+        "9401",
+        "9402",
+        "9403",
+        "9404",
+        "9405",
+        "6302"
+      ],
+      "cpc_prefixler": [
+        "271",
+        "381",
+        "465"
+      ],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "kosullu": false,
+      "varsayilan": false,
+      "aciklama_tr": "Mobilya, yatak, aydınlatma, ev tekstili",
+      "aciklama_en": "Furniture, bedding, lighting, home textiles"
     },
     {
-      "kod": "gtip-konaklama-II-D",
+      "kod": "kdv-konaklama-II-D",
       "grup": "II-D",
+      "vergi_turu": "kdv",
+      "oran": 0.10,
+      "oran_kodu": "II",
       "oncelik": 50,
-      "prefixler": [ "hizmet_konaklama" ],
-      "aciklama_tr": "Otel, motel, pansiyon, tatil köyü geceleme hizmeti — %10 KDV",
-      "aciklama_en": "Hotel, motel, guesthouse, holiday village accommodation — VAT 10%"
+      "gtip_prefixler": [],
+      "cpc_prefixler": [
+        "631"
+      ],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "kosullu": false,
+      "varsayilan": false,
+      "aciklama_tr": "Otel, motel, pansiyon, tatil köyü geceleme hizmeti",
+      "aciklama_en": "Hotel, motel, guesthouse accommodation"
     },
     {
-      "kod": "gtip-saglik-II-E",
+      "kod": "kdv-saglik-II-E",
       "grup": "II-E",
+      "vergi_turu": "kdv",
+      "oran": 0.10,
+      "oran_kodu": "II",
       "oncelik": 50,
-      "prefixler": [ "30", "9018", "9019", "9020", "9021", "9022" ],
-      "aciklama_tr": "İlaçlar, tıbbi cihazlar, sağlık hizmetleri — %10 KDV",
-      "aciklama_en": "Pharmaceuticals, medical devices, health services — VAT 10%"
+      "gtip_prefixler": [
+        "30",
+        "9018",
+        "9019",
+        "9020",
+        "9021",
+        "9022"
+      ],
+      "cpc_prefixler": [
+        "35",
+        "481"
+      ],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "kosullu": false,
+      "varsayilan": false,
+      "aciklama_tr": "İlaçlar, tıbbi cihazlar, sağlık hizmetleri",
+      "aciklama_en": "Pharmaceuticals, medical devices, health services"
     },
     {
-      "kod": "gtip-egitim-II-F",
+      "kod": "kdv-egitim-II-F",
       "grup": "II-F",
+      "vergi_turu": "kdv",
+      "oran": 0.10,
+      "oran_kodu": "II",
       "oncelik": 50,
-      "prefixler": [ "hizmet_egitim" ],
-      "aciklama_tr": "Üniversite, özel okul, kurs, öğrenci servisi, yurt hizmetleri — %10 KDV",
-      "aciklama_en": "University, private school, course, student transport, dormitory services — VAT 10%"
+      "gtip_prefixler": [],
+      "cpc_prefixler": [
+        "92"
+      ],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "kosullu": false,
+      "varsayilan": false,
+      "aciklama_tr": "Üniversite, özel okul, kurs, öğrenci servisi, yurt hizmetleri",
+      "aciklama_en": "University, private school, course services"
     },
     {
-      "kod": "gtip-ulastirma-kultur-II-G",
+      "kod": "kdv-ulastirma-kultur-II-G",
       "grup": "II-G",
+      "vergi_turu": "kdv",
+      "oran": 0.10,
+      "oran_kodu": "II",
       "oncelik": 50,
-      "prefixler": [ "hizmet_ulastirma", "hizmet_kultur" ],
-      "aciklama_tr": "Yolcu taşımacılığı, sinema, tiyatro, müze giriş ücretleri, köprü geçiş ücretleri — %10 KDV",
-      "aciklama_en": "Passenger transport, cinema, theatre, museum entrance fees, bridge tolls — VAT 10%"
+      "gtip_prefixler": [],
+      "cpc_prefixler": [
+        "64",
+        "65",
+        "66",
+        "67",
+        "96"
+      ],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "kosullu": false,
+      "varsayilan": false,
+      "aciklama_tr": "Yolcu taşımacılığı, sinema, tiyatro, müze giriş ücretleri",
+      "aciklama_en": "Passenger transport, cinema, theatre, museum fees"
     },
     {
-      "kod": "gtip-diger-II-H",
+      "kod": "kdv-diger-II-H",
       "grup": "II-H",
+      "vergi_turu": "kdv",
+      "oran": 0.10,
+      "oran_kodu": "II",
       "oncelik": 50,
-      "prefixler": [
+      "gtip_prefixler": [
         "271119",
         "960321",
         "3306",
         "4801",
         "4802",
         "847050",
-        "9029",
-        "hizmet_avukatlik",
-        "hizmet_atiksu",
-        "hizmet_elektrik",
-        "hizmet_konut_ii"
+        "9029"
       ],
-      "aciklama_tr": "Elektrik, konut (150 m²'ye kadar), arsa, diş fırçası/macunu/ipi, gazete ve baskı kâğıdı, ödeme kaydedici cihaz, takoğraf, avukatlık, LPG, atık su, bakım hizmetleri — %10 KDV",
-      "aciklama_en": "Electricity, residential (up to 150 m²), land, toothbrush/paste/floss, newsprint and printing paper, cash registers, tachographs, legal, LPG, waste water, care services — VAT 10%"
+      "cpc_prefixler": [
+        "120",
+        "321",
+        "334",
+        "353",
+        "389",
+        "451",
+        "482",
+        "691",
+        "821",
+        "941"
+      ],
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "kosullu": false,
+      "varsayilan": false,
+      "aciklama_tr": "Elektrik, arsa, diş fırçası/macunu, gazete kağıdı, LPG, atık su, avukatlık",
+      "aciklama_en": "Electricity, land, toothbrush, newsprint, LPG, waste water, legal"
     },
     {
-      "kod": "gtip-ihracat-sifir",
+      "kod": "kdv-ihracat-sifir",
       "grup": "sifir",
+      "vergi_turu": "kdv",
+      "oran": 0.00,
+      "oran_kodu": "sifir",
       "oncelik": 100,
-      "prefixler": [],
-      "istisna_tr": "ihracat",
-      "aciklama_tr": "İhracat istisnası — KDV Kanunu md.11 (tüm GTİP'lere uygulanabilir, koşullu)",
-      "aciklama_en": "Export exemption — VAT Law Article 11 (applicable to all GTIP codes, conditional)",
+      "gtip_prefixler": [],
+      "cpc_prefixler": [],
+      "islem_tipleri": [
+        "ihracat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": true,
+      "istisna_tipi": "tam",
+      "kosullu": true,
       "varsayilan": false,
-      "kosullu": true
+      "aciklama_tr": "İhracat istisnası — KDV Kanunu md.11",
+      "aciklama_en": "Export exemption — VAT Law Article 11"
     }
   ]
 }

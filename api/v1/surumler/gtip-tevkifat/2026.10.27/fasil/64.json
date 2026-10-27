@@ -1,0 +1,2125 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-tevkifat",
+      "ad": {
+        "tr": "GTİP Tevkifat Eşleşmesi",
+        "en": "GTIP Withholding Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.27",
+    "guncelleme": "2026-10-27",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.27"
+      },
+      "uretim_zamani": "2026-10-27T13:33:06.673129+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "64",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:40d7b8d802096a5549024a45c4aa89ccfb241ebbb382c63c9c4b4cc69ce54a9f"
+  },
+  "kayitlar": [
+    {
+      "kod": "640110000000",
+      "tanim_tr": "Ayakkabı; dış tabanı ve yüzü kauçuk ve plastik maddeden, su geçirmez, metalden koruyucu burunlu, yüzü perçin, çivi, vida, vb.işlemlerle tutturulmamış",
+      "tanim_en": "The shoe has an outsole and upper made of rubber and plastic, is waterproof, has a metal protective toe cap, and the upper is not fastened with rivets, nails, screws, etc.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640192100000",
+      "tanim_tr": "Ayakkabı; yüzü kauçuk, dış tabanı kauçuk/plastik, su geçirmez, bileği örtüp dizi örtmeyen, yüzü perçin, çivi, vida, vb.işlemlerle tutturulmamış",
+      "tanim_en": "The shoe has a rubber upper, a rubber/plastic outsole, is waterproof, covers the ankle but not the knee, and the upper is not fastened with rivets, nails, screws, etc.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640192900000",
+      "tanim_tr": "Ayakkabı; yüzü plastik, dış tabanı kauçuk/plastik, su geçirmez, bileği örtüp dizi örtmeyen, yüzü perçin, çivi, vida, vb.işlemlerle tutturulmamış",
+      "tanim_en": "The shoe has a plastic upper, a rubber/plastic outsole, is waterproof, covers the ankle but not the knee, and the upper is not fastened with rivets, nails, screws, etc.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640199000000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı ve yüzü kauçuk veya plastik, bileği ve dizi örtmeyen, su geçirmez, yüzü perçin, çivi, vida, vb. işlemlerle tutturulmamış",
+      "tanim_en": "Other shoes; with a rubber or plastic outsole and upper, not covering the ankle and knee, waterproof, and with uppers not fastened by rivets, nails, screws, etc.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640212100000",
+      "tanim_tr": "Kayak ayakkabıları, kuzey disiplini kayak ayakkabıları; dış tabanı ve yüzü kauçuk veya plastik maddeden",
+      "tanim_en": "Ski boots, Nordic discipline ski boots; the outsole and upper are made of rubber or plastic.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640212900000",
+      "tanim_tr": "Kar sörfü için ayakkabılar; dış tabanı ve yüzü kauçuk veya plastik maddeden",
+      "tanim_en": "Shoes for snow surfing; the outsole and upper are made of rubber or plastic.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640219000000",
+      "tanim_tr": "Diğer spor ayakkabıları; dış tabanı ve yüzü kauçuk veya plastik maddeden olan",
+      "tanim_en": "Other athletic shoes have outsoles and uppers made of rubber or plastic.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640220000000",
+      "tanim_tr": "Ayakkabı; kayışların/şeritlerin tabandaki deliklerden geçirilerek ayakkabı yüzü tabana tutturulmuş, dış tabanı ve yüzü kauçuk veya plastik maddeden",
+      "tanim_en": "A shoe is a footwear made of rubber or plastic, with straps/bands threaded through holes in the sole to attach the shoe upper to the sole.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640291100000",
+      "tanim_tr": "Diğer ayakkabılar; bileği örten, dış tabanı ve yüzü kauçuk veya plastik maddeden, koruyucu metal burunlu",
+      "tanim_en": "Other shoes; ankle-covering, with an outsole and upper made of rubber or plastic, and a protective metal toe cap.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640291900000",
+      "tanim_tr": "Diğer ayakkabılar; bileği örten, dış tabanı ve yüzü kauçuk veya plastik maddeden",
+      "tanim_en": "Other shoes; covering the ankle, with an outsole and upper made of rubber or plastic.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640299050000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı ve yüzü kauçuk veya plastik maddeden, koruyucu metal burunlu olan",
+      "tanim_en": "Other shoes have an outsole and upper made of rubber or plastic, with a protective metal toe cap.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640299100000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı kauçuk veya plastik maddeden, yüzü kauçuktan",
+      "tanim_en": "Other shoes have an outsole made of rubber or plastic, and an upper made of rubber.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640299310000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı kauçuk veya plastik maddeden, yüzü plastik şeritlerden veya parça kesilmiş, tabanı ile birlikte topuk yüksekliği > 3cm",
+      "tanim_en": "Other shoes; outsole made of rubber or plastic, upper made of plastic strips or cut pieces, heel height including sole > 3cm",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640299390000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı kauçuk veya plastik maddeden, yüzü plastik şeritlerden veya parça kesilmiş, tabanı ile birlikte topuk yüksekliği <= 3cm",
+      "tanim_en": "Other shoes; outsole made of rubber or plastic, upper made of plastic strips or cut pieces, heel height including sole <= 3cm",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640299500000",
+      "tanim_tr": "Terlik ve ev içinde giyilen diğer ayakkabılar; dış tabanı kauçuk veya plastik maddeden, yüzü plastikten",
+      "tanim_en": "Slippers and other indoor footwear; with an outsole made of rubber or plastic, and an upper made of plastic.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640299910000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı kauçuk veya plastik maddeden, yüzü plastikten, iç tabanının uzunluğu < 24cm",
+      "tanim_en": "Other shoes; outsole made of rubber or plastic, upper made of plastic, insole length < 24cm",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640299930000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı kauçuk/plastik maddeden, yüzü plastikten, iç tabanının uzunluğu >= 24cm, erkeğe veya kadına ait olduğu belirlenemeyen",
+      "tanim_en": "Other shoes; outsole made of rubber/plastic material, upper made of plastic, insole length >= 24cm, cannot be determined as belonging to a man or a woman.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640299960000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı kauçuk/plastik maddeden, yüzü plastikten, iç tabanının uzunluğu >= 24cm, erkekler için",
+      "tanim_en": "Other shoes; outsole made of rubber/plastic, upper made of plastic, insole length >= 24cm, for men.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640299980000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı kauçuk/plastik maddeden, yüzü plastikten, iç tabanının uzunluğu >= 24cm, kadınlar için",
+      "tanim_en": "Other shoes; outsole made of rubber/plastic, upper made of plastic, insole length >= 24cm, for women.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640312000000",
+      "tanim_tr": "Kayak ayakkabıları, kuzey disiplini kayak ayakkabıları ve kar sörfü için ayakkabılar; yüzü deriden, dış tabanı kauçuktan, plastikten veya köseleden",
+      "tanim_en": "Ski boots, Nordic ski boots, and snow surfing boots; with uppers made of leather and outsoles made of rubber, plastic, or rawhide.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640319000000",
+      "tanim_tr": "Diğer spor ayakkabıları, yüzü deriden, dış tabanı kauçuktan, plastik maddeden, tabii veya terkip yoluyla elde edilen köseleden",
+      "tanim_en": "Other athletic shoes have uppers made of leather, outsoles made of rubber, plastic, natural or artificial leather.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640320000000",
+      "tanim_tr": "Ayakkabı; dış tabanı tabii köseleden ve yüzü ayağın üstünden geçip baş parmağa dolanan deri bir şeritten olan",
+      "tanim_en": "A shoe is a footwear with an outsole made of natural leather and an upper made of a leather strip that goes over the top of the foot and around the big toe.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640340000011",
+      "tanim_tr": "Ayakkabılar; metalden koruyucu burnu olan, yüzü deriden, dış tabanı tabii köseleden",
+      "tanim_en": "The shoes have a metal protective toe cap, a leather upper, and a natural leather outsole.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640340000012",
+      "tanim_tr": "Ayakkabılar; metalden koruyucu burnu olan, yüzü deriden, dış tabanı terkip yolu ile elde edilen köseleden",
+      "tanim_en": "The shoes have a metal protective toe cap, a leather upper, and an outsole made of synthetic leather.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640340000013",
+      "tanim_tr": "Ayakkabılar; metalden koruyucu burnu olan, yüzü deriden, dış tabanı kauçuk veya suni plastik maddelerden",
+      "tanim_en": "Shoes are footwear with a metal protective toe cap, a leather upper, and a rubber or synthetic plastic outsole.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640351050000",
+      "tanim_tr": "Diğer ayakkabılar; bileği örten, yüzü deriden, dış tabanı tabii köseleden, iç tabanı olmayan, ahşap mesnet veya platform üzerine yapılmış olan",
+      "tanim_en": "Other shoes include those that cover the ankle, have a leather upper, a natural leather outsole, no insole, and are made on a wooden support or platform.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640351110000",
+      "tanim_tr": "Diğer ayakkabılar; bileği örten, baldırı örtmeyen, yüzü deriden, dış tabanı tabii köseleden, iç taban uzunluğu < 24cm",
+      "tanim_en": "Other shoes; ankle-covering, calf-extending, leather upper, natural leather outsole, insole length < 24cm",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640351150000",
+      "tanim_tr": "Diğer ayakkabılar; bileği örten, baldırı örtmeyen, yüzü deriden, dış tabanı tabii köseleden, iç taban uzunluğu >= 24cm, erkekler için",
+      "tanim_en": "Other shoes; ankle-covering, calf-extending, leather upper, natural leather outsole, insole length >= 24cm, for men.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640351190000",
+      "tanim_tr": "Diğer ayakkabılar; bileği örten, baldırı örtmeyen, yüzü deriden, dış tabanı tabii köseleden, iç taban uzunluğu >= 24cm, kadınlar için",
+      "tanim_en": "Other shoes; ankle-covering, calf-extending, leather upper, natural leather outsole, insole length >= 24cm, for women.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640351910000",
+      "tanim_tr": "Diğer ayakkabılar; hem bileği hem de baldırı örten, yüzü deriden, dış tabanı tabii köseleden, iç taban uzunluğu < 24cm",
+      "tanim_en": "Other shoes; covering both the ankle and calf, with a leather upper, a natural leather outsole, and an insole length of less than 24cm.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640351950000",
+      "tanim_tr": "Diğer ayakkabılar; hem bileği hem de baldırı örten, yüzü deriden, dış tabanı tabii köseleden, iç taban uzunluğu >= 24cm, erkekler için",
+      "tanim_en": "Other shoes; covering both the ankle and calf, with a leather upper, a natural leather outsole, and an insole length >= 24cm, for men.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640351990000",
+      "tanim_tr": "Diğer ayakkabılar; hem bileği hem de baldırı örten, yüzü deriden, dış tabanı tabii köseleden, iç taban uzunluğu >= 24cm, kadınlar için",
+      "tanim_en": "Other shoes; covering both the ankle and calf, with a leather upper, a natural leather outsole, and an insole length >= 24cm, for women.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640359050000",
+      "tanim_tr": "Diğer ayakkabılar; yüzü deriden, dış tabanı tabii köseleden, iç tabanı olmayan, ahşap mesnet veya platform üzerine yapılmış olan",
+      "tanim_en": "Other shoes have uppers made of leather, outsoles made of natural leather, no insoles, and are made on wooden supports or platforms.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640359110000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı tabii köseleden, yüzü deri şeritlerden veya parça kesilmiş, tabanı ile birlikte topuk yüksekliği > 3cm",
+      "tanim_en": "Other shoes; outsole made of natural leather, upper made of leather strips or cut pieces, heel height including sole > 3cm",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640359310000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı tabii köseleden, yüzü deri şeritlerden/parça kesilmiş, iç taban < 24cm, tabanı ile birlikte topuk yüksekliği <= 3cm",
+      "tanim_en": "Other shoes; outsole made of genuine leather, upper made of leather strips/pieces, insole < 24cm, heel height including sole <= 3cm",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640359350000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı tabii köseleden, yüzü deri şeritlerden/parça kesilmiş, iç taban >= 24cm, topuk yüksekliği <= 3cm, erkekler için",
+      "tanim_en": "Other shoes; outsole made of genuine leather, upper made of leather strips/pieces, insole >= 24cm, heel height <= 3cm, for men.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640359390000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı tabii köseleden, yüzü deri şeritlerden veya parça kesilmiş, iç taban >= 24cm, topuk yüksekliği <= 3cm, kadınlar için",
+      "tanim_en": "Other shoes; outsole made of genuine leather, upper made of leather strips or cut pieces, insole >= 24cm, heel height <= 3cm, for women.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640359500011",
+      "tanim_tr": "Terlikler ve ev içinde giyilen diğer ayakkabılar; yüzü deriden, dış tabanı tabii köseleden, erkekler için",
+      "tanim_en": "Slippers and other indoor footwear; with a leather upper and a natural leather outsole, for men.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640359500012",
+      "tanim_tr": "Terlikler ve ev içinde giyilen diğer ayakkabılar; yüzü deriden, dış tabanı tabii köseleden, kadınlar için",
+      "tanim_en": "Slippers and other indoor footwear; with a leather upper and a natural leather outsole, for women.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640359500013",
+      "tanim_tr": "Terlikler ve ev içinde giyilen diğer ayakkabılar; yüzü deriden, dış tabanı tabii köseleden, çocuklar ve bebekler için",
+      "tanim_en": "Slippers and other indoor footwear; with a leather upper and a natural leather outsole, for children and babies.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640359910000",
+      "tanim_tr": "Diğer ayakkabılar; yüzü deriden, dış tabanı tabii köseleden, iç tabanı < 24cm",
+      "tanim_en": "Other shoes; upper made of leather, outsole made of natural leather, insole < 24cm",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640359950000",
+      "tanim_tr": "Diğer ayakkabılar; yüzü deriden, dış tabanı tabii köseleden, iç tabanı >= 24cm, erkekler için",
+      "tanim_en": "Other shoes; upper made of leather, outsole made of natural leather, insole >= 24cm, for men.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640359990000",
+      "tanim_tr": "Diğer ayakkabılar; yüzü deriden, dış tabanı tabii köseleden, iç tabanı >= 24cm, kadınlar için",
+      "tanim_en": "Other shoes; upper made of leather, outsole made of natural leather, insole >= 24cm, for women.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640391050000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deriden, bileği örten, iç tabanı olmayan, ahşap mesnet veya platform üzerine yapılmış",
+      "tanim_en": "Shoes are shoes with an outsole made of rubber/plastic/composite leather, a leather upper, covering the ankle, without an insole, and made on a wooden support or platform.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640391110000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deriden, bileği örten fakat baldırı örtmeyen, iç taban < 24cm",
+      "tanim_en": "Shoes with rubber/plastic/synthetic leather outsole, leather upper, covering the ankle but not the calf, insole < 24cm",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640391130000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deriden, bileği örten fakat baldırı örtmeyen, iç taban >= 24cm, erkek/kadın belirsiz",
+      "tanim_en": "Shoes; outsole made of rubber/plastic/synthetic leather, upper made of leather, covering the ankle but not the calf, insole >= 24cm, men's/women's size unspecified.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640391160000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deriden, bileği örten fakat baldırı örtmeyen, iç taban >= 24cm, erkekler için",
+      "tanim_en": "Shoes; outsole made of rubber/plastic/synthetic leather, upper made of leather, covering the ankle but not the calf, insole >= 24cm, for men.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640391180000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deriden, bileği örten fakat baldırı örtmeyen, iç taban >= 24cm, kadınlar için",
+      "tanim_en": "Shoes; outsole made of rubber/plastic/synthetic leather, upper made of leather, covering the ankle but not the calf, insole >= 24cm, for women.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640391910000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deriden, bileği ve baldırı örten, iç taban < 24cm",
+      "tanim_en": "Shoes with a rubber/plastic/synthetic leather outsole, leather upper, ankle and calf covering, insole < 24cm",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640391930000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deriden, bileği ve baldırı örten, iç taban >= 24cm, erkek/kadın belirsiz",
+      "tanim_en": "Shoes; outsole made of rubber/plastic/synthetic leather, upper made of leather, covering the ankle and calf, insole >= 24cm, men's/women's size unspecified.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640391960000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deriden, bileği ve baldırı örten, iç taban >= 24cm, erkekler için",
+      "tanim_en": "Shoes; outsole made of rubber/plastic/synthetic leather, upper made of leather, covering the ankle and calf, insole >= 24cm, for men.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640391980000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deriden, bileği ve baldırı örten, iç taban >= 24cm, kadınlar için",
+      "tanim_en": "Shoes; outsole made of rubber/plastic/synthetic leather, upper made of leather, covering the ankle and calf, insole >= 24cm, for women.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640399050000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deriden, bileği örtmeyen, iç tabanı olmayan, ahşap mesnet veya platform üzerine yapılmış",
+      "tanim_en": "Shoes; with an outsole made of rubber/plastic/composite leather, an upper made of leather, not covering the ankle, without an insole, made on a wooden support or platform.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640399110000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deri şeritlerden veya parça kesilmiş, tabanı ile birlikte topuk yüksekliği > 3cm",
+      "tanim_en": "Shoes with rubber/plastic/composite leather outsole, upper made of leather strips or cut pieces, heel height including sole > 3cm",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640399310000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deri şeritlerden veya parça kesilmiş, topuk yüksekliği <= 3cm, iç taban <24cm",
+      "tanim_en": "Shoes with rubber/plastic/composite leather outsole, upper made of leather strips or cut pieces, heel height <= 3cm, insole <24cm.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640399330000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deri şeritlerden/parça kesilmiş, topuk yüksekliği <= 3cm, iç taban >= 24cm, erkek/kadın?",
+      "tanim_en": "Shoes; outsole made of rubber/plastic/composite leather, upper made of leather strips/pieces, heel height <= 3cm, insole >= 24cm, men's/women's?",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640399360000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deri şeritlerden/parça kesilmiş, topuk yüksekliği <= 3cm, iç taban >= 24cm, erkek için",
+      "tanim_en": "Shoes; outsole made of rubber/plastic/composite leather, upper made of leather strips/pieces, heel height <= 3cm, insole >= 24cm, for men.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640399380000",
+      "tanim_tr": "Ayakkabılar; dış tabanı kauçuk/plastik/terkip köseleden, yüzü deri şeritlerden/parça kesilmiş, topuk yüksekliği <= 3cm, iç taban >= 24cm, kadın için",
+      "tanim_en": "Shoes; outsole made of rubber/plastic/composite leather, upper made of leather strips/pieces, heel height <= 3cm, insole >= 24cm, for women.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640399500000",
+      "tanim_tr": "Terlikler ve ev içinde giyilen diğer ayakkabılar; dış tabanı kauçuktan, plastik maddeden veya terkip yoluyla elde edilen köseleden, yüzü deriden",
+      "tanim_en": "Slippers and other indoor footwear; their outer soles are made of rubber, plastic, or synthetic leather, and their uppers are made of leather.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640399910000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı kauçuktan, plastik maddeden veya terkip yoluyla elde edilen köseleden, yüzü deriden, iç taban < 24cm",
+      "tanim_en": "Other shoes; outsoles made of rubber, plastic or synthetic leather, uppers made of leather, insoles < 24cm",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640399930000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı kauçuktan, plastikten veya terkip yoluyla elde edilen köseleden, yüzü deriden, iç taban >= 24cm, erkek/kadın belirsiz",
+      "tanim_en": "Other shoes; outsole made of rubber, plastic or synthetic leather, upper made of leather, insole >= 24cm, men's/women's size not specified.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640399960000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı kauçuktan, plastikten veya terkip yoluyla elde edilen köseleden, yüzü deriden, iç taban >= 24cm, erkekler için",
+      "tanim_en": "Other shoes; outsole made of rubber, plastic or synthetic leather, upper made of leather, insole >= 24cm, for men.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640399980000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı kauçuktan, plastikten veya terkip yoluyla elde edilen köseleden, yüzü deriden, iç taban >= 24cm, kadınlar için",
+      "tanim_en": "Other shoes; outsole made of rubber, plastic or synthetic leather, upper made of leather, insole >= 24cm, for women.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640411000000",
+      "tanim_tr": "Ayakkabı; spor, tenis, basketbol, jimnastik vb. için, dış tabanı kauçuktan veya plastik maddeden, yüzü dokunabilir maddelerden",
+      "tanim_en": "Shoes are designed for sports, tennis, basketball, gymnastics, etc., with an outsole made of rubber or plastic and an upper made of tactile materials.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640419100000",
+      "tanim_tr": "Terlikler ve ev içinde giyilen diğer ayakkabılar; dış tabanı kauçuktan veya plastik maddeden, yüzü dokunabilir maddelerden",
+      "tanim_en": "Slippers and other indoor footwear; with an outsole made of rubber or plastic, and an upper made of tactile materials.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640419900000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı kauçuktan veya plastik maddeden, yüzü dokunabilir maddelerden",
+      "tanim_en": "Other shoes; outsoles made of rubber or plastic, uppers made of tactile materials.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640420100000",
+      "tanim_tr": "Terlikler ve ev içinde giyilen diğer ayakkabılar; dış tabanı tabii veya terkip köseleden, yüzü dokunabilir maddelerden",
+      "tanim_en": "Slippers and other indoor footwear; with an outsole made of natural or synthetic leather, and an upper made of tactile materials.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640420900000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı tabii veya terkip köseleden, yüzü dokunabilir maddelerden",
+      "tanim_en": "Other shoes; outsoles made of natural or synthetic leather, uppers made of tactile materials.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640510000000",
+      "tanim_tr": "Diğer ayakkabılar; yüzü tabii veya terkip yoluyla elde edilen deriden olanlar",
+      "tanim_en": "Other shoes; those with uppers made of natural or artificially produced leather.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640520100000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı ahşap veya mantardan, yüzü dokumaya elverişli maddelerden",
+      "tanim_en": "Other shoes have outsoles made of wood or cork, and uppers made of materials suitable for textiles.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640520910000",
+      "tanim_tr": "Terlikler ve ev içinde giyilen diğer ayakkabılar; dış tabanı diğer maddelerden, yüzü dokumaya elverişli maddelerden",
+      "tanim_en": "Slippers and other indoor footwear; their outer soles are made of other materials, and their uppers are made of textile materials.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640520990000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı diğer maddelerden, yüzü dokumaya elverişli maddelerden",
+      "tanim_en": "Other shoes; outsoles made of other materials, uppers made of textile materials",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640590100000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı kauçuk, plastik madde, tabii veya terkip yolu ile elde edilen köseleden olanlar",
+      "tanim_en": "Other shoes include those with outsoles made of rubber, plastic, natural or artificial leather.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640590900000",
+      "tanim_tr": "Diğer ayakkabılar; dış tabanı diğer maddelerden",
+      "tanim_en": "Other shoes; outsoles made of other materials",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640610100000",
+      "tanim_tr": "Ayakkabı yüzleri ve bunların aksamı (takviye parçaları hariç); deriden",
+      "tanim_en": "Shoe uppers and their parts (excluding reinforcement parts); made of leather.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640610901000",
+      "tanim_tr": "Ayakkabı yüzleri ve bunların aksamı (takviye parçaları hariç); çelikten olanlar",
+      "tanim_en": "Shoe uppers and their parts (excluding reinforcement parts); those made of steel.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640610909000",
+      "tanim_tr": "Ayakkabı yüzleri ve bunların aksamı (takviye parçaları hariç); diğer maddelerden",
+      "tanim_en": "Shoe uppers and their parts (excluding reinforcement parts); made of other materials.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640620100011",
+      "tanim_tr": "Ayakkabılar için dış tabanlar; kauçuktan",
+      "tanim_en": "Outsoles for shoes are made of rubber.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640620100012",
+      "tanim_tr": "Ayakkabılar için topuklar; kauçuktan",
+      "tanim_en": "Heels for shoes; made of rubber.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640620900011",
+      "tanim_tr": "Ayakkabılar için dış tabanlar; plastik maddelerden",
+      "tanim_en": "Shoe soles are made of plastic materials.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640620900012",
+      "tanim_tr": "Ayakkabılar için topuklar; plastik maddelerden",
+      "tanim_en": "Heels for shoes are made of plastic materials.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640690300000",
+      "tanim_tr": "Ayakkabı aksamı; dış tabanı olmayan fakat iç taban veya diğer iç kısımlara tutturulmuş ayakkabı yüzlerinden meydana gelenler",
+      "tanim_en": "Footwear components; items consisting of shoe uppers attached to insoles or other interior parts, but without an outer sole.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640690501011",
+      "tanim_tr": "Ayakkabı için çıkarılabilen iç tabanlar; demir dökümden, demir veya çelikten veya aluminyumdan olanlar",
+      "tanim_en": "Removable insoles for shoes; those made of cast iron, iron or steel, or aluminum.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640690501019",
+      "tanim_tr": "Ayakkabı için diğer çıkarılabilen aksesuar; demir dökümden, demir veya çelikten veya aluminyumdan olanlar",
+      "tanim_en": "Other removable accessories for shoes include those made of cast iron, iron or steel, or aluminum.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640690503011",
+      "tanim_tr": "Ayakkabı için çıkarılabilen iç tabanlar; bakırdan olanlar",
+      "tanim_en": "Removable insoles for shoes; those made of copper.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640690503019",
+      "tanim_tr": "Ayakkabı için çıkarılabilen diğer aksesuar; bakırdan olanlar",
+      "tanim_en": "Other removable accessories for shoes; those made of copper.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640690509011",
+      "tanim_tr": "Ayakkabı için çıkarılabilen iç tabanlar; diğer maddelerden",
+      "tanim_en": "Removable insoles for shoes; made from other materials",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640690509019",
+      "tanim_tr": "Ayakkabı için diğer çıkarılabilen aksesuar; diğer maddelerden",
+      "tanim_en": "Other removable accessories for the shoe; made from other materials",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640690600000",
+      "tanim_tr": "Tabii veya terkip yoluyla elde edilen deriden ayakkabı dış tabanları",
+      "tanim_en": "Shoe outsoles made from natural or synthetic leather.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640690901000",
+      "tanim_tr": "Ayakkabıların diğer aksamı; demir dökümden, demir veya çelikten veya aluminyumdan olanlar",
+      "tanim_en": "Other parts of the shoes are made of cast iron, iron or steel, or aluminum.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640690903000",
+      "tanim_tr": "Ayakkabıların diğer aksamı, bakırdan olanlar",
+      "tanim_en": "Other parts of the shoes are made of copper.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "640690909000",
+      "tanim_tr": "Ayakkabıların diğer aksamı, getr, tozluk, dizlik, vb. ve bunların aksamı",
+      "tanim_en": "Other parts of the footwear, such as gaiters, leggings, knee pads, etc., and their accessories.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    }
+  ]
+}

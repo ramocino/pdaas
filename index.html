@@ -20,7 +20,7 @@
 
   <div class="flex-1 flex overflow-hidden relative min-h-0">
     <!-- SIDEBAR -->
-    <aside id="sidebar" class="w-80 lg:w-[22rem] flex-none bg-win-dark border-r border-win-border flex flex-col fixed lg:static top-16 bottom-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
+    <aside id="sidebar" class="w-96 lg:w-[26rem] flex-none bg-win-dark border-r border-win-border flex flex-col fixed lg:static top-16 bottom-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
       <div class="p-4 border-b border-win-border space-y-3 flex-none">
         <div class="flex items-center justify-between">
           <h2 class="text-sm font-semibold tracking-tight text-white uppercase flex items-center gap-2">
@@ -97,6 +97,12 @@
             <p id="service-desc" class="text-sm text-slate-400">—</p>
           </div>
           <div class="flex items-center gap-2">
+            <button id="btn-back-to-list" type="button" class="hidden px-3 py-2 rounded-md bg-win-hover hover:bg-win-active text-slate-300 text-xs font-semibold flex items-center gap-1.5 border border-win-border transition active:scale-[0.98]">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+              <span data-i18n="back_to_list">Listeye Dön</span>
+            </button>
             <button id="btn-run-query" type="button" class="px-4 py-2 rounded-md bg-win-500 hover:bg-win-600 text-white text-xs font-semibold flex items-center gap-2 transition active:scale-[0.98]">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
               <span data-i18n="run_query">Yenile</span>
@@ -272,7 +278,7 @@
       records: "Kayıt", services: "Veri Seti", loading_data: "Veriler yükleniyor...", load_error: "Veri alınamadı. Endpoint yanıt vermedi.",
       filtered: "filtrelendi", filtered_none: "Filtreye uygun kayıt bulunamadı", no_records: "Kayıt bulunamadı", no_matches: "Eşleşen veri seti bulunamadı.",
       notlar_title: "Bilgi Notları", copied_url: "URL kopyalandı", copied_code: "Kod kopyalandı", copied_json: "JSON kopyalandı",
-      layer_ham: "Ham", layer_konsolide: "Konsolide", layer_kurallar: "Kural"
+      layer_ham: "Ham", layer_konsolide: "Konsolide", layer_kurallar: "Kural", back_to_list: "Listeye Dön"
     });
     Object.assign(UI.en, {
       catalog_title: "Data Catalog", catalog_search: "Search dataset...", catalog_loading: "Loading catalog...", live_connection: "Live Connection",
@@ -285,7 +291,7 @@
       records: "Records", services: "Datasets", loading_data: "Loading data...", load_error: "Could not fetch data. Endpoint did not respond.",
       filtered: "filtered", filtered_none: "No records match the filter", no_records: "No records found", no_matches: "No dataset found.",
       notlar_title: "Information Notes", copied_url: "URL copied", copied_code: "Code copied", copied_json: "JSON copied",
-      layer_ham: "Raw", layer_konsolide: "Consolidated", layer_kurallar: "Rule"
+      layer_ham: "Raw", layer_konsolide: "Consolidated", layer_kurallar: "Rule", back_to_list: "Back to List"
     });
 
     dilBaslat();
@@ -439,7 +445,11 @@
     let currentRawBody = null;
     let currentPage = 1;
     let currentKatman = 'ham';
-    let currentBaseUrl = ''; 
+    let currentBaseUrl = '';
+    let currentParca = null; // { kod, dosya, endpoint } veya null
+
+    // JSON Konsolu lazy load state
+    let jsonVirtualState = null;
 
     let renderedRowCount = 0;
     const ROW_CHUNK = 100;
@@ -556,17 +566,20 @@
       const versiyon = katmanBilgi.son || '—';
       const katmanEtiket = t('layer_' + katmanKey) || katmanKey;
 
+      currentBaseUrl = apiUrl(katmanBilgi.url || '');
+      const parcaSuffix = currentParca ? ` › ${currentParca.kod}` : '';
+      const gosterilenUrl = currentParca ? currentParca.endpoint : currentBaseUrl;
+
       $('bc-ministry').textContent = grupAdi;
-      $('bc-service').textContent = `${servisAdi} (${katmanEtiket})`;
+      $('bc-service').textContent = `${servisAdi} (${katmanEtiket})${parcaSuffix}`;
       $('service-ministry-badge').textContent = `${grupAdi} (${katmanEtiket})`;
       $('service-records-count').textContent = `v${versiyon}`;
       $('service-type-badge').textContent = tipEtiket(sv.tip);
-      $('service-title').textContent = `${servisAdi} (${katmanEtiket})`;
+      $('service-title').textContent = `${servisAdi} (${katmanEtiket})${parcaSuffix}`;
       $('service-desc').textContent = sv.kod;
       $('service-last-update').textContent = `v${versiyon}`;
-      $('endpoint-url-text').textContent = apiUrl(katmanBilgi.url || '');
-      
-      currentBaseUrl = apiUrl(katmanBilgi.url || '');
+      $('endpoint-url-text').textContent = gosterilenUrl;
+      $('btn-back-to-list').classList.toggle('hidden', !currentParca);
     }
 
     function servisSec(sv, katmanKey = 'ham') {
@@ -574,6 +587,7 @@
       currentService = sv;
       currentKatman = katmanKey;
       currentPage = 1;
+      currentParca = null;
       $('view-empty-state').classList.add('hidden');
       $('view-service-detail').classList.remove('hidden');
       servisSecUI(sv, katmanKey);
@@ -641,7 +655,10 @@
       const keys = siraliKolonlar(Object.keys(currentData[0]));
 
       theadRow.innerHTML = `<th class="p-3 text-slate-400 font-semibold border-r border-win-border/50">#</th>` +
-        keys.map(k => `<th class="p-3 text-slate-300 font-semibold tracking-wider whitespace-nowrap" title="${kacis(k)}">${kacis(alanEtiket(k))}</th>`).join('');
+        keys.map(k => {
+          const ekBaslik = k === 'dosya' ? ' 📂' : '';
+          return `<th class="p-3 text-slate-300 font-semibold tracking-wider whitespace-nowrap" title="${kacis(k)}">${kacis(alanEtiket(k))}${ekBaslik}</th>`;
+        }).join('');
 
       if (!currentFilteredData.length) {
         tbody.innerHTML = `<tr><td colspan="${keys.length + 1}" class="p-6 text-center text-slate-500">${t('filtered_none')}</td></tr>`;
@@ -733,33 +750,26 @@
 
     window.parcaAc = async function(dosyaYolu) {
       if (!currentService || !currentBaseUrl) return;
-      
+      if (!currentBaseUrl.endsWith('/index.json')) return;
+
       const temelUrl = currentBaseUrl.replace('/index.json', '');
       const yeniEndpoint = `${temelUrl}/${dosyaYolu}`;
-      
-      $('table-body-rows').innerHTML = `<tr><td colspan="10" class="p-6 text-center text-slate-500"><div class="inline-block w-5 h-5 border-2 border-win-500 border-t-transparent rounded-full animate-spin"></div><p class="mt-2">${t('loading_data')}</p></td></tr>`;
-      $('endpoint-url-text').textContent = apiUrl(yeniEndpoint);
-      
-      try {
-        const r = await apiFetch(yeniEndpoint);
-        if (!r.ok) throw new Error('HTTP ' + r.status);
-        const body = await r.json();
-        
-        currentRawBody = body;
-        currentData = Array.isArray(body.kayitlar) ? body.kayitlar : [];
-        currentFilteredData = [...currentData];
-        currentPage = 1;
-        
-        $('json-status-label').textContent = `HTTP ${r.status}`;
-        $('service-records-count').textContent = currentData.length.toLocaleString(document.documentElement.lang === 'en' ? 'en-US' : 'tr-TR') + ' ' + t('records');
-        
-        renderTableData(); renderCodeSnippets(); renderJsonConsole(); renderDocsSchema(); renderNotlar(body);
-        $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
-      } catch (e) {
-        console.error('[PDaaS] parça yükleme hatası:', e);
-        $('table-body-rows').innerHTML = `<tr><td colspan="10" class="p-6 text-center text-rose-400">${t('load_error')}</td></tr>`;
-      }
+      const parcaKod = dosyaYolu.replace(/^(fasil|bolum)\//, '').replace(/\.json$/, '');
+
+      currentParca = { kod: parcaKod, dosya: dosyaYolu, endpoint: yeniEndpoint };
+      servisSecUI(currentService, currentKatman);
+
+      await servisDetayYukle(yeniEndpoint);
+      $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
     };
+
+    function parcaGeri() {
+      if (!currentService || !currentBaseUrl) return;
+      currentParca = null;
+      servisSecUI(currentService, currentKatman);
+      servisDetayYukle(currentBaseUrl);
+      $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
     $('table-scroll-container').addEventListener('scroll', function() {
       if (this.scrollTop + this.clientHeight >= this.scrollHeight - 50) {
@@ -783,9 +793,8 @@
       $('code-snippet-box').textContent = snippets[activeCodeLang] || snippets.curl;
     }
 
-    function highlightJson(obj) {
-      const json = JSON.stringify(obj, null, 2);
-      if (json === undefined) return '';
+    function highlightString(json) {
+      if (json === undefined || json === null) return '';
       return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, match => {
         let cls = 'j-num';
         if (/^"/.test(match)) { cls = /:$/.test(match) ? 'j-key' : 'j-str'; }
@@ -795,27 +804,133 @@
       });
     }
 
+    function highlightJson(obj) {
+      const json = JSON.stringify(obj, null, 2);
+      if (json === undefined) return '';
+      return highlightString(json);
+    }
+
     function renderJsonConsole() {
       if (!currentRawBody) return;
-      let jsonStr = JSON.stringify(currentRawBody, null, 2);
-      if (jsonStr === undefined) return;
-      
-      if (jsonStr.length > 50000) {
-        const ilkKisim = jsonStr.substring(0, 50000);
-        const kalanKisim = jsonStr.substring(50000);
-        let renkliIlkKisim = ilkKisim.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, match => {
-          let cls = 'j-num';
-          if (/^"/.test(match)) { cls = /:$/.test(match) ? 'j-key' : 'j-str'; }
-          else if (/true|false/.test(match)) { cls = 'j-kw'; }
-          else if (/null/.test(match)) { cls = 'j-kw'; }
-          return `<span class="${cls}">${match}</span>`;
-        });
-        $('json-console-output').innerHTML = renkliIlkKisim + 
-          `<span class="text-slate-500 italic">\n\n... [Dosya çok büyük olduğu için geri kalan ${kalanKisim.length} karakter renklendirilmeden gösteriliyor. Tamamını görmek için "Payload'ı Kopyala" butonunu kullanın.]</span>\n` + 
-          kalanKisim;
-      } else {
-        $('json-console-output').innerHTML = highlightJson(currentRawBody);
+      const output = $('json-console-output');
+
+      // Önceki state'i temizle
+      output.onscroll = null;
+      jsonVirtualState = null;
+
+      const ARRAY_KEYS = ['kayitlar', 'fasillar', 'parcalar', 'kurallar', 'veriler', 'data', 'items', 'rows', 'liste'];
+      let arrayKey = null;
+      for (const k of ARRAY_KEYS) {
+        if (Array.isArray(currentRawBody[k]) && currentRawBody[k].length > 0) {
+          arrayKey = k; break;
+        }
       }
+
+      // Dizi yoksa veya küçükse eski davranış
+      if (!arrayKey || currentRawBody[arrayKey].length < 300) {
+        const jsonStr = JSON.stringify(currentRawBody, null, 2);
+        if (jsonStr === undefined) return;
+        if (jsonStr.length > 50000) {
+          const ilk = jsonStr.substring(0, 50000);
+          const kalan = jsonStr.substring(50000);
+          output.innerHTML = highlightString(ilk) +
+            `<span class="text-slate-500 italic">\n\n... [Dosya çok büyük, kalan ${kalan.length} karakter renklendirilmedi. "Payload'ı Kopyala" ile tamamına erişebilirsiniz.]</span>\n` +
+            kalan;
+        } else {
+          output.innerHTML = highlightString(jsonStr);
+        }
+        return;
+      }
+
+      const items = currentRawBody[arrayKey];
+
+      const wrapper = { ...currentRawBody, [arrayKey]: null };
+      const wrapperStr = JSON.stringify(wrapper, null, 2);
+      const marker = `"${arrayKey}": null`;
+      const idx = wrapperStr.indexOf(marker);
+
+      const prefixStr = wrapperStr.slice(0, idx) + `"${arrayKey}": [`;
+      const suffixStr = '\n  ]' + wrapperStr.slice(idx + marker.length);
+
+      const firstSize = JSON.stringify(items[0]).length;
+      const chunkSize = firstSize < 300 ? 100
+                      : firstSize < 1000 ? 50
+                      : firstSize < 3000 ? 20
+                      : 10;
+
+      jsonVirtualState = {
+        output,
+        items,
+        prefixStr,
+        suffixStr,
+        renderedCount: 0,
+        totalCount: items.length,
+        chunkSize,
+      };
+
+      output.innerHTML = '';
+      appendJsonChunk();
+
+      output.onscroll = () => {
+        if (output.scrollTop + output.clientHeight >= output.scrollHeight - 100) {
+          if (jsonVirtualState && jsonVirtualState.renderedCount < jsonVirtualState.totalCount) {
+            appendJsonChunk();
+          }
+        }
+      };
+    }
+
+    function appendJsonChunk() {
+      const s = jsonVirtualState;
+      if (!s) return;
+
+      const start = s.renderedCount;
+      const end = Math.min(start + s.chunkSize, s.totalCount);
+      const isFinished = end >= s.totalCount;
+
+      let chunkStr = '';
+      for (let i = start; i < end; i++) {
+        const str = JSON.stringify(s.items[i], null, 2);
+        const indented = str.split('\n').map(ln => '    ' + ln).join('\n');
+        const prefix = i === 0 ? '\n' : ',\n';
+        chunkStr += prefix + indented;
+      }
+
+      if (isFinished) chunkStr += s.suffixStr;
+
+      const html = highlightString(chunkStr);
+
+      if (start === 0) {
+        s.output.innerHTML = highlightString(s.prefixStr) + html;
+      } else {
+        s.output.insertAdjacentHTML('beforeend', html);
+      }
+
+      s.renderedCount = end;
+      updateJsonFooter();
+    }
+
+    function updateJsonFooter() {
+      const s = jsonVirtualState;
+      if (!s) return;
+      const label = $('json-status-label');
+      if (!label || !label.parentElement) return;
+
+      let info = document.getElementById('json-load-info');
+      if (!info) {
+        info = document.createElement('span');
+        info.id = 'json-load-info';
+        info.className = 'text-slate-500 text-[10px] ml-2 font-sans';
+        label.parentElement.appendChild(info);
+      }
+
+      const d = document.documentElement.lang === 'en' ? 'en-US' : 'tr-TR';
+      const yuklenen = s.renderedCount.toLocaleString(d);
+      const toplam = s.totalCount.toLocaleString(d);
+
+      info.textContent = s.renderedCount < s.totalCount
+        ? `(${yuklenen}/${toplam} ${t('records').toLowerCase()}, ↓ kaydırın)`
+        : `(${toplam} ${t('records').toLowerCase()})`;
     }
 
     function renderDocsSchema() {
@@ -867,6 +982,17 @@
           const target = tab.dataset.tab;
           document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
           $(target).classList.remove('hidden');
+
+          // JSON tab'ına geçildiğinde scroll listener'ı garantiye al
+          if (target === 'tab-json' && jsonVirtualState && jsonVirtualState.output) {
+            const output = jsonVirtualState.output;
+            output.onscroll = () => {
+              if (output.scrollTop + output.clientHeight >= output.scrollHeight - 100
+                  && jsonVirtualState.renderedCount < jsonVirtualState.totalCount) {
+                appendJsonChunk();
+              }
+            };
+          }
         });
       });
       document.querySelectorAll('.code-lang-btn').forEach(btn => {
@@ -920,14 +1046,22 @@
     $('btn-copy-url').addEventListener('click', () => { if (currentService) copyToClipboard($('endpoint-url-text').textContent, t('copied_url')); });
     $('btn-copy-code').addEventListener('click', () => { copyToClipboard($('code-snippet-box').textContent, t('copied_code')); });
     $('btn-copy-json').addEventListener('click', () => { if (currentRawBody) copyToClipboard(JSON.stringify(currentRawBody, null, 2), t('copied_json')); });
-        $('btn-run-query').addEventListener('click', () => { 
+    
+    $('btn-run-query').addEventListener('click', () => { 
       const fullUrl = $('endpoint-url-text').textContent.trim();
       if (fullUrl) servisDetayYukle(fullUrl);
     });
 
+    $('btn-back-to-list').addEventListener('click', parcaGeri);
+
     $('btn-bc-home').addEventListener('click', () => {
-      $('view-empty-state').classList.remove('hidden'); $('view-service-detail').classList.add('hidden');
-      currentService = null; currentPage = 1; renderCatalogTree($('input-catalog-search').value);
+      $('view-empty-state').classList.remove('hidden');
+      $('view-service-detail').classList.add('hidden');
+      currentService = null;
+      currentParca = null;
+      currentPage = 1;
+      $('btn-back-to-list').classList.add('hidden');
+      renderCatalogTree($('input-catalog-search').value);
       $('main-content').scrollTo({ top: 0, behavior: 'smooth' });
     });
 

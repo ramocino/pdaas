@@ -1,0 +1,1473 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "nace-kurallar",
+      "ad": {
+        "tr": "NACE Eşleme Kuralları",
+        "en": "NACE Mapping Rules"
+      }
+    },
+    "katman": "kurallar",
+    "yapi": {
+      "tip": "kural-seti",
+      "kod_sistemi": "tuik",
+      "kapsam": [
+        "ticaret",
+        "faaliyet"
+      ]
+    },
+    "surum": "2026.10.01",
+    "guncelleme": "2026-10-01",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "tuik",
+      "ad": {
+        "tr": "Türkiye İstatistik Kurumu",
+        "en": "Turkish Statistical Institute"
+      },
+      "kurumlar": [
+        "tuik",
+        "gib",
+        "sgk"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "checksum": "sha256:d782b74e0cffb461b3d9aaca1d699c04e719c6c684760b342f032833975ebdac"
+  },
+  "gruplar": {
+    "nace-eslesme": {
+      "ad_tr": "GTİP / CPC - NACE Eşleştirme Kuralları",
+      "ad_en": "GTIP / CPC - NACE Mapping Rules",
+      "aciklama_tr": "Kural seti"
+    }
+  },
+  "kurallar": [
+    {
+      "kod": "nace-sigirlar",
+      "nace_kodu": "01.41",
+      "gtip_prefixler": [
+        "0102"
+      ],
+      "cpc_prefixler": [
+        "0211"
+      ],
+      "aciklama_tr": "Sığır yetiştiriciliği",
+      "aciklama_en": "Raising of dairy cattle"
+    },
+    {
+      "kod": "nace-atlar",
+      "nace_kodu": "01.43",
+      "gtip_prefixler": [
+        "0101"
+      ],
+      "cpc_prefixler": [
+        "0212"
+      ],
+      "aciklama_tr": "At ve diğer tek tırnaklı hayvanların yetiştirilmesi",
+      "aciklama_en": "Raising of horses and other equines"
+    },
+    {
+      "kod": "nace-domuzlar",
+      "nace_kodu": "01.46",
+      "gtip_prefixler": [
+        "0103"
+      ],
+      "cpc_prefixler": [
+        "0213"
+      ],
+      "aciklama_tr": "Domuz yetiştiriciliği",
+      "aciklama_en": "Raising of swine/pigs"
+    },
+    {
+      "kod": "nace-koyun-keciler",
+      "nace_kodu": "01.45",
+      "gtip_prefixler": [
+        "0104"
+      ],
+      "cpc_prefixler": [
+        "0214"
+      ],
+      "aciklama_tr": "Koyun ve keçi yetiştiriciliği",
+      "aciklama_en": "Raising of sheep and goats"
+    },
+    {
+      "kod": "nace-kumes-hayvanlari",
+      "nace_kodu": "01.47",
+      "gtip_prefixler": [
+        "0105"
+      ],
+      "cpc_prefixler": [
+        "0215"
+      ],
+      "aciklama_tr": "Kümes hayvanları yetiştiriciliği",
+      "aciklama_en": "Raising of poultry"
+    },
+    {
+      "kod": "nace-diger-hayvanlar",
+      "nace_kodu": "01.49",
+      "gtip_prefixler": [
+        "0106"
+      ],
+      "cpc_prefixler": [
+        "0219"
+      ],
+      "aciklama_tr": "Diğer hayvanların yetiştiriciliği",
+      "aciklama_en": "Raising of other animals"
+    },
+    {
+      "kod": "nace-canli-bitki",
+      "nace_kodu": "01.30",
+      "gtip_prefixler": [
+        "06"
+      ],
+      "cpc_prefixler": [
+        "019"
+      ],
+      "aciklama_tr": "Çoğaltmak için bitki yetiştiriciliği",
+      "aciklama_en": "Plant propagation"
+    },
+    {
+      "kod": "nace-sebze-yetistirme",
+      "nace_kodu": "01.13",
+      "gtip_prefixler": [
+        "07"
+      ],
+      "cpc_prefixler": [
+        "012"
+      ],
+      "aciklama_tr": "Sebze, kavun-karpuz, kök ve yumru sebzelerin yetiştirilmesi",
+      "aciklama_en": "Growing of vegetables and melons, roots and tubers"
+    },
+    {
+      "kod": "nace-meyve-yetistirme",
+      "nace_kodu": "01.25",
+      "gtip_prefixler": [
+        "08"
+      ],
+      "cpc_prefixler": [
+        "013"
+      ],
+      "aciklama_tr": "Diğer ağaç ve çalı meyveleri ile sert kabuklu meyvelerin yetiştirilmesi",
+      "aciklama_en": "Growing of other tree and bush fruits and nuts"
+    },
+    {
+      "kod": "nace-kahve-cay",
+      "nace_kodu": "01.27",
+      "gtip_prefixler": [
+        "0901",
+        "0902",
+        "0903"
+      ],
+      "cpc_prefixler": [
+        "0181"
+      ],
+      "aciklama_tr": "İçecek ürünleri yetiştiriciliği",
+      "aciklama_en": "Growing of beverage crops"
+    },
+    {
+      "kod": "nace-baharat",
+      "nace_kodu": "01.28",
+      "gtip_prefixler": [
+        "0904",
+        "0905",
+        "0906",
+        "0907",
+        "0908",
+        "0909",
+        "0910"
+      ],
+      "cpc_prefixler": [
+        "0182"
+      ],
+      "aciklama_tr": "Baharat, aromatik ve uyarıcı bitkilerin yetiştirilmesi",
+      "aciklama_en": "Growing of spices, aromatic, drug and pharmaceutical crops"
+    },
+    {
+      "kod": "nace-tahil-yetistirme",
+      "nace_kodu": "01.11",
+      "gtip_prefixler": [
+        "10"
+      ],
+      "cpc_prefixler": [
+        "011"
+      ],
+      "aciklama_tr": "Tahılların, baklagillerin ve yağlı tohumların yetiştirilmesi",
+      "aciklama_en": "Growing of cereals, leguminous crops and oil seeds"
+    },
+    {
+      "kod": "nace-tutun-yetistirme",
+      "nace_kodu": "01.15",
+      "gtip_prefixler": [
+        "2401"
+      ],
+      "cpc_prefixler": [
+        "2501"
+      ],
+      "aciklama_tr": "Tütün yetiştirilmesi",
+      "aciklama_en": "Growing of tobacco"
+    },
+    {
+      "kod": "nace-et-imalat",
+      "nace_kodu": "10.11",
+      "gtip_prefixler": [
+        "02"
+      ],
+      "cpc_prefixler": [
+        "211"
+      ],
+      "aciklama_tr": "Et ve et ürünleri imalatı",
+      "aciklama_en": "Processing and preserving of meat"
+    },
+    {
+      "kod": "nace-balik",
+      "nace_kodu": "10.20",
+      "gtip_prefixler": [
+        "03"
+      ],
+      "cpc_prefixler": [
+        "04",
+        "212"
+      ],
+      "aciklama_tr": "Balık, kabuklu deniz hayvanları ve yumuşakçaların işlenmesi ve muhafazası",
+      "aciklama_en": "Processing and preserving of fish, crustaceans and molluscs"
+    },
+    {
+      "kod": "nace-sut-imalat",
+      "nace_kodu": "10.51",
+      "gtip_prefixler": [
+        "04",
+        "1704"
+      ],
+      "cpc_prefixler": [
+        "22",
+        "236"
+      ],
+      "aciklama_tr": "Süt ürünleri imalatı",
+      "aciklama_en": "Manufacture of dairy products"
+    },
+    {
+      "kod": "nace-degirmencilik",
+      "nace_kodu": "10.61",
+      "gtip_prefixler": [
+        "11"
+      ],
+      "cpc_prefixler": [
+        "231"
+      ],
+      "aciklama_tr": "Öğütülmüş tahıl ürünleri imalatı",
+      "aciklama_en": "Manufacture of grain mill products"
+    },
+    {
+      "kod": "nace-yagli-tohum",
+      "nace_kodu": "10.41",
+      "gtip_prefixler": [
+        "12",
+        "15"
+      ],
+      "cpc_prefixler": [
+        "216"
+      ],
+      "aciklama_tr": "Bitkisel ve hayvansal yağların imalatı",
+      "aciklama_en": "Manufacture of vegetable and animal oils and fats"
+    },
+    {
+      "kod": "nace-seker",
+      "nace_kodu": "10.81",
+      "gtip_prefixler": [
+        "17"
+      ],
+      "cpc_prefixler": [
+        "235"
+      ],
+      "aciklama_tr": "Şeker imalatı",
+      "aciklama_en": "Manufacture of sugar"
+    },
+    {
+      "kod": "nace-kakao-cikolata",
+      "nace_kodu": "10.82",
+      "gtip_prefixler": [
+        "18"
+      ],
+      "cpc_prefixler": [
+        "236"
+      ],
+      "aciklama_tr": "Kakao, çikolata ve şekerleme imalatı",
+      "aciklama_en": "Manufacture of cocoa, chocolate and sugar confectionery"
+    },
+    {
+      "kod": "nace-makarna",
+      "nace_kodu": "10.73",
+      "gtip_prefixler": [
+        "19"
+      ],
+      "cpc_prefixler": [
+        "237"
+      ],
+      "aciklama_tr": "Makarna, şehriye, kuskus ve benzeri unlu mamullerin imalatı",
+      "aciklama_en": "Manufacture of macaroni, noodles, couscous and similar farinaceous products"
+    },
+    {
+      "kod": "nace-meyve-sebze-isleme",
+      "nace_kodu": "10.39",
+      "gtip_prefixler": [
+        "20"
+      ],
+      "cpc_prefixler": [
+        "213"
+      ],
+      "aciklama_tr": "Meyve ve sebzelerin işlenmesi ve muhafazası",
+      "aciklama_en": "Other processing and preserving of fruit and vegetables"
+    },
+    {
+      "kod": "nace-gida-diger",
+      "nace_kodu": "10.89",
+      "gtip_prefixler": [
+        "21",
+        "23"
+      ],
+      "cpc_prefixler": [
+        "239"
+      ],
+      "aciklama_tr": "Başka yerde sınıflandırılmamış diğer gıda ürünleri imalatı",
+      "aciklama_en": "Manufacture of other food products n.e.c."
+    },
+    {
+      "kod": "nace-icecek",
+      "nace_kodu": "11.07",
+      "gtip_prefixler": [
+        "2201",
+        "2202"
+      ],
+      "cpc_prefixler": [
+        "2441",
+        "2449"
+      ],
+      "aciklama_tr": "Meşrubat imalatı",
+      "aciklama_en": "Manufacture of soft drinks; production of mineral waters and other bottled waters"
+    },
+    {
+      "kod": "nace-bira",
+      "nace_kodu": "11.05",
+      "gtip_prefixler": [
+        "2203"
+      ],
+      "cpc_prefixler": [
+        "2443"
+      ],
+      "aciklama_tr": "Bira imalatı",
+      "aciklama_en": "Manufacture of beer"
+    },
+    {
+      "kod": "nace-alkol",
+      "nace_kodu": "11.01",
+      "gtip_prefixler": [
+        "2207",
+        "2208"
+      ],
+      "cpc_prefixler": [
+        "241",
+        "24432"
+      ],
+      "aciklama_tr": "Damıtılmış alkollü içeceklerin imalatı",
+      "aciklama_en": "Distilling, rectifying and blending of spirits"
+    },
+    {
+      "kod": "nace-tutun-imalat",
+      "nace_kodu": "12.00",
+      "gtip_prefixler": [
+        "2402",
+        "2403",
+        "2404"
+      ],
+      "cpc_prefixler": [
+        "2509"
+      ],
+      "aciklama_tr": "Tütün ürünleri imalatı",
+      "aciklama_en": "Manufacture of tobacco products"
+    },
+    {
+      "kod": "nace-madencilik",
+      "nace_kodu": "08.11",
+      "gtip_prefixler": [
+        "25",
+        "26"
+      ],
+      "cpc_prefixler": [
+        "14"
+      ],
+      "aciklama_tr": "Madencilik ve taş ocakçılığı",
+      "aciklama_en": "Quarrying of stone, sand and clay"
+    },
+    {
+      "kod": "nace-maden-komur",
+      "nace_kodu": "05.10",
+      "gtip_prefixler": [
+        "2701",
+        "2702",
+        "2703"
+      ],
+      "cpc_prefixler": [
+        "110"
+      ],
+      "aciklama_tr": "Taş kömürü ve linyit madenciliği",
+      "aciklama_en": "Mining of hard coal"
+    },
+    {
+      "kod": "nace-kok-firini",
+      "nace_kodu": "19.10",
+      "gtip_prefixler": [
+        "2704"
+      ],
+      "cpc_prefixler": [
+        "331"
+      ],
+      "aciklama_tr": "Kok fırını ürünlerinin imalatı",
+      "aciklama_en": "Manufacture of coke oven products"
+    },
+    {
+      "kod": "nace-petrol-rafine",
+      "nace_kodu": "19.20",
+      "gtip_prefixler": [
+        "2709",
+        "2710",
+        "2711"
+      ],
+      "cpc_prefixler": [
+        "120",
+        "333"
+      ],
+      "aciklama_tr": "Rafine edilmiş petrol ürünleri imalatı",
+      "aciklama_en": "Manufacture of refined petroleum products"
+    },
+    {
+      "kod": "nace-kimya",
+      "nace_kodu": "20.13",
+      "gtip_prefixler": [
+        "2801",
+        "2802",
+        "2803",
+        "2804",
+        "2805",
+        "2806",
+        "2807",
+        "2808",
+        "2809",
+        "2810",
+        "2811",
+        "2812",
+        "2813",
+        "2814",
+        "2815",
+        "2816",
+        "2817",
+        "2818",
+        "2819",
+        "2820",
+        "2821",
+        "2822",
+        "2823",
+        "2824",
+        "2825",
+        "2826",
+        "2827",
+        "2828",
+        "2829",
+        "2830",
+        "2831",
+        "2832",
+        "2833",
+        "2834",
+        "2835",
+        "2836",
+        "2837",
+        "2838",
+        "2839",
+        "2840",
+        "2841",
+        "2842",
+        "2843",
+        "2844",
+        "2845",
+        "2846",
+        "2847",
+        "2848",
+        "2849",
+        "2850",
+        "2851",
+        "2852",
+        "2853",
+        "2901",
+        "2902",
+        "2903",
+        "2904",
+        "2905",
+        "2906",
+        "2907",
+        "2908",
+        "2909",
+        "2910",
+        "2911",
+        "2912",
+        "2913",
+        "2914",
+        "2915",
+        "2916",
+        "2917",
+        "2918",
+        "2919",
+        "2920",
+        "2921",
+        "2922",
+        "2923",
+        "2924",
+        "2925",
+        "2926",
+        "2927",
+        "2928",
+        "2929",
+        "2930",
+        "2931",
+        "2932",
+        "2933",
+        "2934",
+        "2935",
+        "2936",
+        "2937",
+        "2938",
+        "2939",
+        "2940",
+        "2941",
+        "2942"
+      ],
+      "cpc_prefixler": [
+        "34"
+      ],
+      "aciklama_tr": "Temel kimyasal ürünlerin imalatı",
+      "aciklama_en": "Manufacture of other inorganic basic chemicals"
+    },
+    {
+      "kod": "nace-eczacilik",
+      "nace_kodu": "21.20",
+      "gtip_prefixler": [
+        "3001",
+        "3002",
+        "3003",
+        "3004",
+        "3005",
+        "3006"
+      ],
+      "cpc_prefixler": [
+        "35"
+      ],
+      "aciklama_tr": "Eczacılık ürünleri imalatı",
+      "aciklama_en": "Manufacture of pharmaceutical preparations"
+    },
+    {
+      "kod": "nace-gubre",
+      "nace_kodu": "20.15",
+      "gtip_prefixler": [
+        "3102",
+        "3103",
+        "3104",
+        "3105"
+      ],
+      "cpc_prefixler": [
+        "346"
+      ],
+      "aciklama_tr": "Gübre ve azotlu bileşiklerin imalatı",
+      "aciklama_en": "Manufacture of fertilizers and nitrogen compounds"
+    },
+    {
+      "kod": "nace-boya-vernik",
+      "nace_kodu": "20.30",
+      "gtip_prefixler": [
+        "3208",
+        "3209",
+        "3210",
+        "3211",
+        "3212",
+        "3213",
+        "3214",
+        "3215"
+      ],
+      "cpc_prefixler": [
+        "351"
+      ],
+      "aciklama_tr": "Boya, vernik ve benzeri kaplama malzemeleri imalatı",
+      "aciklama_en": "Manufacture of paints, varnishes and similar coatings, mastics and sealants"
+    },
+    {
+      "kod": "nace-sabun-deterjan",
+      "nace_kodu": "20.42",
+      "gtip_prefixler": [
+        "3401",
+        "3402",
+        "3403",
+        "3404",
+        "3405",
+        "3406",
+        "3407"
+      ],
+      "cpc_prefixler": [
+        "353"
+      ],
+      "aciklama_tr": "Sabun, deterjan ve temizlik maddeleri imalatı",
+      "aciklama_en": "Manufacture of soap and detergents, cleaning and polishing preparations"
+    },
+    {
+      "kod": "nace-plastik",
+      "nace_kodu": "22.21",
+      "gtip_prefixler": [
+        "3916",
+        "3917",
+        "3918",
+        "3919",
+        "3920",
+        "3921",
+        "3922",
+        "3923",
+        "3924",
+        "3925",
+        "3926"
+      ],
+      "cpc_prefixler": [
+        "36"
+      ],
+      "aciklama_tr": "Plastik tabaka, levha, tüp ve profil imalatı",
+      "aciklama_en": "Manufacture of plastic plates, sheets, tubes and profiles"
+    },
+    {
+      "kod": "nace-kaucuk",
+      "nace_kodu": "22.11",
+      "gtip_prefixler": [
+        "4001",
+        "4002",
+        "4003",
+        "4004",
+        "4005",
+        "4006",
+        "4007",
+        "4008",
+        "4009",
+        "4010",
+        "4011",
+        "4012",
+        "4013",
+        "4014",
+        "4015",
+        "4016",
+        "4017"
+      ],
+      "cpc_prefixler": [
+        "37"
+      ],
+      "aciklama_tr": "Kauçuk ürünleri imalatı",
+      "aciklama_en": "Manufacture of rubber tyres and tubes; retreading and rebuilding of rubber tyres"
+    },
+    {
+      "kod": "nace-deri",
+      "nace_kodu": "15.12",
+      "gtip_prefixler": [
+        "4101",
+        "4102",
+        "4103",
+        "4104",
+        "4105",
+        "4106",
+        "4107",
+        "4112",
+        "4113",
+        "4114",
+        "4115",
+        "4201",
+        "4202",
+        "4203",
+        "4205",
+        "4206",
+        "4301",
+        "4302",
+        "4303",
+        "4304",
+        "6401",
+        "6402",
+        "6403",
+        "6404",
+        "6405",
+        "6406"
+      ],
+      "cpc_prefixler": [
+        "29"
+      ],
+      "aciklama_tr": "Deri ve ayakkabı imalatı",
+      "aciklama_en": "Manufacture of footwear"
+    },
+    {
+      "kod": "nace-agac",
+      "nace_kodu": "16.1",
+      "gtip_prefixler": [
+        "4401",
+        "4402",
+        "4403",
+        "4404",
+        "4405",
+        "4406",
+        "4407",
+        "4408",
+        "4409",
+        "4410",
+        "4411",
+        "4412",
+        "4413",
+        "4414",
+        "4415",
+        "4416",
+        "4417",
+        "4418",
+        "4419",
+        "4420",
+        "4421"
+      ],
+      "cpc_prefixler": [
+        "31"
+      ],
+      "aciklama_tr": "Ağaç ürünleri imalatı",
+      "aciklama_en": "Sawmilling and planing of wood"
+    },
+    {
+      "kod": "nace-kagit",
+      "nace_kodu": "17.12",
+      "gtip_prefixler": [
+        "4701",
+        "4702",
+        "4703",
+        "4704",
+        "4705",
+        "4706",
+        "4707",
+        "4801",
+        "4802",
+        "4803",
+        "4804",
+        "4805",
+        "4806",
+        "4807",
+        "4808",
+        "4809",
+        "4810",
+        "4811",
+        "4812",
+        "4813",
+        "4814",
+        "4816",
+        "4817",
+        "4818",
+        "4819",
+        "4820",
+        "4821",
+        "4822",
+        "4823"
+      ],
+      "cpc_prefixler": [
+        "32"
+      ],
+      "aciklama_tr": "Kağıt ve kağıt ürünleri imalatı",
+      "aciklama_en": "Manufacture of paper and paperboard"
+    },
+    {
+      "kod": "nace-basim",
+      "nace_kodu": "18.12",
+      "gtip_prefixler": [
+        "4901",
+        "4902",
+        "4903",
+        "4904",
+        "4905",
+        "4906",
+        "4907",
+        "4908",
+        "4909",
+        "4910",
+        "4911"
+      ],
+      "cpc_prefixler": [
+        "322",
+        "323"
+      ],
+      "aciklama_tr": "Basım ve kayıtlı medyanın çoğaltılması",
+      "aciklama_en": "Other printing"
+    },
+    {
+      "kod": "nace-tekstil",
+      "nace_kodu": "13.10",
+      "gtip_prefixler": [
+        "5001",
+        "5002",
+        "5003",
+        "5004",
+        "5005",
+        "5006",
+        "5007",
+        "5101",
+        "5102",
+        "5103",
+        "5104",
+        "5105",
+        "5106",
+        "5107",
+        "5108",
+        "5109",
+        "5110",
+        "5111",
+        "5112",
+        "5113",
+        "5201",
+        "5202",
+        "5203",
+        "5204",
+        "5205",
+        "5206",
+        "5207",
+        "5208",
+        "5209",
+        "5210",
+        "5211",
+        "5212",
+        "5301",
+        "5302",
+        "5303",
+        "5304",
+        "5305",
+        "5306",
+        "5307",
+        "5308",
+        "5309",
+        "5310",
+        "5311",
+        "5401",
+        "5402",
+        "5403",
+        "5404",
+        "5405",
+        "5406",
+        "5407",
+        "5408",
+        "5501",
+        "5502",
+        "5503",
+        "5504",
+        "5505",
+        "5506",
+        "5507",
+        "5508",
+        "5509",
+        "5510",
+        "5511",
+        "5512",
+        "5513",
+        "5514",
+        "5515",
+        "5516",
+        "5601",
+        "5602",
+        "5603",
+        "5604",
+        "5605",
+        "5606",
+        "5607",
+        "5608",
+        "5609",
+        "5801",
+        "5802",
+        "5803",
+        "5804",
+        "5805",
+        "5806",
+        "5807",
+        "5808",
+        "5809",
+        "5810",
+        "5811",
+        "5901",
+        "5902",
+        "5903",
+        "5904",
+        "5905",
+        "5906",
+        "5907",
+        "5908",
+        "5909",
+        "5910",
+        "5911",
+        "6001",
+        "6002",
+        "6003",
+        "6004",
+        "6005",
+        "6006"
+      ],
+      "cpc_prefixler": [
+        "26",
+        "27"
+      ],
+      "aciklama_tr": "Tekstil ürünleri imalatı",
+      "aciklama_en": "Preparation and spinning of textile fibres"
+    },
+    {
+      "kod": "nace-giyim",
+      "nace_kodu": "14.19",
+      "gtip_prefixler": [
+        "6101",
+        "6102",
+        "6103",
+        "6104",
+        "6105",
+        "6106",
+        "6107",
+        "6108",
+        "6109",
+        "6110",
+        "6111",
+        "6112",
+        "6113",
+        "6114",
+        "6115",
+        "6116",
+        "6117",
+        "6201",
+        "6202",
+        "6203",
+        "6204",
+        "6205",
+        "6206",
+        "6207",
+        "6208",
+        "6209",
+        "6210",
+        "6211",
+        "6212",
+        "6213",
+        "6214",
+        "6215",
+        "6216",
+        "6217",
+        "6501",
+        "6502",
+        "6503",
+        "6504",
+        "6505",
+        "6506",
+        "6507"
+      ],
+      "cpc_prefixler": [
+        "28"
+      ],
+      "aciklama_tr": "Giyim eşyaları ve başlık imalatı",
+      "aciklama_en": "Manufacture of other wearing apparel and accessories"
+    },
+    {
+      "kod": "nace-tas-imalat",
+      "nace_kodu": "23.70",
+      "gtip_prefixler": [
+        "6801",
+        "6802",
+        "6803",
+        "6804",
+        "6805",
+        "6806",
+        "6807",
+        "6808",
+        "6809",
+        "6810",
+        "6811",
+        "6812",
+        "6813",
+        "6814",
+        "6815"
+      ],
+      "cpc_prefixler": [
+        "37"
+      ],
+      "aciklama_tr": "Taş kesme, şekillendirme ve bitirme",
+      "aciklama_en": "Cutting, shaping and finishing of stone"
+    },
+    {
+      "kod": "nace-cam-imalat",
+      "nace_kodu": "23.11",
+      "gtip_prefixler": [
+        "7001",
+        "7002",
+        "7003",
+        "7004",
+        "7005",
+        "7006",
+        "7007",
+        "7008",
+        "7009",
+        "7010",
+        "7011",
+        "7012",
+        "7013",
+        "7014",
+        "7015",
+        "7016",
+        "7017",
+        "7018",
+        "7019",
+        "7020"
+      ],
+      "cpc_prefixler": [
+        "371"
+      ],
+      "aciklama_tr": "Cam ve cam ürünleri imalatı",
+      "aciklama_en": "Manufacture of flat glass"
+    },
+    {
+      "kod": "nace-demir-celik",
+      "nace_kodu": "24.10",
+      "gtip_prefixler": [
+        "7201",
+        "7202",
+        "7203",
+        "7204",
+        "7205",
+        "7206",
+        "7207",
+        "7208",
+        "7209",
+        "7210",
+        "7211",
+        "7212",
+        "7213",
+        "7214",
+        "7215",
+        "7216",
+        "7217",
+        "7218",
+        "7219",
+        "7220",
+        "7221",
+        "7222",
+        "7223",
+        "7224",
+        "7225",
+        "7226",
+        "7227",
+        "7228",
+        "7229"
+      ],
+      "cpc_prefixler": [
+        "411",
+        "412"
+      ],
+      "aciklama_tr": "Ana demir ve çelik imalatı",
+      "aciklama_en": "Manufacture of basic iron and steel and of ferro-alloys"
+    },
+    {
+      "kod": "nace-metal-esya",
+      "nace_kodu": "25.11",
+      "gtip_prefixler": [
+        "7301",
+        "7302",
+        "7303",
+        "7304",
+        "7305",
+        "7306",
+        "7307",
+        "7308",
+        "7309",
+        "7310",
+        "7311",
+        "7312",
+        "7313",
+        "7314",
+        "7315",
+        "7316",
+        "7317",
+        "7318",
+        "7319",
+        "7320",
+        "7321",
+        "7322",
+        "7323",
+        "7324",
+        "7325",
+        "7326"
+      ],
+      "cpc_prefixler": [
+        "42",
+        "43"
+      ],
+      "aciklama_tr": "Fabrikasyon metal ürünleri imalatı",
+      "aciklama_en": "Manufacture of metal structures and parts of structures"
+    },
+    {
+      "kod": "nace-bakir",
+      "nace_kodu": "24.44",
+      "gtip_prefixler": [
+        "7401",
+        "7402",
+        "7403",
+        "7404",
+        "7405",
+        "7406",
+        "7407",
+        "7408",
+        "7409",
+        "7410",
+        "7411",
+        "7412",
+        "7413",
+        "7414",
+        "7415",
+        "7416",
+        "7417",
+        "7418",
+        "7419"
+      ],
+      "cpc_prefixler": [
+        "414"
+      ],
+      "aciklama_tr": "Bakır imalatı",
+      "aciklama_en": "Copper production"
+    },
+    {
+      "kod": "nace-aluminyum",
+      "nace_kodu": "24.42",
+      "gtip_prefixler": [
+        "7601",
+        "7602",
+        "7603",
+        "7604",
+        "7605",
+        "7606",
+        "7607",
+        "7608",
+        "7609",
+        "7610",
+        "7611",
+        "7612",
+        "7613",
+        "7614",
+        "7615",
+        "7616"
+      ],
+      "cpc_prefixler": [
+        "414"
+      ],
+      "aciklama_tr": "Alüminyum imalatı",
+      "aciklama_en": "Aluminium production"
+    },
+    {
+      "kod": "nace-makine",
+      "nace_kodu": "28.11",
+      "gtip_prefixler": [
+        "8401",
+        "8402",
+        "8403",
+        "8404",
+        "8405",
+        "8406",
+        "8407",
+        "8408",
+        "8409",
+        "8410",
+        "8411",
+        "8412",
+        "8413",
+        "8414",
+        "8479",
+        "8481",
+        "8482",
+        "8483",
+        "8484",
+        "8485",
+        "8486",
+        "8487"
+      ],
+      "cpc_prefixler": [
+        "43"
+      ],
+      "aciklama_tr": "Genel amaçlı makine imalatı",
+      "aciklama_en": "Manufacture of engines and turbines, except aircraft, vehicle and cycle engines"
+    },
+    {
+      "kod": "nace-beyaz-esya",
+      "nace_kodu": "27.51",
+      "gtip_prefixler": [
+        "8415",
+        "8418",
+        "8422",
+        "8450",
+        "8508",
+        "8509",
+        "8516"
+      ],
+      "cpc_prefixler": [
+        "448"
+      ],
+      "aciklama_tr": "Beyaz eşya ve ev aletleri imalatı",
+      "aciklama_en": "Manufacture of electric domestic appliances"
+    },
+    {
+      "kod": "nace-bilgisayar",
+      "nace_kodu": "26.20",
+      "gtip_prefixler": [
+        "8471"
+      ],
+      "cpc_prefixler": [
+        "452"
+      ],
+      "aciklama_tr": "Bilgisayar ve çevre birimleri imalatı",
+      "aciklama_en": "Manufacture of computers and peripheral equipment"
+    },
+    {
+      "kod": "nace-elektrik-motor",
+      "nace_kodu": "27.11",
+      "gtip_prefixler": [
+        "8501",
+        "8502",
+        "8503",
+        "8504"
+      ],
+      "cpc_prefixler": [
+        "461"
+      ],
+      "aciklama_tr": "Elektrik motoru ve transformatör imalatı",
+      "aciklama_en": "Manufacture of electric motors, generators and transformers"
+    },
+    {
+      "kod": "nace-pil-batarya",
+      "nace_kodu": "27.20",
+      "gtip_prefixler": [
+        "8506",
+        "8507"
+      ],
+      "cpc_prefixler": [
+        "464"
+      ],
+      "aciklama_tr": "Pil ve akümülatör imalatı",
+      "aciklama_en": "Manufacture of batteries and accumulators"
+    },
+    {
+      "kod": "nace-iletisim",
+      "nace_kodu": "26.30",
+      "gtip_prefixler": [
+        "8517"
+      ],
+      "cpc_prefixler": [
+        "472"
+      ],
+      "aciklama_tr": "İletişim cihazları imalatı",
+      "aciklama_en": "Manufacture of communication equipment"
+    },
+    {
+      "kod": "nace-tv-elektronik",
+      "nace_kodu": "26.40",
+      "gtip_prefixler": [
+        "8528",
+        "8518",
+        "8519"
+      ],
+      "cpc_prefixler": [
+        "473"
+      ],
+      "aciklama_tr": "Tüketici elektroniği imalatı",
+      "aciklama_en": "Manufacture of consumer electronics"
+    },
+    {
+      "kod": "nace-elektronik-bilesen",
+      "nace_kodu": "26.11",
+      "gtip_prefixler": [
+        "8541",
+        "8542"
+      ],
+      "cpc_prefixler": [
+        "471"
+      ],
+      "aciklama_tr": "Elektronik bileşenlerin imalatı",
+      "aciklama_en": "Manufacture of electronic components"
+    },
+    {
+      "kod": "nace-kablo",
+      "nace_kodu": "27.32",
+      "gtip_prefixler": [
+        "8544"
+      ],
+      "cpc_prefixler": [
+        "463"
+      ],
+      "aciklama_tr": "Kablo ve tel imalatı",
+      "aciklama_en": "Manufacture of other electronic and electric wires and cables"
+    },
+    {
+      "kod": "nace-otomotiv",
+      "nace_kodu": "29.10",
+      "gtip_prefixler": [
+        "8701",
+        "8702",
+        "8703",
+        "8704",
+        "8705",
+        "8706",
+        "8707",
+        "8708"
+      ],
+      "cpc_prefixler": [
+        "491",
+        "492"
+      ],
+      "aciklama_tr": "Motorlu kara taşıtı imalatı",
+      "aciklama_en": "Manufacture of motor vehicles"
+    },
+    {
+      "kod": "nace-motosiklet",
+      "nace_kodu": "30.91",
+      "gtip_prefixler": [
+        "8711"
+      ],
+      "cpc_prefixler": [
+        "499"
+      ],
+      "aciklama_tr": "Motosiklet imalatı",
+      "aciklama_en": "Manufacture of motorcycles"
+    },
+    {
+      "kod": "nace-hava-araci",
+      "nace_kodu": "30.30",
+      "gtip_prefixler": [
+        "8801",
+        "8802",
+        "8803",
+        "8804",
+        "8805"
+      ],
+      "cpc_prefixler": [
+        "496"
+      ],
+      "aciklama_tr": "Hava ve uzay aracı imalatı",
+      "aciklama_en": "Manufacture of air and spacecraft and related machinery"
+    },
+    {
+      "kod": "nace-gemi",
+      "nace_kodu": "30.11",
+      "gtip_prefixler": [
+        "8901",
+        "8902",
+        "8903",
+        "8904",
+        "8905",
+        "8906",
+        "8907",
+        "8908"
+      ],
+      "cpc_prefixler": [
+        "493"
+      ],
+      "aciklama_tr": "Gemi ve tekne imalatı",
+      "aciklama_en": "Building of ships and floating structures"
+    },
+    {
+      "kod": "nace-olcum-cihaz",
+      "nace_kodu": "26.51",
+      "gtip_prefixler": [
+        "9001",
+        "9002",
+        "9003",
+        "9004",
+        "9005",
+        "9006",
+        "9007",
+        "9008"
+      ],
+      "cpc_prefixler": [
+        "482"
+      ],
+      "aciklama_tr": "Ölçme, test ve seyrüsefer cihazları imalatı",
+      "aciklama_en": "Manufacture of instruments and appliances for measuring, testing and navigation"
+    },
+    {
+      "kod": "nace-mobilya",
+      "nace_kodu": "31.00",
+      "gtip_prefixler": [
+        "9401",
+        "9402",
+        "9403",
+        "9404",
+        "9405",
+        "9406"
+      ],
+      "cpc_prefixler": [
+        "381"
+      ],
+      "aciklama_tr": "Mobilya imalatı",
+      "aciklama_en": "Manufacture of furniture"
+    },
+    {
+      "kod": "nace-spor-oyuncak",
+      "nace_kodu": "32.40",
+      "gtip_prefixler": [
+        "9503",
+        "9504",
+        "9505",
+        "9506",
+        "9507",
+        "9508"
+      ],
+      "cpc_prefixler": [
+        "385",
+        "447"
+      ],
+      "aciklama_tr": "Oyun ve oyuncak imalatı",
+      "aciklama_en": "Manufacture of games and toys"
+    },
+    {
+      "kod": "nace-insaat",
+      "nace_kodu": "41.20",
+      "gtip_prefixler": [],
+      "cpc_prefixler": [
+        "54"
+      ],
+      "aciklama_tr": "Bina inşaatı",
+      "aciklama_en": "Construction of buildings"
+    }
+  ]
+}

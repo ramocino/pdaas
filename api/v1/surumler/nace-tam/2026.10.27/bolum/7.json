@@ -1,0 +1,2970 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "nace-tam",
+      "ad": {
+        "tr": "NACE Tüm Belgeler",
+        "en": "NACE All Documents"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "nace",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.27",
+    "guncelleme": "2026-10-27",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.27"
+      },
+      "uretim_zamani": "2026-10-27T13:33:06.673129+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "bolum",
+      "kod": "7",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:e7978ec036272d2a50cca0e0c8c3b8c54ed0d2cd8ef330e4833697e76818e6c9"
+  },
+  "kayitlar": [
+    {
+      "kod": "70",
+      "tanim_tr": "İdare merkezi ve idari danışmanlık faaliyetleri",
+      "tanim_en": "Activities of head offices and management consultancy",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "701",
+      "tanim_tr": "İdare merkezi faaliyetleri",
+      "tanim_en": "Activities of head offices",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7010",
+      "tanim_tr": "İdare merkezi faaliyetleri",
+      "tanim_en": "Activities of head offices",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "701001",
+      "tanim_tr": "İdare merkezi faaliyetleri (idare merkezi tarafından aynı şirket veya girişimin diğer birimlerine sağlanan yönetim hizmetleri ile bağlı iştiraklerini yöneten holdingler dahil)",
+      "tanim_en": "Activities of head offices (including management services provided by the head office to other units of the same company or enterprise, and holding companies managing their affiliated companies)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "702",
+      "tanim_tr": "İşletme ve diğer idari danışmanlık faaliyetleri",
+      "tanim_en": "Business and other management consultancy activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7020",
+      "tanim_tr": "İşletme ve diğer idari danışmanlık faaliyetleri",
+      "tanim_en": "Business and other management consultancy activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "702001",
+      "tanim_tr": "İşletme ve diğer idari danışmanlık faaliyetleri",
+      "tanim_en": "Business and other management consultancy activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "702002",
+      "tanim_tr": "İnsan kaynakları yönetim danışmanlığı faaliyetleri",
+      "tanim_en": "Human resources management consulting activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "71",
+      "tanim_tr": "Mimarlık ve mühendislik faaliyetleri; teknik test ve analiz faaliyetleri",
+      "tanim_en": "Architectural and engineering activities; technical testing and analysis",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711",
+      "tanim_tr": "Mimarlık ve mühendislik faaliyetleri ve ilgili teknik danışmanlık",
+      "tanim_en": "Architectural and engineering activities and related technical consultancy",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7111",
+      "tanim_tr": "Mimarlık faaliyetleri",
+      "tanim_en": "Architectural activities",
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "oda-kayit-belgesi",
+            "ad_tr": "Meslek Odası Kayıt Belgesi",
+            "ad_en": "Professional Chamber Registration Certificate",
+            "kurum_kod": "tobb",
+            "seviye": "zorunlu",
+            "kosul_tr": "Mühendislik, mimarlık gibi meslekler için bağlı olunan meslek odasından alınan kayıt belgesi.",
+            "kosul_en": "Registration certificate issued by the relevant professional chamber for professions such as engineering and architecture."
+          }
+        ],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711101",
+      "tanim_tr": "Mimarlık faaliyetleri ve mimari danışmanlık faaliyetleri (kültürel miras varlıklarının korunmasını ve restorasyonunu destekleyen mimari faaliyetler ile bir binanın iç yapısının ve düzeninin yeniden tasarlanması)",
+      "tanim_en": "Architectural activities, including architectural design and consultancy services, services related to the conservation and restoration of cultural heritage buildings, and the redesign of the internal structure and layout of buildings",
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "oda-kayit-belgesi",
+            "ad_tr": "Meslek Odası Kayıt Belgesi",
+            "ad_en": "Professional Chamber Registration Certificate",
+            "kurum_kod": "tobb",
+            "seviye": "zorunlu",
+            "kosul_tr": "Mühendislik, mimarlık gibi meslekler için bağlı olunan meslek odasından alınan kayıt belgesi.",
+            "kosul_en": "Registration certificate issued by the relevant professional chamber for professions such as engineering and architecture."
+          }
+        ],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711102",
+      "tanim_tr": "Şehir ve bölge planlama faaliyetleri (nazım imar planı, vaziyet planı vb. dahil)",
+      "tanim_en": "Urban and regional planning activities (including master development plans, site plans, etc.)",
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "oda-kayit-belgesi",
+            "ad_tr": "Meslek Odası Kayıt Belgesi",
+            "ad_en": "Professional Chamber Registration Certificate",
+            "kurum_kod": "tobb",
+            "seviye": "zorunlu",
+            "kosul_tr": "Mühendislik, mimarlık gibi meslekler için bağlı olunan meslek odasından alınan kayıt belgesi.",
+            "kosul_en": "Registration certificate issued by the relevant professional chamber for professions such as engineering and architecture."
+          }
+        ],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711104",
+      "tanim_tr": "Peyzaj mimarisi faaliyetleri ve peyzaj konusunda mimari danışmanlık faaliyetleri",
+      "tanim_en": "Landscape architecture activities and architectural consultancy services in the field of landscape architecture",
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "oda-kayit-belgesi",
+            "ad_tr": "Meslek Odası Kayıt Belgesi",
+            "ad_en": "Professional Chamber Registration Certificate",
+            "kurum_kod": "tobb",
+            "seviye": "zorunlu",
+            "kosul_tr": "Mühendislik, mimarlık gibi meslekler için bağlı olunan meslek odasından alınan kayıt belgesi.",
+            "kosul_en": "Registration certificate issued by the relevant professional chamber for professions such as engineering and architecture."
+          }
+        ],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7112",
+      "tanim_tr": "Mühendislik faaliyetleri ve ilgili teknik danışmanlık",
+      "tanim_en": "Engineering activities and related technical consultancy",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711201",
+      "tanim_tr": "Yer yüzeyinin araştırılması ve harita yapımına yönelik mühendislik faaliyetleri",
+      "tanim_en": "Engineering activities for the exploration of the earth's surface and the preparation of maps",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711203",
+      "tanim_tr": "Bina projelerine yönelik mühendislik ve danışmanlık faaliyetleri",
+      "tanim_en": "Engineering and consultancy activities for building projects",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711204",
+      "tanim_tr": "Jeolojik, jeofizik ve ilgili araştırma ve danışmanlık hizmetlerine yönelik mühendislik faaliyetleri (petrol ve doğalgaz için olanlar hariç)",
+      "tanim_en": "Engineering activities for geological, geophysical and related research and consultancy services (excluding for oil and natural gas)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711205",
+      "tanim_tr": "Petrol ve doğalgaz çıkarım projelerine yönelik mühendislik ve danışmanlık faaliyetleri",
+      "tanim_en": "Engineering and consultancy activities for oil and natural gas extraction projects",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711206",
+      "tanim_tr": "Ulaştırma projelerine yönelik mühendislik ve danışmanlık faaliyetleri",
+      "tanim_en": "Engineering and consultancy activities for transportation projects",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711207",
+      "tanim_tr": "Su, kanalizasyon ve drenaj projelerine yönelik mühendislik ve danışmanlık faaliyetleri",
+      "tanim_en": "Engineering and consultancy activities for water, sewerage and drainage projects",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711208",
+      "tanim_tr": "Sanayi ve imalat projelerine yönelik mühendislik ve danışmanlık faaliyetleri",
+      "tanim_en": "Engineering and consultancy activities for industrial and manufacturing projects",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711209",
+      "tanim_tr": "Enerji projelerine yönelik mühendislik ve danışmanlık faaliyetleri",
+      "tanim_en": "Engineering and consultancy activities for energy projects",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711210",
+      "tanim_tr": "Mühendislik danışmanlık hizmetleri (bir projeyle bağlantılı olarak yapılanlar hariç)",
+      "tanim_en": "Engineering consultancy services (excluding performed in connection with a project)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711214",
+      "tanim_tr": "Yapı denetim kuruluşları",
+      "tanim_en": "Construction supervision organisations",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "711290",
+      "tanim_tr": "Diğer projelere yönelik mühendislik ve danışmanlık faaliyetleri",
+      "tanim_en": "Engineering and consultancy activities for other projects",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "712",
+      "tanim_tr": "Teknik test ve analiz faaliyetleri",
+      "tanim_en": "Technical testing and analysis",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7120",
+      "tanim_tr": "Teknik test ve analiz faaliyetleri",
+      "tanim_en": "Technical testing and analysis",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "712005",
+      "tanim_tr": "Kara yolu taşıma araçlarının teknik muayene faaliyetleri",
+      "tanim_en": "Technical testing activities of road transport vehicles",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "712007",
+      "tanim_tr": "Bileşim ve saflık konularında teknik test ve analiz faaliyetleri",
+      "tanim_en": "Technical testing activities of composition and purity of minerals",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "712008",
+      "tanim_tr": "Su, hava vb. kirliliği konularında teknik test ve analiz faaliyetleri",
+      "tanim_en": "Technical testing and analysis activities on water, air, etc. pollution issues",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "712009",
+      "tanim_tr": "Fiziksel özellikler konusunda teknik test ve analiz faaliyetleri",
+      "tanim_en": "Technical testing and analysis activities on physical characteristics",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "712010",
+      "tanim_tr": "Ürünlerin ruhsatlandırılması faaliyetleri",
+      "tanim_en": "Product certification activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "712011",
+      "tanim_tr": "Gıda konusunda teknik test ve analiz faaliyetleri",
+      "tanim_en": "Technical testing and analysis activities in the fields of food",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "712012",
+      "tanim_tr": "Entegre mekanik ve elektrik sistemleri konusunda teknik test ve analiz faaliyetleri",
+      "tanim_en": "Technical testing and analysis activities on integrated mechanical and electrical systems",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "712013",
+      "tanim_tr": "Polis laboratuvarlarının analiz faaliyetleri",
+      "tanim_en": "Operation of police laboratories",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "712014",
+      "tanim_tr": "Adli tıp laboratuvarlarının faaliyetleri",
+      "tanim_en": "Operation of forensic laboratories",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "712090",
+      "tanim_tr": "Diğer teknik test ve analiz faaliyetleri",
+      "tanim_en": "Other technical testing and analysis",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "72",
+      "tanim_tr": "Bilimsel araştırma ve geliştirme faaliyetleri",
+      "tanim_en": "Scientific research and development",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "721",
+      "tanim_tr": "Doğal bilimler ve mühendislikle ilgili araştırma ve deneysel geliştirme faaliyetleri",
+      "tanim_en": "Research and experimental development on natural sciences and engineering",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7210",
+      "tanim_tr": "Doğal bilimler ve mühendislikle ilgili araştırma ve deneysel geliştirme faaliyetleri",
+      "tanim_en": "Research and experimental development on natural sciences and engineering",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "721001",
+      "tanim_tr": "Doğal bilimler ve mühendislikle ilgili diğer araştırma ve deneysel geliştirme faaliyetleri (tarımsal araştırmalar dahil)",
+      "tanim_en": "Other research and experimental development on natural sciences and engineering (including agricultural research)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "721002",
+      "tanim_tr": "Biyoteknolojiyle ilgili araştırma ve deneysel geliştirme faaliyetleri",
+      "tanim_en": "Research and experimental development on biotechnology",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "722",
+      "tanim_tr": "Sosyal bilimlerle ve beşeri bilimlerle ilgili araştırma ve deneysel geliştirme faaliyetleri",
+      "tanim_en": "Research and experimental development on social sciences and humanities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7220",
+      "tanim_tr": "Sosyal bilimlerle ve beşeri bilimlerle ilgili araştırma ve deneysel geliştirme faaliyetleri",
+      "tanim_en": "Research and experimental development on social sciences and humanities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "722001",
+      "tanim_tr": "Sosyal bilimlerle ve beşeri bilimlerle ilgili araştırma ve deneysel geliştirme faaliyetleri",
+      "tanim_en": "Research and experimental development on social sciences and humanities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "73",
+      "tanim_tr": "Reklamcılık, piyasa araştırması ve halkla ilişkiler faaliyetleri",
+      "tanim_en": "Activities of advertising, market research and public relations",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "731",
+      "tanim_tr": "Reklamcılık",
+      "tanim_en": "Advertising",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7311",
+      "tanim_tr": "Reklam ajanslarının faaliyetleri",
+      "tanim_en": "Activities of advertising agencies",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "731101",
+      "tanim_tr": "Reklam ajanslarının faaliyetleri (kullanılacak medyanın seçimi, reklamın tasarımı, sözlerin yazılması, reklam filmleri için senaryonun yazımı, satış noktalarında reklam ürünlerinin gösterimi ve sunumu vb.)",
+      "tanim_en": "Activities of advertising agencies (selection of media to be used, design of advertisements, writing of copy, writing of scripts for advertising films, display and presentation of advertising products at points of sale, etc.)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "731103",
+      "tanim_tr": "Reklam araç ve eşantiyonların dağıtımı ve teslimi faaliyetleri",
+      "tanim_en": "Distribution or delivery of advertising material or samples activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7312",
+      "tanim_tr": "Çeşitli medya reklamları için alan ve zamanın bir ücret veya sözleşmeye dayalı olarak satışı",
+      "tanim_en": "Media representation",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "731202",
+      "tanim_tr": "Çeşitli medya reklamları için alan ve zamanın bir ücret veya sözleşmeye dayalı olarak satışı",
+      "tanim_en": "Media representation",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "732",
+      "tanim_tr": "Piyasa ve kamuoyu araştırma faaliyetleri",
+      "tanim_en": "Market research and public opinion polling",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7320",
+      "tanim_tr": "Piyasa ve kamuoyu araştırma faaliyetleri",
+      "tanim_en": "Market research and public opinion polling",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "732003",
+      "tanim_tr": "Piyasa ve kamuoyu araştırma faaliyetleri",
+      "tanim_en": "Market research and public opinion polling",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "733",
+      "tanim_tr": "Halkla ilişkiler ve iletişim faaliyetleri",
+      "tanim_en": "Public relations and communication activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7330",
+      "tanim_tr": "Halkla ilişkiler ve iletişim faaliyetleri",
+      "tanim_en": "Public relations and communication activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "733000",
+      "tanim_tr": "Halkla ilişkiler ve iletişim faaliyetleri",
+      "tanim_en": "Public relations and communication activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "74",
+      "tanim_tr": "Diğer mesleki, bilimsel ve teknik faaliyetler",
+      "tanim_en": "Other professional, scientific and technical activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "741",
+      "tanim_tr": "Uzmanlaşmış tasarım faaliyetleri",
+      "tanim_en": "Specialised design activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7411",
+      "tanim_tr": "Endüstriyel ürün ve moda tasarımı faaliyetleri",
+      "tanim_en": "Industrial product and fashion design activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "741100",
+      "tanim_tr": "Endüstriyel ürün ve moda tasarımı faaliyetleri",
+      "tanim_en": "Industrial product and fashion design activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7412",
+      "tanim_tr": "Grafik tasarım ve görsel iletişim faaliyetleri",
+      "tanim_en": "Graphic design and visual communication activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "741200",
+      "tanim_tr": "Grafik tasarım ve görsel iletişim faaliyetleri",
+      "tanim_en": "Graphic design and visual communication activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7413",
+      "tanim_tr": "İç tasarım faaliyetleri",
+      "tanim_en": "Interior design activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "741300",
+      "tanim_tr": "İç tasarım faaliyetleri (iç mimarların faaliyetleri dahil)",
+      "tanim_en": "Interior design activities (including the activities of interior designers)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7414",
+      "tanim_tr": "Diğer uzmanlaşmış tasarım faaliyetleri",
+      "tanim_en": "Other specialised design activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "741400",
+      "tanim_tr": "Diğer uzmanlaşmış tasarım faaliyetleri (endüstriyel ürün ve moda tasarım, iç tasarım ve grafik tasarım faaliyetleri hariç)",
+      "tanim_en": "Other specialised design activities (excluding industrial product and fashion design, interior design and graphic design activities)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "742",
+      "tanim_tr": "Fotoğrafçılık faaliyetleri",
+      "tanim_en": "Photographic activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7420",
+      "tanim_tr": "Fotoğrafçılık faaliyetleri",
+      "tanim_en": "Photographic activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "742022",
+      "tanim_tr": "Tüketicilere yönelik fotoğrafçılık faaliyetleri (pasaport, okul, düğün vb. için vesikalık ve portre fotoğrafçılığı vb.)",
+      "tanim_en": "Consumer photography activities (passport, headshot and portrait photography for schools, weddings, etc.)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "742025",
+      "tanim_tr": "Hava ve su altı fotoğrafçılığı faaliyetleri",
+      "tanim_en": "Aerial and underwater photography activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "742026",
+      "tanim_tr": "Reklamcılık ile ilgili fotoğrafçılık faaliyetleri (reklam görselleri, broşür, gazete ilanı, katalog vb. için ticari ürünlerin, moda kıyafetlerinin, makinelerin, binaların, kişilerin vb.nin fotoğraflarının çekilmesi)",
+      "tanim_en": "Advertising-related photography activities (taking photographs of commercial products, fashion clothing, machinery, buildings, people, etc. for advertising visuals, brochures, newspaper ads, catalogues, etc.)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "742027",
+      "tanim_tr": "Etkinlik fotoğrafçılığı ve etkinliklerin videoya çekilmesi faaliyetleri (düğün, mezuniyet, konferans, resepsiyon, moda gösterileri, spor ve diğer ilgi çekici olayların fotoğraflanması veya videoya çekilmesi)",
+      "tanim_en": "Event photography and videotaping activities (photography or videotaping of weddings, graduations, conferences, receptions, fashion shows, sports and other interesting events)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "742028",
+      "tanim_tr": "Bağımsız foto muhabirlerinin faaliyetleri",
+      "tanim_en": "Activities of independent photojournalists",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "742029",
+      "tanim_tr": "Fotoğraf işleme faaliyetleri",
+      "tanim_en": "Photo processing activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "742090",
+      "tanim_tr": "Diğer fotoğrafçılık faaliyetleri (fotomikrografi, mikrofilm hizmetleri, fotoğrafların restorasyonu ve rötuşlama vb.)",
+      "tanim_en": "Other photographic activities (photomicrography, microfilm services, restoration and retouching of photographs, etc.)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "743",
+      "tanim_tr": "Tercüme ve sözlü tercüme faaliyetleri",
+      "tanim_en": "Translation and interpretation activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7430",
+      "tanim_tr": "Tercüme ve sözlü tercüme faaliyetleri",
+      "tanim_en": "Translation and interpretation activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "743012",
+      "tanim_tr": "Tercüme ve sözlü tercüme faaliyetleri (işaret dili dahil)",
+      "tanim_en": "Translation and interpretation activities (including sign language)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "749",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer mesleki, bilimsel ve teknik faaliyetler",
+      "tanim_en": "Other professional, scientific and technical activities n.e.c.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7491",
+      "tanim_tr": "Patent aracılığı ve pazarlama hizmeti faaliyetleri",
+      "tanim_en": "Patent brokering and marketing service activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "749100",
+      "tanim_tr": "Patent aracılığı ve pazarlama hizmeti faaliyetleri",
+      "tanim_en": "Patent brokering and marketing service activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7499",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer mesleki, bilimsel ve teknik faaliyetler",
+      "tanim_en": "All other professional, scientific and technical activities n.e.c.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "749901",
+      "tanim_tr": "Sanatçı, sporcu, şovmen, manken ve diğerleri için ajansların ve menajerlerin faaliyetleri",
+      "tanim_en": "Activities of agencies and managers for artists, athletes, entertainers, models and others",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "749902",
+      "tanim_tr": "Gemi klas müesseseleri, deniz ekspertiz ve deniz sürveyör faaliyetleri",
+      "tanim_en": "Ship classification societies, marine appraisal and marine surveying activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "749903",
+      "tanim_tr": "İşyeri komisyonculuğu faaliyetleri (küçük ve orta ölçekli işletmelerin alım ve satımının düzenlenmesi vb.)",
+      "tanim_en": "Business brokerage activities, i.e. arranging for the purchase and sale of small and medium-sized businesses",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "749904",
+      "tanim_tr": "Ekspertiz faaliyetleri (antika eşyalar, mücevherler vb. için ekspertiz hizmetleri) (deniz, gayrimenkul ve sigorta için olan ekspertiz faaliyetleri hariç)",
+      "tanim_en": "Appraisal activities (appraisal services for antiques, jewelry, etc.) (excluding appraisal activities for marine, real estate, and insurance)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "749999",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer mesleki, bilimsel ve teknik faaliyetler (güvenlik danışmanlığı hariç)",
+      "tanim_en": "All other professional, scientific and technical activities n.e.c. (excluding security consultancy)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "75",
+      "tanim_tr": "Veterinerlik hizmetleri",
+      "tanim_en": "Veterinary activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "750",
+      "tanim_tr": "Veterinerlik hizmetleri",
+      "tanim_en": "Veterinary activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7500",
+      "tanim_tr": "Veterinerlik hizmetleri",
+      "tanim_en": "Veterinary activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "750002",
+      "tanim_tr": "Hayvan hastanelerinin faaliyetleri (evcil hayvanlar için ambulans faaliyetleri dahil)",
+      "tanim_en": "Activities of animal hospitals (including ambulance services for pets)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "750004",
+      "tanim_tr": "Veterinerlik hizmetleri (hayvan hastanelerinde verilen hizmetler hariç)",
+      "tanim_en": "Veterinary services (excluding services provided in animal hospitals)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "77",
+      "tanim_tr": "Kiralama ve leasing faaliyetleri",
+      "tanim_en": "Rental and leasing activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "771",
+      "tanim_tr": "Motorlu kara taşıtlarının kiralanması ve leasingi",
+      "tanim_en": "Rental and leasing of motor vehicles",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7711",
+      "tanim_tr": "Motorlu hafif kara taşıtlarının ve arabaların kiralanması ve leasingi",
+      "tanim_en": "Rental and leasing of cars and light motor vehicles",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "771101",
+      "tanim_tr": "Motorlu hafif kara taşıtlarının ve arabaların sürücüsüz olarak kiralanması ve operasyonel leasingi (motosiklet ve motokaravan için olanlar hariç)",
+      "tanim_en": "Rental and operational leasing of light motor vehicles and cars without a driver (except for motorcycles and motorhomes)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "771102",
+      "tanim_tr": "Motosiklet ve motokaravanların sürücüsüz olarak kiralanması veya operasyonel leasingi (ağırlığı 3.5 tondan daha az olanlar)",
+      "tanim_en": "Rental or operational leasing of motorcycles and motorhomes without a driver (with a maximum permissible weight not exceeding 3.5 tons)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7712",
+      "tanim_tr": "Kamyonların kiralanması ve leasingi",
+      "tanim_en": "Rental and leasing of trucks",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "771201",
+      "tanim_tr": "Motorlu ağır kara taşıtlarının sürücüsüz olarak kiralanması ve operasyonel leasingi (ağırlığı 3.5 tondan daha fazla olanlar) (motokaravan için olanlar hariç)",
+      "tanim_en": "Renting and operational leasing of heavy motor vehicles (with a maximum permissible weight of more than 3.5 tons) without a driver (excluding motorhomes)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "771202",
+      "tanim_tr": "Motokaravanların sürücüsüz olarak kiralanması ve operasyonel leasingi (ağırlığı 3.5 tondan daha fazla olanlar)",
+      "tanim_en": "Rental and operational leasing of motorhomes without a driver (with a maximum permissible weight of more than 3.5 tons)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "772",
+      "tanim_tr": "Kişisel eşyaların ve ev eşyalarının kiralanması ve leasingi",
+      "tanim_en": "Rental and leasing of personal and household goods",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7721",
+      "tanim_tr": "Eğlence ve spor eşyalarının kiralanması ve leasingi",
+      "tanim_en": "Rental and leasing of recreational and sports goods",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "772102",
+      "tanim_tr": "Bisikletlerin kiralanması ve leasingi (elektrikli bisikletler dahil) (finansal leasing hariç)",
+      "tanim_en": "Rental and leasing of bicycles (including bicycles with electrical assistance) (excluding financial leasing)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "772104",
+      "tanim_tr": "Eğlence ve spor amaçlı sandal, tekne, kano, yelkenli vb.nin mürettebatsız olarak kiralanması ve leasingi (finansal leasing hariç)",
+      "tanim_en": "Renting and leasing of rowboats, boats, canoes, sailboats, etc. without crew for entertainment and sports purposes (excluding financial leasing)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "772190",
+      "tanim_tr": "Diğer eğlence ve spor eşyalarının kiralanması ve leasingi (finansal leasing hariç)",
+      "tanim_en": "Renting and leasing of other recreational and sports equipment (excluding financial leasing)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7722",
+      "tanim_tr": "Diğer kişisel eşyaların ve ev eşyalarının kiralanması ve leasingi",
+      "tanim_en": "Rental and leasing of other personal and household goods",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "772201",
+      "tanim_tr": "Video kasetlerinin, plakların ve disklerin kiralanması ve operasyonel leasingi",
+      "tanim_en": "Rental and operational leasing of video tapes, records and discs",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "772202",
+      "tanim_tr": "Gelinlik, kostüm, tekstil, giyim eşyası, ayakkabı ve mücevherlerin kiralanması ve operasyonel leasingi",
+      "tanim_en": "Renting and operational leasing of wedding dresses, costumes, textiles, wearing apparel, shoes and jewellery",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "772203",
+      "tanim_tr": "Müzik aletlerinin kiralanması ve operasyonel leasingi",
+      "tanim_en": "Rental and operational leasing of musical instruments",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "772299",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer kişisel ve ev eşyalarının kiralanması ve operasyonel leasingi (müzik aleti, giyim eşyası, mücevher vb. ile video kasetler, büro mobilyaları, eğlence ve spor ekipmanları hariç)",
+      "tanim_en": "Renting and operational leasing of other personal and household goods n.e.c. (excluding musical instruments, wearing apparel, jewellery, etc., video tapes, office furniture, entertainment and sports equipment)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773",
+      "tanim_tr": "Diğer makine, ekipman ve maddi malların kiralanması ve leasingi",
+      "tanim_en": "Rental and leasing of other machinery, equipment and tangible goods",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7731",
+      "tanim_tr": "Tarımsal makine ve ekipmanların kiralanması ve leasingi",
+      "tanim_en": "Rental and leasing of agricultural machinery and equipment",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773101",
+      "tanim_tr": "Tarımsal makine ve ekipmanların operatörsüz olarak kiralanması ve operasyonel leasingi (çim biçme makineleri hariç)",
+      "tanim_en": "Renting and operational leasing of agricultural machinery and equipment without operator (except lawnmowers)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7732",
+      "tanim_tr": "Bina ve bina dışı inşaatlarda kullanılan makine ve ekipmanların kiralanması ve leasingi",
+      "tanim_en": "Rental and leasing of construction and civil engineering machinery and equipment",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773201",
+      "tanim_tr": "Bina ve bina dışı inşaatlarda kullanılan makine ve ekipmanların operatörsüz olarak kiralanması ve operasyonel leasingi (kurma/sökme hariç)",
+      "tanim_en": "Renting and operational leasing of machinery and equipment used in construction and civil engineering without an operator (excluding installation/dismantling)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7733",
+      "tanim_tr": "Büro makine, ekipman ve bilgisayarlarının kiralanması ve leasingi",
+      "tanim_en": "Rental and leasing of office machinery, equipment and computers",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773301",
+      "tanim_tr": "Büro makine ve ekipmanlarının operatörsüz olarak kiralanması ve leasingi (finansal leasing hariç)",
+      "tanim_en": "Rental and operating leasing of office machinery and equipment without an operator (excluding financial leasing)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773302",
+      "tanim_tr": "Büro mobilyalarının kiralanması ve leasingi (büro sandalyesi ve masasının kiralanması dahil) (finansal leasing hariç)",
+      "tanim_en": "Renting and leasing of office furniture (including rental of office chairs and desks) (excluding financial leasing)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773303",
+      "tanim_tr": "Bilgisayar ve çevre birimlerinin operatörsüz olarak kiralanması ve leasingi (finansal leasing hariç)",
+      "tanim_en": "Renting and leasing of computers and computer peripheral equipment without an operator (excluding financial leasing)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7734",
+      "tanim_tr": "Su yolu taşımacılığı ekipmanının kiralanması ve leasingi",
+      "tanim_en": "Rental and leasing of water transport equipment",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773401",
+      "tanim_tr": "Su yolu taşımacılığı ekipmanlarının operatörsüz olarak kiralanması ve operasyonel leasingi (yolcu ve yük taşımacılığı için ticari tekne ve gemiler dahil, gezinti tekneleri hariç)",
+      "tanim_en": "Rental and operating leasing of water transport equipment without an operator (including commercial boats and ships for passenger and cargo transport, excluding pleasure boats)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7735",
+      "tanim_tr": "Hava taşımacılığı araçlarının kiralanması ve leasingi",
+      "tanim_en": "Rental and leasing of air transport equipment",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773501",
+      "tanim_tr": "Hava taşımacılığı araçlarının operatörsüz olarak kiralanması ve operasyonel leasingi",
+      "tanim_en": "Rental and operating leasing of air transport equipment without an operator",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7739",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer makine, ekipman ve maddi malların kiralanması ve leasingi",
+      "tanim_en": "Rental and leasing of other machinery, equipment and tangible goods n.e.c.",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773901",
+      "tanim_tr": "Demir yolu ulaşım ekipmanlarının operatörsüz olarak kiralanması ve operasyonel leasingi",
+      "tanim_en": "Renting and operational leasing of railway transportation equipment without an operator",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773902",
+      "tanim_tr": "Konteynerlerin kiralanması veya leasingi (konaklama ve büro amaçlı olanlar, birden çok taşıma türlerine uygun olanlar ve diğerleri) (finansal leasing hariç)",
+      "tanim_en": "Renting or leasing of containers (for accommodation and office purposes, suitable for multiple modes of transportation and others) (excluding financial leasing)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773903",
+      "tanim_tr": "Motosiklet, karavan ve kamp gereçlerinin operatörsüz olarak kiralanması veya leasingi (finansal leasing hariç)",
+      "tanim_en": "Renting or leasing of motorcycles, caravans and camping equipment without an operator (excluding financial leasing)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773904",
+      "tanim_tr": "Maden ve petrol sahasında kullanılan ekipmanların operatörsüz olarak kiralanması veya leasingi (finansal leasing hariç)",
+      "tanim_en": "Renting or leasing of equipment used in mining and oil fields without an operator (excluding financial leasing)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773905",
+      "tanim_tr": "Motorlar ve türbinlerin operatörsüz olarak kiralanması veya leasingi (finansal leasing hariç)",
+      "tanim_en": "Renting or leasing of engines and turbines without operator (excluding financial leasing)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773906",
+      "tanim_tr": "Mesleki ve bilimsel amaçlı ölçüm ve kontrol ekipmanlarının operatörsüz olarak kiralanması veya leasingi (tıbbi cihaz ve ekipmanların kiralanması dahil) (finansal leasing hariç)",
+      "tanim_en": "Renting or leasing of measurement and control equipment for professional and scientific purposes without an operator (including leasing of medical devices and equipment) (excluding financial leasing)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773907",
+      "tanim_tr": "Ticari radyo, televizyon ve telekomünikasyon ekipmanları ile sinema filmi yapım ekipmanlarının operatörsüz olarak kiralanması veya operasyonel leasingi",
+      "tanim_en": "Renting or operational leasing of commercial radio, television and telecommunications equipment and motion picture production equipment without an operator",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "773999",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer makine ve ekipmanların sürücüsüz kiralanması ve leasingi ile maddi malların kiralanması ve operasyonel leasingi",
+      "tanim_en": "Rental and leasing of other machinery and equipment without a driver n.e.c. and rental and operational leasing of tangible goods",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "774",
+      "tanim_tr": "Fikri mülkiyet haklarının ve benzer ürünlerin leasingi (Telif hakkı alınmış olan çalışmalar hariç)",
+      "tanim_en": "Leasing of intellectual property and similar products, except copyrighted works",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7740",
+      "tanim_tr": "Fikri mülkiyet haklarının ve benzer ürünlerin leasingi (Telif hakkı alınmış olan çalışmalar hariç)",
+      "tanim_en": "Leasing of intellectual property and similar products, except copyrighted works",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "774001",
+      "tanim_tr": "Fikri mülkiyet haklarının ve benzer ürünlerin leasingi (patentli varlıklar, markalar, imtiyaz sözleşmeleri vb. dahil; telif hakkı alınmış olan çalışmalar hariç) (finansal leasing hariç)",
+      "tanim_en": "Leasing of intellectual property rights and similar products, except copyrighted works (including patented entities, brands, franchise agreements, etc.) (excluding financial leasing)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "775",
+      "tanim_tr": "Maddi varlıkların ve finans dışı maddi olmayan varlıkların kiralanması ve leasingi için aracılık hizmeti faaliyetleri",
+      "tanim_en": "Intermediation service activities for rental and leasing of tangible goods and non-financial intangible assets",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7751",
+      "tanim_tr": "Otomobillerin, motorlu karavanların ve römorkların kiralanması ve leasingine ilişkin aracılık hizmeti faaliyetleri",
+      "tanim_en": "Intermediation service activities for rental and leasing of cars, motorhomes and trailers",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "775100",
+      "tanim_tr": "Otomobillerin, motorlu karavanların ve römorkların kiralanması ve leasingine ilişkin aracılık hizmeti faaliyetleri",
+      "tanim_en": "Intermediation service activities for rental and leasing of cars, motorhomes and trailers",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7752",
+      "tanim_tr": "Diğer maddi varlıkların ve finans dışı maddi olmayan varlıkların kiralanması ve leasingi için aracılık hizmeti faaliyetleri",
+      "tanim_en": "Intermediation service activities for rental and leasing of other tangible goods and non-financial intangible assets",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "775200",
+      "tanim_tr": "Diğer maddi varlıkların ve finans dışı maddi olmayan varlıkların kiralanması ve leasingi için aracılık hizmeti faaliyetleri",
+      "tanim_en": "Intermediation service activities for rental and leasing of other tangible goods and non-financial intangible assets",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "78",
+      "tanim_tr": "İstihdam faaliyetleri",
+      "tanim_en": "Employment activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "781",
+      "tanim_tr": "İş bulma acentelerinin faaliyetleri",
+      "tanim_en": "Activities of employment placement agencies",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7810",
+      "tanim_tr": "İş bulma acentelerinin faaliyetleri",
+      "tanim_en": "Activities of employment placement agencies",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "781001",
+      "tanim_tr": "İş bulma acentelerinin faaliyetleri (işe girecek kişilerin seçimi ve yerleştirilmesi faaliyetleri dahil)",
+      "tanim_en": "Activities of employment placement agencies (including the selection and placement of persons to be employed)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "781004",
+      "tanim_tr": "Oyuncu seçme ajansları ve bürolarının faaliyetleri",
+      "tanim_en": "Activities of casting agencies and bureaux",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "782",
+      "tanim_tr": "Geçici iş bulma acenteleri ile diğer insan kaynaklarının sağlanması faaliyetleri",
+      "tanim_en": "Temporary employment agency activities and other human resource provisions",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7820",
+      "tanim_tr": "Geçici iş bulma acenteleri ile diğer insan kaynaklarının sağlanması faaliyetleri",
+      "tanim_en": "Temporary employment agency activities and other human resource provisions",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "782002",
+      "tanim_tr": "Geçici iş bulma acenteleri ile diğer insan kaynaklarının sağlanması faaliyetleri",
+      "tanim_en": "Temporary employment agency activities and other human resource provisions",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "79",
+      "tanim_tr": "Seyahat acentesi, tur operatörü ve diğer rezervasyon hizmetleri ve ilgili faaliyetler",
+      "tanim_en": "Travel agency, tour operator and other reservation service and related activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "791",
+      "tanim_tr": "Seyahat acentesi ve tur operatörlerinin faaliyetleri",
+      "tanim_en": "Travel agency and tour operator activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7911",
+      "tanim_tr": "Seyahat acentesi faaliyetleri (yolcu taşımacılığı için olanlar hariç)",
+      "tanim_en": "Travel agency activities (except for passenger transport)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "791101",
+      "tanim_tr": "Seyahat acentesi faaliyetleri",
+      "tanim_en": "Travel agency activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7912",
+      "tanim_tr": "Tur operatörü faaliyetleri",
+      "tanim_en": "Tour operator activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "791201",
+      "tanim_tr": "Tur operatörü faaliyetleri",
+      "tanim_en": "Tour operator activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "799",
+      "tanim_tr": "Diğer rezervasyon hizmetleri ve ilgili faaliyetler",
+      "tanim_en": "Other reservation service and related activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "7990",
+      "tanim_tr": "Diğer rezervasyon hizmetleri ve ilgili faaliyetler",
+      "tanim_en": "Other reservation service and related activities",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "799001",
+      "tanim_tr": "Turist rehberliği ve ziyaretçiler için danışmanlık faaliyetleri (gezilerle ilgili bilgi sağlanması)",
+      "tanim_en": "Tourist guiding and advisory services for visitors (provision of information related to tours)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    },
+    {
+      "kod": "799099",
+      "tanim_tr": "Başka yerde sınıflandırılmamış diğer rezervasyon hizmetleri ve ilgili faaliyetler (turizm tanıtım faaliyetleri, vb.)",
+      "tanim_en": "Other reservation service and related activities n.e.c. (tourism promotion activities, etc.)",
+      "belgeler": {
+        "yurtici": [],
+        "ithalat": [],
+        "ihracat": []
+      },
+      "sgk_prim": {
+        "isci_pay": 15.0,
+        "isveren_pay_tevkisiz": 23.75,
+        "isveren_pay_tevkisli": 21.75,
+        "tesvik_kodu": "5510",
+        "tesvik_adi": "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
+      }
+    }
+  ]
+}
