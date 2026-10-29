@@ -1,0 +1,1495 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-kdv",
+      "ad": {
+        "tr": "GTİP KDV Eşleşmesi",
+        "en": "GTIP VAT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.02",
+    "guncelleme": "2026-10-02",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.02"
+      },
+      "uretim_zamani": "2026-10-02T00:00:00+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "17",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:4518c4fb3baf0206331a06ab5ecc26e1414efd305035072aa272824b8d4956f3"
+  },
+  "kayitlar": [
+    {
+      "kod": "170112100000",
+      "tanim_tr": "Pancar şekeri (ham); ilave aroma veya renk verici madde içermeyen, rafine edilecek olanlar (katı halde)",
+      "tanim_en": "Beet sugar (raw); that which is to be refined (in solid form) and contains no added flavoring or coloring agents.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170112900000",
+      "tanim_tr": "Pancar şekeri (ham); ilave aroma veya renk verici madde içermeyen fakat rafine edilecek olanlar HARİÇ (katı halde)",
+      "tanim_en": "Beet sugar (raw); excluding those that do not contain added flavorings or coloring agents but are to be refined (in solid form)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170113100000",
+      "tanim_tr": "Kamış şekeri (ham); rafine edilecek olanlar, kuru halde sakkaroz miktarı polarimetre okuma olarak >= %69, fakat < %93 (katı halde)",
+      "tanim_en": "Cane sugar (raw); those to be refined, dry sucrose content >= 69% as polarimeter reading, but < 93% (in solid state)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170113900000",
+      "tanim_tr": "Kamış şekeri (ham); rafine edilecek olanlar HARİÇ, kuru halde sakkaroz miktarı polarimetre okuma olarak >= %69, fakat < %93 (katı halde)",
+      "tanim_en": "Cane sugar (raw); EXCEPT those to be refined, sucrose content in dry state as a polarimeter reading >= 69%, but < 93% (in solid state)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170114100000",
+      "tanim_tr": "Diğer kamış şekeri; rafine edilecek olanlar (katı halde)",
+      "tanim_en": "Other cane sugar; those to be refined (in solid form)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170114900000",
+      "tanim_tr": "Diğer kamış şekeri; rafine edilecek olanlar HARİÇ (katı halde)",
+      "tanim_en": "Other cane sugar; EXCEPT that which is to be refined (in solid form)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170191000000",
+      "tanim_tr": "Rafine edilmiş katı haldeki kamış veya pancar şekeri; ilave aroma veya renk verici maddeler içerenler",
+      "tanim_en": "Refined solid cane or beet sugar; those containing added flavoring or coloring agents.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170199100011",
+      "tanim_tr": "Kristal beyaz şeker; ilave aroma veya renk verici madde içerenler HARİÇ (katı halde)",
+      "tanim_en": "Crystal white sugar; EXCEPT those containing added flavoring or coloring agents (in solid form)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170199100012",
+      "tanim_tr": "Küp ve kesme beyaz şeker; ilave aroma veya renk verici madde içerenler HARİÇ (katı halde)",
+      "tanim_en": "Cube and granulated white sugar; EXCEPT those containing added flavoring or coloring agents (in solid form)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170199100013",
+      "tanim_tr": "Kimyaca saf sakkaroz (katı halde); ilave aroma veya renk verici madde içerenler HARİÇ (katı halde)",
+      "tanim_en": "Chemically pure sucrose (in solid form); EXCEPT those containing added flavoring or coloring agents (in solid form)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170199100015",
+      "tanim_tr": "Pudra şekeri, ; ilave aroma veya renk verici madde içerenler HARİÇ (katı halde)",
+      "tanim_en": "Powdered sugar, excluding those containing added flavoring or coloring agents (in solid form).",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170199100019",
+      "tanim_tr": "Diğer beyaz şeker; ilave aroma veya renk verici madde içerenler HARİÇ (katı halde)",
+      "tanim_en": "Other white sugar; EXCEPT those containing added flavoring or coloring agents (in solid form)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170199900000",
+      "tanim_tr": "Beyaz dışındaki şekerler; ilave aroma veya renk verici madde içerenler HARİÇ (katı halde)",
+      "tanim_en": "Sugars other than white sugars; EXCEPT those containing added flavoring or coloring agents (in solid form)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170211001000",
+      "tanim_tr": "Laktoz; kuru madde üzerinden hesaplandığında laktoz miktarı >= %99",
+      "tanim_en": "Lactose; when calculated on a dry matter basis, the lactose content is >= 99%.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170211002000",
+      "tanim_tr": "Laktoz şurubu; kuru madde üzerinden hesaplandığında laktoz miktarı >= %99",
+      "tanim_en": "Lactose syrup; lactose content >= 99% when calculated on a dry matter basis.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170219001000",
+      "tanim_tr": "Laktoz; kuru madde üzerinden hesaplandığında laktoz miktarı < %99",
+      "tanim_en": "Lactose; when calculated on a dry matter basis, the lactose content is <99%.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170219002000",
+      "tanim_tr": "Laktoz şurubu; kuru madde üzerinden hesaplandığında laktoz miktarı < %99",
+      "tanim_en": "Lactose syrup; lactose content < 99% when calculated on a dry matter basis.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170220100000",
+      "tanim_tr": "Akçaağaç şekeri; katı halde, ilave aroma/renk verici maddeler içeren",
+      "tanim_en": "Maple sugar; in solid form, containing added flavoring/coloring agents.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170220900000",
+      "tanim_tr": "Akçaağaç şekeri ve şurubu; katı halde, ilave aroma/renk verici maddeler içermeyen",
+      "tanim_en": "Maple sugar and syrup; solid form, without added flavorings or coloring agents.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170230100000",
+      "tanim_tr": "İzoglikoz; fruktoz içermeyenler veya kuru halde ağırlık itibariyle fruktoz oranı < % 20",
+      "tanim_en": "Isoglucose; fructose-free or with a fructose content of <20% by weight in dry form.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170230500000",
+      "tanim_tr": "Glikoz; beyaz kristal toz halinde (aglomere edilmiş olsun olmasın); kuru halde ağırlık itibariyle fruktoz oranı < % 20",
+      "tanim_en": "Glucose; as a white crystalline powder (whether or not agglomerated); dry form with fructose content < 20% by weight.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170230900000",
+      "tanim_tr": "Glikoz şurubu ve diğer glikoz; kuru halde ağırlık itibariyle fruktoz oranı < % 20",
+      "tanim_en": "Glucose syrup and other glucose; fructose content by weight in dry form < 20%",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170240100000",
+      "tanim_tr": "İzoglikoz; kuru halde ağırlık itibariyle fruktoz oranı >= % 20 fakat <%50",
+      "tanim_en": "Isoglucose; in dry form, fructose content by weight >= 20% but <50%",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170240900000",
+      "tanim_tr": "Glikoz şurubu ve diğer glikoz; kuru halde ağırlık itibariyle fruktoz oranı >= % 20 fakat <%50",
+      "tanim_en": "Glucose syrup and other glucose; fructose content by weight in dry form >= 20% but <50%",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170250000000",
+      "tanim_tr": "Kimyaca saf fruktoz; katı halde",
+      "tanim_en": "Chemically pure fructose; in solid form.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170260100000",
+      "tanim_tr": "İzoglikoz; kuru halde ağırlık itibariyle fruktoz oranı > %50 (invert şeker HARİÇ)",
+      "tanim_en": "Isoglucose; fructose content by weight in dry form > 50% (excluding invert sugar)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170260800000",
+      "tanim_tr": "İnülin şurubu; kuru halde ağırlık itibariyle fruktoz oranı > %50 (invert şeker HARİÇ)",
+      "tanim_en": "Inulin syrup; fructose content by weight in dry form > 50% (excluding invert sugar)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170260950000",
+      "tanim_tr": "Fruktoz şurubu ve diğer fruktoz; kuru halde ağırlık itibariyle fruktoz oranı > %50 (invert şeker HARİÇ)",
+      "tanim_en": "Fructose syrup and other fructose; fructose content by weight in dry form > 50% (EXCLUDING invert sugar)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170290100000",
+      "tanim_tr": "Kimyaca saf maltoz",
+      "tanim_en": "Chemically pure maltose",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170290300000",
+      "tanim_tr": "İzoglikoz; kuru halde ağırlık itibariyle fruktoz oranı = %50",
+      "tanim_en": "Isoglucose; fructose content by weight in dry state = 50%",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170290500011",
+      "tanim_tr": "Diyet mamaları (Malto dekstrin ve malto dekstrin şurubu)",
+      "tanim_en": "Dietary supplements (Malto dextrin and malto dextrin syrup)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170290500019",
+      "tanim_tr": "Malto dekstrin ve malto dekstrin şurubu; diyet mamaları HARİÇ",
+      "tanim_en": "Maltodextrin and maltodextrin syrup; EXCEPT for dietary supplements.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170290710000",
+      "tanim_tr": "Karamel; kuru halde ağırlık itibariyle sakkaroz oranı >= %50",
+      "tanim_en": "Caramel; in dry form, sucrose content by weight >= 50%",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170290750000",
+      "tanim_tr": "Karamel; toz halinde, kuru halde ağırlık itibariyle sakkaroz oranı < %50",
+      "tanim_en": "Caramel; in powder form, dry with sucrose content <50% by weight.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170290790000",
+      "tanim_tr": "Karamel; toz halinde olmayan, kuru halde ağırlık itibariyle sakkaroz oranı < %50",
+      "tanim_en": "Caramel; not in powder form, but in dry form with a sucrose content of <50% by weight.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170290800000",
+      "tanim_tr": "İnülin şurubu",
+      "tanim_en": "Inulin syrup",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170290950011",
+      "tanim_tr": "Suni bal; diabetik olan",
+      "tanim_en": "Artificial honey; for diabetics",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170290950019",
+      "tanim_tr": "Suni bal; diabetik olan HARİÇ",
+      "tanim_en": "Artificial honey; EXCEPT for diabetics.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170290950090",
+      "tanim_tr": "Katı haldeki diğer şekerler",
+      "tanim_en": "Other solid sugars",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170310000000",
+      "tanim_tr": "Kamış melasları",
+      "tanim_en": "Cane molasses",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170390000000",
+      "tanim_tr": "Şeker ekstraksiyonundan veya rafinajından elde edilen melaslar; kamış melasları HARİÇ",
+      "tanim_en": "Molasses obtained from sugar extraction or refining; EXCEPT cane molasses.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170410100011",
+      "tanim_tr": "Ciklet; şerit şeklinde, sakkaroz oranı <% 60, şeker kaplanmış/kaplanmamış",
+      "tanim_en": "Chewing gum; strip-shaped, sucrose content <60%, sugar-coated/uncoated.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170410100019",
+      "tanim_tr": "Ciklet; şerit şeklinde olmayan, sakkaroz oranı <% 60, şeker kaplanmış/kaplanmamış",
+      "tanim_en": "Chewing gum; non-strip-shaped, sucrose content <60%, sugar-coated/uncoated.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170410900011",
+      "tanim_tr": "Ciklet; şerit şeklinde, sakkaroz oranı =>% 60, şeker kaplanmış/kaplanmamış",
+      "tanim_en": "Chewing gum; strip-shaped, sucrose content =>60%, sugar-coated/uncoated.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170410900019",
+      "tanim_tr": "Ciklet; şerit şeklinde olmayan, sakkaroz oranı =>% 60, şeker kaplanmış/kaplanmamış",
+      "tanim_en": "Chewing gum; not in strip form, sucrose content => 60%, sugar coated/uncoated.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490100000",
+      "tanim_tr": "Meyan kökü hülasaları; sakkaroz oranı>%10 fakat diğer katı madde içermeyen",
+      "tanim_en": "Licorice root extracts; sucrose content >10% but free of other solids.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490300000",
+      "tanim_tr": "Beyaz çikolata",
+      "tanim_en": "White chocolate",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490510000",
+      "tanim_tr": "Ezmeler; net muhtevası =>1 kg, ambalajlarda (badem ezmesi dahil), kakao içermeyen",
+      "tanim_en": "Spreads; net content => 1 kg, in packages (including almond spread), cocoa-free.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490550000",
+      "tanim_tr": "Boğaz pastilleri ve öksürük için şekerler; kakao içermeyen",
+      "tanim_en": "Throat lozenges and cough drops; cocoa-free.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490610011",
+      "tanim_tr": "Drajeler; sadece fındık içerenler, kakao içermeyen",
+      "tanim_en": "Coated tablets; those containing only hazelnuts, those without cocoa.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490610019",
+      "tanim_tr": "Drajeler; diğer, kakao içermeyen",
+      "tanim_en": "Dragees; other, cocoa-free",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490650000",
+      "tanim_tr": "Sakızlı ve jöleli şekercilik mamulleri (şekercilik mamulü haline getirilmiş meyva ezmeleri dahil); kakao içermeyen",
+      "tanim_en": "Gummy and jelly confectionery (including fruit purees processed into confectionery); not containing cocoa.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490710000",
+      "tanim_tr": "Kaynatılmış tatlılar; kakao içermeyen",
+      "tanim_en": "Boiled desserts; those that do not contain cocoa.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490750000",
+      "tanim_tr": "Karameller vb. tatlılar; kakao içermeyen",
+      "tanim_en": "Caramels and similar desserts; do not contain cocoa.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490810000",
+      "tanim_tr": "Şekercilik mamulleri; basınçla elde edilen tabletler halinde, kakao içermeyen",
+      "tanim_en": "Confectionery products; in tablet form obtained by pressure processing, not containing cocoa.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490991011",
+      "tanim_tr": "Tahin helvası; kakao içermeyen",
+      "tanim_en": "Tahini halva; does not contain cocoa.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490991019",
+      "tanim_tr": "Helvalar (tahin helvası HARİÇ); kakao içermeyen",
+      "tanim_en": "Halva (EXCEPT tahini halva); does not contain cocoa.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490992000",
+      "tanim_tr": "Sade lokum; kakao içermeyen",
+      "tanim_en": "Plain Turkish delight; does not contain cocoa.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490993000",
+      "tanim_tr": "Kaymaklı lokum; kakao içermeyen",
+      "tanim_en": "Turkish delight with clotted cream; does not contain cocoa.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490999011",
+      "tanim_tr": "Fondan; kakao içermeyen",
+      "tanim_en": "Fondant; does not contain cocoa.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490999012",
+      "tanim_tr": "Lokumlar; diğer, kakao içermeyen",
+      "tanim_en": "Turkish delight; other types that do not contain cocoa.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "170490999019",
+      "tanim_tr": "Diğer şekercilik mamulleri; kakao içermeyen",
+      "tanim_en": "Other confectionery products; those that do not contain cocoa.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    }
+  ]
+}

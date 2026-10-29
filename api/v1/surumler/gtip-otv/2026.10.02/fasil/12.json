@@ -1,0 +1,3141 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-otv",
+      "ad": {
+        "tr": "GTİP ÖTV Eşleşmesi",
+        "en": "GTIP SCT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.02",
+    "guncelleme": "2026-10-02",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.02"
+      },
+      "uretim_zamani": "2026-10-02T00:00:00+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "12",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:2055bb2f114b8771d00567f7630bfdaff7e7c40838f75c030a087a07fa0c743d"
+  },
+  "kayitlar": [
+    {
+      "kod": "120110000000",
+      "tanim_tr": "Soya fasulyesi; tohumluk",
+      "tanim_en": "Soybeans; for seed.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120190000000",
+      "tanim_tr": "Soya fasulyesi (kırılmış olsun olmasın); tohumluk olanlar HARİÇ",
+      "tanim_en": "Soybeans (whether cracked or not); EXCEPT those intended for seed.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120230000000",
+      "tanim_tr": "Yer fıstığı; tohumluk",
+      "tanim_en": "Peanuts; for seed.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120241000000",
+      "tanim_tr": "Yer fıstığı (kabuklu); tohumluk olanlar HARİÇ",
+      "tanim_en": "Peanuts (in shell); EXCEPT those intended for seed.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120242000000",
+      "tanim_tr": "Yer fıstığı (Kabuksuz) (kırılmış olsun olmasın); tohumluk olanlar HARİÇ",
+      "tanim_en": "Peanuts (shelled) (whether cracked or uncracked); EXCEPT those intended for seed.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120300000000",
+      "tanim_tr": "Kopra",
+      "tanim_en": "Copra",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120400100000",
+      "tanim_tr": "Keten tohumu; tohumluk",
+      "tanim_en": "Flaxseed; for seed.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120400900000",
+      "tanim_tr": "Keten tohumu; tohumluk olanlar HARİÇ",
+      "tanim_en": "Flax seeds; EXCEPT those intended for seed production.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120510100000",
+      "tanim_tr": "Rep veya kolza tohumları (düşük erusik asitli); tohumluk",
+      "tanim_en": "Rapeseed or canola seeds (low erucic acid); for seed production.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120510900000",
+      "tanim_tr": "Rep veya kolza tohumları (düşük erusik asitli); tohumluk olanlar HARİÇ",
+      "tanim_en": "Rapeseed or canola seeds (low erucic acid); EXCEPT those intended for seed.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120590000000",
+      "tanim_tr": "Rep veya kolza tohumları (yüksek erusik asitli)",
+      "tanim_en": "Rapeseed or canola seeds (high in erucic acid)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120600100000",
+      "tanim_tr": "Ayçiçeği tohumu; tohumluk",
+      "tanim_en": "Sunflower seeds; for seed.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120600910011",
+      "tanim_tr": "Ayçiçeği tohumu (kabuksuz veya kabuğu gri beyaz çizgili olanlar); çerezlik olanlar",
+      "tanim_en": "Sunflower seeds (shelled or with a shell featuring gray-white stripes); snack varieties.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120600910019",
+      "tanim_tr": "Ayçiçeği tohumu (kabuksuz veya kabuğu gri beyaz çizgili olanlar); çerezlik olanlar ve tohumluk olanlar HARİÇ",
+      "tanim_en": "Sunflower seeds (shelled or with a shell featuring grey-white stripes); EXCEPT for snacking and seed varieties.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120600990011",
+      "tanim_tr": "Diğer ayçiçeği tohumları; çerezlik olanlar",
+      "tanim_en": "Other sunflower seeds; those used for snacking.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120600990019",
+      "tanim_tr": "Diğer ayçiçeği tohumları",
+      "tanim_en": "Other sunflower seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120710000000",
+      "tanim_tr": "Palm meyvesi ve çekirdeği (kırılmış olsun olmasın)",
+      "tanim_en": "Palm fruit and kernel (whether cracked or uncracked)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120721000000",
+      "tanim_tr": "Pamuk tohumu; tohumluk",
+      "tanim_en": "Cottonseed; seed stock",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120729000000",
+      "tanim_tr": "Pamuk tohumu; tohumluk olanlar HARİÇ",
+      "tanim_en": "Cotton seeds; EXCEPT those intended for seed production.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120730000000",
+      "tanim_tr": "Hint yağı tohumu",
+      "tanim_en": "Castor oil seed",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120740100000",
+      "tanim_tr": "Susam tohumu; tohumluk",
+      "tanim_en": "Sesame seeds; for seed.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120740900011",
+      "tanim_tr": "Susam tohumu (ham); tohumluk olanlar HARİÇ",
+      "tanim_en": "Sesame seeds (raw); EXCEPT those intended for seed production.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120740900012",
+      "tanim_tr": "Susam tohumu (soyulmuş); tohumluk olanlar HARİÇ",
+      "tanim_en": "Sesame seeds (hulled); EXCEPT those intended for seed production.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120750100000",
+      "tanim_tr": "Hardal tohumu; tohumluk",
+      "tanim_en": "Mustard seeds; for seed.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120750900000",
+      "tanim_tr": "Hardal tohumu; tohumluk olanlar HARİÇ",
+      "tanim_en": "Mustard seeds; EXCEPT those intended for seed production.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120760000000",
+      "tanim_tr": "Aspir (Carthamus tinctorius) tohumu",
+      "tanim_en": "Safflower (Carthamus tinctorius) seed",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120770000000",
+      "tanim_tr": "Kavun, Karpuz tohumu",
+      "tanim_en": "Melon and watermelon seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120791100000",
+      "tanim_tr": "Haşhaş tohumu; tohumluk",
+      "tanim_en": "Poppy seeds; seed stock",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120791900000",
+      "tanim_tr": "Haşhaş tohumu; tohumluk olanlar HARİÇ",
+      "tanim_en": "Poppy seeds; EXCEPT those intended for seed production.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120799200011",
+      "tanim_tr": "Chia tohumu; tohumluk",
+      "tanim_en": "Chia seeds; for seed production.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120799200019",
+      "tanim_tr": "Diğer yağlı tohumlar ve meyveler; tohumluk",
+      "tanim_en": "Other oilseeds and fruits; seed stock",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120799910000",
+      "tanim_tr": "Kenevir (kendir) tohumu; tohumluk olanlar HARİÇ",
+      "tanim_en": "Hemp (cannabis) seeds; EXCEPT those intended for seed production.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120799960011",
+      "tanim_tr": "Chia tohumu; tohumluk olanlar HARİÇ",
+      "tanim_en": "Chia seeds; EXCEPT those intended for seed production.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120799960019",
+      "tanim_tr": "Diğer yağlı tohumlar ve meyveler; tohumluk olanlar HARİÇ",
+      "tanim_en": "Other oilseeds and fruits; EXCEPT those intended for seed.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120810000011",
+      "tanim_tr": "Soya fasulyesi unu",
+      "tanim_en": "Soybean flour",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120810000012",
+      "tanim_tr": "Soya fasulyesinin kaba unu",
+      "tanim_en": "Coarse soybean flour",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120890000011",
+      "tanim_tr": "Ayçiçeği tohumunun unu ve kaba unları",
+      "tanim_en": "Sunflower seed flour and coarse flours",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120890000019",
+      "tanim_tr": "Diğer yağlı tohum ve meyvelerin unu ve kaba unları (hardal unu hariç)",
+      "tanim_en": "Flours and coarse flours of other oilseeds and fruits (excluding mustard flour)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120910000000",
+      "tanim_tr": "Şeker pancarı tohumu",
+      "tanim_en": "Sugar beet seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120921000000",
+      "tanim_tr": "Yonca tohumu",
+      "tanim_en": "Alfalfa seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120922100000",
+      "tanim_tr": "Kırmızı üçgül tohumu (Trifolium protense L.)",
+      "tanim_en": "Red clover seed (Trifolium protense L.)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120922800000",
+      "tanim_tr": "Diğer üçgül tohumları",
+      "tanim_en": "Other clover seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120923110000",
+      "tanim_tr": "Çayır tohumları (Festuca pratensis Huds.)",
+      "tanim_en": "Meadow seeds (Festuca pratensis Huds.)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120923150000",
+      "tanim_tr": "Kırmızı çayır otu tohumları (Festuca rubra L.)",
+      "tanim_en": "Red meadow grass seeds (Festuca rubra L.)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120923800011",
+      "tanim_tr": "Koyun çayır otu tohumları (Festuca ovina L.)",
+      "tanim_en": "Sheep pasture grass seeds (Festuca ovina L.)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120923800019",
+      "tanim_tr": "Diğer çayır otu tohumları",
+      "tanim_en": "Other meadow grass seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120924000000",
+      "tanim_tr": "Kentucky mavi otu tohumu",
+      "tanim_en": "Kentucky bluegrass seed",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120925100000",
+      "tanim_tr": "İtalyan çimi tohumu (westerwold dahil) (Lolium multiflorum Lam.)",
+      "tanim_en": "Italian ryegrass seed (including westerwold) (Lolium multiflorum Lam.)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120925900000",
+      "tanim_tr": "İngiliz çimi tohumu (Lolium perenne L.)",
+      "tanim_en": "English ryegrass seed (Lolium perenne L.)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929450011",
+      "tanim_tr": "Vicia sativa L. türü fiğ",
+      "tanim_en": "Vicia sativa L. species of vetch",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929450012",
+      "tanim_tr": "Diğer tür fiğ",
+      "tanim_en": "Other types of vetch",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929450013",
+      "tanim_tr": "Poa palustris L., Poa trivialis L. cinsi tohumlar",
+      "tanim_en": "Seeds of the genus Poa palustris L., Poa trivialis L.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929450014",
+      "tanim_tr": "Domuz ayrığı tohumu (Dactylis glomerata L.)",
+      "tanim_en": "Orchardgrass seed (Dactylis glomerata L.)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929450015",
+      "tanim_tr": "Tavus otları (Agrosties) tohumu",
+      "tanim_en": "Peacock grass (Agrosties) seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929450016",
+      "tanim_tr": "Çayır kelp kuyruğu otu tohumu",
+      "tanim_en": "meadow kelp seed",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929500000",
+      "tanim_tr": "Acı bakla tohumu",
+      "tanim_en": "Bitter vetch seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929600000",
+      "tanim_tr": "Hayvan yemi olan pancar tohumu (Beta vulgaris var.alba)",
+      "tanim_en": "Beetroot seeds (Beta vulgaris var.alba) used as animal feed.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929800011",
+      "tanim_tr": "Melez çim tohumu (Lolium X hybridum Hausskn.)",
+      "tanim_en": "Hybrid grass seed (Lolium X hybridum Hausskn.)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929800012",
+      "tanim_tr": "Orman salkım otu tohumu (Poa nemoralis L.)",
+      "tanim_en": "Forest blackthorn seed (Poa nemoralis L.)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929800013",
+      "tanim_tr": "Yüksek çayır yulafı tohumu (Arrhenatherum elatius (L.)J veC presl.)",
+      "tanim_en": "High meadow oat seed (Arrhenatherum elatius (L.)J veC presl.)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929800014",
+      "tanim_tr": "Korunga (Onobrychis sativa L.) tohumu",
+      "tanim_en": "Sainfoin (Onobrychis sativa L.) seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929800015",
+      "tanim_tr": "Burçak tohumu (Vicia ervilia Willd.)",
+      "tanim_en": "Vetch seeds (Vicia ervilia Willd.)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929800016",
+      "tanim_tr": "Sorgum tohumu",
+      "tanim_en": "Sorghum seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929800017",
+      "tanim_tr": "Yem şalgamı tohumu",
+      "tanim_en": "Fodder turnip seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120929800018",
+      "tanim_tr": "Diğer yem bitkilerinin tohumları",
+      "tanim_en": "Seeds of other forage crops",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120930000000",
+      "tanim_tr": "Genellikle çiçekler için yetiştirilen otsu bitkilerin tohumları",
+      "tanim_en": "Seeds of herbaceous plants, usually grown for their flowers.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991300000",
+      "tanim_tr": "Salata pancarı veya kırmızı pancar tohumu (Beta vulgaris var. conditiva)",
+      "tanim_en": "Salad beet or red beet seeds (Beta vulgaris var. conditiva)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800011",
+      "tanim_tr": "Kabak tohumu",
+      "tanim_en": "Pumpkin seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800012",
+      "tanim_tr": "Domates tohumu",
+      "tanim_en": "Tomato seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800013",
+      "tanim_tr": "Hıyar tohumu",
+      "tanim_en": "Cucumber seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800014",
+      "tanim_tr": "Soğan tohumu",
+      "tanim_en": "Onion seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800015",
+      "tanim_tr": "Havuç tohumu",
+      "tanim_en": "Carrot seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800016",
+      "tanim_tr": "Marul tohumu",
+      "tanim_en": "Lettuce seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800017",
+      "tanim_tr": "Karnabahar tohumu",
+      "tanim_en": "Cauliflower seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800018",
+      "tanim_tr": "Maydanoz tohumu",
+      "tanim_en": "Parsley seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800021",
+      "tanim_tr": "Ispanak tohumu",
+      "tanim_en": "spinach seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800022",
+      "tanim_tr": "Bamya tohumu",
+      "tanim_en": "Okra seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800023",
+      "tanim_tr": "Baş salata tohumu",
+      "tanim_en": "Head lettuce seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800024",
+      "tanim_tr": "Biber tohumu",
+      "tanim_en": "Pepper seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800025",
+      "tanim_tr": "Patlıcan tohumu",
+      "tanim_en": "Eggplant seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800026",
+      "tanim_tr": "Turp tohumu",
+      "tanim_en": "Radish seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120991800029",
+      "tanim_tr": "Diğer sebze tohumları",
+      "tanim_en": "Other vegetable seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120999100000",
+      "tanim_tr": "Orman ağaçlarının tohumları",
+      "tanim_en": "Seeds of forest trees",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120999910000",
+      "tanim_tr": "Genellikle çiçekleri için yetiştirilen bitkilerin tohumları (1209.30 00 00 00 hariç)",
+      "tanim_en": "Seeds of plants typically grown for their flowers (excluding 1209.30 00 00 00)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120999991000",
+      "tanim_tr": "Meyve ağaçları tohumları",
+      "tanim_en": "Fruit tree seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120999999011",
+      "tanim_tr": "Tütün tohumu",
+      "tanim_en": "Tobacco seeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "120999999018",
+      "tanim_tr": "Ekim amacıyla kullanılan diğer tohum, meyve ve sporlar",
+      "tanim_en": "Other seeds, fruits, and spores used for cultivation.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121010000000",
+      "tanim_tr": "Şerbetçi otu kozalakları (dane, toz veya pellet şekline getirilmemiş",
+      "tanim_en": "Hop cones (not in the form of berries, powder or pellets)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121020100011",
+      "tanim_tr": "Lüpülin",
+      "tanim_en": "Lupulin",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121020100019",
+      "tanim_tr": "Lüpülinle zenginleştirilmiş şerbetçi otu kozalakları",
+      "tanim_en": "Hop cones enriched with lupulin",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121020900000",
+      "tanim_tr": "Şerbetçi otu kozalakları (dane, toz veya pellet şekline getirilmiş)",
+      "tanim_en": "Hop cones (in granular, powdered or pellet form)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121120000000",
+      "tanim_tr": "Ginseng kökü",
+      "tanim_en": "Ginseng root",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121130000000",
+      "tanim_tr": "Koka yaprağı",
+      "tanim_en": "Coca leaf",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121140000000",
+      "tanim_tr": "Haşhaş kellesi",
+      "tanim_en": "Poppy head",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121150000000",
+      "tanim_tr": "Efedra (Ephedra)",
+      "tanim_en": "Ephedra",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121160000000",
+      "tanim_tr": "Afrika kirazının kabuğu (Prunus africana)",
+      "tanim_en": "The bark of the African cherry (Prunus africana)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190300000",
+      "tanim_tr": "Tonka fasulyesi",
+      "tanim_en": "Tonka beans",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860011",
+      "tanim_tr": "Vermut otu",
+      "tanim_en": "Vermouth herb",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860012",
+      "tanim_tr": "Likör otu",
+      "tanim_en": "Liqueur herb",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860014",
+      "tanim_tr": "Kına kına kabukları",
+      "tanim_en": "henna bark",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860016",
+      "tanim_tr": "Yabani güveyotu (Origanum vulgare) (sapları ve yaprakları)",
+      "tanim_en": "Wild oregano (Origanum vulgare) (stems and leaves)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860018",
+      "tanim_tr": "Meyan kökü",
+      "tanim_en": "Licorice root",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860022",
+      "tanim_tr": "Nane; küçük paketler içerisinde bitkisel çay olarak kullanılanlar",
+      "tanim_en": "Mint; used as herbal tea in small packets.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860023",
+      "tanim_tr": "Nane; küçük paketler içerisinde bitkisel çay olarak kullanılanlar HARİÇ",
+      "tanim_en": "Mint; EXCEPT for those used as herbal tea in small packets.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860024",
+      "tanim_tr": "Ihlamur; küçük paketler içerisinde bitkisel çay olarak kullanılanlar",
+      "tanim_en": "Linden tea; available in small packets as herbal tea.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860025",
+      "tanim_tr": "Ihlamur; küçük paketler içerisinde bitkisel çay olarak kullanılanlar HARİÇ",
+      "tanim_en": "Linden; EXCEPT for those sold as herbal tea in small packets.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860026",
+      "tanim_tr": "Ada çayı (Salvia officinalis); küçük paketler içerisinde bitkisel çay olarak kullanılanlar",
+      "tanim_en": "Sage (Salvia officinalis); available in small packets as herbal tea.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860027",
+      "tanim_tr": "Ada çayı (Salvia officinalis); küçük paketler içerisinde bitkisel çay olarak kullanılanlar HARİÇ",
+      "tanim_en": "Sage (Salvia officinalis); EXCEPT those used as herbal tea in small packets.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860031",
+      "tanim_tr": "Biberiye; küçük paketler içerisinde bitkisel çay olarak kullanılanlar",
+      "tanim_en": "Rosemary; available in small packets as herbal tea.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860039",
+      "tanim_tr": "Diğer bitkiler veya bunların kısımları; küçük paketler içerisinde bitkisel çay olarak kullanılanlar",
+      "tanim_en": "Other plants or parts thereof; those used as herbal tea in small packets.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860041",
+      "tanim_tr": "Biberiye; küçük paketler içerisinde bitkisel çay olarak kullanılanlar HARİÇ",
+      "tanim_en": "Rosemary; EXCEPT for those used as herbal tea in small packets.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121190860049",
+      "tanim_tr": "Diğer bitkiler veya bunların kısımları; küçük paketler içerisinde bitkisel çay olarak kullanılanlar HARİÇ",
+      "tanim_en": "Other plants or parts thereof; EXCEPT those used as herbal tea in small packets.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121221001000",
+      "tanim_tr": "Deniz otları ve diğer algler (İnsan tüketimine elverişli); başlıca tababette ve parfümeride kullanılanlar",
+      "tanim_en": "Seagrasses and other algae (suitable for human consumption); mainly used in medicine and perfumery.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121221002000",
+      "tanim_tr": "Deniz otları ve diğer algler (İnsan tüketimine elverişli); dondurulmuş",
+      "tanim_en": "Seagrasses and other algae (suitable for human consumption); frozen.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121221009000",
+      "tanim_tr": "Diğer deniz otları ve diğer algler (İnsan tüketimine elverişli)",
+      "tanim_en": "Other seagrasses and other algae (suitable for human consumption)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121229001000",
+      "tanim_tr": "Deniz otları ve diğer algler (İnsan tüketimine elverişli olmayan); tababet, parfümeride kullanılan",
+      "tanim_en": "Seagrasses and other algae (unsuitable for human consumption); used in medicine and perfumery.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121229002000",
+      "tanim_tr": "Deniz otları ve diğer algler (İnsan tüketimine elverişli olmayan); dondurulmuş",
+      "tanim_en": "Seagrasses and other algae (unsuitable for human consumption); frozen.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121229009000",
+      "tanim_tr": "Diğer deniz otları ve diğer algler (İnsan tüketimine elverişli olmayan)",
+      "tanim_en": "Other seagrasses and other algae (unsuitable for human consumption)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121291200000",
+      "tanim_tr": "Şeker pancarı; kurutulmuş",
+      "tanim_en": "Sugar beet; dried",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121291800000",
+      "tanim_tr": "Şeker pancarı; kurutulmuş olanlar HARİÇ",
+      "tanim_en": "Sugar beet; EXCEPT dried ones.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121292000000",
+      "tanim_tr": "Keçiboynuzu (harnup)",
+      "tanim_en": "Carob (locust bean)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121293000000",
+      "tanim_tr": "Şeker kamışı",
+      "tanim_en": "Sugarcane",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121294000000",
+      "tanim_tr": "Hindiba kökleri",
+      "tanim_en": "Chicory roots",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121299410000",
+      "tanim_tr": "Keçiboynuzu tohumu (soyulmamış, ezilmemiş veya öğütülmemiş)",
+      "tanim_en": "Carob seeds (unpeeled, uncrushed or unground)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121299490000",
+      "tanim_tr": "Keçiboynuzu tohumu (diğer hallerde)",
+      "tanim_en": "Carob seeds (in other cases)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121299950011",
+      "tanim_tr": "Dondurulmuş taze polen",
+      "tanim_en": "Frozen fresh pollen",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121299950012",
+      "tanim_tr": "Kurutulmuş polen",
+      "tanim_en": "Dried pollen",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121299950013",
+      "tanim_tr": "Tatlı sorgum (saccharatum)",
+      "tanim_en": "Sweet sorghum (saccharatum)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121299950014",
+      "tanim_tr": "Kayısı, şeftali (nektarin dahil) ve erik çekirdekleri ve çekirdek içleri",
+      "tanim_en": "Apricot, peach (including nectarine), and plum pits and kernels.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121299950019",
+      "tanim_tr": "İnsanların yemesine elverişli cinsten diğer meyve çekirdekleri ve çekirdek içleri",
+      "tanim_en": "Other fruit seeds and seed kernels suitable for human consumption.",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121300000000",
+      "tanim_tr": "Hububat sap ve kapçıkları (işlenmemiş)",
+      "tanim_en": "Cereal stalks and husks (unprocessed)",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121410000000",
+      "tanim_tr": "Yonca kaba unu ve pelletleri",
+      "tanim_en": "Alfalfa coarse meal and pellets",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121490100000",
+      "tanim_tr": "Hayvan pancarı, İsveç şalgamı ve diğer kök yemler",
+      "tanim_en": "Fodder beet, Swedish turnip and other root vegetables",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "121490900000",
+      "tanim_tr": "Diğer hayvan yemleri",
+      "tanim_en": "Other animal feeds",
+      "grup": "otv_yok",
+      "vergi_turu": "otv",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici",
+        "ithalat"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    }
+  ]
+}

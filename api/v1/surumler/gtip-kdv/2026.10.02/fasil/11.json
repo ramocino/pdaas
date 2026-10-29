@@ -1,0 +1,2083 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-kdv",
+      "ad": {
+        "tr": "GTİP KDV Eşleşmesi",
+        "en": "GTIP VAT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.02",
+    "guncelleme": "2026-10-02",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.02"
+      },
+      "uretim_zamani": "2026-10-02T00:00:00+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "11",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:4518c4fb3baf0206331a06ab5ecc26e1414efd305035072aa272824b8d4956f3"
+  },
+  "kayitlar": [
+    {
+      "kod": "110100110000",
+      "tanim_tr": "Makarnalık (durum) buğday unu",
+      "tanim_en": "durum wheat flour",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110100150000",
+      "tanim_tr": "Adi ve kaplıca (kızıl) buğday unu",
+      "tanim_en": "Common and spa (red) wheat flour",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110100900000",
+      "tanim_tr": "Mahlut unu",
+      "tanim_en": "Mixed flour",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110220100000",
+      "tanim_tr": "Mısır unu; yağ oranı ağırlık itibariyle < = % 1,5",
+      "tanim_en": "Corn flour; fat content by weight <= 1.5%",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110220900000",
+      "tanim_tr": "Mısır unu; yağ oranı ağırlık itibariyle > % 1,5",
+      "tanim_en": "Corn flour; fat content > 1.5% by weight.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110290100000",
+      "tanim_tr": "Arpa unu",
+      "tanim_en": "Barley flour",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110290300000",
+      "tanim_tr": "Yulaf unu",
+      "tanim_en": "Oat flour",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110290500000",
+      "tanim_tr": "Pirinç unu",
+      "tanim_en": "Rice flour",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110290700000",
+      "tanim_tr": "Çavdar unu",
+      "tanim_en": "Rye flour",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110290900000",
+      "tanim_tr": "Diğer hububat unları",
+      "tanim_en": "Other cereal flours",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110311100000",
+      "tanim_tr": "Makarnalık buğdayın (durum buğday) kabaca öğütülmesinden elde edilen küçük parçalar ve kaba un",
+      "tanim_en": "Small pieces and coarse flour obtained from coarsely grinding durum wheat (for pasta).",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110311900000",
+      "tanim_tr": "Adi ve kaplıca (kızıl) buğdayın öğütülmesinden elde edilen küçük parçalar ve kaba un",
+      "tanim_en": "Small pieces and coarse flour obtained from grinding common and spelt (red) wheat.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110313100000",
+      "tanim_tr": "Mısırın kabaca öğütülmesinden elde edilen küçük parçalar ve kaba unlar; yağ oranı <= % 1,5",
+      "tanim_en": "Small pieces and coarse flours obtained from coarsely grinding corn; fat content <= 1.5%",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110313900000",
+      "tanim_tr": "Mısırın kabaca öğütülmesinden elde edilen küçük parçalar ve kaba unlar; yağ oranı > % 1,5",
+      "tanim_en": "Small pieces and coarse flours obtained from coarsely grinding corn; fat content > 1.5%",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110319200000",
+      "tanim_tr": "Çavdar veya arpanın kabaca öğütülmesinden elde edilen küçük parçalar ve kaba unlar",
+      "tanim_en": "Small pieces and coarse flours obtained from coarsely grinding rye or barley.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110319400000",
+      "tanim_tr": "Yulafın kabaca öğütülmesinden elde edilen küçük parçalar ve kaba unlar",
+      "tanim_en": "Small pieces and coarse flours obtained from coarsely grinding oats.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110319500000",
+      "tanim_tr": "Pirincin kabaca öğütülmesinden elde edilen küçük parçalar ve kaba un",
+      "tanim_en": "Small pieces and coarse flour obtained from coarsely grinding rice.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110319900013",
+      "tanim_tr": "Mahlutun kabaca öğütülmesinden elde edilen küçük parçalar ve kaba un",
+      "tanim_en": "Small pieces and coarse flour obtained from coarsely grinding the mixture.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110319900019",
+      "tanim_tr": "Diğer hububatın kabaca öğütülmesinden elde edilen küçük parçalar ve kaba un",
+      "tanim_en": "Small pieces and coarse flour obtained from the coarse grinding of other grains.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110320250000",
+      "tanim_tr": "Çavdar veya arpadan pelletler",
+      "tanim_en": "Pellets made from rye or barley",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110320300000",
+      "tanim_tr": "Yulaftan pelletler",
+      "tanim_en": "Pellets made from oats",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110320400000",
+      "tanim_tr": "Mısırdan pelletler",
+      "tanim_en": "Pellets from corn",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110320500000",
+      "tanim_tr": "Pirinçten pelletler",
+      "tanim_en": "Pellets made of rice",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110320600000",
+      "tanim_tr": "Buğdaydan pelletler",
+      "tanim_en": "Pellets from wheat",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110320900000",
+      "tanim_tr": "Diğer hububattan pelletler",
+      "tanim_en": "Pellets from other grains",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110412100000",
+      "tanim_tr": "Yulaftan yassılaştırılmış taneler",
+      "tanim_en": "Flattened grains of oats",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110412900000",
+      "tanim_tr": "Yulaftan flokon halindeki taneler",
+      "tanim_en": "Oat flakes",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110419100011",
+      "tanim_tr": "Buğdaydan yassılaştırılmış taneler",
+      "tanim_en": "Flattened grains of wheat",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110419100012",
+      "tanim_tr": "Buğdaydan flokon halindeki taneler",
+      "tanim_en": "Wheat grains in flake form",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110419300011",
+      "tanim_tr": "Çavdardan yassılaştırılmış taneler",
+      "tanim_en": "Flattened grains of rye",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110419300012",
+      "tanim_tr": "Çavdardan flokon halindeki taneler",
+      "tanim_en": "Rye grains in flake form",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110419500011",
+      "tanim_tr": "Mısırdan yassılaştırılmış taneler",
+      "tanim_en": "Flattened kernels from corn",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110419500012",
+      "tanim_tr": "Mısırdan flokon halindeki taneler",
+      "tanim_en": "Corn kernels in flake form",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110419610000",
+      "tanim_tr": "Arpadan yassılaştırılmış taneler",
+      "tanim_en": "Flattened grains of barley",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110419690000",
+      "tanim_tr": "Arpadan flokon halindeki taneler",
+      "tanim_en": "Barley grains in flake form",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110419910000",
+      "tanim_tr": "Pirinçten flokon halindeki taneler",
+      "tanim_en": "Grains of rice in flake form",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110419990011",
+      "tanim_tr": "Diğer hububattan yassılaştırılmış taneler",
+      "tanim_en": "Flattened grains from other cereals",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110419990012",
+      "tanim_tr": "Diğer hububattan flokon halindeki taneler",
+      "tanim_en": "Grains in flake form from other cereals",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110422400000",
+      "tanim_tr": "Yulaf taneleri; kabuğu veya kavuzu çıkarılmış, dilimlenmiş veya iri parçalar halinde ufalanmış olsun olmasın",
+      "tanim_en": "Oat grains; whether hulled or dehulled, sliced ​​or coarsely crushed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110422500000",
+      "tanim_tr": "Yulaf taneleri; yuvarlatılmış",
+      "tanim_en": "Oat grains; rounded",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110422950000",
+      "tanim_tr": "Diğer yulaf taneleri:",
+      "tanim_en": "Other oat grains:",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110423400000",
+      "tanim_tr": "Mısır taneleri; kabuğu veya kavuzu çıkarılmış, dilimlenmiş, iri parçalar halinde ufalanmış olsun olmasın, yuvarlatılmış",
+      "tanim_en": "Corn kernels; whether hulled or dehulled, sliced, coarsely crushed, or rounded.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110423980000",
+      "tanim_tr": "Diğer mısır taneleri",
+      "tanim_en": "Other corn kernels",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110429040000",
+      "tanim_tr": "Arpa taneleri; kabuğu veya kavuzu çıkarılmış, dilimlenmiş veya iri parçalar halinde ufalanmış olsun olmasın",
+      "tanim_en": "Barley grains; whether hulled or dehulled, sliced ​​or coarsely crushed.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110429050000",
+      "tanim_tr": "Arpa taneleri; yuvarlatılmış",
+      "tanim_en": "Barley grains; rounded",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110429080000",
+      "tanim_tr": "Diğer arpa taneleri",
+      "tanim_en": "Other barley grains",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110429170000",
+      "tanim_tr": "Diğer hububat taneleri; kabuğu veya kavuzu çıkarılmış, dilimlenmiş veya iri parçalar halinde ufalanmış olsun olmasın",
+      "tanim_en": "Other cereal grains; whether hulled or dehulled, sliced ​​or coarsely chopped.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110429300000",
+      "tanim_tr": "Yuvarlatılmış diğer hububat taneleri",
+      "tanim_en": "Other rounded cereal grains",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110429510000",
+      "tanim_tr": "Buğday; sadece iri parçalar halinde ufalanmış",
+      "tanim_en": "Wheat; simply crushed into large pieces.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110429550000",
+      "tanim_tr": "Çavdar; sadece iri parçalar halinde ufalanmış",
+      "tanim_en": "Rye; only coarsely ground.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110429590000",
+      "tanim_tr": "Diğer hububat; sadece iri parçalar halinde ufalanmış",
+      "tanim_en": "Other grains; only crushed into large pieces.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110429810000",
+      "tanim_tr": "Diğer buğday taneleri",
+      "tanim_en": "Other wheat grains",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110429850000",
+      "tanim_tr": "Diğer çavdar taneleri",
+      "tanim_en": "Other rye grains",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110429890000",
+      "tanim_tr": "Diğer hububat taneleri",
+      "tanim_en": "Other cereal grains",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110430100000",
+      "tanim_tr": "Buğday embriyonları; bütün, yassılaştırılmış, flokon haline getirilmiş veya öğütülmüş",
+      "tanim_en": "Wheat germ; whole, flattened, flaked or ground.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110430900011",
+      "tanim_tr": "Mısır özü; bütün, yassılaştırılmış, flokon haline getirilmiş veya öğütülmüş",
+      "tanim_en": "Corn extract; whole, flattened, flaked or ground.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110430900019",
+      "tanim_tr": "Diğer hububat embriyonları; bütün, yassılaştırılmış, flokon haline getirilmiş veya öğütülmüş",
+      "tanim_en": "Other cereal embryos; whole, flattened, flaked or ground.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110510000011",
+      "tanim_tr": "Patates unu",
+      "tanim_en": "Potato flour",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110510000012",
+      "tanim_tr": "Patates ezmesi ve tozları",
+      "tanim_en": "Mashed potatoes and potato powders",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110520000000",
+      "tanim_tr": "Patates flokonları, granülleri ve pelletleri",
+      "tanim_en": "Potato flakes, granules and pellets",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110610000000",
+      "tanim_tr": "Kuru baklağillerin (07.13) unu, kaba unu ve tozları",
+      "tanim_en": "Flour, coarse flour and powders of dried legumes (07.13)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110620100000",
+      "tanim_tr": "Nişasta veya inülin içeren kök ve yumruların (07.14) başka maddeler katılmış (denature) unu, kaba unu ve tozları",
+      "tanim_en": "Denatured flour, coarse flour and powders of roots and tubers (07.14) containing starch or inulin, mixed with other substances.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110620900011",
+      "tanim_tr": "Salep",
+      "tanim_en": "Salep",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110620900019",
+      "tanim_tr": "Nişasta veya inülin içeren kök ve yumruların (07.14) diğer unu, kaba unu ve tozları",
+      "tanim_en": "Other flours, coarse flours and powders of roots and tubers (07.14) containing starch or inulin",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110630100000",
+      "tanim_tr": "Muzun unu, kaba unu ve tozu",
+      "tanim_en": "Banana meal, coarse meal and powder.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110630900015",
+      "tanim_tr": "Fındıktan un, kaba un ve tozlar",
+      "tanim_en": "Hazelnut flour, coarse flour and powders",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110630900019",
+      "tanim_tr": "Diğer meyvelerin ve sert kabuklu diğer meyvelerin (08) unu, kaba unu ve tozları",
+      "tanim_en": "Flour, coarse flour and powders of other fruits and other nuts (08)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110710110000",
+      "tanim_tr": "Buğday maltı (kavrulmamış); un şeklinde",
+      "tanim_en": "Wheat malt (unroasted); in flour form.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110710190000",
+      "tanim_tr": "Buğday maltı (kavrulmamış); un şeklinde olanlar HARİÇ",
+      "tanim_en": "Wheat malt (unroasted); EXCEPT those in flour form.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110710910011",
+      "tanim_tr": "Arpa maltı (kavrulmamış); un şeklinde",
+      "tanim_en": "Barley malt (unroasted); in flour form.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110710910019",
+      "tanim_tr": "Diğer maltlar (kavrulmamış); un şeklinde",
+      "tanim_en": "Other malts (unroasted); in flour form.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110710990011",
+      "tanim_tr": "Arpa maltı (kavrulmamış); un şeklinde olanlar HARİÇ",
+      "tanim_en": "Barley malt (unroasted); EXCEPT those in flour form.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110710990019",
+      "tanim_tr": "Diğer maltlar (kavrulmamış); un şeklinde olanlar HARİÇ",
+      "tanim_en": "Other malts (unroasted); EXCEPT those in flour form.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110720000011",
+      "tanim_tr": "Buğday maltı (kavrulmuş)",
+      "tanim_en": "Roasted wheat malt",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110720000012",
+      "tanim_tr": "Arpa maltı (kavrulmuş)",
+      "tanim_en": "Roasted barley malt",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110720000019",
+      "tanim_tr": "Diğer maltlar (kavrulmuş)",
+      "tanim_en": "Other malts (roasted)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110811001000",
+      "tanim_tr": "Buğday nişastası; torba içinde olanlar",
+      "tanim_en": "Wheat starch; those in bags.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110811009000",
+      "tanim_tr": "Buğday nişastası; torba içinde olanlar HARİÇ",
+      "tanim_en": "Wheat starch; EXCEPT those in bags.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110812001000",
+      "tanim_tr": "Mısır nişastası; torba içinde olanlar",
+      "tanim_en": "Cornstarch; in bags.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110812009000",
+      "tanim_tr": "Mısır nişastası; torba içinde olanlar HARİÇ",
+      "tanim_en": "Cornstarch; EXCEPT those in bags.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110813001000",
+      "tanim_tr": "Patates nişastası; torba içinde olanlar",
+      "tanim_en": "Potato starch; the kind that comes in bags.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110813009000",
+      "tanim_tr": "Patates nişastası; torba içinde olanlar HARİÇ",
+      "tanim_en": "Potato starch; EXCEPT those in bags.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110814001000",
+      "tanim_tr": "Manyok nişastası (cassava); torba içinde olanlar",
+      "tanim_en": "Cassava starch; available in bags.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110814009000",
+      "tanim_tr": "Manyok nişastası (cassava); torba içinde olanlar HARİÇ",
+      "tanim_en": "Cassava starch; EXCEPT those in bags.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110819101000",
+      "tanim_tr": "Pirinç nişastası; torba içinde olanlar",
+      "tanim_en": "Rice starch; the kind that comes in bags.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110819109000",
+      "tanim_tr": "Pirinç nişastası; torba içinde olanlar HARİÇ",
+      "tanim_en": "Rice starch; EXCEPT those in bags.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110819901000",
+      "tanim_tr": "Diğer nişastalar; torba içinde olanlar",
+      "tanim_en": "Other starches; those in bags",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110819909000",
+      "tanim_tr": "Diğer nişastalar; torba içinde olanlar HARİÇ",
+      "tanim_en": "Other starches; EXCEPT those in bags.",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110820000000",
+      "tanim_tr": "İnülin",
+      "tanim_en": "Inulin",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "110900000000",
+      "tanim_tr": "Buğday gluteni (kurutulmuş olsun olmasın)",
+      "tanim_en": "Wheat gluten (whether dried or not)",
+      "grup": "I-A",
+      "vergi_turu": "kdv",
+      "oran": 0.01,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    }
+  ]
+}

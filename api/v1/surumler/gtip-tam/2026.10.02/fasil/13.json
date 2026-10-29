@@ -1,0 +1,3797 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-tam",
+      "ad": {
+        "tr": "GTİP Tüm Vergiler",
+        "en": "GTIP All Taxes"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.02",
+    "guncelleme": "2026-10-02",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.02"
+      },
+      "uretim_zamani": "2026-10-02T00:00:00+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "13",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:838433a64103783ccbce709ade4b330faf9bf1945b26a86075dd86e1a96621f3"
+  },
+  "kayitlar": [
+    {
+      "kod": "130120000000",
+      "tanim_tr": "Arap zamkı",
+      "tanim_en": "Arabic gum",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130190001000",
+      "tanim_tr": "Günlük",
+      "tanim_en": "Daily",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130190002100",
+      "tanim_tr": "Saluz adası mastikası (Pistacia lentiscus cinsi ağaçların mastikası); tababette kullanılanlar",
+      "tanim_en": "Mastic from Saluz Island (mastic of trees of the genus Pistacia lentiscus); used in medicine.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130190002900",
+      "tanim_tr": "Saluz adası mastikası (Pistacia lentiscus cinsi ağaçların mastikası); tababette kullanılanlar HARİÇ",
+      "tanim_en": "Mastic from Saluz Island (mastic of trees of the genus Pistacia lentiscus); EXCLUDING those used in medicine.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130190003100",
+      "tanim_tr": "Zamk ve sakız reçineleri; tababette kullanılanlar",
+      "tanim_en": "Gums and gum resins; those used in medicine.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130190003900",
+      "tanim_tr": "Zamk ve sakız reçineleri; tababette kullanılanlar HARİÇ",
+      "tanim_en": "Gums and gum resins; EXCEPT those used in medicine.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130190004100",
+      "tanim_tr": "Lak",
+      "tanim_en": "Lac",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130190009100",
+      "tanim_tr": "Diğer reçineler; tababette kullanılanlar",
+      "tanim_en": "Other resins; those used in medicine.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130190009900",
+      "tanim_tr": "Diğer reçineler; tababette kullanılanlar HARİÇ",
+      "tanim_en": "Other resins; EXCEPT those used in medicine.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130211001000",
+      "tanim_tr": "Afyondan elde edilen özsu ve hülasalar; ilaç sanayinde kullanılan",
+      "tanim_en": "The sap and extracts obtained from opium are used in the pharmaceutical industry.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130211009011",
+      "tanim_tr": "Haşhaş sapı konsantreleri (afyon); ilaç sanayinde kullanılanlar HARİÇ",
+      "tanim_en": "Poppy stalk concentrates (opium); EXCLUDING those used in the pharmaceutical industry.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130211009012",
+      "tanim_tr": "Afyondan elde edilen diğer özsu ve hülasalar; ilaç sanayinde kullanılanlar HARİÇ",
+      "tanim_en": "Other sap and extracts obtained from opium; EXCLUDING those used in the pharmaceutical industry.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130212000000",
+      "tanim_tr": "Meyan kökünden elde edilen özsu ve hülasalar",
+      "tanim_en": "Extracts and sap obtained from licorice root",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130213000000",
+      "tanim_tr": "Şerbetçi otundan elde edilen bitkisel özsu ve hülasalar",
+      "tanim_en": "Plant extracts and sap obtained from hops",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130214000000",
+      "tanim_tr": "Efedra (Ephedra) bitkisinden elde edilen özsu ve hülasalar",
+      "tanim_en": "Sap and extracts obtained from the Ephedra plant.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130219050000",
+      "tanim_tr": "Vanilya yağ reçineleri",
+      "tanim_en": "Vanilla oil resins",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130219701000",
+      "tanim_tr": "Diğer bitkilerden elde edilen özsu ve hülasalar; ilaç sanayiinde kullanılanlar",
+      "tanim_en": "Sap and extracts obtained from other plants; those used in the pharmaceutical industry.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130219709100",
+      "tanim_tr": "Pire otundan veya rotenon içeren bitkilerin köklerinden elde edilen özsu ve hülasalar; ilaç sanayiinde kullanılan HARİÇ",
+      "tanim_en": "Sap and extracts obtained from the roots of pyrethrum or rotenone-containing plants; EXCEPT for use in the pharmaceutical industry.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130219709910",
+      "tanim_tr": "Stevia bitkisinden elde edilen özsu ve hülasalar; ilaç sanayiinde kullanılanlar HARİÇ",
+      "tanim_en": "Extracts and sap obtained from the stevia plant; EXCEPT those used in the pharmaceutical industry.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130219709990",
+      "tanim_tr": "Diğer bitkilerden elde edilen özsu ve hülasalar; ilaç sanayiinde kullanılanlar HARİÇ",
+      "tanim_en": "Sap and extracts obtained from other plants; EXCEPT those used in the pharmaceutical industry.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130220101000",
+      "tanim_tr": "Pektik maddeler (pektinler); kuru halde olanlar",
+      "tanim_en": "Pectic substances (pectins); in their dried form.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130220109011",
+      "tanim_tr": "Pektinatlar; kuru halde olanlar",
+      "tanim_en": "Pectinates; in dry form.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130220109012",
+      "tanim_tr": "Pektatlar; kuru halde olanlar",
+      "tanim_en": "Pectates; those in dry form.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130220901000",
+      "tanim_tr": "Pektik maddeler (pektinler); kuru halde olanlar HARİÇ",
+      "tanim_en": "Pectic substances (pectins); EXCEPT those in dry form.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130220909011",
+      "tanim_tr": "Pektinatlar; kuru halde olanlar HARİÇ",
+      "tanim_en": "Pectinates; EXCEPT those in dry form.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130220909012",
+      "tanim_tr": "Pektatlar; kuru halde olanlar HARİÇ",
+      "tanim_en": "Pectates; EXCEPT those in dry form.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130231001000",
+      "tanim_tr": "Agar-agar; eterifiye veya esterifiye edilmiş olanlar",
+      "tanim_en": "Agar-agar; etherified or esterified types.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130231009000",
+      "tanim_tr": "Agar-agar; eterifiye veya esterifiye edilmiş olanlar HARİÇ",
+      "tanim_en": "Agar-agar; EXCEPT those that are etherified or esterified.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130232101000",
+      "tanim_tr": "Keçiboynuzundan ve keçi boynuzu tohumundan elde edilen yapışkan sıvılar ve kıvam verici maddeler; eterifiye veya esterifiye edilmiş olanlar",
+      "tanim_en": "Sticky liquids and thickening agents obtained from carob and carob seeds; etherified or esterified.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130232109000",
+      "tanim_tr": "Keçiboynuzundan ve keçi boynuzu tohumundan elde edilen yapışkan sıvılar ve kıvam verici maddeler; eterifiye veya esterifiye edilmiş olanlar HARİÇ",
+      "tanim_en": "Sticky liquids and thickening agents obtained from carob and carob seeds; EXCEPT those that are etherified or esterified.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130232901000",
+      "tanim_tr": "Siyam baklası tohumundan elde edilen yapışkan sıvılar ve kıvam verici maddeler; eterifiye veya esterifiye edilmiş olanlar",
+      "tanim_en": "Sticky liquids and thickening agents obtained from Siamese bean seeds; etherified or esterified ones.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130232909000",
+      "tanim_tr": "Siyam baklası tohumundan elde edilen yapışkan sıvılar ve kıvam verici maddeler; eterifiye veya esterifiye edilmiş olanlar HARİÇ",
+      "tanim_en": "Sticky liquids and thickening agents obtained from Siamese bean seeds; EXCEPT those that are etherified or esterified.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130239001000",
+      "tanim_tr": "Diğer bitkisel ürünlerden elde edilen yapışkan sıvı ve kıvam verici maddeler; eterifiye veya esterifiye edilmiş olanlar",
+      "tanim_en": "Other viscous liquids and thickening agents obtained from plant products; those that have been etherified or esterified.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    },
+    {
+      "kod": "130239009000",
+      "tanim_tr": "Diğer bitkisel ürünlerden elde edilen yapışkan sıvı ve kıvam verici maddeler; eterifiye veya esterifiye edilmiş olanlar HARİÇ",
+      "tanim_en": "Other viscous liquids and thickening agents derived from plant products; EXCEPT those that are etherified or esterified.",
+      "kdv": {
+        "grup": "genel",
+        "vergi_turu": "kdv",
+        "oran": 0.2,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "otv": {
+        "grup": "otv_yok",
+        "vergi_turu": "otv",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici",
+          "ithalat"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "tevkifat": {
+        "grup": "tevkifat_yok",
+        "vergi_turu": "tevkifat",
+        "oran": null,
+        "islem_tipleri": [
+          "yurtici"
+        ],
+        "alici_tipleri": [
+          "*"
+        ],
+        "satici_tipleri": [
+          "*"
+        ],
+        "ek_kriterler": {},
+        "istisna": false,
+        "istisna_tipi": null,
+        "kosullu": false
+      },
+      "nace": null,
+      "randiman": {
+        "girdi_oldugu_kurallar": [],
+        "cikti_oldugu_kurallar": []
+      },
+      "belgeler": {
+        "yurtici": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ithalat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ],
+        "ihracat": [
+          {
+            "kod": "tarim-izin",
+            "ad_tr": "Tarım ve Orman Bakanlığı İzni",
+            "ad_en": "Ministry of Agriculture Permit",
+            "kurum_kod": "tarim",
+            "seviye": "zorunlu",
+            "kosul_tr": "Gıda, alkol, tütün ve canlı bitki/hayvan ürünleri için zorunludur.",
+            "kosul_en": "Mandatory for food, alcohol, tobacco and live plant/animal products.",
+            "ek_kriterler": {},
+            "kosullu": false
+          }
+        ]
+      }
+    }
+  ]
+}

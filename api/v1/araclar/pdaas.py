@@ -230,9 +230,15 @@ def icerik_verisi(doc, meta):
     tip = (meta.get("yapi") or {}).get("tip")
     if tip == "kural-seti":
         return {"gruplar": doc.get("gruplar", {}), "kurallar": doc.get("kurallar", [])}
-    # Yeni: index.json dosyaları için parça listesi hash'e dahil edilir
     if doc.get("parcalar") is not None:
-        return {"parcalar": doc.get("parcalar", [])}
+        # Index dosyaları: servis kimliği ve katman hash'e dahil edilir.
+        # Aksi hâlde aynı kod sisteminden türeyen servisler (gtip-kdv, gtip-tam, ...)
+        # aynı parcalar listesini üretip aynı checksum'ı alır.
+        return {
+            "servis": meta.get("servis"),
+            "katman": meta.get("katman"),
+            "parcalar": doc.get("parcalar", []),
+        }
     return doc.get("kayitlar", [])
 
 def yukle(yol):
@@ -379,19 +385,29 @@ def analiz(kok, kaynak, semalar, rapor, force):
         doc = yukle(kaynak)
     except json.JSONDecodeError as e:
         rapor.hata(ad, f"geçersiz JSON: {e.msg} (satır {e.lineno})"); return None
-        
+
     if not isinstance(doc, dict) or not isinstance(doc.get("meta"), dict):
         rapor.hata(ad, "kök 'meta' nesnesi yok"); return None
-        
+
     meta = doc["meta"]
-    katman = meta.get("katman", "ham") # Hangi katmanda olduğunu meta'dan alıyoruz
+    katman = meta.get("katman", "ham")
     yeni_hash = sha256(icerik_verisi(doc, meta))
 
-    if "checksum" in meta and meta["checksum"] != yeni_hash:
+    # Partition (fasil/bolum) dosyalarındaki checksum servis düzeyindedir;
+    # kendi içerik hash'iyle kıyaslanmaz.
+    parca_tur = (meta.get("parca") or {}).get("tur")
+    partition_mi = parca_tur in ("fasil", "bolum")
+
+    if not partition_mi and "checksum" in meta and meta["checksum"] != yeni_hash:
         rapor.uyari(ad, f"ham dosyadaki checksum güncel değil; arşive güncel hash yazılacak")
 
     arsiv_doc = copy.deepcopy(doc)
-    arsiv_doc["meta"]["checksum"] = yeni_hash
+    if partition_mi:
+        # Partition arşivinde servis düzeyi checksum'ı koru
+        if "checksum" not in arsiv_doc["meta"]:
+            arsiv_doc["meta"]["checksum"] = yeni_hash
+    else:
+        arsiv_doc["meta"]["checksum"] = yeni_hash
 
     if not dogrula_meta(arsiv_doc["meta"], semalar["meta"], ad, rapor): return None
     if not dogrula_govde(doc, meta, ad, rapor): return None

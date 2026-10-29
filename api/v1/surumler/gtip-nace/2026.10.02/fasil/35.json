@@ -1,0 +1,517 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-nace",
+      "ad": {
+        "tr": "GTİP NACE Eşleşmesi",
+        "en": "GTIP NACE Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.02",
+    "guncelleme": "2026-10-02",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.02"
+      },
+      "uretim_zamani": "2026-10-02T00:00:00+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "35",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:8a251f4cf548bfd042997b85b3509bcd77127c0cb0f6168c3a85682b0ef623ed"
+  },
+  "kayitlar": [
+    {
+      "kod": "350110100000",
+      "tanim_tr": "Kazein; suni tekstil liflerinin imalatına mahsus olanlar",
+      "tanim_en": "Casein; used in the manufacture of synthetic textile fibers.",
+      "nace": null
+    },
+    {
+      "kod": "350110500000",
+      "tanim_tr": "Kazein; gıda ve yem ürünleri imalatı dışındaki sanayide kullanılan",
+      "tanim_en": "Casein is used in industries other than food and feed manufacturing.",
+      "nace": null
+    },
+    {
+      "kod": "350110900000",
+      "tanim_tr": "Diğer kazeinler",
+      "tanim_en": "Other caseins",
+      "nace": null
+    },
+    {
+      "kod": "350190100000",
+      "tanim_tr": "Kazein tutkalları",
+      "tanim_en": "Casein glues",
+      "nace": null
+    },
+    {
+      "kod": "350190900011",
+      "tanim_tr": "Sodyum kazeinat",
+      "tanim_en": "Sodium caseinate",
+      "nace": null
+    },
+    {
+      "kod": "350190900019",
+      "tanim_tr": "Kazeinatlar ve diğer kazein türevleri",
+      "tanim_en": "Caseinates and other casein derivatives",
+      "nace": null
+    },
+    {
+      "kod": "350211100000",
+      "tanim_tr": "Yumurta albümini (ovalbümin); kurutulmuş, insan gıdası olarak kullanılmaya elverişli olmayan",
+      "tanim_en": "Egg albumin (ovalbumin); dried, unsuitable for human consumption.",
+      "nace": null
+    },
+    {
+      "kod": "350211900000",
+      "tanim_tr": "Yumurta albümini (ovalbümin); kurutulmuş, insan gıdası olarak kullanılmaya elverişli",
+      "tanim_en": "Egg albumin (ovalbumin); dried, suitable for human consumption.",
+      "nace": null
+    },
+    {
+      "kod": "350219100000",
+      "tanim_tr": "Yumurta albümini (ovalbümin); kurutulmuş HARİÇ, insan gıdası olarak kullanılmaya elverişli olmayan",
+      "tanim_en": "Egg albumin (ovalbumin); EXCEPT dried, unsuitable for human consumption.",
+      "nace": null
+    },
+    {
+      "kod": "350219900000",
+      "tanim_tr": "Yumurta albümini (ovalbümin); kurutulmuş HARİÇ, insan gıdası olarak kullanılmaya elverişli",
+      "tanim_en": "Egg albumin (ovalbumin); EXCEPT dried, suitable for human consumption.",
+      "nace": null
+    },
+    {
+      "kod": "350220100000",
+      "tanim_tr": "Süt albümini; insan gıdası olarak kullanılmaya elverişli olmayan",
+      "tanim_en": "Milk albumin; unsuitable for human consumption.",
+      "nace": null
+    },
+    {
+      "kod": "350220910000",
+      "tanim_tr": "Süt albümini; kurutulmuş (örneğin yaprak, pul, flokon ve toz halinde); insan gıdası olarak kullanılmaya elverişli",
+      "tanim_en": "Milk albumin; dried (e.g., in the form of leaves, flakes, flakes, and powder); suitable for human consumption.",
+      "nace": null
+    },
+    {
+      "kod": "350220990000",
+      "tanim_tr": "Süt albümini; diğer şekilde, insan gıdası olarak kullanılmaya elverişli",
+      "tanim_en": "Milk albumin; otherwise, suitable for use as human food.",
+      "nace": null
+    },
+    {
+      "kod": "350290200000",
+      "tanim_tr": "Diğer albüminler; insan gıdası olarak kullanılmaya elverişli olmayanlar",
+      "tanim_en": "Other albumins; those unsuitable for human consumption.",
+      "nace": null
+    },
+    {
+      "kod": "350290700000",
+      "tanim_tr": "Diğer albüminler; insan gıdası olarak kullanılmaya elverişli",
+      "tanim_en": "Other albumins are suitable for use as human food.",
+      "nace": null
+    },
+    {
+      "kod": "350290900000",
+      "tanim_tr": "Albüminatlar ve diğer albümin türevleri",
+      "tanim_en": "Albuminates and other albumin derivatives",
+      "nace": null
+    },
+    {
+      "kod": "350300101000",
+      "tanim_tr": "Jelatin",
+      "tanim_en": "Gelatine",
+      "nace": null
+    },
+    {
+      "kod": "350300102000",
+      "tanim_tr": "Jelatin türevleri",
+      "tanim_en": "Gelatin derivatives",
+      "nace": null
+    },
+    {
+      "kod": "350300800000",
+      "tanim_tr": "Katı ihtiyokol, hayvansal menşeli diğer tutkallar (35.01'deki kazein tutkalları hariç)",
+      "tanim_en": "Solid ichthyocol, other glues of animal origin (excluding casein glues in section 35.01)",
+      "nace": null
+    },
+    {
+      "kod": "350400100000",
+      "tanim_tr": "Konsantre süt proteinleri (Kuru madde ağırlığının %85'den fazla protein ihtiva edenler)",
+      "tanim_en": "Concentrated milk proteins (containing more than 85% protein by dry matter weight)",
+      "nace": null
+    },
+    {
+      "kod": "350400900011",
+      "tanim_tr": "Thaumatine",
+      "tanim_en": "Thaumatine",
+      "nace": null
+    },
+    {
+      "kod": "350400900019",
+      "tanim_tr": "Diğer peptonlar ve bunların türevleri, diğer proteinli maddeler ve deri tozu",
+      "tanim_en": "Other peptones and their derivatives, other protein substances and leather powder.",
+      "nace": null
+    },
+    {
+      "kod": "350510100000",
+      "tanim_tr": "Dekstrinler",
+      "tanim_en": "Dextrins",
+      "nace": null
+    },
+    {
+      "kod": "350510500000",
+      "tanim_tr": "Esterifiye veya eterifiye edilmiş nişastalar",
+      "tanim_en": "Esterified or etherified starches",
+      "nace": null
+    },
+    {
+      "kod": "350510900011",
+      "tanim_tr": "Kavrulmuş veya çözünebilen nişastalar",
+      "tanim_en": "Roasted or soluble starches",
+      "nace": null
+    },
+    {
+      "kod": "350510900019",
+      "tanim_tr": "Tadil edilmiş diğer nişastalar",
+      "tanim_en": "Other modified starches",
+      "nace": null
+    },
+    {
+      "kod": "350520101000",
+      "tanim_tr": "Leykom (tutkal); nişasta, dekstrin veya tadil edilmiş nişasta oranı <% 25",
+      "tanim_en": "Leykom (glue); starch, dextrin or modified starch content <25%",
+      "nace": null
+    },
+    {
+      "kod": "350520109000",
+      "tanim_tr": "Diğer tutkallar; nişasta, dekstrin veya tadil edilmiş nişasta oranı <% 25",
+      "tanim_en": "Other adhesives; starch, dextrin or modified starch content <25%",
+      "nace": null
+    },
+    {
+      "kod": "350520301000",
+      "tanim_tr": "Leykom (tutkal); nişasta, dekstrin veya tadil edilmiş nişasta oranı >=%25 fakat <%55",
+      "tanim_en": "Leykom (glue); starch, dextrin or modified starch content >=25% but <55%",
+      "nace": null
+    },
+    {
+      "kod": "350520309000",
+      "tanim_tr": "Diğer tutkallar; nişasta, dekstrin veya tadil edilmiş nişasta oranı >=%25 fakat <%55",
+      "tanim_en": "Other adhesives; starch, dextrin or modified starch content >=25% but <55%",
+      "nace": null
+    },
+    {
+      "kod": "350520501000",
+      "tanim_tr": "Leykom (tutkal); nişasta, dekstrin veya tadil edilmiş nişasta oranı >=%55 fakat <%80",
+      "tanim_en": "Leykom (glue); starch, dextrin or modified starch content >=55% but <80%",
+      "nace": null
+    },
+    {
+      "kod": "350520509000",
+      "tanim_tr": "Diğer tutkallar; nişasta, dekstrin veya tadil edilmiş nişasta oranı >=%55 fakat <%80",
+      "tanim_en": "Other adhesives; starch, dextrin or modified starch content >=55% but <80%",
+      "nace": null
+    },
+    {
+      "kod": "350520901000",
+      "tanim_tr": "Leykom (tutkal); nişasta, dekstrin veya tadil edilmiş nişasta oranı >=%80",
+      "tanim_en": "Leykom (glue); starch, dextrin or modified starch content >= 80%",
+      "nace": null
+    },
+    {
+      "kod": "350520909000",
+      "tanim_tr": "Diğer tutkallar; nişasta, dekstrin veya tadil edilmiş nişasta oranı >=%80",
+      "tanim_en": "Other adhesives; starch, dextrin or modified starch content >= 80%",
+      "nace": null
+    },
+    {
+      "kod": "350610001000",
+      "tanim_tr": "Soğuk tutkal; perakende, ağırlık <=1kg.",
+      "tanim_en": "Cold glue; retail, weight <=1kg.",
+      "nace": null
+    },
+    {
+      "kod": "350610009011",
+      "tanim_tr": "Solvent içeren diğer tutkal; perakende, ağırlık <=1kg.",
+      "tanim_en": "Other solvent-based glues; retail, weight <=1kg.",
+      "nace": null
+    },
+    {
+      "kod": "350610009012",
+      "tanim_tr": "Sıcak baskı (hot melt) tutkallar; perakende satılmak üzere ve net ağrlığı <=1 kg'lık ambalajlarda olanlar",
+      "tanim_en": "Hot melt adhesives; available for retail sale in packages with a net weight of <=1 kg.",
+      "nace": null
+    },
+    {
+      "kod": "350610009019",
+      "tanim_tr": "Diğer tutkal; perakende, ağırlık <=1kg.",
+      "tanim_en": "Other glue; retail, weight <=1kg.",
+      "nace": null
+    },
+    {
+      "kod": "350691100000",
+      "tanim_tr": "Geçici sıvı tutkallar; düz panel gösterge veya dokunmatik ekran panellerinin imali için,filmsiz ve optik kullanıma uygun",
+      "tanim_en": "Temporary liquid adhesives; film-free and suitable for optical use in the manufacture of flat panel display or touch screen panels.",
+      "nace": null
+    },
+    {
+      "kod": "350691901000",
+      "tanim_tr": "Soğuk tutkal; esası kauçuk veya 39.01 ila 39.13 pozisyonlarının polimerleri olan",
+      "tanim_en": "Cold glue; base material is rubber or polymers of headings 39.01 to 39.13.",
+      "nace": null
+    },
+    {
+      "kod": "350691909011",
+      "tanim_tr": "Ahşap malzeme için polivinil esatat esaslı emilsiyonlar (yapıştırıcı)",
+      "tanim_en": "Polyvinyl esatate-based emulsions (adhesives) for wood materials.",
+      "nace": null
+    },
+    {
+      "kod": "350691909012",
+      "tanim_tr": "Ahşap malzeme için sentetik reçineli tutkal ve yapıştırıcılar",
+      "tanim_en": "Synthetic resin glues and adhesives for wood materials.",
+      "nace": null
+    },
+    {
+      "kod": "350691909013",
+      "tanim_tr": "Solvent içeren kauçuk/plastik esaslı tutkal ve yapıştırıcılar",
+      "tanim_en": "Solvent-based rubber/plastic adhesives and glues",
+      "nace": null
+    },
+    {
+      "kod": "350691909014",
+      "tanim_tr": "Sıcak baskı (hot melt) tutkallar; perakende satılmak üzere ve net ağrlığı <=1 kg'lık ambalajlarda olanlar HARİÇ",
+      "tanim_en": "Hot melt adhesives; EXCEPT those intended for retail sale and in packages with a net weight of <=1 kg.",
+      "nace": null
+    },
+    {
+      "kod": "350691909019",
+      "tanim_tr": "Diğer tutkallar ve diğer yapıştırıcılar; esası kauçuk veya 39.01 ila 39.13 pozisyonlarının polimerleri",
+      "tanim_en": "Other glues and other adhesives; based on rubber or polymers of headings 39.01 to 39.13",
+      "nace": null
+    },
+    {
+      "kod": "350699001000",
+      "tanim_tr": "Çiriş (yapıştırıcı)",
+      "tanim_en": "Adhesive",
+      "nace": null
+    },
+    {
+      "kod": "350699009011",
+      "tanim_tr": "Solvent içeren diğer tutkallar ve diğer müstahzar yapıştırıcılar",
+      "tanim_en": "Other glues and other prepared adhesives containing solvents",
+      "nace": null
+    },
+    {
+      "kod": "350699009019",
+      "tanim_tr": "Diğer tutkallar ve diğer müstahzar yapıştırıcılar",
+      "tanim_en": "Other glues and other prepared adhesives",
+      "nace": null
+    },
+    {
+      "kod": "350710000000",
+      "tanim_tr": "Peynir mayası ve bunun konsantreleri",
+      "tanim_en": "Rennet and its concentrates",
+      "nace": null
+    },
+    {
+      "kod": "350790300000",
+      "tanim_tr": "Lipoprotein lipaz, Aspergillus alkalin proteaz",
+      "tanim_en": "Lipoprotein lipase, Aspergillus alkaline protease",
+      "nace": null
+    },
+    {
+      "kod": "350790900011",
+      "tanim_tr": "Pepsin",
+      "tanim_en": "Pepsin",
+      "nace": null
+    },
+    {
+      "kod": "350790900012",
+      "tanim_tr": "Malt enzimleri",
+      "tanim_en": "Malt enzymes",
+      "nace": null
+    },
+    {
+      "kod": "350790900013",
+      "tanim_tr": "Trombin",
+      "tanim_en": "Thrombin",
+      "nace": null
+    },
+    {
+      "kod": "350790900019",
+      "tanim_tr": "Diğer enzimler ve diğer müstahzar enzimler",
+      "tanim_en": "Other enzymes and other prepared enzymes",
+      "nace": null
+    }
+  ]
+}

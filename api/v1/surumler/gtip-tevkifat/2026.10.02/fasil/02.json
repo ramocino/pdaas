@@ -1,0 +1,5674 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-tevkifat",
+      "ad": {
+        "tr": "GTİP Tevkifat Eşleşmesi",
+        "en": "GTIP Withholding Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.02",
+    "guncelleme": "2026-10-02",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.02"
+      },
+      "uretim_zamani": "2026-10-02T00:00:00+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "02",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:2e7121dc655407452ab7ce81074469d3d48be8a8cbd4bf83a2fc399ee3c70fcf"
+  },
+  "kayitlar": [
+    {
+      "kod": "020110000000",
+      "tanim_tr": "Büyükbaş hayvanlarının karkas ve yarım karkasları; taze veya soğutulmuş",
+      "tanim_en": "Carcasses and halves of cattle; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020120200000",
+      "tanim_tr": "Büyükbaş hayvanlarının eşit olarak bölünmüş çeyrek karkasları; taze veya soğutulmuş",
+      "tanim_en": "Quarter carcasses of cattle, equally divided; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020120300000",
+      "tanim_tr": "Büyükbaş hayvanları karkaslarının ön çeyrekleri; taze veya soğutulmuş",
+      "tanim_en": "Front quarters of beef carcasses; fresh or chilled",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020120500000",
+      "tanim_tr": "Büyükbaş hayvanları karkaslarının arka çeyrekleri; taze veya soğutulmuş",
+      "tanim_en": "Rear quarters of beef carcasses; fresh or chilled",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020120900000",
+      "tanim_tr": "Büyükbaş hayvanlarının kemikli diğer parçaları; taze veya soğutulmuş",
+      "tanim_en": "Other bony parts of beef; fresh or chilled",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020130000000",
+      "tanim_tr": "Büyükbaş hayvanlarının kemiksiz etleri; taze veya soğutulmuş",
+      "tanim_en": "Boneless beef; fresh or chilled",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020210000000",
+      "tanim_tr": "Büyükbaş hayvanlarının karkas ve yarım karkasları; dondurulmuş",
+      "tanim_en": "Carcasses and half-carcasses of cattle; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020220100000",
+      "tanim_tr": "Büyükbaş hayvanlarının eşit olarak bölünmüş çeyrek karkasları; dondurulmuş",
+      "tanim_en": "Equally divided quarter carcasses of cattle; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020220300000",
+      "tanim_tr": "Büyükbaş hayvanları karkaslarının ön çeyrekleri; dondurulmuş",
+      "tanim_en": "Forequarters of cattle carcasses; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020220500000",
+      "tanim_tr": "Büyükbaş hayvanları karkaslarının arka çeyrekleri; dondurulmuş",
+      "tanim_en": "Rear quarters of cattle carcasses; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020220900000",
+      "tanim_tr": "Büyükbaş hayvanlarının kemikli diğer parçaları; dondurulmuş",
+      "tanim_en": "Other bony parts of cattle; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020230100000",
+      "tanim_tr": "Büyükbaş hayvanlarının kemiksiz etleri; karkas çeyrekleri, bütün veya en fazla 5 parçaya bölünmüş (dondurulmuş)",
+      "tanim_en": "Boneless meat of cattle; carcass quarters, whole or divided into a maximum of 5 pieces (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020230500000",
+      "tanim_tr": "Büyükbaş hayvanları karkaslarının ön çeyreklerinin döş ve kaburgalarının kemiksiz etleri; dondurulmuş",
+      "tanim_en": "Boneless meat from the brisket and ribs of the forequarters of beef carcasses; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020230900000",
+      "tanim_tr": "Büyükbaş hayvanlarının kemiksiz diğer etleri; dondurulmuş",
+      "tanim_en": "Other boneless meats of cattle; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020311100000",
+      "tanim_tr": "Evcil domuzların karkas ve yarım karkasları; taze veya soğutulmuş",
+      "tanim_en": "Carcasses and half-carcasses of domestic pigs; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020311900000",
+      "tanim_tr": "Domuzların (evcil domuzlar HARİÇ) karkas ve yarım karkasları; taze veya soğutulmuş",
+      "tanim_en": "Carcasses and half-carcasses of pigs (EXCEPT domestic pigs); fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020312110000",
+      "tanim_tr": "Evcil domuzların kemikli but ve but parçaları; taze veya soğutulmuş",
+      "tanim_en": "Bone-in leg and leg pieces from domestic pigs; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020312190000",
+      "tanim_tr": "Evcil domuzların kemikli kol ve kol parçaları; taze veya soğutulmuş",
+      "tanim_en": "Bone-in shoulder and shoulder parts of domestic pigs; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020312900000",
+      "tanim_tr": "Domuzların (evcil olanlar HARİÇ) kemikli but, kol ve bunların parçaları; taze veya soğutulmuş",
+      "tanim_en": "Bone-in hindquarters, shoulders and parts thereof of pigs (EXCEPT domesticated ones); fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020319110000",
+      "tanim_tr": "Evcil domuzların ön kısımları ve bunlardan parça etler; taze veya soğutulmuş",
+      "tanim_en": "The foreparts of domestic pigs and cuts of meat from them; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020319130000",
+      "tanim_tr": "Evcil domuzların bel kısımları ve bunlardan parça etler; taze veya soğutulmuş",
+      "tanim_en": "Loin portions and cuts of meat from domestic pigs; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020319150000",
+      "tanim_tr": "Evcil domuzların karın kısımları ve bunlardan parça etler; taze veya soğutulmuş",
+      "tanim_en": "The belly portions and cuts of meat from domestic pigs; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020319550000",
+      "tanim_tr": "Evcil domuzların kemiksiz diğer etleri; taze veya soğutulmuş",
+      "tanim_en": "Other boneless meats from domestic pigs; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020319590000",
+      "tanim_tr": "Evcil domuzların kemikli diğer etleri; taze veya soğutulmuş",
+      "tanim_en": "Other bone-in meat from domestic pigs; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020319900000",
+      "tanim_tr": "Domuzların (evcil domuzlar HARİÇ) diğer etleri; taze veya soğutulmuş",
+      "tanim_en": "Other meats of pigs (excluding domestic pigs); fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020321100000",
+      "tanim_tr": "Evcil domuzların karkas ve yarım karkasları; dondurulmuş",
+      "tanim_en": "Carcasses and half-carcasses of domestic pigs; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020321900000",
+      "tanim_tr": "Domuzların (evcil domuzlar HARİÇ) karkas ve yarım karkasları; dondurulmuş",
+      "tanim_en": "Carcasses and half-carcasses of pigs (EXCEPT domestic pigs); frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020322110000",
+      "tanim_tr": "Evcil domuzların kemikli but ve but parçaları; dondurulmuş",
+      "tanim_en": "Bone-in leg and leg pieces from domestic pigs; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020322190000",
+      "tanim_tr": "Evcil domuzların kemikli kol ve kol parçaları; dondurulmuş",
+      "tanim_en": "Bone-in shoulder and shoulder parts from domestic pigs; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020322900000",
+      "tanim_tr": "Domuzların (evcil olanlar HARİÇ) kemikli but, kol ve bunların parçaları; dondurulmuş",
+      "tanim_en": "Bone-in hindquarters, shoulders and parts thereof of pigs (EXCEPT domesticated ones); frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020329110000",
+      "tanim_tr": "Evcil domuzların ön kısımları ve bunlardan parça etler; dondurulmuş",
+      "tanim_en": "Foreleg of domestic pigs and cuts of meat from them; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020329130000",
+      "tanim_tr": "Evcil domuzların bel kısımları ve bunlardan parça etler; dondurulmuş",
+      "tanim_en": "Loin portions and cuts of meat from domestic pigs; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020329150000",
+      "tanim_tr": "Evcil domuzların karın kısımları ve bunlardan parça etler; dondurulmuş",
+      "tanim_en": "Belly parts and cuts of meat from domestic pigs; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020329550000",
+      "tanim_tr": "Evcil domuzların kemiksiz diğer etleri; dondurulmuş",
+      "tanim_en": "Other boneless meats from domestic pigs; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020329590000",
+      "tanim_tr": "Evcil domuzların kemikli diğer etleri; dondurulmuş",
+      "tanim_en": "Other bone-in meat from domestic pigs; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020329900000",
+      "tanim_tr": "Domuzların (evcil domuzlar HARİÇ) diğer etleri; dondurulmuş",
+      "tanim_en": "Other meats of pigs (EXCEPT domestic pigs); frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020410000000",
+      "tanim_tr": "Kuzuların karkas ve yarım karkasları; taze veya soğutulmuş",
+      "tanim_en": "Lamb carcasses and half carcasses; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020421000000",
+      "tanim_tr": "Koyunların karkas ve yarım karkasları; taze veya soğutulmuş",
+      "tanim_en": "Sheep carcasses and half-carcasses; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020422100000",
+      "tanim_tr": "Koyunların kemikli kısa ön çeyrekleri; taze veya soğutulmuş",
+      "tanim_en": "Short bony forequarters of sheep; fresh or chilled",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020422300000",
+      "tanim_tr": "Koyunların kemikli tam veya yarım fileto veya sağrıları; taze veya soğutulmuş",
+      "tanim_en": "Whole or half bone-in fillets or rumps of sheep; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020422500000",
+      "tanim_tr": "Koyunların kemikli but veya yarım butları; taze veya soğutulmuş",
+      "tanim_en": "Bone-in leg or half leg of lamb; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020422900000",
+      "tanim_tr": "Koyunların kemikli diğer etleri; taze veya soğutulmuş",
+      "tanim_en": "Other bone-in meats of sheep; fresh or chilled",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020423000000",
+      "tanim_tr": "Koyunların kemiksiz etleri; taze veya soğutulmuş",
+      "tanim_en": "Boneless lamb meat; fresh or chilled",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020430000000",
+      "tanim_tr": "Kuzuların karkasları ve yarım karkasları; dondurulmuş",
+      "tanim_en": "Lamb carcasses and half-carcasses; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020441000000",
+      "tanim_tr": "Koyunların karkasları ve yarım karkasları; dondurulmuş",
+      "tanim_en": "Sheep carcasses and half-carcasses; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020442100000",
+      "tanim_tr": "Koyunların kemikli kısa ön çeyrekleri; dondurulmuş",
+      "tanim_en": "Short bony forequarters of sheep; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020442300000",
+      "tanim_tr": "Koyunların kemikli tam veya yarım fileto veya sağrıları; dondurulmuş",
+      "tanim_en": "Whole or half bone-in fillets or rumps of sheep; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020442500000",
+      "tanim_tr": "Koyun kemikli but veya yarım butları; dondurulmuş",
+      "tanim_en": "Lamb leg or half leg with bone; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020442900000",
+      "tanim_tr": "Koyunların kemikli diğer etleri; dondurulmuş",
+      "tanim_en": "Other bone-in meats of sheep; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020443100000",
+      "tanim_tr": "Kuzuların kemiksiz etleri; dondurulmuş",
+      "tanim_en": "Boneless lamb meat; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020443900000",
+      "tanim_tr": "Koyunların kemiksiz etleri; dondurulmuş",
+      "tanim_en": "Boneless sheep meat; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020450110000",
+      "tanim_tr": "Keçilerin karkas ve yarım karkasları; taze veya soğutulmuş",
+      "tanim_en": "Goat carcasses and half-carcasses; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020450130000",
+      "tanim_tr": "Keçilerin kısa ön çeyrekleri; taze veya soğutulmuş",
+      "tanim_en": "Short front quarters of goats; fresh or chilled",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020450150000",
+      "tanim_tr": "Keçilerin kemikli tam veya yarım fileto veya sağrıları; taze veya soğutulmuş",
+      "tanim_en": "Whole or half fillets or rumps of goats with bone; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020450190000",
+      "tanim_tr": "Keçilerin kemikli but veya yarım butları; taze veya soğutulmuş",
+      "tanim_en": "Goat legs or half legs with bone; fresh or chilled",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020450310000",
+      "tanim_tr": "Keçilerin kemikli diğer etleri; taze veya soğutulmuş",
+      "tanim_en": "Other goat meats with bones; fresh or chilled",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020450390000",
+      "tanim_tr": "Keçilerin kemiksiz etleri; taze veya soğutulmuş",
+      "tanim_en": "Boneless goat meat; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020450510000",
+      "tanim_tr": "Keçilerin karkas ve yarım karkasları; dondurulmuş",
+      "tanim_en": "Goat carcasses and half-carcasses; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020450530000",
+      "tanim_tr": "Keçilerin kısa ön çeyrekleri; dondurulmuş",
+      "tanim_en": "Short front quarters of goats; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020450550000",
+      "tanim_tr": "Keçilerin kemikli tam veya yarım filetoları ve sağrıları; dondurulmuş",
+      "tanim_en": "Whole or half fillets and rumps of goats with bone; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020450590000",
+      "tanim_tr": "Keçilerin kemikli but veya yarım butları; dondurulmuş",
+      "tanim_en": "Goat legs with bone or half legs; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020450710000",
+      "tanim_tr": "Keçilerin kemikli diğer etleri; dondurulmuş",
+      "tanim_en": "Other goat meats with bones; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020450790000",
+      "tanim_tr": "Keçilerin kemiksiz etleri; dondurulmuş",
+      "tanim_en": "Boneless goat meat; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020500200011",
+      "tanim_tr": "At eti; taze veya soğutulmuş",
+      "tanim_en": "Horse meat; fresh or chilled",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020500200019",
+      "tanim_tr": "Eşek, katır veya bardo etleri; taze veya soğutulmuş",
+      "tanim_en": "Donkey, mule, or hinny meat; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020500800011",
+      "tanim_tr": "At eti; dondurulmuş",
+      "tanim_en": "Horse meat; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020500800019",
+      "tanim_tr": "Eşek, katır ve bardo etleri; dondurulmuş",
+      "tanim_en": "Donkey, mule, and hinny meats; frozen.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020610100000",
+      "tanim_tr": "Sığır sakatatı (eczacılık ürünlerinin imaline mahsus); taze veya soğutulmuş",
+      "tanim_en": "Beef offal (for the manufacture of pharmaceutical products); fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020610950000",
+      "tanim_tr": "Sığır sakatatı (kalın ve ince etek halinde olanlar); taze veya soğutulmuş FAKAT eczacılık ürünlerinin imaline mahsus olanlar HARİÇ",
+      "tanim_en": "Beef offal (both thick and thin skirt-like); fresh or chilled, EXCEPT that intended for the manufacture of pharmaceutical products.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020610980000",
+      "tanim_tr": "Sığırların diğer sakatatı; taze veya soğutulmuş",
+      "tanim_en": "Other beef offal; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020621000000",
+      "tanim_tr": "Sığır dili; dondurulmuş",
+      "tanim_en": "Beef tongue; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020622000000",
+      "tanim_tr": "Sığır karaciğeri; dondurulmuş",
+      "tanim_en": "Beef liver; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020629100000",
+      "tanim_tr": "Sığırların diğer sakatatı; (eczacılık ürünleri imalatına mahsus); dondurulmuş",
+      "tanim_en": "Other bovine offal; (for the manufacture of pharmaceutical products); frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020629910000",
+      "tanim_tr": "Sığır sakatatı (kalın ve ince etek halinde); dondurulmuş FAKAT eczacılık ürünlerinin imaline mahsus olanlar HARİÇ",
+      "tanim_en": "Beef offal (in thick and thin skirt form); frozen, EXCEPT those intended for the manufacture of pharmaceutical products.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020629990000",
+      "tanim_tr": "Sığırların diğer sakatatı; dondurulmuş",
+      "tanim_en": "Other beef offal; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020630000000",
+      "tanim_tr": "Domuz sakatatı; taze veya soğutulmuş",
+      "tanim_en": "Pork offal; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020641000000",
+      "tanim_tr": "Domuzların karaciğerleri; dondurulmuş",
+      "tanim_en": "Pig livers; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020649000000",
+      "tanim_tr": "Domuzların diğer sakatatları; dondurulmuş",
+      "tanim_en": "Other pork offal; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020680100000",
+      "tanim_tr": "Koyun, keçi, at, eşek, katır ve bardoların yenilen sakatatı (taze veya soğutulmuş) (eczacılık ürünleri imalatına mahsus)",
+      "tanim_en": "Edible offal of sheep, goats, horses, donkeys, mules and hinnies (fresh or chilled) (for the manufacture of pharmaceutical products)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020680910000",
+      "tanim_tr": "At, eşek, katır ve bardo sakatatı (taze veya soğutulmuş) (eczacılık ürünleri imalatına mahsus olanlar HARİÇ)",
+      "tanim_en": "Offal of horses, donkeys, mules and hinnies (fresh or chilled) (EXCEPT that intended for the manufacture of pharmaceutical products)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020680990011",
+      "tanim_tr": "Koyun ve keçilerin karaciğerleri (taze veya soğutulmuş) (eczacılık ürünleri imalatına mahsus olanlar HARİÇ)",
+      "tanim_en": "Livers of sheep and goats (fresh or chilled) (EXCEPT those intended for the manufacture of pharmaceutical products)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020680990012",
+      "tanim_tr": "Koyun kuyruğu (taze veya soğutulmuş) (eczacılık ürünleri imalatına mahsus olanlar HARİÇ)",
+      "tanim_en": "Sheep tail (fresh or chilled) (EXCEPT those intended for the manufacture of pharmaceutical products)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020680990019",
+      "tanim_tr": "Koyun ve keçilerin diğer sakatatı (taze veya soğutulmuş) (eczacılık ürünleri imalatına mahsus olanlar HARİÇ)",
+      "tanim_en": "Other offal of sheep and goats (fresh or chilled) (EXCEPT that intended for the manufacture of pharmaceutical products)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020690100000",
+      "tanim_tr": "Koyun, keçi, at, eşek, katır ve bardoların yenilen sakatatı (eczacılık ürünleri imalatına mahsus) (dondurulmuş)",
+      "tanim_en": "Edible offal of sheep, goats, horses, donkeys, mules and hinnies (for the manufacture of pharmaceutical products) (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020690910000",
+      "tanim_tr": "At, eşek, katır ve bardo sakatatı (dondurulmuş) (eczacılık ürünleri imalatına mahsus olanlar HARİÇ)",
+      "tanim_en": "Offal of horses, donkeys, mules and hinnies (frozen) (EXCEPT those intended for the manufacture of pharmaceutical products)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020690990011",
+      "tanim_tr": "Koyun ve keçilerin karaciğerleri (dondurulmuş) (eczacılık ürünleri imalatına mahsus olanlar HARİÇ)",
+      "tanim_en": "Livers of sheep and goats (frozen) (EXCEPT those intended for the manufacture of pharmaceutical products)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020690990012",
+      "tanim_tr": "Koyun kuyruğu (dondurulmuş) (eczacılık ürünleri imalatına mahsus olanlar HARİÇ)",
+      "tanim_en": "Sheep tail (frozen) (EXCEPT those intended for the manufacture of pharmaceutical products)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020690990019",
+      "tanim_tr": "Koyun ve keçilerin diğer sakatatı (dondurulmuş) (eczacılık ürünleri imalatına mahsus olanlar HARİÇ)",
+      "tanim_en": "Other offal of sheep and goats (frozen) (EXCEPT those intended for the manufacture of pharmaceutical products)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020711100000",
+      "tanim_tr": "Horoz ve tavukların parçalanmamış etleri; tüyleri yolunmuş, bağırsakları çıkarılmış, başlı, ayaklı, % 83'lük (taze veya soğutulmuş)",
+      "tanim_en": "Uncut meat of roosters and hens; feathered, gutted, head and feet intact, 83% (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020711300000",
+      "tanim_tr": "Horoz ve tavukların etleri; tüyleri yolunmuş, boyun, yürek, karaciğer ve taşlıkları alınmamış, başsız, ayaksız, % 70'lik (taze veya soğutulmuş)",
+      "tanim_en": "Meat of roosters and hens; feathers removed, neck, heart, liver and gizzard intact, headless, feetless, 70% (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020711900000",
+      "tanim_tr": "Horoz ve tavukların parçalanmamış etleri; tüyleri yolunmuş, içi boşaltılmış, başsız, ayaksız, % 65'lik (taze veya soğutulmuş)",
+      "tanim_en": "Uncut meat of roosters and hens; feathered, gutted, headless, footless, 65% (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020712100000",
+      "tanim_tr": "Horoz ve tavukların etleri; tüyleri yolunmuş, boyun, yürek, karaciğer ve taşlıkları alınmamış, başsız, ayaksız, % 70'lik (dondurulmuş)",
+      "tanim_en": "Meat from roosters and hens; feathers removed, neck, heart, liver and gizzard intact, headless, feetless, 70% (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020712900011",
+      "tanim_tr": "Yumurta tavuğunun parçalanmamış etleri; tüyleri yolunmuş, içi boşaltılmış, başsız, ayaksız, % 65'lik (dondurulmuş)",
+      "tanim_en": "Unprocessed meat of laying hens; feathers removed, gutted, headless, feetless, 65% (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020712900012",
+      "tanim_tr": "Et tavuğunun parçalanmamış etleri; tüyleri yolunmuş, içi boşaltılmış, başsız, ayaksız, % 65'lik (dondurulmuş)",
+      "tanim_en": "Uncut broiler chicken meat; feathered, gutted, headless, feetless, 65% (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020712900019",
+      "tanim_tr": "Horoz ve tavukların parçalanmamış etleri (yumurta veya et tavuğundan HARİÇ); tüyü yolunmuş, içi boşaltılmış, başsız, ayaksız, % 65'lik (dondurulmuş)",
+      "tanim_en": "Uncut meat of roosters and hens (EXCEPT egg or broiler chickens); plucked, gutted, headless, footless, 65% (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020713100000",
+      "tanim_tr": "Horoz ve tavukların etleri; parça halinde, kemiksiz (taze veya soğutulmuş)",
+      "tanim_en": "Rooster and hen meat; in pieces, boneless (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020713200000",
+      "tanim_tr": "Horoz ve tavukların etleri; yarım/çeyrek, kemikli (taze veya soğutulmuş)",
+      "tanim_en": "Rooster and hen meat; halves/quarters, with bone (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020713300000",
+      "tanim_tr": "Horoz ve tavukların etleri; bütün kanatlar (taze veya soğutulmuş)",
+      "tanim_en": "Rooster and hen meat; whole wings (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020713400000",
+      "tanim_tr": "Horoz ve tavukların etleri; sırt, boyun, boyunlu sırt, kanat ve kuyruk uçları (taze veya soğutulmuş)",
+      "tanim_en": "Meat of roosters and hens; back, neck, back with neck, wings and tail tips (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020713500000",
+      "tanim_tr": "Horoz ve tavukların kemikli göğüs ve göğüs parçaları; taze veya soğutulmuş",
+      "tanim_en": "Bone-in breast and breast pieces of roosters and hens; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020713600000",
+      "tanim_tr": "Horoz ve tavukların kemikli but ve but parçaları; taze veya soğutulmuş",
+      "tanim_en": "Bone-in thighs and leg pieces of roosters and hens; fresh or chilled.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020713700000",
+      "tanim_tr": "Horoz ve tavukların kemikli diğer etleri; taze veya soğutulmuş",
+      "tanim_en": "Bone-in meat of roosters and hens; fresh or chilled",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020713910000",
+      "tanim_tr": "Horoz, tavuk karaciğerleri (taze veya soğutulmuş)",
+      "tanim_en": "Rooster, chicken livers (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020713990000",
+      "tanim_tr": "Horoz, tavuk sakatatı; karaciğerleri HARİÇ (taze veya soğutulmuş)",
+      "tanim_en": "Rooster and chicken offal; excluding livers (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020714100011",
+      "tanim_tr": "Horoz ve tavukların göğüs ve göğüs parçaları; parça halinde, kemiksiz (dondurulmuş)",
+      "tanim_en": "Chicken and hen breasts and breast pieces; in pieces, boneless (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020714100019",
+      "tanim_tr": "Horoz ve tavukların etleri (göğüs ve göğüs parçaları HARİÇ); parça halinde, kemiksiz (dondurulmuş)",
+      "tanim_en": "Chicken and rooster meat (EXCEPT breast and breast pieces); in pieces, boneless (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020714200000",
+      "tanim_tr": "Horoz ve tavukların yarım ve çeyrekleri; kemikli (dondurulmuş)",
+      "tanim_en": "Half and quarters of roosters and hens; bone-in (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020714300000",
+      "tanim_tr": "Horoz ve tavukların bütün kanatlar; (dondurulmuş)",
+      "tanim_en": "Whole wings of roosters and hens; (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020714400000",
+      "tanim_tr": "Horoz ve tavukların sırt, boyun, kanat ve kuyruk uçları (dondurulmuş)",
+      "tanim_en": "Back, neck, wing, and tail tips of roosters and hens (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020714500000",
+      "tanim_tr": "Horoz ve tavukların kemikli göğüs ve göğüs parçaları (dondurulmuş)",
+      "tanim_en": "Bone-in breast and breast pieces of roosters and hens (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020714600000",
+      "tanim_tr": "Horoz ve tavukların kemikli but ve but parçaları (dondurulmuş)",
+      "tanim_en": "Rooster and hen bone-in thigh and leg pieces (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020714700000",
+      "tanim_tr": "Horoz ve tavukların kemikli diğer etleri (dondurulmuş)",
+      "tanim_en": "Bone-in meat of roosters and hens (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020714910000",
+      "tanim_tr": "Horoz ve tavukların karaciğerleri (dondurulmuş)",
+      "tanim_en": "Rooster and hen livers (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020714990011",
+      "tanim_tr": "Horoz ve tavukların taşlık denilen sakatatı; (dondurulmuş)",
+      "tanim_en": "The gizzard, also known as the offal, of roosters and hens; (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020714990012",
+      "tanim_tr": "Horoz ve tavukların pençe ve ayak denilen sakatatı; (dondurulmuş)",
+      "tanim_en": "The offal of roosters and hens, specifically the claws and feet; (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020714990019",
+      "tanim_tr": "Horoz ve tavukların sakatatı; taşlık, pençe, ayak ve karaciğerler HARİÇ (dondurulmuş)",
+      "tanim_en": "Offal of roosters and hens; EXCLUDING gizzards, claws, feet and livers (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020724100000",
+      "tanim_tr": "Hindilerin parçalanmamış etleri; tüyleri yolunmuş, yürek vb alınmamış, başsız, ayaksız, % 80'lik (taze veya soğutulmuş)",
+      "tanim_en": "Uncut turkey meat; feathers removed, heart etc. not removed, headless, feetless, 80% (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020724900000",
+      "tanim_tr": "Hindilerin parçalanmamış etleri; tüyleri yolunmuş, içi boşaltılmış, başsız, ayaksız, % 73'lük (taze veya soğutulmuş)",
+      "tanim_en": "Uncut turkey meat; feathered, gutted, headless, feetless, 73% (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020725100000",
+      "tanim_tr": "Hindilerin parçalanmamış etleri; tüyleri yolunmuş, yürek vb alınmamış, başsız, ayaksız, % 80'lik (dondurulmuş)",
+      "tanim_en": "Uncut turkey meat; feathers removed, heart etc. not removed, headless, feetless, 80% (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020725900000",
+      "tanim_tr": "Hindilerin parçalanmamış etleri; tüyleri yolunmuş, içi boşaltılmış, başsız, ayaksız, % 73'lük (dondurulmuş)",
+      "tanim_en": "Uncut turkey meat; feathered, gutted, headless, footless, 73% (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020726100000",
+      "tanim_tr": "Hindi eti; parça halinde, kemiksiz (taze veya soğutulmuş)",
+      "tanim_en": "Turkey meat; in pieces, boneless (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020726200000",
+      "tanim_tr": "Hindi eti; yarım/çeyrek, kemikli (taze veya soğutulmuş)",
+      "tanim_en": "Turkey meat; half/quarter, with bone (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020726300000",
+      "tanim_tr": "Hindilerin bütün halindeki kanatları (taze veya soğutulmuş)",
+      "tanim_en": "Whole turkey wings (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020726400000",
+      "tanim_tr": "Hindilerin sırt, boyun, kanat ve kuyruk uçları (taze veya soğutulmuş)",
+      "tanim_en": "Back, neck, wing and tail tips of turkeys (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020726500000",
+      "tanim_tr": "Hindilerin kemikli göğüs ve göğüs parçaları (taze veya soğutulmuş)",
+      "tanim_en": "Bone-in breast and breast pieces of turkeys (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020726600000",
+      "tanim_tr": "Hindi butlarının kemikli alt kısımları ve parçaları (taze veya soğutulmuş)",
+      "tanim_en": "Bone-in lower parts and pieces of turkey thighs (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020726700000",
+      "tanim_tr": "Hindilerin kemikli diğer butları ve butların diğer parçaları (taze veya soğutulmuş)",
+      "tanim_en": "Other bone-in thighs and other parts of the thighs of turkeys (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020726800000",
+      "tanim_tr": "Hindilerin kemikli diğer parçaları (taze veya soğutulmuş)",
+      "tanim_en": "Other bone-in parts of turkey (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020726910000",
+      "tanim_tr": "Hindi karaciğeri (taze veya soğutulmuş)",
+      "tanim_en": "Turkey liver (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020726990000",
+      "tanim_tr": "Hindi sakatatı; karaciğerleri HARİÇ (taze veya soğutulmuş)",
+      "tanim_en": "Turkey offal; excluding liver (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020727100000",
+      "tanim_tr": "Hindilerin parça halindeki kemiksiz etleri (dondurulmuş)",
+      "tanim_en": "Boneless turkey meat in pieces (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020727200000",
+      "tanim_tr": "Hindilerin kemikli yarım veya çeyrekleri (dondurulmuş)",
+      "tanim_en": "Bone-in halves or quarters of turkey (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020727300000",
+      "tanim_tr": "Hindilerin bütün halindeki kanatları (dondurulmuş)",
+      "tanim_en": "Whole turkey wings (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020727400000",
+      "tanim_tr": "Hindilerin kemikli sırt, boyun, kanat, kuyruk uçları (dondurulmuş)",
+      "tanim_en": "Bony back, neck, wing, and tail tips of turkeys (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020727500000",
+      "tanim_tr": "Hindilerin kemikli göğüs ve göğüs parçaları (dondurulmuş)",
+      "tanim_en": "Turkey breast and breast pieces with bone (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020727600000",
+      "tanim_tr": "Hindi butlarının kemikli alt kısmı ve parçaları (dondurulmuş)",
+      "tanim_en": "Bone-in lower part and pieces of turkey thighs (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020727700000",
+      "tanim_tr": "Hindilerin kemikli diğer butları ve parçaları (dondurulmuş)",
+      "tanim_en": "Other bone-in thighs and parts of turkeys (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020727800000",
+      "tanim_tr": "Hindilerin kemikli diğer parçaları (dondurulmuş)",
+      "tanim_en": "Other bone-in parts of turkey (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020727910000",
+      "tanim_tr": "Hindi karaciğeri (dondurulmuş)",
+      "tanim_en": "Turkey liver (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020727990000",
+      "tanim_tr": "Hindi sakatatı; karaciğerleri HARİÇ (dondurulmuş)",
+      "tanim_en": "Turkey offal; excluding liver (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020741200000",
+      "tanim_tr": "Ördeklerin parçalanmamış etleri; tüyleri yolunmuş, içi ya da bağırsakları çıkarılmamış, baş ve ayakları kesilmemiş, %85'lik (taze veya soğutulmuş)",
+      "tanim_en": "Uncut duck meat; feathers not plucked, guts or intestines not removed, head and feet not cut off, 85% (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020741300000",
+      "tanim_tr": "Ördeklerin parçalanmamış etleri; tüyleri yolunmuş, içi boşaltılmış, baş ve ayakları kesilmiş, karaciğer vb alınmamış, %70'lik (taze veya soğutulmuş)",
+      "tanim_en": "Uncut duck meat; plucked, gutted, head and feet removed, liver etc. not removed, 70% (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020741800000",
+      "tanim_tr": "Ördeklerin parçalanmamış etleri; tüyleri yolunmuş, içi boşaltılmış, baş, ayakları, karaciğer vb alınmış, %63'lük (taze veya soğutulmuş)",
+      "tanim_en": "Uncut duck meat; plucked, gutted, head, feet, liver, etc. removed, 63% (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020742300000",
+      "tanim_tr": "Ördeklerin parçalanmamış etleri; tüyleri yolunmuş, içi boşaltılmış, baş ve ayakları kesilmiş, karaciğer vb alınmamış, %70'lik (dondurulmuş)",
+      "tanim_en": "Uncut duck meat; feathers plucked, gutted, head and feet removed, liver etc. not removed, 70% (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020742800000",
+      "tanim_tr": "Ördeklerin parçalanmamış etleri; tüyleri yolunmuş, içi boşaltılmış, baş, ayakları, karaciğer vb alınmış, %63'lük (dondurulmuş)",
+      "tanim_en": "Uncut duck meat; plucked, gutted, head, feet, liver, etc. removed, 63% (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020743000000",
+      "tanim_tr": "Ördeğin yağlı karaciğerleri (taze veya soğutulmuş)",
+      "tanim_en": "Duck fatty liver (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020744100000",
+      "tanim_tr": "Ördeklerin parça halindeki kemiksiz etleri (taze veya soğutulmuş)",
+      "tanim_en": "Boneless duck meat in pieces (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020744210000",
+      "tanim_tr": "Ördeklerin kemikli yarım veya çeyrekleri (taze veya soğutulmuş)",
+      "tanim_en": "Bone-in halves or quarters of ducks (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020744310000",
+      "tanim_tr": "Ördeğin bütün kanatları (kanat uçları olsun olmasın) (taze veya soğutulmuş); kemikli",
+      "tanim_en": "Whole duck wings (with or without wingtips) (fresh or chilled); with bone",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020744410000",
+      "tanim_tr": "Ördeğin sırt, boyun, boyunlu sırt, kanat ve kuyruk uçları (taze veya soğutulmuş); kemikli",
+      "tanim_en": "Duck back, neck, neck-back, wing and tail tips (fresh or chilled); bony",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020744510000",
+      "tanim_tr": "Ördeğin göğüs ve göğüs parçaları (taze veya soğutulmuş); kemikli",
+      "tanim_en": "Duck breast and breast pieces (fresh or chilled); with bone.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020744610000",
+      "tanim_tr": "Ördeğin but ve but parçaları (taze veya soğutulmuş); kemiklli",
+      "tanim_en": "Duck legs and leg portions (fresh or chilled); with bone.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020744710000",
+      "tanim_tr": "Ördeğin \"palto\" denilen kısımları (taze veya soğutulmuş); kemiklli",
+      "tanim_en": "The parts of the duck called the \"coat\" (fresh or chilled); including the bone.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020744810000",
+      "tanim_tr": "Ördeğin diğer parçaları (taze veya soğutulmuş); kemiklli",
+      "tanim_en": "Other parts of the duck (fresh or chilled); including bones.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020744910000",
+      "tanim_tr": "Ördeğin karaciğerleri (yağlı karaciğerler hariç) (taze veya soğutulmuş)",
+      "tanim_en": "Duck livers (excluding fatty livers) (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020744990000",
+      "tanim_tr": "Ördeğin diğer sakatatları (taze veya soğutulmuş)",
+      "tanim_en": "Other duck offal (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020745100011",
+      "tanim_tr": "Ördeklerin kemiksiz but ve but parçaları; dondurulmuş",
+      "tanim_en": "Boneless duck thighs and thigh pieces; frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020745100019",
+      "tanim_tr": "Ördeklerin kemiksiz etleri (but ve but parçaları HARİÇ); dondurulmuş",
+      "tanim_en": "Boneless duck meat (EXCEPT thigh and thigh pieces); frozen",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020745210000",
+      "tanim_tr": "Ördeklerin kemikli yarım veya çeyrekleri (dondurulmuş)",
+      "tanim_en": "Bone-in halves or quarters of ducks (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020745310000",
+      "tanim_tr": "Ördeğin bütün kanatları (kanat uçları olsun olmasın) (dondurulmuş); kemikli",
+      "tanim_en": "Whole duck wings (with or without wingtips) (frozen); with bone",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020745410000",
+      "tanim_tr": "Ördeğin sırt, boyun, boyunlu sırt, kanat ve kuyruk uçları (dondurulmuş); kemikli",
+      "tanim_en": "Duck back, neck, neck-back, wing and tail tips (frozen); bony",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020745510000",
+      "tanim_tr": "Ördeğin göğüs ve göğüs parçaları (dondurulmuş); kemikli",
+      "tanim_en": "Duck breast and breast pieces (frozen); with bone.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020745610000",
+      "tanim_tr": "Ördeğin but ve but parçaları (dondurulmuş); kemiklli",
+      "tanim_en": "Duck legs and leg portions (frozen); with bone.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020745710000",
+      "tanim_tr": "Ördeğin \"palto\" denilen kısımları (dondurulmuş); kemiklli",
+      "tanim_en": "The parts of the duck called the \"coat\" (frozen); bony.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020745810000",
+      "tanim_tr": "Ördeğin diğer parçaları (dondurulmuş); kemiklli",
+      "tanim_en": "Other parts of the duck (frozen); including bones.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020745930000",
+      "tanim_tr": "Ördeğin yağlı karaciğerleri (dondurulmuş)",
+      "tanim_en": "Duck fatty liver (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020745950000",
+      "tanim_tr": "Ördeğin diğer karaciğerleri (dondurulmuş)",
+      "tanim_en": "Other duck livers (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020745990000",
+      "tanim_tr": "Ördeğin sakatatı; karaciğerleri HARİÇ (dondurulmuş)",
+      "tanim_en": "Duck offal; EXCEPT liver (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020751100000",
+      "tanim_tr": "Kazların parçalanmamış etleri; tüyü yolunmuş, kanı akıtılmş, içi boşaltılmamş, baş ve ayağı kesilmemş, % 82'lik (taze veya soğutulmuş)",
+      "tanim_en": "Uncut goose meat; plucked, drained, gutted, head and feet intact, 82% (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020751900000",
+      "tanim_tr": "Kazların parçalanmamış etleri; tüyü yolunmuş, içi boşaltımş, başsız, ayaksız, yüreği ve taşlığı alınmş veta alınmamış, %75'lik (taze veya soğutulmuş)",
+      "tanim_en": "Uncut goose meat; plucked, gutted, headless, footless, heart and gizzard removed or left intact, 75% (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020752100000",
+      "tanim_tr": "Kazların parçalanmamış etleri; tüyü yolunmuş, kanı akıtılmş, içi boşaltılmamş, baş ve ayağı kesilmemş, % 82'lik (dondurulmuş)",
+      "tanim_en": "Uncut goose meat; feathered, blood drained, gutted, head and feet intact, 82% (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020752900000",
+      "tanim_tr": "Kazların parçalanmamış etleri; tüyü yolunmuş, içi boşaltımş, başsız, ayaksız, yüreği ve taşlığı alınmş veta alınmamış, %75'lik (dondulmuş)",
+      "tanim_en": "Uncut goose meat; plucked, gutted, headless, footless, heart and gizzard removed or left intact, 75% (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020753000000",
+      "tanim_tr": "Kazların yağlı karaciğerleri (taze veya soğutulmuş)",
+      "tanim_en": "Fatty liver of geese (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020754100000",
+      "tanim_tr": "Kazların kemiksiz parça etleri (taze veya soğutulmuş)",
+      "tanim_en": "Boneless goose meat (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020754210000",
+      "tanim_tr": "Kaz kemikli yarım veya çeyrekleri (taze veya soğutulmuş)",
+      "tanim_en": "Goose halves or quarters with bone (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020754310000",
+      "tanim_tr": "Kazın bütün kanatları (kanat uçları olsun olmasın) (taze veya soğutulmuş); kemikli",
+      "tanim_en": "Whole goose wings (with or without wingtips) (fresh or chilled); with bone",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020754410000",
+      "tanim_tr": "Kazın sırt, boyun, boyunlu sırt, kanat ve kuyruk uçları (taze veya soğutulmuş); kemikli",
+      "tanim_en": "Goose back, neck, neck-back, wings and tail tips (fresh or chilled); bony",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020754510000",
+      "tanim_tr": "Kazın göğüs ve göğüs parçaları (taze veya soğutulmuş); kemikli",
+      "tanim_en": "Goose breast and breast pieces (fresh or chilled); with bone",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020754610000",
+      "tanim_tr": "Kazın but ve but parçaları (taze veya soğutulmuş); kemiklli",
+      "tanim_en": "Goose legs and leg portions (fresh or chilled); with bone.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020754710000",
+      "tanim_tr": "Kazın \"palto\" denilen kısımları (taze veya soğutulmuş); kemiklli",
+      "tanim_en": "The parts of the goose called the \"coat\" (fresh or chilled); including the bone.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020754810000",
+      "tanim_tr": "Kazın diğer parçaları (taze veya soğutulmuş); kemiklli",
+      "tanim_en": "Other parts of the goose (fresh or chilled); bone-in",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020754910000",
+      "tanim_tr": "Kazın karaciğerleri (yağlı karaciğerler hariç) (taze veya soğutulmuş)",
+      "tanim_en": "Goose livers (excluding fatty livers) (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020754990000",
+      "tanim_tr": "Kazın diğer sakatatı (taze veya soğutulmuş)",
+      "tanim_en": "Other goose offal (fresh or chilled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020755100000",
+      "tanim_tr": "Kazların kemiksiz etleri (dondurulmuş)",
+      "tanim_en": "Boneless goose meat (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020755210000",
+      "tanim_tr": "Kazların kemikli yarım veya çeyrekleri (dondurulmuş)",
+      "tanim_en": "Bone-in halves or quarters of geese (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020755310000",
+      "tanim_tr": "Kazın bütün kanatları (kanat uçları olsun olmasın) (dondurulmuş); kemikli",
+      "tanim_en": "Whole goose wings (with or without wingtips) (frozen); bone-in",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020755410000",
+      "tanim_tr": "Kazın sırt, boyun, boyunlu sırt, kanat ve kuyruk uçları (dondurulmuş); kemikli",
+      "tanim_en": "Goose back, neck, neck-back, wings and tail tips (frozen); bony",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020755510000",
+      "tanim_tr": "Kazın göğüs ve göğüs parçaları (dondurulmuş); kemikli",
+      "tanim_en": "Goose breast and breast pieces (frozen); with bone.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020755610000",
+      "tanim_tr": "Kazın but ve but parçaları (dondurulmuş); kemiklli",
+      "tanim_en": "Goose legs and leg pieces (frozen); with bone.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020755710000",
+      "tanim_tr": "Kazın \"palto\" denilen kısımları (dondurulmuş); kemiklli",
+      "tanim_en": "The parts of the goose called the \"coat\" (frozen); bony.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020755810000",
+      "tanim_tr": "Kazın kemikli diğer parçaları (dondurulmuş)",
+      "tanim_en": "Other bony parts of the goose (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020755930000",
+      "tanim_tr": "Kazın yağlı karaciğerleri (dondurulmuş)",
+      "tanim_en": "Goose fatty liver (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020755950000",
+      "tanim_tr": "Kazın diğer karaciğerleri (dondurulmuş)",
+      "tanim_en": "Other goose livers (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020755990000",
+      "tanim_tr": "Kazın diğer sakatatı (dondurulmuş)",
+      "tanim_en": "Other goose offal (frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020760050000",
+      "tanim_tr": "Beç tavuklarının parçalanmamış etleri (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Uncut guinea fowl meat (fresh, chilled or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020760100000",
+      "tanim_tr": "Beç tavuklarının kemiksiz etleri (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Boneless guinea fowl meat (fresh, chilled or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020760210000",
+      "tanim_tr": "Beç tavuklarının kemikli yarım veya çeyrekleri (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Bone-in halves or quarters of guinea fowl (fresh, chilled, or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020760310000",
+      "tanim_tr": "Beç tavuğunun bütün kanatları (kanat uçları olsun olmasın) (taze, soğutulmuş veya dondurulmuş); kemikli",
+      "tanim_en": "Whole guinea fowl wings (with or without wingtips) (fresh, chilled or frozen); bone-in.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020760410000",
+      "tanim_tr": "Beç tavuğunun sırt, boyun, boyunlu sırt, kanat ve kuyruk uçları (taze, soğutulmuş veya dondurulmuş); kemikli",
+      "tanim_en": "Guinea fowl back, neck, neck-back, wings, and tail tips (fresh, chilled, or frozen); bone-in.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020760510000",
+      "tanim_tr": "Beç tavuğunun göğüs ve göğüs parçaları (taze, soğutulmuş veya dondurulmuş); kemikli",
+      "tanim_en": "Guinea fowl breast and breast pieces (fresh, chilled or frozen); with bone.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020760610000",
+      "tanim_tr": "Beç tavuğunun but ve but parçaları (taze, soğutulmuş veya dondurulmuş); kemiklli",
+      "tanim_en": "Guinea fowl thighs and thigh pieces (fresh, chilled or frozen); with bone.",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020760810000",
+      "tanim_tr": "Beç tavuğunun kemikli diğer parçaları (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Other bony parts of guinea fowl (fresh, chilled or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020760910000",
+      "tanim_tr": "Beç tavuğunun karaciğerleri (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Guinea fowl livers (fresh, chilled, or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020760990000",
+      "tanim_tr": "Beç tavuğunun diğer sakatatı (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Other guinea fowl offal (fresh, chilled or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020810100000",
+      "tanim_tr": "Evcil tavşanların etleri ve yenilen sakatatı (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Meat and edible offal (fresh, chilled or frozen) of domestic rabbits",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020810900000",
+      "tanim_tr": "Diğer tavşanların eti, yenilen sakatatı (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Meat and edible offal (fresh, chilled, or frozen) of other rabbits",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020830000000",
+      "tanim_tr": "Maymunların eti ve yenilen sakatatı (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Monkey meat and edible offal (fresh, chilled or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020840100000",
+      "tanim_tr": "Balina eti (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Whale meat (fresh, chilled, or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020840200000",
+      "tanim_tr": "Fok eti (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Seal meat (fresh, chilled or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020840800000",
+      "tanim_tr": "Memeli diğer deniz hayvanlarının eti (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Meat of other marine mammals (fresh, chilled or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020850000000",
+      "tanim_tr": "Sürüngenlerin eti ve yenilen sakatatı (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Meat and edible offal of reptiles (fresh, chilled or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020860000000",
+      "tanim_tr": "Develer ve diğer devegillerin (Camelidae) etleri (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Meat of camels and other camel-like animals (fresh, chilled or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020890100000",
+      "tanim_tr": "Evcil güvercin eti ve yenilen sakatatı (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Meat and edible offal of domestic pigeons (fresh, chilled or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020890300000",
+      "tanim_tr": "Av hayvanlarına ait olan etler (tavşanlar hariç) (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Meat from game animals (excluding rabbits) (fresh, chilled or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020890600000",
+      "tanim_tr": "Ren geyiği eti (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Reindeer meat (fresh, chilled, or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020890700000",
+      "tanim_tr": "Kurbağa bacağı (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Frog legs (fresh, chilled, or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020890980000",
+      "tanim_tr": "Diğer hayvanların et ve sakatatı (taze, soğutulmuş veya dondurulmuş)",
+      "tanim_en": "Meat and offal of other animals (fresh, chilled or frozen)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020910110000",
+      "tanim_tr": "Domuzun deri altı yağı (lard) (taze, soğutulmuş, dondurulmuş, tuzlanmış veya salamura edilmiş)",
+      "tanim_en": "Pork lard (fresh, chilled, frozen, salted, or pickled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020910190000",
+      "tanim_tr": "Domuzun deri altı yağı (lard) (kurutulmuş veya tütsülenmiş )",
+      "tanim_en": "Pork lard (dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020910900000",
+      "tanim_tr": "Domuzların diğer yağı (deri altı yağı (lard) hariç)",
+      "tanim_en": "Other pork fat (excluding subcutaneous fat (lard))",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "020990000000",
+      "tanim_tr": "Kümes hayvanlarının yağları (taze,soğutulmuş,dondurulmuş,tuzlanmış,salamura edilmiş, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Poultry fats (fresh, chilled, frozen, salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021011110000",
+      "tanim_tr": "Evcil domuzların kemikli but ve but parçaları (tuzlanmış veya salamura edilmiş)",
+      "tanim_en": "Bone-in leg and leg pieces of domestic pigs (salted or pickled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021011190000",
+      "tanim_tr": "Evcil domuzların kemikli kol ve kol parçaları (tuzlanmış veya salamura edilmiş)",
+      "tanim_en": "Bone-in shoulder and shoulder parts of domestic pigs (salted or pickled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021011310000",
+      "tanim_tr": "Evcil domuzların kemikli but ve but parçaları (kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Bone-in leg and leg pieces from domestic pigs (dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021011390000",
+      "tanim_tr": "Evcil domuzların kemikli kol ve kol parçaları (kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Bone-in shoulder and shoulder parts of domestic pigs (dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021011900000",
+      "tanim_tr": "Diğer domuzların kemikli but, kol ve bunların parçaları (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Other pork bones, hindquarters, shoulders and parts thereof (salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021012110000",
+      "tanim_tr": "Evcil domuzların karın ve karın parçaları (tuzlanmış veya salamura edilmiş)",
+      "tanim_en": "Domestic pig belly and belly parts (salted or pickled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021012190000",
+      "tanim_tr": "Evcil domuzların karın ve karın parçaları (kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Domestic pig belly and belly parts (dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021012900000",
+      "tanim_tr": "Diğer domuzların karın ve karın parçaları (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Other pig bellies and belly parts (salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021019100000",
+      "tanim_tr": "Evcil domuzların yarım karkas veya dörtte üç ön parçaları (tuzlanmış veya salamura edilmiş)",
+      "tanim_en": "Half carcass or three-quarters forecuts of domestic pigs (salted or brined)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021019200000",
+      "tanim_tr": "Evcil domuzların dörtte üç arka parça veya orta kısımları (tuzlanmış veya salamura edilmiş)",
+      "tanim_en": "Three-quarters of the hindquarters or middle section of domestic pigs (salted or brined)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021019300000",
+      "tanim_tr": "Evcil domuzların ön parçaları veya ön parçaların kısımları (tuzlanmış veya salamura edilmiş)",
+      "tanim_en": "Foreparts or parts of foreparts of domestic pigs (salted or brined)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021019400000",
+      "tanim_tr": "Evcil domuzların bel kısımları ve parçaları (tuzlanmış veya salamura edilmiş)",
+      "tanim_en": "Loin and other parts of domestic pigs (salted or pickled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021019500000",
+      "tanim_tr": "Evcil domuzların diğer etleri (tuzlanmış veya salamura edilmiş)",
+      "tanim_en": "Other meats from domestic pigs (salted or pickled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021019600000",
+      "tanim_tr": "Evcil domuzların ön kısmı ve parçaları (kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Forehead and parts of domestic pigs (dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021019700000",
+      "tanim_tr": "Evcil domuzların bel kısmı ve parçaları (kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Loin and parts of domestic pigs (dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021019810000",
+      "tanim_tr": "Evcil domuzların kemiksiz etleri (kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Boneless meat from domestic pigs (dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021019890000",
+      "tanim_tr": "Evcil domuzların kemikli diğer etleri (kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Other bone-in meats from domestic pigs (dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021019900000",
+      "tanim_tr": "Diğer domuzların et ve sakatatı (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Meat and offal of other pigs (salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021020100000",
+      "tanim_tr": "Sığırların kemikli etleri (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Beef with bones (salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021020900000",
+      "tanim_tr": "Sığırların kemiksiz etleri (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Boneless beef (salted, pickled, dried, or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021091000000",
+      "tanim_tr": "Maymunların etleri (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Monkey meat (salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021092100000",
+      "tanim_tr": "Balina, yunus, domuz balıkları, manati-deniz güzeli, deniz ineklerinin etleri (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Whale, dolphin, porpoise, manatee, and sea cow meats (salted, pickled, dried, or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021092910000",
+      "tanim_tr": "Fok, deniz aslanı ve deniz aygırları eti (tuzlanmış, salamura edilmiş, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Seal, sea lion, and walrus meat (salted, pickled, dried, or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021092920000",
+      "tanim_tr": "Fok, deniz aslanı ve deniz aygırları sakatatı (tuzlanmış, salamura edilmiş, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Seal, sea lion, and walrus offal (salted, pickled, dried, or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021092990000",
+      "tanim_tr": "Fok, deniz aslanı ve deniz aygırları et ve sakatatının yenilen un ve ezmeleri (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Edible flours and pastes of seal, sea lion, and walrus meat and offal (salted, pickled, dried, or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021093000000",
+      "tanim_tr": "Sürüngenlerin sakatatı (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Reptile offal (salted, pickled, dried, or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099100000",
+      "tanim_tr": "At eti (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Horse meat (salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099210000",
+      "tanim_tr": "Koyun, keçi eti; kemikli (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Lamb and goat meat; with bone (salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099290000",
+      "tanim_tr": "Koyun, keçi eti; kemiksiz (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Lamb and goat meat; boneless (salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099310000",
+      "tanim_tr": "Ren geyiği eti (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Reindeer meat (salted, pickled, dried, or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099390000",
+      "tanim_tr": "Diğer hayvan etleri (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Other animal meats (salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099410000",
+      "tanim_tr": "Evcil domuz karaciğeri (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Domestic pig liver (salted, brined, dried, or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099490000",
+      "tanim_tr": "Evcil domuzların diğer sakatatı (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Other offal of domestic pigs (salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099510000",
+      "tanim_tr": "Sığır sakatatı; kalın, ince etek (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Beef offal; thick and thin skirts (salted, brined, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099590000",
+      "tanim_tr": "Sığırların diğer sakatatı (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Other beef offal (salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099711000",
+      "tanim_tr": "Kazların yağlı karaciğerleri (tuzlanmış veya salamura edilmiş)",
+      "tanim_en": "Fatty livers of geese (salted or pickled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099712000",
+      "tanim_tr": "Ördeklerin yağlı karaciğerleri (tuzlanmış veya salamura edilmiş)",
+      "tanim_en": "Fatty livers of ducks (salted or pickled)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099790000",
+      "tanim_tr": "Diğer kümes hayvanlarının karaciğerleri (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Livers of other poultry (salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099850000",
+      "tanim_tr": "Diğer hayvanların (kümes hayvanları hariç) sakatatı (tuzlanmış, salamura, kurutulmuş veya tütsülenmiş)",
+      "tanim_en": "Offal of other animals (excluding poultry) (salted, pickled, dried or smoked)",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "021099900000",
+      "tanim_tr": "Et ve sakatatın yenilen un ve kaba unları",
+      "tanim_en": "Edible flours and coarse flours of meat and offal",
+      "grup": "tevkifat_yok",
+      "vergi_turu": "tevkifat",
+      "oran": null,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    }
+  ]
+}

@@ -1,0 +1,2019 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-tevkifat",
+      "ad": {
+        "tr": "GTİP Tevkifat Eşleşmesi",
+        "en": "GTIP Withholding Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.02",
+    "guncelleme": "2026-10-02",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.02"
+      },
+      "uretim_zamani": "2026-10-02T00:00:00+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "74",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:2e7121dc655407452ab7ce81074469d3d48be8a8cbd4bf83a2fc399ee3c70fcf"
+  },
+  "kayitlar": [
+    {
+      "kod": "740100000000",
+      "tanim_tr": "Bakır matları ve çöktürülmüş bakır (tersip bakır)",
+      "tanim_en": "Copper mats and precipitated copper (precipitated copper)",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740200000011",
+      "tanim_tr": "Blister bakır",
+      "tanim_en": "Blister copper",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740200000012",
+      "tanim_tr": "Elektrolitik rafine için bakır anotları",
+      "tanim_en": "Copper anodes for electrolytic refining.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740200000019",
+      "tanim_tr": "Rafine edilmemiş diğer bakır",
+      "tanim_en": "Other unrefined copper",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740311001000",
+      "tanim_tr": "Rafine edilmiş elektrolitik bakırdan katotlar ve katot parçaları",
+      "tanim_en": "Cathodes and cathode parts made from refined electrolytic copper.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740311009000",
+      "tanim_tr": "Rafine edilmiş bakırdan katotlar ve katot parçaları; rafine edilmiş elektrolitik bakırdan olanlar HARİÇ",
+      "tanim_en": "Cathodes and cathode parts of refined copper; EXCEPT those of refined electrolytic copper.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740312000000",
+      "tanim_tr": "Rafine edilmiş bakırdan tel çubukları (wire bars)",
+      "tanim_en": "Wire bars made of refined copper",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740313000000",
+      "tanim_tr": "Rafine edilmiş bakırdan kütükler",
+      "tanim_en": "Billets of refined copper",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740319001000",
+      "tanim_tr": "Rafine edilmiş işlenmemiş elektrolitik bakır",
+      "tanim_en": "Refined virgin electrolytic copper",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740319009000",
+      "tanim_tr": "Rafine edilmiş işlenmemiş diğer bakır",
+      "tanim_en": "Refined and other unprocessed copper",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740321000000",
+      "tanim_tr": "Bakır - çinko esaslı alaşımlar (pirinç)",
+      "tanim_en": "Copper-zinc based alloys (brass)",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740322000000",
+      "tanim_tr": "Bakır - kalay esaslı alaşımlar (bronz)",
+      "tanim_en": "Copper-tin based alloys (bronze)",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740329000000",
+      "tanim_tr": "Diğer bakır alaşımlar [74.05 pozisyonundaki ön alaşımlar (kupro alyajlar) hariç]",
+      "tanim_en": "Other copper alloys [excluding pre-alloys (cuproalloys) of heading 74.05]",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740400100000",
+      "tanim_tr": "Rafine edilmiş bakırdan olan döküntü ve hurdalar",
+      "tanim_en": "Scrap and waste made from refined copper.",
+      "grup": "820",
+      "vergi_turu": "tevkifat",
+      "oran": 1.0,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "10/10"
+    },
+    {
+      "kod": "740400910000",
+      "tanim_tr": "Bakır - çinko esaslı alaşımların (pirinç) döküntü ve hurdaları",
+      "tanim_en": "Scrap and waste of copper-zinc based alloys (brass)",
+      "grup": "820",
+      "vergi_turu": "tevkifat",
+      "oran": 1.0,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "10/10"
+    },
+    {
+      "kod": "740400990000",
+      "tanim_tr": "Diğer bakır alaşımlarının döküntü ve hurdaları",
+      "tanim_en": "Waste and scrap of other copper alloys",
+      "grup": "820",
+      "vergi_turu": "tevkifat",
+      "oran": 1.0,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "10/10"
+    },
+    {
+      "kod": "740500001000",
+      "tanim_tr": "Bakır fosfor; ağırlık itibariyle %8'den fazla bakır içeren",
+      "tanim_en": "Copper phosphorus; containing more than 8% copper by weight.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740500002000",
+      "tanim_tr": "Bakırın diğer ön alaşımları (kupro alyajlar)",
+      "tanim_en": "Other pre-alloys of copper (cuproalloys)",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740610000000",
+      "tanim_tr": "Bakır tozları; pul bünyeli olmayan",
+      "tanim_en": "Copper powders; non-flake structured.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740620000011",
+      "tanim_tr": "Bakır tozları; pul bünyeli olanlar",
+      "tanim_en": "Copper powders; those in flake form.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740620000012",
+      "tanim_tr": "Bakırdan ince pullar",
+      "tanim_en": "Thin flakes of copper",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740710000011",
+      "tanim_tr": "Rafine edilmiş bakırdan içi boş profiller",
+      "tanim_en": "Hollow profiles made of refined copper.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740710000012",
+      "tanim_tr": "Rafine edilmiş bakırdan içi dolu profiller",
+      "tanim_en": "Solid profiles made of refined copper.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740710000013",
+      "tanim_tr": "Rafine edilmiş bakırdan çubuklar",
+      "tanim_en": "Rods made of refined copper",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740721100000",
+      "tanim_tr": "Bakır - çinko esaslı alaşımlardan (pirinç) çubuklar",
+      "tanim_en": "Rods made from copper-zinc based alloys (brass).",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740721900011",
+      "tanim_tr": "Bakır - çinko esaslı alaşımlardan (pirinç) Y profiller",
+      "tanim_en": "Y profiles made from copper-zinc based alloys (brass).",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740721900019",
+      "tanim_tr": "Bakır - çinko esaslı alaşımlardan (pirinç) diğer profiller",
+      "tanim_en": "Other profiles made from copper-zinc based alloys (brass)",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740729000000",
+      "tanim_tr": "Diğer bakır alaşımlarından profiller ve çubuklar",
+      "tanim_en": "Profiles and rods made from other copper alloys.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740811000011",
+      "tanim_tr": "Rafine edilmiş bakırdan elektrolitik teller; enine kesit > 6 mm",
+      "tanim_en": "Electrolytic wires made of refined copper; cross-section > 6 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740811000019",
+      "tanim_tr": "Rafine edilmiş bakırdan diğer teller; enine kesit > 6 mm",
+      "tanim_en": "Other wires made of refined copper; cross-section > 6 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740819100011",
+      "tanim_tr": "Rafine edilmiş bakırdan elektrolitik teller; 0.5 mm < enine kesit <= 6 mm",
+      "tanim_en": "Electrolytic wires made of refined copper; 0.5 mm < cross-section <= 6 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740819100019",
+      "tanim_tr": "Rafine edilmiş bakırdan diğer teller; 0.5 mm < enine kesit <= 6 mm",
+      "tanim_en": "Other wires made of refined copper; 0.5 mm < cross-section <= 6 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740819900011",
+      "tanim_tr": "Rafine edilmiş bakırdan elektrolitik tel; enine kesit <= 0.5 mm",
+      "tanim_en": "Electrolytic wire made of refined copper; cross-section <= 0.5 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740819900019",
+      "tanim_tr": "Rafine edilmiş bakırdan diğer teller; enine kesit <= 0.5 mm",
+      "tanim_en": "Other wires made of refined copper; cross-section <= 0.5 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740821000000",
+      "tanim_tr": "Bakır - çinko esaslı alaşımlardan (pirinç) teller",
+      "tanim_en": "Wires made from copper-zinc based alloys (brass).",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740822000000",
+      "tanim_tr": "Bakır - nikel esaslı alaşımlardan (kupro - nikel) veya bakır - nikel - çinko esaslı alaşımlardan (nikel gümüşleri) teller",
+      "tanim_en": "Wires made from copper-nickel based alloys (cupro-nickel) or copper-nickel-zinc based alloys (nickel silvers).",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740829000000",
+      "tanim_tr": "Diğer bakır alaşımlarından teller",
+      "tanim_en": "Wires made from other copper alloys",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740911000000",
+      "tanim_tr": "Rafine edilmiş bakırdan saclar, levhalar, yapraklar ve şeritler; kalınlık > 0.15 mm (rulo halinde olanlar)",
+      "tanim_en": "Sheets, plates, foils and strips of refined copper; thickness > 0.15 mm (in rolls)",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740919000000",
+      "tanim_tr": "Rafine edilmiş bakırdan saclar, levhalar, yapraklar ve şeritler; kalınlık > 0.15 mm (rulo halinde olanlar HARİÇ)",
+      "tanim_en": "Sheets, plates, foils and strips of refined copper; thickness > 0.15 mm (EXCEPT those in rolls)",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740921000000",
+      "tanim_tr": "Bakır - çinko esaslı alaşımlardan (pirinç) rulo halinde saclar, levhalar, yapraklar ve şeritler; kalınlık > 0.15 mm",
+      "tanim_en": "Coiled sheets, plates, foils and strips of copper-zinc based alloys (brass); thickness > 0.15 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740929000000",
+      "tanim_tr": "Bakır - çinko esaslı alaşımlardan (pirinç) saclar, levhalar, yapraklar ve şeritler (rulo halinde olanlar HARİÇ); kalınlık > 0.15 mm",
+      "tanim_en": "Sheets, plates, foils and strips of copper-zinc based alloys (brass) (EXCEPT those in rolls); thickness > 0.15 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740931000000",
+      "tanim_tr": "Bakır - kalay esaslı alaşımlardan (bronz) rulo halinde saclar, levhalar, yapraklar ve şeritler; kalınlık > 0.15 mm",
+      "tanim_en": "Coiled sheets, plates, foils and strips of copper-tin based alloys (bronze); thickness > 0.15 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740939000000",
+      "tanim_tr": "Bakır - kalay esaslı alaşımlardan (bronz) saclar, levhalar, yapraklar ve şeritler (rulo halinde olanlar HARİÇ); kalınlık > 0.15 mm",
+      "tanim_en": "Sheets, plates, foils and strips of copper-tin based alloys (bronze) (EXCEPT those in rolls); thickness > 0.15 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740940000000",
+      "tanim_tr": "Bakır-nikel esaslı alaşımlardan (kupro-nikel) ve bakır-nikel-çinko esaslı alaşımlardan (nikel gümüşleri) sac, levha, yaprak ve şerit; kalınlık >0.15mm",
+      "tanim_en": "Sheets, plates, foils and strips made from copper-nickel alloys (cupro-nickel) and copper-nickel-zinc alloys (nickel silvers); thickness >0.15mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "740990000000",
+      "tanim_tr": "Diğer bakır alaşımlarından saclar, levhalar, yapraklar ve şeritler; kalınlık > 0.15 mm",
+      "tanim_en": "Sheets, plates, foils and strips of other copper alloys; thickness > 0.15 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741011000011",
+      "tanim_tr": "Rafine edilmiş bakırdan ince yaprak ve şeritler; mesnetsiz olanlar, kalınlık <= 35 mikron",
+      "tanim_en": "Thin sheets and strips of refined copper; unbacked, thickness <= 35 microns.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741011000019",
+      "tanim_tr": "Rafine edilmiş bakırdan ince yaprak ve şeritler; mesnetsiz olanlar, 35 mikron < kalınlık <= 0.15 mm",
+      "tanim_en": "Thin sheets and strips of refined copper; unbacked, 35 microns < thickness <= 0.15 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741012000000",
+      "tanim_tr": "Bakır alaşımlarından ince yaprak ve şeritler; mesnetsiz olanlar, kalınlık <= 0.15 mm",
+      "tanim_en": "Thin sheets and strips of copper alloys; unbacked, thickness <= 0.15 mm.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741021000000",
+      "tanim_tr": "Rafine edilmiş bakırdan ince yaprak ve şeritler; mesnetli olanlar, mesnetleri hariç kalınlık <= 0.15 mm",
+      "tanim_en": "Thin sheets and strips of refined copper; backed versions, thickness excluding backing <= 0.15 mm.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741022000000",
+      "tanim_tr": "Bakır alaşımlarından ince yaprak ve şeritler; mesnetli olanlar, mesnetleri hariç kalınlık <= 0.15 mm",
+      "tanim_en": "Thin sheets and strips of copper alloys; supported, thickness excluding supports <= 0.15 mm.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741110100000",
+      "tanim_tr": "Rafine edilmiş bakırdan düz olan ince ve kalın borular",
+      "tanim_en": "Thin and thick pipes made of refined copper, available in straight form.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741110900011",
+      "tanim_tr": "Rafine edilmiş bakırdan yivli ince ve kalın borular (düz olanlar HARİÇ); Et kalınlığı < 0,36 mm",
+      "tanim_en": "Thin and thick grooved pipes of refined copper (EXCEPT plain ones); Wall thickness < 0.36 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741110900019",
+      "tanim_tr": "Rafine edilmiş bakırdan ince ve kalın borular (yivli ve düz olanlar HARİÇ); Et kalınlığı < 0,36 mm",
+      "tanim_en": "Fine and coarse pipes of refined copper (EXCEPT grooved and smooth); Wall thickness < 0.36 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741110900021",
+      "tanim_tr": "Rafine edilmiş bakırdan yivli ince ve kalın borular (düz olanlar HARİÇ); Et kalınlığı >= 0,36 mm",
+      "tanim_en": "Thin and thick grooved pipes of refined copper (EXCEPT plain ones); Wall thickness >= 0.36 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741110900029",
+      "tanim_tr": "Rafine edilmiş bakırdan ince ve kalın borular (yivli ve düz olanlar HARİÇ); Et kalınlığı >= 0,36 mm",
+      "tanim_en": "Fine and coarse pipes of refined copper (EXCEPT grooved and smooth); Wall thickness >= 0.36 mm",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741121100000",
+      "tanim_tr": "Bakır - çinko esaslı alaşımlardan (pirinç) düz olan ince ve kalın borular",
+      "tanim_en": "Straight, thin and thick pipes made from copper-zinc based alloys (brass).",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741121900000",
+      "tanim_tr": "Bakır - çinko esaslı alaşımlardan (pirinç) ince ve kalın borular; düz olanlar HARİÇ",
+      "tanim_en": "Thin and thick pipes made of copper-zinc alloys (brass); EXCEPT for straight pipes.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741122000000",
+      "tanim_tr": "Bakır - nikel esaslı alaşımlardan (kupro - nikel) ve bakır - nikel - çinko esaslı alaşımlardan (nikel gümüşleri) ince ve kalon borular",
+      "tanim_en": "Thin and thick tubes made from copper-nickel based alloys (cupro-nickel) and copper-nickel-zinc based alloys (nickel silvers).",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741129000000",
+      "tanim_tr": "Diğer bakır alaşımlarından ince ve kalın borular",
+      "tanim_en": "Thin and thick pipes made from other copper alloys.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741210000000",
+      "tanim_tr": "Rafine edilmiş bakırdan ince ve kalın boru bağlantı parçaları; rakorlar, dirsekler, manşonlar gibi",
+      "tanim_en": "Fine and coarse pipe fittings made of refined copper; such as unions, elbows, and sleeves.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741220000011",
+      "tanim_tr": "Bakır - çinko esaslı alaşımlardan (pirinç) ince ve kalın boru bağlantı parçaları; rakorlar, dirsekler, manşonlar gibi",
+      "tanim_en": "Thin and thick pipe fittings made from copper-zinc based alloys (brass); such as couplings, elbows, and sleeves.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741220000019",
+      "tanim_tr": "Diğer bakır alaşımlarından ince, kalın boru bağlantı parçaları; rakorlar, dirsekler, manşonlar gibi",
+      "tanim_en": "Other copper alloys are used to make thin and thick pipe fittings; such as unions, elbows, and sleeves.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741300000000",
+      "tanim_tr": "Bakırdan demetlenmiş teller, kablolar, örme halatlar ve benzerleri (elektrik için izole edilmiş olanlar hariç)",
+      "tanim_en": "Bundles of copper wires, cables, braided ropes and the like (excluding those insulated for electrical use)",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741510000000",
+      "tanim_tr": "Bakırdan veya başları bakırdan, gövdeleri demir/çelikten küçük-büyük çivi, pünez, yivli çiviler, ve benzerleri (83.05 pozisyonundakiler hariç)",
+      "tanim_en": "Nails, pins, grooved nails, and similar items of copper or with copper heads and iron/steel shafts (excluding those in heading 83.05)",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741521000000",
+      "tanim_tr": "Bakırdan rondelalar (yaylanmayı sağlayıcı olanlar dahil); diş açılmamış",
+      "tanim_en": "Copper washers (including those that provide cushioning); unthreaded.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741529000011",
+      "tanim_tr": "Bakırdan perçin çivileri; diş açılmamış",
+      "tanim_en": "Copper rivet nails; unthreaded.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741529000019",
+      "tanim_tr": "Bakırdan cıvata, somun, vida, pim, kama, vb. diğer eşya; diş açılmamış",
+      "tanim_en": "Bolts, nuts, screws, pins, wedges, and other items made of copper; unthreaded.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741533000011",
+      "tanim_tr": "Bakırdan vidalar; diş açılmış",
+      "tanim_en": "Copper screws; threaded.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741533000012",
+      "tanim_tr": "Bakırdan cıvata ve somunlar; diş açılmış",
+      "tanim_en": "Copper bolts and nuts; threaded.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741539000000",
+      "tanim_tr": "Bakırdan perçin çivileri, pim, kama, vb. diğer eşya; diş açılmış",
+      "tanim_en": "Copper rivets, nails, pins, wedges, and other similar items; threaded.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741810100000",
+      "tanim_tr": "Bakırdan ev işlerinde kullanılan türden, elektrikli olmayan pişirme veya ısıtma cihazları ve bunların aksam ve parçaları",
+      "tanim_en": "Non-electric cooking or heating appliances of the type used in household chores, made of copper, and their parts and accessories.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741810900011",
+      "tanim_tr": "Bakırdan sofra, mutfak ve ev işlerinde kullanılan diğer eşya, sünger, temizlik ve parlatma işlerinde kullanılan eşya, eldiven vb.",
+      "tanim_en": "Copper tableware, kitchen and other household items, sponges, cleaning and polishing equipment, gloves, etc.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741810900015",
+      "tanim_tr": "Bakırdan sofra, mutfak ve ev işlerinde kullanılan diğer eşyaların bakırdan olan aksam ve parçaları",
+      "tanim_en": "Copper tableware, kitchenware, and other household items; copper components and parts.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741820000011",
+      "tanim_tr": "Bakırdan sağlığı koruyucu eşya",
+      "tanim_en": "Health protection items made of copper.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741820000015",
+      "tanim_tr": "Bakırdan sağlığı koruyucu eşyaların bakırdan olan aksam ve parçaları",
+      "tanim_en": "Copper components and parts of copper health protection items.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741920001000",
+      "tanim_tr": "Döküm, kalıba dökülmüş, presle şekillendirilmiş veya dövülmüş bakırdan depo, sarnıç, küv, vb. diğer kaplar; hacmi > 300 Lt, mekanik/termik tertibatsız",
+      "tanim_en": "Tanks, cisterns, vats, and other vessels made of cast, molded, pressed, or forged copper; volume > 300 Lt, without mechanical/thermal devices.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741920009000",
+      "tanim_tr": "Döküm, kalıba dökülmüş, presle şekillendirilmiş veya dövülmüş fakat daha ileri bir işleme tabi tutulmamış bakırdan diğer eşya",
+      "tanim_en": "Other articles of copper that have been cast, molded, pressed or forged but not subjected to further processing.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741980100011",
+      "tanim_tr": "Çapları 6 mm. yi geçmeyen bakır tellerden mensucat",
+      "tanim_en": "Textiles made from copper wires with a diameter not exceeding 6 mm.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741980100012",
+      "tanim_tr": "Çapları 6 mm. yi geçmeyen bakır tellerden metal depluvayye",
+      "tanim_en": "Metal casing made from copper wires with a diameter not exceeding 6 mm.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741980100019",
+      "tanim_tr": "Çapları 6 mm. yi geçmeyen bakır tellerden ızgara, kafeslikler ve ağlar",
+      "tanim_en": "Grids, cages, and nets made from copper wires with diameters not exceeding 6 mm.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741980300000",
+      "tanim_tr": "Bakır yaylar",
+      "tanim_en": "Copper springs",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741980901000",
+      "tanim_tr": "Diğer bakırdan depo, sarnıç, küv, vb. diğer kaplar (sıkıştırılmış/sıvı gaz için hariç); hacmi > 300 Lt, mekanik/termik tertibatsız",
+      "tanim_en": "Other copper tanks, cisterns, vats, etc. (excluding those for compressed/liquefied gas); volume > 300 Lt, without mechanical/thermal equipment.",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    },
+    {
+      "kod": "741980909000",
+      "tanim_tr": "Bakırdan diğer eşya",
+      "tanim_en": "Other articles of copper",
+      "grup": "619",
+      "vergi_turu": "tevkifat",
+      "oran": 0.7,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false,
+      "oran_kesir": "7/10"
+    }
+  ]
+}

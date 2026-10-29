@@ -1,0 +1,1768 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-kdv",
+      "ad": {
+        "tr": "GTİP KDV Eşleşmesi",
+        "en": "GTIP VAT Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.02",
+    "guncelleme": "2026-10-02",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.02"
+      },
+      "uretim_zamani": "2026-10-02T00:00:00+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "42",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:4518c4fb3baf0206331a06ab5ecc26e1414efd305035072aa272824b8d4956f3"
+  },
+  "kayitlar": [
+    {
+      "kod": "420100000000",
+      "tanim_tr": "Her tür hayvan için saraciye eşyas, eyer ve koşum takımları, köpek elbiseleri, vb.",
+      "tanim_en": "Leather goods for all types of animals, saddles and harnesses, dog clothing, etc.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420211100011",
+      "tanim_tr": "Evrak çantaları, okul çantaları, vb. mahfazalar; dış yüzleri tabii deri ve köseleden olanlar",
+      "tanim_en": "Briefcases, school bags, etc.; those with outer surfaces made of natural leather or rawhide.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420211100012",
+      "tanim_tr": "Evrak çantaları, okul çantaları, vb. mahfazalar; dış yüzleri terkip yoluyla elde edilen deri ve köseleden olanlar",
+      "tanim_en": "Briefcases, school bags, etc.; those whose outer surfaces are made of leather and rawhide obtained through synthesis.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420211100013",
+      "tanim_tr": "Evrak çantaları, okul çantaları, vb. mahfazalar; dış yüzleri rugandan olanlar",
+      "tanim_en": "Briefcases, school bags, etc.; those with patent leather exteriors.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420211900011",
+      "tanim_tr": "Sandıklar, bavullar, valizler, vb.; dış yüzleri tabii deri ve köseleden olanlar",
+      "tanim_en": "Boxes, suitcases, travel bags, etc.; those with outer surfaces made of natural leather or rawhide.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420211900012",
+      "tanim_tr": "Sandıklar, bavullar, valizler, vb.; dış yüzleri terkip yoluyla elde edilen deri ve köseleden olanlar",
+      "tanim_en": "Boxes, suitcases, travel bags, etc.; those whose outer surfaces are made of leather or rawhide obtained through a chemical process.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420211900013",
+      "tanim_tr": "Sandıklar, bavullar, valizler, vb.; dış yüzleri rugandan olanlar",
+      "tanim_en": "Boxes, suitcases, travel bags, etc.; those with patent leather exteriors.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420212110000",
+      "tanim_tr": "Evrak çantaları, okul çantaları, vb. mahfazalar; dış yüzleri plastik madde yapraklarından yapılmış olanlar",
+      "tanim_en": "Briefcases, school bags, etc.; those whose outer surfaces are made of plastic sheets.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420212190000",
+      "tanim_tr": "Sandıklar, bavullar, valizler, vb.; dış yüzleri plastik madde yapraklarından yapılmış olanlar",
+      "tanim_en": "Boxes, suitcases, travel bags, etc.; those whose outer surfaces are made of sheets of plastic material.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420212500000",
+      "tanim_tr": "Sandıklar, bavullar, valizler, evrak ve okul çantaları, vb.; dış yüzleri kalıplanmış plastik maddelerden",
+      "tanim_en": "Boxes, suitcases, travel bags, briefcases, school bags, etc.; their outer surfaces are made of molded plastic materials.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420212911000",
+      "tanim_tr": "Evrak çantaları, okul çantaları, vb. mahfazalar; dış yüzleri elastiki veya /kauçuklu olmayan örme eşyadan",
+      "tanim_en": "Briefcases, school bags, etc.; knitted materials with non-elastic or non-rubbery outer surfaces.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420212919000",
+      "tanim_tr": "Evrak çantaları, okul çantaları, vb. mahfazalar; dış yüzleri diğer maddelerden yapılmış olanlar",
+      "tanim_en": "Briefcases, school bags, etc.; those whose outer surfaces are made of other materials.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420212991000",
+      "tanim_tr": "Sandıklar, bavullar, valizler, vb.; dış yüzleri elastiki veya kauçuklu olmayan örme eşyadan olanlar",
+      "tanim_en": "Boxes, suitcases, travel bags, etc.; knitted goods whose outer surfaces are not elastic or rubberized.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420212999000",
+      "tanim_tr": "Sandıklar, bavullar, valizler, vb.; dış yüzleri diğer maddelerden olanlar",
+      "tanim_en": "Boxes, suitcases, travel bags, etc.; those whose outer surfaces are made of other materials.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420219100000",
+      "tanim_tr": "Sandıklar, bavullar, valizler, evrak ve okul çantaları, vb.; dış yüzleri aluminyumdan olanlar",
+      "tanim_en": "Boxes, suitcases, travel bags, briefcases, school bags, etc.; those with aluminum outer surfaces.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420219901000",
+      "tanim_tr": "Sandıklar, bavullar, valizler, evrak ve okul çantaları, vb.; dış yüzleri ahşaptan veya nikelden olanlar",
+      "tanim_en": "Boxes, suitcases, travel bags, briefcases, school bags, etc.; those with outer surfaces made of wood or nickel.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420219903000",
+      "tanim_tr": "Sandıklar, bavullar, valizler, evrak ve okul çantaları, vb.; dış yüzleri demir dökümden, demir veya çelikten veya çinkodan",
+      "tanim_en": "Boxes, suitcases, travel bags, briefcases, school bags, etc.; their outer surfaces are made of cast iron, iron or steel, or zinc.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420219905000",
+      "tanim_tr": "Sandıklar, bavullar, valizler, evrak ve okul çantaları, vb.; dış yüzleri bakırdan",
+      "tanim_en": "Boxes, suitcases, travel bags, briefcases, school bags, etc.; their outer surfaces are made of copper.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420219909000",
+      "tanim_tr": "Sandıklar, bavullar, valizler, evrak ve okul çantaları, vb.; dış yüzleri diğer maddelerden olanlar",
+      "tanim_en": "Boxes, suitcases, travel bags, briefcases and school bags, etc.; those whose outer surfaces are made of other materials.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420221000000",
+      "tanim_tr": "El çantaları; dış yüzleri tabii/terkip yoluyla elde edilen deri, kösele/rugandan",
+      "tanim_en": "Handbags; their outer surfaces are made of natural or artificial leather, patent leather/leather.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420222100000",
+      "tanim_tr": "El çantaları; dış yüzleri plastikten mamül madde yapraklarından yapılmış olanlar",
+      "tanim_en": "Handbags; those whose outer surfaces are made of sheets of plastic material.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420222901000",
+      "tanim_tr": "El çantaları; dış yüzleri elastiki/kauçuklu olmayan örme eşyadan olanlar",
+      "tanim_en": "Handbags; those made of knitted material with non-elastic/rubbery outer surfaces.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420222909000",
+      "tanim_tr": "El çantaları; dış yüzleri dokumaya elverişli diğer maddelerden olanlar",
+      "tanim_en": "Handbags; those whose outer surfaces are made of other materials suitable for weaving.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420229000000",
+      "tanim_tr": "El çantaları; dış yüzleri diğer maddelerden olanlar",
+      "tanim_en": "Handbags; those whose outer surfaces are made of other materials.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420231000000",
+      "tanim_tr": "Cepte/el çantasında taşınan eşya; dış yüzleri deri ve köseleden/rugandan olanlar",
+      "tanim_en": "Items carried in a pocket/handbag; those with outer surfaces made of leather or patent leather.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420232100000",
+      "tanim_tr": "Cepte veya el çantasında taşınan eşya; dış yüzleri plastikten mamül madde yapraklarından",
+      "tanim_en": "Items carried in a pocket or handbag; their outer surfaces are made of plastic sheets.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420232901000",
+      "tanim_tr": "Cepte veya el çantasında taşınan eşya; dış yüzleri elastiki/kauçuklu olmayan örme eşyadan olanlar",
+      "tanim_en": "Items carried in a pocket or handbag; knitted items with non-elastic/rubbery outer surfaces.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420232909000",
+      "tanim_tr": "Cepte veya el çantasında taşınan eşya; dış yüzleri dokunmaya elverişli diğer maddelerden olanlar",
+      "tanim_en": "Items carried in a pocket or handbag; those whose outer surfaces are made of materials suitable for touching.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420239001000",
+      "tanim_tr": "Cepte veya el çantasında taşınan eşya; dış yüzleri aluminyumdan, demir dökümden veya çelikten veya çinkodan",
+      "tanim_en": "Items carried in a pocket or handbag; their outer surfaces are made of aluminum, cast iron, steel, or zinc.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420239002000",
+      "tanim_tr": "Cepte veya el çantasında taşınan eşya; dış yüzleri ahşap olanlar",
+      "tanim_en": "Items carried in a pocket or handbag; those with wooden outer surfaces.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420239003000",
+      "tanim_tr": "Cepte veya el çantasında taşınan eşya; dış yüzleri bakırdan olanlar",
+      "tanim_en": "Items carried in a pocket or handbag; those with copper outer surfaces.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420239004000",
+      "tanim_tr": "Cepte veya el çantasında taşınan eşya; dış yüzleri nikelden olanlar",
+      "tanim_en": "Items carried in a pocket or handbag; those with nickel-plated outer surfaces.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420239005000",
+      "tanim_tr": "Cepte veya el çantasında taşınan eşya; dış yüzleri işlenmiş bağa, sedef, boynuz, mercan vb diğer hayvansal maddeden",
+      "tanim_en": "Items carried in a pocket or handbag; made from processed tortoiseshell, mother-of-pearl, horn, coral, or other animal materials.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420239006000",
+      "tanim_tr": "Cepte veya el çantasında taşınan eşya; dış yüzleri işlenmiş yontulmaya elverişli bitkisel ve mineral maddelerden olan",
+      "tanim_en": "Items carried in a pocket or handbag; made of processed and sculptable plant and mineral materials.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420239009000",
+      "tanim_tr": "Cepte veya el çantasında taşınan eşya; dış yüzleri diğer maddelerden olanlar",
+      "tanim_en": "Items carried in a pocket or handbag; those whose outer surfaces are made of other materials.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420291100011",
+      "tanim_tr": "Seyahat, tuvalet, sırt ve spor çantaları; dış yüzü tabii deri ve köseleden olanlar",
+      "tanim_en": "Travel bags, toiletries, backpacks, and sports bags; those with exteriors made of natural leather or rawhide.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420291100012",
+      "tanim_tr": "Seyahat, tuvalet, sırt ve spor çantaları; dış yüzü terkip ile elde edilen deri, köseleden",
+      "tanim_en": "Travel, toiletry, backpacks and sports bags; outer surface made of leather or rawhide obtained through a compounding process.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420291100013",
+      "tanim_tr": "Seyahat, tuvalet, sırt ve spor çantaları; dış yüzü rugandan olanlar",
+      "tanim_en": "Travel, toiletries, backpacks and sports bags; those with a patent leather exterior.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420291800000",
+      "tanim_tr": "Fotoğraf makinesi, müzik aleti mahfazaları, sigara kutuları, vb. mahfazalar; dış yüzleri deri ve kösele veya rugandan",
+      "tanim_en": "Cases for cameras, musical instruments, cigarette cases, etc.; their outer surfaces are made of leather, rawhide, or patent leather.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420292110000",
+      "tanim_tr": "Seyahat, tuvalet, sırt ve spor çantaları; dış yüzleri plastikten mamul madde yapraklarından",
+      "tanim_en": "Travel bags, toiletries, backpacks, and sports bags; their outer surfaces are made of plastic sheets.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420292150000",
+      "tanim_tr": "Müzik aletleri mahfazaları; dış yüzleri plastikten mamul madde yapraklarından",
+      "tanim_en": "Musical instrument cases; their outer surfaces are made of plastic sheets.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420292190000",
+      "tanim_tr": "Diğer mahfazalar; dış yüzleri plastikten mamul madde yapraklarından yapılmış olan",
+      "tanim_en": "Other enclosures; their outer surfaces are made of sheets of plastic material.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420292911000",
+      "tanim_tr": "Seyahat, tuvalet, sırt ve spor çantaları; dış yüzleri elastiki veya kauçuklu olmayan örme eşyadan ve mensucattan olanlar",
+      "tanim_en": "Travel, toiletries, backpacks and sports bags; those made of knitted and textile materials with non-elastic or rubberized outer surfaces.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420292919000",
+      "tanim_tr": "Seyahat, tuvalet, sırt ve spor çantaları; dış yüzleri dokumaya elverişli diğer maddelerden olanlar",
+      "tanim_en": "Travel bags, toiletries, backpacks and sports bags; those with outer surfaces made of other woven materials.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420292981000",
+      "tanim_tr": "Diğer mahfazalar; dış yüzleri elastiki veya kauçuklu olmayan örme eşyadan ve mensucattan olanlar",
+      "tanim_en": "Other containers; those made of knitted and textile materials whose outer surfaces are not elastic or rubberized.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420292989000",
+      "tanim_tr": "Diğer mahfazalar; dış yüzleri dokumaya elverişli diğer maddelerden olanlar",
+      "tanim_en": "Other casings; those whose outer surfaces are made of other materials suitable for textiles.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420299001000",
+      "tanim_tr": "Diğer mahfazalar; dış yüzleri aluminyumdan, demir döküm veya çelikten veya çinkodan olanlar",
+      "tanim_en": "Other enclosures include those with outer surfaces made of aluminum, cast iron, steel, or zinc.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420299002000",
+      "tanim_tr": "Diğer mahfazalar; dış yüzleri ahşap olanlar",
+      "tanim_en": "Other enclosures; those with wooden exteriors.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420299003000",
+      "tanim_tr": "Diğer mahfazalar; dış yüzleri bakırdan olanlar",
+      "tanim_en": "Other enclosures; those with copper outer surfaces.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420299004000",
+      "tanim_tr": "Diğer mahfazalar; dış yüzleri nikelden olanlar",
+      "tanim_en": "Other enclosures; those with nickel-plated outer surfaces.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420299005000",
+      "tanim_tr": "Diğer mahfazalar; dış yüzleri işlenmiş bağa, fildişi, kemik, mercan ve diğer hayvansal maddeden",
+      "tanim_en": "Other casings are made of treated tortoiseshell, ivory, bone, coral, and other animal materials.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420299006000",
+      "tanim_tr": "Diğer mahfazalar; dış yüzleri işlenmiş yontulmaya uygun bitkisel, mineral maddeden",
+      "tanim_en": "Other casings are made of plant-based or mineral materials with processed and sculpted outer surfaces.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420299009000",
+      "tanim_tr": "Diğer mahfazalar; dış yüzleri diğer maddelerden olanlar",
+      "tanim_en": "Other enclosures; those whose outer surfaces are made of other materials.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420310000012",
+      "tanim_tr": "Giyim eşyası ve aksesuar; terkip yoluyla elde edilen deri ve köseleden",
+      "tanim_en": "Clothing and accessories; made from leather and rawhide obtained through synthesis.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420310000022",
+      "tanim_tr": "Manto, Palto, Pardesü; tabii deri ve köseleden",
+      "tanim_en": "Coats, overcoats, trench coats; made from natural leather and rawhide.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420310000023",
+      "tanim_tr": "Kaban, Mont, Ceket; tabii deri ve köseleden",
+      "tanim_en": "Coats, jackets, coats; made from natural leather and rawhide.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420310000024",
+      "tanim_tr": "Pantolon; tabii deri ve köseleden",
+      "tanim_en": "Trousers; made of natural leather and rawhide.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420310000025",
+      "tanim_tr": "Etek; tabii deri ve köseleden",
+      "tanim_en": "The skirt is made of natural leather and suede.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420310000028",
+      "tanim_tr": "Diğer giyim eşyası; tabii deri ve köseleden",
+      "tanim_en": "Other clothing items; made of natural leather and rawhide.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420321000011",
+      "tanim_tr": "Spor eldivenleri; tabii deri ve köseleden",
+      "tanim_en": "Sports gloves; made from natural leather and rawhide.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420321000012",
+      "tanim_tr": "Spor eldivenleri; terkip yoluyla elde edilen deri ve köseleden",
+      "tanim_en": "Sports gloves are made from leather and rawhide obtained through a synthetic process.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420329100011",
+      "tanim_tr": "Sanat, meslek erbabı için eldivenler; tabii deri ve köseleden olanlar",
+      "tanim_en": "Gloves for artists and craftspeople; those made of natural leather and rawhide.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420329100012",
+      "tanim_tr": "Sanat, meslek erbabı için eldivenler; terkip yoluyla elde edilen deri ve köseleden",
+      "tanim_en": "Gloves for artists and craftspeople; made from leather and rawhide obtained through synthesis.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420329900000",
+      "tanim_tr": "Diğer eldivenler; tabii veya terkip yoluyla elde edilen deri ve köseleden",
+      "tanim_en": "Other gloves are made from natural or artificial leather and suede.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420330000011",
+      "tanim_tr": "Bel kemeri, kılıç kayışı ve palaskalar; tabii deri ve köseleden olanlar",
+      "tanim_en": "Belts, sword slings, and holsters; those made of natural leather and imitation leather.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420330000012",
+      "tanim_tr": "Bel kemeri, kılıç kayışı ve palaskalar; terkip yoluyla elde edilen deri ve köseleden",
+      "tanim_en": "Belts, sword slings, and holsters; made from leather and rawhide obtained through synthesis.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420340000011",
+      "tanim_tr": "Giyim eşyasının diğer aksesuarı; tabii deri ve köseleden olanlar",
+      "tanim_en": "Other accessories for clothing; those made of natural leather and rawhide.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420340000012",
+      "tanim_tr": "Giyim eşyasının diğer aksesuarı; terkip yoluyla elde edilen deri, köseleden olan",
+      "tanim_en": "Other accessories for clothing; leather obtained by synthesis, made from sole leather.",
+      "grup": "II-A",
+      "vergi_turu": "kdv",
+      "oran": 0.1,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420500111000",
+      "tanim_tr": "Transmisyon ve taşıyıcı kolonlar; tabii deri ve köseleden",
+      "tanim_en": "Transmission and conveyor columns; made of natural leather and rawhide.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420500112000",
+      "tanim_tr": "Transmisyon ve taşıyıcı kolonlar; terkip yoluyla elde edilen deri ve köseleden",
+      "tanim_en": "Transmission and conveyor columns; made from leather and hide obtained through composition.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420500191000",
+      "tanim_tr": "Makinalarda, mekanik aletlerde, teknik amaçlarla kull. eşya; tabii deri ve köseleden",
+      "tanim_en": "Articles used in machinery, mechanical tools, and for technical purposes; made from natural leather and rawhide.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420500199000",
+      "tanim_tr": "Makinalarda, mekanik aletlerde, teknik amaçlarla kull. eşya; terkip yoluyla elde edilen deri ve köseleden",
+      "tanim_en": "Leather and hides obtained through synthesis; used in machinery, mechanical tools, and technical articles.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420500900011",
+      "tanim_tr": "Tabii deri ve köseleden diğer eşya",
+      "tanim_en": "Other articles made from natural leather and rawhide.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420500900012",
+      "tanim_tr": "Terkip yoluyla elde edilen deri ve köseleden diğer eşya",
+      "tanim_en": "Leather and other articles made from leather obtained through synthesis.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    },
+    {
+      "kod": "420600000000",
+      "tanim_tr": "Bağırsak, kursak, mesane ve veterden mamul eşya",
+      "tanim_en": "Articles made from intestines, crop, bladder and veterinarians.",
+      "grup": "genel",
+      "vergi_turu": "kdv",
+      "oran": 0.2,
+      "islem_tipleri": [
+        "yurtici"
+      ],
+      "alici_tipleri": [
+        "*"
+      ],
+      "satici_tipleri": [
+        "*"
+      ],
+      "ek_kriterler": {},
+      "istisna": false,
+      "istisna_tipi": null,
+      "kosullu": false
+    }
+  ]
+}

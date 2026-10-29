@@ -1,0 +1,517 @@
+{
+  "meta": {
+    "schema_surumu": "1.0.0",
+    "servis": {
+      "kod": "gtip-nace",
+      "ad": {
+        "tr": "GTİP NACE Eşleşmesi",
+        "en": "GTIP NACE Mapping"
+      }
+    },
+    "katman": "konsolide",
+    "yapi": {
+      "tip": "liste",
+      "kod_sistemi": "gtip",
+      "kapsam": [
+        "vergi",
+        "ticaret"
+      ]
+    },
+    "surum": "2026.10.02",
+    "guncelleme": "2026-10-02",
+    "yayin_durumu": "yayinda",
+    "zaman": {
+      "bazli": false,
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": {
+      "kod": "hvmb",
+      "ad": {
+        "tr": "T.C. Hazine ve Maliye Bakanlığı",
+        "en": "Republic of Türkiye Ministry of Treasury and Finance"
+      },
+      "birim": {
+        "tr": "Gelir İdaresi Başkanlığı",
+        "en": "Revenue Administration"
+      },
+      "kurumlar": [
+        "hvmb",
+        "gib"
+      ]
+    },
+    "kaynaklar": [
+      {
+        "kod": "gib-kdv-oranlari",
+        "ad": {
+          "tr": "KDV oranları ve 2007/13033 sayılı BKK'ya ekli (I) ve (II) sayılı listeler",
+          "en": "VAT rates and Lists (I) and (II) annexed to Decision No. 2007/13033"
+        },
+        "tur": "bkk_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "gib-otv-listeleri",
+        "ad": {
+          "tr": "4760 sayılı ÖTV Kanunu'na ekli listeler",
+          "en": "Lists annexed to SCT Law No. 4760"
+        },
+        "tur": "kanun_eki_liste",
+        "kurum_kod": "gib",
+        "url": "https://gib.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      },
+      {
+        "kod": "tuik-nace-rev2",
+        "ad": {
+          "tr": "NACE Rev. 2 Ekonomik Faaliyet Sınıflaması Türkiye Uyarlaması",
+          "en": "NACE Rev. 2 Classification of Economic Activities Turkish Adaptation"
+        },
+        "tur": "siniflama",
+        "kurum_kod": "tuik",
+        "url": "https://tuik.gov.tr",
+        "erisim_tarihi": "2026-10-01"
+      }
+    ],
+    "mevzuat_ref": [
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "3065 sayılı Katma Değer Vergisi Kanunu",
+          "en": "Value Added Tax Law No. 3065"
+        },
+        "madde": "28",
+        "kabul_tarihi": "1984-10-25",
+        "resmi_gazete": "18563",
+        "tarih": "1984-11-02"
+      },
+      {
+        "tur": "bkk",
+        "ad": {
+          "tr": "Mal ve Hizmetlere Uygulanacak Katma Değer Vergisi Oranlarının Tespitine İlişkin Karar (2007/13033)",
+          "en": "Decision on Determining VAT Rates Applicable to Goods and Services (2007/13033)"
+        },
+        "karar_sayisi": "2007/13033",
+        "resmi_gazete": "26742",
+        "tarih": "2007-12-30"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "4760 sayılı Özel Tüketim Vergisi Kanunu",
+          "en": "Special Consumption Tax Law No. 4760"
+        },
+        "kabul_tarihi": "2002-06-06",
+        "resmi_gazete": "24783",
+        "tarih": "2002-06-12"
+      },
+      {
+        "tur": "kanun",
+        "ad": {
+          "tr": "5429 sayılı Türkiye İstatistik Kanunu",
+          "en": "Turkish Statistical Law No. 5429"
+        },
+        "kabul_tarihi": "2005-11-10",
+        "resmi_gazete": "25997",
+        "tarih": "2005-11-18"
+      },
+      {
+        "tur": "uluslararasi_tuzuk",
+        "ad": {
+          "tr": "Avrupa Birliği Ekonomik Faaliyetlerin İstatistiki Sınıflaması (NACE Rev. 2) Tüzüğü (No 1893/2006)",
+          "en": "Regulation (EC) No 1893/2006 of the European Parliament and of the Council establishing NACE Rev. 2"
+        },
+        "kurum": "Avrupa Parlamentosu ve Konseyi",
+        "tarih": "2006-12-20"
+      }
+    ],
+    "uretim": {
+      "ham_kaynaklar": [
+        {
+          "servis_kod": "gtip-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:ff92e5e97a80a8a737119e7c0ea37b5e65fb066eec21270610f8fba93246c934"
+        },
+        {
+          "servis_kod": "cpc-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:4bcd279d87c1bd853c472164f32181327af73afd685c3a06233b1037e0e1da06"
+        },
+        {
+          "servis_kod": "nace-kodlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:75590e962229cc85922d9e165f2b7623bef23290823daf392f20f943c38c0395"
+        },
+        {
+          "servis_kod": "kdv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:f4f7b851ed560dc026e300cab26bf0bc56d8609ebbaaf58081e0049b35101bbc"
+        },
+        {
+          "servis_kod": "otv-oranlari",
+          "surum": "2026.01.01",
+          "checksum": "sha256:1943f000c6eb2ef19be67b084cf921cc413f26bc9daacab87cd1d5feb618436a"
+        },
+        {
+          "servis_kod": "tevkifat-oranlari",
+          "surum": "2026.01.02",
+          "checksum": "sha256:ac62c2184860c37d86615c5dae0a576ff4730cf64ffe99ffc52f893a4c02897c"
+        },
+        {
+          "servis_kod": "randiman",
+          "surum": "2026.01.01",
+          "checksum": "sha256:802eb653d65a38793dbffb5f03a7f7a49266fa061d646d5a3dbb6dc76e19beeb"
+        },
+        {
+          "servis_kod": "nace-kurallar",
+          "surum": "2026.10.01",
+          "checksum": "sha256:2eb15a45fe286bd27fe1938ce26dff95e7b0799d5e8c4f3fce3b4aec707a7a27"
+        }
+      ],
+      "kural_seti": {
+        "kod": "coklu-kural",
+        "surum": "2026.10.02"
+      },
+      "uretim_zamani": "2026-10-02T00:00:00+00:00",
+      "eslesme_ozeti": {
+        "toplam": 18676,
+        "eslesen": 18676,
+        "eslesmeyen": 0
+      }
+    },
+    "parca": {
+      "tur": "fasil",
+      "kod": "88",
+      "ana_dosya": "index.json"
+    },
+    "checksum": "sha256:8a251f4cf548bfd042997b85b3509bcd77127c0cb0f6168c3a85682b0ef623ed"
+  },
+  "kayitlar": [
+    {
+      "kod": "880000000000",
+      "tanim_tr": "Hava taşıtları, uzay taşıtları ve bunların aksam ve parçalar",
+      "tanim_en": "Aircraft, spacecraft and their components and parts.",
+      "nace": null
+    },
+    {
+      "kod": "880000000004",
+      "tanim_tr": "Hava taşıtları, uzay taşıtları ve bunların aksam ve parçalar",
+      "tanim_en": "Aircraft, spacecraft and their components and parts.",
+      "nace": null
+    },
+    {
+      "kod": "880100100000",
+      "tanim_tr": "Balonlar, hava gemileri, planörler, delta kanatlı planörler",
+      "tanim_en": "Balloons, airships, gliders, delta-wing gliders",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880100900000",
+      "tanim_tr": "Motorsuz diğer hava taşıtları",
+      "tanim_en": "Other non-motorized aircraft",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880211000000",
+      "tanim_tr": "Helikopter (2022 yılı ve sonrası için insansız olanlar HARİÇ); boş haldeki ağırlıkları <= 2 000 kg",
+      "tanim_en": "Helicopters (excluding unmanned ones for 2022 and later); empty weight <= 2,000 kg",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880212000000",
+      "tanim_tr": "Helikopter (2022 yılı ve sonrası için insansız olanlar HARİÇ); boş haldeki ağırlıkları > 2 000 kg",
+      "tanim_en": "Helicopters (excluding unmanned ones for 2022 and later); empty weight > 2,000 kg",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880220001000",
+      "tanim_tr": "Zirai mücadelede ilaçlama aracı olarak ithal olunan özel yapıdaki uçaklar (2022 yılı ve sonrası için insansız olanlar HARİÇ); boş ağırlıkları <=2000kg",
+      "tanim_en": "Specially designed aircraft imported for use as spraying vehicles in agricultural pest control (excluding unmanned ones for 2022 and later); empty weight <=2000kg",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880220002000",
+      "tanim_tr": "Yolcu taşımaya mahsus uçaklar (2022 yılı ve sonrası için insansız olanlar HARİÇ); boş haldeki ağırlıkları <= 2 000 kg",
+      "tanim_en": "Passenger aircraft (excluding unmanned aircraft from 2022 onwards); empty weight <= 2,000 kg",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880220009000",
+      "tanim_tr": "Diğer uçaklar ve diğer hava taşıtları (2022 yılı ve sonrası için insansız olanlar HARİÇ); boş haldeki ağırlıkları <= 2 000 kg",
+      "tanim_en": "Other aircraft and other aerial vehicles (excluding unmanned ones for 2022 and later); empty weight <= 2,000 kg",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880230001000",
+      "tanim_tr": "Zirai mücadelede ilaçlama aracı olarak ithal olunan özel yapıdaki uçaklar (2022 ve sonrası için insansız olanlar HARİÇ); 2 000 kg < boş <= 15 000 kg",
+      "tanim_en": "Specially designed aircraft imported for use as spraying equipment in agricultural pest control (excluding unmanned ones for 2022 and later); 2,000 kg < empty <= 15,000 kg",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880230002000",
+      "tanim_tr": "Yolcu taşımaya mahsus uçaklar (2022 yılı ve sonrası için insansız olanlar HARİÇ); 2 000 kg < boş haldeki ağırlıkları <= 15 000 kg",
+      "tanim_en": "Passenger aircraft (excluding unmanned aircraft for 2022 and later); empty weight < 2,000 kg <= 15,000 kg",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880230009000",
+      "tanim_tr": "Diğer uçaklar ve diğer hava taşıtları (2022 yılı ve sonrası için insansız olanlar HARİÇ); 2 000 kg < boş haldeki ağırlıkları <= 15 000 kg",
+      "tanim_en": "Other aircraft and other aerial vehicles (excluding unmanned ones for 2022 and later); empty weight < 2,000 kg <= 15,000 kg",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880240001000",
+      "tanim_tr": "Yolcu taşımaya mahsus uçaklar (2022 yılı ve sonrası için insansız olanlar HARİÇ); boş haldeki ağırlıkları > 15 000 kg",
+      "tanim_en": "Passenger aircraft (excluding unmanned aircraft for 2022 and later); empty weight > 15,000 kg",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880240009000",
+      "tanim_tr": "Diğer uçaklar ve diğer hava taşıtları (2022 yılı ve sonrası için insansız olanlar HARİÇ); boş haldeki ağırlıkları > 15 000 kg",
+      "tanim_en": "Other aircraft and other aerial vehicles (excluding unmanned ones for 2022 and later); empty weight > 15,000 kg",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880260110000",
+      "tanim_tr": "Telekomünikasyon uyduları",
+      "tanim_en": "Telecommunications satellites",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880260190000",
+      "tanim_tr": "Uzay araçları; telekomünikasyon uyduları HARİÇ",
+      "tanim_en": "Spacecraft; EXCLUDING telecommunications satellites.",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880260900000",
+      "tanim_tr": "Uzay araçlarını fırlatıcı araçlar ve yörünge-altı araçları",
+      "tanim_en": "Spacecraft launch vehicles and suborbital vehicles",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880400000000",
+      "tanim_tr": "Paraşütler (sevkedilebilir paraşütler ve paragliderler dahil), rotoşütler ve bunların aksam, parça ve aksesuarı",
+      "tanim_en": "Parachutes (including dirigible parachutes and paragliders), rotochutes and their parts, components and accessories.",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880510100011",
+      "tanim_tr": "Hava taşıtlarını fırlatma cihaz ve tertibatı",
+      "tanim_en": "Aircraft launch devices and equipment",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880510100015",
+      "tanim_tr": "Hava taşıtlarını fırlatma cihaz ve tertibatı için aksam ve parçalar",
+      "tanim_en": "Components and parts for aircraft launch devices and assemblies.",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880510900000",
+      "tanim_tr": "Hava taşıtlarının inişi için cihaz ve tertibat ve bunların aksam ve parçaları",
+      "tanim_en": "Aircraft landing equipment and devices, and their components and parts.",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880521000000",
+      "tanim_tr": "Hava muharebe simulatörü ve bunların aksamı",
+      "tanim_en": "Air combat simulators and their components.",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880529000000",
+      "tanim_tr": "Yerde uçuş eğitimi yapmaya mahsus cihazlar ve bunların aksam ve parçaları; hava muharebe simulatörü ve bunların aksamı HARİÇ",
+      "tanim_en": "Devices and parts thereof intended for ground flight training; excluding air combat simulators and parts thereof.",
+      "nace": {
+        "kod": "30.30"
+      }
+    },
+    {
+      "kod": "880610100000",
+      "tanim_tr": "İnsansız hava taşıtları; yolcu taşımak için dizayn edilmiş, boş haldeki ağırlıkları <= 2000 kg",
+      "tanim_en": "Unmanned aerial vehicles are designed to carry passengers and have an empty weight of less than 2000 kg.",
+      "nace": null
+    },
+    {
+      "kod": "880610900000",
+      "tanim_tr": "İnsansız hava taşıtları; yolcu taşımak için dizayn edilmiş, boş haldeki ağırlıkları > 2000 kg",
+      "tanim_en": "Unmanned aerial vehicles are designed to carry passengers and have an empty weight of > 2000 kg.",
+      "nace": null
+    },
+    {
+      "kod": "880621100000",
+      "tanim_tr": "8525.89 alt pozisyonunda yer alan cihazlarla kalıcı olarak entegre edilerek donatılmış çoklu rotorlar; kalkış ağırlığı<=250 g (ayrıntı Resmi Gazetede)",
+      "tanim_en": "Multiple rotors permanently integrated with devices falling under subheading 8525.89; take-off weight <= 250 g (details in the Official Gazette)",
+      "nace": null
+    },
+    {
+      "kod": "880621900000",
+      "tanim_tr": "Sadece uzaktan kumanda ile uçuş yapan insansız diğer hava taşıtları; maksimum kalkış ağırlığı <= 250 g",
+      "tanim_en": "Other unmanned aerial vehicles that fly solely by remote control; maximum take-off weight <= 250 g",
+      "nace": null
+    },
+    {
+      "kod": "880622100000",
+      "tanim_tr": "8525.89 alt pozisyonunda yer alan cihazlarla kalıcı entegre edilerek donatılmış çoklu rotorlar; 250g < kalkış ağırlığı <= 7kg (ayrıntı Resmi Gazetede)",
+      "tanim_en": "Multiple rotors permanently integrated with devices falling under subheading 8525.89; 250g < takeoff weight <= 7kg (details in the Official Gazette)",
+      "nace": null
+    },
+    {
+      "kod": "880622900000",
+      "tanim_tr": "Sadece uzaktan kumanda ile uçuş yapan insansız diğer hava taşıtları; 250 g < maksimum kalkış ağırlığı <= 7 kg",
+      "tanim_en": "Other unmanned aerial vehicles that fly solely by remote control; 250 g < maximum takeoff weight <= 7 kg",
+      "nace": null
+    },
+    {
+      "kod": "880623000000",
+      "tanim_tr": "Sadece uzaktan kumanda ile uçuş yapan insansız hava taşıtları; 7 kg < maksimum kalkış ağırlığı <= 25 kg",
+      "tanim_en": "Unmanned aerial vehicles that fly only with remote control; maximum take-off weight <7 kg <= 25 kg",
+      "nace": null
+    },
+    {
+      "kod": "880624000000",
+      "tanim_tr": "Sadece uzaktan kumanda ile uçuş yapan insansız hava taşıtları; 25 kg < maksimum kalkış ağırlığı <= 150 kg",
+      "tanim_en": "Unmanned aerial vehicles that fly only with remote control; maximum take-off weight < 25 kg <= 150 kg",
+      "nace": null
+    },
+    {
+      "kod": "880629100000",
+      "tanim_tr": "Sadece uzaktan kumanda ile uçuş yapan insansız hava taşıtları; 150 kg < boş haldeki ağırlıkları <= 2000 kg",
+      "tanim_en": "Unmanned aerial vehicles that fly solely by remote control; empty weight < 150 kg <= 2000 kg",
+      "nace": null
+    },
+    {
+      "kod": "880629200000",
+      "tanim_tr": "Sadece uzaktan kumanda ile uçuş yapan insansız hava taşıtları; boş haldeki ağırlıkları > 2000 kg",
+      "tanim_en": "Unmanned aerial vehicles that fly solely by remote control; empty weight > 2000 kg",
+      "nace": null
+    },
+    {
+      "kod": "880691000000",
+      "tanim_tr": "İnsansız diğer hava taşıtları; sadece uzaktan kumanda ile uçuş yapanlar HARİÇ, maksimum kalkış ağırlığı <= 250 g",
+      "tanim_en": "Other unmanned aerial vehicles; EXCEPT those flown solely by remote control, have a maximum take-off weight <= 250 g.",
+      "nace": null
+    },
+    {
+      "kod": "880692000000",
+      "tanim_tr": "İnsansız diğer hava taşıtları; sadece uzaktan kumanda ile uçuş yapanlar HARİÇ, 250 g < maksimum kalkış ağırlığı <= 7 kg",
+      "tanim_en": "Other unmanned aerial vehicles; EXCEPT those flown solely by remote control, have a maximum take-off weight of <250 g <= 7 kg.",
+      "nace": null
+    },
+    {
+      "kod": "880693000000",
+      "tanim_tr": "İnsansız diğer hava taşıtları; sadece uzaktan kumanda ile uçuş yapanlar HARİÇ, 7 kg < maksimum kalkış ağırlığı <= 25 kg",
+      "tanim_en": "Other unmanned aerial vehicles; EXCEPT those flown solely by remote control, have a maximum take-off weight of <7 kg <= 25 kg.",
+      "nace": null
+    },
+    {
+      "kod": "880694000000",
+      "tanim_tr": "İnsansız diğer hava taşıtları; sadece uzaktan kumanda ile uçuş yapanlar HARİÇ, 25 kg < maksimum kalkış ağırlığı <= 150 kg",
+      "tanim_en": "Other unmanned aerial vehicles; EXCEPT those flown solely by remote control, have a maximum take-off weight of <25 kg <= 150 kg.",
+      "nace": null
+    },
+    {
+      "kod": "880699100000",
+      "tanim_tr": "İnsansız diğer hava taşıtları; sadece uzaktan kumanda ile uçuş yapanlar HARİÇ, 150 kg < boş haldeki ağırlıkları <= 2000 kg",
+      "tanim_en": "Other unmanned aerial vehicles; EXCEPT those flown solely by remote control, have an empty weight of <150 kg <= 2000 kg.",
+      "nace": null
+    },
+    {
+      "kod": "880699200000",
+      "tanim_tr": "İnsansız diğer hava taşıtları; sadece uzaktan kumanda ile uçuş yapanlar HARİÇ, boş haldeki ağırlıkları > 2000 kg",
+      "tanim_en": "Other unmanned aerial vehicles; EXCEPT those flown solely by remote control, have an empty weight > 2000 kg.",
+      "nace": null
+    },
+    {
+      "kod": "880710000000",
+      "tanim_tr": "88.01, 88.02 veya 88.06 Pozisyonlarındaki hava taşıtlarının pervaneleri ve rotorları ve bunların aksam ve parçaları",
+      "tanim_en": "Propellers and rotors and their parts and accessories for aircraft of headings 88.01, 88.02 or 88.06.",
+      "nace": null
+    },
+    {
+      "kod": "880720000000",
+      "tanim_tr": "88.01, 88.02 veya 88.06 Pozisyonlarındaki hava taşıtlarının iniş takımları ve bunların aksam ve parçaları",
+      "tanim_en": "Landing gear and its components and parts for aircraft of positions 88.01, 88.02 or 88.06.",
+      "nace": null
+    },
+    {
+      "kod": "880730000000",
+      "tanim_tr": "Uçak, helikopter veya insansız hava taşıtlarının díğer aksam ve parçaları",
+      "tanim_en": "Other components and parts of aircraft, helicopters or unmanned aerial vehicles.",
+      "nace": null
+    },
+    {
+      "kod": "880790100000",
+      "tanim_tr": "Uçurtmalı balonlara ait aksam ve parçalar",
+      "tanim_en": "Parts and accessories for hot air balloons.",
+      "nace": null
+    },
+    {
+      "kod": "880790210000",
+      "tanim_tr": "Telekomünikasyon uydularına ait aksam ve parçalar",
+      "tanim_en": "Components and parts for telecommunication satellites.",
+      "nace": null
+    },
+    {
+      "kod": "880790290000",
+      "tanim_tr": "Uzay araçlarının aksam ve parçaları; telekomünikasyon uydularına ait aksam ve parçalar HARİÇ",
+      "tanim_en": "Parts and components of spacecraft; EXCLUDING parts and components of telecommunications satellites.",
+      "nace": null
+    },
+    {
+      "kod": "880790300000",
+      "tanim_tr": "Uzay aracını fırlatıcı araçlarının ve yörünge-altı araçlarının aksam ve parçaları",
+      "tanim_en": "Components and parts of spacecraft, launch vehicles and suborbital vehicles.",
+      "nace": null
+    },
+    {
+      "kod": "880790900000",
+      "tanim_tr": "88.01, 88.02 veya 88.06 Pozisyonlarındaki hava taşıtlarının diğer aksam ve parçaları",
+      "tanim_en": "Other parts and accessories of aircraft in headings 88.01, 88.02 or 88.06",
+      "nace": null
+    }
+  ]
+}

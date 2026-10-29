@@ -1,11 +1,18 @@
 #!/usr/bin/env python3
 import argparse
-import datetime
 import hashlib
 import json
 import subprocess
 import sys
 from pathlib import Path
+
+# ==== SABİT SÜRÜM BİLGİLERİ ====
+# Konsolide artefaktlar ve katalog bu değerleri kullanır.
+# Ham ve kural seti dosyaları kendi meta.surum/guncelleme değerlerini taşır.
+# Tarih sırası korunmalı: ham <= kurallar <= konsolide.
+SURUM = "2026.10.02"                          # YYYY.MM.DD
+GUNCELLEME = "2026-10-02"                     # YYYY-MM-DD
+URETIM_ZAMANI = "2026-10-02T00:00:00+00:00"   # ISO 8601
 
 
 def yukle(yol):
@@ -76,28 +83,26 @@ def belgeleri_bul(kod, belge_kural_doc, belge_oranlar, kod_sistemi="gtip"):
         prefix_alani = "nace_prefixler"
     elif kod_sistemi == "cpc":
         prefix_alani = "cpc_prefixler"
-    elif kod_sistemi == "isco":  # <-- BURAYI EKLEYİN
+    elif kod_sistemi == "isco":
         prefix_alani = "isco_prefixler"
     else:
         prefix_alani = "gtip_prefixler"
-        
+
     sonuc = {"yurtici": [], "ithalat": [], "ihracat": []}
     kurallar = sorted(belge_kural_doc.get("kurallar", []), key=lambda x: x.get("oncelik", 0), reverse=True)
-    
+
     for k in kurallar:
         eslesti = False
         for p in k.get(prefix_alani, []):
-            # Noktaları temizleyerek eşleştirme yap (NACE ve GTİP için)
             p_str = str(p).replace(".", "")
             if p_str and kod.startswith(p_str):
                 eslesti = True
                 break
-        
+
         if not eslesti: continue
-            
+
         islem_tipleri = k.get("islem_tipleri", ["yurtici", "ithalat", "ihracat"])
-        
-        # NACE ise sadece yurtiçi işlemini dikkate al (NACE ihracat/ithalat gerektirmez)
+
         if kod_sistemi == "nace" and "yurtici" not in islem_tipleri:
             continue
 
@@ -108,7 +113,7 @@ def belgeleri_bul(kod, belge_kural_doc, belge_oranlar, kod_sistemi="gtip"):
                         belge_verisi = belge_oranlar[b_kod].copy()
                         if "ek_kriterler" in k: belge_verisi["ek_kriterler"] = k["ek_kriterler"]
                         if "kosullu" in k: belge_verisi["kosullu"] = k["kosullu"]
-                        
+
                         mevcut_kodlar = [b.get("kod") for b in sonuc[islem]]
                         if b_kod not in mevcut_kodlar:
                             sonuc[islem].append(belge_verisi)
@@ -116,8 +121,9 @@ def belgeleri_bul(kod, belge_kural_doc, belge_oranlar, kod_sistemi="gtip"):
 
 
 def parcala_ve_yaz(kok, servis_kod, ad_tr, ad_en, kayitlar, meta_kaynak, kod_sistemi="gtip"):
-    prefix_uzunluk = 1 if kod_sistemi in ("cpc", "nace") else 2
-    klasor_adi = "bolum" if kod_sistemi in ("cpc", "nace") else "fasil"
+    # ISCO de bir haneli bölüm kullanır (8 = Plant and machine operators).
+    prefix_uzunluk = 1 if kod_sistemi in ("cpc", "nace", "isco") else 2
+    klasor_adi = "bolum" if kod_sistemi in ("cpc", "nace", "isco") else "fasil"
     hedef_klasor = kok / servis_kod
     alt_klasor = hedef_klasor / klasor_adi
 
@@ -129,14 +135,13 @@ def parcala_ve_yaz(kok, servis_kod, ad_tr, ad_en, kayitlar, meta_kaynak, kod_sis
         grup = kod_str[:prefix_uzunluk]
         gruplar.setdefault(grup, []).append(k)
 
-    bugun = datetime.date.today()
     temel_meta = {
         "schema_surumu": "1.0.0",
         "servis": {"kod": servis_kod, "ad": {"tr": ad_tr, "en": ad_en}},
         "katman": "konsolide",
         "yapi": {"tip": "liste", "kod_sistemi": kod_sistemi, "kapsam": ["vergi", "ticaret"]},
-        "surum": bugun.strftime("%Y.%m.%d"),
-        "guncelleme": bugun.isoformat(),
+        "surum": SURUM,
+        "guncelleme": GUNCELLEME,
         "yayin_durumu": "yayinda",
         "zaman": {"bazli": False, "baslangic": None, "bitis": None},
         "yayinci": meta_kaynak["yayinci"],
@@ -144,33 +149,39 @@ def parcala_ve_yaz(kok, servis_kod, ad_tr, ad_en, kayitlar, meta_kaynak, kod_sis
         "mevzuat_ref": meta_kaynak.get("mevzuat_ref", []),
         "uretim": meta_kaynak["uretim"],
     }
+
+    parcalar = [
+        {"kod": grup, "kayit_sayisi": len(f_kayitlar), "dosya": f"{klasor_adi}/{grup}.json"}
+        for grup, f_kayitlar in sorted(gruplar.items())
+    ]
+
+    servis_checksum = sha256({
+        "servis": temel_meta["servis"],
+        "katman": temel_meta["katman"],
+        "parcalar": parcalar,
+    })
 
     for grup, f_kayitlar in gruplar.items():
         parca_meta = dict(temel_meta)
         parca_meta["parca"] = {"tur": klasor_adi, "kod": grup, "ana_dosya": "index.json"}
+        parca_meta["checksum"] = servis_checksum
         yaz(alt_klasor / f"{grup}.json", {"meta": parca_meta, "kayitlar": f_kayitlar})
 
     index_meta = dict(temel_meta)
     index_meta["parca"] = {"tur": "index", "kod": "index", "ana_dosya": f"{servis_kod}.json"}
-    yaz(hedef_klasor / "index.json", {
-        "meta": index_meta,
-        "parcalar": [
-            {"kod": grup, "kayit_sayisi": len(f_kayitlar), "dosya": f"{klasor_adi}/{grup}.json"}
-            for grup, f_kayitlar in sorted(gruplar.items())
-        ],
-    })
+    index_meta["checksum"] = servis_checksum
+    yaz(hedef_klasor / "index.json", {"meta": index_meta, "parcalar": parcalar})
     print(f"  -> {servis_kod} (Klasör): {len(gruplar)} {klasor_adi}.")
 
 
 def tum_veriyi_yaz(kok, servis_kod, ad_tr, ad_en, kayitlar, meta_kaynak, kod_sistemi="gtip"):
-    bugun = datetime.date.today()
     temel_meta = {
         "schema_surumu": "1.0.0",
         "servis": {"kod": servis_kod, "ad": {"tr": ad_tr, "en": ad_en}},
         "katman": "konsolide",
         "yapi": {"tip": "liste", "kod_sistemi": kod_sistemi, "kapsam": ["vergi", "ticaret"]},
-        "surum": bugun.strftime("%Y.%m.%d"),
-        "guncelleme": bugun.isoformat(),
+        "surum": SURUM,
+        "guncelleme": GUNCELLEME,
         "yayin_durumu": "yayinda",
         "zaman": {"bazli": False, "baslangic": None, "bitis": None},
         "yayinci": meta_kaynak["yayinci"],
@@ -178,27 +189,27 @@ def tum_veriyi_yaz(kok, servis_kod, ad_tr, ad_en, kayitlar, meta_kaynak, kod_sis
         "mevzuat_ref": meta_kaynak.get("mevzuat_ref", []),
         "uretim": meta_kaynak["uretim"],
     }
+    temel_meta["checksum"] = sha256(kayitlar)
     yaz(kok / f"{servis_kod}.json", {"meta": temel_meta, "kayitlar": kayitlar})
     print(f"  -> {servis_kod}.json (Tek Dosya) oluşturuldu.")
 
+
 def sgk_prim_hesapla(kod, sgk_prim_doc):
-    # SGK Prim oranları dosyasından genel oranları çek
     oran_dict = {k["kod"]: k for k in sgk_prim_doc.get("kayitlar", [])}
-    
+
     isci = oran_dict.get("sgk_isci_primi", {}).get("oran", 14.0) + oran_dict.get("issizlik_isci_primi", {}).get("oran", 1.0)
     isveren_tevkisiz = oran_dict.get("toplam_isveren_primi_tesviksiz", {}).get("oran", 23.75)
-    
-    # NACE koduna göre imalat sektörü mü kontrol et (NACE 10 ile 33 arası imalattır)
+
     imalat_prefixler = [str(i) for i in range(10, 34)]
     imalat = any(kod.startswith(p) for p in imalat_prefixler)
-    
+
     if imalat:
         isveren_tevkisli = oran_dict.get("toplam_isveren_primi_5puanli_imalat", {}).get("oran", 18.75)
         tesvik_adi = "5510 — Beş Puanlık Prim İndirimi (İmalat)"
     else:
         isveren_tevkisli = oran_dict.get("toplam_isveren_primi_diger_2puan", {}).get("oran", 21.75)
         tesvik_adi = "5510 — İki Puanlık Prim İndirimi (İmalat Dışı)"
-        
+
     return {
         "isci_pay": isci,
         "isveren_pay_tevkisiz": isveren_tevkisiz,
@@ -207,10 +218,11 @@ def sgk_prim_hesapla(kod, sgk_prim_doc):
         "tesvik_adi": tesvik_adi
     }
 
+
 def vergi_verisi_olustur(kural, oran_dict, fallback_grp="genel"):
     if not kural:
-        return {"grup": None, "oran": None, "vergi_turu": None, "islem_tipleri": [], 
-                "alici_tipleri": [], "satici_tipleri": [], "ek_kriterler": {}, 
+        return {"grup": None, "oran": None, "vergi_turu": None, "islem_tipleri": [],
+                "alici_tipleri": [], "satici_tipleri": [], "ek_kriterler": {},
                 "istisna": False, "kosullu": False}
 
     grp = kural.get("grup", fallback_grp)
@@ -232,7 +244,7 @@ def vergi_verisi_olustur(kural, oran_dict, fallback_grp="genel"):
         kaynak = oran_dict[oran_k]
         if veri["oran"] is None:
             veri["oran"] = kaynak.get("oran")
-        
+
         for alan in ("liste", "vergi_tipi", "matrah_dilimleri", "maktu", "asgari_maktu", "kalemler"):
             if alan in kaynak:
                 veri[alan] = kaynak[alan]
@@ -246,7 +258,7 @@ def eslesme_yap(kok):
     gtip_doc, gtip_hash = dosya_bul(kok, "gtip-kodlari.json")
     cpc_doc, cpc_hash = dosya_bul(kok, "cpc-kodlari.json")
     nace_doc, nace_hash = dosya_bul(kok, "nace-kodlari.json")
-    
+
     kdv_oran_doc, kdv_oran_hash = dosya_bul(kok, "kdv-oranlari.json")
     kdv_kural_doc, kdv_kural_hash = dosya_bul(kok, "kdv-kurallar.json")
     otv_oran_doc, otv_oran_hash = dosya_bul(kok, "otv-oranlari.json")
@@ -323,7 +335,7 @@ def eslesme_yap(kok):
 
         otv_kural = bul_en_spesifik_kural(kod, otv_aktif, otv_default, "gtip")
         otv_data = vergi_verisi_olustur(otv_kural, otv_oranlar)
-        
+
         kalemler = otv_data.pop("kalemler", None)
         if kalemler:
             en_iyi, en_uzun_k = None, -1
@@ -356,7 +368,6 @@ def eslesme_yap(kok):
                     nace_kodu = k["nace_kodu"]
         nace_data = {"kod": nace_kodu} if nace_kodu else None
 
-        # --- Zorunlu belge (GTİP için) ---
         belge_listesi = belgeleri_bul(kod, belge_kural_doc, belge_oranlar, "gtip")
 
         sonuc_nace.append({"kod": kod, "tanim_tr": tanim_tr, "tanim_en": tanim_en, "nace": nace_data})
@@ -390,16 +401,15 @@ def eslesme_yap(kok):
         })
 
         sanity_check(kod, tanim_tr or "", kdv_data, otv_data, uyarilar)
-    
+
     # ISCO DÖNGÜSÜ
     sonuc_isco_tam = []
     for y in isco_doc.get("kayitlar", []):
         kod = str(y.get("kod", "")).replace(".", "")
         tanim_tr, tanim_en = y.get("tanim_tr") or y.get("ad_tr"), y.get("tanim_en") or y.get("ad_en")
-        
-        # ISCO için sadece belgeleri bul
+
         belge_listesi = belgeleri_bul(kod, belge_kural_doc, belge_oranlar, "isco")
-        
+
         sonuc_isco_tam.append({
             "kod": kod, "tanim_tr": tanim_tr, "tanim_en": tanim_en,
             "belgeler": belge_listesi,
@@ -434,7 +444,6 @@ def eslesme_yap(kok):
                     nace_kodu = k["nace_kodu"]
         nace_data = {"kod": nace_kodu} if nace_kodu else None
 
-        # --- Zorunlu belge (CPC için) ---
         belge_listesi = belgeleri_bul(kod, belge_kural_doc, belge_oranlar, "cpc")
 
         sonuc_cpc_tam.append({
@@ -443,17 +452,15 @@ def eslesme_yap(kok):
             "belgeler": belge_listesi,
         })
 
-        # NACE DÖNGÜSÜ
+    # NACE DÖNGÜSÜ
     for y in nace_doc.get("kayitlar", []):
         kod = str(y.get("kod", "")).replace(".", "")
         tanim_tr = y.get("tanim_tr") or y.get("ad_tr")
         tanim_en = y.get("tanim_en") or y.get("ad_en")
-        
+
         belge_listesi = belgeleri_bul(kod, belge_kural_doc, belge_oranlar, "nace")
-        
-        # --- YENİ: SGK Prim Hesaplaması ---
         sgk_prim = sgk_prim_hesapla(kod, sgk_prim_doc)
-        
+
         sonuc_nace_tam.append({
             "kod": kod, "tanim_tr": tanim_tr, "tanim_en": tanim_en,
             "belgeler": belge_listesi,
@@ -465,8 +472,6 @@ def eslesme_yap(kok):
         for u in uyarilar[:30]: print(f"    - {u}")
         print()
 
-    bugun = datetime.date.today()
-    simdi = datetime.datetime.now(datetime.timezone.utc).isoformat()
     nace_meta = nace_kural_doc.get("meta", {})
     toplam = len(yapraklar) + len(cpc_yapraklar)
     eslesmeyen = (sum(1 for r in sonuc_kdv if not r.get("grup")) + sum(1 for r in sonuc_cpc_kdv if not r.get("grup")))
@@ -487,8 +492,8 @@ def eslesme_yap(kok):
                 {"servis_kod": "randiman", "surum": randiman_oran_doc.get("meta", {}).get("surum"), "checksum": randiman_oran_hash},
                 {"servis_kod": "nace-kurallar", "surum": nace_meta.get("surum"), "checksum": nace_kural_hash},
             ],
-            "kural_seti": {"kod": "coklu-kural", "surum": bugun.strftime("%Y.%m.%d")},
-            "uretim_zamani": simdi,
+            "kural_seti": {"kod": "coklu-kural", "surum": SURUM},
+            "uretim_zamani": URETIM_ZAMANI,
             "eslesme_ozeti": {"toplam": toplam, "eslesen": eslesen, "eslesmeyen": eslesmeyen},
         },
     }
@@ -507,12 +512,11 @@ def eslesme_yap(kok):
     parcala_ve_yaz(kok, "cpc-tevkifat", "CPC Tevkifat Eşleşmesi", "CPC Withholding Mapping", sonuc_cpc_tevkifat, uretim_meta, "cpc")
     parcala_ve_yaz(kok, "cpc-tam", "CPC Tüm Vergiler", "CPC All Taxes", sonuc_cpc_tam, uretim_meta, "cpc")
 
-    # NACE ÇIKTILARI (Yeni)
+    # NACE / ISCO ÇIKTILARI
     parcala_ve_yaz(kok, "nace-tam", "NACE Tüm Belgeler", "NACE All Documents", sonuc_nace_tam, uretim_meta, "nace")
-
     parcala_ve_yaz(kok, "isco-tam", "ISCO Tüm Belgeler", "ISCO All Documents", sonuc_isco_tam, uretim_meta, "isco")
 
-    # TEK DOSYA ÇIKTILARI (TÜMÜ)
+    # TEK DOSYA ÇIKTILARI
     tum_veriyi_yaz(kok, "gtip-kdv", "GTİP KDV Eşleşmesi (Tümü)", "GTIP VAT Mapping (All)", sonuc_kdv, uretim_meta, "gtip")
     tum_veriyi_yaz(kok, "gtip-otv", "GTİP ÖTV Eşleşmesi (Tümü)", "GTIP SCT Mapping (All)", sonuc_otv, uretim_meta, "gtip")
     tum_veriyi_yaz(kok, "gtip-tevkifat", "GTİP Tevkifat Eşleşmesi (Tümü)", "GTIP Withholding Mapping (All)", sonuc_tevkifat, uretim_meta, "gtip")
@@ -527,7 +531,6 @@ def eslesme_yap(kok):
 
     tum_veriyi_yaz(kok, "nace-tam", "NACE Tüm Belgeler (Tümü)", "NACE All Documents (All)", sonuc_nace_tam, uretim_meta, "nace")
     tum_veriyi_yaz(kok, "isco-tam", "ISCO Tüm Belgeler (Tümü)", "ISCO All Documents (All)", sonuc_isco_tam, uretim_meta, "isco")
-    
 
 
 def main():
