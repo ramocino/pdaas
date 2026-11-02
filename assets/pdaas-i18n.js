@@ -38,7 +38,7 @@ export const UI = {
     // --- KATALOG / BOŞ DURUM ---
     catalog_title: "Veri Kataloğu", catalog_search: "Veri seti ara...", catalog_loading: "Katalog yükleniyor...",
     empty_title: "Veri Seti veya Servis Seçin",
-    empty_desc: "Sol taraftaki katalog ağacından bir veri seti seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz. Bu portal makale için demo bir ortamdır. Resmi veri sayfası değildir.",
+    empty_desc: "Sol taraftaki katalog ağacından bir veri seti seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz. ⚠️ Bu portal makale için demo bir ortamdır. Resmi veri sayfası değildir.",
     empty_card1_t: "Veri Önizleme", empty_card1_d: "Tablo görünümü ile doğrudan canlı veri kayıtları.",
     empty_card2_t: "Hazır Kodlar", empty_card2_d: "cURL, Python, JS, Go & PHP entegrasyonu.",
 
@@ -192,7 +192,7 @@ export const UI = {
     // --- CATALOG / EMPTY ---
     catalog_title: "Data Catalog", catalog_search: "Search dataset...", catalog_loading: "Loading catalog...",
     empty_title: "Select a Dataset or Service",
-    empty_desc: "Choose a dataset from the catalog tree on the left to inspect its parametric API endpoints, data tables and ready-to-use code samples. This portal is a demo environment for an article. It is not an official data page.",
+    empty_desc: "Choose a dataset from the catalog tree on the left to inspect its parametric API endpoints, data tables and ready-to-use code samples. ⚠️ This portal is a demo environment for an article. It is not an official data page.",
     empty_card1_t: "Data Preview", empty_card1_d: "Live data records in a table view.",
     empty_card2_t: "Ready-to-use Code", empty_card2_d: "cURL, Python, JS, Go & PHP integrations.",
 
