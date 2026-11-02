@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "versiyon": {
+      "schema": "1.0.0",
+      "dosya": "1.0.0",
+      "veri": "1.0.0"
+    },
+    "servis": "asgari-ucret",
+    "katman": "ham",
+    "durum": "yayinda",
+    "guncelleme": "2026-10-01",
+    "yapi": {
+      "tip": "liste",
+      "sistem": "csgb",
+      "kapsam": [
+        "calisma",
+        "ucret"
+      ],
+      "kayit_sayisi": 6
+    },
+    "uluslararasi": {
+      "dil": [
+        "tr",
+        "en"
+      ],
+      "baslik": {
+        "tr": "Asgari Ücret Verileri",
+        "en": "Minimum Wage Data"
+      }
+    },
+    "kaynaklar": {
+      "kurumlar": {
+        "csgb": {
+          "tr": "T.C. Çalışma ve Sosyal Güvenlik Bakanlığı",
+          "en": "Ministry of Labour and Social Security"
+        },
+        "pdaas": {
+          "tr": "PDaaS — Parametrik Veri Servisi",
+          "en": "PDaaS — Parametric Data Service"
+        },
+        "sgk": {
+          "tr": "Sosyal Güvenlik Kurumu",
+          "en": "Social Security Institution"
+        }
+      },
+      "referanslar": [
+        {
+          "kod": "asgari",
+          "url": "https://www.csgb.gov.tr/Media/gm2fekds/asgari-%C3%BCcret-2026.pdf"
+        },
+        {
+          "kod": "destek",
+          "url": "https://www.sgk.gov.tr/Content/Post/c52f99f0-da6c-4029-9b9a-a0d6f96a6a42/Guncel-Sigorta-Primi-Tesvik-Destek-ve-Indirimleri-2026-08-04-10-29-55"
+        }
+      ],
+      "mevzuat": [
+        {
+          "tur": "kanun",
+          "rg": "25134",
+          "tarih": "2003-06-10"
+        },
+        {
+          "tur": "yonetmelik",
+          "rg": "25540",
+          "tarih": "2004-08-01"
+        }
+      ]
+    },
+    "tablo_haritasi": {
+      "pk": "kod",
+      "kolonlar": [
+        "kod",
+        "ad_tr",
+        "ad_en",
+        "deger",
+        "periyot",
+        "para_birimi",
+        "gecerlilik_baslangic",
+        "gecerlilik_bitis",
+        "kosullu",
+        "aciklama_tr"
+      ]
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "brut_asgari_ucret_gunluk",
+      "ad_tr": "Brüt Asgari Ücret (Günlük)",
+      "ad_en": "Gross Minimum Wage (Daily)",
+      "deger": 1101,
+      "periyot": "gunluk",
+      "para_birimi": "TRY",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "brut_asgari_ucret_aylik",
+      "ad_tr": "Brüt Asgari Ücret (Aylık)",
+      "ad_en": "Gross Minimum Wage (Monthly)",
+      "deger": 33030,
+      "periyot": "aylik",
+      "para_birimi": "TRY",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "net_asgari_ucret_gunluk",
+      "ad_tr": "Net Asgari Ücret (Günlük)",
+      "ad_en": "Net Minimum Wage (Daily)",
+      "deger": 935.85,
+      "periyot": "gunluk",
+      "para_birimi": "TRY",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "net_asgari_ucret_aylik",
+      "ad_tr": "Net Asgari Ücret (Aylık)",
+      "ad_en": "Net Minimum Wage (Monthly)",
+      "deger": 28075.5,
+      "periyot": "aylik",
+      "para_birimi": "TRY",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "asgari_ucret_destegi",
+      "ad_tr": "Asgari Ücret Desteği (Sigortalı Başına)",
+      "ad_en": "Minimum Wage Support (Per Insured Employee)",
+      "deger": 1270,
+      "periyot": "aylik",
+      "para_birimi": "TRY",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31",
+      "kosullu": true,
+      "aciklama_tr": "Aylık 1.270 TL, 30 gün × 42,33 TL hesabının yasal yuvarlamalı karşılığıdır; işyeri ve sigortalı uygunluk şartları aranır."
+    },
+    {
+      "kod": "isveren_maliyeti_aylik",
+      "ad_tr": "İşverene Toplam Maliyet (Aylık, Teşviksiz)",
+      "ad_en": "Total Employer Cost (Monthly, No Incentive)",
+      "deger": 40874.63,
+      "periyot": "aylik",
+      "para_birimi": "TRY",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31",
+      "aciklama_tr": "Genel prim oranına göre 2026 indirimsiz aylık işveren maliyeti."
+    }
+  ]
+}

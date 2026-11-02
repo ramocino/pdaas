@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "versiyon": {
+      "schema": "1.0.0",
+      "dosya": "1.0.0",
+      "veri": "1.0.0"
+    },
+    "servis": "tufe-ufe-verileri",
+    "katman": "ham",
+    "durum": "yayinda",
+    "guncelleme": "2026-10-05",
+    "yapi": {
+      "tip": "liste",
+      "sistem": "tuik",
+      "kapsam": [
+        "ekonomi",
+        "finans"
+      ],
+      "kayit_sayisi": 18,
+      "alt_tip": "donemsel_istatistik"
+    },
+    "uluslararasi": {
+      "dil": [
+        "tr",
+        "en"
+      ],
+      "baslik": {
+        "tr": "TÜFE ve Yİ-ÜFE Verileri",
+        "en": "CPI and D-PPI Data"
+      }
+    },
+    "kaynaklar": {
+      "kurumlar": {
+        "pdaas": {
+          "tr": "PDaaS — Parametrik Veri Servisi",
+          "en": "PDaaS — Parametric Data Service"
+        },
+        "tuik": {
+          "tr": "Türkiye İstatistik Kurumu",
+          "en": "Turkish Statistical Institute"
+        }
+      },
+      "referanslar": [
+        {
+          "kod": "tufe",
+          "url": "https://veriportali.tuik.gov.tr/Bulten/Index?dil=1&p=T%C3%BCketici-Fiyat-Endeksi-Eyl%C3%BCl-2026-58298"
+        },
+        {
+          "kod": "ufe",
+          "url": "https://veriportali.tuik.gov.tr/tr/press/58034"
+        }
+      ],
+      "mevzuat": [
+        {
+          "tur": "kanun",
+          "rg": "25997",
+          "tarih": "2005-11-18"
+        }
+      ]
+    },
+    "tablo_haritasi": {
+      "pk": "kod",
+      "kolonlar": [
+        "kod",
+        "ad_tr",
+        "ad_en",
+        "deger",
+        "periyot",
+        "aciklama_tr",
+        "aciklama_en",
+        "veri_donemi",
+        "olcek",
+        "dogrulama_durumu"
+      ]
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "tufe_aylik_degisim",
+      "ad_tr": "TÜFE Aylık Değişim Oranı",
+      "ad_en": "CPI Monthly Change Rate",
+      "deger": 0.0184,
+      "periyot": "aylik",
+      "aciklama_tr": "Bir önceki aya göre değişim",
+      "aciklama_en": "Change compared to the previous month",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "tufe_yillik_degisim",
+      "ad_tr": "TÜFE Yıllık Değişim Oranı",
+      "ad_en": "CPI Annual Change Rate",
+      "deger": 0.2973,
+      "periyot": "yillik",
+      "aciklama_tr": "Bir önceki yılın aynı ayına göre değişim",
+      "aciklama_en": "Change compared to the same month of the previous year",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "tufe_yilbasi_degisim",
+      "ad_tr": "TÜFE Yıl Başından Bu Yana Değişim Oranı",
+      "ad_en": "CPI Year-to-Date Change Rate",
+      "deger": 0.2432,
+      "periyot": "yillik",
+      "aciklama_tr": "Bir önceki yılın Aralık ayına göre değişim",
+      "aciklama_en": "Change compared to December of the previous year",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "tufe_12ay_ortalama",
+      "ad_tr": "TÜFE On İki Aylık Ortalamalara Göre Değişim Oranı",
+      "ad_en": "CPI Twelve-Month Moving Average Change Rate",
+      "deger": 0.3149,
+      "periyot": "yillik",
+      "aciklama_tr": "On iki aylık ortalamalara göre değişim",
+      "aciklama_en": "Change based on twelve-month averages",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "tufe_endeks",
+      "ad_tr": "TÜFE Endeks Değeri (2025=100)",
+      "ad_en": "CPI Index Value (2025=100)",
+      "periyot": "aylik",
+      "aciklama_tr": "Kaynak bültenden endeks değeri aktarılmadı; null sıfır değildir.",
+      "aciklama_en": "The index value was not transcribed; null does not mean zero.",
+      "veri_donemi": "2026-09",
+      "dogrulama_durumu": "deger_aktarilmadi"
+    },
+    {
+      "kod": "tufe_gida_yillik",
+      "ad_tr": "TÜFE Gıda ve Alkolsüz İçecekler Yıllık Değişim",
+      "ad_en": "CPI Food and Non-Alcoholic Beverages Annual Change",
+      "deger": 0.2762,
+      "periyot": "yillik",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "tufe_ulasim_yillik",
+      "ad_tr": "TÜFE Ulaştırma Yıllık Değişim",
+      "ad_en": "CPI Transport Annual Change",
+      "deger": 0.351,
+      "periyot": "yillik",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "tufe_konut_yillik",
+      "ad_tr": "TÜFE Konut, Su, Elektrik, Gaz ve Diğer Yakıtlar Yıllık Değişim",
+      "ad_en": "CPI Housing, Water, Electricity, Gas and Other Fuels Annual Change",
+      "deger": 0.3999,
+      "periyot": "yillik",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "tufe_gida_aylik",
+      "ad_tr": "TÜFE Gıda ve Alkolsüz İçecekler Aylık Değişim",
+      "ad_en": "CPI Food and Non-Alcoholic Beverages Monthly Change",
+      "deger": -0.002,
+      "periyot": "aylik",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "tufe_ulasim_aylik",
+      "ad_tr": "TÜFE Ulaştırma Aylık Değişim",
+      "ad_en": "CPI Transport Monthly Change",
+      "deger": 0.0279,
+      "periyot": "aylik",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "tufe_konut_aylik",
+      "ad_tr": "TÜFE Konut, Su, Elektrik, Gaz ve Diğer Yakıtlar Aylık Değişim",
+      "ad_en": "CPI Housing, Water, Electricity, Gas and Other Fuels Monthly Change",
+      "deger": 0.0271,
+      "periyot": "aylik",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "tufe_ozel_kapsamli_b_yillik",
+      "ad_tr": "Özel Kapsamlı TÜFE Göstergesi (B) Yıllık Değişim",
+      "ad_en": "Special CPI Aggregate (B) Annual Change",
+      "deger": 0.29,
+      "periyot": "yillik",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "ufe_aylik_degisim",
+      "ad_tr": "Yİ-ÜFE Aylık Değişim Oranı",
+      "ad_en": "D-PPI Monthly Change Rate",
+      "deger": 0.0207,
+      "periyot": "aylik",
+      "aciklama_tr": "Bir önceki aya göre değişim",
+      "aciklama_en": "Change compared to the previous month",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "ufe_yillik_degisim",
+      "ad_tr": "Yİ-ÜFE Yıllık Değişim Oranı",
+      "ad_en": "D-PPI Annual Change Rate",
+      "deger": 0.2738,
+      "periyot": "yillik",
+      "aciklama_tr": "Bir önceki yılın aynı ayına göre değişim",
+      "aciklama_en": "Change compared to the same month of the previous year",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "ufe_yilbasi_degisim",
+      "ad_tr": "Yİ-ÜFE Yıl Başından Bu Yana Değişim Oranı",
+      "ad_en": "D-PPI Year-to-Date Change Rate",
+      "deger": 0.2338,
+      "periyot": "yillik",
+      "aciklama_tr": "Bir önceki yılın Aralık ayına göre değişim",
+      "aciklama_en": "Change compared to December of the previous year",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "ufe_12ay_ortalama",
+      "ad_tr": "Yİ-ÜFE On İki Aylık Ortalamalara Göre Değişim Oranı",
+      "ad_en": "D-PPI Twelve-Month Moving Average Change Rate",
+      "deger": 0.2781,
+      "periyot": "yillik",
+      "aciklama_tr": "On iki aylık ortalamalara göre değişim",
+      "aciklama_en": "Change based on twelve-month averages",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "ufe_madencilik_yillik",
+      "ad_tr": "Yİ-ÜFE Madencilik ve Taş Ocakçılığı Yıllık Değişim",
+      "ad_en": "D-PPI Mining and Quarrying Annual Change",
+      "deger": 0.3415,
+      "periyot": "yillik",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    },
+    {
+      "kod": "ufe_imalat_yillik",
+      "ad_tr": "Yİ-ÜFE İmalat Yıllık Değişim",
+      "ad_en": "D-PPI Manufacturing Annual Change",
+      "deger": 0.2909,
+      "periyot": "yillik",
+      "veri_donemi": "2026-09",
+      "olcek": "oran_ondalik"
+    }
+  ]
+}

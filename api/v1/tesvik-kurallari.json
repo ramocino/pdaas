@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "versiyon": {"schema": "1.0.0", "dosya": "1.0.0", "veri": "1.0.0"},
+    "servis": "tesvik-kurallari",
+    "katman": "kurallar",
+    "durum": "yayinda",
+    "guncelleme": "2026-10-01",
+    "demo": false,
+    "yapi": {"tip": "kural-seti", "sistem": ["nace", "sgk"], "kapsam": "sosyal_guvenlik", "kayit_sayisi": 6},
+    "uluslararasi": {"dil": ["tr", "en"], "baslik": {"tr": "NACE–SGK Teşvik İlişki Kuralları", "en": "NACE–Social Security Incentive Mapping Rules"}},
+    "kaynaklar": {"dosyalar": ["nace-kodlari.json", "sgk-tesvik-kodlari.json"]}
+  },
+  "kurallar": [
+    {"kod": "tsk-05510-genel", "tesvik_ref": "05510", "nace_bolumleri": ["*"], "puan_anahtari": "diger", "oncelik": 0},
+    {"kod": "tsk-05510-imalat", "tesvik_ref": "05510", "nace_bolumleri": ["C"], "puan_anahtari": "imalat", "oncelik": 10},
+    {"kod": "tsk-05746-arge", "tesvik_ref": "05746", "nace_prefixler": ["72."], "oncelik": 0},
+    {"kod": "tsk-15746-arge", "tesvik_ref": "15746", "nace_prefixler": ["72."], "oncelik": 0},
+    {"kod": "tsk-25225-kultur", "tesvik_ref": "25225", "nace_prefixler": ["90.", "91."], "oncelik": 0},
+    {"kod": "tsk-55225-kultur", "tesvik_ref": "55225", "nace_prefixler": ["90.", "91."], "oncelik": 0}
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "versiyon": {
+      "schema": "1.0.0",
+      "dosya": "1.0.0",
+      "veri": "1.0.0"
+    },
+    "servis": "sgk-tavani",
+    "katman": "ham",
+    "durum": "yayinda",
+    "guncelleme": "2026-10-01",
+    "yapi": {
+      "tip": "liste",
+      "sistem": "sgk",
+      "kapsam": "sosyal_guvenlik",
+      "kayit_sayisi": 6
+    },
+    "uluslararasi": {
+      "dil": [
+        "tr",
+        "en"
+      ],
+      "baslik": {
+        "tr": "SGK Tavan/Taban ve Kıdem Tazminatı Tutarları",
+        "en": "SGK Ceiling/Floor and Severance Pay Amounts"
+      }
+    },
+    "kaynaklar": {
+      "kurumlar": {
+        "csgb": {
+          "tr": "T.C. Çalışma ve Sosyal Güvenlik Bakanlığı",
+          "en": "Ministry of Labour and Social Security"
+        },
+        "pdaas": {
+          "tr": "PDaaS — Parametrik Veri Servisi",
+          "en": "PDaaS — Parametric Data Service"
+        },
+        "sgk": {
+          "tr": "Sosyal Güvenlik Kurumu",
+          "en": "Social Security Institution"
+        }
+      },
+      "referanslar": [
+        {
+          "kod": "tavan",
+          "url": "https://www.sgk.gov.tr/Content/Post/2e0c9e1a-2cfe-4456-af10-49d3de0c58ba/Prime-Esas-Kazanc-Miktarlari-2026-01-14-10-35-39"
+        },
+        {
+          "kod": "kidem",
+          "url": "https://www.csgb.gov.tr/yayinlar/calisma-hayati-istatistikleri-e-bulteni/temmuz-2026/ucret-ve-sendikal-istatistikler.html"
+        }
+      ],
+      "mevzuat": [
+        {
+          "tur": "kanun",
+          "rg": "26200",
+          "tarih": "2006-06-16"
+        },
+        {
+          "tur": "kanun",
+          "rg": "13943",
+          "tarih": "1971-09-01"
+        },
+        {
+          "tur": "kanun",
+          "rg": "33112",
+          "tarih": "2025-12-19"
+        },
+        {
+          "tur": "genelge",
+          "tarih": "2026-01-05"
+        }
+      ]
+    },
+    "tablo_haritasi": {
+      "pk": "kod",
+      "kolonlar": [
+        "kod",
+        "ad_tr",
+        "ad_en",
+        "deger",
+        "periyot",
+        "para_birimi",
+        "gecerlilik_baslangic",
+        "gecerlilik_bitis"
+      ]
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "sgk_tavani_aylik",
+      "ad_tr": "SGK Tavanı (Aylık Prime Esas Kazanç Üst Sınırı)",
+      "ad_en": "SGK Ceiling (Monthly Premium Base Earnings Upper Limit)",
+      "deger": 297270,
+      "periyot": "aylik",
+      "para_birimi": "TRY",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "sgk_tavani_gunluk",
+      "ad_tr": "SGK Tavanı (Günlük Prime Esas Kazanç Üst Sınırı)",
+      "ad_en": "SGK Ceiling (Daily Premium Base Earnings Upper Limit)",
+      "deger": 9909,
+      "periyot": "gunluk",
+      "para_birimi": "TRY",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "sgk_tabani_aylik",
+      "ad_tr": "SGK Tabanı (Aylık Prime Esas Kazanç Alt Sınırı)",
+      "ad_en": "SGK Floor (Monthly Premium Base Earnings Lower Limit)",
+      "deger": 33030,
+      "periyot": "aylik",
+      "para_birimi": "TRY",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "sgk_tabani_gunluk",
+      "ad_tr": "SGK Tabanı (Günlük Prime Esas Kazanç Alt Sınırı)",
+      "ad_en": "SGK Floor (Daily Premium Base Earnings Lower Limit)",
+      "deger": 1101,
+      "periyot": "gunluk",
+      "para_birimi": "TRY",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "kidem_tazminati_tavani_1_donem",
+      "ad_tr": "Kıdem Tazminatı Tavanı (1. Dönem: Ocak-Haziran)",
+      "ad_en": "Severance Pay Ceiling (Period 1: January-June)",
+      "deger": 64948.77,
+      "periyot": "6_aylik",
+      "para_birimi": "TRY",
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-06-30"
+    },
+    {
+      "kod": "kidem_tazminati_tavani_2_donem",
+      "ad_tr": "Kıdem Tazminatı Tavanı (2. Dönem: Temmuz-Aralık)",
+      "ad_en": "Severance Pay Ceiling (Period 2: July-December)",
+      "deger": 73729.87,
+      "periyot": "6_aylik",
+      "para_birimi": "TRY",
+      "gecerlilik_baslangic": "2026-07-01",
+      "gecerlilik_bitis": "2026-12-31"
+    }
+  ]
+}

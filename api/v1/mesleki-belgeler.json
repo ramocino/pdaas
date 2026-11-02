@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "versiyon": { "schema": "1.0.0", "dosya": "1.0.0", "veri": "1.0.0" },
+    "servis": "mesleki-belgeler",
+    "katman": "ham",
+    "durum": "yayinda",
+    "guncelleme": "2026-10-01",
+    "demo": false,
+    "yapi": { "tip": "liste", "sistem": "mesleki-belgelendirme", "kapsam": "meslek", "kayit_sayisi": 15 },
+    "uluslararasi": {
+      "dil": ["tr", "en"],
+      "baslik": { "tr": "Mesleki Diplomalar, Tesciller ve Yeterlilik Belgeleri", "en": "Occupational Diplomas, Registrations and Qualification Certificates" }
+    },
+    "kaynaklar": {
+      "kurumlar": {
+        "sb": { "tr": "T.C. Sağlık Bakanlığı", "en": "Ministry of Health" },
+        "meb": { "tr": "T.C. Millî Eğitim Bakanlığı", "en": "Ministry of National Education" },
+        "myk": { "tr": "Mesleki Yeterlilik Kurumu", "en": "Vocational Qualifications Authority" },
+        "uab": { "tr": "T.C. Ulaştırma ve Altyapı Bakanlığı", "en": "Ministry of Transport and Infrastructure" },
+        "tb": { "tr": "T.C. Tarım ve Orman Bakanlığı", "en": "Ministry of Agriculture and Forestry" }
+      },
+      "referanslar": [
+        { "kod": "sb-1219", "url": "https://www.saglik.gov.tr/TR-10385/sayisi1219--rg-tarihi04041928--rg-sayisi863-tababet-ve-suabati-sanatlarinin-tarzi-icrasina-dair-kanun.html" },
+        { "kod": "sb-tescil", "url": "https://shgmtescildb.saglik.gov.tr/TR-63453/gorev-ve-yetkiler.html" },
+        { "kod": "sb-uzmanlik", "url": "https://erisilebilir.saglik.gov.tr/TR-10999/tipta-uzmanlik-belgeleri-tescil-islemleri.html" },
+        { "kod": "sb-hemsire", "url": "https://www.saglik.gov.tr/TR-2332/basin-aciklamasi.html" },
+        { "kod": "sb-6197", "url": "https://hsgm.saglik.gov.tr/depo/Mevzuat/Kanunlar/Eczacilar_Ve_Eczaneler_Hakkinda_Kanun_6197.pdf" },
+        { "kod": "tb-veteriner", "url": "https://www.tarimorman.gov.tr/Belgeler/Mevzuat/Yonetmelikler/serbest_veteriner_hekimlik_yonetmeligi.pdf" },
+        { "kod": "meb-7528", "url": "https://tut.meb.gov.tr/meb_iys_dosyalar/2025_03/06153805_ogretmenlikmeslegikanunu.pdf" },
+        { "kod": "meb-alanlar", "url": "https://ttkb.meb.gov.tr/www/ogretmenlik-alanlari-atama-ve-ders-okutma-esaslarini-duzenleyen-9-sayili-karar-guncellenerek-yururluge-girmistir/icerik/844/tr" },
+        { "kod": "myk-sss", "url": "https://www.myk.gov.tr/tr/page/135" },
+        { "kod": "myk-zorunlu", "url": "https://portal.myk.gov.tr/index.php?belge_zorunlu=1&option=com_yeterlilik&view=arama" },
+        { "kod": "uab-4925", "url": "https://www.uab.gov.tr/uploads/pages/mevzuat/81a6eaa6ad4f00c.pdf" },
+        { "kod": "uab-src", "url": "https://uhdgm.uab.gov.tr/duyurular/src-belgeleriyle-ilgili-onemli-duyuru" }
+      ]
+    },
+    "tablo_haritasi": { "pk": "kod", "kolonlar": ["kod", "ad_tr", "ad_en", "tur", "kaynak_ref"] }
+  },
+  "kayitlar": [
+    { "kod": "mes-tip-diplomasi", "ad_tr": "Tıp fakültesi diploması", "ad_en": "Medical degree diploma", "tur": "diploma", "kaynak_ref": "sb-1219" },
+    { "kod": "mes-saglik-diploma-tescil", "ad_tr": "Sağlık Bakanlığı diploma tescili", "ad_en": "Diploma registration with the Ministry of Health", "tur": "tescil", "kaynak_ref": "sb-tescil" },
+    { "kod": "mes-tip-uzmanlik-belgesi", "ad_tr": "Tıpta uzmanlık belgesi", "ad_en": "Medical specialty qualification certificate", "tur": "uzmanlik", "kaynak_ref": "sb-uzmanlik" },
+    { "kod": "mes-tip-uzmanlik-tescil", "ad_tr": "Tıpta uzmanlık belgesinin Bakanlık tescili", "ad_en": "Registration of the medical specialty qualification", "tur": "tescil", "kaynak_ref": "sb-uzmanlik" },
+    { "kod": "mes-hemsirelik-diplomasi", "ad_tr": "Hemşirelik diploması", "ad_en": "Nursing diploma", "tur": "diploma", "kaynak_ref": "sb-hemsire" },
+    { "kod": "mes-ebelik-diplomasi", "ad_tr": "Ebelik diploması", "ad_en": "Midwifery diploma", "tur": "diploma", "kaynak_ref": "sb-tescil" },
+    { "kod": "mes-dishekimligi-diplomasi", "ad_tr": "Diş hekimliği diploması", "ad_en": "Dentistry degree diploma", "tur": "diploma", "kaynak_ref": "sb-1219" },
+    { "kod": "mes-eczacilik-diplomasi", "ad_tr": "Eczacılık fakültesi diploması", "ad_en": "Pharmacy degree diploma", "tur": "diploma", "kaynak_ref": "sb-6197" },
+    { "kod": "mes-fizyoterapi-diplomasi", "ad_tr": "Fizyoterapi alanında mesleki diploma", "ad_en": "Professional diploma in physiotherapy", "tur": "diploma", "kaynak_ref": "sb-tescil" },
+    { "kod": "mes-veteriner-diplomasi", "ad_tr": "Veteriner hekimliği diploması", "ad_en": "Veterinary medicine degree diploma", "tur": "diploma", "kaynak_ref": "tb-veteriner" },
+    { "kod": "mes-ogretmenlik-alan-diplomasi", "ad_tr": "Atanılacak öğretmenlik alanına uygun mezuniyet belgesi", "ad_en": "Degree matching the teaching appointment field", "tur": "diploma", "kaynak_ref": "meb-alanlar" },
+    { "kod": "mes-myk-celik-kaynakcisi", "ad_tr": "MYK Çelik Kaynakçısı yeterlilik belgesi (11UY0010-3)", "ad_en": "VQA Steel Welder certificate (11UY0010-3)", "tur": "myk_yeterlilik", "kaynak_ref": "myk-zorunlu" },
+    { "kod": "mes-myk-elektrik-tesisatcisi", "ad_tr": "MYK Elektrik Tesisatçısı yeterlilik belgesi (uygun seviye)", "ad_en": "VQA Electrical Installer certificate (applicable level)", "tur": "myk_yeterlilik", "kaynak_ref": "myk-zorunlu" },
+    { "kod": "mes-src-yolcu", "ad_tr": "Faaliyete uygun SRC-1 veya SRC-2 mesleki yeterlilik belgesi", "ad_en": "SRC-1 or SRC-2 professional driver certificate, as applicable", "tur": "ulasim_yeterlilik", "kaynak_ref": "uab-src" },
+    { "kod": "mes-src-yuk", "ad_tr": "Faaliyete uygun SRC-3 veya SRC-4 mesleki yeterlilik belgesi", "ad_en": "SRC-3 or SRC-4 professional driver certificate, as applicable", "tur": "ulasim_yeterlilik", "kaynak_ref": "uab-src" }
+  ]
+}

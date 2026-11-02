@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "versiyon": {
+      "schema": "1.0.0",
+      "dosya": "1.0.0",
+      "veri": "1.0.0"
+    },
+    "servis": "randiman-kurallar",
+    "katman": "kurallar",
+    "durum": "yayinda",
+    "guncelleme": "2026-10-01",
+    "yapi": {
+      "tip": "kural-seti",
+      "sistem": "randiman",
+      "kapsam": "uretim",
+      "kayit_sayisi": 9,
+      "oran_niteligi": "temsili"
+    },
+    "uluslararasi": {
+      "dil": [
+        "tr",
+        "en"
+      ],
+      "baslik": {
+        "tr": "Randıman Girdi–Çıktı Eşleştirmeleri",
+        "en": "Production Yield Input–Output Mapping Rules"
+      }
+    },
+    "kaynaklar": {
+      "kurumlar": {
+        "tobb": {
+          "tr": "Türkiye Odalar ve Borsalar Birliği",
+          "en": "Union of Chambers and Commodity Exchanges of Türkiye"
+        },
+        "pdaas": {
+          "tr": "PDaaS — Parametrik Veri Servisi",
+          "en": "PDaaS — Parametric Data Service"
+        }
+      },
+      "referanslar": [
+        {
+          "kod": "tobb-odalar-muamelat-md60",
+          "tur": "oran_tespit_yontemi",
+          "url": "https://www.tobb.org.tr/HukukMusavirligi/Documents/Mevzuat/Odalar/muamelat.pdf",
+          "erisim_tarihi": "2026-10-01"
+        }
+      ]
+    },
+    "tablo_haritasi": {
+      "pk": "kod",
+      "kolonlar": [
+        "kod",
+        "randiman_kodu",
+        "girdi_gtip_prefixler",
+        "cikti_gtip_prefixler",
+        "nace_referans_kodlari"
+      ]
+    },
+    "demo": false
+  },
+  "kurallar": [
+    {
+      "kod": "randiman-bugday-un",
+      "randiman_kodu": "bugday_un",
+      "girdi_gtip_prefixler": [
+        "1001"
+      ],
+      "cikti_gtip_prefixler": [
+        "1101"
+      ],
+      "nace_referans_kodlari": [
+        "10.61"
+      ],
+      "kosullu": true,
+      "otomatik_uygula": false
+    },
+    {
+      "kod": "randiman-aycicek-yagi",
+      "randiman_kodu": "aycicek_yagi",
+      "girdi_gtip_prefixler": [
+        "1206"
+      ],
+      "cikti_gtip_prefixler": [
+        "1512"
+      ],
+      "nace_referans_kodlari": [
+        "10.41"
+      ],
+      "kosullu": true,
+      "otomatik_uygula": false
+    },
+    {
+      "kod": "randiman-seker-pancar",
+      "randiman_kodu": "seker_pancar",
+      "girdi_gtip_prefixler": [
+        "121291"
+      ],
+      "cikti_gtip_prefixler": [
+        "1701"
+      ],
+      "nace_referans_kodlari": [
+        "10.81"
+      ],
+      "kosullu": true,
+      "otomatik_uygula": false
+    },
+    {
+      "kod": "randiman-domates-salca",
+      "randiman_kodu": "domates_salca",
+      "girdi_gtip_prefixler": [
+        "0702"
+      ],
+      "cikti_gtip_prefixler": [
+        "200290"
+      ],
+      "nace_referans_kodlari": [
+        "10.39"
+      ],
+      "kosullu": true,
+      "otomatik_uygula": false
+    },
+    {
+      "kod": "randiman-ham-petrol-benzin",
+      "randiman_kodu": "ham_petrol_benzin",
+      "girdi_gtip_prefixler": [
+        "2709"
+      ],
+      "cikti_gtip_prefixler": [
+        "2710124"
+      ],
+      "nace_referans_kodlari": [
+        "19.20"
+      ],
+      "kosullu": true,
+      "otomatik_uygula": false
+    },
+    {
+      "kod": "randiman-pamuk-iplik",
+      "randiman_kodu": "pamuk_iplik",
+      "girdi_gtip_prefixler": [
+        "5201"
+      ],
+      "cikti_gtip_prefixler": [
+        "5205"
+      ],
+      "nace_referans_kodlari": [
+        "13.10"
+      ],
+      "kosullu": true,
+      "otomatik_uygula": false
+    },
+    {
+      "kod": "randiman-tas-komur-kok",
+      "randiman_kodu": "tas-komur-kok",
+      "girdi_gtip_prefixler": [
+        "2701"
+      ],
+      "cikti_gtip_prefixler": [
+        "2704"
+      ],
+      "nace_referans_kodlari": [
+        "19.10"
+      ],
+      "kosullu": true,
+      "otomatik_uygula": false
+    },
+    {
+      "kod": "randiman-linyit-yarikok",
+      "randiman_kodu": "linyit_yarikok",
+      "girdi_gtip_prefixler": [
+        "2702"
+      ],
+      "cikti_gtip_prefixler": [
+        "2704"
+      ],
+      "nace_referans_kodlari": [
+        "19.10"
+      ],
+      "kosullu": true,
+      "otomatik_uygula": false
+    },
+    {
+      "kod": "randiman-demir-cevheri-pik",
+      "randiman_kodu": "demir-cevheri-pik",
+      "girdi_gtip_prefixler": [
+        "2601"
+      ],
+      "cikti_gtip_prefixler": [
+        "7201"
+      ],
+      "nace_referans_kodlari": [
+        "24.10"
+      ],
+      "kosullu": true,
+      "otomatik_uygula": false
+    }
+  ]
+}

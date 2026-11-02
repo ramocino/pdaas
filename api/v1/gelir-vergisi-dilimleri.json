@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "versiyon": {
+      "schema": "1.0.0",
+      "dosya": "1.0.0",
+      "veri": "1.0.0"
+    },
+    "servis": "gelir-vergisi-dilimleri",
+    "katman": "ham",
+    "durum": "yayinda",
+    "guncelleme": "2026-10-01",
+    "yapi": {
+      "tip": "liste",
+      "sistem": "gib",
+      "kapsam": "vergi",
+      "kayit_sayisi": 10
+    },
+    "uluslararasi": {
+      "dil": [
+        "tr",
+        "en"
+      ],
+      "baslik": {
+        "tr": "Gelir Vergisi Tarifesi Dilimleri",
+        "en": "Income Tax Tariff Brackets"
+      }
+    },
+    "kaynaklar": {
+      "kurumlar": {
+        "gib": {
+          "tr": "Gelir İdaresi Başkanlığı",
+          "en": "Revenue Administration"
+        },
+        "pdaas": {
+          "tr": "PDaaS — Parametrik Veri Servisi",
+          "en": "PDaaS — Parametric Data Service"
+        }
+      },
+      "referanslar": [
+        {
+          "kod": "gelir",
+          "url": "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv%2Fyardim-kaynaklar%2Fyararli-bilgiler%2Fgelir-vergisi-tarifeleri%2Fgelir-vergisi-tarifesi-2026.pdf"
+        },
+        {
+          "kod": "gv332",
+          "url": "https://cdn.gib.gov.tr/api/gibportal-file/file/getFile?objectKey=MEVZUAT_TEBLIGLER%2FUNIVERSAL%2F2025%2F193_Teblig332.pdf"
+        }
+      ],
+      "mevzuat": [
+        {
+          "tur": "kanun",
+          "rg": "10700",
+          "tarih": "1961-01-06"
+        },
+        {
+          "tur": "genel_teblig",
+          "rg": "33124 (5. Mükerrer)",
+          "tarih": "2025-12-31"
+        }
+      ]
+    },
+    "tablo_haritasi": {
+      "pk": "kod",
+      "kolonlar": [
+        "kod",
+        "kategori",
+        "ad_tr",
+        "ad_en",
+        "matrah_alt_sinir_tl",
+        "matrah_ust_sinir_tl",
+        "oran",
+        "sabit_vergi_tl",
+        "oran_yuzde",
+        "gecerlilik_baslangic",
+        "gecerlilik_bitis"
+      ]
+    }
+  },
+  "kayitlar": [
+    {
+      "kod": "GV-UCRET-1",
+      "kategori": "ucret",
+      "ad_tr": "Ücret Gelirleri — 1. Dilim (0 – 190.000 TL)",
+      "ad_en": "Wage Income — Tier 1 (0 – 190,000 TRY)",
+      "matrah_alt_sinir_tl": 0,
+      "matrah_ust_sinir_tl": 190000,
+      "oran": 0.15,
+      "sabit_vergi_tl": 0,
+      "oran_yuzde": 15,
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "GV-UCRET-2",
+      "kategori": "ucret",
+      "ad_tr": "Ücret Gelirleri — 2. Dilim (190.000 – 400.000 TL)",
+      "ad_en": "Wage Income — Tier 2 (190,000 – 400,000 TRY)",
+      "matrah_alt_sinir_tl": 190000,
+      "matrah_ust_sinir_tl": 400000,
+      "oran": 0.2,
+      "sabit_vergi_tl": 28500,
+      "oran_yuzde": 20,
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "GV-UCRET-3",
+      "kategori": "ucret",
+      "ad_tr": "Ücret Gelirleri — 3. Dilim (400.000 – 1.500.000 TL)",
+      "ad_en": "Wage Income — Tier 3 (400,000 – 1,500,000 TRY)",
+      "matrah_alt_sinir_tl": 400000,
+      "matrah_ust_sinir_tl": 1500000,
+      "oran": 0.27,
+      "sabit_vergi_tl": 70500,
+      "oran_yuzde": 27,
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "GV-UCRET-4",
+      "kategori": "ucret",
+      "ad_tr": "Ücret Gelirleri — 4. Dilim (1.500.000 – 5.300.000 TL)",
+      "ad_en": "Wage Income — Tier 4 (1,500,000 – 5,300,000 TRY)",
+      "matrah_alt_sinir_tl": 1500000,
+      "matrah_ust_sinir_tl": 5300000,
+      "oran": 0.35,
+      "sabit_vergi_tl": 367500,
+      "oran_yuzde": 35,
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "GV-UCRET-5",
+      "kategori": "ucret",
+      "ad_tr": "Ücret Gelirleri — 5. Dilim (5.300.000 TL üzeri)",
+      "ad_en": "Wage Income — Tier 5 (Above 5,300,000 TRY)",
+      "matrah_alt_sinir_tl": 5300000,
+      "oran": 0.4,
+      "sabit_vergi_tl": 1697500,
+      "oran_yuzde": 40,
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "GV-DIGER-1",
+      "kategori": "diger",
+      "ad_tr": "Diğer Gelirler — 1. Dilim (0 – 190.000 TL)",
+      "ad_en": "Other Income — Tier 1 (0 – 190,000 TRY)",
+      "matrah_alt_sinir_tl": 0,
+      "matrah_ust_sinir_tl": 190000,
+      "oran": 0.15,
+      "sabit_vergi_tl": 0,
+      "oran_yuzde": 15,
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "GV-DIGER-2",
+      "kategori": "diger",
+      "ad_tr": "Diğer Gelirler — 2. Dilim (190.000 – 400.000 TL)",
+      "ad_en": "Other Income — Tier 2 (190,000 – 400,000 TRY)",
+      "matrah_alt_sinir_tl": 190000,
+      "matrah_ust_sinir_tl": 400000,
+      "oran": 0.2,
+      "sabit_vergi_tl": 28500,
+      "oran_yuzde": 20,
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "GV-DIGER-3",
+      "kategori": "diger",
+      "ad_tr": "Diğer Gelirler — 3. Dilim (400.000 – 1.000.000 TL)",
+      "ad_en": "Other Income — Tier 3 (400,000 – 1,000,000 TRY)",
+      "matrah_alt_sinir_tl": 400000,
+      "matrah_ust_sinir_tl": 1000000,
+      "oran": 0.27,
+      "sabit_vergi_tl": 70500,
+      "oran_yuzde": 27,
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "GV-DIGER-4",
+      "kategori": "diger",
+      "ad_tr": "Diğer Gelirler — 4. Dilim (1.000.000 – 5.300.000 TL)",
+      "ad_en": "Other Income — Tier 4 (1,000,000 – 5,300,000 TRY)",
+      "matrah_alt_sinir_tl": 1000000,
+      "matrah_ust_sinir_tl": 5300000,
+      "oran": 0.35,
+      "sabit_vergi_tl": 232500,
+      "oran_yuzde": 35,
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    },
+    {
+      "kod": "GV-DIGER-5",
+      "kategori": "diger",
+      "ad_tr": "Diğer Gelirler — 5. Dilim (5.300.000 TL üzeri)",
+      "ad_en": "Other Income — Tier 5 (Above 5,300,000 TRY)",
+      "matrah_alt_sinir_tl": 5300000,
+      "oran": 0.4,
+      "sabit_vergi_tl": 1737500,
+      "oran_yuzde": 40,
+      "gecerlilik_baslangic": "2026-01-01",
+      "gecerlilik_bitis": "2026-12-31"
+    }
+  ]
+}
