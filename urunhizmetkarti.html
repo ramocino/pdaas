@@ -113,62 +113,6 @@
     };
     const surecAdi = r => secAd(r) || SUREC_ADLARI[r.surec_kodu]?.[dil() === 'en' ? 1 : 0] || String(r.surec_kodu || '').replaceAll('_', ' ');
 
-    Object.assign(UI.tr, {
-      kategori_gtip_desc: 'Ürün ve gümrük kodları', kategori_cpc_desc: 'Ürün ve hizmet sınıfları',
-      filtre_notu_urun: 'GTİP kartları, eşleşen vergi ve belge kayıtlarını gösterir.',
-      filtre_notu_hizmet: 'CPC, ürün ve hizmetleri sınıflandırır; GTİP’e bağlı sonuçlar ayrıca incelenebilir.',
-      filtre_notu_nace: 'NACE, ekonomik faaliyetleri ve ilgili ürün/meslek kodlarını gösterir.',
-      filtre_notu_isco: 'ISCO, meslekleri ve ilişkilendirilen faaliyetleri gösterir.',
-      kart_urun_desc: 'GTİP ürün sınıflandırması', kart_faaliyet_desc: 'Faaliyet sınıflandırması',
-      kart_meslek_desc: 'Meslek sınıflandırması',
-      bagli_cpc: 'CPC eşleşmesi', bagli_nace: 'NACE eşleşmesi', bagli_gtip: 'GTİP eşleşmesi',
-      bagli_isco: 'ISCO eşleşmesi',
-      bagli_tesvik: 'Teşvik adayı', bagli_sgk: 'SGK meslek adayı', bagli_mesleki: 'Mesleki belge',
-      bagli_vergi: 'Vergi bilgisi', bagli_randiman: 'Randıman bilgisi', bagli_belge: 'Belge bilgisi',
-      iliskili_kodlar: 'İlişkili sınıflandırma kodları', iliskili: 'İlişkili',
-      tumunu_goster: 'Tümünü göster', daha_az: 'Daha az göster',
-      kod: 'Kod', iliskili_kod_sayisi: 'İlişkili {tur} kodları',
-      urun_adi: 'Ürün adı', hizmet_adi: 'Ürün / hizmet adı', faaliyet_adi: 'Faaliyet adı', meslek_adi: 'Meslek adı',
-      kod_bulunamadi: 'İlgili kod veri setinde bulunamadı.', kaynak_yuklenemedi: 'Veri seti henüz yüklenmedi.',
-      bilgi: 'Bilgi', hata: 'Hata', genel_belgeler: 'Genel belgeler',
-      mesleki_belgeler: 'Mesleki belgeler ve yeterlilikler', belge_adi: 'Belge adı',
-      tur: 'Tür', durum: 'Durum', aciklama: 'Açıklama', puan: 'Puan',
-      tesvik_adaylari: 'Teşvik adayları (SGK)', sgk_aday: 'SGK meslek adayları',
-      ulke_turkiye: 'Türkiye', dis_alim: 'Dış alım', yurt_disi: 'Yurt dışı',
-      gumruk_vergisi: 'Gümrük vergisi', mense: 'Menşe', bilinmiyor: 'Bilinmiyor',
-      gtip_bazli: 'GTİP koduna göre değişir', gtip_ayrinti: 'İlgili GTİP kartlarından inceleyin',
-      tarife_yok: 'Genel tarife bilgisi bulunamadı', oran_bilinmiyor: 'Oran belirtilmemiş',
-      tur_diploma: 'Diploma', tur_ruhsat: 'Ruhsat', tur_tescil: 'Tescil', tur_yeterlilik: 'Yeterlilik',
-      mense_diger_ulkeler: 'Diğer ülkeler', yukari_git: 'Yukarı git'
-    });
-    Object.assign(UI.en, {
-      kategori_gtip_desc: 'Product and customs codes', kategori_cpc_desc: 'Product and service classes',
-      filtre_notu_urun: 'GTİP cards display available matching tax and document records.',
-      filtre_notu_hizmet: 'CPC classifies products and services; GTİP-specific results can be inspected separately.',
-      filtre_notu_nace: 'NACE lists economic activities and related product/occupation codes.',
-      filtre_notu_isco: 'ISCO lists occupations and related economic activities.',
-      kart_urun_desc: 'GTİP product classification', kart_faaliyet_desc: 'Activity classification',
-      kart_meslek_desc: 'Occupation classification',
-      bagli_cpc: 'CPC mapping', bagli_nace: 'NACE mapping', bagli_gtip: 'GTİP mapping',
-      bagli_isco: 'ISCO mapping',
-      bagli_tesvik: 'Incentive candidate', bagli_sgk: 'Candidate SGK occupations', bagli_mesleki: 'Occupational credential',
-      bagli_vergi: 'Tax information', bagli_randiman: 'Yield information', bagli_belge: 'Document information',
-      iliskili_kodlar: 'Related classification codes', iliskili: 'Related',
-      tumunu_goster: 'Show all', daha_az: 'Show less',
-      kod: 'Code', iliskili_kod_sayisi: 'Related {tur} codes',
-      urun_adi: 'Product name', hizmet_adi: 'Product / service name', faaliyet_adi: 'Activity name', meslek_adi: 'Occupation name',
-      kod_bulunamadi: 'The requested code was not found in the dataset.', kaynak_yuklenemedi: 'The dataset has not loaded yet.',
-      bilgi: 'Information', hata: 'Error', genel_belgeler: 'General documents',
-      mesleki_belgeler: 'Occupational credentials and qualifications', belge_adi: 'Document name',
-      tur: 'Type', durum: 'Status', aciklama: 'Description', puan: 'Points',
-      tesvik_adaylari: 'Incentive candidates (SSI)', sgk_aday: 'Candidate SGK occupations',
-      ulke_turkiye: 'Türkiye', dis_alim: 'Import', yurt_disi: 'Export',
-      gumruk_vergisi: 'Customs duty', mense: 'Origin', bilinmiyor: 'Unknown',
-      gtip_bazli: 'Varies by GTİP code', gtip_ayrinti: 'Check the associated GTİP cards',
-      tarife_yok: 'No general tariff information available', oran_bilinmiyor: 'Rate not specified',
-      tur_diploma: 'Diploma', tur_ruhsat: 'Licence', tur_tescil: 'Registration', tur_yeterlilik: 'Qualification',
-      mense_diger_ulkeler: 'Other countries', yukari_git: 'Back to top'
-    });
     const baslikDiliniUygula = () => {
       document.title = dil() === 'en' ? 'PDaaS · Product & Service Card' : 'PDaaS · Ürün & Hizmet Kartı';
       $('btn-scroll-top').setAttribute('aria-label', t('yukari_git'));

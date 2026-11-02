@@ -64,7 +64,7 @@
         <div class="w-20 h-20 rounded-lg bg-win-card border border-win-border text-win-400 flex items-center justify-center text-3xl mb-6">
           ⚡</div>
         <h2 class="text-2xl font-bold text-white tracking-tight mb-2" data-i18n="empty_title">Veri Seti veya Servis Seçin</h2>
-        <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="empty_desc">Sol taraftaki katalog ağacından bir veri seti seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz.</p>
+        <p class="text-sm text-slate-400 leading-relaxed mb-6" data-i18n="empty_desc">Sol taraftaki katalog ağacından bir veri seti seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz. Bu portal makale için demo bir ortamdır. Resmi veri sayfası değildir.</p>
         <div class="grid grid-cols-2 gap-3 w-full text-left text-xs text-slate-300">
           <div class="p-3 rounded-md bg-win-card border border-win-border flex items-start gap-3">
             <span class="text-base">📊</span>
@@ -266,51 +266,10 @@
   <script type="module">
     import { CONFIG, apiUrl, apiFetch } from './assets/pdaas-config.js';
     import { $, kacis, sayi, normKod, icNesneOzet, sayfaNumaralari } from './assets/pdaas-utils.js';
-    import { t, dilBaslat, dilUygula, dilDegistir, copyToClipboard, UI } from './assets/pdaas-i18n.js';
+    import { t, dilBaslat, dilUygula, dilDegistir, copyToClipboard } from './assets/pdaas-i18n.js';
     import { renderLayout } from './assets/pdaas-layout.js';
     // ÖNEMLİ: Tüm modülleri kapsayan şema sözlüğü dışarıdan import ediliyor.
     import { SCHEMA_ACIKLAMA_TR, SCHEMA_ACIKLAMA_EN } from './assets/pdaas-schema.js';
-
-    Object.assign(UI.tr, {
-      catalog_title: "Veri Kataloğu", catalog_search: "Veri seti ara...", catalog_loading: "Katalog yükleniyor...", live_connection: "Canlı Bağlantı",
-      empty_title: "Veri Seti veya Servis Seçin", empty_desc: "Sol taraftaki katalog ağacından bir veri seti seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz.",
-      empty_card1_t: "Veri Önizleme", empty_card1_d: "Tablo görünümü ile doğrudan canlı veri kayıtları.", empty_card2_t: "Hazır Kodlar", empty_card2_d: "cURL, Python, JS, Go & PHP entegrasyonu.",
-      bc_home: "Katalog", run_query: "Yenile", endpoint_label: "API Uç Noktası", copy: "Kopyala", copy_payload: "Payload'ı Kopyala",
-      tab_table: "Veri Tablosu", tab_code: "Bağlantı Kodları", tab_json: "JSON Konsolu", tab_docs: "Şema Dokümantasyonu",
-      table_filter: "Tabloda filtrele...", page_label: "kayıt", page_of: "/", prev_page: "Önceki sayfa", next_page: "Sonraki sayfa",
-      docs_title: "Veri Alanları ve Veri Tipleri", docs_field: "Alan Adı", docs_type: "Veri Tipi", docs_example: "Örnek", docs_desc: "Açıklama",
-      records: "Kayıt", services: "Veri Seti", loading_data: "Veriler yükleniyor...", load_error: "Veri alınamadı. Endpoint yanıt vermedi.",
-      filtered: "filtrelendi", filtered_none: "Filtreye uygun kayıt bulunamadı", no_records: "Kayıt bulunamadı", no_matches: "Eşleşen veri seti bulunamadı.",
-      notlar_title: "Bilgi Notları", copied_url: "URL kopyalandı", copied_code: "Kod kopyalandı", copied_json: "JSON kopyalandı",
-      layer_ham: "Ham", layer_konsolide: "Konsolide", layer_kurallar: "Kural", layer_ornek: "Örnek", back_to_list: "Listeye Dön",
-      bool_true: "Evet", bool_false: "Hayır", item_count: "öğe", field_count: "alan", section_label: "Bölüm",
-      json_scroll: "devamı için aşağı kaydırın", catalog_invalid: "Katalogda servisler listesi bulunamadı.",
-      endpoint_missing: "JSON adresi bulunamadı.", json_error: "HATA", total_label: "Toplam", related_records: "kayıt",
-      section_urun_kurallari: "Ürün kuralları", section_faaliyet_kurallari: "Faaliyet kuralları",
-      section_meslek_kurallari: "Meslek kuralları", section_isco_nace_kurallari: "ISCO–NACE kuralları",
-      section_kayitlar: "Kayıtlar", section_kurallar: "Kurallar", section_istisnalar: "İstisnalar",
-      section_ithalat: "İthalat", section_ihracat: "İhracat"
-    });
-    Object.assign(UI.en, {
-      catalog_title: "Data Catalog", catalog_search: "Search dataset...", catalog_loading: "Loading catalog...", live_connection: "Live Connection",
-      empty_title: "Select a Dataset or Service", empty_desc: "Choose a dataset from the catalog tree on the left to inspect its parametric API endpoints, data tables and ready-to-use code samples.",
-      empty_card1_t: "Data Preview", empty_card1_d: "Live data records in a table view.", empty_card2_t: "Ready-to-use Code", empty_card2_d: "cURL, Python, JS, Go & PHP integrations.",
-      bc_home: "Catalog", run_query: "Refresh", endpoint_label: "API Endpoint", copy: "Copy", copy_payload: "Copy Payload",
-      tab_table: "Data Table", tab_code: "Code Samples", tab_json: "JSON Console", tab_docs: "Schema Docs",
-      table_filter: "Filter table...", page_label: "records", page_of: "/", prev_page: "Previous page", next_page: "Next page",
-      docs_title: "Fields and Data Types", docs_field: "Field", docs_type: "Data Type", docs_example: "Example", docs_desc: "Description",
-      records: "Records", services: "Datasets", loading_data: "Loading data...", load_error: "Could not fetch data. Endpoint did not respond.",
-      filtered: "filtered", filtered_none: "No records match the filter", no_records: "No records found", no_matches: "No dataset found.",
-      notlar_title: "Information Notes", copied_url: "URL copied", copied_code: "Code copied", copied_json: "JSON copied",
-      layer_ham: "Raw", layer_konsolide: "Consolidated", layer_kurallar: "Rule", layer_ornek: "Example", back_to_list: "Back to List",
-      bool_true: "Yes", bool_false: "No", item_count: "items", field_count: "fields", section_label: "Section",
-      json_scroll: "scroll down to load more", catalog_invalid: "The catalog does not contain a services list.",
-      endpoint_missing: "No JSON endpoint was found.", json_error: "ERROR", total_label: "Total", related_records: "records",
-      section_urun_kurallari: "Product rules", section_faaliyet_kurallari: "Activity rules",
-      section_meslek_kurallari: "Occupation rules", section_isco_nace_kurallari: "ISCO–NACE rules",
-      section_kayitlar: "Records", section_kurallar: "Rules", section_istisnalar: "Exemptions",
-      section_ithalat: "Import", section_ihracat: "Export"
-    });
 
     dilBaslat();
     renderLayout({ activePage: 'index.html' });
