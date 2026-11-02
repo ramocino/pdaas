@@ -138,6 +138,11 @@
       muh_damga: "Damga Vergisi",
       muh_sgk_isci: "İşçi SGK Payı",
       muh_issizlik_isci: "İşçi İşsizlik Payı",
+      muh_kaynak_yedek: "Örnek değer", muh_kaynak_dogrulandi: "JSON kaynağı",
+      muh_veri_eksik: "Bazı referans dosyaları okunamadı; örnek değerler kullanılıyor. Bu sonuçları resmî hesaplama olarak kullanmayın.",
+      muh_eksik_kaynaklar: "Kontrol edilmesi gereken kaynaklar", muh_kaynak_icerigi: "Gerekli kayıtlar bulunamadı",
+      muh_baglanti_hatasi: "Bağlantı hatası", muh_json_gecersiz: "JSON okunamadı",
+      muh_veri_yok: "Veri yok", muh_uyari_baslik: "Örnek hesaplama",
     });
 
     Object.assign(UI.en, {
@@ -175,6 +180,11 @@
       muh_damga: "Stamp Tax",
       muh_sgk_isci: "Employee SGK Share",
       muh_issizlik_isci: "Employee Unemployment Share",
+      muh_kaynak_yedek: "Sample value", muh_kaynak_dogrulandi: "JSON source",
+      muh_veri_eksik: "Some reference files could not be loaded; sample values are being used. Do not use these results for official calculations.",
+      muh_eksik_kaynaklar: "Sources to check", muh_kaynak_icerigi: "Required records are missing",
+      muh_baglanti_hatasi: "Connection error", muh_json_gecersiz: "JSON could not be parsed",
+      muh_veri_yok: "Data unavailable", muh_uyari_baslik: "Illustrative calculation",
     });
 
     dilBaslat();
@@ -186,10 +196,27 @@
     // ============================================================
     const para = n => {
       if (n == null || isNaN(n)) return '—';
-      return Number(n).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      return Number(n).toLocaleString(dil() === 'en' ? 'en-US' : 'tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     };
-    const binde = n => (n == null || isNaN(n)) ? '—' : `‰${(n * 1000).toFixed(2).replace('.', ',')}`;
+    const binde = n => (n == null || isNaN(n)) ? '—' : `‰${(n * 1000).toLocaleString(dil() === 'en' ? 'en-US' : 'tr-TR', {minimumFractionDigits:2, maximumFractionDigits:2})}`;
     const yuvarla2 = n => Math.round((n + Number.EPSILON) * 100) / 100;
+    function paraOku(deger) {
+      let s = String(deger ?? '').replace(/\s|₺|TRY/g, '');
+      const virgul = s.lastIndexOf(','), nokta = s.lastIndexOf('.');
+      if (virgul >= 0 && nokta >= 0) {
+        s = virgul > nokta ? s.replaceAll('.', '').replace(',', '.') : s.replaceAll(',', '');
+      } else if (virgul >= 0) {
+        s = /,\d{3}$/.test(s) ? s.replaceAll(',', '') : s.replace(',', '.');
+      } else if (nokta >= 0 && /\.\d{3}$/.test(s)) {
+        s = s.replaceAll('.', '');
+      }
+      const n = Number(s);
+      return Number.isFinite(n) && n >= 0 ? n : 0;
+    }
+    function baslikDiliniUygula() {
+      document.title = dil() === 'en' ? 'PDaaS · Withholding Tax Return' : 'PDaaS · Muhtasar Beyanname';
+    }
+    baslikDiliniUygula();
 
     // ============================================================
     // REFERANS VERİLER (Yedekli: JSON gelmezse bunlarla hesaplar)
@@ -212,8 +239,34 @@
     };
 
     const LOOKUP = { belge: {}, cikis: {}, eksik: {}, meslek: {} };
+    const HESAP_TARIHI = '2026-10-01'; // Tablodaki 2026/10 dönemi
     const KAYNAK_REF = { asgari: 'yedek', sgk: 'yedek', damga: 'yedek', gv: 'yedek' };
     const HAM_VERI = {};
+    let ORNEK_KULLANILIYOR = null;
+    const KRITIK_KAYNAKLAR = {
+      'asgari-ucret': 'asgari',
+      'sgk-prim-oranlari': 'sgk',
+      'damga-vergisi': 'damga',
+      'gelir-vergisi-dilimleri': 'gv'
+    };
+
+    function durumDiliniUygula() {
+      if (ORNEK_KULLANILIYOR === null) return;
+      const durum = $('durum-alani');
+      const eksikler = Object.entries(KRITIK_KAYNAKLAR)
+        .filter(([key, tip]) => !KAYNAK_DURUM[key]?.yuklendi || KAYNAK_REF[tip] !== 'json')
+        .map(([key]) => {
+          const kaynak = KAYNAK_DURUM[key] || {};
+          const neden = kaynak.yuklendi ? t('muh_kaynak_icerigi')
+            : kaynak.httpStatus ? `HTTP ${kaynak.httpStatus}`
+            : kaynak.hataKod === 'json' ? t('muh_json_gecersiz') : t('muh_baglanti_hatasi');
+          const adres = apiUrl(kaynak.yol || `/${key}.json`);
+          return `<li class="flex flex-wrap items-center gap-2"><a class="underline font-mono text-amber-200 hover:text-white" href="${kacis(adres)}" target="_blank" rel="noopener noreferrer">${kacis(key)}.json</a><span class="text-amber-300/80">(${kacis(neden)})</span></li>`;
+        });
+      durum.innerHTML = ORNEK_KULLANILIYOR
+        ? `<div class="bg-amber-500/10 border border-amber-500/20 rounded-lg p-3 text-amber-300 text-xs space-y-2"><div><strong>${kacis(t('muh_uyari_baslik'))}:</strong> ${kacis(t('muh_veri_eksik'))}</div>${eksikler.length ? `<div class="font-semibold">${kacis(t('muh_eksik_kaynaklar'))}:</div><ul class="list-disc list-inside space-y-1">${eksikler.join('')}</ul>` : ''}</div>`
+        : `<div class="bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-3 text-emerald-400 text-xs">${kacis(t('muh_hazir'))}</div>`;
+    }
 
     // ============================================================
     // VERİ YÜKLEME
@@ -237,6 +290,24 @@
         if (!r.ok) return null;
         return await r.json();
       } catch (e) { return null; }
+    }
+
+    async function kaynakYukle(yollar) {
+      let sonHata = { hataKod: 'ag' };
+      for (const yol of [...new Set(yollar)]) {
+        try {
+          const r = await apiFetch(yol);
+          if (!r.ok) { sonHata = { yol, httpStatus: r.status }; continue; }
+          try {
+            const data = await r.json();
+            if (!data || !Array.isArray(data.kayitlar)) {
+              sonHata = { yol, hataKod: 'json' }; continue;
+            }
+            return { yol, data };
+          } catch (e) { sonHata = { yol, hataKod: 'json' }; }
+        } catch (e) { sonHata = { yol, hataKod: 'ag' }; }
+      }
+      return { data: null, ...sonHata };
     }
 
     async function referanslariYukle() {
@@ -267,15 +338,19 @@
         }
       } catch (err) { console.warn("Katalog okunamadı, statik yollar kullanılacak.", err); }
 
-      const sonuclar = await Promise.all(KAYNAK_DOSYALAR.map(async (k) => {
-        const data = await fetchGuvenli(k.path);
-        return { key: k.key, data };
-      }));
+      const sonuclar = await Promise.all(KAYNAK_DOSYALAR.map(async (k) => ({
+        key: k.key,
+        ...await kaynakYukle([k.path, `/${k.key}.json`])
+      })));
 
-      for (const { key, data } of sonuclar) {
-        KAYNAK_DURUM[key] = { yuklendi: !!data };
+      for (const { key, data, yol, hataKod, httpStatus } of sonuclar) {
+        KAYNAK_DURUM[key] = { yuklendi: !!data, yol, hataKod, httpStatus };
         if (!data) continue;
-        parseEt(key, data);
+        try { parseEt(key, data); }
+        catch (e) {
+          KAYNAK_DURUM[key] = { yuklendi: false, yol, hataKod: 'json' };
+          console.warn(`Referans JSON işlenemedi: ${key}`, e);
+        }
       }
 
       ROWS.forEach((row, idx) => {
@@ -284,12 +359,12 @@
         }
       });
 
-      durum.innerHTML = `
-        <div class="bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-3 flex items-center gap-3 text-emerald-400 text-xs">
-          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-          <span>${kacis(t('muh_hazir'))}</span>
-        </div>`;
-      setTimeout(() => { durum.classList.add('hidden'); durum.innerHTML = ''; }, 2500);
+      const gerekli = Object.keys(KRITIK_KAYNAKLAR);
+      const ornekKullaniliyor = gerekli.some(key => !KAYNAK_DURUM[key]?.yuklendi)
+        || Object.values(KAYNAK_REF).some(kaynak => kaynak !== 'json');
+      ORNEK_KULLANILIYOR = ornekKullaniliyor;
+      durumDiliniUygula();
+      if (!ornekKullaniliyor) setTimeout(() => { durum.classList.add('hidden'); durum.innerHTML = ''; }, 2500);
 
       renderRefGrid();
       renderKaynakListesi();
@@ -300,25 +375,27 @@
       const kayitlar = data.kayitlar || [];
 
       if (key === 'asgari-ucret' && Array.isArray(kayitlar)) {
-        if (kayitlar.length) KAYNAK_REF.asgari = 'json';
+        const bulunan = new Set();
         for (const k of kayitlar) {
-          if (k.kod === 'brut_asgari_ucret_aylik' && k.deger != null) REF.asgariBrutAylik = Number(k.deger);
-          if (k.kod === 'net_asgari_ucret_aylik' && k.deger != null) REF.asgariNetAylik = Number(k.deger);
-          if (k.kod === 'brut_asgari_ucret_gunluk' && k.deger != null) REF.asgariBrutGunluk = Number(k.deger);
-          if (k.kod === 'net_asgari_ucret_gunluk' && k.deger != null) REF.asgariNetGunluk = Number(k.deger);
+          if (!(Number(k.deger) > 0)) continue;
+          const esleme = {
+            brut_asgari_ucret_aylik: 'asgariBrutAylik', net_asgari_ucret_aylik: 'asgariNetAylik',
+            brut_asgari_ucret_gunluk: 'asgariBrutGunluk', net_asgari_ucret_gunluk: 'asgariNetGunluk'
+          };
+          const alan = esleme[k.kod];
+          if (alan) { REF[alan] = Number(k.deger); bulunan.add(alan); }
         }
+        if (bulunan.size === 4) KAYNAK_REF.asgari = 'json';
       }
 
       if (key === 'sgk-prim-oranlari' && Array.isArray(kayitlar)) {
-        let sgk = null, iss = null;
-        for (const k of kayitlar) {
-          const ad = tr_lower(k.ad_tr || k.ad || '');
-          const ham = Number(k.oran ?? k.deger ?? 0);
-          if (!ham) continue;
-          const oran = ham >= 1 ? ham / 100 : ham;
-          if (ad.includes('işçi') && ad.includes('işsizlik')) iss = oran;
-          else if (ad.includes('işçi') && (ad.includes('malullük') || ad.includes('yaşlılık'))) sgk = oran;
-        }
+        const oran = k => {
+          if (!k || k.oran == null) return null;
+          const ham = Number(k.oran);
+          return Number.isFinite(ham) ? (k.birim === '%' || ham >= 1 ? ham / 100 : ham) : null;
+        };
+        const sgk = oran(kayitlar.find(k => k.kod === 'sgk_isci_primi'));
+        const iss = oran(kayitlar.find(k => k.kod === 'issizlik_isci_primi'));
         if (sgk != null && iss != null && sgk > 0 && iss > 0 && sgk + iss < 0.5) {
           REF.sgkIsci = sgk; REF.issizlikIsci = iss; KAYNAK_REF.sgk = 'json';
         }
@@ -326,10 +403,23 @@
 
       if (key === 'damga-vergisi' && Array.isArray(kayitlar)) {
         const k = kayitlar.find(x => x.kod === 'DV-IV-1-b')
-               || kayitlar.find(x => { const ad = tr_lower(x.ad_tr || ''); return ad.includes('maaş') || ad.includes('ücret'); });
+               || kayitlar.find(x => x.kategori === 'ucret' && /maaş|ücret/.test(tr_lower(x.ad_tr || '')));
         if (k) {
-          if (k.oran_binde != null) { REF.damgaOran = Number(k.oran_binde) / 1000; KAYNAK_REF.damga = 'json'; }
-          else if (k.oran != null) { REF.damgaOran = Number(k.oran) / 100; KAYNAK_REF.damga = 'json'; }
+          // Güncel model: tarihce[].oran doğrudan ondalık katsayıdır (0.00759).
+          // Eski model: oran_binde=7.59 veya oran=0.759 (yüzde) olabilir.
+          const tarihce = Array.isArray(k.tarihce) ? k.tarihce : [];
+          const aktif = tarihce
+            .filter(d => d && d.oran != null && (!d.baslangic || d.baslangic <= HESAP_TARIHI)
+              && (!d.bitis || d.bitis >= HESAP_TARIHI))
+            .sort((a, b) => String(b.baslangic || '').localeCompare(String(a.baslangic || '')))[0];
+          const oran = aktif ? Number(aktif.oran)
+            : tarihce.length ? null
+            : k.oran_binde != null ? Number(k.oran_binde) / 1000
+            : k.oran_yuzde != null ? Number(k.oran_yuzde) / 100
+            : k.oran != null ? Number(k.oran) / 100 : null;
+          if (oran != null && Number.isFinite(oran) && oran >= 0 && oran < 1) {
+            REF.damgaOran = oran; KAYNAK_REF.damga = 'json';
+          }
         }
       }
 
@@ -373,7 +463,7 @@
     // ============================================================
     function kaynakEtiketi(yol) {
       const k = yol.includes('asgari') ? KAYNAK_REF.asgari : yol.includes('damga') ? KAYNAK_REF.damga : yol.includes('sgk') ? KAYNAK_REF.sgk : null;
-      return k === 'json' ? `${yol} · JSON ✓` : `${yol} · yedek değer`;
+      return `${yol} · ${k === 'json' ? t('muh_kaynak_dogrulandi') : t('muh_kaynak_yedek')}`;
     }
 
     function renderRefGrid() {
@@ -381,13 +471,13 @@
       if (!grid) return;
 
       const items = [
-        { etiket: t('muh_asgari_aylik_brut'), deger: REF.asgariBrutAylik != null ? `${para(REF.asgariBrutAylik)} ₺` : 'Yüklenemedi', kaynak: '/asgari-ucret.json', ikon: '💵', renk: 'text-emerald-400' },
-        { etiket: t('muh_asgari_aylik_net'),  deger: REF.asgariNetAylik != null ? `${para(REF.asgariNetAylik)} ₺` : 'Yüklenemedi',  kaynak: '/asgari-ucret.json', ikon: '💰', renk: 'text-win-300' },
-        { etiket: t('muh_asgari_gunluk_brut'), deger: REF.asgariBrutGunluk != null ? `${para(REF.asgariBrutGunluk)} ₺` : 'Yüklenemedi', kaynak: '/asgari-ucret.json', ikon: '📅', renk: 'text-emerald-400' },
-        { etiket: t('muh_asgari_gunluk_net'),  deger: REF.asgariNetGunluk != null ? `${para(REF.asgariNetGunluk)} ₺` : 'Yüklenemedi',  kaynak: '/asgari-ucret.json', ikon: '📆', renk: 'text-win-300' },
-        { etiket: t('muh_damga'),              deger: REF.damgaOran != null ? binde(REF.damgaOran) : 'Yüklenemedi',  kaynak: '/damga-vergisi.json', ikon: '📑', renk: 'text-amber-400' },
-        { etiket: t('muh_sgk_isci'),           deger: `%${(REF.sgkIsci * 100).toFixed(2).replace('.', ',')}`,       kaynak: '/sgk-prim-oranlari.json', ikon: '🏛️', renk: 'text-win-300' },
-        { etiket: t('muh_issizlik_isci'),      deger: `%${(REF.issizlikIsci * 100).toFixed(2).replace('.', ',')}`,  kaynak: '/sgk-prim-oranlari.json', ikon: '🛡️', renk: 'text-win-300' },
+        { etiket: t('muh_asgari_aylik_brut'), deger: REF.asgariBrutAylik != null ? `${para(REF.asgariBrutAylik)} ₺` : t('muh_veri_yok'), kaynak: '/asgari-ucret.json', ikon: '💵', renk: 'text-emerald-400' },
+        { etiket: t('muh_asgari_aylik_net'),  deger: REF.asgariNetAylik != null ? `${para(REF.asgariNetAylik)} ₺` : t('muh_veri_yok'),  kaynak: '/asgari-ucret.json', ikon: '💰', renk: 'text-win-300' },
+        { etiket: t('muh_asgari_gunluk_brut'), deger: REF.asgariBrutGunluk != null ? `${para(REF.asgariBrutGunluk)} ₺` : t('muh_veri_yok'), kaynak: '/asgari-ucret.json', ikon: '📅', renk: 'text-emerald-400' },
+        { etiket: t('muh_asgari_gunluk_net'),  deger: REF.asgariNetGunluk != null ? `${para(REF.asgariNetGunluk)} ₺` : t('muh_veri_yok'), kaynak: '/asgari-ucret.json', ikon: '📆', renk: 'text-win-300' },
+        { etiket: t('muh_damga'),              deger: REF.damgaOran != null ? binde(REF.damgaOran) : t('muh_veri_yok'),  kaynak: '/damga-vergisi.json', ikon: '📑', renk: 'text-amber-400' },
+        { etiket: t('muh_sgk_isci'),           deger: `%${(REF.sgkIsci * 100).toLocaleString(dil() === 'en' ? 'en-US' : 'tr-TR', {minimumFractionDigits:2,maximumFractionDigits:2})}`, kaynak: '/sgk-prim-oranlari.json', ikon: '🏛️', renk: 'text-win-300' },
+        { etiket: t('muh_issizlik_isci'),      deger: `%${(REF.issizlikIsci * 100).toLocaleString(dil() === 'en' ? 'en-US' : 'tr-TR', {minimumFractionDigits:2,maximumFractionDigits:2})}`, kaynak: '/sgk-prim-oranlari.json', ikon: '🛡️', renk: 'text-win-300' },
       ];
 
       grid.innerHTML = items.map(it => `
@@ -405,13 +495,19 @@
       const el = $('kaynak-listesi');
       if (!el) return;
       el.innerHTML = KAYNAK_DOSYALAR.map(k => {
-        const ok = KAYNAK_DURUM[k.key]?.yuklendi;
+        const durum = KAYNAK_DURUM[k.key] || {};
+        const ok = durum.yuklendi && (!KRITIK_KAYNAKLAR[k.key] || KAYNAK_REF[KRITIK_KAYNAKLAR[k.key]] === 'json');
+        const yol = durum.yol || k.path;
+        const mesaj = ok ? t('muh_kaynak_ok')
+          : durum.httpStatus ? `HTTP ${durum.httpStatus}`
+          : durum.yuklendi ? t('muh_kaynak_icerigi')
+          : durum.hataKod === 'json' ? t('muh_json_gecersiz') : t('muh_kaynak_hata');
         return `
           <div class="flex items-center gap-2 bg-win-base border border-win-border rounded-lg px-3 py-2">
             <span class="w-2 h-2 rounded-full ${ok ? 'bg-emerald-400' : 'bg-amber-400'} flex-none"></span>
-            <code class="text-[10px] font-mono text-win-100 truncate flex-1" title="${k.path}">${k.path}</code>
+            <a href="${kacis(apiUrl(yol))}" target="_blank" rel="noopener noreferrer" class="text-[10px] font-mono text-win-100 truncate flex-1 hover:underline" title="${kacis(apiUrl(yol))}">${kacis(yol)}</a>
             <span class="text-[10px] font-semibold ${ok ? 'text-emerald-400' : 'text-amber-400'} whitespace-nowrap">
-              ${ok ? '✓' : '!'}
+              ${ok ? '✓' : '!'} ${kacis(mesaj)}
             </span>
           </div>`;
       }).join('');
@@ -621,8 +717,7 @@
             }
           } 
           else if (field === 'ucret') {
-            const temizVal = String(val).replace(/\./g, '').replace(',', '.');
-            ROWS[idx].ucret = parseFloat(temizVal) || 0;
+            ROWS[idx].ucret = paraOku(val);
           } 
           else {
             ROWS[idx][field] = val;
@@ -686,6 +781,8 @@
     }
 
     document.addEventListener('pdaas:dil', () => {
+      baslikDiliniUygula();
+      durumDiliniUygula();
       if (HAM_VERI.belge) parseLookup('belge', HAM_VERI.belge);
       if (HAM_VERI.cikis) parseLookup('cikis', HAM_VERI.cikis);
       if (HAM_VERI.eksik) parseLookup('eksik', HAM_VERI.eksik);

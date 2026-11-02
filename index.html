@@ -77,7 +77,7 @@
         </div>
       </div>
 
-      <div id="view-service-detail" class="hidden flex-1 p-4 lg:p-8 max-w-6xl w-full mx-auto space-y-6">
+      <div id="view-service-detail" class="hidden flex-1 p-4 lg:p-8 max-w-screen-2xl w-full mx-auto space-y-6">
         <nav class="flex items-center gap-2 text-xs text-slate-400">
           <button id="btn-bc-home" type="button" class="hover:text-white transition" data-i18n="bc_home">Katalog</button>
           <span>/</span>
@@ -151,6 +151,10 @@
                 <input type="text" id="input-table-filter" data-i18n-placeholder="table_filter" placeholder="Tabloda filtrele..." class="w-full h-8 pl-8 pr-3 bg-win-base text-white rounded-md border border-win-border focus:outline-none focus:border-win-500 text-xs">
                 <svg class="w-3.5 h-3.5 text-slate-500 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
               </div>
+              <label id="section-selector-wrap" class="hidden items-center gap-2 text-slate-400 text-[11px] w-full sm:w-auto">
+                <span id="section-selector-label" class="whitespace-nowrap">Bölüm</span>
+                <select id="data-section-select" class="h-8 max-w-48 px-2 bg-win-base text-slate-200 border border-win-border rounded-md focus:outline-none focus:border-win-500 text-xs"></select>
+              </label>
               <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
                 <button id="btn-export-csv" type="button" class="px-3 py-1.5 bg-win-hover hover:bg-win-active text-slate-300 rounded-md border border-win-border flex items-center gap-1.5 font-medium transition">
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
@@ -278,7 +282,14 @@
       records: "Kayıt", services: "Veri Seti", loading_data: "Veriler yükleniyor...", load_error: "Veri alınamadı. Endpoint yanıt vermedi.",
       filtered: "filtrelendi", filtered_none: "Filtreye uygun kayıt bulunamadı", no_records: "Kayıt bulunamadı", no_matches: "Eşleşen veri seti bulunamadı.",
       notlar_title: "Bilgi Notları", copied_url: "URL kopyalandı", copied_code: "Kod kopyalandı", copied_json: "JSON kopyalandı",
-      layer_ham: "Ham", layer_konsolide: "Konsolide", layer_kurallar: "Kural", back_to_list: "Listeye Dön"
+      layer_ham: "Ham", layer_konsolide: "Konsolide", layer_kurallar: "Kural", layer_ornek: "Örnek", back_to_list: "Listeye Dön",
+      bool_true: "Evet", bool_false: "Hayır", item_count: "öğe", field_count: "alan", section_label: "Bölüm",
+      json_scroll: "devamı için aşağı kaydırın", catalog_invalid: "Katalogda servisler listesi bulunamadı.",
+      endpoint_missing: "JSON adresi bulunamadı.", json_error: "HATA", total_label: "Toplam", related_records: "kayıt",
+      section_urun_kurallari: "Ürün kuralları", section_faaliyet_kurallari: "Faaliyet kuralları",
+      section_meslek_kurallari: "Meslek kuralları", section_isco_nace_kurallari: "ISCO–NACE kuralları",
+      section_kayitlar: "Kayıtlar", section_kurallar: "Kurallar", section_istisnalar: "İstisnalar",
+      section_ithalat: "İthalat", section_ihracat: "İhracat"
     });
     Object.assign(UI.en, {
       catalog_title: "Data Catalog", catalog_search: "Search dataset...", catalog_loading: "Loading catalog...", live_connection: "Live Connection",
@@ -291,21 +302,29 @@
       records: "Records", services: "Datasets", loading_data: "Loading data...", load_error: "Could not fetch data. Endpoint did not respond.",
       filtered: "filtered", filtered_none: "No records match the filter", no_records: "No records found", no_matches: "No dataset found.",
       notlar_title: "Information Notes", copied_url: "URL copied", copied_code: "Code copied", copied_json: "JSON copied",
-      layer_ham: "Raw", layer_konsolide: "Consolidated", layer_kurallar: "Rule", back_to_list: "Back to List"
+      layer_ham: "Raw", layer_konsolide: "Consolidated", layer_kurallar: "Rule", layer_ornek: "Example", back_to_list: "Back to List",
+      bool_true: "Yes", bool_false: "No", item_count: "items", field_count: "fields", section_label: "Section",
+      json_scroll: "scroll down to load more", catalog_invalid: "The catalog does not contain a services list.",
+      endpoint_missing: "No JSON endpoint was found.", json_error: "ERROR", total_label: "Total", related_records: "records",
+      section_urun_kurallari: "Product rules", section_faaliyet_kurallari: "Activity rules",
+      section_meslek_kurallari: "Occupation rules", section_isco_nace_kurallari: "ISCO–NACE rules",
+      section_kayitlar: "Records", section_kurallar: "Rules", section_istisnalar: "Exemptions",
+      section_ithalat: "Import", section_ihracat: "Export"
     });
 
     dilBaslat();
     renderLayout({ activePage: 'index.html' });
     dilUygula();
 
-    const TIP_SOZLUK = { tr: { liste: 'Liste', agac: 'Ağaç', harita: 'Harita', tablo: 'Tablo', 'kural-seti': 'Kural Seti' }, en: { liste: 'List', agac: 'Tree', harita: 'Map', tablo: 'Table', 'kural-seti': 'Rule Set' } };
-    const KOD_SISTEMI_MAP = {
-      'gtip': { ad: { tr: 'GTİP Kodları', en: 'GTİP Codes' }, ikon: '🚢' }, 'cpc': { ad: { tr: 'CPC Kodları', en: 'CPC Codes' }, ikon: '📊' },
-      'nace': { ad: { tr: 'NACE Kodları', en: 'NACE Codes' }, ikon: '🏭' }, 'isco': { ad: { tr: 'ISCO Kodları', en: 'ISCO Codes' }, ikon: '🤝' },
-      'sgk': { ad: { tr: 'SGK Verileri', en: 'SGK Data' }, ikon: '🩺' }, 'csgb': { ad: { tr: 'ÇSGB Verileri', en: 'MoLSS Data' }, ikon: '💼' },
-      'gib': { ad: { tr: 'GİB Vergi Tarifeleri', en: 'RA Tax Tariffs' }, ikon: '🧾' }, 'hvmb': { ad: { tr: 'HMB Verileri', en: 'MoF Data' }, ikon: '💰' },
-      'tuik': { ad: { tr: 'TÜİK Verileri', en: 'TurkStat Data' }, ikon: '📈' }, 'diger': { ad: { tr: 'Diğer Veriler', en: 'Other Data' }, ikon: '🏛️' }
+    const TIP_SOZLUK = { tr: { liste: 'Liste', agac: 'Ağaç', harita: 'Harita', tablo: 'Tablo', 'kural-seti': 'Kural Seti', kural_listesi: 'Kural Listesi', ic_ice_tablo: 'İç İçe Tablo' }, en: { liste: 'List', agac: 'Tree', harita: 'Map', tablo: 'Table', 'kural-seti': 'Rule Set', kural_listesi: 'Rule List', ic_ice_tablo: 'Nested Table' } };
+    // Görünümü değiştirmeden veri katmanlarını doğrudan katalog.json'dan ayır.
+    const KATEGORI_MAP = {
+      ham: { ad: { tr: 'Ham Veriler', en: 'Raw Datasets' }, ikon: '📂' },
+      kurallar: { ad: { tr: 'Eşleştirme Kuralları', en: 'Mapping Rules' }, ikon: '⚙️' },
+      konsolide: { ad: { tr: 'Konsolide Veriler', en: 'Consolidated Datasets' }, ikon: '🗃️' },
+      ornek: { ad: { tr: 'Örnek Veriler', en: 'Examples' }, ikon: '📋' }
     };
+    const KATEGORI_SIRASI = ['ham', 'kurallar', 'konsolide', 'ornek'];
     
     const ALAN_ETIKET_TR = {
       kod: 'Kod', ust_kod: 'Üst Kod', seviye: 'Seviye', seviye_adi: 'Seviye Adı',
@@ -322,7 +341,11 @@
       kategoriler: 'Kategoriler', motor_silindir_hacmi: 'Motor Hacmi',
       tasit_degeri_dilimleri: 'Değer Dilimleri', yasi_gruplari: 'Yaş Grupları',
       esik_alt: 'Eşik (Alt)', esik_ust: 'Eşik (Üst)', yapilan: 'Durum',
-      arac_turu: 'Araç Türü', not: 'Not', kapsam_tr: 'Kapsam (TR)', kapsam_en: 'Kapsam (EN)'
+      arac_turu: 'Araç Türü', not: 'Not', kapsam_tr: 'Kapsam (TR)', kapsam_en: 'Kapsam (EN)',
+      belge_ref: 'Belge Referansı', belge_kodlari: 'Belge Kodları', islem_tipleri: 'İşlem Türleri',
+      durum: 'Durum', kosul: 'Koşul', gtip_prefixler: 'GTİP Önekleri', nace_prefixler: 'NACE Önekleri',
+      haric_nace_prefixler: 'Hariç NACE Önekleri', isco_kodlari: 'ISCO Kodları',
+      urun_kurallari: 'Ürün Kuralları', faaliyet_kurallari: 'Faaliyet Kuralları', meslek_kurallari: 'Meslek Kuralları'
     };
     const ALAN_ETIKET_EN = {
       kod: 'Code', ust_kod: 'Parent Code', seviye: 'Level', seviye_adi: 'Level Name',
@@ -339,7 +362,11 @@
       kategoriler: 'Categories', motor_silindir_hacmi: 'Engine Volume',
       tasit_degeri_dilimleri: 'Value Brackets', yasi_gruplari: 'Age Groups',
       esik_alt: 'Threshold (Low)', esik_ust: 'Threshold (High)', yapilan: 'Status',
-      arac_turu: 'Vehicle Type', not: 'Note', kapsam_tr: 'Scope (TR)', kapsam_en: 'Scope (EN)'
+      arac_turu: 'Vehicle Type', not: 'Note', kapsam_tr: 'Scope (TR)', kapsam_en: 'Scope (EN)',
+      belge_ref: 'Document Reference', belge_kodlari: 'Document Codes', islem_tipleri: 'Transaction Types',
+      durum: 'Status', kosul: 'Condition', gtip_prefixler: 'GTİP Prefixes', nace_prefixler: 'NACE Prefixes',
+      haric_nace_prefixler: 'Excluded NACE Prefixes', isco_kodlari: 'ISCO Codes',
+      urun_kurallari: 'Product Rules', faaliyet_kurallari: 'Activity Rules', meslek_kurallari: 'Occupation Rules'
     };
 
     function tipEtiket(tip) {
@@ -354,9 +381,18 @@
       return sozluk[anahtar] || anahtar.replace(/_/g, ' ').replace(/\b\w/g, h => h.toLocaleUpperCase(d === 'tr' ? 'tr-TR' : 'en-US'));
     }
     function grupEtiket(anahtar) {
-      const g = KOD_SISTEMI_MAP[anahtar] || KOD_SISTEMI_MAP['diger'];
-      return g.ad[document.documentElement.lang === 'en' ? 'en' : 'tr'];
+      const g = KATEGORI_MAP[anahtar];
+      return g ? g.ad[document.documentElement.lang === 'en' ? 'en' : 'tr'] : String(anahtar || 'genel').replace(/_/g, ' ');
     }
+    function bolumEtiketi(key) {
+      const k = 'section_' + key;
+      return t(k) === k ? key.replaceAll('_', ' ') : t(k);
+    }
+    function sayfaDiliniUygula() {
+      document.title = document.documentElement.lang === 'en'
+        ? 'PDaaS — Parametric Data Service Portal' : 'PDaaS — Parametrik Veri Servisi Portalı';
+    }
+    sayfaDiliniUygula();
 
     const COLUMN_PRIORITY = ['kod', 'ad_tr', 'tanim_tr', 'baslik_tr', 'tutar', 'oran', 'deger', 'yil', 'periyot', 'para_birimi'];
     const NO_DECIMAL_INT_KEYS = ['yil', 'seviye', 'sira', 'derece'];
@@ -392,21 +428,26 @@
 
       if (typeof val === 'boolean') {
         return val
-          ? `<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-sans font-bold border border-emerald-500/20">true</span>`
-          : `<span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 text-[10px] font-sans font-bold border border-rose-500/20">false</span>`;
+          ? `<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-sans font-bold border border-emerald-500/20">${t('bool_true')}</span>`
+          : `<span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 text-[10px] font-sans font-bold border border-rose-500/20">${t('bool_false')}</span>`;
       }
 
       if (typeof val === 'number') {
         let formatted;
-        if (NO_DECIMAL_INT_KEYS.includes(key)) {
+        if ((key === 'oran' || /_orani?$/.test(key)) && val >= 0 && val <= 1) {
+          formatted = (val * 100).toLocaleString(d, { maximumFractionDigits: 4 }) + ' %';
+        } else if (key === 'oran_yuzde') {
+          formatted = val.toLocaleString(d, { maximumFractionDigits: 4 }) + ' %';
+        } else if (key === 'oran_binde') {
+          formatted = val.toLocaleString(d, { maximumFractionDigits: 4 }) + ' ‰';
+        } else if (NO_DECIMAL_INT_KEYS.includes(key)) {
           formatted = String(val);
         } else if (FORCE_DECIMAL_REGEX.test(key)) {
           formatted = val.toLocaleString(d, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         } else {
           formatted = val.toLocaleString(d);
         }
-        const suffix = (key === 'oran' || key === 'engellilik_orani_min') ? ' %' : '';
-        return `<span class="text-amber-300 font-medium">${formatted}${suffix}</span>`;
+        return `<span class="text-amber-300 font-medium">${formatted}</span>`;
       }
 
       if (Array.isArray(val)) {
@@ -415,7 +456,7 @@
         if (isNestedValue(val)) {
           return `<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-win-500/10 border border-win-500/30 rounded text-win-400 text-[10px] font-sans font-semibold">
             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
-            ${val.length} öğe
+            ${val.length} ${t('item_count')}
           </span>`;
         }
         const preview = val.slice(0, 4).map(v => String(v)).join(', ');
@@ -424,10 +465,15 @@
       }
 
       if (typeof val === 'object') {
+        if ((typeof val.tr === 'string' || typeof val.en === 'string') && Object.keys(val).every(k => ['tr', 'en'].includes(k))) {
+          const dil = document.documentElement.lang === 'en' ? 'en' : 'tr';
+          const secilen = val[dil] || val[dil === 'en' ? 'tr' : 'en'] || '';
+          return `<span class="text-slate-300 text-[11px]" title="${kacis(secilen)}">${kacis(secilen)}</span>`;
+        }
         const keyCount = Object.keys(val).length;
         return `<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-emerald-500/10 border border-emerald-500/30 rounded text-emerald-400 text-[10px] font-sans font-semibold">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
-          ${keyCount} alan
+          ${keyCount} ${t('field_count')}
         </span>`;
       }
 
@@ -447,23 +493,97 @@
     let currentKatman = 'ham';
     let currentBaseUrl = '';
     let currentParca = null; // { kod, dosya, endpoint } veya null
+    let dataSections = new Map();
+    let dataSectionPaths = new Map();
+    let currentSectionKey = 'kayitlar';
+    let currentColumns = [];
+
+    function findDataSections(body) {
+      const result = new Map();
+      dataSectionPaths = new Map();
+      const ignored = new Set(['meta', 'schema', 'schema_surumu', 'versiyon', 'kaynaklar', 'notlar_tr', 'notlar_en']);
+      for (const [key, value] of Object.entries(body || {})) {
+        if (ignored.has(key)) continue;
+        if (Array.isArray(value)) {
+          result.set(key, value.map((item, index) => item && typeof item === 'object' && !Array.isArray(item)
+            ? item : { sira: index + 1, deger: item }));
+          dataSectionPaths.set(key, key);
+        } else if (value && typeof value === 'object') {
+          if (Array.isArray(value.kayitlar)) {
+            for (const [altKey, altValue] of Object.entries(value)) {
+              if (!Array.isArray(altValue)) continue;
+              const gorunumAdi = altKey === 'kayitlar' ? key : `${key}_${altKey}`;
+              result.set(gorunumAdi, altValue.map((item, index) => item && typeof item === 'object' && !Array.isArray(item)
+                ? item : { sira: index + 1, deger: item }));
+              dataSectionPaths.set(gorunumAdi, `${key}.${altKey}`);
+            }
+          } else {
+            result.set(key, Object.entries(value).map(([kod, entry]) =>
+              entry && typeof entry === 'object' && !Array.isArray(entry)
+                ? { kod, ...entry } : { kod, deger: entry }));
+            dataSectionPaths.set(key, key);
+          }
+        }
+      }
+      if (!result.size) result.set('kayitlar', []);
+      return result;
+    }
+
+    function selectDataSection(key) {
+      currentSectionKey = dataSections.has(key) ? key : [...dataSections.keys()][0];
+      currentData = dataSections.get(currentSectionKey) || [];
+      currentFilteredData = currentData;
+      currentPage = 1;
+      currentColumns = [];
+      const keys = new Set();
+      const mapped = currentRawBody?.meta?.tablo_haritasi?.kolonlar;
+      if (Array.isArray(mapped)) mapped.forEach(k => keys.add(k));
+      // Bölüm başlığı ilk satır olabilir; sütunları bütün kayıtlar üzerinden belirle.
+      currentData.forEach(row => Object.keys(row || {}).forEach(k => keys.add(k)));
+      currentColumns = siraliKolonlar([...keys]);
+      $('input-table-filter').value = '';
+      $('data-section-select').value = currentSectionKey;
+      $('service-records-count').textContent = currentData.length.toLocaleString(document.documentElement.lang === 'en' ? 'en-US' : 'tr-TR') + ' ' + t('records');
+      renderTableData();
+      renderCodeSnippets();
+      renderDocsSchema();
+    }
+
+    function showDataSections(body) {
+      dataSections = findDataSections(body);
+      const select = $('data-section-select');
+      const order = ['kayitlar', 'kurallar', 'istisnalar', 'ithalat', 'ihracat', 'kategoriler', 'uygulamalar'];
+      const sorted = [...dataSections.keys()].sort((a, b) => {
+        const aIdx = order.indexOf(a), bIdx = order.indexOf(b);
+        return (aIdx === -1 ? 99 : aIdx) - (bIdx === -1 ? 99 : bIdx);
+      });
+      select.innerHTML = sorted.map(key =>
+        `<option value="${kacis(key)}">${kacis(bolumEtiketi(key))} (${dataSections.get(key).length.toLocaleString(document.documentElement.lang === 'en' ? 'en-US' : 'tr-TR')})</option>`
+      ).join('');
+      $('section-selector-wrap').classList.toggle('hidden', sorted.length < 2);
+      $('section-selector-wrap').classList.toggle('flex', sorted.length > 1);
+      $('section-selector-label').textContent = t('section_label');
+      selectDataSection(sorted[0]);
+    }
 
     // JSON Konsolu lazy load state
     let jsonVirtualState = null;
 
     let renderedRowCount = 0;
     const ROW_CHUNK = 100;
+    let detailRequestSerial = 0;
 
     async function katalogYukle() {
       $('catalog-tree-container').innerHTML = `<div class="p-8 text-center text-slate-500 text-xs"><div class="inline-block w-6 h-6 border-2 border-win-500 border-t-transparent rounded-full animate-spin mb-2"></div><p>${t('catalog_loading')}</p></div>`;
       try {
         const r = await apiFetch(CONFIG.KATALOG_ENDPOINT);
-        if (!r.ok) throw new Error('HTTP ' + r.status);
+        if (!r.ok) throw new Error(`${apiUrl(CONFIG.KATALOG_ENDPOINT)} — HTTP ${r.status}`);
         const body = await r.json();
-        KATALOG = body.servisler || [];
+        if (!Array.isArray(body.servisler)) throw new Error(t('catalog_invalid'));
+        KATALOG = body.servisler;
         renderCatalogTree();
       } catch (e) {
-        $('catalog-tree-container').innerHTML = `<div class="p-6 text-center text-rose-400 text-xs"><p class="font-bold mb-1">${t('load_error')}</p><p class="text-slate-500">${e.message}</p></div>`;
+        $('catalog-tree-container').innerHTML = `<div class="p-6 text-center text-rose-400 text-xs"><p class="font-bold mb-1">${t('load_error')}</p><p class="text-slate-500 break-all">${kacis(e.message)}</p></div>`;
         $('catalog-count-badge').textContent = '0';
       }
     }
@@ -484,10 +604,10 @@
       }
 
       for (const item of duzListe) {
-        const anahtar = item.sv.kod_sistemi || 'diger';
+        const anahtar = item.katman;
         if (!gruplar.has(anahtar)) {
-          const mapBilgi = KOD_SISTEMI_MAP[anahtar] || KOD_SISTEMI_MAP['diger'];
-          gruplar.set(anahtar, { id: anahtar, adi: grupEtiket(anahtar), ikon: mapBilgi.ikon, servisler: [] });
+          const mapBilgi = KATEGORI_MAP[anahtar];
+          gruplar.set(anahtar, { id: anahtar, adi: grupEtiket(anahtar), ikon: mapBilgi?.ikon || '📁', servisler: [] });
         }
         gruplar.get(anahtar).servisler.push(item);
       }
@@ -495,8 +615,10 @@
       let totalServices = 0;
       let html = '';
 
-      for (const grup of gruplar.values()) {
-        const grupAdi = grup.adi;
+      const siraNo = id => KATEGORI_SIRASI.includes(id) ? KATEGORI_SIRASI.indexOf(id) : 99;
+      const siraliGruplar = [...gruplar.values()].sort((a, b) => siraNo(a.id) - siraNo(b.id));
+      for (const grup of siraliGruplar) {
+        const grupAdi = grupEtiket(grup.id);
         const eslesen = grup.servisler.filter(item => {
           if (!q) return true;
           const sAdi = (document.documentElement.lang === 'en' ? (item.sv.ad.en || item.sv.ad.tr) : item.sv.ad.tr) || '';
@@ -510,7 +632,7 @@
 
         html += `
         <div class="bg-win-card rounded-md border border-win-border overflow-hidden text-xs transition">
-          <button type="button" class="group-header w-full px-3 py-2.5 flex items-center justify-between text-left hover:bg-win-hover transition" data-group="${grup.id}">
+          <button type="button" class="group-header w-full px-3 py-2.5 flex items-center justify-between text-left hover:bg-win-hover transition" data-group="${kacis(grup.id)}">
             <div class="flex items-center gap-2.5 min-w-0">
               <span class="text-base">${grup.ikon}</span>
               <div class="truncate">
@@ -528,7 +650,7 @@
               const katmanEtiket = t('layer_' + item.katman) || item.katman;
               
               return `
-                <button type="button" class="service-item-btn w-full px-3 py-2 pl-9 flex items-center justify-between text-left hover:bg-win-500/10 hover:text-win-400 transition text-slate-400 ${aktif ? 'bg-win-500/20 text-win-400 font-semibold border-l-2 border-win-500' : ''}" data-kod="${s.kod}" data-katman="${item.katman}">
+                <button type="button" class="service-item-btn w-full px-3 py-2 pl-9 flex items-center justify-between text-left hover:bg-win-500/10 hover:text-win-400 transition text-slate-400 ${aktif ? 'bg-win-500/20 text-win-400 font-semibold border-l-2 border-win-500' : ''}" data-kod="${kacis(s.kod)}" data-katman="${kacis(item.katman)}">
                   <span class="truncate pr-2">${kacis(sAdi)} <span class="text-[10px] text-slate-500 ml-1">(${katmanEtiket})</span></span>
                   <span class="px-1.5 py-0.5 text-[9px] font-mono bg-win-hover text-slate-400 rounded">${item.katmanBilgi.son}</span>
                 </button>`;
@@ -560,23 +682,24 @@
 
     function servisSecUI(sv, katmanKey) {
       if (!sv) return;
-      const grupAdi = grupEtiket(sv.kod_sistemi);
+      const grupAdi = grupEtiket(katmanKey);
       const servisAdi = document.documentElement.lang === 'en' ? (sv.ad.en || sv.ad.tr) : sv.ad.tr;
       const katmanBilgi = sv.katmanlar?.[katmanKey] || {};
       const versiyon = katmanBilgi.son || '—';
       const katmanEtiket = t('layer_' + katmanKey) || katmanKey;
 
-      currentBaseUrl = apiUrl(katmanBilgi.url || '');
+      currentBaseUrl = katmanBilgi.resolvedUrl || apiUrl(katmanBilgi.url || '');
       const parcaSuffix = currentParca ? ` › ${currentParca.kod}` : '';
       const gosterilenUrl = currentParca ? currentParca.endpoint : currentBaseUrl;
 
       $('bc-ministry').textContent = grupAdi;
       $('bc-service').textContent = `${servisAdi} (${katmanEtiket})${parcaSuffix}`;
-      $('service-ministry-badge').textContent = `${grupAdi} (${katmanEtiket})`;
+      const dil = document.documentElement.lang === 'en' ? 'en' : 'tr';
+      $('service-ministry-badge').textContent = `${sv.yayinci?.[dil] || grupAdi} · ${katmanEtiket}`;
       $('service-records-count').textContent = `v${versiyon}`;
       $('service-type-badge').textContent = tipEtiket(sv.tip);
       $('service-title').textContent = `${servisAdi} (${katmanEtiket})${parcaSuffix}`;
-      $('service-desc').textContent = sv.kod;
+      $('service-desc').textContent = sv.aciklama?.[dil] || sv.kod;
       $('service-last-update').textContent = `v${versiyon}`;
       $('endpoint-url-text').textContent = gosterilenUrl;
       $('btn-back-to-list').classList.toggle('hidden', !currentParca);
@@ -588,6 +711,8 @@
       currentKatman = katmanKey;
       currentPage = 1;
       currentParca = null;
+      currentRawBody = null;
+      currentData = [];
       $('view-empty-state').classList.add('hidden');
       $('view-service-detail').classList.remove('hidden');
       servisSecUI(sv, katmanKey);
@@ -600,39 +725,81 @@
 
     async function servisDetayYukle(endpoint) {
       if (!endpoint) return;
+      const requestSerial = ++detailRequestSerial;
+      currentRawBody = null;
+      currentData = [];
+      currentFilteredData = [];
+      currentColumns = [];
+      dataSections = new Map();
+      $('json-status-label').textContent = '…';
+      $('json-console-output').textContent = '';
+      $('docs-schema-tbody').innerHTML = '';
+      $('code-snippet-box').textContent = '';
+      $('section-selector-wrap').classList.add('hidden');
       $('table-body-rows').innerHTML = `<tr><td colspan="10" class="p-6 text-center text-slate-500"><div class="inline-block w-5 h-5 border-2 border-win-500 border-t-transparent rounded-full animate-spin"></div><p class="mt-2">${t('loading_data')}</p></td></tr>`;
       const t0 = performance.now();
       try {
-        const r = await apiFetch(endpoint);
+        // Katalog tarafından bildirilen gerçek URL: eski *-tam.json yollarını deneme.
+        const adaylar = [apiUrl(endpoint)];
+        let r = null;
+        let bulunanAdres = '';
+        for (const adres of adaylar) {
+          const cevap = await apiFetch(adres);
+          if (requestSerial !== detailRequestSerial) return;
+          r = cevap;
+          bulunanAdres = adres;
+          if (cevap.ok || cevap.status !== 404) break;
+        }
+        if (!r) throw new Error(t('endpoint_missing'));
         const sure = Math.round(performance.now() - t0);
+        if (requestSerial !== detailRequestSerial) return;
         if (!r.ok) {
           $('json-status-label').textContent = `HTTP ${r.status}`;
-          $('table-body-rows').innerHTML = `<tr><td colspan="10" class="p-6 text-center text-rose-400">${t('load_error')} (HTTP ${r.status})</td></tr>`;
+          $('table-body-rows').innerHTML = `<tr><td colspan="10" class="p-6 text-center text-rose-400">${t('load_error')} (HTTP ${r.status})<p class="text-xs text-slate-500 break-all mt-2">${kacis(bulunanAdres)}</p></td></tr>`;
           return;
         }
         const body = await r.json();
-        currentRawBody = body;
-        
-        currentData = Array.isArray(body.kayitlar) ? body.kayitlar : 
-                      (Array.isArray(body.fasillar) ? body.fasillar : 
-                      (Array.isArray(body.parcalar) ? body.parcalar : 
-                      (Array.isArray(body.kurallar) ? body.kurallar : [])));
-                      
-        if (!currentData.length && body.gruplar) {
-           currentData = Object.entries(body.gruplar).map(([k, v]) => ({ kod: k, ...v }));
+        if (requestSerial !== detailRequestSerial) return;
+        if (!currentParca && currentService?.katmanlar?.[currentKatman]) {
+          currentService.katmanlar[currentKatman].resolvedUrl = bulunanAdres;
+          servisSecUI(currentService, currentKatman);
         }
-
-        currentFilteredData = [...currentData];
-        currentPage = 1;
+        currentRawBody = body;
+        const meta = body.meta;
+        $('service-last-update').textContent = meta?.guncelleme || '—';
+        
+        showDataSections(body);
         $('json-status-label').textContent = `HTTP ${r.status}`;
         $('json-response-time').textContent = `${sure} ms`;
         $('service-records-count').textContent = currentData.length.toLocaleString(document.documentElement.lang === 'en' ? 'en-US' : 'tr-TR') + ' ' + t('records');
         
-        renderTableData(); renderCodeSnippets(); renderJsonConsole(); renderDocsSchema(); renderNotlar(body);
+        renderJsonConsole(); renderNotlar(body);
       } catch (e) {
+        if (requestSerial !== detailRequestSerial) return;
         $('table-body-rows').innerHTML = `<tr><td colspan="10" class="p-6 text-center text-rose-400">${t('load_error')}</td></tr>`;
-        $('json-status-label').textContent = 'ERROR';
+        $('json-status-label').textContent = t('json_error');
       }
+    }
+
+    function gorunurKolonlar() {
+      // Görünür tablodaki ad/açıklama değerleri seçili dilde gösterilir;
+      // ham JSON ve indirilen dosya iki dili de aynen korur.
+      const gizlenecekDil = document.documentElement.lang === 'en' ? '_tr' : '_en';
+      const seciliDil = document.documentElement.lang === 'en' ? '_en' : '_tr';
+      return currentColumns.filter(key => !(
+        key.endsWith(gizlenecekDil) && currentColumns.includes(key.slice(0, -3) + seciliDil)
+      ));
+    }
+
+    function gorunurHucreDegeri(row, key) {
+      const mevcut = row[key];
+      if (mevcut !== null && mevcut !== undefined && mevcut !== '') return mevcut;
+      const dilEki = document.documentElement.lang === 'en' ? '_en' : '_tr';
+      if (key.endsWith(dilEki)) {
+        const diger = key.slice(0, -3) + (dilEki === '_en' ? '_tr' : '_en');
+        return row[diger] ?? mevcut;
+      }
+      return mevcut;
     }
 
     function renderTableData() {
@@ -642,17 +809,18 @@
       const d = document.documentElement.lang === 'en' ? 'en-US' : 'tr-TR';
 
       if (!currentData.length) {
+        theadRow.innerHTML = '<th class="p-3">#</th>';
         tbody.innerHTML = `<tr><td colspan="10" class="p-6 text-center text-slate-500">${t('no_records')}</td></tr>`;
         $('tab-badge-table').textContent = '0';
         $('table-pagination-info').textContent = '0 / 0';
         return;
       }
 
-      currentFilteredData = currentData.filter(row =>
-        Object.values(row).some(v => v !== null && v !== undefined && String(v).toLocaleLowerCase('tr-TR').includes(filterVal))
-      );
+      currentFilteredData = filterVal ? currentData.filter(row =>
+        Object.values(row).some(v => v !== null && v !== undefined && (typeof v === 'object' ? JSON.stringify(v) : String(v)).toLocaleLowerCase('tr-TR').includes(filterVal))
+      ) : currentData;
 
-      const keys = siraliKolonlar(Object.keys(currentData[0]));
+      const keys = gorunurKolonlar();
 
       theadRow.innerHTML = `<th class="p-3 text-slate-400 font-semibold border-r border-win-border/50">#</th>` +
         keys.map(k => {
@@ -678,7 +846,7 @@
     function appendNextChunk() {
       const tbody = $('table-body-rows');
       const d = document.documentElement.lang === 'en' ? 'en-US' : 'tr-TR';
-      const keys = siraliKolonlar(Object.keys(currentData[0]));
+      const keys = gorunurKolonlar();
 
       const nextData = currentFilteredData.slice(renderedRowCount - ROW_CHUNK, renderedRowCount);
       if (!nextData.length) return;
@@ -700,7 +868,7 @@
                 ${globalNo}
               </span>
             </td>
-            ${keys.map(k => `<td class="p-3 align-top">${hucreRender(row[k], k, row, d)}</td>`).join('')}
+            ${keys.map(k => `<td class="p-3 align-top">${hucreRender(gorunurHucreDegeri(row, k), k, row, d)}</td>`).join('')}
           </tr>`;
 
         const detailRow = hasNested ? `
@@ -783,19 +951,35 @@
     function renderCodeSnippets() {
       if (!currentService) return;
       const url = $('endpoint-url-text').textContent; 
+      const toplam = t('total_label');
+      const kayit = t('related_records');
       const snippets = {
         curl: `curl -X GET "${url}" \\\n  -H "Accept: application/json" \\\n  -H "Accept-Encoding: gzip"`,
-        python: `import requests\n\nurl = "${url}"\nheaders = {"Accept": "application/json"}\n\nresponse = requests.get(url, headers=headers, timeout=15)\nresponse.raise_for_status()\nveri = response.json()\n\nkayitlar = veri.get("kayitlar", [])\nprint(f"Toplam: {len(kayitlar)}")\nfor k in kayitlar[:5]:\n    print(k.get("kod"), "-", k.get("tanim_tr"))`,
+        python: `import requests\n\nurl = "${url}"\nheaders = {"Accept": "application/json"}\n\nresponse = requests.get(url, headers=headers, timeout=15)\nresponse.raise_for_status()\nveri = response.json()\n\nkayitlar = veri.get("kayitlar", veri.get("kurallar", []))\nprint(f"Toplam: {len(kayitlar)}")\nfor k in kayitlar[:5]:\n    print(k.get("kod"), "-", k.get("ad_tr", k.get("aciklama_tr", "")))`,
         js: `async function fetchData() {\n  const res = await fetch("${url}", {\n    headers: { "Accept": "application/json" }\n  });\n  if (!res.ok) throw new Error("HTTP " + res.status);\n  const { kayitlar = [], toplam } = await res.json();\n  console.log("Toplam:", toplam);\n  console.table(kayitlar.slice(0, 10));\n}\n\nfetchData().catch(console.error);`,
         go: `package main\n\nimport (\n\t"encoding/json"\n\t"fmt"\n\t"io"\n\t"net/http"\n\t"time"\n)\n\nfunc main() {\n\turl := "${url}"\n\tclient := &http.Client{Timeout: 15 * time.Second}\n\treq, _ := http.NewRequest("GET", url, nil)\n\treq.Header.Set("Accept", "application/json")\n\n\tresp, err := client.Do(req)\n\tif err != nil { panic(err) }\n\tdefer resp.Body.Close()\n\n\tbody, _ := io.ReadAll(resp.Body)\n\tvar veri map[string]interface{}\n\tjson.Unmarshal(body, &veri)\n\tfmt.Println("Toplam:", veri["toplam"])\n}`,
         php: `<?php\n$url = "${url}";\n$opts = [\n    "http" => [\n        "method" => "GET",\n        "header" => "Accept: application/json\\r\\n"\n    ]\n];\n$ctx = stream_context_create($opts);\n$resp = file_get_contents($url, false, $ctx);\n$veri = json_decode($resp, true);\n\necho "Toplam: " . $veri["toplam"] . " kayıt\\n";\nprint_r(array_slice($veri["kayitlar"], 0, 3));`
       };
+      // Kod örnekleri, tabloda seçili bölümü kullanır (kayitlar, kurallar, istisnalar vb.).
+      const bolum = dataSectionPaths.get(currentSectionKey) || currentSectionKey;
+      snippets.python = `import requests\n\nurl = "${url}"\nresponse = requests.get(url, timeout=15)\nresponse.raise_for_status()\nveri = response.json()\nkayitlar = veri.get("${bolum}", [])\nif isinstance(kayitlar, dict): kayitlar = list(kayitlar.values())\nprint("${toplam}:", len(kayitlar))\nfor kayit in kayitlar[:5]: print(kayit)`;
+      snippets.js = `async function fetchData() {\n  const res = await fetch("${url}");\n  if (!res.ok) throw new Error("HTTP " + res.status);\n  const veri = await res.json();\n  const bolum = veri["${bolum}"] || [];\n  const kayitlar = Array.isArray(bolum) ? bolum : Object.entries(bolum).map(([kod, deger]) => ({ kod, deger }));\n  console.log("${toplam}:", kayitlar.length);\n  console.table(kayitlar.slice(0, 10));\n}\nfetchData().catch(console.error);`;
+      snippets.go = `package main\n\nimport (\n  "encoding/json"\n  "fmt"\n  "net/http"\n  "time"\n)\n\nfunc main() {\n  client := &http.Client{Timeout: 15 * time.Second}\n  resp, err := client.Get("${url}")\n  if err != nil { panic(err) }\n  defer resp.Body.Close()\n  var veri map[string]interface{}\n  if err := json.NewDecoder(resp.Body).Decode(&veri); err != nil { panic(err) }\n  fmt.Printf("${bolum}: %v\\n", veri["${bolum}"])\n}`;
+      snippets.php = `<?php\n$url = "${url}";\n$veri = json_decode(file_get_contents($url), true);\n$kayitlar = $veri["${bolum}"] ?? [];\necho "${toplam}: " . count($kayitlar) . " ${kayit}\\n";\nprint_r(array_slice(array_values($kayitlar), 0, 3));`;
+      if (bolum.includes('.')) {
+        const [ana, alt] = bolum.split('.');
+        snippets.python = snippets.python.replace(`veri.get("${bolum}", [])`, `veri.get("${ana}", {}).get("${alt}", [])`);
+        snippets.js = snippets.js.replace(`veri["${bolum}"]`, `veri["${ana}"]?.["${alt}"]`);
+        snippets.go = snippets.go.replace(`veri["${bolum}"]`, `veri["${ana}"].(map[string]interface{})["${alt}"]`);
+        snippets.php = snippets.php.replace(`$veri["${bolum}"]`, `$veri["${ana}"]["${alt}"]`);
+      }
       $('code-snippet-box').textContent = snippets[activeCodeLang] || snippets.curl;
     }
 
     function highlightString(json) {
       if (json === undefined || json === null) return '';
-      return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, match => {
+      const safe = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      return safe.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, match => {
         let cls = 'j-num';
         if (/^"/.test(match)) { cls = /:$/.test(match) ? 'j-key' : 'j-str'; }
         else if (/true|false/.test(match)) { cls = 'j-kw'; }
@@ -835,7 +1019,7 @@
           const kalan = jsonStr.substring(50000);
           output.innerHTML = highlightString(ilk) +
             `<span class="text-slate-500 italic">\n\n... [Dosya çok büyük, kalan ${kalan.length} karakter renklendirilmedi. "Payload'ı Kopyala" ile tamamına erişebilirsiniz.]</span>\n` +
-            kalan;
+            kacis(kalan);
         } else {
           output.innerHTML = highlightString(jsonStr);
         }
@@ -929,7 +1113,7 @@
       const toplam = s.totalCount.toLocaleString(d);
 
       info.textContent = s.renderedCount < s.totalCount
-        ? `(${yuklenen}/${toplam} ${t('records').toLowerCase()}, ↓ kaydırın)`
+        ? `(${yuklenen}/${toplam} ${t('records').toLowerCase()}, ${t('json_scroll')})`
         : `(${toplam} ${t('records').toLowerCase()})`;
     }
 
@@ -938,17 +1122,17 @@
         $('docs-schema-tbody').innerHTML = `<tr><td colspan="4" class="p-6 text-center text-slate-500">${t('no_records')}</td></tr>`;
         return;
       }
-      const ornek = currentData[0];
       const d = document.documentElement.lang === 'en' ? 'en' : 'tr';
       // Modülden gelen kapsamlı sözlük kullanılıyor
       const sozluk = d === 'tr' ? SCHEMA_ACIKLAMA_TR : SCHEMA_ACIKLAMA_EN;
 
-      $('docs-schema-tbody').innerHTML = Object.keys(ornek).map(key => {
-        const val = ornek[key]; let tip = typeof val;
+      $('docs-schema-tbody').innerHTML = gorunurKolonlar().map(key => {
+        const val = currentData.find(row => row[key] !== null && row[key] !== undefined)?.[key];
+        let tip = typeof val;
         if (Array.isArray(val)) tip = 'array';
         else if (val === null) tip = 'null';
         let ornekStr = '';
-        if (val === null || val === undefined) ornekStr = 'null';
+        if (val === null || val === undefined) ornekStr = '—';
         else if (typeof val === 'object') ornekStr = Array.isArray(val) ? `[${val.length}]` : '{...}';
         else ornekStr = String(val).slice(0, 40);
         const aciklama = sozluk[key] || '—';
@@ -964,7 +1148,7 @@
 
     function renderNotlar(body) {
       const d = document.documentElement.lang === 'en' ? 'en' : 'tr';
-      const notlar = d === 'tr' ? (body.notlar_tr || []) : (body.notlar_en || []);
+      const notlar = body.meta?.veri_notlari?.[d] || (d === 'tr' ? body.notlar_tr : body.notlar_en) || [];
       const kutu = $('service-notlar');
       const liste = $('notlar-list');
       if (!notlar || !notlar.length) {
@@ -1015,8 +1199,19 @@
     }
 
     document.addEventListener('pdaas:dil', () => {
+      sayfaDiliniUygula();
+      const secim = $('data-section-select');
+      if (secim) {
+        for (const opt of secim.options) {
+          const adet = dataSections.get(opt.value)?.length || 0;
+          opt.textContent = `${bolumEtiketi(opt.value)} (${adet.toLocaleString(document.documentElement.lang === 'en' ? 'en-US' : 'tr-TR')})`;
+        }
+      }
+      $('section-selector-label').textContent = t('section_label');
       if (currentService) {
         servisSecUI(currentService, currentKatman);
+        if (currentRawBody?.meta?.guncelleme) $('service-last-update').textContent = currentRawBody.meta.guncelleme;
+        $('service-records-count').textContent = currentData.length.toLocaleString(document.documentElement.lang === 'en' ? 'en-US' : 'tr-TR') + ' ' + t('records');
         renderTableData(); renderCodeSnippets();
         if (currentRawBody) renderNotlar(currentRawBody);
         renderDocsSchema();
@@ -1026,7 +1221,9 @@
 
     setupTabs();
     $('btn-mobile-menu')?.addEventListener('click', toggleMobileSidebar);
+    $('btn-catalog-menu')?.addEventListener('click', toggleMobileSidebar);
     $('mobile-overlay')?.addEventListener('click', closeMobileSidebar);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileSidebar(); });
 
     const searchInput = $('input-catalog-search');
     const clearBtn = $('btn-clear-search');
@@ -1042,6 +1239,7 @@
       clearTimeout(filterTimeout);
       filterTimeout = setTimeout(() => { renderTableData(); }, 300); 
     });
+    $('data-section-select').addEventListener('change', event => selectDataSection(event.target.value));
 
     $('btn-copy-url').addEventListener('click', () => { if (currentService) copyToClipboard($('endpoint-url-text').textContent, t('copied_url')); });
     $('btn-copy-code').addEventListener('click', () => { copyToClipboard($('code-snippet-box').textContent, t('copied_code')); });
@@ -1076,7 +1274,7 @@
       const keys = Object.keys(currentData[0]);
       const AYIRICI = ';';
       const hucre = v => {
-        const s = String(v ?? '');
+        const s = v && typeof v === 'object' ? JSON.stringify(v) : String(v ?? '');
         if (s.includes(AYIRICI) || s.includes('"') || s.includes('\n') || s.includes('\r')) return '"' + s.replace(/"/g, '""') + '"';
         return s;
       };

@@ -8,39 +8,32 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="assets/pdaas-tailwind.js"></script>
   <link rel="stylesheet" href="assets/pdaas.css">
 </head>
 
-<body
-  class="bg-win-base text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-win-500 selection:text-white">
+<body class="bg-win-base text-slate-100 font-sans h-screen flex flex-col overflow-hidden antialiased selection:bg-win-500 selection:text-white">
 
   <div id="pdaas-header"></div>
 
   <div class="flex-1 flex overflow-hidden relative min-h-0">
-    <aside id="sidebar"
-      class="w-72 lg:w-80 flex-none bg-win-dark border-r border-win-border flex flex-col fixed lg:static top-16 bottom-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
+    <aside id="sidebar" class="w-72 lg:w-80 flex-none bg-win-dark border-r border-win-border flex flex-col fixed lg:static top-16 bottom-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
       <div class="p-4 border-b border-win-border space-y-2 flex-none">
         <div class="flex items-center justify-between">
           <h2 class="text-sm font-semibold tracking-tight text-white uppercase flex items-center gap-2">
             <svg class="w-4 h-4 text-win-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
             </svg>
             <span data-i18n="kategoriler_title">Kategoriler</span>
           </h2>
-          <span id="toplam-sayi"
-            class="px-2 py-0.5 text-[11px] font-semibold bg-win-card text-slate-300 rounded border border-win-border">0</span>
+          <span id="toplam-sayi" class="px-2 py-0.5 text-[11px] font-semibold bg-win-card text-slate-300 rounded border border-win-border">0</span>
         </div>
         <p class="text-[11px] text-slate-500" data-i18n="kategoriler_desc">Kaynak türüne göre filtreleyin</p>
       </div>
       <div id="filter-list" class="flex-1 overflow-y-auto overscroll-contain p-3 space-y-2 min-h-0"></div>
-      <div
-        class="p-3 border-t border-win-border bg-win-dark/50 text-[11px] text-slate-500 flex items-center justify-between flex-none">
+      <div class="p-3 border-t border-win-border bg-win-dark/50 text-[11px] text-slate-500 flex items-center justify-between flex-none">
         <span>REST JSON API</span>
         <span class="flex items-center gap-1">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
@@ -52,47 +45,38 @@
     <div id="mobile-overlay" class="fixed inset-0 bg-black/60 z-20 hidden lg:hidden mica-panel"></div>
 
     <main id="main-content" class="flex-1 overflow-y-auto overscroll-contain bg-win-base flex flex-col min-h-0">
-      <div class="max-w-6xl w-full mx-auto p-4 lg:p-8 space-y-6">
+      <div class="max-w-screen-2xl w-full mx-auto p-4 lg:p-8 space-y-6">
         <div>
           <h1 class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight" data-i18n="sayfa_baslik"></h1>
           <p class="text-sm text-slate-400 mt-1" data-i18n="sayfa_aciklama"></p>
         </div>
         <div id="durum-alani" class="hidden"></div>
-        <div
-          class="bg-win-card border border-win-border rounded-xl shadow-xl overflow-hidden sticky top-4 z-30 backdrop-blur-md">
+        <div class="bg-win-card border border-win-border rounded-xl shadow-xl overflow-hidden sticky top-4 z-30 backdrop-blur-md">
           <div class="p-4 space-y-3">
             <div class="relative">
-              <svg class="w-5 h-5 text-slate-500 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              <svg class="w-5 h-5 text-slate-500 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-              <input type="text" id="arama"
-                class="w-full h-12 pl-12 pr-4 bg-win-base border border-win-border rounded-lg text-white text-sm font-medium focus:outline-none focus:border-win-500 transition placeholder-slate-500"
-                data-i18n-placeholder="arama_yer" autocomplete="off" autofocus>
+              <input type="text" id="arama" class="w-full h-12 pl-12 pr-4 bg-win-base border border-win-border rounded-lg text-white text-sm font-medium focus:outline-none focus:border-win-500 transition placeholder-slate-500" data-i18n-placeholder="arama_yer" autocomplete="off" autofocus>
             </div>
             <div id="filtre-notu" class="hidden text-[11px] text-slate-500 flex items-center gap-2"></div>
           </div>
         </div>
         <div id="sonuc-alani" class="space-y-4">
           <div class="flex-1 flex flex-col items-center justify-center py-16 text-center max-w-lg mx-auto">
-            <div
-              class="w-20 h-20 rounded-2xl bg-win-card border border-win-border text-win-500 flex items-center justify-center text-3xl mb-6 shadow-xl">
-              📋</div>
+            <div class="w-20 h-20 rounded-2xl bg-win-card border border-win-border text-win-500 flex items-center justify-center text-3xl mb-6 shadow-xl">📋</div>
             <h2 class="text-2xl font-bold text-white tracking-tight mb-2" data-i18n="bos_baslik"></h2>
             <p class="text-sm text-slate-400 leading-relaxed" data-i18n="bos_aciklama"></p>
           </div>
         </div>
         <div id="yukleniyor-spinner" class="hidden py-6 text-center">
-          <div class="inline-block w-6 h-6 border-2 border-win-500 border-t-transparent rounded-full animate-spin">
-          </div>
+          <div class="inline-block w-6 h-6 border-2 border-win-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       </div>
     </main>
   </div>
 
-  <button id="btn-scroll-top" type="button" aria-label="Yukarı git"
-    class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-xl bg-win-500 hover:bg-win-600 text-white shadow-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
+  <button id="btn-scroll-top" type="button" aria-label="Yukarı git" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-xl bg-win-500 hover:bg-win-600 text-white shadow-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 19V5m-7 7l7-7 7 7" />
     </svg>
@@ -105,56 +89,127 @@
 
   <script type="module">
     import { CONFIG, apiUrl, apiFetch } from './assets/pdaas-config.js';
-    import { $, kacis, sayi, normKod, kodTemiz, tr_lower } from './assets/pdaas-utils.js';
-    import { t, dilBaslat, dilUygula, kayitAdi, UI, getDil } from './assets/pdaas-i18n.js';
+    import { $, kacis, normKod, kodTemiz, tr_lower } from './assets/pdaas-utils.js';
+    import { t, dilBaslat, dilUygula, kayitAdi, UI, getDil, showToast } from './assets/pdaas-i18n.js';
     import { renderLayout } from './assets/pdaas-layout.js';
 
     const dil = () => getDil();
+    const sayi = n => Number(n || 0).toLocaleString(dil() === 'en' ? 'en-US' : 'tr-TR');
+    const yuzde = oran => `%${(Number(oran) * 100).toLocaleString(dil() === 'en' ? 'en-US' : 'tr-TR', { maximumFractionDigits: 2 })}`;
+    const secAd = o => (dil() === 'en' ? (o?.ad_en || o?.tanim_en || o?.ad_tr || o?.tanim_tr) : (o?.ad_tr || o?.tanim_tr || o?.ad_en || o?.tanim_en)) || '';
+    const enumEtiketi = val => ({
+      kosullu: t('belge_kosullu'), zorunlu: t('belge_zorunlu'), opsiyonel: t('belge_opsiyonel'),
+      diploma: t('tur_diploma'), ruhsat: t('tur_ruhsat'), tescil: t('tur_tescil'),
+      yeterlilik: t('tur_yeterlilik'), diger_ulkeler: t('mense_diger_ulkeler')
+    })[val] || val || '—';
+    const SUREC_ADLARI = {
+      bugday_un: ['Buğdaydan un üretimi', 'Wheat milling'], domates_salca: ['Domates salçası üretimi', 'Tomato paste production'],
+      aycicek_yagi: ['Ayçiçeği yağı üretimi', 'Sunflower oil production'], pamuk_iplik: ['Pamuktan iplik üretimi', 'Cotton spinning'],
+      seker_pancar: ['Şeker pancarından şeker üretimi', 'Sugar production from sugar beet'],
+      'demir-cevheri-pik': ['Demir cevherinden pik demir', 'Pig iron production from iron ore'],
+      ham_petrol_benzin: ['Ham petrolden benzin üretimi', 'Gasoline refining from crude oil'],
+      linyit_yarikok: ['Linyitten yarı kok üretimi', 'Semi-coke production from lignite'],
+      'tas-komur-kok': ['Taş kömüründen kok üretimi', 'Coke production from hard coal']
+    };
+    const surecAdi = r => secAd(r) || SUREC_ADLARI[r.surec_kodu]?.[dil() === 'en' ? 1 : 0] || String(r.surec_kodu || '').replaceAll('_', ' ');
+
+    Object.assign(UI.tr, {
+      kategori_gtip_desc: 'Ürün ve gümrük kodları', kategori_cpc_desc: 'Ürün ve hizmet sınıfları',
+      filtre_notu_urun: 'GTİP kartları, eşleşen vergi ve belge kayıtlarını gösterir.',
+      filtre_notu_hizmet: 'CPC, ürün ve hizmetleri sınıflandırır; GTİP’e bağlı sonuçlar ayrıca incelenebilir.',
+      filtre_notu_nace: 'NACE, ekonomik faaliyetleri ve ilgili ürün/meslek kodlarını gösterir.',
+      filtre_notu_isco: 'ISCO, meslekleri ve ilişkilendirilen faaliyetleri gösterir.',
+      kart_urun_desc: 'GTİP ürün sınıflandırması', kart_faaliyet_desc: 'Faaliyet sınıflandırması',
+      kart_meslek_desc: 'Meslek sınıflandırması',
+      bagli_cpc: 'CPC eşleşmesi', bagli_nace: 'NACE eşleşmesi', bagli_gtip: 'GTİP eşleşmesi',
+      bagli_isco: 'ISCO eşleşmesi',
+      bagli_tesvik: 'Teşvik adayı', bagli_sgk: 'SGK meslek adayı', bagli_mesleki: 'Mesleki belge',
+      bagli_vergi: 'Vergi bilgisi', bagli_randiman: 'Randıman bilgisi', bagli_belge: 'Belge bilgisi',
+      iliskili_kodlar: 'İlişkili sınıflandırma kodları', iliskili: 'İlişkili',
+      tumunu_goster: 'Tümünü göster', daha_az: 'Daha az göster',
+      kod: 'Kod', iliskili_kod_sayisi: 'İlişkili {tur} kodları',
+      urun_adi: 'Ürün adı', hizmet_adi: 'Ürün / hizmet adı', faaliyet_adi: 'Faaliyet adı', meslek_adi: 'Meslek adı',
+      kod_bulunamadi: 'İlgili kod veri setinde bulunamadı.', kaynak_yuklenemedi: 'Veri seti henüz yüklenmedi.',
+      bilgi: 'Bilgi', hata: 'Hata', genel_belgeler: 'Genel belgeler',
+      mesleki_belgeler: 'Mesleki belgeler ve yeterlilikler', belge_adi: 'Belge adı',
+      tur: 'Tür', durum: 'Durum', aciklama: 'Açıklama', puan: 'Puan',
+      tesvik_adaylari: 'Teşvik adayları (SGK)', sgk_aday: 'SGK meslek adayları',
+      ulke_turkiye: 'Türkiye', dis_alim: 'Dış alım', yurt_disi: 'Yurt dışı',
+      gumruk_vergisi: 'Gümrük vergisi', mense: 'Menşe', bilinmiyor: 'Bilinmiyor',
+      gtip_bazli: 'GTİP koduna göre değişir', gtip_ayrinti: 'İlgili GTİP kartlarından inceleyin',
+      tarife_yok: 'Genel tarife bilgisi bulunamadı', oran_bilinmiyor: 'Oran belirtilmemiş',
+      tur_diploma: 'Diploma', tur_ruhsat: 'Ruhsat', tur_tescil: 'Tescil', tur_yeterlilik: 'Yeterlilik',
+      mense_diger_ulkeler: 'Diğer ülkeler', yukari_git: 'Yukarı git'
+    });
+    Object.assign(UI.en, {
+      kategori_gtip_desc: 'Product and customs codes', kategori_cpc_desc: 'Product and service classes',
+      filtre_notu_urun: 'GTİP cards display available matching tax and document records.',
+      filtre_notu_hizmet: 'CPC classifies products and services; GTİP-specific results can be inspected separately.',
+      filtre_notu_nace: 'NACE lists economic activities and related product/occupation codes.',
+      filtre_notu_isco: 'ISCO lists occupations and related economic activities.',
+      kart_urun_desc: 'GTİP product classification', kart_faaliyet_desc: 'Activity classification',
+      kart_meslek_desc: 'Occupation classification',
+      bagli_cpc: 'CPC mapping', bagli_nace: 'NACE mapping', bagli_gtip: 'GTİP mapping',
+      bagli_isco: 'ISCO mapping',
+      bagli_tesvik: 'Incentive candidate', bagli_sgk: 'Candidate SGK occupations', bagli_mesleki: 'Occupational credential',
+      bagli_vergi: 'Tax information', bagli_randiman: 'Yield information', bagli_belge: 'Document information',
+      iliskili_kodlar: 'Related classification codes', iliskili: 'Related',
+      tumunu_goster: 'Show all', daha_az: 'Show less',
+      kod: 'Code', iliskili_kod_sayisi: 'Related {tur} codes',
+      urun_adi: 'Product name', hizmet_adi: 'Product / service name', faaliyet_adi: 'Activity name', meslek_adi: 'Occupation name',
+      kod_bulunamadi: 'The requested code was not found in the dataset.', kaynak_yuklenemedi: 'The dataset has not loaded yet.',
+      bilgi: 'Information', hata: 'Error', genel_belgeler: 'General documents',
+      mesleki_belgeler: 'Occupational credentials and qualifications', belge_adi: 'Document name',
+      tur: 'Type', durum: 'Status', aciklama: 'Description', puan: 'Points',
+      tesvik_adaylari: 'Incentive candidates (SSI)', sgk_aday: 'Candidate SGK occupations',
+      ulke_turkiye: 'Türkiye', dis_alim: 'Import', yurt_disi: 'Export',
+      gumruk_vergisi: 'Customs duty', mense: 'Origin', bilinmiyor: 'Unknown',
+      gtip_bazli: 'Varies by GTİP code', gtip_ayrinti: 'Check the associated GTİP cards',
+      tarife_yok: 'No general tariff information available', oran_bilinmiyor: 'Rate not specified',
+      tur_diploma: 'Diploma', tur_ruhsat: 'Licence', tur_tescil: 'Registration', tur_yeterlilik: 'Qualification',
+      mense_diger_ulkeler: 'Other countries', yukari_git: 'Back to top'
+    });
+    const baslikDiliniUygula = () => {
+      document.title = dil() === 'en' ? 'PDaaS · Product & Service Card' : 'PDaaS · Ürün & Hizmet Kartı';
+      $('btn-scroll-top').setAttribute('aria-label', t('yukari_git'));
+    };
 
     dilBaslat();
     renderLayout({ activePage: 'urunhizmetkarti.html' });
     dilUygula();
+    baslikDiliniUygula();
 
     const KAYNAK_ETIKET = { gtip: 'GTİP', isco: 'ISCO', cpc: 'CPC', nace: 'NACE' };
     const KAYNAK_SINIF = { gtip: 'etiket-hs', isco: 'etiket-isco', cpc: 'etiket-cpc', nace: 'etiket-nace' };
     const KAYNAK_IKON = { gtip: '📦', cpc: '⚙️', nace: '🏭', isco: '👤' };
 
     const KART_TIPI = {
-      gtip: { tip: 'urun', baslikKey: 'kart_urun', descKey: 'kart_urun_desc', kdvVar: true, otvVar: true, belgeVar: true, randimanVar: true },
-      cpc: { tip: 'hizmet', baslikKey: 'kart_hizmet', descKey: 'kart_hizmet_desc', kdvVar: true, otvVar: false, belgeVar: true, randimanVar: true },
-      nace: { tip: 'faaliyet', baslikKey: 'kart_faaliyet', descKey: 'kart_faaliyet_desc', kdvVar: false, otvVar: false, belgeVar: true, randimanVar: false },
-      isco: { tip: 'meslek', baslikKey: 'kart_meslek', descKey: 'kart_meslek_desc', kdvVar: false, otvVar: false, belgeVar: true, randimanVar: false },
+      gtip: { tip: 'urun', baslikKey: 'kart_urun', descKey: 'kart_urun_desc' },
+      cpc: { tip: 'hizmet', baslikKey: 'kart_hizmet', descKey: 'kart_hizmet_desc' },
+      nace: { tip: 'faaliyet', baslikKey: 'kart_faaliyet', descKey: 'kart_faaliyet_desc' },
+      isco: { tip: 'meslek', baslikKey: 'kart_meslek', descKey: 'kart_meslek_desc' },
     };
-
-    const VERGI_KAYNAKLARI = new Set(['gtip', 'cpc']);
 
     const VERI = {
-      gtip: { kayitlar: [], yuklendi: false, kaynak: '/api/v1/ham/gtip-kodlari.json' },
-      cpc: { kayitlar: [], yuklendi: false, kaynak: '/api/v1/ham/cpc-kodlari.json' },
-      nace: { kayitlar: [], yuklendi: false, kaynak: '/api/v1/ham/nace-kodlari.json' },
-      isco: { kayitlar: [], yuklendi: false, kaynak: '/api/v1/ham/isco-kodlari.json' },
-    };
-
-    const EK_KAYNAK = {
-      kurumlar: '/api/v1/meta/kurumlar.json',
-      gtipBelge: '/api/v1/ham/gtip-ozel-izin-belge.json',
-      gtipRandiman: '/api/v1/ham/gtip-randiman.json',
-      cpcBelge: '/api/v1/ham/cpc-ozel-izin-belge.json',
-      cpcRandiman: '/api/v1/ham/cpc-randiman.json',
-      naceBelge: '/api/v1/ham/nace-ozel-izin-belge.json',
-      iscoBelge: '/api/v1/ham/isco-ozel-izin-belge.json'
+      gtip: { kayitlar: [], yuklendi: false, kaynak: null },
+      cpc: { kayitlar: [], yuklendi: false, kaynak: null },
+      nace: { kayitlar: [], yuklendi: false, kaynak: null },
+      isco: { kayitlar: [], yuklendi: false, kaynak: null },
     };
 
     let AKTIF_FILTRE = 'hepsi', TUM_SONUCLAR = [], GORUNEN_LIMIT = 100;
     let SECILI = null;
+    let KATALOG_PROMISE = null;
+    let BASARISIZ_KAYNAKLAR = null;
 
-    const EK_VERI = {
-      kurumlar: null,
-      gtip: { belge: null, randiman: null },
-      cpc: { belge: null, randiman: null },
-      nace: { belge: null, randiman: null },
-      isco: { belge: null, randiman: null },
-    };
+    function durumDiliniUygula() {
+      if (!BASARISIZ_KAYNAKLAR) return;
+      const durum = $('durum-alani');
+      durum.innerHTML = BASARISIZ_KAYNAKLAR.length
+        ? `<div class="bg-amber-500/10 border border-amber-500/20 rounded-lg p-3 text-amber-300 text-xs">${kacis(t('yukleme_hatasi'))}: ${BASARISIZ_KAYNAKLAR.map(k => KAYNAK_ETIKET[k]).join(', ')}</div>`
+        : `<div class="bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-3 text-emerald-400 text-xs">${kacis(t('yuklendi'))}</div>`;
+    }
+
 
     const FILTRE_ITEMS = [
       { tip: 'hepsi', ikon: '🗂️', etiketKey: 'filtre_hepsi', altKey: 'kategori_hepsi_desc' },
@@ -182,6 +237,12 @@
         const altEtiket = t(item.altKey);
         const btnCls = aktif ? 'bg-win-500/20 border-win-500/40 text-win-400' : 'bg-win-card border-win-border text-slate-200 hover:bg-win-hover';
         const badgeCls = aktif ? 'bg-win-500/30 text-win-300' : 'bg-win-base text-slate-400';
+        
+        const isLoading = !VERI[item.tip === 'hepsi' ? 'gtip' : item.tip]?.yuklendi && AKTIF_FILTRE === item.tip;
+        const badgeHtml = isLoading 
+          ? `<div class="inline-block w-3 h-3 border-2 border-win-400 border-t-transparent rounded-full animate-spin"></div>`
+          : `<span id="sayi-${item.tip}" class="px-2 py-0.5 text-[10px] font-bold rounded flex-none ${badgeCls}">0</span>`;
+
         return `
           <button class="filter-btn w-full px-3 py-2.5 rounded-md border transition text-left flex items-center justify-between group ${btnCls}" data-tip="${item.tip}">
             <div class="flex items-center gap-2.5 min-w-0">
@@ -191,17 +252,24 @@
                 <div class="text-[10px] text-slate-500 truncate">${kacis(altEtiket)}</div>
               </div>
             </div>
-            <span id="sayi-${item.tip}" class="px-2 py-0.5 text-[10px] font-bold rounded flex-none ${badgeCls}">0</span>
+            ${badgeHtml}
           </button>`;
       }).join('');
 
       updateFilterCounts();
 
       container.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', async () => {
           AKTIF_FILTRE = btn.dataset.tip;
           renderFilterList();
-          aramayiBaslat();
+          
+          if (AKTIF_FILTRE !== 'hepsi' && !VERI[AKTIF_FILTRE].yuklendi) {
+            $('sonuc-alani').innerHTML = `<div class="p-16 text-center text-slate-400"><div class="inline-block w-6 h-6 border-2 border-win-500 border-t-transparent rounded-full animate-spin mb-3"></div><p>${t('yukleniyor')}</p></div>`;
+            await fetchKaynak(AKTIF_FILTRE);
+          } else {
+            aramayiBaslat();
+          }
+          
           detayKapat();
           closeMobileSidebar();
         });
@@ -216,39 +284,20 @@
       } catch (e) { return null; }
     }
 
-    async function kurumlariYukle() {
-      const d = await fetchGuvenli(EK_KAYNAK.kurumlar);
-      if (!d) { EK_VERI.kurumlar = {}; return; }
-      const duz = {};
-      const k = d.kurumlar || d;
-      if (Array.isArray(k)) {
-        for (const item of k) if (item?.kod) duz[item.kod] = item;
-      } else {
-        for (const v of Object.values(k)) {
-          if (v && typeof v === 'object' && !v.ad_tr && !v.ad) Object.assign(duz, v);
-          else if (v && typeof v === 'object' && v.ad_tr) {
-            const kod = Object.keys(k).find(x => k[x] === v);
-            if (kod) duz[kod] = v;
-          }
-        }
+    async function fetchKaynak(kaynakTip) {
+      if (VERI[kaynakTip].yuklendi) return;
+      if (!VERI[kaynakTip].kaynak) {
+        await KATALOG_PROMISE;
       }
-      EK_VERI.kurumlar = duz;
-    }
+      if (!VERI[kaynakTip].kaynak) return;
 
-    async function ekVeriYukle(kaynak) {
-      if (!EK_VERI[kaynak]) return;
-      const harita = {
-        gtip: { belge: EK_KAYNAK.gtipBelge, randiman: EK_KAYNAK.gtipRandiman },
-        cpc: { belge: EK_KAYNAK.cpcBelge, randiman: EK_KAYNAK.cpcRandiman },
-        nace: { belge: EK_KAYNAK.naceBelge, randiman: null },
-        isco: { belge: EK_KAYNAK.iscoBelge, randiman: null },
-      };
-      const y = harita[kaynak];
-      if (!y) return;
-      const gorevler = [];
-      if (y.belge && !EK_VERI[kaynak].belge) gorevler.push(fetchGuvenli(y.belge).then(d => { if (d) EK_VERI[kaynak].belge = d; }));
-      if (y.randiman && !EK_VERI[kaynak].randiman) gorevler.push(fetchGuvenli(y.randiman).then(d => { if (d) EK_VERI[kaynak].randiman = d; }));
-      await Promise.all(gorevler);
+      const d = await fetchGuvenli(VERI[kaynakTip].kaynak);
+      if (d && Array.isArray(d.kayitlar)) {
+        VERI[kaynakTip].kayitlar = d.kayitlar;
+        VERI[kaynakTip].yuklendi = true;
+        updateFilterCounts();
+        aramayiBaslat(); 
+      }
     }
 
     async function tumVeriYukle() {
@@ -256,75 +305,53 @@
       durum.classList.remove('hidden');
       durum.innerHTML = `<div class="bg-win-card border border-win-border rounded-lg p-3 flex items-center gap-3 text-win-100 text-xs"><div class="inline-block w-4 h-4 border-2 border-win-500 border-t-transparent rounded-full animate-spin"></div><span>${t('yukleniyor')}</span></div>`;
 
-      try {
+      // Düz api/v1 klasöründe katalog bulunamazsa da sınıflama kartları açılsın.
+      VERI.gtip.kaynak = '/gtip-konsolide.json';
+      VERI.cpc.kaynak = '/cpc-konsolide.json';
+      VERI.nace.kaynak = '/nace-konsolide.json';
+      VERI.isco.kaynak = '/isco-konsolide.json';
+      KATALOG_PROMISE = (async () => {
         const KATALOG_ENDPOINT = CONFIG?.KATALOG_ENDPOINT || '/katalog.json';
         const kat = await fetchGuvenli(KATALOG_ENDPOINT);
-
+        
         if (kat && kat.servisler) {
           const getUrl = (kod) => {
             const s = kat.servisler.find(x => x.kod === kod);
             if (!s) return null;
-            const k = s.katmanlar.ham || s.katmanlar.konsolide;
+            const k = s.katmanlar?.konsolide || s.katmanlar?.ham;
             if (!k || !k.url) return null;
-            // Katalog index.json (parça listesi) döndürüyorsa, aynı klasördeki
-            // tek dosyayı tercih et — çünkü bu sayfa "kayitlar" bekliyor.
-            if (k.url.endsWith('/index.json')) {
-              return k.url.replace('/index.json', '.json');
-            }
+            if (k.url.endsWith('/index.json')) return k.url.replace('/index.json', '.json');
             return k.url;
           };
 
-          const gtipTamUrl = getUrl('gtip-tam');
-          if (gtipTamUrl) VERI.gtip.kaynak = gtipTamUrl;
-          else if (getUrl('gtip-kodlari')) VERI.gtip.kaynak = getUrl('gtip-kodlari');
-
-          const cpcTamUrl = getUrl('cpc-tam');
-          if (cpcTamUrl) VERI.cpc.kaynak = cpcTamUrl;
-          else if (getUrl('cpc-kodlari')) VERI.cpc.kaynak = getUrl('cpc-kodlari');
-
-          const naceTamUrl = getUrl('nace-tam');
-          if (naceTamUrl) VERI.nace.kaynak = naceTamUrl;
-          else if (getUrl('nace-kodlari')) VERI.nace.kaynak = getUrl('nace-kodlari');
-
-          const iscoTamUrl = getUrl('isco-tam');
-          if (iscoTamUrl) VERI.isco.kaynak = iscoTamUrl;
-          else if (getUrl('isco-kodlari')) VERI.isco.kaynak = getUrl('isco-kodlari');
-
-          if (getUrl('gtip-ozel-izin-belge')) EK_KAYNAK.gtipBelge = getUrl('gtip-ozel-izin-belge');
-          if (getUrl('gtip-randiman')) EK_KAYNAK.gtipRandiman = getUrl('gtip-randiman');
-          if (getUrl('cpc-ozel-izin-belge')) EK_KAYNAK.cpcBelge = getUrl('cpc-ozel-izin-belge');
-          if (getUrl('cpc-randiman')) EK_KAYNAK.cpcRandiman = getUrl('cpc-randiman');
-          if (getUrl('nace-ozel-izin-belge')) EK_KAYNAK.naceBelge = getUrl('nace-ozel-izin-belge');
-          if (getUrl('isco-ozel-izin-belge')) EK_KAYNAK.iscoBelge = getUrl('isco-ozel-izin-belge');
+          if (getUrl('gtip-konsolide') || getUrl('gtip-tam') || getUrl('gtip-kodlari')) {
+            VERI.gtip.kaynak = getUrl('gtip-konsolide') || getUrl('gtip-tam') || getUrl('gtip-kodlari');
+          }
+          if (getUrl('cpc-konsolide') || getUrl('cpc-tam') || getUrl('cpc-kodlari')) {
+            VERI.cpc.kaynak = getUrl('cpc-konsolide') || getUrl('cpc-tam') || getUrl('cpc-kodlari');
+          }
+          if (getUrl('nace-konsolide') || getUrl('nace-tam') || getUrl('nace-kodlari')) {
+            VERI.nace.kaynak = getUrl('nace-konsolide') || getUrl('nace-tam') || getUrl('nace-kodlari');
+          }
+          if (getUrl('isco-konsolide') || getUrl('isco-tam') || getUrl('isco-kodlari')) {
+            VERI.isco.kaynak = getUrl('isco-konsolide') || getUrl('isco-tam') || getUrl('isco-kodlari');
+          }
         }
+      })();
 
-        const [gtipR, cpcR, naceR, iscoR] = await Promise.all([
-          fetchGuvenli(VERI.gtip.kaynak), fetchGuvenli(VERI.cpc.kaynak), fetchGuvenli(VERI.nace.kaynak), fetchGuvenli(VERI.isco.kaynak),
-        ]);
+      await KATALOG_PROMISE;
 
-        if (gtipR) { VERI.gtip.kayitlar = gtipR.kayitlar || []; VERI.gtip.yuklendi = true; }
-        if (cpcR) { VERI.cpc.kayitlar = cpcR.kayitlar || []; VERI.cpc.yuklendi = true; }
-        if (naceR) { VERI.nace.kayitlar = naceR.kayitlar || []; VERI.nace.yuklendi = true; }
-        if (iscoR) { VERI.isco.kayitlar = iscoR.kayitlar || []; VERI.isco.yuklendi = true; }
+      await Promise.allSettled([
+        fetchKaynak('gtip'),
+        fetchKaynak('cpc'),
+        fetchKaynak('nace'),
+        fetchKaynak('isco')
+      ]);
 
-        kurumlariYukle();
-        updateFilterCounts();
-
-        durum.innerHTML = `<div class="bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-3 flex items-center gap-3 text-emerald-400 text-xs"><span class="w-2 h-2 rounded-full bg-emerald-400"></span><span>${t('yuklendi')}</span></div>`;
-        setTimeout(() => { durum.classList.add('hidden'); durum.innerHTML = ''; }, 2000);
-      } catch (e) {
-        console.error("Veri yükleme hatası:", e);
-        durum.innerHTML = `<div class="bg-rose-500/10 border border-rose-500/20 rounded-lg p-3 text-rose-400 text-xs">${t('yukleme_hatasi')}</div>`;
-      }
-    }
-
-    function kurumAdi(kurum_kod) {
-      if (!kurum_kod) return '—';
-      if (EK_VERI.kurumlar && EK_VERI.kurumlar[kurum_kod]) {
-        const k = EK_VERI.kurumlar[kurum_kod];
-        return dil() === 'en' ? (k.ad_en || k.ad_tr) : (k.ad_tr || k.ad_en);
-      }
-      return kurum_kod;
+      const basarisiz = Object.keys(VERI).filter(k => !VERI[k].yuklendi);
+      BASARISIZ_KAYNAKLAR = basarisiz;
+      durumDiliniUygula();
+      if (!basarisiz.length) setTimeout(() => { durum.classList.add('hidden'); durum.innerHTML = ''; }, 2000);
     }
 
     function gtipZinciri(kod) {
@@ -359,10 +386,11 @@
       return zincir;
     }
 
-    function agacKur(kaynakTip, tumKayitlar, eslesenKodlar) {
+    function agacKur(kaynakTip, tumKayitlar, eslesenKodlarSet) {
       const kodMap = new Map(tumKayitlar.map(k => [normKod(k.kod), k]));
       const dahil = new Map();
-      for (const kod of eslesenKodlar) {
+      
+      for (const kod of eslesenKodlarSet) {
         const k = kodMap.get(kod);
         if (!k) continue;
         const zincir = ataZinciri(k, kodMap, kaynakTip);
@@ -389,29 +417,31 @@
       const MAX_SONUC = 50000;
 
       for (const [kaynakTip, veri] of kaynaklar) {
-        const eslesenKodlar = [];
+        if (!veri.yuklendi) continue;
+        const eslesenKodlarSet = new Set();
+        
         for (const k of veri.kayitlar) {
           if (!sorgu) {
-            eslesenKodlar.push(normKod(k.kod));
-            if (eslesenKodlar.length >= MAX_SONUC) break;
+            eslesenKodlarSet.add(normKod(k.kod));
+            if (eslesenKodlarSet.size >= MAX_SONUC) break;
             continue;
           }
           const kod = normKod(k.kod);
-          const ad = tr_lower(kayitAdi(k));
-          if (kod.includes(sorgu) || ad.includes(sorgu)) {
-            eslesenKodlar.push(kod);
-            if (eslesenKodlar.length >= MAX_SONUC) break;
+          const adlar = [k.ad_tr, k.ad_en, k.tanim_tr, k.tanim_en].filter(Boolean).map(tr_lower);
+          if (kod.includes(sorgu) || adlar.some(ad => ad.includes(sorgu))) {
+            eslesenKodlarSet.add(kod);
+            if (eslesenKodlarSet.size >= MAX_SONUC) break;
           }
         }
 
         if (!sorgu) {
           for (const k of veri.kayitlar) {
-            if (eslesenKodlar.includes(normKod(k.kod))) {
+            if (eslesenKodlarSet.has(normKod(k.kod))) {
               tumSonuclar.push({ kaynak: kaynakTip, kayit: k, eslesme: true });
             }
           }
         } else {
-          tumSonuclar.push(...agacKur(kaynakTip, veri.kayitlar, eslesenKodlar));
+          tumSonuclar.push(...agacKur(kaynakTip, veri.kayitlar, eslesenKodlarSet));
         }
       }
       return tumSonuclar;
@@ -423,6 +453,72 @@
       const metin = notlar[AKTIF_FILTRE] || '';
       if (metin) { not.classList.remove('hidden'); not.innerHTML = `<span class="text-win-400">ℹ️</span> <span>${kacis(metin)}</span>`; }
       else { not.classList.add('hidden'); not.innerHTML = ''; }
+    }
+
+    function renderBadges(kaynak, kayit) {
+      const badges = [];
+      const badgeBase = 'inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-sans font-semibold border';
+      const badge = (css, title, label) => `<span class="${badgeBase} ${css}" title="${kacis(title)}">${kacis(label)}</span>`;
+
+      if (kaynak !== 'cpc' && Array.isArray(kayit.cpc) && kayit.cpc.length > 0) {
+        badges.push(badge('bg-blue-500/10 border-blue-500/30 text-blue-400', t('bagli_cpc'), 'CPC'));
+      }
+      if (kaynak !== 'nace' && Array.isArray(kayit.nace) && kayit.nace.length > 0) {
+        badges.push(badge('bg-emerald-500/10 border-emerald-500/30 text-emerald-400', t('bagli_nace'), 'NACE'));
+      }
+      if (kaynak !== 'gtip' && Array.isArray(kayit.gtip) && kayit.gtip.length > 0) {
+        badges.push(badge('bg-orange-500/10 border-orange-500/30 text-orange-400', t('bagli_gtip'), 'GTİP'));
+      }
+      if (kaynak !== 'isco' && Array.isArray(kayit.isco) && kayit.isco.length > 0) {
+        badges.push(badge('bg-indigo-500/10 border-indigo-500/30 text-indigo-400', t('bagli_isco'), 'ISCO'));
+      }
+      
+      // Teşvik Adayı kontrolü
+      if (Array.isArray(kayit.tesvik_adaylari) && kayit.tesvik_adaylari.length > 0) {
+        badges.push(badge('bg-yellow-500/10 border-yellow-500/30 text-yellow-400', t('bagli_tesvik'), t('bagli_tesvik')));
+      }
+
+      // SGK Aday listesi var mı kontrolü
+      if (Array.isArray(kayit.sgk_adaylari) && kayit.sgk_adaylari.length > 0) {
+        badges.push(badge('bg-teal-500/10 border-teal-500/30 text-teal-400', t('bagli_sgk'), t('bagli_sgk')));
+      }
+
+      // Mesleki Belgeler kontrolü
+      if (Array.isArray(kayit.mesleki_belgeler) && kayit.mesleki_belgeler.length > 0) {
+        badges.push(badge('bg-indigo-500/10 border-indigo-500/30 text-indigo-400', t('bagli_mesleki'), t('bagli_mesleki')));
+      }
+      
+      let hasVergi = false;
+      if (kayit.vergi && typeof kayit.vergi === 'object') {
+        const checkDolu = (obj) => {
+          if (!obj) return false;
+          if (Array.isArray(obj)) return obj.length > 0;
+          if (typeof obj === 'object') return Object.keys(obj).length > 0;
+          return false;
+        };
+        if (checkDolu(kayit.vergi.yurtici) || checkDolu(kayit.vergi.ithalat) || checkDolu(kayit.vergi.ihracat)) hasVergi = true;
+      }
+      if (hasVergi) badges.push(badge('bg-rose-500/10 border-rose-500/30 text-rose-400', t('bagli_vergi'), t('vergi')));
+      
+      let hasRandiman = false;
+      if (Array.isArray(kayit.randiman)) {
+        hasRandiman = kayit.randiman.length > 0;
+      } else if (kayit.randiman && typeof kayit.randiman === 'object') {
+        hasRandiman = (kayit.randiman.girdi_oldugu_kurallar?.length > 0) || (kayit.randiman.cikti_oldugu_kurallar?.length > 0) || Object.keys(kayit.randiman).length > 0;
+      }
+      if (hasRandiman) badges.push(badge('bg-purple-500/10 border-purple-500/30 text-purple-400', t('bagli_randiman'), t('randiman_baslik')));
+      
+      let hasBelge = false;
+      if (Array.isArray(kayit.belgeler)) {
+        hasBelge = kayit.belgeler.length > 0;
+      } else if (kayit.belgeler && typeof kayit.belgeler === 'object') {
+        const b = kayit.belgeler;
+        if ((Array.isArray(b.yurtici) && b.yurtici.length > 0) || (Array.isArray(b.ithalat) && b.ithalat.length > 0) || (Array.isArray(b.ihracat) && b.ihracat.length > 0)) hasBelge = true;
+      }
+      if (hasBelge) badges.push(badge('bg-slate-500/10 border-slate-500/30 text-slate-400', t('bagli_belge'), t('belge_baslik')));
+
+      if (!badges.length) return '';
+      return `<div class="flex items-center gap-1.5 flex-wrap justify-end">${badges.join('')}</div>`;
     }
 
     function sonuclariCiz() {
@@ -451,7 +547,7 @@
       for (const kaynak of ['gtip', 'cpc', 'nace', 'isco']) {
         const g = gruplar[kaynak];
         if (!g.length) continue;
-        const kaynakKdvVar = VERGI_KAYNAKLARI.has(kaynak);
+        const kaynakKdvVar = ['gtip', 'cpc'].includes(kaynak);
 
         html += `
           <div class="bg-win-card border border-win-border rounded-xl overflow-hidden shadow-xl mb-4">
@@ -459,7 +555,6 @@
               <span class="text-base">${KAYNAK_IKON[kaynak]}</span>
               <span class="${KAYNAK_SINIF[kaynak]} px-2 py-0.5 rounded text-[10px] font-bold tracking-wider">${KAYNAK_ETIKET[kaynak]}</span>
               <span class="text-xs font-bold text-slate-300">${KAYNAK_ETIKET[kaynak]} ${kacis(t('kod_baslik'))}</span>
-              ${!kaynakKdvVar ? `<span class="text-[10px] text-slate-500 italic hidden sm:inline">· ${kacis(t('vergi_disi_aciklama'))}</span>` : ''}
               <span class="ml-auto text-[10px] text-slate-500 font-medium whitespace-nowrap">${sayi(g.length)} ${kacis(t('satir'))}</span>
             </div>
             <div class="divide-y divide-win-border/60">
@@ -468,12 +563,18 @@
           const ad = kayitAdi(s.kayit);
           const kod = normKod(s.kayit.kod);
           const opak = s.eslesme ? 'text-slate-100 font-semibold bg-win-dark/40' : 'text-slate-400 opacity-60';
+          
+          const badgesHtml = renderBadges(kaynak, s.kayit);
+          
           return `
                   <div class="px-4 py-3 hover:bg-win-hover transition cursor-pointer flex items-center justify-between gap-3 kart-tikla ${opak}" data-idx="${globalIdx}">
                     <div class="min-w-0 flex items-center gap-3 flex-1">
                       <span class="text-base flex-none" title="${KAYNAK_ETIKET[kaynak]}">${KAYNAK_IKON[kaynak]}</span>
                       <code class="text-xs font-mono text-win-100 bg-win-base px-2 py-1 rounded border border-win-border flex-none">${kacis(kod)}</code>
                       <span class="text-sm truncate">${kacis(ad)}</span>
+                    </div>
+                    <div class="flex-none hidden sm:block">
+                      ${badgesHtml}
                     </div>
                   </div>`;
         }).join('')}
@@ -512,9 +613,9 @@
       $('main-content').style.overflow = 'hidden';
       $('kapat-btn')?.addEventListener('click', detayKapat);
 
-      await ekVeriYukle(kaynak);
       $('detay-icerik').innerHTML = kartUret(s);
       $('kapat-btn')?.addEventListener('click', detayKapat);
+      $('detay-icerik').scrollTop = 0; // Modal açılınca en üste dön
     }
 
     function detayKapat() {
@@ -523,6 +624,154 @@
       modal.classList.add('hidden');
       modal.classList.remove('flex');
       $('main-content').style.overflow = '';
+    }
+
+    // YENİ: İlişkili kodlara tıklandığında ilgili karta gitme fonksiyonu
+    window.kodaGit = function(kaynakTip, hedefKod) {
+      const normHedef = normKod(hedefKod);
+      // Eğer ilgili kaynak yüklenmemişse önce yükle
+      if (!VERI[kaynakTip] || !VERI[kaynakTip].yuklendi) {
+        showToast(t('bilgi'), t('kaynak_yuklenemedi'), true);
+        return;
+      }
+
+      const kayit = VERI[kaynakTip].kayitlar.find(k => normKod(k.kod) === normHedef);
+      if (kayit) {
+        detayGoster({ kaynak: kaynakTip, kayit: kayit, eslesme: true });
+      } else {
+        showToast(t('hata'), t('kod_bulunamadi'), true);
+      }
+    };
+
+    function vergiKartiCiz(baslik, altBaslik, renkClass, icerikHtml) {
+      return `
+        <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+          <div class="absolute top-0 left-0 w-1 h-full ${renkClass}"></div>
+          <div>
+            <div class="flex items-center justify-between mb-4 pl-2">
+              <h4 class="font-bold text-white text-sm">${baslik}</h4>
+              <span class="bg-win-hover text-slate-300 text-[10px] px-2 py-0.5 rounded border border-win-border">${altBaslik}</span>
+            </div>
+            <div class="space-y-3 pl-2">
+              ${icerikHtml}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function secVergiKaydi(deger) {
+      if (!Array.isArray(deger)) return deger;
+      if (!deger.length) return null;
+      if (deger.length === 1) return deger[0];
+      const farkliOranlar = new Set(deger.map(v => JSON.stringify([v?.oran ?? null, v?.istisna ?? null, v?.uygulama ?? null, v?.durum ?? null]))).size > 1;
+      return farkliOranlar
+        ? { durum: 'gtip_bazli', ref: t('gtip_ayrinti') }
+        : { ...deger[0], ref: t('gtip_ayrinti') };
+    }
+
+    function referansListeCiz(baslik, liste, renk, kaynakTip) {
+      if (!liste || liste.length === 0) return '';
+      const ilk5 = liste.slice(0, 5);
+      const kalan = liste.slice(5);
+      const idSuffix = `${kaynakTip || 'sgk'}-${baslik.toLowerCase().replace(/[^a-z]/g, '')}`;
+      
+      // Tıklanabilir satır
+      const satirCiz = (g) => `
+        <tr class="hover:bg-win-hover/80 transition group ${kaynakTip ? 'cursor-pointer' : ''}" ${kaynakTip ? `onclick="window.kodaGit('${kaynakTip}', '${kacis(g.kod)}')"` : ''}>
+          <td class="px-4 py-2.5 font-mono text-xs text-${renk}-400 font-bold w-32 group-hover:text-${renk}-300">${kacis(g.kod)}</td>
+          <td class="px-4 py-2.5 text-xs text-slate-300 group-hover:text-white flex items-center justify-between">
+            <span>${kacis(secAd(g) || '')}</span>
+            ${kaynakTip ? `<svg class="w-3 h-3 text-${renk}-400 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>` : ''}
+          </td>
+        </tr>
+      `;
+
+      return `
+        <div class="bg-win-card border border-win-border rounded-xl overflow-hidden mb-4 shadow-sm">
+          <div class="px-4 py-2.5 bg-win-dark/60 border-b border-win-border">
+             <h4 class="text-[11px] font-bold uppercase tracking-wider text-win-400 flex items-center gap-2">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                ${t('iliskili')} ${baslik} ${t('kod')} (${sayi(liste.length)})
+             </h4>
+          </div>
+          <table class="w-full text-left">
+            <tbody class="divide-y divide-win-border/40">
+              ${ilk5.map(satirCiz).join('')}
+            </tbody>
+            ${kalan.length > 0 ? `
+            <tbody class="divide-y divide-win-border/40 hidden" id="kalan-${idSuffix}">
+              ${kalan.map(satirCiz).join('')}
+            </tbody>
+            ` : ''}
+          </table>
+          ${kalan.length > 0 ? `
+            <button type="button" class="w-full py-2 bg-win-hover/50 hover:bg-win-active text-win-400 text-[11px] font-semibold text-center transition border-t border-win-border" onclick="
+              const tb = document.getElementById('kalan-${idSuffix}');
+              const isHidden = tb.classList.contains('hidden');
+              tb.classList.toggle('hidden');
+              this.textContent = isHidden ? '${t('daha_az')}' : '${t('tumunu_goster')} (+${sayi(kalan.length)})';
+            ">
+              ${t('tumunu_goster')} (+${sayi(kalan.length)})
+            </button>
+          ` : ''}
+        </div>
+      `;
+    }
+
+    function tesvikListeCiz(baslik, liste) {
+      if (!liste || liste.length === 0) return '';
+      const ilk5 = liste.slice(0, 5);
+      const kalan = liste.slice(5);
+      const idSuffix = 'tesvik';
+      
+      const satirCiz = (t) => `
+        <tr class="hover:bg-win-hover/40 transition">
+          <td class="px-4 py-2.5 font-mono text-xs text-yellow-400 font-bold w-24">${kacis(t.kod)}</td>
+          <td class="px-4 py-2.5 text-xs text-slate-300">${kacis(secAd(t))}</td>
+          <td class="px-4 py-2.5 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-bold ${t.durum === 'kosullu' ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20' : 'bg-slate-500/10 text-slate-400'}">${kacis(enumEtiketi(t.durum))}</span></td>
+          <td class="px-4 py-2.5 text-right font-mono text-xs text-slate-400">${kacis(t.puan ?? '—')}</td>
+        </tr>
+      `;
+
+      return `
+        <div class="border-b border-win-border bg-win-dark/20 p-5">
+          <h3 class="text-[11px] font-bold uppercase tracking-wider text-win-400 mb-4 flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zM12 21v-8a2 2 0 10-2 2h2z"/></svg>
+            ${baslik} (${liste.length})
+          </h3>
+          <div class="bg-win-card border border-win-border rounded-xl overflow-hidden shadow-sm">
+            <table class="w-full text-left">
+              <thead class="bg-win-hover text-slate-400 font-semibold uppercase tracking-wider text-[10px]">
+                <tr>
+                  <th class="px-4 py-2.5">${t('kod')}</th>
+                  <th class="px-4 py-2.5">${t('aciklama')}</th>
+                  <th class="px-4 py-2.5 text-center">${t('durum')}</th>
+                  <th class="px-4 py-2.5 text-right">${t('puan')}</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-win-border/40">
+                ${ilk5.map(satirCiz).join('')}
+              </tbody>
+              ${kalan.length > 0 ? `
+              <tbody class="divide-y divide-win-border/40 hidden" id="kalan-${idSuffix}">
+                ${kalan.map(satirCiz).join('')}
+              </tbody>
+              ` : ''}
+            </table>
+            ${kalan.length > 0 ? `
+              <button type="button" class="w-full py-2 bg-win-hover/50 hover:bg-win-active text-win-400 text-[11px] font-semibold text-center transition border-t border-win-border" onclick="
+                const tb = document.getElementById('kalan-${idSuffix}');
+                const isHidden = tb.classList.contains('hidden');
+                tb.classList.toggle('hidden');
+                this.textContent = isHidden ? '${t('daha_az')}' : '${t('tumunu_goster')} (+${sayi(kalan.length)})';
+              ">
+                ${t('tumunu_goster')} (+${sayi(kalan.length)})
+              </button>
+            ` : ''}
+          </div>
+        </div>
+      `;
     }
 
     function kartUret(secim) {
@@ -535,159 +784,143 @@
 
       let vergiHtml = '';
 
-      if (kartTip.kdvVar || kartTip.otvVar) {
-        const kdv = kayit.kdv || { oran: 0.20, grup: 'genel' };
-        const otv = kayit.otv || { grup: 'otv_yok' };
-        const tevk = kayit.tevkifat || { grup: 'tevkifat_yok' };
+      if (kayit.vergi && typeof kayit.vergi === 'object') {
+        const vergiBloklari = [];
+        const isDolu = (obj) => obj && Object.keys(obj).length > 0;
 
-        let kdvOranStr = `%${(kdv.oran * 100).toFixed(0)}`;
-        let kdvAciklama = kdv.grup ? `Grup: ${kdv.grup}` : 'Genel Oran';
+        if (isDolu(kayit.vergi.yurtici)) {
+          const v = kayit.vergi.yurtici;
+          let kdvVal = secVergiKaydi(v.kdv);
+          let kdvText = kdvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), kdvSub = '', kdvClass = 'text-amber-400';
+          if (kdvVal) {
+            if (kdvVal.istisna) { kdvText = t('istisna_var'); kdvSub = kdvVal.ref; }
+            else if (kdvVal.oran != null) { kdvText = yuzde(kdvVal.oran); kdvClass = 'text-win-100'; kdvSub = kdvVal.ref; }
+            else kdvSub = kdvVal.ref;
+          }
 
-        let otvDeger = t('otv_muaf');
-        let otvAciklama = t('otv_yok');
-        if (otv.grup && otv.grup !== 'otv_yok') {
-          if (otv.oran) {
-            otvDeger = `%${(otv.oran * 100).toFixed(0)}`;
-          } else if (otv.matrah_dilimleri && otv.matrah_dilimleri.length > 0) {
-            const oranlar = otv.matrah_dilimleri.map(m => m.oran || 0).filter(o => o > 0);
-            if (oranlar.length > 0) {
-              const minO = Math.min(...oranlar);
-              const maxO = Math.max(...oranlar);
-              if (minO === maxO) otvDeger = `%${(minO * 100).toFixed(1).replace('.0', '')}`;
-              else otvDeger = `%${(minO * 100).toFixed(0)} - %${(maxO * 100).toFixed(0)}`;
-            } else {
-              otvDeger = 'Uygulanır';
-            }
-          } else if (otv.vergi_tipi === 'maktu' || otv.ek_kriterler?.vergi_tipi === 'maktu') {
-            otvDeger = 'Maktu';
-          } else {
-            otvDeger = 'Uygulanır';
+          let otvVal = secVergiKaydi(v.otv);
+          let otvText = otvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), otvSub = '', otvClass = 'text-amber-400';
+          if (otvVal) {
+            if (otvVal.istisna) { otvText = t('istisna_var'); otvSub = otvVal.ref; }
+            else if (otvVal.oran != null) { otvText = yuzde(otvVal.oran); otvClass = 'text-rose-400'; otvSub = otvVal.ref; }
+            else otvSub = otvVal.ref;
           }
-          otvAciklama = otv.liste ? `${otv.liste} Sayılı Liste` : 'ÖTV Listesi';
-          if (otv.matrah_dilimleri && otv.matrah_dilimleri.length > 0) {
-            otvAciklama += ' · Matraha göre değişkenlik gösterir';
+
+          let tevkVal = secVergiKaydi(v.tevkifat);
+          let tevkHtml = '';
+          if (tevkVal?.durum === 'gtip_bazli') {
+            tevkHtml = `<div class="pt-2 mt-2 border-t border-win-border/50 text-xs text-amber-400">${t('kdv_tevkifat')}: ${t('gtip_bazli')}<div class="text-[10px] text-slate-500">${t('gtip_ayrinti')}</div></div>`;
+          } else if (tevkVal && tevkVal.grup !== 'tevkifat_yok') {
+            const oranStr = tevkVal.oran != null ? `${yuzde(tevkVal.oran)}${tevkVal.oran_kesir ? ` (${tevkVal.oran_kesir})` : ''}` : t('oran_bilinmiyor');
+            let kam = t('uygulanmaz'), sir = t('uygulanmaz'), sah = t('uygulanmaz');
+            const alicilar = tevkVal.alici_tipleri || ['*'];
+            if (alicilar.includes('*') || alicilar.includes('kamu')) kam = oranStr;
+            if (alicilar.includes('*') || alicilar.includes('sirket')) sir = oranStr;
+            if (alicilar.includes('*') || alicilar.includes('sahis')) sah = oranStr;
+            
+            const row = (tip, val) => {
+              const isU = val === t('uygulanmaz');
+              return `<div class="flex justify-between text-[11px] py-0.5 border-b border-win-border/30 last:border-0"><span class="text-slate-400">${t('tip_' + tip)}</span><span class="font-mono ${isU ? 'text-emerald-400' : 'text-win-100 font-bold'}">${val}</span></div>`;
+            };
+            tevkHtml = `
+              <div class="pt-2 mt-2 border-t border-win-border/50">
+                <div class="text-[10px] text-slate-400 mb-1">${t('kdv_tevkifat')} (${kacis(secAd(tevkVal) || tevkVal.grup || '')})</div>
+                ${row('kamu', kam)}${row('sirket', sir)}${row('sahis', sah)}
+              </div>
+            `;
           }
+
+          const icerik = `
+            ${kdvVal ? `<div class="flex justify-between items-start gap-4"><span class="text-xs text-slate-400 font-medium">${t('kdv_orani')}</span><div class="text-right"><div class="font-mono text-sm font-bold ${kdvClass}">${kdvText}</div><div class="text-[10px] text-slate-500">${kacis(kdvSub || '')}</div></div></div>` : ''}
+            ${otvVal ? `<div class="flex justify-between items-start gap-4"><span class="text-xs text-slate-400 font-medium">${t('otv_orani')}</span><div class="text-right"><div class="font-mono text-sm font-bold ${otvClass}">${otvText}</div><div class="text-[10px] text-slate-500">${kacis(otvSub || '')}</div></div></div>` : ''}
+            ${tevkHtml}
+          `;
+          if (icerik.trim()) vergiBloklari.push(vergiKartiCiz(t('islem_yurtici'), t('ulke_turkiye'), 'bg-win-500', icerik));
         }
 
-        let tevkKam = t('uygulanmaz');
-        let tevkSir = t('uygulanmaz');
-        let tevkSah = t('uygulanmaz');
-        let tevkAciklama = '';
-
-        if (tevk.grup && tevk.grup !== 'tevkifat_yok') {
-          const oranStr = tevk.oran_kesir ? `%${(tevk.oran * 100).toFixed(0)} (${tevk.oran_kesir})` : `%${(tevk.oran * 100).toFixed(0)}`;
-          tevkAciklama = tevk.ad_tr || tevk.grup;
-
-          const alicilar = tevk.alici_tipleri || ['*'];
-          if (alicilar.includes('*') || alicilar.includes('kamu')) tevkKam = oranStr;
-          if (alicilar.includes('*') || alicilar.includes('sirket')) tevkSir = oranStr;
-          if (alicilar.includes('*') || alicilar.includes('sahis')) tevkSah = oranStr;
+        if (isDolu(kayit.vergi.ithalat)) {
+          const v = kayit.vergi.ithalat;
+          let gumrukVal = secVergiKaydi(v['gumruk-vergisi']);
+          let gumrukText = gumrukVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), gumrukSub = '', gumrukClass = 'text-amber-400';
+          if (gumrukVal) {
+             if (gumrukVal.oran != null) { gumrukText = yuzde(gumrukVal.oran); gumrukClass = 'text-amber-300'; gumrukSub = gumrukVal.mense_varsayimi ? `${t('mense')}: ${enumEtiketi(gumrukVal.mense_varsayimi)}` : ''; }
+             else if (gumrukVal.uygulama === 'genel_tarife_bulunmuyor') { gumrukText = t('tarife_yok'); }
+             else gumrukSub = gumrukVal.ref || '';
+          }
+          let kdvVal = secVergiKaydi(v.kdv);
+          let kdvText = kdvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), kdvSub = '', kdvClass = 'text-amber-400';
+          if (kdvVal) {
+            if (kdvVal.istisna) { kdvText = t('istisna_var'); kdvSub = kdvVal.ref; }
+            else if (kdvVal.oran != null) { kdvText = yuzde(kdvVal.oran); kdvClass = 'text-win-100'; kdvSub = kdvVal.ref; }
+            else kdvSub = kdvVal.ref;
+          }
+          let otvVal = secVergiKaydi(v.otv);
+          let otvText = otvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), otvSub = '', otvClass = 'text-amber-400';
+          if (otvVal) {
+            if (otvVal.istisna) { otvText = t('istisna_var'); otvSub = otvVal.ref; }
+            else if (otvVal.oran != null) { otvText = yuzde(otvVal.oran); otvClass = 'text-rose-400'; otvSub = otvVal.ref; }
+            else otvSub = otvVal.ref;
+          }
+          const icerik = `
+            ${gumrukVal ? `<div class="flex justify-between items-start gap-4"><span class="text-xs text-slate-400 font-medium">${t('gumruk_vergisi')}</span><div class="text-right"><div class="font-mono text-sm font-bold ${gumrukClass}">${gumrukText}</div><div class="text-[10px] text-slate-500">${kacis(gumrukSub)}</div></div></div>` : ''}
+            ${kdvVal ? `<div class="flex justify-between items-start gap-4"><span class="text-xs text-slate-400 font-medium">${t('kdv_orani')}</span><div class="text-right"><div class="font-mono text-sm font-bold ${kdvClass}">${kdvText}</div><div class="text-[10px] text-slate-500">${kacis(kdvSub || '')}</div></div></div>` : ''}
+            ${otvVal ? `<div class="flex justify-between items-start gap-4"><span class="text-xs text-slate-400 font-medium">${t('otv_orani')}</span><div class="text-right"><div class="font-mono text-sm font-bold ${otvClass}">${otvText}</div><div class="text-[10px] text-slate-500">${kacis(otvSub || '')}</div></div></div>` : ''}
+          `;
+          if (icerik.trim()) vergiBloklari.push(vergiKartiCiz(t('islem_ithalat'), t('dis_alim'), 'bg-amber-500', icerik));
         }
 
-        const renderTevkSatir = (tip, deger) => {
-          const isUygulanmaz = deger === t('uygulanmaz');
-          const color = isUygulanmaz ? 'text-emerald-400' : 'text-win-100 font-bold';
-          const icon = tip === 'kamu' ? '🏛️' : tip === 'sirket' ? '🏢' : '👤';
-          return `
-            <div class="flex justify-between items-center text-[11px] py-1 border-b border-win-border/30 last:border-0">
-              <span class="text-slate-400 flex items-center gap-1.5"><span class="text-xs">${icon}</span> ${t('tip_' + tip)}</span>
-              <span class="font-mono ${color}">${deger}</span>
+        if (isDolu(kayit.vergi.ihracat)) {
+          const v = kayit.vergi.ihracat;
+          let gumrukVal = secVergiKaydi(v['gumruk-vergisi']);
+          let gumrukText = gumrukVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), gumrukSub = '', gumrukClass = 'text-amber-400';
+          if (gumrukVal) {
+             if (gumrukVal.oran != null) { gumrukText = yuzde(gumrukVal.oran); gumrukClass = 'text-amber-300'; gumrukSub = gumrukVal.mense_varsayimi ? `${t('mense')}: ${enumEtiketi(gumrukVal.mense_varsayimi)}` : ''; }
+             else if (gumrukVal.uygulama === 'genel_tarife_bulunmuyor') { gumrukText = t('tarife_yok'); }
+             else gumrukSub = gumrukVal.ref || '';
+          }
+          let kdvVal = secVergiKaydi(v.kdv);
+          let kdvText = kdvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), kdvSub = '', kdvClass = 'text-amber-400';
+          if (kdvVal) {
+            if (kdvVal.istisna) { kdvText = t('istisna_var'); kdvSub = kdvVal.ref; }
+            else if (kdvVal.oran != null) { kdvText = yuzde(kdvVal.oran); kdvClass = 'text-win-100'; kdvSub = kdvVal.ref; }
+            else kdvSub = kdvVal.ref;
+          }
+          let otvVal = secVergiKaydi(v.otv);
+          let otvText = otvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), otvSub = '', otvClass = 'text-amber-400';
+          if (otvVal) {
+            if (otvVal.istisna) { otvText = t('istisna_var'); otvSub = otvVal.ref; }
+            else if (otvVal.oran != null) { otvText = yuzde(otvVal.oran); otvClass = 'text-rose-400'; otvSub = otvVal.ref; }
+            else otvSub = otvVal.ref;
+          }
+          const icerik = `
+            ${kdvVal ? `<div class="flex justify-between items-start gap-4"><span class="text-xs text-slate-400 font-medium">${t('kdv_orani')}</span><div class="text-right"><div class="font-mono text-sm font-bold ${kdvClass}">${kdvText}</div><div class="text-[10px] text-slate-500">${kacis(kdvSub || '')}</div></div></div>` : ''}
+            ${otvVal ? `<div class="flex justify-between items-start gap-4"><span class="text-xs text-slate-400 font-medium">${t('otv_orani')}</span><div class="text-right"><div class="font-mono text-sm font-bold ${otvClass}">${otvText}</div><div class="text-[10px] text-slate-500">${kacis(otvSub || '')}</div></div></div>` : ''}
+            ${gumrukVal ? `<div class="flex justify-between items-start gap-4"><span class="text-xs text-slate-400 font-medium">${t('gumruk_vergisi')}</span><div class="text-right"><div class="font-mono text-sm font-bold ${gumrukClass}">${gumrukText}</div><div class="text-[10px] text-slate-500">${kacis(gumrukSub)}</div></div></div>` : ''}
+          `;
+          if (icerik.trim()) vergiBloklari.push(vergiKartiCiz(t('islem_ihracat'), t('yurt_disi'), 'bg-emerald-500', icerik));
+        }
+
+        if (vergiBloklari.length) {
+          const gridClass = vergiBloklari.length === 3 ? 'lg:grid-cols-3' : (vergiBloklari.length === 2 ? 'lg:grid-cols-2' : 'lg:grid-cols-1');
+          vergiHtml = `
+            <div class="border-b border-win-border bg-win-dark/20 p-5">
+              <h3 class="text-[11px] font-bold uppercase tracking-wider text-win-400 mb-4 flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                ${t('vergi')}
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 ${gridClass} gap-4">
+                ${vergiBloklari.join('')}
+              </div>
             </div>
           `;
-        };
-
-        vergiHtml = `
-          <div class="border-b border-win-border bg-win-dark/20 p-5">
-            <h3 class="text-[11px] font-bold uppercase tracking-wider text-win-400 mb-4 flex items-center gap-2">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              ${t('vergi')}
-            </h3>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-1 h-full bg-win-500"></div>
-                <div class="flex items-center justify-between mb-4 pl-2">
-                  <h4 class="font-bold text-white text-sm">${t('islem_yurtici')}</h4>
-                  <span class="bg-win-500/20 text-win-300 text-[10px] px-2 py-0.5 rounded border border-win-500/30">Türkiye</span>
-                </div>
-                
-                <div class="space-y-3 pl-2">
-                  <div class="flex justify-between items-start gap-4">
-                    <span class="text-xs text-slate-400 font-medium">${t('kdv_orani')}</span>
-                    <div class="text-right">
-                      <div class="font-mono text-sm font-bold text-win-100">${kdvOranStr}</div>
-                      <div class="text-[10px] text-slate-500">${kdvAciklama}</div>
-                    </div>
-                  </div>
-                  
-                  <div class="flex justify-between items-start gap-4">
-                    <span class="text-xs text-slate-400 font-medium">${t('otv_orani')}</span>
-                    <div class="text-right">
-                      <div class="font-mono text-sm font-bold ${otvDeger === t('otv_muaf') ? 'text-emerald-400' : 'text-rose-400'}">${otvDeger}</div>
-                      <div class="text-[10px] text-slate-500">${otvAciklama}</div>
-                    </div>
-                  </div>
-
-                  <div class="pt-2 border-t border-win-border/50">
-                    <div class="flex justify-between items-start gap-4 mb-2">
-                      <span class="text-xs text-slate-400 font-medium">${t('kdv_tevkifat')}</span>
-                      <span class="text-[10px] text-slate-500 text-right max-w-[150px] leading-tight">${tevkAciklama}</span>
-                    </div>
-                    <div class="bg-win-dark/30 rounded border border-win-border/50 p-2">
-                      ${renderTevkSatir('kamu', tevkKam)}
-                      ${renderTevkSatir('sirket', tevkSir)}
-                      ${renderTevkSatir('sahis', tevkSah)}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
-                <div class="flex items-center justify-between mb-4 pl-2">
-                  <h4 class="font-bold text-white text-sm">${t('islem_ihracat')}</h4>
-                  <span class="bg-emerald-500/20 text-emerald-300 text-[10px] px-2 py-0.5 rounded border border-emerald-500/30">Yurt Dışı</span>
-                </div>
-                
-                <div class="space-y-3 pl-2">
-                  <div class="flex justify-between items-start gap-4">
-                    <span class="text-xs text-slate-400 font-medium">${t('kdv_orani')}</span>
-                    <div class="text-right">
-                      <div class="font-mono text-sm font-bold text-emerald-400">%0</div>
-                      <div class="text-[10px] text-slate-500">Tam İstisna (md.11)</div>
-                    </div>
-                  </div>
-                  
-                  <div class="flex justify-between items-start gap-4">
-                    <span class="text-xs text-slate-400 font-medium">${t('otv_orani')}</span>
-                    <div class="text-right">
-                      <div class="font-mono text-sm font-bold text-emerald-400">${t('muaf')}</div>
-                      <div class="text-[10px] text-slate-500">İhracat İstisnası</div>
-                    </div>
-                  </div>
-
-                  <div class="flex justify-between items-start gap-4">
-                    <span class="text-xs text-slate-400 font-medium">${t('kdv_tevkifat')}</span>
-                    <div class="text-right">
-                      <div class="font-mono text-sm font-bold text-emerald-400">${t('uygulanmaz')}</div>
-                      <div class="text-[10px] text-slate-500">İhracatta tevkifat olmaz</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
+        }
       }
 
       let sgkHtml = '';
       if (kaynak === 'nace' && kayit.sgk_prim) {
         const sgk = kayit.sgk_prim;
-
-        // Teşvik adını dil dosyasından çek
         const tesvikAdi = sgk.tesvik_kodu === '5510' && sgk.isveren_pay_tevkisli < 20
-          ? t('sgk_tesvik_imalat')
-          : t('sgk_tesvik_diger');
+          ? t('sgk_tesvik_imalat') : t('sgk_tesvik_diger');
 
         sgkHtml = `
           <div class="border-b border-win-border bg-win-dark/20 p-5">
@@ -697,7 +930,6 @@
             </h3>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <!-- İşçi Payı -->
               <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-1 h-full bg-win-500"></div>
                 <div class="pl-2">
@@ -705,22 +937,16 @@
                     <span class="text-xs text-slate-400 font-medium">${t('sgk_isci_payi')}</span>
                     <span class="text-[10px] bg-win-500/20 text-win-300 px-1.5 py-0.5 rounded">${t('sgk_sabit')}</span>
                   </div>
-                  <div class="font-mono text-lg font-bold text-win-100">%${sgk.isci_pay}</div>
-                  <div class="text-[10px] text-slate-500 mt-1">${t('sgk_isci_aciklama')}</div>
+                  <div class="font-mono text-lg font-bold text-win-100">%${sayi(sgk.isci_pay)}</div>
                 </div>
               </div>
-
-              <!-- İşveren Payı (Teşviksiz) -->
               <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-1 h-full bg-rose-500"></div>
                 <div class="pl-2">
                   <span class="text-xs text-slate-400 font-medium block mb-2">${t('sgk_isveren_tevkisiz')}</span>
-                  <div class="font-mono text-lg font-bold text-rose-400">%${sgk.isveren_pay_tevkisiz}</div>
-                  <div class="text-[10px] text-slate-500 mt-1">${t('sgk_standart_oran')}</div>
+                  <div class="font-mono text-lg font-bold text-rose-400">%${sayi(sgk.isveren_pay_tevkisiz)}</div>
                 </div>
               </div>
-
-              <!-- İşveren Payı (Teşvikli) -->
               <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
                 <div class="pl-2">
@@ -728,7 +954,7 @@
                     <span class="text-xs text-slate-400 font-medium">${t('sgk_isveren_tevkisli')}</span>
                     <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-1.5 py-0.5 rounded">${t('sgk_indirimli')}</span>
                   </div>
-                  <div class="font-mono text-lg font-bold text-emerald-400">%${sgk.isveren_pay_tevkisli}</div>
+                  <div class="font-mono text-lg font-bold text-emerald-400">%${sayi(sgk.isveren_pay_tevkisli)}</div>
                   <div class="text-[10px] text-win-400 mt-1">${tesvikAdi}</div>
                 </div>
               </div>
@@ -738,26 +964,28 @@
       }
 
       let randimanHtml = '';
-      if (kartTip.randimanVar) {
-        const rd = kayit.randiman;
-        if (rd && (rd.girdi_oldugu_kurallar?.length || rd.cikti_oldugu_kurallar?.length)) {
+      if (kayit.randiman && (Array.isArray(kayit.randiman) ? kayit.randiman.length > 0 : true)) {
+        const rdArr = Array.isArray(kayit.randiman) ? kayit.randiman : [];
+        const rd = kayit.randiman || {}; 
+        const girdiKurallar = rdArr.length ? rdArr.flatMap(r => Array.isArray(r.surecler) ? r.surecler.map(s => ({ ...s, gtip_kodu: r.gtip_kodu })) : [r]) : (rd.girdi_oldugu_kurallar || []);
+        const ciktiKurallar = rd.cikti_oldugu_kurallar || [];
+
+        if (girdiKurallar.length || ciktiKurallar.length) {
           const rdSatirlar = [];
-          const kurumAd = t('kurum_gib');
-          if (kaynak === 'gtip') {
-            if (rd.girdi_oldugu_kurallar?.length) {
-              for (const r of rd.girdi_oldugu_kurallar) {
-                const ad = dil() === 'en' ? (r.ad_en || r.ad_tr) : (r.ad_tr || '');
-                if (r.randiman_orani != null) rdSatirlar.push({ alan: `${ad} — ${t('randiman_oran')}`, deger: `%${(r.randiman_orani * 100).toFixed(1)}`, kurum: kurumAd, vurgu: 'muaf' });
-                if (r.fire_orani != null) rdSatirlar.push({ alan: `${ad} — ${t('fire_oran')}`, deger: `%${(r.fire_orani * 100).toFixed(1)}`, kurum: kurumAd, vurgu: 'otv' });
-              }
-            }
-            if (rd.cikti_oldugu_kurallar?.length) {
-              for (const r of rd.cikti_oldugu_kurallar) {
-                const ad = dil() === 'en' ? (r.ad_en || r.ad_tr) : (r.ad_tr || '');
-                rdSatirlar.push({ alan: `${ad} — ${t('randiman_oran')}`, deger: `%${(r.randiman_orani * 100).toFixed(1)}`, kurum: kurumAd, vurgu: 'muaf' });
-              }
+          if (girdiKurallar.length) {
+            for (const r of girdiKurallar) {
+              const ad = `${r.gtip_kodu ? r.gtip_kodu + ' · ' : ''}${surecAdi(r)}`;
+              if (r.randiman_orani != null) rdSatirlar.push({ alan: `${ad} — ${t('randiman_oran')}`, deger: yuzde(r.randiman_orani), vurgu: 'muaf' });
+              if (r.fire_orani != null) rdSatirlar.push({ alan: `${ad} — ${t('fire_oran')}`, deger: yuzde(r.fire_orani), vurgu: 'otv' });
             }
           }
+          if (ciktiKurallar.length) {
+            for (const r of ciktiKurallar) {
+              const ad = `${r.gtip_kodu ? r.gtip_kodu + ' · ' : ''}${surecAdi(r)}`;
+              if (r.randiman_orani != null) rdSatirlar.push({ alan: `${ad} — ${t('randiman_oran')}`, deger: yuzde(r.randiman_orani), vurgu: 'muaf' });
+            }
+          }
+          
           if (rdSatirlar.length) {
             randimanHtml = `
               <div class="border-b border-win-border">
@@ -766,7 +994,6 @@
                   <tr class="hover:bg-win-hover/40 transition">
                     <td class="px-4 py-2.5 text-slate-300 text-xs font-medium">${kacis(s.alan)}</td>
                     <td class="px-4 py-2.5 font-mono text-xs text-emerald-400 font-semibold">${kacis(s.deger)}</td>
-                    <td class="px-4 py-2.5 text-[11px] text-slate-500">${kacis(s.kurum || '')}</td>
                   </tr>
                 `).join('')}</tbody></table>
               </div>
@@ -775,85 +1002,214 @@
         }
       }
 
+      // --- ZORUNLU BELGELER ---
       let belgeHtml = '';
-      if (kartTip.belgeVar) {
-        const belgeler = kayit.belgeler || { yurtici: [], ithalat: [], ihracat: [] };
+      if (kayit.belgeler) {
+        if (Array.isArray(kayit.belgeler)) {
+          if (kayit.belgeler.length > 0) {
+            const renderBelgeListesi = (liste) => {
+              return `<div class="space-y-2">` + liste.map(b => {
+                const seviye = b.durum || b.seviye || 'opsiyonel';
+                const kosulObj = b.kosul || {};
+                const kosul = typeof kosulObj === 'object' ? (dil() === 'en' ? (kosulObj.en || kosulObj.tr) : (kosulObj.tr || kosulObj.en)) : kosulObj;
+                const seviyeEtiket = seviye === 'zorunlu' ? t('belge_zorunlu') : seviye === 'kosullu' ? t('belge_kosullu') : t('belge_opsiyonel');
+                const adMetin = secAd(b);
+                const seviyeRenk = seviye === 'zorunlu' ? 'bg-rose-500/10 border-rose-500/20 text-rose-400' : (seviye === 'kosullu' ? 'bg-amber-500/10 border-amber-500/20 text-amber-400' : 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400');
 
-        const ilkHane = String(kod).charAt(0);
-        const hizmetMi = (kaynak === 'cpc' && ['5', '6', '7', '8', '9'].includes(ilkHane));
-        const isNaceVeyaIsco = (kaynak === 'nace' || kaynak === 'isco' || hizmetMi);
-        const gridCols = isNaceVeyaIsco ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-3';
+                return `<div class="bg-win-card border border-win-border rounded p-2.5 flex flex-col gap-1">
+                  <div class="flex justify-between items-start gap-2">
+                    <div>
+                      <span class="text-xs font-semibold text-slate-200 block">${kacis(adMetin)}</span>
+                      ${b.tur ? `<span class="text-[10px] text-slate-500 font-mono uppercase">${kacis(enumEtiketi(b.tur))}</span>` : ''}
+                    </div>
+                    <span class="px-1.5 py-0.5 text-[9px] font-bold rounded border ${seviyeRenk} whitespace-nowrap">${seviyeEtiket}</span>
+                  </div>
+                  ${kosul ? `<div class="text-[10px] text-slate-400">${kacis(kosul)}</div>` : ''}
+                </div>`;
+              }).join('') + `</div>`;
+            };
 
-        const renderBelgeListesi = (liste) => {
-          if (!liste || liste.length === 0) {
-            return `<div class="text-[11px] text-slate-500 italic py-2">Bu işlem için özel belge şartı bulunmamaktadır.</div>`;
-          }
-          return `<div class="space-y-2">` + liste.map(b => {
-            const seviye = b.seviye || 'opsiyonel';
-            const kosul = b.kosul_tr || '';
-
-            const seviyeEtiket = seviye === 'zorunlu' ? t('belge_zorunlu') : seviye === 'kosullu' ? t('belge_kosullu') : t('belge_opsiyonel');
-            const adMetin = dil() === 'en' ? (b.ad_en || b.ad_tr) : b.ad_tr;
-            const kurumAd = kurumAdi(b.kurum_kod) || b.kurum || '—';
-            const seviyeRenk = seviye === 'zorunlu' ? 'bg-rose-500/10 border-rose-500/20 text-rose-400' : (seviye === 'kosullu' ? 'bg-amber-500/10 border-amber-500/20 text-amber-400' : 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400');
-
-            return `<div class="bg-win-card border border-win-border rounded p-2.5 flex flex-col gap-1">
-              <div class="flex justify-between items-start gap-2">
-                <span class="text-xs font-semibold text-slate-200">${kacis(adMetin)}</span>
-                <span class="px-1.5 py-0.5 text-[9px] font-bold rounded border ${seviyeRenk} whitespace-nowrap">${seviyeEtiket}</span>
+            belgeHtml = `
+              <div class="border-b border-win-border bg-win-dark/20 p-5">
+                <h3 class="text-[11px] font-bold uppercase tracking-wider text-win-400 mb-4 flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  ${t('belge_baslik')}
+                </h3>
+                <div class="grid grid-cols-1 gap-4">
+                  <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-win-500"></div>
+                    <div class="flex items-center justify-between mb-3 pl-2">
+                      <h4 class="font-bold text-white text-xs">${t('genel_belgeler')}</h4>
+                    </div>
+                    <div class="pl-2">
+                      ${renderBelgeListesi(kayit.belgeler)}
+                    </div>
+                  </div>
+                </div>
               </div>
-              ${kosul ? `<div class="text-[10px] text-slate-400">${kacis(kosul)}</div>` : ''}
-              <div class="text-[10px] text-slate-500 mt-1 flex items-center gap-1"><span class="text-win-400">🏛️</span> ${kacis(kurumAd)}</div>
-            </div>`;
-          }).join('') + `</div>`;
-        };
+            `;
+          }
+        } else if (typeof kayit.belgeler === 'object') {
+          const belgeler = kayit.belgeler;
+          const hasYurtici = Array.isArray(belgeler.yurtici) && belgeler.yurtici.length > 0;
+          const hasIthalat = Array.isArray(belgeler.ithalat) && belgeler.ithalat.length > 0;
+          const hasIhracat = Array.isArray(belgeler.ihracat) && belgeler.ihracat.length > 0;
 
-        belgeHtml = `
+          if (hasYurtici || hasIthalat || hasIhracat) {
+            const count = [hasYurtici, hasIthalat, hasIhracat].filter(Boolean).length;
+            const gridCols = count === 3 ? 'grid-cols-1 md:grid-cols-3' : (count === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1');
+
+            const renderBelgeListesi = (liste) => {
+              if (!liste || liste.length === 0) return '';
+              return `<div class="space-y-2">` + liste.map(b => {
+                const seviye = b.durum || b.seviye || 'opsiyonel';
+                const kosulObj = b.kosul || {};
+                const kosul = typeof kosulObj === 'object' ? (dil() === 'en' ? (kosulObj.en || kosulObj.tr) : (kosulObj.tr || kosulObj.en)) : kosulObj;
+                const seviyeEtiket = seviye === 'zorunlu' ? t('belge_zorunlu') : seviye === 'kosullu' ? t('belge_kosullu') : t('belge_opsiyonel');
+                const adMetin = secAd(b);
+                const seviyeRenk = seviye === 'zorunlu' ? 'bg-rose-500/10 border-rose-500/20 text-rose-400' : (seviye === 'kosullu' ? 'bg-amber-500/10 border-amber-500/20 text-amber-400' : 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400');
+
+                return `<div class="bg-win-card border border-win-border rounded p-2.5 flex flex-col gap-1">
+                  <div class="flex justify-between items-start gap-2">
+                    <span class="text-xs font-semibold text-slate-200">${kacis(adMetin)}</span>
+                    <span class="px-1.5 py-0.5 text-[9px] font-bold rounded border ${seviyeRenk} whitespace-nowrap">${seviyeEtiket}</span>
+                  </div>
+                  ${b.tur ? `<div class="text-[10px] text-slate-500">${kacis(enumEtiketi(b.tur))}</div>` : ''}
+                  ${kosul ? `<div class="text-[10px] text-slate-400">${kacis(kosul)}</div>` : ''}
+                </div>`;
+              }).join('') + `</div>`;
+            };
+
+            belgeHtml = `
+              <div class="border-b border-win-border bg-win-dark/20 p-5">
+                <h3 class="text-[11px] font-bold uppercase tracking-wider text-win-400 mb-4 flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  ${t('belge_baslik')}
+                </h3>
+                
+                <div class="grid ${gridCols} gap-4">
+                  ${hasYurtici ? `
+                  <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-win-500"></div>
+                    <div class="flex items-center justify-between mb-3 pl-2">
+                      <h4 class="font-bold text-white text-xs">${t('islem_yurtici')}</h4>
+                    </div>
+                    <div class="pl-2">
+                      ${renderBelgeListesi(belgeler.yurtici)}
+                    </div>
+                  </div>
+                  ` : ''}
+
+                  ${hasIthalat ? `
+                  <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
+                    <div class="flex items-center justify-between mb-3 pl-2">
+                      <h4 class="font-bold text-white text-xs">${t('islem_ithalat')}</h4>
+                    </div>
+                    <div class="pl-2">
+                      ${renderBelgeListesi(belgeler.ithalat)}
+                    </div>
+                  </div>
+                  ` : ''}
+
+                  ${hasIhracat ? `
+                  <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+                    <div class="flex items-center justify-between mb-3 pl-2">
+                      <h4 class="font-bold text-white text-xs">${t('islem_ihracat')}</h4>
+                    </div>
+                    <div class="pl-2">
+                      ${renderBelgeListesi(belgeler.ihracat)}
+                    </div>
+                  </div>
+                  ` : ''}
+                </div>
+              </div>
+            `;
+          }
+        }
+      }
+
+      // --- MESLEKİ BELGELER ---
+      let meslekiBelgeHtml = '';
+      if (Array.isArray(kayit.mesleki_belgeler) && kayit.mesleki_belgeler.length > 0) {
+        meslekiBelgeHtml = `
           <div class="border-b border-win-border bg-win-dark/20 p-5">
             <h3 class="text-[11px] font-bold uppercase tracking-wider text-win-400 mb-4 flex items-center gap-2">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              ${t('belge_baslik')}
+              ${t('mesleki_belgeler')}
             </h3>
-            
-            <div class="grid ${gridCols} gap-4">
-              <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-1 h-full bg-win-500"></div>
-                <div class="flex items-center justify-between mb-3 pl-2">
-                  <h4 class="font-bold text-white text-xs">${t('islem_yurtici')}</h4>
-                  <span class="bg-win-500/20 text-win-300 text-[9px] px-1.5 py-0.5 rounded border border-win-500/30">Türkiye</span>
-                </div>
-                <div class="pl-2">
-                  ${renderBelgeListesi(belgeler.yurtici)}
-                </div>
-              </div>
+            <div class="bg-win-card border border-win-border rounded-xl overflow-hidden shadow-sm">
+              <table class="w-full text-left">
+                <thead class="bg-win-hover text-slate-400 font-semibold uppercase tracking-wider text-[10px]">
+                  <tr>
+                    <th class="px-4 py-2.5">${t('belge_adi')}</th>
+                    <th class="px-4 py-2.5">${t('tur')}</th>
+                    <th class="px-4 py-2.5 text-center">${t('durum')}</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-win-border/40">
+                  ${kayit.mesleki_belgeler.map(b => {
+                    const seviye = b.durum || 'opsiyonel';
+                    const seviyeEtiket = seviye === 'zorunlu' ? t('belge_zorunlu') : seviye === 'kosullu' ? t('belge_kosullu') : t('belge_opsiyonel');
+                    const seviyeRenk = seviye === 'zorunlu' ? 'bg-rose-500/10 border-rose-500/20 text-rose-400' : (seviye === 'kosullu' ? 'bg-amber-500/10 border-amber-500/20 text-amber-400' : 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400');
+                    const adMetin = secAd(b);
+                    const turMetin = enumEtiketi(b.tur);
 
-              ${!isNaceVeyaIsco ? `
-              <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
-                <div class="flex items-center justify-between mb-3 pl-2">
-                  <h4 class="font-bold text-white text-xs">${dil() === 'en' ? 'Import' : 'İthalat'}</h4>
-                  <span class="bg-amber-500/20 text-amber-300 text-[9px] px-1.5 py-0.5 rounded border border-amber-500/30">${dil() === 'en' ? 'Foreign' : 'Dış Alım'}</span>
-                </div>
-                <div class="pl-2">
-                  ${renderBelgeListesi(belgeler.ithalat)}
-                </div>
-              </div>
-
-              <div class="bg-win-card border border-win-border rounded-xl p-4 shadow-sm relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
-                <div class="flex items-center justify-between mb-3 pl-2">
-                  <h4 class="font-bold text-white text-xs">${t('islem_ihracat')}</h4>
-                  <span class="bg-emerald-500/20 text-emerald-300 text-[9px] px-1.5 py-0.5 rounded border border-emerald-500/30">${dil() === 'en' ? 'Export' : 'Yurt Dışı'}</span>
-                </div>
-                <div class="pl-2">
-                  ${renderBelgeListesi(belgeler.ihracat)}
-                </div>
-              </div>
-              ` : ''}
+                    return `
+                      <tr class="hover:bg-win-hover/40 transition">
+                        <td class="px-4 py-2.5 text-xs text-slate-300 font-medium">${kacis(adMetin)}</td>
+                        <td class="px-4 py-2.5 text-xs text-slate-400">${kacis(turMetin)}</td>
+                        <td class="px-4 py-2.5 text-center">
+                          <span class="px-2 py-0.5 rounded text-[10px] font-bold border ${seviyeRenk} whitespace-nowrap">${seviyeEtiket}</span>
+                        </td>
+                      </tr>
+                    `;
+                  }).join('')}
+                </tbody>
+              </table>
             </div>
           </div>
         `;
       }
+
+      let tesvikHtml = '';
+      if (Array.isArray(kayit.tesvik_adaylari) && kayit.tesvik_adaylari.length > 0) {
+        tesvikHtml = tesvikListeCiz(t('tesvik_adaylari'), kayit.tesvik_adaylari);
+      }
+
+      let referansHtml = '';
+      if (kaynak !== 'gtip') {
+        const gtipList = Array.isArray(kayit.gtip) ? kayit.gtip : [];
+        if (gtipList.length > 0) referansHtml += referansListeCiz('GTİP', gtipList, 'orange', 'gtip');
+      }
+      if (kaynak !== 'cpc' && kaynak !== 'gtip') {
+        const cpcList = Array.isArray(kayit.cpc) ? kayit.cpc : [];
+        if (cpcList.length > 0) referansHtml += referansListeCiz('CPC', cpcList, 'blue', 'cpc');
+      }
+      if (kaynak !== 'nace') {
+        const naceList = Array.isArray(kayit.nace) ? kayit.nace : [];
+        if (naceList.length > 0) referansHtml += referansListeCiz('NACE', naceList, 'emerald', 'nace');
+      }
+      if (kaynak !== 'isco') {
+        const iscoList = Array.isArray(kayit.isco) ? kayit.isco : [];
+        if (iscoList.length > 0) referansHtml += referansListeCiz('ISCO', iscoList, 'indigo', 'isco');
+      }
+      
+      if (Array.isArray(kayit.sgk_adaylari) && kayit.sgk_adaylari.length > 0) {
+        // SGK meslek kodları ayrı bir kod sistemidir; ISCO kartına yanlış yönlendirme yapılmaz.
+        referansHtml += referansListeCiz(t('sgk_aday'), kayit.sgk_adaylari, 'teal', null);
+      }
+
+      const referansWrapper = referansHtml ? `
+        <div class="border-b border-win-border bg-win-dark/20 p-5">
+          <h3 class="text-[11px] font-bold uppercase tracking-wider text-win-400 mb-4 flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            ${t('iliskili_kodlar')}
+          </h3>
+          ${referansHtml}
+        </div>
+      ` : '';
 
       return `
         <div class="bg-win-card border border-win-border rounded-xl shadow-2xl overflow-hidden modal-anim">
@@ -870,96 +1226,94 @@
           ${sgkHtml}
           ${randimanHtml}
           ${belgeHtml}
+          ${meslekiBelgeHtml}
+          ${tesvikHtml}
+          ${referansWrapper}
         </div>`;
     }
+    
     function kaynakBazliAlanlar(secim) {
       const { kaynak, kayit } = secim;
       const kod = normKod(kayit.kod);
       const adTR = kayit.tanim_tr || kayit.ad_tr || '';
       const adEN = kayit.tanim_en || kayit.ad_en || '';
+      const ad = dil() === 'en' ? (adEN || adTR) : (adTR || adEN);
       const satirlar = [];
 
-      // NACE verisini hazırla
-      let naceKod = '', naceTR = '', naceEN = '';
-      if (kayit.nace && kayit.nace.kod) {
-        naceKod = kayit.nace.kod;
+      let cpcKod = '', cpcTR = '', cpcEN = '';
+      if (Array.isArray(kayit.cpc) && kayit.cpc.length > 0) {
+        cpcKod = kayit.cpc[0].kod;
+        cpcTR = kayit.cpc[0].ad_tr || '';
+        cpcEN = kayit.cpc[0].ad_en || '';
+      } else if (kayit.cpc && kayit.cpc.kod) {
+        cpcKod = kayit.cpc.kod;
+        cpcTR = kayit.cpc.ad_tr || '';
+        cpcEN = kayit.cpc.ad_en || '';
+      }
 
-        // Noktaları kaldırarak eşleştir (01.11 ile 0111'i eşitler)
+      let naceKod = '', naceTR = '', naceEN = '';
+      if (Array.isArray(kayit.nace) && kayit.nace.length > 0) {
+        naceKod = kayit.nace[0].kod;
+        naceTR = kayit.nace[0].ad_tr || '';
+        naceEN = kayit.nace[0].ad_en || '';
+      } else if (kayit.nace && kayit.nace.kod) {
+        naceKod = kayit.nace.kod;
         const hedefKod = String(naceKod).replace(/\./g, '');
         const naceObj = VERI.nace.kayitlar.find(n => String(n.kod).replace(/\./g, '') === hedefKod);
-
         if (naceObj) {
-          // Farklı veri setlerindeki olası alan adlarını kontrol et
           naceTR = naceObj.tanim_tr || naceObj.ad_tr || naceObj.ad || '';
           naceEN = naceObj.tanim_en || naceObj.ad_en || '';
         }
       }
 
-      // --- GTİP KARTI ---
       if (kaynak === 'gtip') {
-        satirlar.push({ alan: t('gtip_kod'), deger: kod, kurum: `${t('kurum_ticaret')} / ${t('kurum_tuik')}`, vurgu: 'kod' });
-        satirlar.push({ alan: t('urun_ad_tr'), deger: adTR, kurum: t('kurum_ticaret') });
-        satirlar.push({ alan: t('urun_ad_en'), deger: adEN, kurum: t('kurum_ticaret') });
-
+        satirlar.push({ alan: t('gtip_kod'), deger: kod, vurgu: 'kod' });
+        if (ad) satirlar.push({ alan: t('urun_adi'), deger: ad });
+        if (cpcKod) {
+          satirlar.push({ alan: t('cpc_kod'), deger: cpcKod, vurgu: 'kod' });
+          const cpcAd = dil() === 'en' ? (cpcEN || cpcTR) : (cpcTR || cpcEN);
+          if (cpcAd) satirlar.push({ alan: t('hizmet_adi'), deger: cpcAd });
+        }
         if (naceKod) {
-          satirlar.push({ alan: t('nace_kod'), deger: naceKod, kurum: t('kurum_tuik'), vurgu: 'kod' });
-          satirlar.push({ alan: t('faaliyet_ad_tr'), deger: naceTR, kurum: t('kurum_tuik') });
-          satirlar.push({ alan: t('faaliyet_ad_en'), deger: naceEN, kurum: t('kurum_tuik') });
-        } else {
-          satirlar.push({ alan: t('nace_kod'), deger: '—', kurum: t('kurum_tuik'), vurgu: 'bos' });
+          satirlar.push({ alan: t('nace_kod'), deger: naceKod, vurgu: 'kod' });
+          const naceAd = dil() === 'en' ? (naceEN || naceTR) : (naceTR || naceEN);
+          if (naceAd) satirlar.push({ alan: t('faaliyet_adi'), deger: naceAd });
         }
       }
 
-
-      // --- CPC KARTI ---
       if (kaynak === 'cpc') {
-        const ilkHane = String(kod).charAt(0);
-        const hizmetMi = (kaynak === 'cpc' && ['5', '6', '7', '8', '9'].includes(ilkHane));
-        const isNaceVeyaIsco = (kaynak === 'nace' || kaynak === 'isco' || hizmetMi);
-        const gridCols = isNaceVeyaIsco ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-3';
-
-        satirlar.push({ alan: t('cpc_kod'), deger: kod, kurum: t('kurum_tuik'), vurgu: 'kod' });
-        satirlar.push({ alan: t('hizmet_ad_tr'), deger: adTR, kurum: t('kurum_ticaret') });
-        satirlar.push({ alan: t('hizmet_ad_en'), deger: adEN, kurum: t('kurum_ticaret') });
-
+        satirlar.push({ alan: t('cpc_kod'), deger: kod, vurgu: 'kod' });
+        if (ad) satirlar.push({ alan: t('hizmet_adi'), deger: ad });
         if (naceKod) {
-          satirlar.push({ alan: t('nace_kod'), deger: naceKod, kurum: t('kurum_tuik'), vurgu: 'kod' });
-          satirlar.push({ alan: t('faaliyet_ad_tr'), deger: naceTR, kurum: t('kurum_tuik') });
-          satirlar.push({ alan: t('faaliyet_ad_en'), deger: naceEN, kurum: t('kurum_tuik') });
-        } else {
-          satirlar.push({ alan: t('nace_kod'), deger: '—', kurum: t('kurum_tuik'), vurgu: 'bos' });
+          satirlar.push({ alan: t('nace_kod'), deger: naceKod, vurgu: 'kod' });
+          const naceAd = dil() === 'en' ? (naceEN || naceTR) : (naceTR || naceEN);
+          if (naceAd) satirlar.push({ alan: t('faaliyet_adi'), deger: naceAd });
         }
       }
 
-      // --- NACE KARTI ---
       if (kaynak === 'nace') {
-        satirlar.push({ alan: t('nace_kod'), deger: kod, kurum: t('kurum_tuik'), vurgu: 'kod' });
-        satirlar.push({ alan: t('faaliyet_ad_tr'), deger: adTR, kurum: t('kurum_tuik') });
-        satirlar.push({ alan: t('faaliyet_ad_en'), deger: adEN, kurum: t('kurum_tuik') });
+        satirlar.push({ alan: t('nace_kod'), deger: kod, vurgu: 'kod' });
+        if (ad) satirlar.push({ alan: t('faaliyet_adi'), deger: ad });
       }
 
-      // --- ISCO KARTI ---
       if (kaynak === 'isco') {
-        satirlar.push({ alan: t('isco_kod'), deger: kod, kurum: `${t('kurum_tuik')} / ${t('kurum_calisma')}`, vurgu: 'kod' });
-        satirlar.push({ alan: t('meslek_ad_tr'), deger: adTR, kurum: t('kurum_calisma') });
-        satirlar.push({ alan: t('meslek_ad_en'), deger: adEN, kurum: t('kurum_calisma') });
+        satirlar.push({ alan: t('isco_kod'), deger: kod, vurgu: 'kod' });
+        if (ad) satirlar.push({ alan: t('meslek_adi'), deger: ad });
       }
 
       return satirlar;
     }
 
-
     function birlesikTabloCiz(satirlar) {
       const rowsHtml = satirlar.map(s => {
         if (s.tip === 'baslik') {
-          return `<tr class="bg-win-dark/60 border-t border-win-border/40"><td colspan="3" class="px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-win-400">${kacis(s.metin)}</td></tr>`;
+          return `<tr class="bg-win-dark/60 border-t border-win-border/40"><td colspan="2" class="px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-win-400">${kacis(s.metin)}</td></tr>`;
         }
         const bosMu = !s.deger || s.deger === '' || s.deger === '—';
         if (s.vurgu === 'kod') {
           return `<tr class="bg-win-dark/20 hover:bg-win-hover/40 transition">
             <td class="px-4 py-3 align-top text-slate-400 text-xs font-semibold whitespace-nowrap">${kacis(s.alan)}</td>
             <td class="px-4 py-3 align-top font-mono text-base text-emerald-300 font-bold">${kacis(s.deger)}</td>
-            <td class="px-4 py-3 align-top text-[11px] text-slate-500">${kacis(s.kurum || '')}</td>
           </tr>`;
         }
         const degerClass = s.vurgu === 'kdv' ? 'text-win-100 font-bold' : s.vurgu === 'otv' ? 'text-rose-400 font-bold' : s.vurgu === 'muaf' ? 'text-emerald-400 font-semibold' : 'text-slate-100';
@@ -967,7 +1321,6 @@
         return `<tr class="hover:bg-win-hover/40 transition">
           <td class="px-4 py-2.5 align-top text-slate-300 text-xs font-medium">${kacis(s.alan)}</td>
           <td class="px-4 py-2.5 align-top font-mono text-xs ${bosMu ? 'text-slate-600 italic' : degerClass}">${kacis(degerGoster)}</td>
-          <td class="px-4 py-2.5 align-top text-[11px] text-slate-500">${kacis(s.kurum || '')}</td>
         </tr>`;
       }).join('');
 
@@ -978,7 +1331,6 @@
               <tr>
                 <th class="px-4 py-2.5 whitespace-nowrap">${t('alan_adi')}</th>
                 <th class="px-4 py-2.5">${t('deger')}</th>
-                <th class="px-4 py-2.5 whitespace-nowrap">${t('kurum')}</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-win-border/40">${rowsHtml}</tbody>
@@ -999,6 +1351,8 @@
     $('mobile-overlay')?.addEventListener('click', closeMobileSidebar);
 
     document.addEventListener('pdaas:dil', () => {
+      baslikDiliniUygula();
+      durumDiliniUygula();
       renderFilterList();
       if (SECILI) detayGoster(SECILI);
       aramayiBaslat();
@@ -1034,8 +1388,6 @@
 
     renderFilterList();
     tumVeriYukle().then(() => {
-      // Veriler yüklendikten sonra listeyi otomatik çiz
-      aramayiBaslat();
     });
   </script>
 </body>
