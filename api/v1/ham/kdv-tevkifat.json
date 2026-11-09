@@ -1,0 +1,314 @@
+{
+  "meta": {
+    "schema": "kdv-tevkifat/v1",
+    "surum": "1.0.0",
+    "kod": "kdv-tevkifat",
+    "ad_tr": "KDV Tevkifat Oranları",
+    "ad_en": "Sample VAT Withholding Rates",
+    "tarih": "2026-11-01",
+    "guncelleme": "2026-11-01",
+    "durum": "demo",
+    "katman": "ham",
+    "kapsam": [],
+    "islem_turleri": [],
+    "yayinci": "pdaas",
+    "sorumlu_kurum": "gib",
+    "kaynaklar_ref": "meta/kaynaklar.json",
+    "mevzuat_ref": "meta/mevzuat.json",
+    "sozluk_ref": "meta/sozluk.json",
+    "gecerlilik": {
+      "baslangic": "2005-12-01",
+      "bitis": null
+    },
+    "checksum": "sha256:12bde679a1b3cf80e95bcd40fb9b106143a713a7f5a51193056338ee0f532e6f",
+    "kayit_sayisi": 17,
+    "detay": {}
+  },
+  "sema": {
+    "pk": "kod",
+    "siralama": "kod_artan",
+    "kolonlar": {
+      "zorunlu": [
+        "id",
+        "kod",
+        "ad_tr",
+        "ad_en",
+        "tur"
+      ],
+      "opsiyonel": [
+        "oran",
+        "islem_kategorisi",
+        "gecerlilik",
+        "aciklama_tr",
+        "aciklama_en",
+        "dipnotlar"
+      ]
+    }
+  },
+  "kayitlar": [
+    {
+      "id": "kdv-tevkifat:tevkifat-atik-yag",
+      "kod": "tevkifat-atik-yag",
+      "ad_tr": "Atık Yağ ve Bitkisel Atık Yağ Teslimi",
+      "ad_en": "Waste Oil and Vegetable Waste Oil Supplies",
+      "tur": "kdv_tevkifati",
+      "oran": 0.7,
+      "islem_kategorisi": "mal_teslimi",
+      "gecerlilik": {
+        "baslangic": "2017-01-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.2.5 kapsamında atık yağ ve bitkisel atık yağ teslimlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.2.5 for waste oil and vegetable waste oil supplies.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-danismanlik",
+      "kod": "tevkifat-danismanlik",
+      "ad_tr": "Danışmanlık ve Denetim Hizmetleri",
+      "ad_en": "Consultancy and Audit Services",
+      "tur": "kdv_tevkifati",
+      "oran": 0.9,
+      "islem_kategorisi": "hizmet",
+      "gecerlilik": {
+        "baslangic": "2021-03-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.3.2.2 kapsamında danışmanlık, denetim, gözetim ve benzeri hizmetlere ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.3.2.2 for consultancy, audit, supervision and similar services.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-demir-celik",
+      "kod": "tevkifat-demir-celik",
+      "ad_tr": "Demir-Çelik Ürünleri Teslimi",
+      "ad_en": "Iron and Steel Product Supplies",
+      "tur": "kdv_tevkifati",
+      "oran": 0.7,
+      "islem_kategorisi": "mal_teslimi",
+      "gecerlilik": {
+        "baslangic": "2017-01-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.2.1 kapsamında 72 ve 73 fasıllarındaki belirli demir-çelik ürünleri teslimlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.2.1 for supplies of certain iron and steel products in chapters 72 and 73.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-dmo-diger-teslimler",
+      "kod": "tevkifat-dmo-diger-teslimler",
+      "ad_tr": "Devlet Malzeme Ofisine Diğer Mal Teslimleri",
+      "ad_en": "Other Goods Supplied to the State Supply Office",
+      "tur": "kdv_tevkifati",
+      "oran": 0.2,
+      "islem_kategorisi": "mal_teslimi",
+      "gecerlilik": {
+        "baslangic": "2021-03-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Devlet Malzeme Ofisi Genel Müdürlüğüne yapılan ve Tebliğde özel olarak belirlenmeyen diğer mal teslimleri için uygulanan KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate for other goods supplied to the State Supply Office that are not specifically regulated elsewhere in the Communiqué.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-forklift",
+      "kod": "tevkifat-forklift",
+      "ad_tr": "Forklift ve İş Makinesi Kiralama",
+      "ad_en": "Forklift and Heavy Machinery Leasing",
+      "tur": "kdv_tevkifati",
+      "oran": 0.7,
+      "islem_kategorisi": "hizmet",
+      "gecerlilik": {
+        "baslangic": "2014-05-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.3.2.3 kapsamında iş makineleri ve forklift kiralama hizmetlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.3.2.3 for heavy machinery and forklift leasing services.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-guvenlik",
+      "kod": "tevkifat-guvenlik",
+      "ad_tr": "Güvenlik Hizmetleri",
+      "ad_en": "Security Services",
+      "tur": "kdv_tevkifati",
+      "oran": 0.9,
+      "islem_kategorisi": "hizmet",
+      "gecerlilik": {
+        "baslangic": "2021-03-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.3.2.4 kapsamında özel güvenlik hizmetlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.3.2.4 for private security services.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-hurda-metal",
+      "kod": "tevkifat-hurda-metal",
+      "ad_tr": "Hurda Metal Teslimleri",
+      "ad_en": "Scrap Metal Supplies",
+      "tur": "kdv_tevkifati",
+      "oran": 0.4,
+      "islem_kategorisi": "mal_teslimi",
+      "gecerlilik": {
+        "baslangic": "2017-01-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.2.2 kapsamında hurda metal teslimlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.2.2 for scrap metal supplies.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-isgucu-temini",
+      "kod": "tevkifat-isgucu-temini",
+      "ad_tr": "İşgücü Temin Hizmetleri",
+      "ad_en": "Labour Supply Services",
+      "tur": "kdv_tevkifati",
+      "oran": 0.9,
+      "islem_kategorisi": "hizmet",
+      "gecerlilik": {
+        "baslangic": "2005-12-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.3.2.5 kapsamında alıcılara sağlanan işgücü temin hizmetlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.3.2.5 for labour supply services.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-kereste",
+      "kod": "tevkifat-kereste",
+      "ad_tr": "Kereste ve Ağaç Ürünleri Teslimi",
+      "ad_en": "Timber and Wood Product Supplies",
+      "tur": "kdv_tevkifati",
+      "oran": 0.9,
+      "islem_kategorisi": "mal_teslimi",
+      "gecerlilik": {
+        "baslangic": "2017-01-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.2.3 kapsamında 44 fasılındaki kereste ve ağaç ürünleri teslimlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.2.3 for timber and wood product supplies in chapter 44.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-konaklama",
+      "kod": "tevkifat-konaklama",
+      "ad_tr": "Konaklama Hizmetleri",
+      "ad_en": "Accommodation Services",
+      "tur": "kdv_tevkifati",
+      "oran": 0.5,
+      "islem_kategorisi": "hizmet",
+      "gecerlilik": {
+        "baslangic": "2013-01-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.3.2.8 kapsamında konaklama hizmetlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.3.2.8 for accommodation services.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-kum-cakil",
+      "kod": "tevkifat-kum-cakil",
+      "ad_tr": "Kum, Çakıl ve Benzeri Maden Ürünleri Teslimi",
+      "ad_en": "Sand, Gravel and Similar Mineral Product Supplies",
+      "tur": "kdv_tevkifati",
+      "oran": 0.4,
+      "islem_kategorisi": "mal_teslimi",
+      "gecerlilik": {
+        "baslangic": "2017-01-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.2.4 kapsamında 25 fasılındaki kum, çakıl ve benzeri maden ürünleri teslimlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.2.4 for sand, gravel and similar mineral products in chapter 25.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-tasit-bakim-onarim",
+      "kod": "tevkifat-tasit-bakim-onarim",
+      "ad_tr": "Taşıt Bakım ve Onarım Hizmetleri",
+      "ad_en": "Vehicle Maintenance and Repair Services",
+      "tur": "kdv_tevkifati",
+      "oran": 0.7,
+      "islem_kategorisi": "hizmet",
+      "gecerlilik": {
+        "baslangic": "2014-05-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.3.2.3 kapsamında belirlenmiş alıcılara verilen makine, teçhizat, demirbaş ve taşıtların tadil, bakım ve onarım hizmetlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.3.2.3 for maintenance and repair services.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-temizlik",
+      "kod": "tevkifat-temizlik",
+      "ad_tr": "Temizlik ve Çevre Bakım Hizmetleri",
+      "ad_en": "Cleaning and Environmental Services",
+      "tur": "kdv_tevkifati",
+      "oran": 0.9,
+      "islem_kategorisi": "hizmet",
+      "gecerlilik": {
+        "baslangic": "2021-03-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.3.2.6 kapsamında temizlik, çevre ve bahçe bakım hizmetlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.3.2.6 for cleaning and environmental services.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-yapim-isleri",
+      "kod": "tevkifat-yapim-isleri",
+      "ad_tr": "Yapım İşleri",
+      "ad_en": "Construction Works",
+      "tur": "kdv_tevkifati",
+      "oran": 0.4,
+      "islem_kategorisi": "hizmet",
+      "gecerlilik": {
+        "baslangic": "2021-03-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.3.2.1 kapsamında yapım işleri ve birlikte gerçekleştirilen mühendislik, mimarlık ve etüt-proje hizmetlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.3.2.1 for construction works and associated engineering and architectural services.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-yemek-servisi",
+      "kod": "tevkifat-yemek-servisi",
+      "ad_tr": "Yemek Servisi Hizmetleri",
+      "ad_en": "Catering Services",
+      "tur": "kdv_tevkifati",
+      "oran": 0.5,
+      "islem_kategorisi": "hizmet",
+      "gecerlilik": {
+        "baslangic": "2013-01-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.3.2.8 kapsamında yemek servisi ve organizasyon hizmetlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.3.2.8 for catering and organisation services.",
+      "dipnotlar": []
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-yok",
+      "kod": "tevkifat-yok",
+      "ad_tr": "KDV Tevkifatı Yok",
+      "ad_en": "No VAT Withholding",
+      "tur": "yok",
+      "oran": 0
+    },
+    {
+      "id": "kdv-tevkifat:tevkifat-yuk-tasimaciligi",
+      "kod": "tevkifat-yuk-tasimaciligi",
+      "ad_tr": "Yük Taşımacılığı Hizmetleri",
+      "ad_en": "Freight Transportation Services",
+      "tur": "kdv_tevkifati",
+      "oran": 0.2,
+      "islem_kategorisi": "hizmet",
+      "gecerlilik": {
+        "baslangic": "2021-03-01",
+        "bitis": null
+      },
+      "aciklama_tr": "Tebliğ I/C-2.1.3.2.11 kapsamında gerçekleştirilen yük taşımacılığı hizmetlerine ilişkin KDV tevkifat oranı.",
+      "aciklama_en": "VAT withholding rate under Communiqué section I/C-2.1.3.2.11 for freight transportation services.",
+      "dipnotlar": []
+    }
+  ]
+}

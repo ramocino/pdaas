@@ -1,0 +1,223 @@
+// assets/pdaas-schema.js
+
+export const SCHEMA_ACIKLAMA_TR = {
+  // --- GENEL VE META ALANLARI ---
+  kod: 'Benzersiz kod',
+  ad_tr: 'Türkçe ad',
+  ad_en: 'İngilizce ad',
+  tanim_tr: 'Türkçe tanım',
+  tanim_en: 'İngilizce tanım',
+  baslik_tr: 'Türkçe başlık',
+  baslik_en: 'İngilizce başlık',
+  aciklama_tr: 'Türkçe açıklama',
+  aciklama_en: 'İngilizce açıklama',
+  dosya: 'Verinin bulunduğu alt dosya yolu',
+  kayit_sayisi: 'Dosyadaki toplam kayıt sayısı',
+  sira: 'Listedeki sıra numarası',
+  yil: 'Geçerli olduğu yıl',
+  donem: 'Dönem (Ay/Yıl vb.)',
+  ay: 'İlgili ay',
+  not: 'Ek bilgi veya istisna',
+  kaynak: 'Veri kaynağı',
+  gecerlilik_tarihi: 'Yürürlük tarihi',
+  yururluk: 'Yürürlük durumu',
+
+  // --- KOD SİSTEMLERİ (GTİP, CPC, NACE, ISCO) ---
+  ust_kod: 'Hiyerarşideki üst kod (Parent Code)',
+  seviye: 'Kodun hiyerarşik seviyesi (1-6)',
+  seviye_adi: 'Seviye tanımı (fasıl, pozisyon, vb.)',
+  yaprak: 'Ağacın en alt seviyesi mi? (true/false)',
+  olcu_birimi: 'Ölçü birimi (kg, adet, litre vb.)',
+  bolum_kod: 'Bölüm kodu',
+  fasil: 'Gümrük Tarife Cetveli Fasıl Numarası',
+  pozisyon: 'GTİP Pozisyon Numarası',
+  gtip_kodu: 'Tam GTİP Kodu',
+
+  // --- VERGİ ORANLARI VE TUTARLARI (KDV, ÖTV, Damga, MTV, Gelir/Kurumlar) ---
+  oran: 'Vergi veya indirim oranı (%)',
+  kategori: 'Oran kategorisi (genel, indirimli, sıfır)',
+  kanun_dayanagi: 'Yasal dayanak (Türkçe)',
+  kanun_dayanagi_en: 'Yasal dayanak (İngilizce)',
+  kapsam_tr: 'Kapsam açıklaması (Türkçe)',
+  kapsam_en: 'Kapsam açıklaması (İngilizce)',
+  ornekler_tr: 'Örnek mal/hizmetler (Türkçe)',
+  ornekler_en: 'Örnek mal/hizmetler (İngilizce)',
+  tutar: 'Hesaplanan tutar',
+  deger: 'Sayısal değer',
+  matrah: 'Vergi matrahı',
+  vergi_tutari: 'Hesaplanan vergi tutarı',
+  kdv: 'KDV bilgisi',
+  otv: 'ÖTV bilgisi',
+  tevkifat: 'Tevkifat bilgisi',
+  kdv_orani: 'KDV Oranı (%)',
+  otv_orani: 'ÖTV Oranı (%)',
+  tevkifat_orani: 'Tevkifat Oranı (%)',
+  tevkifat_kodu: 'Tevkifat Kodu',
+  randiman: 'Randıman bilgisi',
+  randiman_orani: 'Randıman Oranı (%)',
+  verim_orani: 'Verim Oranı (%)',
+  
+  // --- MTV VE ARAÇ ALANLARI ---
+  kategoriler: 'Alt kategoriler',
+  motor_silindir_hacmi: 'Motor silindir hacmi aralığı',
+  tasit_degeri_dilimleri: 'Taşıt değeri dilimleri',
+  yasi_gruplari: 'Araç yaş grupları',
+  esik_alt: 'Alt sınır değeri',
+  esik_ust: 'Üst sınır değeri',
+  yapilan: 'Uygulanan durum (aşıp, aşanlar vb.)',
+  arac_turu: 'Araç türü (Motosiklet, Otobüs, Uçak vb.)',
+
+  // --- ENGELİLİK VE SOSYAL GÜVENLİK (SGK, ÇSGB) ---
+  dereceler: 'Engellilik derece detayları',
+  derece: 'Engellilik derecesi (1, 2 veya 3)',
+  engellilik_orani_min: 'Asgari engellilik oranı (%)',
+  asgari_ucret: 'Asgari ücret tutarı',
+  prim_orani: 'Prim oranı (%)',
+  isci_payi: 'İşçi payı tutarı/oranı',
+  isveren_payi: 'İşveren payı tutarı/oranı',
+  devlet_katkisi: 'Devlet katkısı tutarı',
+  gun_sayisi: 'Gün sayısı',
+  tavan_tutar: 'Tavan tutarı',
+  taban_tutar: 'Taban tutarı',
+  tesvik_kodu: 'Teşvik kodu',
+  belge_turu: 'Belge türü',
+  eksik_gun_nedeni: 'Eksik gün nedeni kodu',
+  isten_ayrilis_kodu: 'İşten ayrılış kodu',
+  meslek_kodu: 'Meslek kodu',
+  gorev_kodu: 'Görev kodu',
+  nakil_nedeni: 'Nakil nedeni',
+  ogrenim_durumu: 'Öğrenim durumu',
+  sigorta_kolu: 'Sigorta kolu',
+  iskolu_kodu: 'İşkolu kodu',
+
+  // --- MAKRO EKONOMİK VERİLER (TÜİK, TÜFE, ÜFE) ---
+  endeks_degeri: 'Endeks değeri',
+  degisim_orani: 'Değişim oranı (%)',
+  yillik_degisim: 'Yıllık değişim oranı (%)',
+  aylik_degisim: 'Aylık değişim oranı (%)',
+  onceki_endeks: 'Önceki dönem endeks değeri',
+  ceyrek: 'İlgili çeyrek (Q1, Q2 vb.)',
+
+  // --- EŞLEME KURALLARI (kdv-kurallar, tevkifat-kurallar vb.) ---
+  prefixler: 'Eşleşme sağlayacak GTİP önekleri',
+  oncelik: 'Kuralın uygulanma önceliği (Büyük sayı önceliklidir)',
+  varsayilan: 'Varsayılan kural mı? (true/false)',
+  istisna_tr: 'İstisna durumu (Türkçe)',
+  istisna_en: 'İstisna durumu (İngilizce)',
+  kural_kodu: 'Kuralın benzersiz kodu'
+};
+
+export const SCHEMA_ACIKLAMA_EN = {
+  // --- GENERAL AND META FIELDS ---
+  kod: 'Unique code',
+  ad_tr: 'Turkish name',
+  ad_en: 'English name',
+  tanim_tr: 'Turkish description',
+  tanim_en: 'English description',
+  baslik_tr: 'Turkish title',
+  baslik_en: 'English title',
+  aciklama_tr: 'Turkish explanation',
+  aciklama_en: 'English explanation',
+  dosya: 'Sub-file path where data is located',
+  kayit_sayisi: 'Total record count in file',
+  sira: 'Order number in list',
+  yil: 'Applicable year',
+  donem: 'Period (Month/Year etc.)',
+  ay: 'Related month',
+  not: 'Additional note or exemption',
+  kaynak: 'Data source',
+  gecerlilik_tarihi: 'Effective date',
+  yururluk: 'Validity status',
+
+  // --- CODE SYSTEMS (GTIP, CPC, NACE, ISCO) ---
+  ust_kod: 'Parent code in hierarchy',
+  seviye: 'Hierarchical level of the code (1-6)',
+  seviye_adi: 'Level name (chapter, position etc.)',
+  yaprak: 'Is it the leaf level of the tree? (true/false)',
+  olcu_birimi: 'Unit of measure (kg, piece, liter etc.)',
+  bolum_kod: 'Section code',
+  fasil: 'Customs Tariff Chapter Number',
+  pozisyon: 'GTIP Position Number',
+  gtip_kodu: 'Full GTIP Code',
+
+  // --- TAX RATES AND AMOUNTS (VAT, SCT, Stamp, MTV, Income/Corporate) ---
+  oran: 'Tax or deduction rate (%)',
+  kategori: 'Rate category (standard, reduced, zero)',
+  kanun_dayanagi: 'Legal basis (Turkish)',
+  kanun_dayanagi_en: 'Legal basis (English)',
+  kapsam_tr: 'Scope description (Turkish)',
+  kapsam_en: 'Scope description (English)',
+  ornekler_tr: 'Example goods/services (Turkish)',
+  ornekler_en: 'Example goods/services (English)',
+  tutar: 'Calculated amount',
+  deger: 'Numerical value',
+  matrah: 'Tax base',
+  vergi_tutari: 'Calculated tax amount',
+  kdv: 'VAT data',
+  otv: 'SCT data',
+  tevkifat: 'Withholding data',
+  kdv_orani: 'VAT Rate (%)',
+  otv_orani: 'SCT Rate (%)',
+  tevkifat_orani: 'Withholding Rate (%)',
+  tevkifat_kodu: 'Withholding Code',
+  randiman: 'Yield data',
+  randiman_orani: 'Yield Rate (%)',
+  verim_orani: 'Efficiency Rate (%)',
+  
+  // --- MTV AND VEHICLE FIELDS ---
+  kategoriler: 'Sub-categories',
+  motor_silindir_hacmi: 'Engine cylinder volume range',
+  tasit_degeri_dilimleri: 'Vehicle value brackets',
+  yasi_gruplari: 'Vehicle age groups',
+  esik_alt: 'Lower threshold value',
+  esik_ust: 'Upper threshold value',
+  yapilan: 'Applied condition (exceeding etc.)',
+  arac_turu: 'Vehicle type (Motorcycle, Bus, Aircraft etc.)',
+
+  // --- DISABILITY AND SOCIAL SECURITY (SGK, MoLSS) ---
+  dereceler: 'Disability degree details',
+  derece: 'Disability degree (1st, 2nd or 3rd)',
+  engellilik_orani_min: 'Minimum disability rate (%)',
+  asgari_ucret: 'Minimum wage amount',
+  prim_orani: 'Premium rate (%)',
+  isci_payi: 'Employee share amount/rate',
+  isveren_payi: 'Employer share amount/rate',
+  devlet_katkisi: 'State contribution amount',
+  gun_sayisi: 'Number of days',
+  tavan_tutar: 'Ceiling amount',
+  taban_tutar: 'Floor amount',
+  tesvik_kodu: 'Incentive code',
+  belge_turu: 'Document type',
+  eksik_gun_nedeni: 'Missing day reason code',
+  isten_ayrilis_kodu: 'Employment termination code',
+  meslek_kodu: 'Occupation code',
+  gorev_kodu: 'Duty code',
+  nakil_nedeni: 'Transfer reason',
+  ogrenim_durumu: 'Educational status',
+  sigorta_kolu: 'Insurance branch',
+  iskolu_kodu: 'Branch of activity code',
+
+  // --- MACROECONOMIC DATA (TURKSTAT, CPI, PPI) ---
+  endeks_degeri: 'Index value',
+  degisim_orani: 'Change rate (%)',
+  yillik_degisim: 'Annual change rate (%)',
+  aylik_degisim: 'Monthly change rate (%)',
+  onceki_endeks: 'Previous period index value',
+  ceyrek: 'Related quarter (Q1, Q2 etc.)',
+
+  // --- MAPPING RULES (kdv-kurallar, tevkifat-kurallar etc.) ---
+  prefixler: 'GTIP prefixes to match',
+  oncelik: 'Rule application priority (Higher number = higher priority)',
+  varsayilan: 'Is default rule? (true/false)',
+  istisna_tr: 'Exemption status (Turkish)',
+  istisna_en: 'Exemption status (English)',
+  kural_kodu: 'Unique rule code'
+};
+
+/**
+ * Verilen dile ve anahtara (key) göre şema açıklamasını döndürür.
+ */
+export function getSchemaAciklama(dil, key) {
+  const sozluk = dil === 'tr' ? SCHEMA_ACIKLAMA_TR : SCHEMA_ACIKLAMA_EN;
+  return sozluk[key] || '—';
+}

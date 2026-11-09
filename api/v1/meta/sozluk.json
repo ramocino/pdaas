@@ -1,0 +1,1364 @@
+{
+  "meta": {
+    "schema": "sozluk/v1",
+    "surum": "1.0.0",
+    "kod": "sozluk",
+    "ad_tr": "Ortak Sözlük",
+    "ad_en": "Shared Dictionary",
+    "tarih": "2026-11-01",
+    "guncelleme": "2026-11-01",
+    "durum": "demo",
+    "katman": "sozlesme",
+    "kapsam": [],
+    "islem_turleri": [],
+    "yayinci": "pdaas",
+    "sorumlu_kurum": "pdaas",
+    "kaynaklar_ref": null,
+    "mevzuat_ref": null,
+    "sozluk_ref": "meta/sozluk.json",
+    "gecerlilik": {
+      "baslangic": "2026-01-01",
+      "bitis": null
+    },
+    "checksum": "sha256:6861b325cbbf2260b77c8265cf1707d60f697c6c48c624fe57f6299a79f32c9d",
+    "kayit_sayisi": 183,
+    "detay": {
+      "changelog": [
+        {
+          "surum": "1.0.0",
+          "tarih": "2026-11-07",
+          "aciklama_tr": "İlk sürüm — 4 sınıflandırma, 8 vergi, 7 SGK, 4 parametre, 3 damga vergisi kategorisi",
+          "aciklama_en": "Initial version — 4 classifications, 8 tax, 7 SGK, 4 parameter, 3 stamp tax categories"
+        }
+      ]
+    }
+  },
+  "kategoriler": {
+    "durum": {
+      "ad_tr": "Veri durumu",
+      "ad_en": "Data status",
+      "kullanan": [
+        "*"
+      ],
+      "degerler": {
+        "demo": {
+          "ad_tr": "Demo",
+          "ad_en": "Demo",
+          "sev": "bilgi",
+          "aciklama_tr": "Örnek/geliştirme amaçlı"
+        },
+        "taslak": {
+          "ad_tr": "Taslak",
+          "ad_en": "Draft",
+          "sev": "uyari",
+          "aciklama_tr": "Onaylanmamış"
+        },
+        "yayinda": {
+          "ad_tr": "Yayında",
+          "ad_en": "Published",
+          "sev": "ok",
+          "aciklama_tr": "Canlı kullanımda"
+        },
+        "arsiv": {
+          "ad_tr": "Arşiv",
+          "ad_en": "Archived",
+          "sev": "notr",
+          "aciklama_tr": "Tarihsel, yeni kullanıma kapalı"
+        }
+      }
+    },
+    "katman": {
+      "ad_tr": "Veri katmanı",
+      "ad_en": "Data layer",
+      "kullanan": [
+        "*"
+      ],
+      "degerler": {
+        "sozlesme": {
+          "ad_tr": "Sözleşme",
+          "ad_en": "Contract",
+          "aciklama_tr": "Şema, sözlük, kaynak tanımları"
+        },
+        "ham": {
+          "ad_tr": "Ham",
+          "ad_en": "Raw",
+          "aciklama_tr": "Normalize edilmiş temel veri"
+        },
+        "kural": {
+          "ad_tr": "Kural",
+          "ad_en": "Rule",
+          "aciklama_tr": "Eşleştirme kuralları"
+        },
+        "konsolide": {
+          "ad_tr": "Konsolide",
+          "ad_en": "Consolidated",
+          "aciklama_tr": "Yaprak başına birleşik çıktı"
+        },
+        "gorunum": {
+          "ad_tr": "Görünüm",
+          "ad_en": "View",
+          "aciklama_tr": "UI/API response modelleri"
+        },
+        "iliskiler": {
+          "ad_tr": "İlişkiler",
+          "ad_en": "Relations",
+          "aciklama_tr": "Sınıflandırmalar arası eşleştirme (crosswalk)"
+        }
+      }
+    },
+    "dil": {
+      "ad_tr": "Dil kodu",
+      "ad_en": "Language code",
+      "kullanan": [
+        "*"
+      ],
+      "degerler": {
+        "tr": {
+          "ad_tr": "Türkçe",
+          "ad_en": "Turkish"
+        },
+        "en": {
+          "ad_tr": "İngilizce",
+          "ad_en": "English"
+        }
+      }
+    },
+    "kod_formati": {
+      "ad_tr": "Kod formatı",
+      "ad_en": "Code format",
+      "kullanan": [
+        "*"
+      ],
+      "degerler": {
+        "sayi": {
+          "ad_tr": "Saf sayı",
+          "ad_en": "Numeric",
+          "ornek": [
+            "01",
+            "05510",
+            "12"
+          ]
+        },
+        "noktali_sayi": {
+          "ad_tr": "Noktalı sayı",
+          "ad_en": "Dotted numeric",
+          "ornek": [
+            "01.1",
+            "7318.45",
+            "040320110012"
+          ]
+        },
+        "roma": {
+          "ad_tr": "Roma rakamı",
+          "ad_en": "Roman numeral",
+          "ornek": [
+            "I",
+            "II",
+            "XXI"
+          ]
+        },
+        "harf": {
+          "ad_tr": "Tek harf",
+          "ad_en": "Single letter",
+          "ornek": [
+            "A",
+            "B",
+            "U",
+            "Y"
+          ]
+        },
+        "kebab_case": {
+          "ad_tr": "Tireli küçük harf",
+          "ad_en": "Kebab case",
+          "ornek": [
+            "kdv-01",
+            "mtv-i-sayili-tarife-2018-sonrasi"
+          ]
+        },
+        "snake_case": {
+          "ad_tr": "Alt çizgili küçük",
+          "ad_en": "Snake case",
+          "ornek": [
+            "sgk_isci_primi",
+            "tufe_aylik_degisim"
+          ]
+        },
+        "buyuk_harf_tire": {
+          "ad_tr": "Büyük harf + tire",
+          "ad_en": "Upper + dash",
+          "ornek": [
+            "DV-I-A-1",
+            "GV-UCRET-1"
+          ]
+        }
+      }
+    },
+    "siralama": {
+      "ad_tr": "Sıralama stratejisi",
+      "ad_en": "Sorting strategy",
+      "kullanan": [
+        "*"
+      ],
+      "degerler": {
+        "kod_artan": {
+          "ad_tr": "Kod artan (lexicographic)",
+          "ad_en": "Code ascending"
+        },
+        "kod_sayisal": {
+          "ad_tr": "Kod sayısal artan",
+          "ad_en": "Code numeric ascending"
+        },
+        "kaynak_sirasi": {
+          "ad_tr": "Kaynak sırası (koru)",
+          "ad_en": "Source order (preserve)",
+          "aciklama_tr": "Kaynak dosyadaki sıra korunur — SGK kodlarında ve Türkçe ada göre sıralı listelerde zorunlu"
+        },
+        "oncelik_sonra_kod": {
+          "ad_tr": "Öncelik sonra kod",
+          "ad_en": "Priority then code",
+          "aciklama_tr": "Kural dosyalarında oncelik azalan, eşitlikte kod artan"
+        },
+        "gtip_artan": {
+          "ad_tr": "GTİP artan",
+          "ad_en": "GTIP ascending",
+          "aciklama_tr": "Crosswalk dosyalarında gtip koduna göre artan"
+        }
+      }
+    },
+    "ozel_durum": {
+      "ad_tr": "Özel durum (sınıflandırma kaydı)",
+      "ad_en": "Special state (classification record)",
+      "kullanan": [
+        "gtip-kodlari",
+        "cpc-kodlari",
+        "isco-kodlari",
+        "nace-kodlari"
+      ],
+      "degerler": {
+        "rezerve": {
+          "ad_tr": "Rezerve",
+          "ad_en": "Reserved",
+          "sev": "bilgi",
+          "aciklama_tr": "Uluslararası anlaşmayla gelecekte kullanım için ayrılmış",
+          "davranis": "konsolidasyonda yaprak üretilmez",
+          "ornek": [
+            "gtip:77"
+          ]
+        },
+        "kapsam_disi": {
+          "ad_tr": "Sınıflandırma kapsamı dışı",
+          "ad_en": "Out of scope",
+          "sev": "bilgi",
+          "aciklama_tr": "Sınıflandırmanın konusu olmayan kavram",
+          "davranis": "konsolidasyonda yaprak üretilmez",
+          "ornek": [
+            "nace:Y"
+          ]
+        },
+        "kaldirilmis": {
+          "ad_tr": "Kaldırılmış",
+          "ad_en": "Deprecated",
+          "sev": "uyari",
+          "aciklama_tr": "Artık geçerli değil, tarihsel kayıt"
+        },
+        "ulusal_ozel": {
+          "ad_tr": "Ulusal özel",
+          "ad_en": "National specific",
+          "sev": "bilgi",
+          "aciklama_tr": "Ülkeye özgü genişletme"
+        },
+        "gtip_disi": {
+          "ad_tr": "GTİP kodu değil",
+          "ad_en": "Not a GTIP code",
+          "sev": "bilgi",
+          "aciklama_tr": "Kayıt GTİP sınıflandırması dışı özel kod taşır",
+          "davranis": "cross-ref kontrolünde muaf",
+          "ornek": [
+            "gumruk-vergisi:IHR-GV-GENEL"
+          ]
+        }
+      }
+    },
+    "islem_turleri": {
+      "ad_tr": "İşlem türleri / yön",
+      "ad_en": "Transaction types / direction",
+      "kullanan": [
+        "kdv",
+        "kdv-tevkifat",
+        "ilave-gumruk-vergisi",
+        "vergi-kurallari"
+      ],
+      "degerler": {
+        "yurtici": {
+          "ad_tr": "Yurt içi",
+          "ad_en": "Domestic"
+        },
+        "ithalat": {
+          "ad_tr": "İthalat",
+          "ad_en": "Import"
+        },
+        "ihracat": {
+          "ad_tr": "İhracat",
+          "ad_en": "Export"
+        }
+      }
+    },
+    "vergi_tipleri": {
+      "ad_tr": "Vergi tipleri",
+      "ad_en": "Tax types",
+      "kullanan": [
+        "vergi-kurallari"
+      ],
+      "degerler": {
+        "kdv": {
+          "ad_tr": "Katma Değer Vergisi",
+          "ad_en": "Value Added Tax"
+        },
+        "otv": {
+          "ad_tr": "Özel Tüketim Vergisi",
+          "ad_en": "Special Consumption Tax"
+        },
+        "tevkifat": {
+          "ad_tr": "Tevkifat",
+          "ad_en": "Withholding"
+        },
+        "gumruk_vergisi": {
+          "ad_tr": "Gümrük Vergisi",
+          "ad_en": "Customs Duty"
+        },
+        "ilave_gumruk_vergisi": {
+          "ad_tr": "İlave Gümrük Vergisi",
+          "ad_en": "Additional Customs Duty"
+        }
+      }
+    },
+    "kdv_turleri": {
+      "ad_tr": "KDV türleri",
+      "ad_en": "VAT types",
+      "kullanan": [
+        "kdv"
+      ],
+      "degerler": {
+        "oran": {
+          "ad_tr": "Oran",
+          "ad_en": "Rate",
+          "aciklama_tr": "Pozitif oran (%1, %10, %20)"
+        },
+        "sifir_oran": {
+          "ad_tr": "Sıfır oran",
+          "ad_en": "Zero rate",
+          "aciklama_tr": "Oran %0 — vergi doğar ama sıfır"
+        },
+        "istisna": {
+          "ad_tr": "İstisna",
+          "ad_en": "Exemption",
+          "aciklama_tr": "Vergi doğmaz; oran null"
+        },
+        "muafiyet": {
+          "ad_tr": "Muafiyet",
+          "ad_en": "Relief",
+          "aciklama_tr": "Belirli koşullarda vergi uygulanmaz"
+        }
+      }
+    },
+    "kdv_tevkifat_turleri": {
+      "ad_tr": "KDV tevkifat türleri",
+      "ad_en": "VAT withholding types",
+      "kullanan": [
+        "kdv-tevkifat"
+      ],
+      "degerler": {
+        "yok": {
+          "ad_tr": "Tevkifat yok",
+          "ad_en": "No withholding",
+          "aciklama_tr": "Oran 0, işlem normal KDV'ye tabi"
+        },
+        "kdv_tevkifati": {
+          "ad_tr": "KDV tevkifatı",
+          "ad_en": "VAT withholding",
+          "aciklama_tr": "Alıcı tarafından kısmi tevkifat uygulanır"
+        }
+      }
+    },
+    "otv_turleri": {
+      "ad_tr": "ÖTV türleri",
+      "ad_en": "SCT types",
+      "kullanan": [
+        "otv"
+      ],
+      "degerler": {
+        "yok": {
+          "ad_tr": "ÖTV'ye tabi değil",
+          "ad_en": "Not subject to SCT"
+        },
+        "istisna": {
+          "ad_tr": "İstisna",
+          "ad_en": "Exemption"
+        },
+        "nispi": {
+          "ad_tr": "Nispi (oran)",
+          "ad_en": "Ad valorem"
+        },
+        "nispi_maktu": {
+          "ad_tr": "Nispi + maktu",
+          "ad_en": "Ad valorem + specific",
+          "eski_adlar": [
+            "nispi-maktu"
+          ]
+        },
+        "nispi_asgari_maktu": {
+          "ad_tr": "Nispi + asgari maktu",
+          "ad_en": "Ad valorem + minimum specific",
+          "eski_adlar": [
+            "nispi-asgari-maktu"
+          ]
+        },
+        "oran": {
+          "ad_tr": "Oran",
+          "ad_en": "Rate"
+        },
+        "kapsam": {
+          "ad_tr": "Kapsam açıklaması",
+          "ad_en": "Scope description"
+        }
+      }
+    },
+    "ilave_gumruk_vergisi_turleri": {
+      "ad_tr": "İlave gümrük vergisi türleri",
+      "ad_en": "Additional customs duty types",
+      "kullanan": [
+        "ilave-gumruk-vergisi"
+      ],
+      "degerler": {
+        "yok": {
+          "ad_tr": "İlave gümrük vergisi yok",
+          "ad_en": "No additional customs duty"
+        },
+        "oran": {
+          "ad_tr": "Oran",
+          "ad_en": "Rate"
+        },
+        "ilave_gumruk_vergisi": {
+          "ad_tr": "İlave gümrük vergisi",
+          "ad_en": "Additional customs duty",
+          "eski_adlar": [
+            "ilave-gumruk-vergisi"
+          ]
+        }
+      }
+    },
+    "oran_birimi": {
+      "ad_tr": "Oran birimi",
+      "ad_en": "Rate unit",
+      "kullanan": [
+        "kdv",
+        "kdv-tevkifat",
+        "otv",
+        "ilave-gumruk-vergisi",
+        "gumruk-vergisi",
+        "sgk-prim-oranlari",
+        "kurumlar-vergisi-oranlari"
+      ],
+      "degerler": {
+        "kesir": {
+          "ad_tr": "Kesir",
+          "ad_en": "Fraction",
+          "aciklama_tr": "0.20 = %20",
+          "ornek": [
+            0.01,
+            0.1,
+            0.2
+          ]
+        },
+        "yuzde": {
+          "ad_tr": "Yüzde",
+          "ad_en": "Percentage",
+          "aciklama_tr": "20 = %20",
+          "ornek": [
+            1.0,
+            10.0,
+            20.0
+          ]
+        },
+        "ondalik": {
+          "ad_tr": "Ondalık",
+          "ad_en": "Decimal",
+          "aciklama_tr": "20.0 = %20",
+          "ornek": [
+            1.7,
+            20.0
+          ]
+        }
+      }
+    },
+    "ulke_grubu": {
+      "ad_tr": "Ülke/bölge grupları (gümrük tarife)",
+      "ad_en": "Country/region groups (customs tariff)",
+      "kullanan": [
+        "gumruk-vergisi"
+      ],
+      "degerler": {
+        "ab_bk": {
+          "ad_tr": "AB ve Birleşik Krallık",
+          "ad_en": "EU and UK"
+        },
+        "gur": {
+          "ad_tr": "Gürcistan",
+          "ad_en": "Georgia"
+        },
+        "bher": {
+          "ad_tr": "Bosna-Hersek",
+          "ad_en": "Bosnia and Herzegovina"
+        },
+        "gkore": {
+          "ad_tr": "Güney Kore",
+          "ad_en": "South Korea"
+        },
+        "mlz": {
+          "ad_tr": "Malezya",
+          "ad_en": "Malaysia"
+        },
+        "sng": {
+          "ad_tr": "Singapur",
+          "ad_en": "Singapore"
+        },
+        "kos": {
+          "ad_tr": "Kosova",
+          "ad_en": "Kosovo"
+        },
+        "vnz": {
+          "ad_tr": "Venezuela",
+          "ad_en": "Venezuela"
+        },
+        "bae": {
+          "ad_tr": "Birleşik Arap Emirlikleri",
+          "ad_en": "United Arab Emirates"
+        },
+        "tps_oic": {
+          "ad_tr": "TPS-OIC (İslam Konferansı Örgütü)",
+          "ad_en": "TPS-OIC"
+        },
+        "d8": {
+          "ad_tr": "D-8 (Gelişen 8 Ülke)",
+          "ad_en": "D-8"
+        },
+        "du": {
+          "ad_tr": "Diğer ülkeler",
+          "ad_en": "Other countries"
+        }
+      }
+    },
+    "mense_grubu": {
+      "ad_tr": "Menşe grubu (ilave gümrük)",
+      "ad_en": "Origin group (additional customs)",
+      "kullanan": [
+        "ilave-gumruk-vergisi"
+      ],
+      "degerler": {
+        "AB": {
+          "ad_tr": "Avrupa Birliği",
+          "ad_en": "European Union"
+        },
+        "AB_DISI": {
+          "ad_tr": "AB dışı ülkeler",
+          "ad_en": "Non-EU countries"
+        },
+        "DU": {
+          "ad_tr": "Diğer Ülkeler",
+          "ad_en": "Other Countries"
+        },
+        "GUR": {
+          "ad_tr": "Gürcistan",
+          "ad_en": "Georgia"
+        },
+        "BAE": {
+          "ad_tr": "Birleşik Arap Emirlikleri",
+          "ad_en": "United Arab Emirates"
+        }
+      },
+      "aciklama_tr": "Not: bu kategori `ulke_grubu` ile aynı domaini paylaşır ancak farklı casing kullanır — kaynak dosyalardaki tutarsızlık korunmuştur"
+    },
+    "kosul_durumu": {
+      "ad_tr": "Koşul durumu",
+      "ad_en": "Condition status",
+      "kullanan": [
+        "kdv",
+        "kdv-tevkifat",
+        "otv",
+        "ilave-gumruk-vergisi",
+        "vergi-kurallari"
+      ],
+      "degerler": {
+        "saglandi": {
+          "ad_tr": "Sağlandı",
+          "ad_en": "Satisfied",
+          "sev": "ok"
+        },
+        "saglanmadi": {
+          "ad_tr": "Sağlanmadı",
+          "ad_en": "Not satisfied",
+          "sev": "hata"
+        },
+        "dogrulama_gerekli": {
+          "ad_tr": "Doğrulanmalı",
+          "ad_en": "Needs verification",
+          "sev": "uyari",
+          "eski_adlar": [
+            "dogrulanmali"
+          ]
+        },
+        "kontrol_gerekli": {
+          "ad_tr": "Kontrol edilmeli",
+          "ad_en": "Needs check",
+          "sev": "uyari",
+          "eski_adlar": [
+            "aranir"
+          ]
+        },
+        "zorunlu": {
+          "ad_tr": "Zorunlu",
+          "ad_en": "Mandatory",
+          "sev": "bilgi",
+          "eski_adlar": [
+            "gerekli"
+          ]
+        },
+        "bekliyor": {
+          "ad_tr": "Bekliyor",
+          "ad_en": "Pending",
+          "sev": "uyari"
+        }
+      }
+    },
+    "uygulanabilirlik_durumu": {
+      "ad_tr": "Kural uygulanabilirlik durumu",
+      "ad_en": "Rule applicability status",
+      "kullanan": [
+        "gumruk-vergisi"
+      ],
+      "degerler": {
+        "uygulanabilir": {
+          "ad_tr": "Uygulanabilir",
+          "ad_en": "Applicable",
+          "sev": "ok"
+        },
+        "uygulanamaz": {
+          "ad_tr": "Uygulanamaz",
+          "ad_en": "Not applicable",
+          "sev": "notr"
+        },
+        "mense_ve_rejim_dogrulamasi_bekliyor": {
+          "ad_tr": "Menşe ve rejim doğrulaması bekliyor",
+          "ad_en": "Awaiting origin and regime verification",
+          "sev": "uyari"
+        },
+        "zorunlu": {
+          "ad_tr": "Zorunlu",
+          "ad_en": "Mandatory",
+          "sev": "hata",
+          "aciklama_tr": "Bağlantı her durumda uygulanır"
+        },
+        "kosullu": {
+          "ad_tr": "Koşullu",
+          "ad_en": "Conditional",
+          "sev": "uyari",
+          "aciklama_tr": "Belirli koşullar sağlanırsa uygulanır"
+        },
+        "opsiyonel": {
+          "ad_tr": "Opsiyonel",
+          "ad_en": "Optional",
+          "sev": "bilgi",
+          "aciklama_tr": "Talep üzerine uygulanır"
+        }
+      }
+    },
+    "kural_turleri": {
+      "ad_tr": "Kural türleri",
+      "ad_en": "Rule types",
+      "kullanan": [
+        "vergi-kurallari",
+        "belge-kurallari"
+      ],
+      "degerler": {
+        "urun": {
+          "ad_tr": "Ürün kuralı",
+          "ad_en": "Product rule",
+          "aciklama_tr": "GTİP/CPC'ye göre eşleşir"
+        },
+        "hizmet": {
+          "ad_tr": "Hizmet kuralı",
+          "ad_en": "Service rule",
+          "aciklama_tr": "CPC hizmet kodlarına göre"
+        },
+        "fallback": {
+          "ad_tr": "Yedek kural",
+          "ad_en": "Fallback",
+          "aciklama_tr": "Diğer kurallar eşleşmezse devreye girer"
+        },
+        "meslek": {
+          "ad_tr": "Meslek kuralı",
+          "ad_en": "Occupation rule",
+          "aciklama_tr": "ISCO meslek kodlarına göre eşleşir"
+        }
+      }
+    },
+    "eslesme_rolu": {
+      "ad_tr": "Eşleşme rolü",
+      "ad_en": "Match role",
+      "kullanan": [
+        "vergi-kurallari",
+        "belge-kurallari",
+        "nace-isco-kurallari"
+      ],
+      "degerler": {
+        "dogrudan": {
+          "ad_tr": "Doğrudan",
+          "ad_en": "Direct",
+          "aciklama_tr": "Prefix eşleşirse kural uygulanır"
+        },
+        "haric": {
+          "ad_tr": "Hariç tut",
+          "ad_en": "Exclude",
+          "aciklama_tr": "Prefix eşleşse bile kural uygulanmaz"
+        },
+        "kosullu": {
+          "ad_tr": "Koşullu",
+          "ad_en": "Conditional",
+          "aciklama_tr": "Ek koşullarla eşleşir"
+        }
+      }
+    },
+    "kural_motoru_eslesme": {
+      "ad_tr": "Kural motoru: eşleşme stratejisi",
+      "ad_en": "Rule engine: match strategy",
+      "kullanan": [
+        "vergi-kurallari"
+      ],
+      "degerler": {
+        "en_uzun_prefix": {
+          "ad_tr": "En uzun prefix kazanır",
+          "ad_en": "Longest prefix wins"
+        },
+        "ilk_eslesen": {
+          "ad_tr": "İlk eşleşen kazanır",
+          "ad_en": "First match wins"
+        },
+        "tum_eslesenler": {
+          "ad_tr": "Tüm eşleşenler birleşir",
+          "ad_en": "All matches merge"
+        },
+        "tam_eslesme": {
+          "ad_tr": "Tam eşleşme",
+          "ad_en": "Exact match",
+          "aciklama_tr": "Kod birebir eşleşmeli (prefix değil)"
+        }
+      }
+    },
+    "kural_motoru_cakisma": {
+      "ad_tr": "Kural motoru: çakışma çözümü",
+      "ad_en": "Rule engine: conflict resolution",
+      "kullanan": [
+        "vergi-kurallari"
+      ],
+      "degerler": {
+        "en_yuksek_oncelik": {
+          "ad_tr": "En yüksek öncelik kazanır",
+          "ad_en": "Highest priority wins"
+        },
+        "ilk_kazanan": {
+          "ad_tr": "İlk tanımlanan kazanır",
+          "ad_en": "First defined wins"
+        },
+        "hata": {
+          "ad_tr": "Hata ver",
+          "ad_en": "Raise error"
+        }
+      }
+    },
+    "kural_motoru_esitlik": {
+      "ad_tr": "Kural motoru: eşitlik çözümü",
+      "ad_en": "Rule engine: tie-break",
+      "kullanan": [
+        "vergi-kurallari"
+      ],
+      "degerler": {
+        "hata": {
+          "ad_tr": "Hata ver",
+          "ad_en": "Raise error"
+        },
+        "ilk": {
+          "ad_tr": "İlk tanımlanan",
+          "ad_en": "First defined"
+        },
+        "son": {
+          "ad_tr": "Son tanımlanan",
+          "ad_en": "Last defined"
+        }
+      }
+    },
+    "kural_motoru_haric_anlami": {
+      "ad_tr": "Kural motoru: 'haric' anlamı",
+      "ad_en": "Rule engine: 'exclude' meaning",
+      "kullanan": [
+        "vergi-kurallari"
+      ],
+      "degerler": {
+        "kesin_disarida": {
+          "ad_tr": "Kesin dışarıda",
+          "ad_en": "Definitely excluded",
+          "aciklama_tr": "Hiç eşleşmez"
+        },
+        "kosullu_disarida": {
+          "ad_tr": "Koşullu dışarıda",
+          "ad_en": "Conditionally excluded",
+          "aciklama_tr": "Koşul sağlanırsa dışarıda"
+        }
+      }
+    },
+    "kural_motoru_coklu_eslesme": {
+      "ad_tr": "Kural motoru: çoklu eşleşme",
+      "ad_en": "Rule engine: multiple matches",
+      "kullanan": [
+        "vergi-kurallari"
+      ],
+      "degerler": {
+        "ilk_kazanan": {
+          "ad_tr": "İlk kazanan",
+          "ad_en": "First wins"
+        },
+        "birlestir": {
+          "ad_tr": "Birleştir",
+          "ad_en": "Merge all"
+        },
+        "hata": {
+          "ad_tr": "Hata ver",
+          "ad_en": "Raise error"
+        }
+      }
+    },
+    "iliski_turu": {
+      "ad_tr": "İlişki türü",
+      "ad_en": "Relation type",
+      "kullanan": [
+        "nace-isco-kurallari",
+        "nace-kodlari",
+        "isco-kodlari"
+      ],
+      "degerler": {
+        "birincil": {
+          "ad_tr": "Birincil",
+          "ad_en": "Primary",
+          "aciklama_tr": "Doğrudan ana ilişki"
+        },
+        "ikincil": {
+          "ad_tr": "İkincil",
+          "ad_en": "Secondary",
+          "aciklama_tr": "Destekleyici ilişki"
+        },
+        "olasi_faaliyet": {
+          "ad_tr": "Olası faaliyet",
+          "ad_en": "Possible activity",
+          "aciklama_tr": "Kesin değil, ihtimal dahilinde"
+        }
+      }
+    },
+    "talep_tipi": {
+      "ad_tr": "Belge talep tipi",
+      "ad_en": "Document requirement type",
+      "kullanan": [
+        "belge-kurallari"
+      ],
+      "degerler": {
+        "zorunlu": {
+          "ad_tr": "Zorunlu",
+          "ad_en": "Mandatory",
+          "sev": "hata",
+          "aciklama_tr": "Belge olmadan işlem yapılamaz"
+        },
+        "opsiyonel": {
+          "ad_tr": "Opsiyonel",
+          "ad_en": "Optional",
+          "sev": "bilgi",
+          "aciklama_tr": "Talep edilirse sunulur"
+        },
+        "kosullu": {
+          "ad_tr": "Koşullu",
+          "ad_en": "Conditional",
+          "sev": "uyari",
+          "aciklama_tr": "Belirli koşullarda zorunlu"
+        }
+      }
+    },
+    "kaynak_turu": {
+      "ad_tr": "Kaynak türü",
+      "ad_en": "Source type",
+      "kullanan": [
+        "meta/kaynaklar.json"
+      ],
+      "degerler": {
+        "kurum": {
+          "ad_tr": "Kurum",
+          "ad_en": "Institution"
+        },
+        "mevzuat": {
+          "ad_tr": "Mevzuat",
+          "ad_en": "Legislation"
+        },
+        "url": {
+          "ad_tr": "URL",
+          "ad_en": "URL"
+        },
+        "csv": {
+          "ad_tr": "CSV dosya",
+          "ad_en": "CSV file"
+        },
+        "xml": {
+          "ad_tr": "XML dosya",
+          "ad_en": "XML file"
+        },
+        "api": {
+          "ad_tr": "API",
+          "ad_en": "API"
+        }
+      }
+    },
+    "mevzuat_turu": {
+      "ad_tr": "Mevzuat türü",
+      "ad_en": "Legislation type",
+      "kullanan": [
+        "meta/mevzuat.json"
+      ],
+      "degerler": {
+        "kanun": {
+          "ad_tr": "Kanun",
+          "ad_en": "Law"
+        },
+        "cbk": {
+          "ad_tr": "Cumhurbaşkanı Kararı",
+          "ad_en": "Presidential Decision"
+        },
+        "teblig": {
+          "ad_tr": "Tebliğ",
+          "ad_en": "Communiqué"
+        },
+        "yonetmelik": {
+          "ad_tr": "Yönetmelik",
+          "ad_en": "Regulation"
+        },
+        "uluslararasi_siniflama_kabulu": {
+          "ad_tr": "Uluslararası sınıflama kabulü",
+          "ad_en": "International classification adoption"
+        }
+      }
+    },
+    "periyot": {
+      "ad_tr": "Periyot",
+      "ad_en": "Period",
+      "kullanan": [
+        "asgari-ucret",
+        "engelli-indirimi",
+        "kurumlar-vergisi-oranlari",
+        "mtv-tarifeleri",
+        "sgk-prim-oranlari",
+        "sgk-tavani",
+        "tufe-ufe-verileri"
+      ],
+      "degerler": {
+        "sabit": {
+          "ad_tr": "Sabit (dönemsiz)",
+          "ad_en": "Fixed"
+        },
+        "gunluk": {
+          "ad_tr": "Günlük",
+          "ad_en": "Daily"
+        },
+        "aylik": {
+          "ad_tr": "Aylık",
+          "ad_en": "Monthly"
+        },
+        "6_aylik": {
+          "ad_tr": "6 aylık",
+          "ad_en": "Semi-annual"
+        },
+        "yillik": {
+          "ad_tr": "Yıllık",
+          "ad_en": "Annual"
+        }
+      }
+    },
+    "para_birimi": {
+      "ad_tr": "Para birimi",
+      "ad_en": "Currency",
+      "kullanan": [
+        "asgari-ucret",
+        "engelli-indirimi",
+        "mtv-tarifeleri",
+        "sgk-tavani"
+      ],
+      "degerler": {
+        "TRY": {
+          "ad_tr": "Türk Lirası",
+          "ad_en": "Turkish Lira"
+        },
+        "USD": {
+          "ad_tr": "ABD Doları",
+          "ad_en": "US Dollar"
+        },
+        "EUR": {
+          "ad_tr": "Euro",
+          "ad_en": "Euro"
+        }
+      }
+    },
+    "olcek": {
+      "ad_tr": "Değer ölçeği",
+      "ad_en": "Value scale",
+      "kullanan": [
+        "tufe-ufe-verileri"
+      ],
+      "degerler": {
+        "oran_ondalik": {
+          "ad_tr": "Oran (ondalık)",
+          "ad_en": "Rate (decimal)",
+          "ornek": [
+            0.0184
+          ]
+        },
+        "oran_yuzde": {
+          "ad_tr": "Oran (yüzde)",
+          "ad_en": "Rate (percent)",
+          "ornek": [
+            1.84
+          ]
+        },
+        "sayisal": {
+          "ad_tr": "Sayısal değer",
+          "ad_en": "Numeric"
+        },
+        "endeks": {
+          "ad_tr": "Endeks değeri",
+          "ad_en": "Index value",
+          "ornek": [
+            100
+          ]
+        }
+      }
+    },
+    "birim": {
+      "ad_tr": "Birim",
+      "ad_en": "Unit",
+      "kullanan": [
+        "sgk-prim-oranlari"
+      ],
+      "degerler": {
+        "%": {
+          "ad_tr": "Yüzde",
+          "ad_en": "Percent"
+        },
+        "TL": {
+          "ad_tr": "TL",
+          "ad_en": "TRY"
+        }
+      }
+    },
+    "islem_kategorisi": {
+      "ad_tr": "İşlem kategorisi (KDV tevkifat)",
+      "ad_en": "Transaction category (VAT withholding)",
+      "kullanan": [
+        "kdv-tevkifat"
+      ],
+      "degerler": {
+        "mal_teslimi": {
+          "ad_tr": "Mal teslimi",
+          "ad_en": "Goods supply"
+        },
+        "hizmet": {
+          "ad_tr": "Hizmet",
+          "ad_en": "Service"
+        }
+      }
+    },
+    "gtip_kapsam_tipi": {
+      "ad_tr": "GTİP kapsam tipi",
+      "ad_en": "GTIP scope type",
+      "kullanan": [
+        "ilave-gumruk-vergisi",
+        "vergi-kurallari"
+      ],
+      "degerler": {
+        "prefix": {
+          "ad_tr": "Prefix (başlangıç)",
+          "ad_en": "Prefix",
+          "ornek": [
+            "87",
+            "8539"
+          ]
+        },
+        "tam": {
+          "ad_tr": "Tam kod",
+          "ad_en": "Exact",
+          "ornek": [
+            "040320110012"
+          ]
+        },
+        "aralik": {
+          "ad_tr": "Aralık",
+          "ad_en": "Range",
+          "ornek": [
+            "0403..0404"
+          ]
+        },
+        "liste": {
+          "ad_tr": "Liste",
+          "ad_en": "List",
+          "ornek": [
+            [
+              "0403",
+              "0404",
+              "0405"
+            ]
+          ]
+        }
+      }
+    },
+    "parametre_turleri": {
+      "ad_tr": "Parametre dosya türü",
+      "ad_en": "Parameter value type",
+      "kullanan": [
+        "asgari-ucret",
+        "engelli-indirimi",
+        "gelir-vergisi-dilimleri",
+        "kurumlar-vergisi-oranlari",
+        "mtv-tarifeleri",
+        "sgk-prim-oranlari",
+        "sgk-tavani",
+        "tufe-ufe-verileri"
+      ],
+      "degerler": {
+        "oran": {
+          "ad_tr": "Oran",
+          "ad_en": "Rate"
+        },
+        "deger": {
+          "ad_tr": "Değer (tutar)",
+          "ad_en": "Value (amount)"
+        },
+        "dilim": {
+          "ad_tr": "Dilim (tarife)",
+          "ad_en": "Bracket"
+        },
+        "dereceler": {
+          "ad_tr": "Dereceler",
+          "ad_en": "Degrees"
+        }
+      }
+    },
+    "sgk_kosul_turu": {
+      "ad_tr": "SGK teşvik koşul türü",
+      "ad_en": "SGK incentive condition type",
+      "kullanan": [
+        "sgk-tesvik-kodlari"
+      ],
+      "degerler": {
+        "isveren_ve_sektor": {
+          "ad_tr": "İşveren + sektör"
+        },
+        "yurt_disi_gorevlendirme": {
+          "ad_tr": "Yurt dışı görevlendirme"
+        },
+        "yatirim_belgesi_ve_bolge": {
+          "ad_tr": "Yatırım belgesi + bölge"
+        },
+        "proje_ve_yatirim_belgesi": {
+          "ad_tr": "Proje + yatırım belgesi"
+        },
+        "calisan_ve_isveren": {
+          "ad_tr": "Çalışan + işveren"
+        },
+        "arge_personeli_ve_isveren": {
+          "ad_tr": "Ar-Ge personeli + işveren"
+        },
+        "kultur_girisim_belgesi": {
+          "ad_tr": "Kültür girişim belgesi"
+        },
+        "kultur_yatirim_belgesi": {
+          "ad_tr": "Kültür yatırım belgesi"
+        }
+      }
+    },
+    "sgk_uygulama_durumu": {
+      "ad_tr": "SGK teşvik uygulama durumu",
+      "ad_en": "SGK incentive application status",
+      "kullanan": [
+        "sgk-tesvik-kodlari"
+      ],
+      "degerler": {
+        "kosula_bagli": {
+          "ad_tr": "Koşula bağlı",
+          "ad_en": "Conditional"
+        },
+        "aktif": {
+          "ad_tr": "Aktif",
+          "ad_en": "Active"
+        },
+        "kaldirilmis": {
+          "ad_tr": "Kaldırılmış",
+          "ad_en": "Deprecated"
+        }
+      }
+    },
+    "sgk_sigorta_kolu_tip": {
+      "ad_tr": "SGK sigorta kolu tipi",
+      "ad_en": "SGK insurance branch type",
+      "kullanan": [
+        "sgk-sigorta-kollari"
+      ],
+      "degerler": {
+        "statü": {
+          "ad_tr": "Sigortalılık statüsü",
+          "ad_en": "Insured status"
+        },
+        "kısa_vadeli": {
+          "ad_tr": "Kısa vadeli sigorta",
+          "ad_en": "Short-term insurance"
+        },
+        "uzun_vadeli": {
+          "ad_tr": "Uzun vadeli sigorta",
+          "ad_en": "Long-term insurance"
+        },
+        "sağlık": {
+          "ad_tr": "Sağlık sigortası",
+          "ad_en": "Health insurance"
+        },
+        "işsizlik": {
+          "ad_tr": "İşsizlik sigortası",
+          "ad_en": "Unemployment insurance"
+        }
+      }
+    },
+    "kod_turu": {
+      "ad_tr": "Kod türü (dosya semantiği)",
+      "ad_en": "Code type (file semantics)",
+      "kullanan": [
+        "ogrenim-durumu",
+        "sgk-isyeri-nakil-nedenleri",
+        "sgk-sigorta-kollari"
+      ],
+      "degerler": {
+        "pdaas_egitim_secenegi": {
+          "ad_tr": "PDaaS eğitim seçeneği",
+          "ad_en": "PDaaS education option"
+        },
+        "pdaas_ornek_senaryo": {
+          "ad_tr": "PDaaS örnek senaryo",
+          "ad_en": "PDaaS sample scenario"
+        },
+        "kanuni_sigortalilik_statusu": {
+          "ad_tr": "Kanuni sigortalılık statüsü",
+          "ad_en": "Statutory insured status"
+        },
+        "pdaas_tanimlayici": {
+          "ad_tr": "PDaaS tanımlayıcı",
+          "ad_en": "PDaaS descriptor"
+        }
+      }
+    },
+    "damga_vergisi_turleri": {
+      "ad_tr": "Damga vergisi tipi",
+      "ad_en": "Stamp tax type",
+      "kullanan": [
+        "damga-vergisi"
+      ],
+      "degerler": {
+        "nispi": {
+          "ad_tr": "Nispi (oran)",
+          "ad_en": "Ad valorem"
+        },
+        "maktu": {
+          "ad_tr": "Maktu (tutar)",
+          "ad_en": "Specific"
+        }
+      }
+    },
+    "damga_vergisi_kategorileri": {
+      "ad_tr": "Damga vergisi kategorileri",
+      "ad_en": "Stamp tax categories",
+      "kullanan": [
+        "damga-vergisi"
+      ],
+      "degerler": {
+        "sozlesme": {
+          "ad_tr": "Sözleşme",
+          "ad_en": "Contract"
+        },
+        "kira": {
+          "ad_tr": "Kira",
+          "ad_en": "Lease"
+        },
+        "karar_mazbata": {
+          "ad_tr": "Karar/Mazbata",
+          "ad_en": "Decision/Report"
+        },
+        "ticari_senet": {
+          "ad_tr": "Ticari senet",
+          "ad_en": "Commercial instrument"
+        },
+        "ticari_belge": {
+          "ad_tr": "Ticari belge",
+          "ad_en": "Commercial document"
+        },
+        "makbuz": {
+          "ad_tr": "Makbuz",
+          "ad_en": "Receipt"
+        },
+        "beyanname": {
+          "ad_tr": "Beyanname",
+          "ad_en": "Declaration"
+        },
+        "diger": {
+          "ad_tr": "Diğer",
+          "ad_en": "Other"
+        }
+      }
+    },
+    "damga_vergisi_uygulama_turleri": {
+      "ad_tr": "Damga vergisi uygulama türleri",
+      "ad_en": "Stamp tax application types",
+      "kullanan": [
+        "damga-vergisi"
+      ],
+      "degerler": {
+        "ust_sinir": {
+          "ad_tr": "Üst sınır",
+          "ad_en": "Upper limit"
+        },
+        "hesaplama_esasi": {
+          "ad_tr": "Hesaplama esası",
+          "ad_en": "Calculation basis"
+        },
+        "vergi_disi": {
+          "ad_tr": "Vergi dışı",
+          "ad_en": "Out of tax scope"
+        },
+        "iade": {
+          "ad_tr": "İade",
+          "ad_en": "Refund"
+        },
+        "kapsam": {
+          "ad_tr": "Kapsam",
+          "ad_en": "Scope"
+        }
+      }
+    },
+    "gtip_disi": {
+      "ad_tr": "GTİP kodu değil",
+      "ad_en": "Not a GTIP code",
+      "sev": "bilgi",
+      "aciklama_tr": "Kayıt GTİP sınıflandırması dışı özel bir kod taşır (ör. ihracat rejimi sabit kodu)",
+      "davranis": "cross-ref kontrolünde muaf",
+      "ornek": [
+        "gumruk-vergisi:IHR-GV-GENEL"
+      ]
+    }
+  }
+}
