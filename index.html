@@ -280,10 +280,17 @@
     const KATEGORI_MAP = {
       ham: { ad: { tr: 'Ham Veriler', en: 'Raw Datasets' }, ikon: '📂' },
       kurallar: { ad: { tr: 'Eşleştirme Kuralları', en: 'Mapping Rules' }, ikon: '⚙️' },
+      belgeler: { ad: { tr: 'Belge Katalogları', en: 'Document Catalogs' }, ikon: '📄' },
+      iliskiler: { ad: { tr: 'Kod İlişkileri', en: 'Code Relationships' }, ikon: '🔗' },
       konsolide: { ad: { tr: 'Konsolide Veriler', en: 'Consolidated Datasets' }, ikon: '🗃️' },
+      meta: { ad: { tr: 'Meta ve Sözleşmeler', en: 'Metadata and Contracts' }, ikon: '🧾' },
       ornek: { ad: { tr: 'Örnek Veriler', en: 'Examples' }, ikon: '📋' }
     };
-    const KATEGORI_SIRASI = ['ham', 'kurallar', 'konsolide', 'ornek'];
+    const KATEGORI_SIRASI = ['ham', 'kurallar', 'belgeler', 'iliskiler', 'konsolide', 'meta', 'ornek'];
+    const KATMAN_ADLARI = {
+      tr: { ham: 'Ham Veri', kurallar: 'Kural', belgeler: 'Belge', iliskiler: 'İlişki', konsolide: 'Konsolide', meta: 'Meta', ornek: 'Örnek' },
+      en: { ham: 'Raw', kurallar: 'Rule', belgeler: 'Document', iliskiler: 'Relationship', konsolide: 'Consolidated', meta: 'Metadata', ornek: 'Example' }
+    };
     
     const ALAN_ETIKET_TR = {
       kod: 'Kod', ust_kod: 'Üst Kod', seviye: 'Seviye', seviye_adi: 'Seviye Adı',
@@ -302,6 +309,9 @@
       esik_alt: 'Eşik (Alt)', esik_ust: 'Eşik (Üst)', yapilan: 'Durum',
       arac_turu: 'Araç Türü', not: 'Not', kapsam_tr: 'Kapsam (TR)', kapsam_en: 'Kapsam (EN)',
       belge_ref: 'Belge Referansı', belge_kodlari: 'Belge Kodları', islem_tipleri: 'İşlem Türleri',
+      iliski_tablolari: 'İlişki Tabloları', gtip_cpc: 'GTİP–CPC', gtip_nace: 'GTİP–NACE', nace_isco: 'NACE–ISCO',
+      iliski_turu: 'İlişki Türü', iliski_yolu: 'İlişki Yolu', kaynak_nace: 'Kaynak NACE',
+      kaynak_nace_kodlari: 'Kaynak NACE Kodları', faaliyet_belgeleri: 'Faaliyet Belgeleri', mesleki_belgeler: 'Mesleki Belgeler',
       durum: 'Durum', kosul: 'Koşul', gtip_prefixler: 'GTİP Önekleri', nace_prefixler: 'NACE Önekleri',
       haric_nace_prefixler: 'Hariç NACE Önekleri', isco_kodlari: 'ISCO Kodları',
       urun_kurallari: 'Ürün Kuralları', faaliyet_kurallari: 'Faaliyet Kuralları', meslek_kurallari: 'Meslek Kuralları'
@@ -323,6 +333,9 @@
       esik_alt: 'Threshold (Low)', esik_ust: 'Threshold (High)', yapilan: 'Status',
       arac_turu: 'Vehicle Type', not: 'Note', kapsam_tr: 'Scope (TR)', kapsam_en: 'Scope (EN)',
       belge_ref: 'Document Reference', belge_kodlari: 'Document Codes', islem_tipleri: 'Transaction Types',
+      iliski_tablolari: 'Relationship Tables', gtip_cpc: 'GTIP–CPC', gtip_nace: 'GTIP–NACE', nace_isco: 'NACE–ISCO',
+      iliski_turu: 'Relationship Type', iliski_yolu: 'Relationship Path', kaynak_nace: 'Source NACE',
+      kaynak_nace_kodlari: 'Source NACE Codes', faaliyet_belgeleri: 'Activity Documents', mesleki_belgeler: 'Occupation Documents',
       durum: 'Status', kosul: 'Condition', gtip_prefixler: 'GTİP Prefixes', nace_prefixler: 'NACE Prefixes',
       haric_nace_prefixler: 'Excluded NACE Prefixes', isco_kodlari: 'ISCO Codes',
       urun_kurallari: 'Product Rules', faaliyet_kurallari: 'Activity Rules', meslek_kurallari: 'Occupation Rules'
@@ -342,6 +355,13 @@
     function grupEtiket(anahtar) {
       const g = KATEGORI_MAP[anahtar];
       return g ? g.ad[document.documentElement.lang === 'en' ? 'en' : 'tr'] : String(anahtar || 'genel').replace(/_/g, ' ');
+    }
+    function katmanEtiket(anahtar) {
+      const key = 'layer_' + anahtar;
+      const translated = t(key);
+      if (translated !== key) return translated;
+      const d = document.documentElement.lang === 'en' ? 'en' : 'tr';
+      return KATMAN_ADLARI[d][anahtar] || anahtar;
     }
     function bolumEtiketi(key) {
       const k = 'section_' + key;
@@ -476,6 +496,14 @@
                 ? item : { sira: index + 1, deger: item }));
               dataSectionPaths.set(gorunumAdi, `${key}.${altKey}`);
             }
+          } else if (Object.values(value).some(Array.isArray)) {
+            for (const [altKey, altValue] of Object.entries(value)) {
+              if (!Array.isArray(altValue)) continue;
+              const gorunumAdi = `${key}_${altKey}`;
+              result.set(gorunumAdi, altValue.map((item, index) => item && typeof item === 'object' && !Array.isArray(item)
+                ? item : { sira: index + 1, deger: item }));
+              dataSectionPaths.set(gorunumAdi, `${key}.${altKey}`);
+            }
           } else {
             result.set(key, Object.entries(value).map(([kod, entry]) =>
               entry && typeof entry === 'object' && !Array.isArray(entry)
@@ -538,8 +566,59 @@
         const r = await apiFetch(CONFIG.KATALOG_ENDPOINT);
         if (!r.ok) throw new Error(`${apiUrl(CONFIG.KATALOG_ENDPOINT)} — HTTP ${r.status}`);
         const body = await r.json();
-        if (!Array.isArray(body.servisler)) throw new Error(t('catalog_invalid'));
-        KATALOG = body.servisler;
+        if (Array.isArray(body.servisler)) {
+          KATALOG = body.servisler.map(s => ({ ...s, kimlik: s.kimlik || s.kod }));
+        } else if (body.varliklar && typeof body.varliklar === 'object') {
+          const grupDonusum = {
+            ham: 'ham', belge: 'belgeler', kural: 'kurallar', iliskiler: 'iliskiler',
+            konsolide: 'konsolide', meta: 'meta', ornek: 'ornek'
+          };
+          KATALOG = Object.entries(body.varliklar).flatMap(([grup, dosyalar]) =>
+            (Array.isArray(dosyalar) ? dosyalar : []).map(dosya => {
+              const katman = grupDonusum[grup] || grup;
+              const dosyaAdi = dosya.dosya?.split('/').pop()?.replace(/\.json$/i, '') || dosya.kod || 'veri';
+              const kod = dosya.kod || dosyaAdi;
+              const adTr = dosya.ad_tr || dosyaAdi.replaceAll('-', ' ');
+              const adEn = dosya.ad_en || adTr;
+              const kayit = Number(dosya.kayit_sayisi || 0).toLocaleString('tr-TR');
+              const aciklamaTr = `${dosya.schema || 'JSON'} · ${kayit} kayıt · Güncelleme ${dosya.guncelleme || '—'}`;
+              const aciklamaEn = `${dosya.schema || 'JSON'} · ${Number(dosya.kayit_sayisi || 0).toLocaleString('en-US')} records · Updated ${dosya.guncelleme || '—'}`;
+              return {
+                kimlik: dosya.dosya || `${grup}:${kod}`,
+                kod,
+                ad: { tr: adTr, en: adEn },
+                aciklama: { tr: aciklamaTr, en: aciklamaEn },
+                yayinci: { tr: 'PDaaS', en: 'PDaaS' },
+                tip: dosya.schema || dosya.tip || 'JSON',
+                katmanlar: {
+                  [katman]: {
+                    url: dosya.dosya,
+                    son: dosya.surum || '—',
+                    checksum: dosya.checksum,
+                    kayit_sayisi: dosya.kayit_sayisi
+                  }
+                }
+              };
+            })
+          );
+          // Katalog ve manifest kendi checksum döngüsüne girmemeleri için listede ayrı eklenir.
+          const katalogMeta = body.meta || {};
+          for (const [kod, ad, dosya] of [
+            ['katalog', 'PDaaS Veri Kataloğu', 'meta/katalog.json'],
+            ['manifest', 'PDaaS Derleme Manifesti', 'meta/manifest.json']
+          ]) {
+            const tr = kod === 'katalog' ? ad : ad;
+            const en = kod === 'katalog' ? 'PDaaS Data Catalog' : 'PDaaS Build Manifest';
+            KATALOG.push({
+              kimlik: dosya, kod, ad: { tr, en },
+              aciklama: { tr: `${katalogMeta.schema || 'JSON'} · ${katalogMeta.guncelleme || '—'}`, en: `${katalogMeta.schema || 'JSON'} · ${katalogMeta.guncelleme || '—'}` },
+              yayinci: { tr: 'PDaaS', en: 'PDaaS' }, tip: 'JSON',
+              katmanlar: { meta: { url: dosya, son: katalogMeta.surum || '—' } }
+            });
+          }
+        } else {
+          throw new Error(t('catalog_invalid'));
+        }
         renderCatalogTree();
       } catch (e) {
         $('catalog-tree-container').innerHTML = `<div class="p-6 text-center text-rose-400 text-xs"><p class="font-bold mb-1">${t('load_error')}</p><p class="text-slate-500 break-all">${kacis(e.message)}</p></div>`;
@@ -581,7 +660,7 @@
         const eslesen = grup.servisler.filter(item => {
           if (!q) return true;
           const sAdi = (document.documentElement.lang === 'en' ? (item.sv.ad.en || item.sv.ad.tr) : item.sv.ad.tr) || '';
-          const aramaMetni = `${sAdi} (${t('layer_' + item.katman)}) ${item.sv.kod}`.toLocaleLowerCase('tr-TR');
+          const aramaMetni = `${sAdi} (${katmanEtiket(item.katman)}) ${item.sv.kod} ${item.sv.kimlik || ''}`.toLocaleLowerCase('tr-TR');
           return aramaMetni.includes(q) || grupAdi.toLocaleLowerCase('tr-TR').includes(q);
         });
 
@@ -605,12 +684,12 @@
             ${eslesen.map(item => {
               const s = item.sv;
               const sAdi = document.documentElement.lang === 'en' ? (s.ad.en || s.ad.tr) : s.ad.tr;
-              const aktif = currentService && currentService.kod === s.kod && currentKatman === item.katman;
-              const katmanEtiket = t('layer_' + item.katman) || item.katman;
+              const aktif = currentService && currentService.kimlik === s.kimlik && currentKatman === item.katman;
+              const katmanAdi = katmanEtiket(item.katman);
               
               return `
-                <button type="button" class="service-item-btn w-full px-3 py-2 pl-9 flex items-center justify-between text-left hover:bg-win-500/10 hover:text-win-400 transition text-slate-400 ${aktif ? 'bg-win-500/20 text-win-400 font-semibold border-l-2 border-win-500' : ''}" data-kod="${kacis(s.kod)}" data-katman="${kacis(item.katman)}">
-                  <span class="truncate pr-2">${kacis(sAdi)} <span class="text-[10px] text-slate-500 ml-1">(${katmanEtiket})</span></span>
+                <button type="button" class="service-item-btn w-full px-3 py-2 pl-9 flex items-center justify-between text-left hover:bg-win-500/10 hover:text-win-400 transition text-slate-400 ${aktif ? 'bg-win-500/20 text-win-400 font-semibold border-l-2 border-win-500' : ''}" data-kimlik="${kacis(s.kimlik || s.kod)}" data-katman="${kacis(item.katman)}">
+                  <span class="truncate pr-2">${kacis(sAdi)} <span class="text-[10px] text-slate-500 ml-1">(${katmanAdi})</span></span>
                   <span class="px-1.5 py-0.5 text-[9px] font-mono bg-win-hover text-slate-400 rounded">${item.katmanBilgi.son}</span>
                 </button>`;
             }).join('')}
@@ -630,9 +709,9 @@
       });
       container.querySelectorAll('.service-item-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-          const kod = btn.dataset.kod;
+          const kimlik = btn.dataset.kimlik;
           const katman = btn.dataset.katman;
-          const sv = KATALOG.find(s => s.kod === kod);
+          const sv = KATALOG.find(s => (s.kimlik || s.kod) === kimlik);
           if (sv) servisSec(sv, katman);
           closeMobileSidebar();
         });
@@ -645,19 +724,19 @@
       const servisAdi = document.documentElement.lang === 'en' ? (sv.ad.en || sv.ad.tr) : sv.ad.tr;
       const katmanBilgi = sv.katmanlar?.[katmanKey] || {};
       const versiyon = katmanBilgi.son || '—';
-      const katmanEtiket = t('layer_' + katmanKey) || katmanKey;
+      const katmanAdi = katmanEtiket(katmanKey);
 
       currentBaseUrl = katmanBilgi.resolvedUrl || apiUrl(katmanBilgi.url || '');
       const parcaSuffix = currentParca ? ` › ${currentParca.kod}` : '';
       const gosterilenUrl = currentParca ? currentParca.endpoint : currentBaseUrl;
 
       $('bc-ministry').textContent = grupAdi;
-      $('bc-service').textContent = `${servisAdi} (${katmanEtiket})${parcaSuffix}`;
+      $('bc-service').textContent = `${servisAdi} (${katmanAdi})${parcaSuffix}`;
       const dil = document.documentElement.lang === 'en' ? 'en' : 'tr';
-      $('service-ministry-badge').textContent = `${sv.yayinci?.[dil] || grupAdi} · ${katmanEtiket}`;
+      $('service-ministry-badge').textContent = `${sv.yayinci?.[dil] || grupAdi} · ${katmanAdi}`;
       $('service-records-count').textContent = `v${versiyon}`;
       $('service-type-badge').textContent = tipEtiket(sv.tip);
-      $('service-title').textContent = `${servisAdi} (${katmanEtiket})${parcaSuffix}`;
+      $('service-title').textContent = `${servisAdi} (${katmanAdi})${parcaSuffix}`;
       $('service-desc').textContent = sv.aciklama?.[dil] || sv.kod;
       $('service-last-update').textContent = `v${versiyon}`;
       $('endpoint-url-text').textContent = gosterilenUrl;

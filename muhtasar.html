@@ -173,7 +173,7 @@
           const neden = kaynak.yuklendi ? t('muh_kaynak_icerigi')
             : kaynak.httpStatus ? `HTTP ${kaynak.httpStatus}`
             : kaynak.hataKod === 'json' ? t('muh_json_gecersiz') : t('muh_baglanti_hatasi');
-          const adres = apiUrl(kaynak.yol || `/${key}.json`);
+          const adres = apiUrl(kaynak.yol || `ham/${key}.json`);
           return `<li class="flex flex-wrap items-center gap-2"><a class="underline font-mono text-amber-200 hover:text-white" href="${kacis(adres)}" target="_blank" rel="noopener noreferrer">${kacis(key)}.json</a><span class="text-amber-300/80">(${kacis(neden)})</span></li>`;
         });
       durum.innerHTML = ORNEK_KULLANILIYOR
@@ -185,17 +185,18 @@
     // VERİ YÜKLEME
     // ============================================================
     const KAYNAK_DOSYALAR = [
-      { key: 'asgari-ucret', path: '/asgari-ucret.json', ad: 'Asgari Ücret' },
-      { key: 'sgk-prim-oranlari', path: '/sgk-prim-oranlari.json', ad: 'SGK Prim Oranları' },
-      { key: 'damga-vergisi', path: '/damga-vergisi.json', ad: 'Damga Vergisi' },
-      { key: 'gelir-vergisi-dilimleri', path: '/gelir-vergisi-dilimleri.json', ad: 'Gelir Vergisi Dilimleri' },
-      { key: 'sgk-belge-turleri', path: '/sgk-belge-turleri.json', ad: 'Belge Türleri' },
-      { key: 'sgk-isten-ayrilis-nedenleri', path: '/sgk-isten-ayrilis-nedenleri.json', ad: 'İşten Çıkış Nedenleri' },
-      { key: 'sgk-eksik-gun-nedenleri', path: '/sgk-eksik-gun-nedenleri.json', ad: 'Eksik Gün Nedenleri' },
-      { key: 'sgk-meslek-kodlari', path: '/sgk-meslek-kodlari.json', ad: 'Meslek Kodları' }
+      { key: 'asgari-ucret', path: 'ham/asgari-ucret.json', ad: 'Asgari Ücret' },
+      { key: 'sgk-prim-oranlari', path: 'ham/sgk-prim-oranlari.json', ad: 'SGK Prim Oranları' },
+      { key: 'damga-vergisi', path: 'ham/damga-vergisi.json', ad: 'Damga Vergisi' },
+      { key: 'gelir-vergisi-dilimleri', path: 'ham/gelir-vergisi-dilimleri.json', ad: 'Gelir Vergisi Dilimleri' },
+      { key: 'sgk-belge-turleri', path: 'ham/sgk-belge-turleri.json', ad: 'Belge Türleri' },
+      { key: 'sgk-isten-ayrilis-nedenleri', path: 'ham/sgk-isten-ayrilis-nedenleri.json', ad: 'İşten Çıkış Nedenleri' },
+      { key: 'sgk-eksik-gun-nedenleri', path: 'ham/sgk-eksik-gun-nedenleri.json', ad: 'Eksik Gün Nedenleri' },
+      { key: 'sgk-meslek-kodlari', path: 'ham/sgk-meslek-kodlari.json', ad: 'Meslek Kodları' }
     ];
 
     const KAYNAK_DURUM = {};
+    const kaynakYolu = key => KAYNAK_DOSYALAR.find(x => x.key === key)?.path || `ham/${key}.json`;
 
     async function fetchGuvenli(yol) {
       try {
@@ -236,7 +237,12 @@
         const KATALOG_ENDPOINT = CONFIG?.KATALOG_ENDPOINT || '/katalog.json';
         const kat = await fetchGuvenli(KATALOG_ENDPOINT);
         
-        if (kat && kat.servisler) {
+        if (Array.isArray(kat?.varliklar?.ham)) {
+          KAYNAK_DOSYALAR.forEach(item => {
+            const asset = kat.varliklar.ham.find(x => x.kod === item.key);
+            if (asset?.dosya) item.path = asset.dosya;
+          });
+        } else if (kat && kat.servisler) {
           const getUrl = (kod) => {
             const s = kat.servisler.find(x => x.kod === kod);
             if (!s) return null;
@@ -253,7 +259,7 @@
 
       const sonuclar = await Promise.all(KAYNAK_DOSYALAR.map(async (k) => ({
         key: k.key,
-        ...await kaynakYukle([k.path, `/${k.key}.json`])
+        ...await kaynakYukle([k.path, `ham/${k.key}.json`, `/${k.key}.json`])
       })));
 
       for (const { key, data, yol, hataKod, httpStatus } of sonuclar) {
@@ -375,7 +381,10 @@
     // EKRANA ÇİZİM
     // ============================================================
     function kaynakEtiketi(yol) {
-      const k = yol.includes('asgari') ? KAYNAK_REF.asgari : yol.includes('damga') ? KAYNAK_REF.damga : yol.includes('sgk') ? KAYNAK_REF.sgk : null;
+      const k = yol.includes('asgari') ? KAYNAK_REF.asgari
+        : yol.includes('damga') ? KAYNAK_REF.damga
+        : yol.includes('gelir-vergisi') ? KAYNAK_REF.gv
+        : yol.includes('sgk') ? KAYNAK_REF.sgk : null;
       return `${yol} · ${k === 'json' ? t('muh_kaynak_dogrulandi') : t('muh_kaynak_yedek')}`;
     }
 
@@ -384,13 +393,13 @@
       if (!grid) return;
 
       const items = [
-        { etiket: t('muh_asgari_aylik_brut'), deger: REF.asgariBrutAylik != null ? `${para(REF.asgariBrutAylik)} ₺` : t('muh_veri_yok'), kaynak: '/asgari-ucret.json', ikon: '💵', renk: 'text-emerald-400' },
-        { etiket: t('muh_asgari_aylik_net'),  deger: REF.asgariNetAylik != null ? `${para(REF.asgariNetAylik)} ₺` : t('muh_veri_yok'),  kaynak: '/asgari-ucret.json', ikon: '💰', renk: 'text-win-300' },
-        { etiket: t('muh_asgari_gunluk_brut'), deger: REF.asgariBrutGunluk != null ? `${para(REF.asgariBrutGunluk)} ₺` : t('muh_veri_yok'), kaynak: '/asgari-ucret.json', ikon: '📅', renk: 'text-emerald-400' },
-        { etiket: t('muh_asgari_gunluk_net'),  deger: REF.asgariNetGunluk != null ? `${para(REF.asgariNetGunluk)} ₺` : t('muh_veri_yok'), kaynak: '/asgari-ucret.json', ikon: '📆', renk: 'text-win-300' },
-        { etiket: t('muh_damga'),              deger: REF.damgaOran != null ? binde(REF.damgaOran) : t('muh_veri_yok'),  kaynak: '/damga-vergisi.json', ikon: '📑', renk: 'text-amber-400' },
-        { etiket: t('muh_sgk_isci'),           deger: `%${(REF.sgkIsci * 100).toLocaleString(dil() === 'en' ? 'en-US' : 'tr-TR', {minimumFractionDigits:2,maximumFractionDigits:2})}`, kaynak: '/sgk-prim-oranlari.json', ikon: '🏛️', renk: 'text-win-300' },
-        { etiket: t('muh_issizlik_isci'),      deger: `%${(REF.issizlikIsci * 100).toLocaleString(dil() === 'en' ? 'en-US' : 'tr-TR', {minimumFractionDigits:2,maximumFractionDigits:2})}`, kaynak: '/sgk-prim-oranlari.json', ikon: '🛡️', renk: 'text-win-300' },
+        { etiket: t('muh_asgari_aylik_brut'), deger: REF.asgariBrutAylik != null ? `${para(REF.asgariBrutAylik)} ₺` : t('muh_veri_yok'), kaynak: kaynakYolu('asgari-ucret'), ikon: '💵', renk: 'text-emerald-400' },
+        { etiket: t('muh_asgari_aylik_net'),  deger: REF.asgariNetAylik != null ? `${para(REF.asgariNetAylik)} ₺` : t('muh_veri_yok'),  kaynak: kaynakYolu('asgari-ucret'), ikon: '💰', renk: 'text-win-300' },
+        { etiket: t('muh_asgari_gunluk_brut'), deger: REF.asgariBrutGunluk != null ? `${para(REF.asgariBrutGunluk)} ₺` : t('muh_veri_yok'), kaynak: kaynakYolu('asgari-ucret'), ikon: '📅', renk: 'text-emerald-400' },
+        { etiket: t('muh_asgari_gunluk_net'),  deger: REF.asgariNetGunluk != null ? `${para(REF.asgariNetGunluk)} ₺` : t('muh_veri_yok'), kaynak: kaynakYolu('asgari-ucret'), ikon: '📆', renk: 'text-win-300' },
+        { etiket: t('muh_damga'),              deger: REF.damgaOran != null ? binde(REF.damgaOran) : t('muh_veri_yok'),  kaynak: kaynakYolu('damga-vergisi'), ikon: '📑', renk: 'text-amber-400' },
+        { etiket: t('muh_sgk_isci'),           deger: `%${(REF.sgkIsci * 100).toLocaleString(dil() === 'en' ? 'en-US' : 'tr-TR', {minimumFractionDigits:2,maximumFractionDigits:2})}`, kaynak: kaynakYolu('sgk-prim-oranlari'), ikon: '🏛️', renk: 'text-win-300' },
+        { etiket: t('muh_issizlik_isci'),      deger: `%${(REF.issizlikIsci * 100).toLocaleString(dil() === 'en' ? 'en-US' : 'tr-TR', {minimumFractionDigits:2,maximumFractionDigits:2})}`, kaynak: kaynakYolu('sgk-prim-oranlari'), ikon: '🛡️', renk: 'text-win-300' },
       ];
 
       grid.innerHTML = items.map(it => `
@@ -529,7 +538,7 @@
                 <option value="">${kacis(t('muh_sec'))}</option>
                 ${opt(LOOKUP.belge, row.belge)}
               </select>
-              ${tag('/sgk-belge-turleri.json')}
+              ${tag(kaynakYolu('sgk-belge-turleri'))}
             </td>
             <!-- TC -->
             <td class="px-2 py-2 align-top">
@@ -550,7 +559,7 @@
             <!-- Ücret -->
             <td class="px-2 py-2 align-top">
               <input type="text" inputmode="decimal" class="${inputCls} text-right font-mono ucret-input" value="${row.ucret > 0 ? para(row.ucret) : ''}" data-idx="${i}" data-field="ucret">
-              ${(i === 0 || i === 2) ? tag('/asgari-ucret.json') : ''}
+              ${(i === 0 || i === 2) ? tag(kaynakYolu('asgari-ucret')) : ''}
             </td>
             <!-- İşten Çıkış -->
             <td class="px-2 py-2 align-top">
@@ -558,7 +567,7 @@
                 <option value="">${kacis(t('muh_sec'))}</option>
                 ${opt(LOOKUP.cikis, row.cikis)}
               </select>
-              ${tag('/sgk-isten-ayrilis-nedenleri.json')}
+              ${tag(kaynakYolu('sgk-isten-ayrilis-nedenleri'))}
             </td>
             <!-- Eksik Gün -->
             <td class="px-2 py-2 align-top">
@@ -566,7 +575,7 @@
                 <option value="">${kacis(t('muh_sec'))}</option>
                 ${opt(LOOKUP.eksik, row.eksik)}
               </select>
-              ${tag('/sgk-eksik-gun-nedenleri.json')}
+              ${tag(kaynakYolu('sgk-eksik-gun-nedenleri'))}
             </td>
             <!-- Meslek Kodu -->
             <td class="px-2 py-2 align-top">
@@ -574,7 +583,7 @@
                 <option value="">${kacis(t('muh_sec'))}</option>
                 ${opt(LOOKUP.meslek, row.meslek)}
               </select>
-              ${tag('/sgk-meslek-kodlari.json')}
+              ${tag(kaynakYolu('sgk-meslek-kodlari'))}
             </td>
             <!-- 10 Aylık Brüt Ücret -->
             <td class="px-2 py-2 align-top text-right font-mono text-xs text-slate-300 bg-win-dark/20">
@@ -583,15 +592,15 @@
             <!-- Bu Ayki Gelir Vergisi Matrahı -->
             <td class="px-2 py-2 align-top text-right font-mono text-xs text-win-300 bg-win-dark/20">
               <div class="py-1.5">${para(h.aylikGvMatrah)}</div>
-              ${tag('/sgk-prim-oranlari.json')}
+              ${tag(kaynakYolu('sgk-prim-oranlari'))}
             </td>
             <td class="px-2 py-2 align-top text-right font-mono text-xs text-amber-400 font-bold bg-win-dark/20">
               <div class="py-1.5">${para(h.gvKesinti)}</div>
-              ${tag('/gelir-vergisi-dilimleri.json', '/asgari-ucret.json')}
+              ${tag(kaynakYolu('gelir-vergisi-dilimleri'), kaynakYolu('asgari-ucret'))}
             </td>
             <td class="px-2 py-2 align-top text-right font-mono text-xs text-amber-400 bg-win-dark/20">
               <div class="py-1.5">${para(h.dvKesinti)}</div>
-              ${tag('/damga-vergisi.json', '/asgari-ucret.json')}
+              ${tag(kaynakYolu('damga-vergisi'), kaynakYolu('asgari-ucret'))}
             </td>
           </tr>
         `;

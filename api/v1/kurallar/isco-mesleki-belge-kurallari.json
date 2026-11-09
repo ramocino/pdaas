@@ -1,0 +1,540 @@
+{
+  "meta": {
+    "schema": "isco-mesleki-belge-kurallari/v1",
+    "surum": "1.0.0",
+    "kod": "isco-mesleki-belge-kurallari",
+    "ad_tr": "ISCO–Mesleki Belge Eşleştirme Kuralları",
+    "ad_en": "ISCO–Occupational Document Mapping Rules",
+    "tarih": "2026-11-01",
+    "guncelleme": "2026-11-01",
+    "durum": "demo",
+    "katman": "kural",
+    "kapsam": [
+      "meslek"
+    ],
+    "islem_turleri": [
+      "yurtici"
+    ],
+    "yayinci": "pdaas",
+    "sorumlu_kurum": "ilo",
+    "kaynaklar_ref": "meta/kaynaklar.json",
+    "mevzuat_ref": "meta/mevzuat.json",
+    "sozluk_ref": "meta/sozluk.json",
+    "gecerlilik": {
+      "baslangic": "2026-01-01",
+      "bitis": null
+    },
+    "checksum": "sha256:877988b56ef023813179af1c5a49d467d64afb9f69478cd962581b4e679e3984",
+    "kayit_sayisi": 20,
+    "detay": {
+      "anahtar_katalog": "isco-kodlari.json",
+      "konsolide_hedef": "isco-konsolide.json",
+      "belge_prefixleri": [
+        "mesleki-belge-"
+      ],
+      "belge_master_dosyalari": {
+        "mesleki-belgeler.json": "mesleki"
+      },
+      "kural_motoru": {
+        "eslesme": "tam_eslesme",
+        "cakisma": "en_yuksek_oncelik",
+        "esitlik": "hata",
+        "haric_anlami": "kesin_disarida",
+        "coklu_eslesme": "ilk_kazanan"
+      }
+    }
+  },
+  "sema": {
+    "pk": "kod",
+    "siralama": "oncelik_sonra_kod",
+    "kolonlar": {
+      "zorunlu": [
+        "id",
+        "kod",
+        "tur",
+        "oncelik",
+        "eslesmeler",
+        "mesleki_belgeler"
+      ],
+      "opsiyonel": [
+        "ad_tr",
+        "ad_en",
+        "aktif",
+        "pasif_neden",
+        "kosullar"
+      ]
+    },
+    "mesleki_belgeler_semasi": {
+      "zorunlu": [
+        "ref",
+        "uygulanabilirlik"
+      ],
+      "opsiyonel": [
+        "yon",
+        "zorunlu",
+        "kosul",
+        "kapsam",
+        "kaynak_ref",
+        "mevzuat_ref"
+      ]
+    }
+  },
+  "kurallar": [
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0001",
+      "kod": "meslek-kural-0001",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "6111"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-01",
+          "uygulanabilirlik": "kosullu",
+          "zorunlu": false,
+          "kosul": "fiilen_uygulama_gorevi"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0002",
+      "kod": "meslek-kural-0002",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "7513"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-02",
+          "zorunlu": true,
+          "kosul": "gida_uretiminde_gorevli"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0003",
+      "kod": "meslek-kural-0003",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "8211"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-03",
+          "uygulanabilirlik": "kosullu",
+          "zorunlu": false,
+          "kosul": "fiili_gorev_eslesirse"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0004",
+      "kod": "meslek-kural-0004",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "8114"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-04",
+          "uygulanabilirlik": "kosullu",
+          "zorunlu": false,
+          "kosul": "isveren_tercihi"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0005",
+      "kod": "meslek-kural-0005",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "8111"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-05",
+          "uygulanabilirlik": "kosullu",
+          "zorunlu": false,
+          "kosul": "isveren_tercihi"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0006",
+      "kod": "meslek-kural-0006",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "7212"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-06",
+          "zorunlu": true,
+          "kosul": "kaynak_isini_fiilen_yapiyor"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0007",
+      "kod": "meslek-kural-0007",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "8344"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-07",
+          "zorunlu": true,
+          "kosul": "forklift_operatoru_olarak_gorevli"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0008",
+      "kod": "meslek-kural-0008",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "8343"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-08",
+          "zorunlu": true,
+          "kosul": "koprulu_vinc_operatoru"
+        },
+        {
+          "ref": "mesleki-belge-09",
+          "zorunlu": true,
+          "kosul": "mobil_vinc_operatoru"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0009",
+      "kod": "meslek-kural-0009",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "8111"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-10",
+          "uygulanabilirlik": "kosullu",
+          "zorunlu": false,
+          "kosul": "ekskavator_operatoru_olarak_gorevli"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0010",
+      "kod": "meslek-kural-0010",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "8342"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-11",
+          "zorunlu": true,
+          "kosul": "beton_pompa_operatoru"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0011",
+      "kod": "meslek-kural-0011",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "7411"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-12",
+          "zorunlu": true,
+          "kosul": "elektrik_tesisati_ve_bakim_onarim"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0012",
+      "kod": "meslek-kural-0012",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "7126",
+            "7127"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-13",
+          "zorunlu": true,
+          "kosul": "dogalgaz_tesisati_isi"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0013",
+      "kod": "meslek-kural-0013",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "7412"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-14",
+          "zorunlu": true,
+          "kosul": "asansor_bakim_onarim"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0014",
+      "kod": "meslek-kural-0014",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "5120",
+            "9412",
+            "5131"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-15",
+          "zorunlu": true,
+          "kosul": "gida_ile_fiili_temas"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0015",
+      "kod": "meslek-kural-0015",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "5141",
+            "5142"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-16",
+          "zorunlu": true,
+          "kosul": "kisisel_bakim_hizmeti"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0016",
+      "kod": "meslek-kural-0016",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "4224",
+            "9112"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-17",
+          "zorunlu": true,
+          "kosul": "konaklama_sektorunde_calisma"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0017",
+      "kod": "meslek-kural-0017",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "2263"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-18",
+          "zorunlu": true,
+          "kosul": "is_guvenligi_uzmani_olarak_gorevlendirme"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0018",
+      "kod": "meslek-kural-0018",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "2211",
+            "2212"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-19",
+          "zorunlu": true,
+          "kosul": "isyeri_hekimi_olarak_gorevlendirme"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0019",
+      "kod": "meslek-kural-0019",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "8332"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-20",
+          "zorunlu": true,
+          "kosul": "tehlikeli_madde_tasimaciligi"
+        }
+      ],
+      "aktif": true
+    },
+    {
+      "id": "isco-mesleki-belge-kurallari:meslek-kural-0020",
+      "kod": "meslek-kural-0020",
+      "tur": "meslek",
+      "oncelik": 100,
+      "eslesmeler": {
+        "isco": {
+          "exact": [
+            "3113"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "mesleki_belgeler": [
+        {
+          "ref": "mesleki-belge-12",
+          "zorunlu": true,
+          "kosul": "elektrik_pano_montaj_ve_bakim"
+        }
+      ],
+      "aktif": true
+    }
+  ]
+}

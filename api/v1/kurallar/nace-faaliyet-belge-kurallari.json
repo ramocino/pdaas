@@ -1,0 +1,776 @@
+{
+  "meta": {
+    "schema": "nace-faaliyet-belge-kurallari/v1",
+    "surum": "1.0.0",
+    "kod": "nace-faaliyet-belge-kurallari",
+    "ad_tr": "NACE–Faaliyet Belgesi Eşleştirme Kuralları",
+    "ad_en": "NACE–Activity Document Mapping Rules",
+    "tarih": "2026-11-01",
+    "guncelleme": "2026-11-01",
+    "durum": "demo",
+    "katman": "kural",
+    "kapsam": [
+      "faaliyet"
+    ],
+    "islem_turleri": [
+      "yurtici"
+    ],
+    "yayinci": "pdaas",
+    "sorumlu_kurum": "tuik",
+    "kaynaklar_ref": "meta/kaynaklar.json",
+    "mevzuat_ref": "meta/mevzuat.json",
+    "sozluk_ref": "meta/sozluk.json",
+    "gecerlilik": {
+      "baslangic": "2026-01-01",
+      "bitis": null
+    },
+    "checksum": "sha256:21bf7d32713291a32c02845fc1b3e535ef35776b95a873218a31acd857e4b075",
+    "kayit_sayisi": 21,
+    "detay": {
+      "anahtar_katalog": "nace-kodlari.json",
+      "konsolide_hedef": "nace-konsolide.json",
+      "belge_prefixleri": [
+        "faaliyet-belge-",
+        "urun-belge-",
+        "mesleki-belge-"
+      ],
+      "belge_master_dosyalari": {
+        "faaliyet-belgeleri.json": "faaliyet",
+        "urun-belgeler.json": "urun",
+        "mesleki-belgeler.json": "mesleki"
+      },
+      "kural_motoru": {
+        "eslesme": "en_uzun_prefix",
+        "cakisma": "en_yuksek_oncelik",
+        "esitlik": "hata",
+        "haric_anlami": "kesin_disarida",
+        "coklu_eslesme": "birlestir"
+      }
+    }
+  },
+  "sema": {
+    "pk": "kod",
+    "siralama": "oncelik_sonra_kod",
+    "kolonlar": {
+      "zorunlu": [
+        "id",
+        "kod",
+        "tur",
+        "oncelik",
+        "eslesmeler",
+        "belgeler"
+      ],
+      "opsiyonel": [
+        "ad_tr",
+        "ad_en",
+        "aktif",
+        "pasif_neden",
+        "kosullar"
+      ]
+    },
+    "belgeler_semasi": {
+      "zorunlu": [
+        "ref",
+        "uygulanabilirlik"
+      ],
+      "opsiyonel": [
+        "yon",
+        "zorunlu",
+        "kosul",
+        "kapsam",
+        "kaynak_ref",
+        "mevzuat_ref"
+      ]
+    }
+  },
+  "kurallar": [
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0001",
+      "kod": "faaliyet-kural-0001",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-04",
+          "zorunlu": true,
+          "kosul": "uretime_basladiktan_sonra_2_ay_icinde"
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "zorunlu": true,
+          "kosul": "gayrisihhi_muessese_sinifina_gore"
+        },
+        {
+          "ref": "faaliyet-belge-06",
+          "uygulanabilirlik": "kosullu",
+          "zorunlu": false,
+          "kosul": "ced_esiklerine_giriyorsa"
+        },
+        {
+          "ref": "faaliyet-belge-07",
+          "uygulanabilirlik": "kosullu",
+          "zorunlu": false,
+          "kosul": "cevre_izin_kapsamindaysa"
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0002",
+      "kod": "faaliyet-kural-0002",
+      "eslesmeler": {
+        "nace": {
+          "exact": [
+            "10.51",
+            "10.52"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-01",
+          "zorunlu": true,
+          "kosul": "hayvansal_gida_onayina_tabi"
+        },
+        {
+          "ref": "faaliyet-belge-11",
+          "zorunlu": true,
+          "kosul": "hayvansal_gida_onayina_tabi"
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0003",
+      "kod": "faaliyet-kural-0003",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "01.11",
+            "01.12",
+            "01.13",
+            "01.14",
+            "01.15",
+            "01.16",
+            "01.19",
+            "01.2",
+            "01.3",
+            "01.4",
+            "01.5",
+            "01.6"
+          ]
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-10",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        }
+      ],
+      "aktif": false,
+      "oncelik": 100,
+      "pasif_neden": "01.11–01.6 arası bitkisel üretim için tek tip çiftçi belgesi geçerli değildir; alt sektör bazlı ayrım gereklidir."
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0004",
+      "kod": "faaliyet-kural-0004",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "05",
+            "06",
+            "07",
+            "08",
+            "09"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-08",
+          "zorunlu": true,
+          "kosul": "maden_kanunu_kapsamindaysa"
+        },
+        {
+          "ref": "faaliyet-belge-09",
+          "zorunlu": true,
+          "kosul": "maden_kanunu_kapsamindaysa"
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0005",
+      "kod": "faaliyet-kural-0005",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "29"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-12",
+          "zorunlu": true,
+          "kosul": "seri_imalat_montaj"
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0006",
+      "kod": "faaliyet-kural-0006",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "35.11",
+            "35.12",
+            "35.13",
+            "35.14",
+            "35.2"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-16",
+          "zorunlu": true,
+          "kosul": "5_mw_ve_uzeri_uretim_veya_dagitim"
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        },
+        {
+          "ref": "faaliyet-belge-06",
+          "uygulanabilirlik": "kosullu",
+          "zorunlu": false,
+          "kosul": "ced_esiklerine_giriyorsa"
+        },
+        {
+          "ref": "faaliyet-belge-07",
+          "uygulanabilirlik": "kosullu",
+          "zorunlu": false,
+          "kosul": "cevre_izin_kapsamindaysa"
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0007",
+      "kod": "faaliyet-kural-0007",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "55",
+            "56",
+            "79"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-13",
+          "zorunlu": true,
+          "kosul": "turizm_isletmesi_vasfinda"
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        },
+        {
+          "ref": "mesleki-belge-15",
+          "zorunlu": true,
+          "kosul": "gida_ile_temas_var"
+        },
+        {
+          "ref": "mesleki-belge-17",
+          "zorunlu": true,
+          "kosul": "konaklama_personeli"
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0008",
+      "kod": "faaliyet-kural-0008",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "85"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-14",
+          "zorunlu": true,
+          "kosul": "ozel_ogretim_kurumu"
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        },
+        {
+          "ref": "mesleki-belge-15",
+          "uygulanabilirlik": "kosullu",
+          "zorunlu": false,
+          "kosul": "yemekhane_isletmesi_varsa"
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0009",
+      "kod": "faaliyet-kural-0009",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "86"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-15",
+          "zorunlu": true,
+          "kosul": "ozel_saglik_kurulusu"
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        },
+        {
+          "ref": "mesleki-belge-18",
+          "zorunlu": true,
+          "kosul": "isg_uzmani_gorevlendirmesi"
+        },
+        {
+          "ref": "mesleki-belge-19",
+          "zorunlu": true,
+          "kosul": "isyeri_hekimi_gorevlendirmesi"
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0010",
+      "kod": "faaliyet-kural-0010",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "61"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-18",
+          "zorunlu": true,
+          "kosul": "elektronik_haberlesme_hizmeti"
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0011",
+      "kod": "faaliyet-kural-0011",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "49.4",
+            "52.1"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-19",
+          "zorunlu": true,
+          "kosul": "tehlikeli_madde_tasimaciligi"
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0012",
+      "kod": "faaliyet-kural-0012",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "47.25",
+            "56.30"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-17",
+          "zorunlu": true,
+          "kosul": "alkollu_icki_satisi"
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        },
+        {
+          "ref": "mesleki-belge-15",
+          "zorunlu": true,
+          "kosul": "gida_ile_temas_var"
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0013",
+      "kod": "faaliyet-kural-0013",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "38",
+            "39"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-06",
+          "zorunlu": true,
+          "kosul": "ced_esiklerine_giriyorsa"
+        },
+        {
+          "ref": "faaliyet-belge-07",
+          "zorunlu": true,
+          "kosul": "cevre_izin_kapsamindaysa"
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0014",
+      "kod": "faaliyet-kural-0014",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "20.42"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "urun-belge-11",
+          "zorunlu": true,
+          "kosul": "kozmetik_urun"
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        },
+        {
+          "ref": "faaliyet-belge-04",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0015",
+      "kod": "faaliyet-kural-0015",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "32.4"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "urun-belge-12",
+          "zorunlu": true,
+          "kosul": "oyuncak_uretimi"
+        },
+        {
+          "ref": "faaliyet-belge-04",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0016",
+      "kod": "faaliyet-kural-0016",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "32.5"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "urun-belge-14",
+          "zorunlu": true,
+          "kosul": "tibbi_cihaz_uretimi"
+        },
+        {
+          "ref": "faaliyet-belge-04",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0017",
+      "kod": "faaliyet-kural-0017",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "27.20"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "urun-belge-17",
+          "zorunlu": true,
+          "kosul": "pil_aku_uretimi"
+        },
+        {
+          "ref": "faaliyet-belge-04",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0018",
+      "kod": "faaliyet-kural-0018",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "17",
+            "22",
+            "25.91",
+            "25.92"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "urun-belge-18",
+          "zorunlu": true,
+          "kosul": "ambalaj_uretimi"
+        },
+        {
+          "ref": "faaliyet-belge-04",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0019",
+      "kod": "faaliyet-kural-0019",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "20.41"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "urun-belge-19",
+          "zorunlu": true,
+          "kosul": "deterjan_uretimi"
+        },
+        {
+          "ref": "faaliyet-belge-04",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0020",
+      "kod": "faaliyet-kural-0020",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "14.12",
+            "32.99"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "urun-belge-20",
+          "zorunlu": true,
+          "kosul": "kkd_uretimi"
+        },
+        {
+          "ref": "faaliyet-belge-04",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        },
+        {
+          "ref": "faaliyet-belge-05",
+          "uygulanabilirlik": "zorunlu",
+          "zorunlu": true
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    },
+    {
+      "id": "nace-faaliyet-belge-kurallari:faaliyet-kural-0021",
+      "kod": "faaliyet-kural-0021",
+      "eslesmeler": {
+        "nace": {
+          "prefix": [
+            "11.05"
+          ],
+          "rol": "dogrudan"
+        }
+      },
+      "belgeler": [
+        {
+          "ref": "faaliyet-belge-20",
+          "zorunlu": true,
+          "kosul": "turkiyede_yeni_bira_uretim_tesisi_kurulacaksa"
+        },
+        {
+          "ref": "faaliyet-belge-21",
+          "zorunlu": true,
+          "kosul": "turkiyede_fiilen_bira_uretilecekse"
+        },
+        {
+          "ref": "faaliyet-belge-22",
+          "zorunlu": true,
+          "kosul": "bira_ureticisi_olarak_dagitim_yetkisi_alinacaksa"
+        }
+      ],
+      "aktif": true,
+      "oncelik": 100
+    }
+  ]
+}

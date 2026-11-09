@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "schema": "sgk-sigorta-kollari/v1",
+    "surum": "1.0.0",
+    "kod": "sgk-sigorta-kollari",
+    "ad_tr": "Sigorta Kolları ve Sigortalılık Statüleri",
+    "ad_en": "Insurance Branches and Insured Statuses",
+    "tarih": "2026-11-01",
+    "guncelleme": "2026-11-01",
+    "durum": "demo",
+    "katman": "ham",
+    "kapsam": [],
+    "islem_turleri": [],
+    "yayinci": "pdaas",
+    "sorumlu_kurum": "sgk",
+    "kaynaklar_ref": "meta/kaynaklar.json",
+    "mevzuat_ref": "meta/mevzuat.json",
+    "sozluk_ref": "meta/sozluk.json",
+    "gecerlilik": {
+      "baslangic": "2026-01-01",
+      "bitis": null
+    },
+    "checksum": "sha256:a79706790b04e9a5d5f528a0bd2647649a593c9aaf857634854b5ff4bf6f14e1",
+    "kayit_sayisi": 9,
+    "detay": {}
+  },
+  "sema": {
+    "pk": "kod",
+    "siralama": "kaynak_sirasi",
+    "kolonlar": {
+      "zorunlu": [
+        "id",
+        "kod",
+        "ad_tr",
+        "ad_en",
+        "tip"
+      ],
+      "opsiyonel": [
+        "aciklama_tr",
+        "aciklama_en",
+        "kod_turu",
+        "ilgili_status"
+      ]
+    }
+  },
+  "kayitlar": [
+    {
+      "id": "sgk-sigorta-kollari:4A",
+      "kod": "4A",
+      "ad_tr": "4/a — Hizmet Akdiyle Çalışanlar (SSK)",
+      "ad_en": "4/a — Insured Persons under Service Contract (SSK)",
+      "tip": "statü",
+      "aciklama_tr": "Bir veya birden fazla işveren tarafından hizmet akdiyle çalıştırılan sigortalılar.",
+      "aciklama_en": "Insured persons employed under a service contract by one or more employers.",
+      "kod_turu": "kanuni_sigortalilik_statusu"
+    },
+    {
+      "id": "sgk-sigorta-kollari:4B",
+      "kod": "4B",
+      "ad_tr": "4/b — Bağımsız Çalışanlar (Bağ-Kur)",
+      "ad_en": "4/b — Self-Employed (Bağ-Kur)",
+      "tip": "statü",
+      "aciklama_tr": "Kendi adına ve hesabına bağımsız çalışanlar ile tarımsal faaliyette bulunanlar.",
+      "aciklama_en": "Self-employed persons working on own name and account, including those in agricultural activity.",
+      "kod_turu": "kanuni_sigortalilik_statusu"
+    },
+    {
+      "id": "sgk-sigorta-kollari:4C",
+      "kod": "4C",
+      "ad_tr": "4/c — Devlet Memurları (Emekli Sandığı)",
+      "ad_en": "4/c — Civil Servants (Emekli Sandığı)",
+      "tip": "statü",
+      "aciklama_tr": "Kamu idarelerinde ilgili mevzuata göre 4/c statüsünde çalışan sigortalılar.",
+      "aciklama_en": "Persons working as civil servants in public administrations and their pensioners.",
+      "kod_turu": "kanuni_sigortalilik_statusu"
+    },
+    {
+      "id": "sgk-sigorta-kollari:SK-IK",
+      "kod": "SK-IK",
+      "ad_tr": "İş Kazası ve Meslek Hastalığı Sigortası",
+      "ad_en": "Work Accident and Occupational Disease Insurance",
+      "tip": "kısa_vadeli",
+      "ilgili_status": [
+        "4A",
+        "4B",
+        "4C"
+      ],
+      "kod_turu": "pdaas_tanimlayici"
+    },
+    {
+      "id": "sgk-sigorta-kollari:SK-HA",
+      "kod": "SK-HA",
+      "ad_tr": "Hastalık Sigortası",
+      "ad_en": "Sickness Insurance",
+      "tip": "kısa_vadeli",
+      "ilgili_status": [
+        "4A",
+        "4C"
+      ],
+      "kod_turu": "pdaas_tanimlayici"
+    },
+    {
+      "id": "sgk-sigorta-kollari:SK-AN",
+      "kod": "SK-AN",
+      "ad_tr": "Analık Sigortası",
+      "ad_en": "Maternity Insurance",
+      "tip": "kısa_vadeli",
+      "ilgili_status": [
+        "4A",
+        "4B",
+        "4C"
+      ],
+      "kod_turu": "pdaas_tanimlayici"
+    },
+    {
+      "id": "sgk-sigorta-kollari:SK-MYO",
+      "kod": "SK-MYO",
+      "ad_tr": "Malullük, Yaşlılık ve Ölüm Sigortası",
+      "ad_en": "Invalidity, Old-Age and Death Insurance",
+      "tip": "uzun_vadeli",
+      "ilgili_status": [
+        "4A",
+        "4B",
+        "4C"
+      ],
+      "kod_turu": "pdaas_tanimlayici"
+    },
+    {
+      "id": "sgk-sigorta-kollari:SK-GSS",
+      "kod": "SK-GSS",
+      "ad_tr": "Genel Sağlık Sigortası",
+      "ad_en": "Universal Health Insurance (GSS)",
+      "tip": "sağlık",
+      "ilgili_status": [
+        "4A",
+        "4B",
+        "4C"
+      ],
+      "kod_turu": "pdaas_tanimlayici"
+    },
+    {
+      "id": "sgk-sigorta-kollari:SK-ISS",
+      "kod": "SK-ISS",
+      "ad_tr": "İşsizlik Sigortası",
+      "ad_en": "Unemployment Insurance",
+      "tip": "işsizlik",
+      "ilgili_status": [
+        "4A"
+      ],
+      "kod_turu": "pdaas_tanimlayici"
+    }
+  ]
+}

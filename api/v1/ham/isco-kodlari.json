@@ -1,0 +1,5652 @@
+{
+  "meta": {
+    "schema": "isco-kodlari/v1",
+    "surum": "1.0.0",
+    "kod": "isco-kodlari",
+    "ad_tr": "ISCO Meslek Kodları",
+    "ad_en": "International Standard Classification of Occupations (ISCO-08)",
+    "tarih": "2026-11-01",
+    "guncelleme": "2026-11-01",
+    "durum": "demo",
+    "katman": "ham",
+    "kapsam": [],
+    "islem_turleri": [],
+    "yayinci": "pdaas",
+    "sorumlu_kurum": "ilo",
+    "kaynaklar_ref": "meta/kaynaklar.json",
+    "mevzuat_ref": "meta/mevzuat.json",
+    "sozluk_ref": "meta/sozluk.json",
+    "gecerlilik": {
+      "baslangic": "2026-01-01",
+      "bitis": null
+    },
+    "checksum": "sha256:7b4390829142cd856f5b39cff62e1a516a4a93ccab3655c15921b4d33a75bb3a",
+    "kayit_sayisi": 619,
+    "detay": {}
+  },
+  "sema": {
+    "pk": "kod",
+    "parent": "ust_kod",
+    "siralama": "kod_artan",
+    "kolonlar": {
+      "zorunlu": [
+        "id",
+        "kod",
+        "ust_kod",
+        "seviye",
+        "yaprak",
+        "ad_tr",
+        "ad_en"
+      ],
+      "opsiyonel": [
+        "ozel_durum"
+      ]
+    }
+  },
+  "hiyerarsi": {
+    "seviye_1": {
+      "ad_tr": "Ana Grup (Major Group)",
+      "kod_formati": "sayi",
+      "uzunluk": 1
+    },
+    "seviye_2": {
+      "ad_tr": "Alt Ana Grup (Sub-major)",
+      "kod_formati": "sayi",
+      "uzunluk": 2
+    },
+    "seviye_3": {
+      "ad_tr": "Küçük Grup (Minor Group)",
+      "kod_formati": "sayi",
+      "uzunluk": 3
+    },
+    "seviye_4": {
+      "ad_tr": "Birim Grup (Unit Group)",
+      "kod_formati": "sayi",
+      "uzunluk": 4
+    },
+    "yaprak_kurali": "alt_kirilimi_yok AND ozel_durum == null",
+    "prefix_turetme": true,
+    "dogrulama": {
+      "kod_tekil": true,
+      "ust_kod_var": true,
+      "prefix_tutarli": true,
+      "seviye_uzunluk_esler": true,
+      "yaprak_alt_kirilim_yok": true,
+      "yaprak_olmayan_alt_kirilim_var_veya_ozel": true
+    }
+  },
+  "bolumler": [],
+  "kayitlar": [
+    {
+      "id": "isco:0",
+      "kod": "0",
+      "ust_kod": null,
+      "seviye": 1,
+      "yaprak": false,
+      "ad_tr": "Silahlı kuvvetlerle ilgili meslekler",
+      "ad_en": "Armed Forces Occupations"
+    },
+    {
+      "id": "isco:01",
+      "kod": "01",
+      "ust_kod": "0",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Subaylar",
+      "ad_en": "Commissioned Armed Forces Officers"
+    },
+    {
+      "id": "isco:011",
+      "kod": "011",
+      "ust_kod": "01",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Subaylar",
+      "ad_en": "Commissioned Armed Forces Officers"
+    },
+    {
+      "id": "isco:0110",
+      "kod": "0110",
+      "ust_kod": "011",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Subaylar",
+      "ad_en": "Commissioned Armed Forces Officers"
+    },
+    {
+      "id": "isco:02",
+      "kod": "02",
+      "ust_kod": "0",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Subay olmayan silahlı kuvvetlerin daimi mensupları",
+      "ad_en": "Non-commissioned Armed Forces Officers"
+    },
+    {
+      "id": "isco:021",
+      "kod": "021",
+      "ust_kod": "02",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Subay olmayan silahlı kuvvetlerin daimi mensupları",
+      "ad_en": "Non-commissioned Armed Forces Officers"
+    },
+    {
+      "id": "isco:0210",
+      "kod": "0210",
+      "ust_kod": "021",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Subay olmayan silahlı kuvvetlerin daimi mensupları",
+      "ad_en": "Non-commissioned Armed Forces Officers"
+    },
+    {
+      "id": "isco:03",
+      "kod": "03",
+      "ust_kod": "0",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Silahlı kuvvetlerde diğer rütbelerdeki meslekler",
+      "ad_en": "Armed Forces Occupations, Other Ranks"
+    },
+    {
+      "id": "isco:031",
+      "kod": "031",
+      "ust_kod": "03",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Silahlı kuvvetlerde diğer rütbelerdeki meslekler",
+      "ad_en": "Armed Forces Occupations, Other Ranks"
+    },
+    {
+      "id": "isco:0310",
+      "kod": "0310",
+      "ust_kod": "031",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Silahlı kuvvetlerde diğer rütbelerdeki meslekler",
+      "ad_en": "Armed Forces Occupations, Other Ranks"
+    },
+    {
+      "id": "isco:1",
+      "kod": "1",
+      "ust_kod": null,
+      "seviye": 1,
+      "yaprak": false,
+      "ad_tr": "Yöneticiler",
+      "ad_en": "Managers"
+    },
+    {
+      "id": "isco:11",
+      "kod": "11",
+      "ust_kod": "1",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Başkanlar, üst düzey yöneticiler ve kanun yapıcılar",
+      "ad_en": "Chief Executives, Senior Officials and Legislators"
+    },
+    {
+      "id": "isco:111",
+      "kod": "111",
+      "ust_kod": "11",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Kanun yapıcılar ve üst düzey yöneticiler",
+      "ad_en": "Legislators and Senior Officials"
+    },
+    {
+      "id": "isco:1111",
+      "kod": "1111",
+      "ust_kod": "111",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kanun yapıcılar",
+      "ad_en": "Legislators"
+    },
+    {
+      "id": "isco:1112",
+      "kod": "1112",
+      "ust_kod": "111",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Üst düzey devlet yöneticileri",
+      "ad_en": "Senior Government Officials"
+    },
+    {
+      "id": "isco:1113",
+      "kod": "1113",
+      "ust_kod": "111",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Muhtarlar ve ihtiyar heyeti",
+      "ad_en": "Traditional Chiefs and Heads of Villages"
+    },
+    {
+      "id": "isco:1114",
+      "kod": "1114",
+      "ust_kod": "111",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Özel amaçlı kuruluşların üst düzey yöneticileri",
+      "ad_en": "Senior Officials of Special-interest Organizations"
+    },
+    {
+      "id": "isco:112",
+      "kod": "112",
+      "ust_kod": "11",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Genel müdürler ve başkanlar (özel sektör)",
+      "ad_en": "Managing Directors and Chief Executives"
+    },
+    {
+      "id": "isco:1120",
+      "kod": "1120",
+      "ust_kod": "112",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Genel müdürler ve başkanlar (özel sektör)",
+      "ad_en": "Managing Directors and Chief Executives"
+    },
+    {
+      "id": "isco:12",
+      "kod": "12",
+      "ust_kod": "1",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Ticari ve idari müdürler",
+      "ad_en": "Administrative and Commercial Managers"
+    },
+    {
+      "id": "isco:121",
+      "kod": "121",
+      "ust_kod": "12",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "İş hizmetleri ve idaresi ile ilgili müdürler",
+      "ad_en": "Business Services and Administration Managers"
+    },
+    {
+      "id": "isco:1211",
+      "kod": "1211",
+      "ust_kod": "121",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Finans müdürleri",
+      "ad_en": "Finance Managers"
+    },
+    {
+      "id": "isco:1212",
+      "kod": "1212",
+      "ust_kod": "121",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İnsan kaynakları müdürleri",
+      "ad_en": "Human Resource Managers"
+    },
+    {
+      "id": "isco:1213",
+      "kod": "1213",
+      "ust_kod": "121",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Politika ve planlama müdürleri",
+      "ad_en": "Policy and Planning Managers"
+    },
+    {
+      "id": "isco:1219",
+      "kod": "1219",
+      "ust_kod": "121",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış iş hizmetleri ve idaresi ile ilgili müdürler",
+      "ad_en": "Business Services and Administration Managers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:122",
+      "kod": "122",
+      "ust_kod": "12",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Satış, pazarlama ve iş geliştirme ile ilgili müdürler",
+      "ad_en": "Sales, Marketing and Development Managers"
+    },
+    {
+      "id": "isco:1221",
+      "kod": "1221",
+      "ust_kod": "122",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Satış ve pazarlama müdürleri",
+      "ad_en": "Sales and Marketing Managers"
+    },
+    {
+      "id": "isco:1222",
+      "kod": "1222",
+      "ust_kod": "122",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Reklam ve halkla ilişkiler müdürleri",
+      "ad_en": "Advertising and Public Relations Managers"
+    },
+    {
+      "id": "isco:1223",
+      "kod": "1223",
+      "ust_kod": "122",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Araştırma ve geliştirme müdürleri",
+      "ad_en": "Research and Development Managers"
+    },
+    {
+      "id": "isco:13",
+      "kod": "13",
+      "ust_kod": "1",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Üretim ve uzmanlaşmış hizmet müdürleri",
+      "ad_en": "Production and Specialized Services Managers"
+    },
+    {
+      "id": "isco:131",
+      "kod": "131",
+      "ust_kod": "13",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Tarım, ormancılık ve balıkçılık ile ilgili üretim müdürleri",
+      "ad_en": "Production Managers in Agriculture, Forestry and Fisheries"
+    },
+    {
+      "id": "isco:1311",
+      "kod": "1311",
+      "ust_kod": "131",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tarım ve ormancılık ile ilgili üretim müdürleri",
+      "ad_en": "Agricultural and Forestry Production Managers"
+    },
+    {
+      "id": "isco:1312",
+      "kod": "1312",
+      "ust_kod": "131",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Su ürünleri ve balıkçılık ile ilgili üretim müdürleri",
+      "ad_en": "Aquaculture and Fisheries Production Managers"
+    },
+    {
+      "id": "isco:132",
+      "kod": "132",
+      "ust_kod": "13",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "İmalat, madencilik, inşaat ve dağıtım müdürleri",
+      "ad_en": "Manufacturing, Mining, Construction and Distribution Managers"
+    },
+    {
+      "id": "isco:1321",
+      "kod": "1321",
+      "ust_kod": "132",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İmalat müdürleri",
+      "ad_en": "Manufacturing Managers"
+    },
+    {
+      "id": "isco:1322",
+      "kod": "1322",
+      "ust_kod": "132",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Maden işletme müdürleri",
+      "ad_en": "Mining Managers"
+    },
+    {
+      "id": "isco:1323",
+      "kod": "1323",
+      "ust_kod": "132",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İnşaat müdürleri",
+      "ad_en": "Construction Managers"
+    },
+    {
+      "id": "isco:1324",
+      "kod": "1324",
+      "ust_kod": "132",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tedarik, dağıtım müdürleri ve benzeri müdürler",
+      "ad_en": "Supply, Distribution and Related Managers"
+    },
+    {
+      "id": "isco:133",
+      "kod": "133",
+      "ust_kod": "13",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Bilgi ve iletişim teknolojisi hizmet müdürleri",
+      "ad_en": "Information and Communications Technology Services Managers"
+    },
+    {
+      "id": "isco:1330",
+      "kod": "1330",
+      "ust_kod": "133",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bilgi ve iletişim teknolojisi hizmet müdürleri",
+      "ad_en": "Information and Communications Technology Services Managers"
+    },
+    {
+      "id": "isco:134",
+      "kod": "134",
+      "ust_kod": "13",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Profesyonel hizmet müdürleri",
+      "ad_en": "Professional Services Managers"
+    },
+    {
+      "id": "isco:1341",
+      "kod": "1341",
+      "ust_kod": "134",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çocuk bakım hizmetleri müdürleri",
+      "ad_en": "Child Care Services Managers"
+    },
+    {
+      "id": "isco:1342",
+      "kod": "1342",
+      "ust_kod": "134",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sağlık hizmetleri yöneticileri",
+      "ad_en": "Health Services Managers"
+    },
+    {
+      "id": "isco:1343",
+      "kod": "1343",
+      "ust_kod": "134",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Yaşlı bakım hizmetleri yöneticileri",
+      "ad_en": "Aged Care Services Managers"
+    },
+    {
+      "id": "isco:1344",
+      "kod": "1344",
+      "ust_kod": "134",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sosyal yardım müdürleri",
+      "ad_en": "Social Welfare Managers"
+    },
+    {
+      "id": "isco:1345",
+      "kod": "1345",
+      "ust_kod": "134",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Eğitim müdürleri",
+      "ad_en": "Education Managers"
+    },
+    {
+      "id": "isco:1346",
+      "kod": "1346",
+      "ust_kod": "134",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Mali ve sigorta hizmet şube müdürleri",
+      "ad_en": "Financial and Insurance Services Branch Managers"
+    },
+    {
+      "id": "isco:1349",
+      "kod": "1349",
+      "ust_kod": "134",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış profesyonel hizmet müdürleri",
+      "ad_en": "Professional Services Managers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:14",
+      "kod": "14",
+      "ust_kod": "1",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Ağırlama, perakende ve diğer hizmet müdürleri",
+      "ad_en": "Hospitality, Retail and Other Services Managers"
+    },
+    {
+      "id": "isco:141",
+      "kod": "141",
+      "ust_kod": "14",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Otel, lokanta ve restoran müdürleri",
+      "ad_en": "Hotel and Restaurant Managers"
+    },
+    {
+      "id": "isco:1411",
+      "kod": "1411",
+      "ust_kod": "141",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Otel müdürleri",
+      "ad_en": "Hotel Managers"
+    },
+    {
+      "id": "isco:1412",
+      "kod": "1412",
+      "ust_kod": "141",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Lokanta ve restoran müdürleri",
+      "ad_en": "Restaurant Managers"
+    },
+    {
+      "id": "isco:142",
+      "kod": "142",
+      "ust_kod": "14",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Perakende ve toptan ticaret müdürleri",
+      "ad_en": "Retail and Wholesale Trade Managers"
+    },
+    {
+      "id": "isco:1420",
+      "kod": "1420",
+      "ust_kod": "142",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Perakende ve toptan ticaret müdürleri",
+      "ad_en": "Retail and Wholesale Trade Managers"
+    },
+    {
+      "id": "isco:143",
+      "kod": "143",
+      "ust_kod": "14",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Diğer hizmet müdürleri",
+      "ad_en": "Other Services Managers"
+    },
+    {
+      "id": "isco:1431",
+      "kod": "1431",
+      "ust_kod": "143",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Spor, eğlence ve dinlenme ile kültür merkezi müdürleri",
+      "ad_en": "Sports, Recreation and Cultural Centre Managers"
+    },
+    {
+      "id": "isco:1439",
+      "kod": "1439",
+      "ust_kod": "143",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış hizmet müdürleri",
+      "ad_en": "Services Managers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:2",
+      "kod": "2",
+      "ust_kod": null,
+      "seviye": 1,
+      "yaprak": false,
+      "ad_tr": "Profesyonel meslek mensupları",
+      "ad_en": "Professionals"
+    },
+    {
+      "id": "isco:21",
+      "kod": "21",
+      "ust_kod": "2",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Bilim ve mühendislik alanlarındaki profesyonel meslek mensupları",
+      "ad_en": "Science and Engineering Professionals"
+    },
+    {
+      "id": "isco:211",
+      "kod": "211",
+      "ust_kod": "21",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Fizik ve yer bilimleri ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Physical and Earth Science Professionals"
+    },
+    {
+      "id": "isco:2111",
+      "kod": "2111",
+      "ust_kod": "211",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Fizikçiler ve astronomlar",
+      "ad_en": "Physicists and Astronomers"
+    },
+    {
+      "id": "isco:2112",
+      "kod": "2112",
+      "ust_kod": "211",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Meteorologlar",
+      "ad_en": "Meteorologists"
+    },
+    {
+      "id": "isco:2113",
+      "kod": "2113",
+      "ust_kod": "211",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kimyacılar",
+      "ad_en": "Chemists"
+    },
+    {
+      "id": "isco:2114",
+      "kod": "2114",
+      "ust_kod": "211",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Jeologlar ve jeofizikçiler",
+      "ad_en": "Geologists and Geophysicists"
+    },
+    {
+      "id": "isco:212",
+      "kod": "212",
+      "ust_kod": "21",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Matematikçiler, istatistikçiler ve aktüerler",
+      "ad_en": "Mathematicians, Actuaries and Statisticians"
+    },
+    {
+      "id": "isco:2120",
+      "kod": "2120",
+      "ust_kod": "212",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Matematikçiler, istatistikçiler ve aktüerler",
+      "ad_en": "Mathematicians, Actuaries and Statisticians"
+    },
+    {
+      "id": "isco:213",
+      "kod": "213",
+      "ust_kod": "21",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Yaşam bilimleri ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Life Science Professionals"
+    },
+    {
+      "id": "isco:2131",
+      "kod": "2131",
+      "ust_kod": "213",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Biyologlar, botanikçiler, zoologlar ve ilgili profesyonel meslek mensupları",
+      "ad_en": "Biologists, Botanists, Zoologists and Related Professionals"
+    },
+    {
+      "id": "isco:2132",
+      "kod": "2132",
+      "ust_kod": "213",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çiftçilik, ormancılık ve su ürünleri danışmanları",
+      "ad_en": "Farming, Forestry and Fisheries Advisers"
+    },
+    {
+      "id": "isco:2133",
+      "kod": "2133",
+      "ust_kod": "213",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çevre koruma profesyonel meslekleri",
+      "ad_en": "Environmental Protection Professionals"
+    },
+    {
+      "id": "isco:214",
+      "kod": "214",
+      "ust_kod": "21",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Mühendislik ile ilgili profesyonel meslek mensupları (elektroteknoloji mühendisleri hariç)",
+      "ad_en": "Engineering Professionals (excluding Electrotechnology)"
+    },
+    {
+      "id": "isco:2141",
+      "kod": "2141",
+      "ust_kod": "214",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Endüstri ve üretim mühendisleri",
+      "ad_en": "Industrial and Production Engineers"
+    },
+    {
+      "id": "isco:2142",
+      "kod": "2142",
+      "ust_kod": "214",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İnşaat mühendisleri",
+      "ad_en": "Civil Engineers"
+    },
+    {
+      "id": "isco:2143",
+      "kod": "2143",
+      "ust_kod": "214",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çevre mühendisleri",
+      "ad_en": "Environmental Engineers"
+    },
+    {
+      "id": "isco:2144",
+      "kod": "2144",
+      "ust_kod": "214",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Makine mühendisleri",
+      "ad_en": "Mechanical Engineers"
+    },
+    {
+      "id": "isco:2145",
+      "kod": "2145",
+      "ust_kod": "214",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kimya mühendisleri",
+      "ad_en": "Chemical Engineers"
+    },
+    {
+      "id": "isco:2146",
+      "kod": "2146",
+      "ust_kod": "214",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Maden mühendisleri, metalurji mühendisleri ve ilgili profesyonel meslek mensupları",
+      "ad_en": "Mining Engineers, Metallurgists and Related Professionals"
+    },
+    {
+      "id": "isco:2149",
+      "kod": "2149",
+      "ust_kod": "214",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış mühendislik ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Engineering Professionals Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:215",
+      "kod": "215",
+      "ust_kod": "21",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Elektroteknoloji mühendisleri",
+      "ad_en": "Electrotechnology Engineers"
+    },
+    {
+      "id": "isco:2151",
+      "kod": "2151",
+      "ust_kod": "215",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Elektrik mühendisleri",
+      "ad_en": "Electrical Engineers"
+    },
+    {
+      "id": "isco:2152",
+      "kod": "2152",
+      "ust_kod": "215",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Elektronik mühendisleri",
+      "ad_en": "Electronics Engineers"
+    },
+    {
+      "id": "isco:2153",
+      "kod": "2153",
+      "ust_kod": "215",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Telekomünikasyon mühendisleri",
+      "ad_en": "Telecommunications Engineers"
+    },
+    {
+      "id": "isco:216",
+      "kod": "216",
+      "ust_kod": "21",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Mimarlar, planlamacılar, harita mühendisleri ve tasarımcılar",
+      "ad_en": "Architects, Planners, Surveyors and Designers"
+    },
+    {
+      "id": "isco:2161",
+      "kod": "2161",
+      "ust_kod": "216",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Yapı mimarları",
+      "ad_en": "Building Architects"
+    },
+    {
+      "id": "isco:2162",
+      "kod": "2162",
+      "ust_kod": "216",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Peyzaj mimarları",
+      "ad_en": "Landscape Architects"
+    },
+    {
+      "id": "isco:2163",
+      "kod": "2163",
+      "ust_kod": "216",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ürün ve giysi tasarımcıları",
+      "ad_en": "Product and Garment Designers"
+    },
+    {
+      "id": "isco:2164",
+      "kod": "2164",
+      "ust_kod": "216",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Şehir ve trafik planlamacıları",
+      "ad_en": "Town and Traffic Planners"
+    },
+    {
+      "id": "isco:2165",
+      "kod": "2165",
+      "ust_kod": "216",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Haritacılar ve harita mühendisleri",
+      "ad_en": "Cartographers and Surveyors"
+    },
+    {
+      "id": "isco:2166",
+      "kod": "2166",
+      "ust_kod": "216",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Grafik ve çoklu ortam (multimedya) tasarımcıları",
+      "ad_en": "Graphic and Multimedia Designers"
+    },
+    {
+      "id": "isco:22",
+      "kod": "22",
+      "ust_kod": "2",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Sağlık profesyonelleri",
+      "ad_en": "Health Professionals"
+    },
+    {
+      "id": "isco:221",
+      "kod": "221",
+      "ust_kod": "22",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Tıp doktorları",
+      "ad_en": "Medical Doctors"
+    },
+    {
+      "id": "isco:2211",
+      "kod": "2211",
+      "ust_kod": "221",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Genel tıp doktorları",
+      "ad_en": "Generalist Medical Practitioners"
+    },
+    {
+      "id": "isco:2212",
+      "kod": "2212",
+      "ust_kod": "221",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Uzman tıp doktorları",
+      "ad_en": "Specialist Medical Practitioners"
+    },
+    {
+      "id": "isco:222",
+      "kod": "222",
+      "ust_kod": "22",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Hemşirelik ve ebelik profesyonelleri",
+      "ad_en": "Nursing and Midwifery Professionals"
+    },
+    {
+      "id": "isco:2221",
+      "kod": "2221",
+      "ust_kod": "222",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Hemşirelik profesyonelleri",
+      "ad_en": "Nursing Professionals"
+    },
+    {
+      "id": "isco:2222",
+      "kod": "2222",
+      "ust_kod": "222",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ebelik profesyonelleri",
+      "ad_en": "Midwifery Professionals"
+    },
+    {
+      "id": "isco:223",
+      "kod": "223",
+      "ust_kod": "22",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Geleneksel ve tamamlayıcı tıp profesyonelleri",
+      "ad_en": "Traditional and Complementary Medicine Professionals"
+    },
+    {
+      "id": "isco:2230",
+      "kod": "2230",
+      "ust_kod": "223",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Geleneksel ve tamamlayıcı tıp profesyonelleri",
+      "ad_en": "Traditional and Complementary Medicine Professionals"
+    },
+    {
+      "id": "isco:224",
+      "kod": "224",
+      "ust_kod": "22",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Paramedikal uygulayıcılar",
+      "ad_en": "Paramedical Practitioners"
+    },
+    {
+      "id": "isco:2240",
+      "kod": "2240",
+      "ust_kod": "224",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Paramedikal uygulayıcılar",
+      "ad_en": "Paramedical Practitioners"
+    },
+    {
+      "id": "isco:225",
+      "kod": "225",
+      "ust_kod": "22",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Veterinerler",
+      "ad_en": "Veterinarians"
+    },
+    {
+      "id": "isco:2250",
+      "kod": "2250",
+      "ust_kod": "225",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Veterinerler",
+      "ad_en": "Veterinarians"
+    },
+    {
+      "id": "isco:226",
+      "kod": "226",
+      "ust_kod": "22",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Diğer sağlık profesyonelleri",
+      "ad_en": "Other Health Professionals"
+    },
+    {
+      "id": "isco:2261",
+      "kod": "2261",
+      "ust_kod": "226",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Diş hekimleri",
+      "ad_en": "Dentists"
+    },
+    {
+      "id": "isco:2262",
+      "kod": "2262",
+      "ust_kod": "226",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Eczacılar",
+      "ad_en": "Pharmacists"
+    },
+    {
+      "id": "isco:2263",
+      "kod": "2263",
+      "ust_kod": "226",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çevre, iş sağlığı ve hijyen profesyonelleri",
+      "ad_en": "Environmental and Occupational Health and Hygiene Professionals"
+    },
+    {
+      "id": "isco:2264",
+      "kod": "2264",
+      "ust_kod": "226",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Fizyoterapistler",
+      "ad_en": "Physiotherapists"
+    },
+    {
+      "id": "isco:2265",
+      "kod": "2265",
+      "ust_kod": "226",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Diyetisyenler ve beslenme uzmanları",
+      "ad_en": "Dieticians and Nutritionists"
+    },
+    {
+      "id": "isco:2266",
+      "kod": "2266",
+      "ust_kod": "226",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İşitme ve konuşma terapistleri",
+      "ad_en": "Audiologists and Speech Therapists"
+    },
+    {
+      "id": "isco:2267",
+      "kod": "2267",
+      "ust_kod": "226",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Optometrisler ve optalmik optisyenler",
+      "ad_en": "Optometrists and Ophthalmic Opticians"
+    },
+    {
+      "id": "isco:2269",
+      "kod": "2269",
+      "ust_kod": "226",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış sağlık profesyonelleri",
+      "ad_en": "Health Professionals Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:23",
+      "kod": "23",
+      "ust_kod": "2",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Eğitim ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Teaching Professionals"
+    },
+    {
+      "id": "isco:231",
+      "kod": "231",
+      "ust_kod": "23",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Üniversite ve yükseköğretim öğretim elemanları",
+      "ad_en": "University and Higher Education Teachers"
+    },
+    {
+      "id": "isco:2310",
+      "kod": "2310",
+      "ust_kod": "231",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Üniversite ve yükseköğretim öğretim elemanları",
+      "ad_en": "University and Higher Education Teachers"
+    },
+    {
+      "id": "isco:232",
+      "kod": "232",
+      "ust_kod": "23",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Mesleki eğitim öğretmenleri",
+      "ad_en": "Vocational Education Teachers"
+    },
+    {
+      "id": "isco:2320",
+      "kod": "2320",
+      "ust_kod": "232",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Mesleki eğitim öğretmenleri",
+      "ad_en": "Vocational Education Teachers"
+    },
+    {
+      "id": "isco:233",
+      "kod": "233",
+      "ust_kod": "23",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Ortaöğretim  (ortaokul ve lise) öğretmenleri",
+      "ad_en": "Secondary Education Teachers"
+    },
+    {
+      "id": "isco:2330",
+      "kod": "2330",
+      "ust_kod": "233",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ortaöğretim (ortaokul ve lise) öğretmenleri",
+      "ad_en": "Secondary Education Teachers"
+    },
+    {
+      "id": "isco:234",
+      "kod": "234",
+      "ust_kod": "23",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "İlkokul ve okul öncesi  öğretmenleri",
+      "ad_en": "Primary School and Early Childhood Teachers"
+    },
+    {
+      "id": "isco:2341",
+      "kod": "2341",
+      "ust_kod": "234",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İlkokul öğretmenleri",
+      "ad_en": "Primary School Teachers"
+    },
+    {
+      "id": "isco:2342",
+      "kod": "2342",
+      "ust_kod": "234",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Okul öncesi öğretmenleri",
+      "ad_en": "Early Childhood Educators"
+    },
+    {
+      "id": "isco:235",
+      "kod": "235",
+      "ust_kod": "23",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Eğitim ile ilgili diğer profesyonel meslek mensupları",
+      "ad_en": "Other Teaching Professionals"
+    },
+    {
+      "id": "isco:2351",
+      "kod": "2351",
+      "ust_kod": "235",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Eğitim yöntemleri uzmanları",
+      "ad_en": "Education Methods specialists"
+    },
+    {
+      "id": "isco:2352",
+      "kod": "2352",
+      "ust_kod": "235",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Özel eğitim öğretmenleri",
+      "ad_en": "Special Needs Teachers"
+    },
+    {
+      "id": "isco:2353",
+      "kod": "2353",
+      "ust_kod": "235",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Diğer dil öğretmenleri",
+      "ad_en": "Other Language Teachers"
+    },
+    {
+      "id": "isco:2354",
+      "kod": "2354",
+      "ust_kod": "235",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Diğer müzik öğretmenleri",
+      "ad_en": "Other Music Teachers"
+    },
+    {
+      "id": "isco:2355",
+      "kod": "2355",
+      "ust_kod": "235",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Diğer sanat öğretmenleri",
+      "ad_en": "Other Arts Teachers"
+    },
+    {
+      "id": "isco:2356",
+      "kod": "2356",
+      "ust_kod": "235",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bilgi teknolojileri eğiticileri",
+      "ad_en": "Information Technology Trainers"
+    },
+    {
+      "id": "isco:2359",
+      "kod": "2359",
+      "ust_kod": "235",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış eğitim ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Teaching Professionals Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:24",
+      "kod": "24",
+      "ust_kod": "2",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "İş ve yönetim ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Business and Administration Professionals"
+    },
+    {
+      "id": "isco:241",
+      "kod": "241",
+      "ust_kod": "24",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Finans ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Finance Professionals"
+    },
+    {
+      "id": "isco:2411",
+      "kod": "2411",
+      "ust_kod": "241",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Muhasebeciler",
+      "ad_en": "Accountants"
+    },
+    {
+      "id": "isco:2412",
+      "kod": "2412",
+      "ust_kod": "241",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Finans ve yatırım danışmanları",
+      "ad_en": "Financial and Investment Advisers"
+    },
+    {
+      "id": "isco:2413",
+      "kod": "2413",
+      "ust_kod": "241",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Finans analistleri",
+      "ad_en": "Financial Analysts"
+    },
+    {
+      "id": "isco:242",
+      "kod": "242",
+      "ust_kod": "24",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Yönetim ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Administration Professionals"
+    },
+    {
+      "id": "isco:2421",
+      "kod": "2421",
+      "ust_kod": "242",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Yönetim ve organizasyon analistleri",
+      "ad_en": "Management and Organization Analysts"
+    },
+    {
+      "id": "isco:2422",
+      "kod": "2422",
+      "ust_kod": "242",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Politika yönetimi ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Policy Administration Professionals"
+    },
+    {
+      "id": "isco:2423",
+      "kod": "2423",
+      "ust_kod": "242",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Personel ve kariyer ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Personnel and Careers Professionals"
+    },
+    {
+      "id": "isco:2424",
+      "kod": "2424",
+      "ust_kod": "242",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Personel eğitimi ve eleman yetiştirme ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Training and Staff Development Professionals"
+    },
+    {
+      "id": "isco:243",
+      "kod": "243",
+      "ust_kod": "24",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Satış, pazarlama ve halkla ilişkiler ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Sales, Marketing and Public Relations Professionals"
+    },
+    {
+      "id": "isco:2431",
+      "kod": "2431",
+      "ust_kod": "243",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Reklam ve pazarlama ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Advertising and Marketing Professionals"
+    },
+    {
+      "id": "isco:2432",
+      "kod": "2432",
+      "ust_kod": "243",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Halkla ilişkiler ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Public Relations Professionals"
+    },
+    {
+      "id": "isco:2433",
+      "kod": "2433",
+      "ust_kod": "243",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Teknik ve medikal satışlar ile ilgili profesyonel meslek mensupları (BİT hariç)",
+      "ad_en": "Technical and Medical Sales Professionals (excluding ICT)"
+    },
+    {
+      "id": "isco:2434",
+      "kod": "2434",
+      "ust_kod": "243",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bilgi ve iletişim teknolojileri satışı ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Information and Communications Technology Sales Professionals"
+    },
+    {
+      "id": "isco:25",
+      "kod": "25",
+      "ust_kod": "2",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Bilgi ve iletişim teknolojisi ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Information and Communications Technology Professionals"
+    },
+    {
+      "id": "isco:251",
+      "kod": "251",
+      "ust_kod": "25",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Yazılım ve uygulama geliştiricileri ve analistleri",
+      "ad_en": "Software and Applications Developers and Analysts"
+    },
+    {
+      "id": "isco:2511",
+      "kod": "2511",
+      "ust_kod": "251",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sistem analistleri",
+      "ad_en": "Systems Analysts"
+    },
+    {
+      "id": "isco:2512",
+      "kod": "2512",
+      "ust_kod": "251",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Yazılım geliştiricileri",
+      "ad_en": "Software Developers"
+    },
+    {
+      "id": "isco:2513",
+      "kod": "2513",
+      "ust_kod": "251",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Web ve çoklu ortam geliştiricileri",
+      "ad_en": "Web and Multimedia Developers"
+    },
+    {
+      "id": "isco:2514",
+      "kod": "2514",
+      "ust_kod": "251",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Uygulama programcıları",
+      "ad_en": "Applications Programmers"
+    },
+    {
+      "id": "isco:2519",
+      "kod": "2519",
+      "ust_kod": "251",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış yazılım ve uygulama geliştiricileri ve analistleri",
+      "ad_en": "Software and Applications Developers and Analysts Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:252",
+      "kod": "252",
+      "ust_kod": "25",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Veri tabanı ve bilgisayar ağları ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Database and Network Professionals"
+    },
+    {
+      "id": "isco:2521",
+      "kod": "2521",
+      "ust_kod": "252",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Veri tabanı tasarımcıları ve yöneticileri",
+      "ad_en": "Database Designers and Administrators"
+    },
+    {
+      "id": "isco:2522",
+      "kod": "2522",
+      "ust_kod": "252",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sistem yöneticileri",
+      "ad_en": "Systems Administrators"
+    },
+    {
+      "id": "isco:2523",
+      "kod": "2523",
+      "ust_kod": "252",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bilgisayar ağları ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Computer Network Professionals"
+    },
+    {
+      "id": "isco:2529",
+      "kod": "2529",
+      "ust_kod": "252",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış veri tabanı ve bilgisayar ağları ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Database and Network Professionals Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:26",
+      "kod": "26",
+      "ust_kod": "2",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Hukuk, sosyal ve kültür ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Legal, Social and Cultural Professionals"
+    },
+    {
+      "id": "isco:261",
+      "kod": "261",
+      "ust_kod": "26",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Hukuk ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Legal Professionals"
+    },
+    {
+      "id": "isco:2611",
+      "kod": "2611",
+      "ust_kod": "261",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Avukatlar ve savcılar",
+      "ad_en": "Lawyers"
+    },
+    {
+      "id": "isco:2612",
+      "kod": "2612",
+      "ust_kod": "261",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Hakimler",
+      "ad_en": "Judges"
+    },
+    {
+      "id": "isco:2619",
+      "kod": "2619",
+      "ust_kod": "261",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış hukuk ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Legal Professionals Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:262",
+      "kod": "262",
+      "ust_kod": "26",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Kütüphaneciler, arşivciler ve küratörler",
+      "ad_en": "Librarians, Archivists and Curators"
+    },
+    {
+      "id": "isco:2621",
+      "kod": "2621",
+      "ust_kod": "262",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Arşivciler ve küratörler",
+      "ad_en": "Archivists and Curators"
+    },
+    {
+      "id": "isco:2622",
+      "kod": "2622",
+      "ust_kod": "262",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kütüphaneciler ve benzer profesyonel meslek mensupları",
+      "ad_en": "Librarians and Related Information Professionals"
+    },
+    {
+      "id": "isco:263",
+      "kod": "263",
+      "ust_kod": "26",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Sosyal ve din ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Social and Religious Professionals"
+    },
+    {
+      "id": "isco:2631",
+      "kod": "2631",
+      "ust_kod": "263",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ekonomistler",
+      "ad_en": "Economists"
+    },
+    {
+      "id": "isco:2632",
+      "kod": "2632",
+      "ust_kod": "263",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sosyologlar, antropologlar ve ilgili profesyonel meslek mensupları",
+      "ad_en": "Sociologists, Anthropologists and Related Professionals"
+    },
+    {
+      "id": "isco:2633",
+      "kod": "2633",
+      "ust_kod": "263",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Felsefeciler, tarihçiler ve siyaset bilimciler",
+      "ad_en": "Philosophers, Historians and Political Scientists"
+    },
+    {
+      "id": "isco:2634",
+      "kod": "2634",
+      "ust_kod": "263",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Psikologlar",
+      "ad_en": "Psychologists"
+    },
+    {
+      "id": "isco:2635",
+      "kod": "2635",
+      "ust_kod": "263",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sosyal hizmet ve danışmanlık ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Social Work and Counselling Professionals"
+    },
+    {
+      "id": "isco:2636",
+      "kod": "2636",
+      "ust_kod": "263",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Din ile ilgili profesyonel meslek mensupları",
+      "ad_en": "Religious Professionals"
+    },
+    {
+      "id": "isco:264",
+      "kod": "264",
+      "ust_kod": "26",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Yazarlar, gazeteciler ve dilbilimciler",
+      "ad_en": "Authors, Journalists and Linguists"
+    },
+    {
+      "id": "isco:2641",
+      "kod": "2641",
+      "ust_kod": "264",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Yazarlar",
+      "ad_en": "Authors and Related Writers"
+    },
+    {
+      "id": "isco:2642",
+      "kod": "2642",
+      "ust_kod": "264",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Gazeteciler",
+      "ad_en": "Journalists"
+    },
+    {
+      "id": "isco:2643",
+      "kod": "2643",
+      "ust_kod": "264",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çevirmenler (yazılı ve sözlü) ve diğer dilbilimciler",
+      "ad_en": "Translators, Interpreters and Other Linguists"
+    },
+    {
+      "id": "isco:265",
+      "kod": "265",
+      "ust_kod": "26",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Yaratıcı sanatçılar ve sahne sanatçıları",
+      "ad_en": "Creative and Performing Artists"
+    },
+    {
+      "id": "isco:2651",
+      "kod": "2651",
+      "ust_kod": "265",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Görsel sanatçılar",
+      "ad_en": "Visual Artists"
+    },
+    {
+      "id": "isco:2652",
+      "kod": "2652",
+      "ust_kod": "265",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Müzisyenler, şarkıcılar ve besteciler",
+      "ad_en": "Musicians, Singers and Composers"
+    },
+    {
+      "id": "isco:2653",
+      "kod": "2653",
+      "ust_kod": "265",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Dansçılar ve koreograflar",
+      "ad_en": "Dancers and Choreographers"
+    },
+    {
+      "id": "isco:2654",
+      "kod": "2654",
+      "ust_kod": "265",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Film, sahne vb. yönetmenleri ve yapımcıları",
+      "ad_en": "Film, Stage and Related Directors and Producers"
+    },
+    {
+      "id": "isco:2655",
+      "kod": "2655",
+      "ust_kod": "265",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Aktörler",
+      "ad_en": "Actors"
+    },
+    {
+      "id": "isco:2656",
+      "kod": "2656",
+      "ust_kod": "265",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Radyo, televizyon ve diğer medya sunucuları",
+      "ad_en": "Announcers on Radio, Television and Other Media"
+    },
+    {
+      "id": "isco:2659",
+      "kod": "2659",
+      "ust_kod": "265",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış yaratıcı sanatçılar ve sahne sanatçıları",
+      "ad_en": "Creative and Performing Artists Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:3",
+      "kod": "3",
+      "ust_kod": null,
+      "seviye": 1,
+      "yaprak": false,
+      "ad_tr": "Teknisyenler, teknikerler ve yardımcı profesyonel meslek mensupları",
+      "ad_en": "Technicians and Associate Professionals"
+    },
+    {
+      "id": "isco:31",
+      "kod": "31",
+      "ust_kod": "3",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Bilim ve mühendislik ile ilgili yardımcı profesyonel meslek mensupları",
+      "ad_en": "Science and Engineering Associate Professionals"
+    },
+    {
+      "id": "isco:311",
+      "kod": "311",
+      "ust_kod": "31",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Fizik ve mühendislik bilimleri teknisyenleri",
+      "ad_en": "Physical and Engineering Science Technicians"
+    },
+    {
+      "id": "isco:3111",
+      "kod": "3111",
+      "ust_kod": "311",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kimya ve fizik bilimleri teknisyenleri",
+      "ad_en": "Chemical and Physical Science Technicians"
+    },
+    {
+      "id": "isco:3112",
+      "kod": "3112",
+      "ust_kod": "311",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İnşaat mühendisliği teknisyenleri",
+      "ad_en": "Civil Engineering Technicians"
+    },
+    {
+      "id": "isco:3113",
+      "kod": "3113",
+      "ust_kod": "311",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Elektrik mühendisliği teknisyenleri",
+      "ad_en": "Electrical Engineering Technicians"
+    },
+    {
+      "id": "isco:3114",
+      "kod": "3114",
+      "ust_kod": "311",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Elektronik mühendisliği teknisyenleri",
+      "ad_en": "Electronics Engineering Technicians"
+    },
+    {
+      "id": "isco:3115",
+      "kod": "3115",
+      "ust_kod": "311",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Makine mühendisliği teknisyenleri",
+      "ad_en": "Mechanical Engineering Technicians"
+    },
+    {
+      "id": "isco:3116",
+      "kod": "3116",
+      "ust_kod": "311",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kimya mühendisliği teknisyenleri",
+      "ad_en": "Chemical Engineering Technicians"
+    },
+    {
+      "id": "isco:3117",
+      "kod": "3117",
+      "ust_kod": "311",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Maden ve metalurji teknisyenleri",
+      "ad_en": "Mining and Metallurgical Technicians"
+    },
+    {
+      "id": "isco:3118",
+      "kod": "3118",
+      "ust_kod": "311",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Teknik ressamlar",
+      "ad_en": "Draughtspersons"
+    },
+    {
+      "id": "isco:3119",
+      "kod": "3119",
+      "ust_kod": "311",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış fizik ve mühendislik bilimleri teknisyenleri",
+      "ad_en": "Physical and Engineering Science Technicians Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:312",
+      "kod": "312",
+      "ust_kod": "31",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Maden, imalat ve inşaat süpervizörleri",
+      "ad_en": "Mining, Manufacturing and Construction Supervisors"
+    },
+    {
+      "id": "isco:3121",
+      "kod": "3121",
+      "ust_kod": "312",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Maden süpervizörleri",
+      "ad_en": "Mining Supervisors"
+    },
+    {
+      "id": "isco:3122",
+      "kod": "3122",
+      "ust_kod": "312",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İmalat süpervizörleri",
+      "ad_en": "Manufacturing Supervisors"
+    },
+    {
+      "id": "isco:3123",
+      "kod": "3123",
+      "ust_kod": "312",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İnşaat süpervizörleri",
+      "ad_en": "Construction Supervisors"
+    },
+    {
+      "id": "isco:313",
+      "kod": "313",
+      "ust_kod": "31",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "İşlem kontrol teknisyenleri",
+      "ad_en": "Process Control Technicians"
+    },
+    {
+      "id": "isco:3131",
+      "kod": "3131",
+      "ust_kod": "313",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Enerji üretim tesisi operatörleri",
+      "ad_en": "Power Production Plant Operators"
+    },
+    {
+      "id": "isco:3132",
+      "kod": "3132",
+      "ust_kod": "313",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çöp yakma fırını ve su arıtma tesisi operatörleri",
+      "ad_en": "Incinerator and Water Treatment Plant Operators"
+    },
+    {
+      "id": "isco:3133",
+      "kod": "3133",
+      "ust_kod": "313",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kimyasal işleme tesisi kontrolörleri",
+      "ad_en": "Chemical Processing Plant Controllers"
+    },
+    {
+      "id": "isco:3134",
+      "kod": "3134",
+      "ust_kod": "313",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Petrol ve doğal gaz rafine tesisi operatörleri",
+      "ad_en": "Petroleum and Natural Gas Refining Plant Operators"
+    },
+    {
+      "id": "isco:3135",
+      "kod": "3135",
+      "ust_kod": "313",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Metal üretim işlem kontrolörleri",
+      "ad_en": "Metal Production Process Controllers"
+    },
+    {
+      "id": "isco:3139",
+      "kod": "3139",
+      "ust_kod": "313",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış işlem kontrol teknisyenleri",
+      "ad_en": "Process Control Technicians Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:314",
+      "kod": "314",
+      "ust_kod": "31",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Yaşam bilimleri teknisyenleri ve ilgili yardımcı profesyonel meslek mensupları",
+      "ad_en": "Life Science Technicians and Related Associate Professionals"
+    },
+    {
+      "id": "isco:3141",
+      "kod": "3141",
+      "ust_kod": "314",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Yaşam bilimleri teknisyenleri (tıp hariç)",
+      "ad_en": "Life Science Technicians (excluding Medical)"
+    },
+    {
+      "id": "isco:3142",
+      "kod": "3142",
+      "ust_kod": "314",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tarım teknisyenleri",
+      "ad_en": "Agricultural Technicians"
+    },
+    {
+      "id": "isco:3143",
+      "kod": "3143",
+      "ust_kod": "314",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Orman teknisyenleri",
+      "ad_en": "Forestry Technicians"
+    },
+    {
+      "id": "isco:315",
+      "kod": "315",
+      "ust_kod": "31",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Gemi ve hava taşıtı kontrolörleri ve teknisyenleri",
+      "ad_en": "Ship and Aircraft Controllers and Technicians"
+    },
+    {
+      "id": "isco:3151",
+      "kod": "3151",
+      "ust_kod": "315",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Gemi makinistleri",
+      "ad_en": "Ships’ Engineers"
+    },
+    {
+      "id": "isco:3152",
+      "kod": "3152",
+      "ust_kod": "315",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Gemi güverte zabitleri ve kılavuz kaptanları",
+      "ad_en": "Ships’ Deck Officers and Pilots"
+    },
+    {
+      "id": "isco:3153",
+      "kod": "3153",
+      "ust_kod": "315",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Hava taşıtı pilotları ve ilgili yardımcı profesyonel meslek mensupları",
+      "ad_en": "Aircraft Pilots and Related Associate Professionals"
+    },
+    {
+      "id": "isco:3154",
+      "kod": "3154",
+      "ust_kod": "315",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Hava trafik kontrolörleri",
+      "ad_en": "Air Traffic Controllers"
+    },
+    {
+      "id": "isco:3155",
+      "kod": "3155",
+      "ust_kod": "315",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Hava trafik emniyet elektronik teknisyenleri",
+      "ad_en": "Air Traffic Safety Electronics Technicians"
+    },
+    {
+      "id": "isco:32",
+      "kod": "32",
+      "ust_kod": "3",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Yardımcı sağlık profesyonelleri",
+      "ad_en": "Health Associate Professionals"
+    },
+    {
+      "id": "isco:321",
+      "kod": "321",
+      "ust_kod": "32",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Tıp teknisyenleri ve eczacılık teknisyenleri",
+      "ad_en": "Medical and Pharmaceutical Technicians"
+    },
+    {
+      "id": "isco:3211",
+      "kod": "3211",
+      "ust_kod": "321",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tıbbi görüntüleme ve tedavi edici cihazlar teknisyenleri",
+      "ad_en": "Medical Imaging and Therapeutic Equipment Technicians"
+    },
+    {
+      "id": "isco:3212",
+      "kod": "3212",
+      "ust_kod": "321",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tıbbi laboratuvar ve patoloji laboratuvarı teknisyenleri",
+      "ad_en": "Medical and Pathology Laboratory Technicians"
+    },
+    {
+      "id": "isco:3213",
+      "kod": "3213",
+      "ust_kod": "321",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Eczacılık teknisyenleri ve yardımcıları",
+      "ad_en": "Pharmaceutical Technicians and Assistants"
+    },
+    {
+      "id": "isco:3214",
+      "kod": "3214",
+      "ust_kod": "321",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tıbbi protez ve diş protez teknisyenleri",
+      "ad_en": "Medical and Dental Prosthetic Technicians"
+    },
+    {
+      "id": "isco:322",
+      "kod": "322",
+      "ust_kod": "32",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Hemşirelik ve ebelik yardımcı profesyonelleri",
+      "ad_en": "Nursing and Midwifery Associate Professionals"
+    },
+    {
+      "id": "isco:3221",
+      "kod": "3221",
+      "ust_kod": "322",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Hemşirelik yardımcı profesyonelleri",
+      "ad_en": "Nursing Associate Professionals"
+    },
+    {
+      "id": "isco:3222",
+      "kod": "3222",
+      "ust_kod": "322",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ebelik yardımcı profesyonelleri",
+      "ad_en": "Midwifery Associate Professionals"
+    },
+    {
+      "id": "isco:323",
+      "kod": "323",
+      "ust_kod": "32",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Geleneksel ve tamamlayıcı tıp yardımcı profesyonelleri",
+      "ad_en": "Traditional and Complementary Medicine Associate Professionals"
+    },
+    {
+      "id": "isco:3230",
+      "kod": "3230",
+      "ust_kod": "323",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Geleneksel ve tamamlayıcı tıp yardımcı profesyonelleri",
+      "ad_en": "Traditional and Complementary Medicine Associate Professionals"
+    },
+    {
+      "id": "isco:324",
+      "kod": "324",
+      "ust_kod": "32",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Veteriner teknisyenleri ve yardımcıları",
+      "ad_en": "Veterinary Technicians and Assistants"
+    },
+    {
+      "id": "isco:3240",
+      "kod": "3240",
+      "ust_kod": "324",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Veteriner teknisyenleri ve yardımcıları",
+      "ad_en": "Veterinary Technicians and Assistants"
+    },
+    {
+      "id": "isco:325",
+      "kod": "325",
+      "ust_kod": "32",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Diğer yardımcı sağlık profesyonelleri",
+      "ad_en": "Other Health Associate Professionals"
+    },
+    {
+      "id": "isco:3251",
+      "kod": "3251",
+      "ust_kod": "325",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Diş hekimi yardımcıları ve terapistleri",
+      "ad_en": "Dental Assistants and Therapists"
+    },
+    {
+      "id": "isco:3252",
+      "kod": "3252",
+      "ust_kod": "325",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tıbbi kayıt ve sağlık bilgisi teknisyenleri",
+      "ad_en": "Medical Records and Health Information Technicians"
+    },
+    {
+      "id": "isco:3253",
+      "kod": "3253",
+      "ust_kod": "325",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Toplum sağlığı çalışanları",
+      "ad_en": "Community Health Workers"
+    },
+    {
+      "id": "isco:3254",
+      "kod": "3254",
+      "ust_kod": "325",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Optisyenler",
+      "ad_en": "Dispensing Opticians"
+    },
+    {
+      "id": "isco:3255",
+      "kod": "3255",
+      "ust_kod": "325",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Fizyoterapi teknisyenleri ve yardımcıları",
+      "ad_en": "Physiotherapy Technicians and Assistants"
+    },
+    {
+      "id": "isco:3256",
+      "kod": "3256",
+      "ust_kod": "325",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tıp yardımcıları",
+      "ad_en": "Medical Assistants"
+    },
+    {
+      "id": "isco:3257",
+      "kod": "3257",
+      "ust_kod": "325",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çevresel ve mesleki sağlık denetçileri ve yardımcıları",
+      "ad_en": "Environmental and Occupational Health Inspectors and Associates"
+    },
+    {
+      "id": "isco:3258",
+      "kod": "3258",
+      "ust_kod": "325",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ambulans çalışanları",
+      "ad_en": "Ambulance Workers"
+    },
+    {
+      "id": "isco:3259",
+      "kod": "3259",
+      "ust_kod": "325",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış yardımcı sağlık profesyonelleri",
+      "ad_en": "Health Associate Professionals Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:33",
+      "kod": "33",
+      "ust_kod": "3",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "İş ve idare ile ilgili yardımcı profesyonel meslek mensupları",
+      "ad_en": "Business and Administration Associate Professionals"
+    },
+    {
+      "id": "isco:331",
+      "kod": "331",
+      "ust_kod": "33",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Finans ve matematiksel işler ile ilgili yardımcı profesyonel meslek mensupları",
+      "ad_en": "Financial and Mathematical Associate Professionals"
+    },
+    {
+      "id": "isco:3311",
+      "kod": "3311",
+      "ust_kod": "331",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Menkul kıymetler ve finans alım satımcıları ve aracıları (brokerler)",
+      "ad_en": "Securities and Finance Dealers and Brokers"
+    },
+    {
+      "id": "isco:3312",
+      "kod": "3312",
+      "ust_kod": "331",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kredi ve borç verme görevlileri",
+      "ad_en": "Credit and Loans Officers"
+    },
+    {
+      "id": "isco:3313",
+      "kod": "3313",
+      "ust_kod": "331",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Muhasebe ile ilgili yardımcı profesyonel meslek mensupları",
+      "ad_en": "Accounting Associate Professionals"
+    },
+    {
+      "id": "isco:3314",
+      "kod": "3314",
+      "ust_kod": "331",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İstatistik, matematik ve benzeri yardımcı profesyonel meslek mensupları",
+      "ad_en": "Statistical, Mathematical and Related Associate Professionals"
+    },
+    {
+      "id": "isco:3315",
+      "kod": "3315",
+      "ust_kod": "331",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Değer ve hasar tespit eksperleri",
+      "ad_en": "Valuers and Loss Assessors"
+    },
+    {
+      "id": "isco:332",
+      "kod": "332",
+      "ust_kod": "33",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Satış ve satın alma temsilcileri ve aracıları (brokerler)",
+      "ad_en": "Sales and Purchasing Agents and Brokers"
+    },
+    {
+      "id": "isco:3321",
+      "kod": "3321",
+      "ust_kod": "332",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sigorta temsilcileri",
+      "ad_en": "Insurance Representatives"
+    },
+    {
+      "id": "isco:3322",
+      "kod": "3322",
+      "ust_kod": "332",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ticari satış temsilcileri",
+      "ad_en": "Commercial Sales Representatives"
+    },
+    {
+      "id": "isco:3323",
+      "kod": "3323",
+      "ust_kod": "332",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Satın alma görevlileri",
+      "ad_en": "Buyers"
+    },
+    {
+      "id": "isco:3324",
+      "kod": "3324",
+      "ust_kod": "332",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ticari aracılar (brokerler)",
+      "ad_en": "Trade Brokers"
+    },
+    {
+      "id": "isco:333",
+      "kod": "333",
+      "ust_kod": "33",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "İş hizmetleri aracıları",
+      "ad_en": "Business Services Agents"
+    },
+    {
+      "id": "isco:3331",
+      "kod": "3331",
+      "ust_kod": "333",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Gümrükleme ve sevkiyat aracıları",
+      "ad_en": "Clearing and Forwarding Agents"
+    },
+    {
+      "id": "isco:3332",
+      "kod": "3332",
+      "ust_kod": "333",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Konferans ve etkinlik düzenleyiciler",
+      "ad_en": "Conference and Event Planners"
+    },
+    {
+      "id": "isco:3333",
+      "kod": "3333",
+      "ust_kod": "333",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İş ve işçi bulma aracıları",
+      "ad_en": "Employment Agents and Contractors"
+    },
+    {
+      "id": "isco:3334",
+      "kod": "3334",
+      "ust_kod": "333",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Emlakçılar ve gayrimenkul yöneticileri",
+      "ad_en": "Real Estate Agents and Property Managers"
+    },
+    {
+      "id": "isco:3339",
+      "kod": "3339",
+      "ust_kod": "333",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış iş hizmetleri aracıları",
+      "ad_en": "Business Services Agents Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:334",
+      "kod": "334",
+      "ust_kod": "33",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "İdari ve belli bir alanda uzmanlaşmış sekreterler",
+      "ad_en": "Administrative and Specialized Secretaries"
+    },
+    {
+      "id": "isco:3341",
+      "kod": "3341",
+      "ust_kod": "334",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Büro süpervizörleri",
+      "ad_en": "Office Supervisors"
+    },
+    {
+      "id": "isco:3342",
+      "kod": "3342",
+      "ust_kod": "334",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Hukuk sekreterleri",
+      "ad_en": "Legal Secretaries"
+    },
+    {
+      "id": "isco:3343",
+      "kod": "3343",
+      "ust_kod": "334",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İdari sekreterler ve yönetici sekreterleri",
+      "ad_en": "Administrative and Executive Secretaries"
+    },
+    {
+      "id": "isco:3344",
+      "kod": "3344",
+      "ust_kod": "334",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tıbbi sekreterler",
+      "ad_en": "Medical Secretaries"
+    },
+    {
+      "id": "isco:335",
+      "kod": "335",
+      "ust_kod": "33",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Düzenleyici devlet ile ilgili alanlardaki yardımcı profesyonel meslek mensupları",
+      "ad_en": "Government Regulatory Associate Professionals"
+    },
+    {
+      "id": "isco:3351",
+      "kod": "3351",
+      "ust_kod": "335",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Gümrük ve sınır kontrolörleri",
+      "ad_en": "Customs and Border Inspectors"
+    },
+    {
+      "id": "isco:3352",
+      "kod": "3352",
+      "ust_kod": "335",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Vergi memurları",
+      "ad_en": "Government Tax and Excise Officials"
+    },
+    {
+      "id": "isco:3353",
+      "kod": "3353",
+      "ust_kod": "335",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Devlet sosyal yardım memurları",
+      "ad_en": "Government Social Benefits Officials"
+    },
+    {
+      "id": "isco:3354",
+      "kod": "3354",
+      "ust_kod": "335",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Devlet ruhsat memurları",
+      "ad_en": "Government Licensing Officials"
+    },
+    {
+      "id": "isco:3355",
+      "kod": "3355",
+      "ust_kod": "335",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Polis dedektifleri",
+      "ad_en": "Police Inspectors and Detectives"
+    },
+    {
+      "id": "isco:3359",
+      "kod": "3359",
+      "ust_kod": "335",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış düzenleyici devlet ile ilgili alanlardaki yardımcı profesyonel meslek mensupları",
+      "ad_en": "Government Regulatory Associate Professionals Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:34",
+      "kod": "34",
+      "ust_kod": "3",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Hukuk, sosyal, kültür ve benzeri alanlar ile ilgili yardımcı profesyonel meslek mensupları",
+      "ad_en": "Legal, Social, Cultural and Related Associate Professionals"
+    },
+    {
+      "id": "isco:341",
+      "kod": "341",
+      "ust_kod": "34",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Hukuk, sosyal ve din ile ilgili yardımcı profesyonel meslek mensupları",
+      "ad_en": "Legal, Social and Religious Associate Professionals"
+    },
+    {
+      "id": "isco:3411",
+      "kod": "3411",
+      "ust_kod": "341",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Hukuk ve ilgili alanlardaki yardımcı profesyonel meslek mensupları",
+      "ad_en": "Legal and Related Associate Professionals"
+    },
+    {
+      "id": "isco:3412",
+      "kod": "3412",
+      "ust_kod": "341",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sosyal hizmetler ile ilgili yardımcı profesyonel meslek mensupları",
+      "ad_en": "Social Work Associate Professionals"
+    },
+    {
+      "id": "isco:3413",
+      "kod": "3413",
+      "ust_kod": "341",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Din ile ilgili yardımcı profesyonel meslek mensupları",
+      "ad_en": "Religious Associate Professionals"
+    },
+    {
+      "id": "isco:342",
+      "kod": "342",
+      "ust_kod": "34",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Spor ve fitnes çalışanları",
+      "ad_en": "Sports and Fitness Workers"
+    },
+    {
+      "id": "isco:3421",
+      "kod": "3421",
+      "ust_kod": "342",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Atletler ve sporcular",
+      "ad_en": "Athletes and Sports Players"
+    },
+    {
+      "id": "isco:3422",
+      "kod": "3422",
+      "ust_kod": "342",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Spor antrenörleri, eğiticileri ve görevlileri",
+      "ad_en": "Sports Coaches, Instructors and Officials"
+    },
+    {
+      "id": "isco:3423",
+      "kod": "3423",
+      "ust_kod": "342",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Fitnes ve rekreasyon eğiticileri ve program liderleri",
+      "ad_en": "Fitness and Recreation Instructors and Programme Leaders"
+    },
+    {
+      "id": "isco:343",
+      "kod": "343",
+      "ust_kod": "34",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Sanat, kültür ve mutfak ile ilgili yardımcı profesyonel meslek mensupları",
+      "ad_en": "Artistic, Cultural and Culinary Associate Professionals"
+    },
+    {
+      "id": "isco:3431",
+      "kod": "3431",
+      "ust_kod": "343",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Fotoğrafçılar",
+      "ad_en": "Photographers"
+    },
+    {
+      "id": "isco:3432",
+      "kod": "3432",
+      "ust_kod": "343",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İç tasarımcılar ve dekoratörler",
+      "ad_en": "Interior Designers and Decorators"
+    },
+    {
+      "id": "isco:3433",
+      "kod": "3433",
+      "ust_kod": "343",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Galeri, müze ve kütüphane teknisyenleri",
+      "ad_en": "Gallery, Museum and Library Technicians"
+    },
+    {
+      "id": "isco:3434",
+      "kod": "3434",
+      "ust_kod": "343",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Şefler (yiyecek hazırlama ve sunum hizmetleri)",
+      "ad_en": "Chefs"
+    },
+    {
+      "id": "isco:3435",
+      "kod": "3435",
+      "ust_kod": "343",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış sanat ve kültür ile ilgili yardımcı profesyonel meslek mensupları",
+      "ad_en": "Other Artistic and Cultural Associate Professionals"
+    },
+    {
+      "id": "isco:35",
+      "kod": "35",
+      "ust_kod": "3",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Bilgi ve iletişim teknisyenleri",
+      "ad_en": "Information and Communications Technicians"
+    },
+    {
+      "id": "isco:351",
+      "kod": "351",
+      "ust_kod": "35",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Bilgi ve iletişim teknolojileri işletim ve kullanıcı destek teknisyenleri",
+      "ad_en": "Information and Communications Technology Operations and User Support Technicians"
+    },
+    {
+      "id": "isco:3511",
+      "kod": "3511",
+      "ust_kod": "351",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bilgi ve iletişim teknolojisi işletim teknisyenleri",
+      "ad_en": "Information and Communications Technology Operations Technicians"
+    },
+    {
+      "id": "isco:3512",
+      "kod": "3512",
+      "ust_kod": "351",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bilgi ve iletişim teknolojisi kullanıcı destek teknisyenleri",
+      "ad_en": "Information and Communications Technology User Support Technicians"
+    },
+    {
+      "id": "isco:3513",
+      "kod": "3513",
+      "ust_kod": "351",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bilgisayar ağ ve sistem teknisyenleri",
+      "ad_en": "Computer Network and Systems Technicians"
+    },
+    {
+      "id": "isco:3514",
+      "kod": "3514",
+      "ust_kod": "351",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Web teknisyenleri",
+      "ad_en": "Web Technicians"
+    },
+    {
+      "id": "isco:352",
+      "kod": "352",
+      "ust_kod": "35",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Telekomünikasyon ve yayın teknisyenleri",
+      "ad_en": "Telecommunications and Broadcasting Technicians"
+    },
+    {
+      "id": "isco:3521",
+      "kod": "3521",
+      "ust_kod": "352",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Yayın ve ses-görüntü teknisyenleri",
+      "ad_en": "Broadcasting and Audiovisual Technicians"
+    },
+    {
+      "id": "isco:3522",
+      "kod": "3522",
+      "ust_kod": "352",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Telekomünikasyon mühendisliği teknisyenleri",
+      "ad_en": "Telecommunications Engineering Technicians"
+    },
+    {
+      "id": "isco:4",
+      "kod": "4",
+      "ust_kod": null,
+      "seviye": 1,
+      "yaprak": false,
+      "ad_tr": "Büro hizmetlerinde çalışan elemanlar",
+      "ad_en": "Clerical Support Workers"
+    },
+    {
+      "id": "isco:41",
+      "kod": "41",
+      "ust_kod": "4",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Genel büro elemanları ile klavye kullanan büro elemanları",
+      "ad_en": "General and Keyboard Clerks"
+    },
+    {
+      "id": "isco:411",
+      "kod": "411",
+      "ust_kod": "41",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Genel büro elemanları",
+      "ad_en": "General Office Clerks"
+    },
+    {
+      "id": "isco:4110",
+      "kod": "4110",
+      "ust_kod": "411",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Genel büro elemanları",
+      "ad_en": "General Office Clerks"
+    },
+    {
+      "id": "isco:412",
+      "kod": "412",
+      "ust_kod": "41",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Sekreterler (genel)",
+      "ad_en": "Secretaries (general)"
+    },
+    {
+      "id": "isco:4120",
+      "kod": "4120",
+      "ust_kod": "412",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sekreterler (genel)",
+      "ad_en": "Secretaries (general)"
+    },
+    {
+      "id": "isco:413",
+      "kod": "413",
+      "ust_kod": "41",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Klavye kullanan operatörler",
+      "ad_en": "Keyboard Operators"
+    },
+    {
+      "id": "isco:4131",
+      "kod": "4131",
+      "ust_kod": "413",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Daktilograflar ve kelime işlem operatörleri",
+      "ad_en": "Typists and Word Processing Operators"
+    },
+    {
+      "id": "isco:4132",
+      "kod": "4132",
+      "ust_kod": "413",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Veri giriş elemanları",
+      "ad_en": "Data Entry Clerks"
+    },
+    {
+      "id": "isco:42",
+      "kod": "42",
+      "ust_kod": "4",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Müşteri hizmetlerinde çalışan elemanlar",
+      "ad_en": "Customer Services Clerks"
+    },
+    {
+      "id": "isco:421",
+      "kod": "421",
+      "ust_kod": "42",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Veznedarlar, tahsilatçılar ve benzer elemanlar",
+      "ad_en": "Tellers, Money Collectors and Related Clerks"
+    },
+    {
+      "id": "isco:4211",
+      "kod": "4211",
+      "ust_kod": "421",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Banka veznedarları ve ilgili büro elemanları",
+      "ad_en": "Bank Tellers and Related Clerks"
+    },
+    {
+      "id": "isco:4212",
+      "kod": "4212",
+      "ust_kod": "421",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bahisçiler, krupiyeler ve kumar oyunları ile ilgili çalışanlar",
+      "ad_en": "Bookmakers, Croupiers and Related Gaming Workers"
+    },
+    {
+      "id": "isco:4213",
+      "kod": "4213",
+      "ust_kod": "421",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Borç para verenler",
+      "ad_en": "Pawnbrokers and Money-lenders"
+    },
+    {
+      "id": "isco:4214",
+      "kod": "4214",
+      "ust_kod": "421",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tahsilatçılar ve benzer elemanlar",
+      "ad_en": "Debt Collectors and Related Workers"
+    },
+    {
+      "id": "isco:422",
+      "kod": "422",
+      "ust_kod": "42",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Müşteri danışma elemanları",
+      "ad_en": "Client Information Workers"
+    },
+    {
+      "id": "isco:4221",
+      "kod": "4221",
+      "ust_kod": "422",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Seyahat ile ilgili danışmanlar ve seyahat büro elemanları",
+      "ad_en": "Travel Consultants and Clerks"
+    },
+    {
+      "id": "isco:4222",
+      "kod": "4222",
+      "ust_kod": "422",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İletişim merkezi danışma elemanları",
+      "ad_en": "Contact Centre Information Clerks"
+    },
+    {
+      "id": "isco:4223",
+      "kod": "4223",
+      "ust_kod": "422",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Telefon santral operatörleri",
+      "ad_en": "Telephone Switchboard Operators"
+    },
+    {
+      "id": "isco:4224",
+      "kod": "4224",
+      "ust_kod": "422",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Otel resepsiyonistleri",
+      "ad_en": "Hotel Receptionists"
+    },
+    {
+      "id": "isco:4225",
+      "kod": "4225",
+      "ust_kod": "422",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Danışma elemanları",
+      "ad_en": "Inquiry Clerks"
+    },
+    {
+      "id": "isco:4226",
+      "kod": "4226",
+      "ust_kod": "422",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Resepsiyonistler (genel)",
+      "ad_en": "Receptionists (general)"
+    },
+    {
+      "id": "isco:4227",
+      "kod": "4227",
+      "ust_kod": "422",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Araştırma ve piyasa araştırma anketörleri",
+      "ad_en": "Survey and Market Research Interviewers"
+    },
+    {
+      "id": "isco:4229",
+      "kod": "4229",
+      "ust_kod": "422",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış müşteri danışma elemanları",
+      "ad_en": "Client Information Workers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:43",
+      "kod": "43",
+      "ust_kod": "4",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Sayısal işlemler yapan ve malzeme kayıtları tutan büro elemanları",
+      "ad_en": "Numerical and Material Recording Clerks"
+    },
+    {
+      "id": "isco:431",
+      "kod": "431",
+      "ust_kod": "43",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Sayısal işlemler yapan büro elemanları",
+      "ad_en": "Numerical Clerks"
+    },
+    {
+      "id": "isco:4311",
+      "kod": "4311",
+      "ust_kod": "431",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Muhasebe kayıtları ve defter tutan büro elemanları",
+      "ad_en": "Accounting and Bookkeeping Clerks"
+    },
+    {
+      "id": "isco:4312",
+      "kod": "4312",
+      "ust_kod": "431",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İstatistik, finans ve sigortacılıkla ilgili büro elemanları",
+      "ad_en": "Statistical, Finance and Insurance Clerks"
+    },
+    {
+      "id": "isco:4313",
+      "kod": "4313",
+      "ust_kod": "431",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bordro hazırlayan büro elemanları",
+      "ad_en": "Payroll Clerks"
+    },
+    {
+      "id": "isco:432",
+      "kod": "432",
+      "ust_kod": "43",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Malzeme kayıtları ve taşımacılık ile ilgili büro elemanları",
+      "ad_en": "Material Recording and Transport Clerks"
+    },
+    {
+      "id": "isco:4321",
+      "kod": "4321",
+      "ust_kod": "432",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Stok büro elemanları",
+      "ad_en": "Stock Clerks"
+    },
+    {
+      "id": "isco:4322",
+      "kod": "4322",
+      "ust_kod": "432",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Üretim büro elemanları",
+      "ad_en": "Production Clerks"
+    },
+    {
+      "id": "isco:4323",
+      "kod": "4323",
+      "ust_kod": "432",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ulaştırma ile ilgili büro elemanları",
+      "ad_en": "Transport Clerks"
+    },
+    {
+      "id": "isco:44",
+      "kod": "44",
+      "ust_kod": "4",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Diğer büro hizmetlerinde çalışan elemanlar",
+      "ad_en": "Other Clerical Support Workers"
+    },
+    {
+      "id": "isco:441",
+      "kod": "441",
+      "ust_kod": "44",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Diğer büro hizmetlerinde çalışan elemanlar",
+      "ad_en": "Other Clerical Support Workers"
+    },
+    {
+      "id": "isco:4411",
+      "kod": "4411",
+      "ust_kod": "441",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kütüphane büro elemanları",
+      "ad_en": "Library Clerks"
+    },
+    {
+      "id": "isco:4412",
+      "kod": "4412",
+      "ust_kod": "441",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Postacılar ve tasnifleme büro elemanları",
+      "ad_en": "Mail Carriers and Sorting Clerks"
+    },
+    {
+      "id": "isco:4413",
+      "kod": "4413",
+      "ust_kod": "441",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kodlama, redaksiyon ve benzeri işler yapan büro elemanları",
+      "ad_en": "Coding, Proofreading and Related Clerks"
+    },
+    {
+      "id": "isco:4414",
+      "kod": "4414",
+      "ust_kod": "441",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Arzuhalciler ve benzeri çalışanlar",
+      "ad_en": "Scribes and Related Workers"
+    },
+    {
+      "id": "isco:4415",
+      "kod": "4415",
+      "ust_kod": "441",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Dosyalama ve kopyalama büro elemanları",
+      "ad_en": "Filing and Copying Clerks"
+    },
+    {
+      "id": "isco:4416",
+      "kod": "4416",
+      "ust_kod": "441",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Personel işleri ile ilgili büro elemanları",
+      "ad_en": "Personnel Clerks"
+    },
+    {
+      "id": "isco:4419",
+      "kod": "4419",
+      "ust_kod": "441",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış büro hizmetlerinde çalışan elemanlar",
+      "ad_en": "Clerical Support Workers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:5",
+      "kod": "5",
+      "ust_kod": null,
+      "seviye": 1,
+      "yaprak": false,
+      "ad_tr": "Hizmet ve satış elemanları",
+      "ad_en": "Services And Sales Workers"
+    },
+    {
+      "id": "isco:51",
+      "kod": "51",
+      "ust_kod": "5",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Kişisel hizmetler veren elemanlar",
+      "ad_en": "Personal Services Workers"
+    },
+    {
+      "id": "isco:511",
+      "kod": "511",
+      "ust_kod": "51",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Seyahatlerde hizmet veren elemanlar, kondüktörler ve otobüs muavinleri ile rehberler",
+      "ad_en": "Travel Attendants, Conductors and Guides"
+    },
+    {
+      "id": "isco:5111",
+      "kod": "5111",
+      "ust_kod": "511",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Seyahatlerde hizmet veren elemanlar",
+      "ad_en": "Travel Attendants and Travel Stewards"
+    },
+    {
+      "id": "isco:5112",
+      "kod": "5112",
+      "ust_kod": "511",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ulaştırma hizmetlerindeki kondüktörler ve otobüs muavinleri",
+      "ad_en": "Transport Conductors"
+    },
+    {
+      "id": "isco:5113",
+      "kod": "5113",
+      "ust_kod": "511",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Seyahat rehberleri",
+      "ad_en": "Travel Guides"
+    },
+    {
+      "id": "isco:512",
+      "kod": "512",
+      "ust_kod": "51",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Aşçılar",
+      "ad_en": "Cooks"
+    },
+    {
+      "id": "isco:5120",
+      "kod": "5120",
+      "ust_kod": "512",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Aşçılar",
+      "ad_en": "Cooks"
+    },
+    {
+      "id": "isco:513",
+      "kod": "513",
+      "ust_kod": "51",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Garsonlar ve barmenler",
+      "ad_en": "Waiters and Bartenders"
+    },
+    {
+      "id": "isco:5131",
+      "kod": "5131",
+      "ust_kod": "513",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Garsonlar",
+      "ad_en": "Waiters"
+    },
+    {
+      "id": "isco:5132",
+      "kod": "5132",
+      "ust_kod": "513",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Barmenler",
+      "ad_en": "Bartenders"
+    },
+    {
+      "id": "isco:514",
+      "kod": "514",
+      "ust_kod": "51",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Kuaförler, güzellik uzmanları ve ilgili çalışanlar",
+      "ad_en": "Hairdressers, Beauticians and Related Workers"
+    },
+    {
+      "id": "isco:5141",
+      "kod": "5141",
+      "ust_kod": "514",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kuaförler",
+      "ad_en": "Hairdressers"
+    },
+    {
+      "id": "isco:5142",
+      "kod": "5142",
+      "ust_kod": "514",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Güzellik uzmanları ve ilgili çalışanlar",
+      "ad_en": "Beauticians and Related Workers"
+    },
+    {
+      "id": "isco:515",
+      "kod": "515",
+      "ust_kod": "51",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Bina sorumluları ile temizlik ve bakım işleri sorumluları",
+      "ad_en": "Building and Housekeeping Supervisors"
+    },
+    {
+      "id": "isco:5151",
+      "kod": "5151",
+      "ust_kod": "515",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Büro, otel ve diğer işyerlerindeki temizlik ve bina bakımı sorumluları",
+      "ad_en": "Cleaning and Housekeeping Supervisors in Offices, Hotels and Other Establishments"
+    },
+    {
+      "id": "isco:5152",
+      "kod": "5152",
+      "ust_kod": "515",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Evlerdeki temizlik ve bakım elemanları",
+      "ad_en": "Domestic Housekeepers"
+    },
+    {
+      "id": "isco:5153",
+      "kod": "5153",
+      "ust_kod": "515",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bina temizlik ve bakım sorumluları",
+      "ad_en": "Building Caretakers"
+    },
+    {
+      "id": "isco:516",
+      "kod": "516",
+      "ust_kod": "51",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Diğer kişisel hizmetlerde çalışanlar",
+      "ad_en": "Other Personal Services Workers"
+    },
+    {
+      "id": "isco:5161",
+      "kod": "5161",
+      "ust_kod": "516",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Astrologlar, falcılar ve ilgili çalışanlar",
+      "ad_en": "Astrologers, Fortune-tellers and Related Workers"
+    },
+    {
+      "id": "isco:5162",
+      "kod": "5162",
+      "ust_kod": "516",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Refakatçiler ve kişisel yardımcılar",
+      "ad_en": "Companions and Valets"
+    },
+    {
+      "id": "isco:5163",
+      "kod": "5163",
+      "ust_kod": "516",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Cenaze hizmetlerinde çalışanlar ve mumyacılar",
+      "ad_en": "Undertakers and Embalmers"
+    },
+    {
+      "id": "isco:5164",
+      "kod": "5164",
+      "ust_kod": "516",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ev hayvanları yetiştiricileri ve hayvan bakıcıları",
+      "ad_en": "Pet Groomers and Animal Care Workers"
+    },
+    {
+      "id": "isco:5165",
+      "kod": "5165",
+      "ust_kod": "516",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sürücü eğitimi öğretmenleri",
+      "ad_en": "Driving Instructors"
+    },
+    {
+      "id": "isco:5169",
+      "kod": "5169",
+      "ust_kod": "516",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış kişisel hizmetlerde çalışanlar",
+      "ad_en": "Personal Services Workers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:52",
+      "kod": "52",
+      "ust_kod": "5",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Satış hizmetleri veren elemanlar",
+      "ad_en": "Sales Workers"
+    },
+    {
+      "id": "isco:521",
+      "kod": "521",
+      "ust_kod": "52",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Sokak, tezgah ve pazar satış elemanları",
+      "ad_en": "Street and Market Salespersons"
+    },
+    {
+      "id": "isco:5211",
+      "kod": "5211",
+      "ust_kod": "521",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Büfe, baraka türü dükkan, sabit tezgah, stant vb. yerlerdeki satış elemanları ile pazarcılar",
+      "ad_en": "Stall and Market Salespersons"
+    },
+    {
+      "id": "isco:5212",
+      "kod": "5212",
+      "ust_kod": "521",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Cadde ve sokak yiyecek satış elemanları",
+      "ad_en": "Street Food Salespersons"
+    },
+    {
+      "id": "isco:522",
+      "kod": "522",
+      "ust_kod": "52",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Mağaza, dükkan vb. satış elemanları",
+      "ad_en": "Shop Salespersons"
+    },
+    {
+      "id": "isco:5221",
+      "kod": "5221",
+      "ust_kod": "522",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Perakende ticaret ile ilgili küçük işletme sahipleri",
+      "ad_en": "Shopkeepers"
+    },
+    {
+      "id": "isco:5222",
+      "kod": "5222",
+      "ust_kod": "522",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Mağaza vb. bölüm sorumluları (şefleri)",
+      "ad_en": "Shop Supervisors"
+    },
+    {
+      "id": "isco:5223",
+      "kod": "5223",
+      "ust_kod": "522",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Mağaza, dükkan vb. yerlerde çalışan satış elemanları",
+      "ad_en": "Shop Sales Assistants"
+    },
+    {
+      "id": "isco:523",
+      "kod": "523",
+      "ust_kod": "52",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Kasiyerler ve bilet satıcıları",
+      "ad_en": "Cashiers and Ticket Clerks"
+    },
+    {
+      "id": "isco:5230",
+      "kod": "5230",
+      "ust_kod": "523",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kasiyerler ve bilet satıcıları",
+      "ad_en": "Cashiers and Ticket Clerks"
+    },
+    {
+      "id": "isco:524",
+      "kod": "524",
+      "ust_kod": "52",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Diğer satış elemanları",
+      "ad_en": "Other Sales Workers"
+    },
+    {
+      "id": "isco:5241",
+      "kod": "5241",
+      "ust_kod": "524",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Mankenler ve diğer modeller",
+      "ad_en": "Fashion and Other Models"
+    },
+    {
+      "id": "isco:5242",
+      "kod": "5242",
+      "ust_kod": "524",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Satış tanıtım elemanları",
+      "ad_en": "Sales Demonstrators"
+    },
+    {
+      "id": "isco:5243",
+      "kod": "5243",
+      "ust_kod": "524",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kapı kapı dolaşarak satış yapan satış elemanları",
+      "ad_en": "Door-to-door Salespersons"
+    },
+    {
+      "id": "isco:5244",
+      "kod": "5244",
+      "ust_kod": "524",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İletişim merkezi satış elemanları",
+      "ad_en": "Contact Centre Salespersons"
+    },
+    {
+      "id": "isco:5245",
+      "kod": "5245",
+      "ust_kod": "524",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Servis istasyonu hizmet elemanları",
+      "ad_en": "Service Station Attendants"
+    },
+    {
+      "id": "isco:5246",
+      "kod": "5246",
+      "ust_kod": "524",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Yiyecek servis tezgahı çalışanları",
+      "ad_en": "Food Service Counter Attendants"
+    },
+    {
+      "id": "isco:5249",
+      "kod": "5249",
+      "ust_kod": "524",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış satış elemanları",
+      "ad_en": "Sales Workers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:53",
+      "kod": "53",
+      "ust_kod": "5",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Kişisel bakım hizmetleri veren elemanlar",
+      "ad_en": "Personal Care Workers"
+    },
+    {
+      "id": "isco:531",
+      "kod": "531",
+      "ust_kod": "53",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Çocuk bakım hizmetleri veren elemanlar ve öğretmen yardımcıları",
+      "ad_en": "Child Care Workers and Teachers’ Aides"
+    },
+    {
+      "id": "isco:5311",
+      "kod": "5311",
+      "ust_kod": "531",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çocuk bakım hizmetleri veren elemanlar",
+      "ad_en": "Child Care Workers"
+    },
+    {
+      "id": "isco:5312",
+      "kod": "5312",
+      "ust_kod": "531",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Öğretmen yardımcıları",
+      "ad_en": "Teachers’ Aides"
+    },
+    {
+      "id": "isco:532",
+      "kod": "532",
+      "ust_kod": "53",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Sağlık hizmetlerinde kişisel bakım çalışanları",
+      "ad_en": "Personal Care Workers in Health Services"
+    },
+    {
+      "id": "isco:5321",
+      "kod": "5321",
+      "ust_kod": "532",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sağlık hizmetleri yardımcıları",
+      "ad_en": "Health Care Assistants"
+    },
+    {
+      "id": "isco:5322",
+      "kod": "5322",
+      "ust_kod": "532",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Evlerde kişisel bakım hizmeti veren çalışanlar (tedavi hariç)",
+      "ad_en": "Home-based Personal Care Workers"
+    },
+    {
+      "id": "isco:5329",
+      "kod": "5329",
+      "ust_kod": "532",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış sağlık hizmetlerinde kişisel bakım çalışanları",
+      "ad_en": "Personal Care Workers in Health Services Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:54",
+      "kod": "54",
+      "ust_kod": "5",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Koruma hizmetleri veren elemanlar",
+      "ad_en": "Protective Services Workers"
+    },
+    {
+      "id": "isco:541",
+      "kod": "541",
+      "ust_kod": "54",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Koruma hizmetleri veren elemanlar",
+      "ad_en": "Protective Services Workers"
+    },
+    {
+      "id": "isco:5411",
+      "kod": "5411",
+      "ust_kod": "541",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İtfaiyeciler",
+      "ad_en": "Firefighters"
+    },
+    {
+      "id": "isco:5412",
+      "kod": "5412",
+      "ust_kod": "541",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Polis memurları",
+      "ad_en": "Police Officers"
+    },
+    {
+      "id": "isco:5413",
+      "kod": "5413",
+      "ust_kod": "541",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Gardiyanlar",
+      "ad_en": "Prison Guards"
+    },
+    {
+      "id": "isco:5414",
+      "kod": "5414",
+      "ust_kod": "541",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Güvenlik görevlileri",
+      "ad_en": "Security Guards"
+    },
+    {
+      "id": "isco:5419",
+      "kod": "5419",
+      "ust_kod": "541",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış koruma hizmetleri veren elemanlar",
+      "ad_en": "Protective Services Workers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:6",
+      "kod": "6",
+      "ust_kod": null,
+      "seviye": 1,
+      "yaprak": false,
+      "ad_tr": "Nitelikli tarım, ormancılık ve su ürünleri çalışanları",
+      "ad_en": "Skilled Agricultural, Forestry and Fishery Workers"
+    },
+    {
+      "id": "isco:61",
+      "kod": "61",
+      "ust_kod": "6",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Pazara yönelik nitelikli tarım çalışanları",
+      "ad_en": "Market-oriented Skilled Agricultural Workers"
+    },
+    {
+      "id": "isco:611",
+      "kod": "611",
+      "ust_kod": "61",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Bahçıvanlar ve bitkisel ürün yetiştiricileri",
+      "ad_en": "Market Gardeners and Crop Growers"
+    },
+    {
+      "id": "isco:6111",
+      "kod": "6111",
+      "ust_kod": "611",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tarla ürünleri ve sebze yetiştiricileri",
+      "ad_en": "Field Crop and Vegetable Growers"
+    },
+    {
+      "id": "isco:6112",
+      "kod": "6112",
+      "ust_kod": "611",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ağaç ve çalı ürünleri yetiştiricileri",
+      "ad_en": "Tree and Shrub Crop Growers"
+    },
+    {
+      "id": "isco:6113",
+      "kod": "6113",
+      "ust_kod": "611",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bahçıvanlar, bahçe bitkileri ve fidan yetiştiricileri",
+      "ad_en": "Gardeners; Horticultural and Nursery Growers"
+    },
+    {
+      "id": "isco:6114",
+      "kod": "6114",
+      "ust_kod": "611",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Karma bitkisel ürün yetiştiricileri",
+      "ad_en": "Mixed Crop Growers"
+    },
+    {
+      "id": "isco:612",
+      "kod": "612",
+      "ust_kod": "61",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Hayvan yetiştiricileri",
+      "ad_en": "Animal Producers"
+    },
+    {
+      "id": "isco:6121",
+      "kod": "6121",
+      "ust_kod": "612",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çiftlik ve süt hayvanları yetiştiricileri",
+      "ad_en": "Livestock and Dairy Producers"
+    },
+    {
+      "id": "isco:6122",
+      "kod": "6122",
+      "ust_kod": "612",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kümes hayvanları yetiştiricileri",
+      "ad_en": "Poultry Producers"
+    },
+    {
+      "id": "isco:6123",
+      "kod": "6123",
+      "ust_kod": "612",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Arı ve ipekböceği yetiştiricileri",
+      "ad_en": "Apiarists and Sericulturists"
+    },
+    {
+      "id": "isco:6129",
+      "kod": "6129",
+      "ust_kod": "612",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış hayvan yetiştiricileri",
+      "ad_en": "Animal Producers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:613",
+      "kod": "613",
+      "ust_kod": "61",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Karma bitki ve hayvan yetiştiricileri",
+      "ad_en": "Mixed Crop and Animal Producers"
+    },
+    {
+      "id": "isco:6130",
+      "kod": "6130",
+      "ust_kod": "613",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Karma bitki ve hayvan yetiştiricileri",
+      "ad_en": "Mixed Crop and Animal Producers"
+    },
+    {
+      "id": "isco:62",
+      "kod": "62",
+      "ust_kod": "6",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Pazara yönelik nitelikli ormancılık, su ürünleri ve avcılık çalışanları",
+      "ad_en": "Market-oriented Skilled Forestry, Fishery and Hunting Workers"
+    },
+    {
+      "id": "isco:621",
+      "kod": "621",
+      "ust_kod": "62",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Ormancılık ve ormancılık ile ilgili işlerde çalışanlar",
+      "ad_en": "Forestry and Related Workers"
+    },
+    {
+      "id": "isco:6210",
+      "kod": "6210",
+      "ust_kod": "621",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ormancılık ve ormancılık ile ilgili işlerde çalışanlar",
+      "ad_en": "Forestry and Related Workers"
+    },
+    {
+      "id": "isco:622",
+      "kod": "622",
+      "ust_kod": "62",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Su ürünleri çalışanları, avcılar ve tuzakçılar",
+      "ad_en": "Fishery Workers, Hunters and Trappers"
+    },
+    {
+      "id": "isco:6221",
+      "kod": "6221",
+      "ust_kod": "622",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Su ürünleri (kültür) çalışanları",
+      "ad_en": "Aquaculture Workers"
+    },
+    {
+      "id": "isco:6222",
+      "kod": "6222",
+      "ust_kod": "622",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "İç sular ve kıyılardaki balıkçılık çalışanları",
+      "ad_en": "Inland and Coastal Waters Fishery Workers"
+    },
+    {
+      "id": "isco:6223",
+      "kod": "6223",
+      "ust_kod": "622",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Açık deniz balıkçılığı çalışanları",
+      "ad_en": "Deep-sea Fishery Workers"
+    },
+    {
+      "id": "isco:6224",
+      "kod": "6224",
+      "ust_kod": "622",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Avcılar ve tuzakçılar",
+      "ad_en": "Hunters and Trappers"
+    },
+    {
+      "id": "isco:63",
+      "kod": "63",
+      "ust_kod": "6",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Kendi geçimine yönelik çiftçiler, balıkçılar, avcılar ve  toplayıcılar",
+      "ad_en": "Subsistence Farmers, Fishers, Hunters and Gatherers"
+    },
+    {
+      "id": "isco:631",
+      "kod": "631",
+      "ust_kod": "63",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Kendi geçimine yönelik bitkisel ürün yetiştiricileri",
+      "ad_en": "Subsistence Crop Farmers"
+    },
+    {
+      "id": "isco:6310",
+      "kod": "6310",
+      "ust_kod": "631",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kendi geçimine yönelik bitkisel ürün yetiştiricileri",
+      "ad_en": "Subsistence Crop Farmers"
+    },
+    {
+      "id": "isco:632",
+      "kod": "632",
+      "ust_kod": "63",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Kendi geçimine yönelik çiftlik hayvanları yetiştiricileri",
+      "ad_en": "Subsistence Livestock Farmers"
+    },
+    {
+      "id": "isco:6320",
+      "kod": "6320",
+      "ust_kod": "632",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kendi geçimine yönelik çiftlik hayvanları yetiştiricileri",
+      "ad_en": "Subsistence Livestock Farmers"
+    },
+    {
+      "id": "isco:633",
+      "kod": "633",
+      "ust_kod": "63",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Kendi geçimine yönelik karma bitkisel ürün ve çiftlik hayvanları yetiştiricileri",
+      "ad_en": "Subsistence Mixed Crop and Livestock Farmers"
+    },
+    {
+      "id": "isco:6330",
+      "kod": "6330",
+      "ust_kod": "633",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kendi geçimine yönelik karma bitkisel ürün ve çiftlik hayvanları yetiştiricileri",
+      "ad_en": "Subsistence Mixed Crop and Livestock Farmers"
+    },
+    {
+      "id": "isco:634",
+      "kod": "634",
+      "ust_kod": "63",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Kendi geçimine yönelik balıkçılar, avcılar, tuzakçılar ve toplayıcılar",
+      "ad_en": "Subsistence Fishers, Hunters, Trappers and Gatherers"
+    },
+    {
+      "id": "isco:6340",
+      "kod": "6340",
+      "ust_kod": "634",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kendi geçimine yönelik balıkçılar, avcılar, tuzakçılar ve toplayıcılar",
+      "ad_en": "Subsistence Fishers, Hunters, Trappers and Gatherers"
+    },
+    {
+      "id": "isco:7",
+      "kod": "7",
+      "ust_kod": null,
+      "seviye": 1,
+      "yaprak": false,
+      "ad_tr": "Sanatkarlar ve ilgili işlerde çalışanlar",
+      "ad_en": "Craft and Related Trades Workers"
+    },
+    {
+      "id": "isco:71",
+      "kod": "71",
+      "ust_kod": "7",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "İnşaat ve ilgili işlerde çalışan sanatkarlar (elektrikçiler hariç)",
+      "ad_en": "Building and Related Trades Workers (excluding Electricians)"
+    },
+    {
+      "id": "isco:711",
+      "kod": "711",
+      "ust_kod": "71",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Kaba inşaat ve ilgili işlerde çalışan sanatkarlar",
+      "ad_en": "Building Frame and Related Trades Workers"
+    },
+    {
+      "id": "isco:7111",
+      "kod": "7111",
+      "ust_kod": "711",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ev inşaatçıları (ev ve benzeri küçük yapılar)",
+      "ad_en": "House Builders"
+    },
+    {
+      "id": "isco:7112",
+      "kod": "7112",
+      "ust_kod": "711",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tuğla örme ustaları ve ilgili işlerde çalışanlar",
+      "ad_en": "Bricklayers and Related Workers"
+    },
+    {
+      "id": "isco:7113",
+      "kod": "7113",
+      "ust_kod": "711",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Taş ustaları ile taş kesme, yarma ve oyma işlerinde çalışanlar",
+      "ad_en": "Stonemasons, Stone Cutters, Splitters and Carvers"
+    },
+    {
+      "id": "isco:7114",
+      "kod": "7114",
+      "ust_kod": "711",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Beton dökme, beton perdahlama ve ilgili işlerde çalışanlar",
+      "ad_en": "Concrete Placers, Concrete Finishers and Related Workers"
+    },
+    {
+      "id": "isco:7115",
+      "kod": "7115",
+      "ust_kod": "711",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Marangozlar ve doğramacılar",
+      "ad_en": "Carpenters and Joiners"
+    },
+    {
+      "id": "isco:7119",
+      "kod": "7119",
+      "ust_kod": "711",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış kaba inşaat ve ilgili işlerde çalışan sanatkarlar",
+      "ad_en": "Building Frame and Related Trades Workers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:712",
+      "kod": "712",
+      "ust_kod": "71",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "İnşaatı tamamlayıcı işler ve ilgili işlerde çalışan sanatkarlar",
+      "ad_en": "Building Finishers and Related Trades Workers"
+    },
+    {
+      "id": "isco:7121",
+      "kod": "7121",
+      "ust_kod": "712",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çatı kaplayıcılar",
+      "ad_en": "Roofers"
+    },
+    {
+      "id": "isco:7122",
+      "kod": "7122",
+      "ust_kod": "712",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Yer ve duvar döşemecileri ve kaplamacıları",
+      "ad_en": "Floor Layers and Tile Setters"
+    },
+    {
+      "id": "isco:7123",
+      "kod": "7123",
+      "ust_kod": "712",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sıvacılar",
+      "ad_en": "Plasterers"
+    },
+    {
+      "id": "isco:7124",
+      "kod": "7124",
+      "ust_kod": "712",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Yalıtım işlerinde çalışanlar",
+      "ad_en": "Insulation Workers"
+    },
+    {
+      "id": "isco:7125",
+      "kod": "7125",
+      "ust_kod": "712",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Camcılar",
+      "ad_en": "Glaziers"
+    },
+    {
+      "id": "isco:7126",
+      "kod": "7126",
+      "ust_kod": "712",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Su ve boru tesisatçıları",
+      "ad_en": "Plumbers and Pipe Fitters"
+    },
+    {
+      "id": "isco:7127",
+      "kod": "7127",
+      "ust_kod": "712",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Havalandırma/klima ve soğutma tesisatı bakım ve onarım işlerinde çalışanlar",
+      "ad_en": "Air Conditioning and Refrigeration Mechanics"
+    },
+    {
+      "id": "isco:713",
+      "kod": "713",
+      "ust_kod": "71",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Badana, boya ve bina dış yüzey temizliği ve ilgili işlerde çalışan sanatkarlar",
+      "ad_en": "Painters, Building Structure Cleaners and Related Trades Workers"
+    },
+    {
+      "id": "isco:7131",
+      "kod": "7131",
+      "ust_kod": "713",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Boyacılar ve ilgili işlerde çalışanlar",
+      "ad_en": "Painters and Related Workers"
+    },
+    {
+      "id": "isco:7132",
+      "kod": "7132",
+      "ust_kod": "713",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sprey boyacılar ve cilalama işlerinde çalışanlar",
+      "ad_en": "Spray Painters and Varnishers"
+    },
+    {
+      "id": "isco:7133",
+      "kod": "7133",
+      "ust_kod": "713",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bina dış yüzeyi temizleyicileri",
+      "ad_en": "Building Structure Cleaners"
+    },
+    {
+      "id": "isco:72",
+      "kod": "72",
+      "ust_kod": "7",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Metal işleme, makine ve ilgili işlerde çalışan sanatkarlar",
+      "ad_en": "Metal, Machinery and Related Trades Workers"
+    },
+    {
+      "id": "isco:721",
+      "kod": "721",
+      "ust_kod": "72",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Metal levha ve metal inşaat malzemesi işlerinde çalışanlar, metal kalıpçılar ve kaynakçılar ve ilgili işlerde çalışanlar",
+      "ad_en": "Sheet and Structural Metal Workers, Moulders and Welders, and Related Workers"
+    },
+    {
+      "id": "isco:7211",
+      "kod": "7211",
+      "ust_kod": "721",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Metal kalıpçılar ve maça hazırlayıcılar",
+      "ad_en": "Metal Moulders and Coremakers"
+    },
+    {
+      "id": "isco:7212",
+      "kod": "7212",
+      "ust_kod": "721",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kaynakçılar ve oksi-gaz alevli kesimciler",
+      "ad_en": "Welders and Flame Cutters"
+    },
+    {
+      "id": "isco:7213",
+      "kod": "7213",
+      "ust_kod": "721",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Metal levha işlerinde çalışanlar",
+      "ad_en": "Sheet Metal Workers"
+    },
+    {
+      "id": "isco:7214",
+      "kod": "7214",
+      "ust_kod": "721",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Metal inşaat malzemesi hazırlayıcıları ve kurucuları",
+      "ad_en": "Structural Metal Preparers and Erectors"
+    },
+    {
+      "id": "isco:7215",
+      "kod": "7215",
+      "ust_kod": "721",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Taşıma ve kaldırma tertibatı kurucuları ve kablo bağlayıcılar",
+      "ad_en": "Riggers and Cable Splicers"
+    },
+    {
+      "id": "isco:722",
+      "kod": "722",
+      "ust_kod": "72",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Demirciler, alet yapımcıları ve ilgili işlerde çalışanlar",
+      "ad_en": "Blacksmiths, Toolmakers and Related Trades Workers"
+    },
+    {
+      "id": "isco:7221",
+      "kod": "7221",
+      "ust_kod": "722",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Demirciler, dövme ve hadde işlerinde çalışanlar",
+      "ad_en": "Blacksmiths, Hammersmiths and Forging Press Workers"
+    },
+    {
+      "id": "isco:7222",
+      "kod": "7222",
+      "ust_kod": "722",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Alet yapımcıları ve ilgili işlerde çalışanlar",
+      "ad_en": "Toolmakers and Related Workers"
+    },
+    {
+      "id": "isco:7223",
+      "kod": "7223",
+      "ust_kod": "722",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Metal işleme takım tezgahı kurucuları ve operatörleri",
+      "ad_en": "Metal Working Machine Tool Setters and Operators"
+    },
+    {
+      "id": "isco:7224",
+      "kod": "7224",
+      "ust_kod": "722",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Metal parlatıcıları, taşlamacılar ve alet bileyiciler",
+      "ad_en": "Metal Polishers, Wheel Grinders and Tool Sharpeners"
+    },
+    {
+      "id": "isco:723",
+      "kod": "723",
+      "ust_kod": "72",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Makine bakım ve onarım işlerinde çalışanlar",
+      "ad_en": "Machinery Mechanics and Repairers"
+    },
+    {
+      "id": "isco:7231",
+      "kod": "7231",
+      "ust_kod": "723",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Motorlu taşıt bakım ve onarım işlerinde çalışanlar",
+      "ad_en": "Motor Vehicle Mechanics and Repairers"
+    },
+    {
+      "id": "isco:7232",
+      "kod": "7232",
+      "ust_kod": "723",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Hava taşıtı motoru bakım ve onarım işlerinde çalışanlar",
+      "ad_en": "Aircraft Engine Mechanics and Repairers"
+    },
+    {
+      "id": "isco:7233",
+      "kod": "7233",
+      "ust_kod": "723",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tarımsal ve endüstriyel makinelerin bakım ve onarım işlerinde çalışanlar",
+      "ad_en": "Agricultural and Industrial Machinery Mechanics and Repairers"
+    },
+    {
+      "id": "isco:7234",
+      "kod": "7234",
+      "ust_kod": "723",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bisiklet vb. tekerlekli motorsuz araç tamircileri",
+      "ad_en": "Bicycle and Related Repairers"
+    },
+    {
+      "id": "isco:73",
+      "kod": "73",
+      "ust_kod": "7",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "El sanatları ve basım ile ilgili işlerde çalışanlar",
+      "ad_en": "Handicraft and Printing Workers"
+    },
+    {
+      "id": "isco:731",
+      "kod": "731",
+      "ust_kod": "73",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "El sanatları çalışanları",
+      "ad_en": "Handicraft Workers"
+    },
+    {
+      "id": "isco:7311",
+      "kod": "7311",
+      "ust_kod": "731",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Hassas alet yapımcıları ve tamircileri",
+      "ad_en": "Precision-instrument Makers and Repairers"
+    },
+    {
+      "id": "isco:7312",
+      "kod": "7312",
+      "ust_kod": "731",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Müzik aleti yapımcıları, tamircileri ve akortçuları",
+      "ad_en": "Musical Instrument Makers and Tuners"
+    },
+    {
+      "id": "isco:7313",
+      "kod": "7313",
+      "ust_kod": "731",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Mücevher ve değerli metaller ile ilgili işlerde çalışanlar",
+      "ad_en": "Jewellery and Precious Metal Workers"
+    },
+    {
+      "id": "isco:7314",
+      "kod": "7314",
+      "ust_kod": "731",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çanak-çömlekçiler ve ilgili işlerde çalışanlar",
+      "ad_en": "Potters and Related Workers"
+    },
+    {
+      "id": "isco:7315",
+      "kod": "7315",
+      "ust_kod": "731",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Cam eşya yapımcıları, kesicileri, taşlayıcıları ve cilalayıcıları",
+      "ad_en": "Glass Makers, Cutters, Grinders and Finishers"
+    },
+    {
+      "id": "isco:7316",
+      "kod": "7316",
+      "ust_kod": "731",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tabela yazıcılar, dekoratif boyacılar, gravürcüler ve oymacılar (asitle)",
+      "ad_en": "Signwriters, Decorative Painters, Engravers and Etchers"
+    },
+    {
+      "id": "isco:7317",
+      "kod": "7317",
+      "ust_kod": "731",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ağaç, sepetçilik ve benzer malzemeleri kullanan elişi çalışanları",
+      "ad_en": "Handicraft Workers in Wood, Basketry and Related Materials"
+    },
+    {
+      "id": "isco:7318",
+      "kod": "7318",
+      "ust_kod": "731",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tekstil, deri ve benzer malzemeleri kullanan elişi çalışanları",
+      "ad_en": "Handicraft Workers in Textile, Leather and Related Materials"
+    },
+    {
+      "id": "isco:7319",
+      "kod": "7319",
+      "ust_kod": "731",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış el sanatları çalışanları",
+      "ad_en": "Handicraft Workers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:732",
+      "kod": "732",
+      "ust_kod": "73",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Basım ile ilgili işlerde çalışanlar",
+      "ad_en": "Printing Trades Workers"
+    },
+    {
+      "id": "isco:7321",
+      "kod": "7321",
+      "ust_kod": "732",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Baskı öncesi çalışanları",
+      "ad_en": "Pre-press Technicians"
+    },
+    {
+      "id": "isco:7322",
+      "kod": "7322",
+      "ust_kod": "732",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Basımcılar",
+      "ad_en": "Printers"
+    },
+    {
+      "id": "isco:7323",
+      "kod": "7323",
+      "ust_kod": "732",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Baskı tamamlama ve ciltleme işlerinde çalışanlar",
+      "ad_en": "Print Finishing and Binding Workers"
+    },
+    {
+      "id": "isco:74",
+      "kod": "74",
+      "ust_kod": "7",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Elektrik ve elektronik işlerde çalışan sanatkarlar",
+      "ad_en": "Electrical and Electronics Trades Workers"
+    },
+    {
+      "id": "isco:741",
+      "kod": "741",
+      "ust_kod": "74",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Elektrikli ekipman kurulumcuları ve tamircileri",
+      "ad_en": "Electrical Equipment Installers and Repairers"
+    },
+    {
+      "id": "isco:7411",
+      "kod": "7411",
+      "ust_kod": "741",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bina ve ilgili elektrik tesisatçıları",
+      "ad_en": "Building and Related Electricians"
+    },
+    {
+      "id": "isco:7412",
+      "kod": "7412",
+      "ust_kod": "741",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Elektrik mekanikeri ve montajcıları",
+      "ad_en": "Electrical Mechanics and Fitters"
+    },
+    {
+      "id": "isco:7413",
+      "kod": "7413",
+      "ust_kod": "741",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Elektrik hattı döşeyicileri ve tamircileri",
+      "ad_en": "Electrical Line Installers and Repairers"
+    },
+    {
+      "id": "isco:742",
+      "kod": "742",
+      "ust_kod": "74",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Elektronik ve telekomünikasyon kurulumcuları ve tamircileri",
+      "ad_en": "Electronics and Telecommunications Installers and Repairers"
+    },
+    {
+      "id": "isco:7421",
+      "kod": "7421",
+      "ust_kod": "742",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Elektronik mekanikerleri ve servis elemanları",
+      "ad_en": "Electronics Mechanics and Servicers"
+    },
+    {
+      "id": "isco:7422",
+      "kod": "7422",
+      "ust_kod": "742",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bilgi ve iletişim teknolojisi kurulumcuları ve servis elemanları",
+      "ad_en": "Information and Communications Technology Installers and Servicers"
+    },
+    {
+      "id": "isco:75",
+      "kod": "75",
+      "ust_kod": "7",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Gıda işleme, ağaç işleri, giyim eşyası ve diğer sanatkarlar ve ilgili işlerde çalışanlar",
+      "ad_en": "Food Processing, Woodworking, Garment and Other Craft and Related Trades Workers"
+    },
+    {
+      "id": "isco:751",
+      "kod": "751",
+      "ust_kod": "75",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Gıda işleme ve ilgili işlerde çalışanlar",
+      "ad_en": "Food Processing and Related Trades Workers"
+    },
+    {
+      "id": "isco:7511",
+      "kod": "7511",
+      "ust_kod": "751",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kasaplar, balık satıcıları ve benzer gıda hazırlama işlerinde çalışanlar",
+      "ad_en": "Butchers, Fishmongers and Related Food Preparers"
+    },
+    {
+      "id": "isco:7512",
+      "kod": "7512",
+      "ust_kod": "751",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Fırıncılar, pastacılar ve şekerleme imalatçıları",
+      "ad_en": "Bakers, Pastry-cooks and Confectionery Makers"
+    },
+    {
+      "id": "isco:7513",
+      "kod": "7513",
+      "ust_kod": "751",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Süt ürünleri imalatçıları",
+      "ad_en": "Dairy Products Makers"
+    },
+    {
+      "id": "isco:7514",
+      "kod": "7514",
+      "ust_kod": "751",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Meyve ve sebze işleyiciler",
+      "ad_en": "Fruit, Vegetable and Related Preservers"
+    },
+    {
+      "id": "isco:7515",
+      "kod": "7515",
+      "ust_kod": "751",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Gıda ve içecek tadıcıları ve sınıflandırıcıları",
+      "ad_en": "Food and Beverage Tasters and Graders"
+    },
+    {
+      "id": "isco:7516",
+      "kod": "7516",
+      "ust_kod": "751",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Tütün hazırlayıcılar ve tütün ürünleri yapımcıları",
+      "ad_en": "Tobacco Preparers and Tobacco Products Makers"
+    },
+    {
+      "id": "isco:752",
+      "kod": "752",
+      "ust_kod": "75",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Ağaç işleyiciler, ahşap mobilya imalatçıları ve ilgili işlerde çalışanlar",
+      "ad_en": "Wood Treaters, Cabinet-makers and Related Trades Workers"
+    },
+    {
+      "id": "isco:7521",
+      "kod": "7521",
+      "ust_kod": "752",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ağaç işleyiciler",
+      "ad_en": "Wood Treaters"
+    },
+    {
+      "id": "isco:7522",
+      "kod": "7522",
+      "ust_kod": "752",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ahşap mobilya imalatçıları ve ilgili işlerde çalışanlar",
+      "ad_en": "Cabinet-makers and Related Workers"
+    },
+    {
+      "id": "isco:7523",
+      "kod": "7523",
+      "ust_kod": "752",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ağaç işleme takım tezgahı kurucuları ve operatörleri",
+      "ad_en": "Woodworking Machine Tool Setters and Operators"
+    },
+    {
+      "id": "isco:753",
+      "kod": "753",
+      "ust_kod": "75",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Tekstil ve giyim eşyası ile ilgili işlerde çalışanlar",
+      "ad_en": "Garment and Related Trades Workers"
+    },
+    {
+      "id": "isco:7531",
+      "kod": "7531",
+      "ust_kod": "753",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Terziler, elbise yapımcıları, kürk ve şapka yapımcıları",
+      "ad_en": "Tailors, Dressmakers, Furriers and Hatters"
+    },
+    {
+      "id": "isco:7532",
+      "kod": "7532",
+      "ust_kod": "753",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Giyim eşyası ve ilgili kalıp yapımcıları ve kesimcileri",
+      "ad_en": "Garment and Related Patternmakers and Cutters"
+    },
+    {
+      "id": "isco:7533",
+      "kod": "7533",
+      "ust_kod": "753",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Dikişçiler, nakışçılar ve ilgili işlerde çalışanlar",
+      "ad_en": "Sewing, Embroidery and Related Workers"
+    },
+    {
+      "id": "isco:7534",
+      "kod": "7534",
+      "ust_kod": "753",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Döşemeciler ve ilgili işlerde çalışanlar",
+      "ad_en": "Upholsterers and Related Workers"
+    },
+    {
+      "id": "isco:7535",
+      "kod": "7535",
+      "ust_kod": "753",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ham deri işleyiciler, tabakçılar ve postçular",
+      "ad_en": "Pelt Dressers, Tanners and Fellmongers"
+    },
+    {
+      "id": "isco:7536",
+      "kod": "7536",
+      "ust_kod": "753",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ayakkabı yapımcıları ve ilgili işlerde çalışanlar",
+      "ad_en": "Shoemakers and Related Workers"
+    },
+    {
+      "id": "isco:754",
+      "kod": "754",
+      "ust_kod": "75",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Diğer sanatkarlar ve ilgili işlerde çalışanlar",
+      "ad_en": "Other Craft and Related Workers"
+    },
+    {
+      "id": "isco:7541",
+      "kod": "7541",
+      "ust_kod": "754",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Su altında çalışanlar (dalgıçlar ve balıkadamlar)",
+      "ad_en": "Underwater Divers"
+    },
+    {
+      "id": "isco:7542",
+      "kod": "7542",
+      "ust_kod": "754",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ateşleyiciler ve patlatma işlerinde çalışanlar",
+      "ad_en": "Shotfirers and Blasters"
+    },
+    {
+      "id": "isco:7543",
+      "kod": "7543",
+      "ust_kod": "754",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ürün sınıflandırıcıları ve test edicileri (gıda ve içecekler hariç)",
+      "ad_en": "Product Graders and Testers (excluding Foods and Beverages)"
+    },
+    {
+      "id": "isco:7544",
+      "kod": "7544",
+      "ust_kod": "754",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Dezenfekte edenler ve diğer zararlı böcek veya yabani ot kontrolörleri",
+      "ad_en": "Fumigators and Other Pest and Weed Controllers"
+    },
+    {
+      "id": "isco:7549",
+      "kod": "7549",
+      "ust_kod": "754",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış sanatkarlar ve ilgili işlerde çalışanlar",
+      "ad_en": "Craft and Related Workers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:8",
+      "kod": "8",
+      "ust_kod": null,
+      "seviye": 1,
+      "yaprak": false,
+      "ad_tr": "Tesis ve makine operatörleri ve montajcılar",
+      "ad_en": "Plant and Machine Operators and Assemblers"
+    },
+    {
+      "id": "isco:81",
+      "kod": "81",
+      "ust_kod": "8",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Sabit tesis ve makine operatörleri",
+      "ad_en": "Stationary Plant and Machine Operators"
+    },
+    {
+      "id": "isco:811",
+      "kod": "811",
+      "ust_kod": "81",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Madencilik ve mineral işleme tesisi operatörleri",
+      "ad_en": "Mining and Mineral Processing Plant Operators"
+    },
+    {
+      "id": "isco:8111",
+      "kod": "8111",
+      "ust_kod": "811",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Maden ve taş ocağı makine ve tesis operatörleri",
+      "ad_en": "Miners and Quarriers"
+    },
+    {
+      "id": "isco:8112",
+      "kod": "8112",
+      "ust_kod": "811",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Mineral ve taş işleme tesisi operatörleri",
+      "ad_en": "Mineral and Stone Processing Plant Operators"
+    },
+    {
+      "id": "isco:8113",
+      "kod": "8113",
+      "ust_kod": "811",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kuyu açma ve sondaj makineleri operatörleri ve ilgili çalışanlar",
+      "ad_en": "Well Drillers and Borers and Related Workers"
+    },
+    {
+      "id": "isco:8114",
+      "kod": "8114",
+      "ust_kod": "811",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çimento, taş ve diğer mineral ürünler ile ilgili makine operatörleri",
+      "ad_en": "Cement, Stone and Other Mineral Products Machine Operators"
+    },
+    {
+      "id": "isco:812",
+      "kod": "812",
+      "ust_kod": "81",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Metal işleme ve perdahlama tesisi operatörleri",
+      "ad_en": "Metal Processing and Finishing Plant Operators"
+    },
+    {
+      "id": "isco:8121",
+      "kod": "8121",
+      "ust_kod": "812",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Metal işleme tesisi operatörleri",
+      "ad_en": "Metal Processing Plant Operators"
+    },
+    {
+      "id": "isco:8122",
+      "kod": "8122",
+      "ust_kod": "812",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Metal perdahlama, astarlama ve kaplama makinesi operatörleri",
+      "ad_en": "Metal Finishing, Plating and Coating Machine Operators"
+    },
+    {
+      "id": "isco:813",
+      "kod": "813",
+      "ust_kod": "81",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Kimyasal ve fotoğrafik ürünler tesis ve makine operatörleri",
+      "ad_en": "Chemical and Photographic Products Plant and Machine Operators"
+    },
+    {
+      "id": "isco:8131",
+      "kod": "8131",
+      "ust_kod": "813",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kimyasal ürünler tesis ve makine operatörleri",
+      "ad_en": "Chemical Products Plant and Machine Operators"
+    },
+    {
+      "id": "isco:8132",
+      "kod": "8132",
+      "ust_kod": "813",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Fotoğrafik ürünler makine operatörleri",
+      "ad_en": "Photographic Products Machine Operators"
+    },
+    {
+      "id": "isco:814",
+      "kod": "814",
+      "ust_kod": "81",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Kauçuk, plastik ve kağıt ürünleri makine operatörleri",
+      "ad_en": "Rubber, Plastic and Paper Products Machine Operators"
+    },
+    {
+      "id": "isco:8141",
+      "kod": "8141",
+      "ust_kod": "814",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kauçuk ürünleri makine operatörleri",
+      "ad_en": "Rubber Products Machine Operators"
+    },
+    {
+      "id": "isco:8142",
+      "kod": "8142",
+      "ust_kod": "814",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Plastik ürünleri makine operatörleri",
+      "ad_en": "Plastic Products Machine Operators"
+    },
+    {
+      "id": "isco:8143",
+      "kod": "8143",
+      "ust_kod": "814",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kağıt ürünleri makine operatörleri",
+      "ad_en": "Paper Products Machine Operators"
+    },
+    {
+      "id": "isco:815",
+      "kod": "815",
+      "ust_kod": "81",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Tekstil, kürk ve deri ürünleri makine operatörleri",
+      "ad_en": "Textile, Fur and Leather Products Machine Operators"
+    },
+    {
+      "id": "isco:8151",
+      "kod": "8151",
+      "ust_kod": "815",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Elyaf hazırlama, bükme ve sarma makineleri operatörleri",
+      "ad_en": "Fibre Preparing, Spinning and Winding Machine Operators"
+    },
+    {
+      "id": "isco:8152",
+      "kod": "8152",
+      "ust_kod": "815",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Dokuma ve örme makineleri operatörleri",
+      "ad_en": "Weaving and Knitting Machine Operators"
+    },
+    {
+      "id": "isco:8153",
+      "kod": "8153",
+      "ust_kod": "815",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Dikiş makinesi operatörleri",
+      "ad_en": "Sewing Machine Operators"
+    },
+    {
+      "id": "isco:8154",
+      "kod": "8154",
+      "ust_kod": "815",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ağartma, boyama ve kumaş temizleme makineleri operatörleri",
+      "ad_en": "Bleaching, Dyeing and Fabric Cleaning Machine Operators"
+    },
+    {
+      "id": "isco:8155",
+      "kod": "8155",
+      "ust_kod": "815",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kürk ve deri hazırlama makineleri operatörleri",
+      "ad_en": "Fur and Leather Preparing Machine Operators"
+    },
+    {
+      "id": "isco:8156",
+      "kod": "8156",
+      "ust_kod": "815",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ayakkabı, çanta, kemer vb. yapımı ile ilgili makine operatörleri",
+      "ad_en": "Shoemaking and Related Machine Operators"
+    },
+    {
+      "id": "isco:8157",
+      "kod": "8157",
+      "ust_kod": "815",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çamaşırhane ve kuru temizleme makineleri operatörleri",
+      "ad_en": "Laundry Machine Operators"
+    },
+    {
+      "id": "isco:8159",
+      "kod": "8159",
+      "ust_kod": "815",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış tekstil, kürk ve deri ürünleri makine operatörleri",
+      "ad_en": "Textile, Fur and Leather Products Machine Operators Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:816",
+      "kod": "816",
+      "ust_kod": "81",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Gıda ve ilgili ürünlerin makine operatörleri",
+      "ad_en": "Food and Related Products Machine Operators"
+    },
+    {
+      "id": "isco:8160",
+      "kod": "8160",
+      "ust_kod": "816",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Gıda ve ilgili ürünlerin makine operatörleri",
+      "ad_en": "Food and Related Products Machine Operators"
+    },
+    {
+      "id": "isco:817",
+      "kod": "817",
+      "ust_kod": "81",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Ağaç işleme ve kağıt imalat tesisi operatörleri",
+      "ad_en": "Wood Processing and Papermaking Plant Operators"
+    },
+    {
+      "id": "isco:8171",
+      "kod": "8171",
+      "ust_kod": "817",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kağıt hamuru ve kağıt imalat tesisi operatörleri",
+      "ad_en": "Pulp and Papermaking Plant Operators"
+    },
+    {
+      "id": "isco:8172",
+      "kod": "8172",
+      "ust_kod": "817",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ağaç işleme tesisi operatörleri",
+      "ad_en": "Wood Processing Plant Operators"
+    },
+    {
+      "id": "isco:818",
+      "kod": "818",
+      "ust_kod": "81",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Diğer sabit tesis ve makine operatörleri",
+      "ad_en": "Other Stationary Plant and Machine Operators"
+    },
+    {
+      "id": "isco:8181",
+      "kod": "8181",
+      "ust_kod": "818",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Cam ve seramik tesisi operatörleri",
+      "ad_en": "Glass and Ceramics Plant Operators"
+    },
+    {
+      "id": "isco:8182",
+      "kod": "8182",
+      "ust_kod": "818",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Buhar makinesi ve kazanı (boyler) operatörleri",
+      "ad_en": "Steam Engine and Boiler Operators"
+    },
+    {
+      "id": "isco:8183",
+      "kod": "8183",
+      "ust_kod": "818",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Paketleme, şişeleme ve etiketleme makine operatörleri",
+      "ad_en": "Packing, Bottling and Labelling Machine Operators"
+    },
+    {
+      "id": "isco:8189",
+      "kod": "8189",
+      "ust_kod": "818",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış sabit tesis ve makine operatörleri",
+      "ad_en": "Stationary Plant and Machine Operators Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:82",
+      "kod": "82",
+      "ust_kod": "8",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Montajcılar",
+      "ad_en": "Assemblers"
+    },
+    {
+      "id": "isco:821",
+      "kod": "821",
+      "ust_kod": "82",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Montajcılar",
+      "ad_en": "Assemblers"
+    },
+    {
+      "id": "isco:8211",
+      "kod": "8211",
+      "ust_kod": "821",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Mekanik makine montajcıları",
+      "ad_en": "Mechanical Machinery Assemblers"
+    },
+    {
+      "id": "isco:8212",
+      "kod": "8212",
+      "ust_kod": "821",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Elektrikli ve elektronik ekipman montajcıları",
+      "ad_en": "Electrical and Electronic Equipment Assemblers"
+    },
+    {
+      "id": "isco:8219",
+      "kod": "8219",
+      "ust_kod": "821",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış montajcılar",
+      "ad_en": "Assemblers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:83",
+      "kod": "83",
+      "ust_kod": "8",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Sürücüler ve hareketli makine ve teçhizat operatörleri",
+      "ad_en": "Drivers and Mobile Plant Operators"
+    },
+    {
+      "id": "isco:831",
+      "kod": "831",
+      "ust_kod": "83",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Lokomotif  motoru sürücüleri ve ilgili çalışanlar",
+      "ad_en": "Locomotive Engine Drivers and Related Workers"
+    },
+    {
+      "id": "isco:8311",
+      "kod": "8311",
+      "ust_kod": "831",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Lokomotif motoru sürücüleri",
+      "ad_en": "Locomotive Engine Drivers"
+    },
+    {
+      "id": "isco:8312",
+      "kod": "8312",
+      "ust_kod": "831",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Demiryolu frencileri, sinyalizasyon ve makas operatörleri",
+      "ad_en": "Railway Brake, Signal and Switch Operators"
+    },
+    {
+      "id": "isco:832",
+      "kod": "832",
+      "ust_kod": "83",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Otomobil, kamyonet ve motosiklet sürücüleri",
+      "ad_en": "Car, Van and Motorcycle Drivers"
+    },
+    {
+      "id": "isco:8321",
+      "kod": "8321",
+      "ust_kod": "832",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Motosiklet sürücüleri",
+      "ad_en": "Motorcycle Drivers"
+    },
+    {
+      "id": "isco:8322",
+      "kod": "8322",
+      "ust_kod": "832",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Otomobil, taksi ve kamyonet sürücüleri",
+      "ad_en": "Car, Taxi and Van Drivers"
+    },
+    {
+      "id": "isco:833",
+      "kod": "833",
+      "ust_kod": "83",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Ağır yük kamyonu ve otobüs sürücüleri",
+      "ad_en": "Heavy Truck and Bus Drivers"
+    },
+    {
+      "id": "isco:8331",
+      "kod": "8331",
+      "ust_kod": "833",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Otobüs ve tramvay sürücüleri",
+      "ad_en": "Bus and Tram Drivers"
+    },
+    {
+      "id": "isco:8332",
+      "kod": "8332",
+      "ust_kod": "833",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ağır yük taşıtları ve kamyon sürücüleri",
+      "ad_en": "Heavy Truck and Lorry Drivers"
+    },
+    {
+      "id": "isco:834",
+      "kod": "834",
+      "ust_kod": "83",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Hareketli makine ve teçhizat operatörleri",
+      "ad_en": "Mobile Plant Operators"
+    },
+    {
+      "id": "isco:8341",
+      "kod": "8341",
+      "ust_kod": "834",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Hareketli tarım ve ormancılık makine ve teçhizat operatörleri",
+      "ad_en": "Mobile Farm and Forestry Plant Operators"
+    },
+    {
+      "id": "isco:8342",
+      "kod": "8342",
+      "ust_kod": "834",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Hafriyat makineleri ve benzer makinelerin operatörleri",
+      "ad_en": "Earthmoving and Related Plant Operators"
+    },
+    {
+      "id": "isco:8343",
+      "kod": "8343",
+      "ust_kod": "834",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Vinç, yük asansörü ve ilgili makine ve teçhizat operatörleri",
+      "ad_en": "Crane, Hoist and Related Plant Operators"
+    },
+    {
+      "id": "isco:8344",
+      "kod": "8344",
+      "ust_kod": "834",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Forklift vb. yük kaldırma/istifleme yapan araçların operatörleri",
+      "ad_en": "Lifting Truck Operators"
+    },
+    {
+      "id": "isco:835",
+      "kod": "835",
+      "ust_kod": "83",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Gemi güverte tayfaları ve ilgili çalışanlar",
+      "ad_en": "Ships’ Deck Crews and Related Workers"
+    },
+    {
+      "id": "isco:8350",
+      "kod": "8350",
+      "ust_kod": "835",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Gemi güverte tayfaları ve ilgili çalışanlar",
+      "ad_en": "Ships’ Deck Crews and Related Workers"
+    },
+    {
+      "id": "isco:9",
+      "kod": "9",
+      "ust_kod": null,
+      "seviye": 1,
+      "yaprak": false,
+      "ad_tr": "Nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Elementary Occupations"
+    },
+    {
+      "id": "isco:91",
+      "kod": "91",
+      "ust_kod": "9",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Temizlikçiler ve yardımcılar",
+      "ad_en": "Cleaners and Helpers"
+    },
+    {
+      "id": "isco:911",
+      "kod": "911",
+      "ust_kod": "91",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Ev, otel ve bürolarda çalışan temizlikçiler ve ev işleri yardımcıları",
+      "ad_en": "Domestic, Hotel and Office Cleaners and Helpers"
+    },
+    {
+      "id": "isco:9111",
+      "kod": "9111",
+      "ust_kod": "911",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Evlerde çalışan temizlikçiler ve ev işleri yardımcıları",
+      "ad_en": "Domestic Cleaners and Helpers"
+    },
+    {
+      "id": "isco:9112",
+      "kod": "9112",
+      "ust_kod": "911",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Büro, otel ve diğer işyerlerinde çalışan temizlikçiler ve yardımcılar",
+      "ad_en": "Cleaners and Helpers in Offices, Hotels and Other Establishments"
+    },
+    {
+      "id": "isco:912",
+      "kod": "912",
+      "ust_kod": "91",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Taşıt ve pencere temizleme ile çamaşır yıkama ve diğer elle yapılan temizlik işlerinde çalışanlar",
+      "ad_en": "Vehicle, Window, Laundry and Other Hand Cleaning Workers"
+    },
+    {
+      "id": "isco:9121",
+      "kod": "9121",
+      "ust_kod": "912",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çamaşırcılar ve ütücüler (el ile)",
+      "ad_en": "Hand Launderers and Pressers"
+    },
+    {
+      "id": "isco:9122",
+      "kod": "9122",
+      "ust_kod": "912",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Taşıt temizleyicileri",
+      "ad_en": "Vehicle Cleaners"
+    },
+    {
+      "id": "isco:9123",
+      "kod": "9123",
+      "ust_kod": "912",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Pencere temizleyicileri",
+      "ad_en": "Window Cleaners"
+    },
+    {
+      "id": "isco:9129",
+      "kod": "9129",
+      "ust_kod": "912",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Diğer temizlik işlerinde çalışanlar",
+      "ad_en": "Other Cleaning Workers"
+    },
+    {
+      "id": "isco:92",
+      "kod": "92",
+      "ust_kod": "9",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Tarım, ormancılık ve balıkçılık  sektörlerinde nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Agricultural, Forestry and Fishery Labourers"
+    },
+    {
+      "id": "isco:921",
+      "kod": "921",
+      "ust_kod": "92",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Tarım, ormancılık ve balıkçılık  sektörlerinde nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Agricultural, Forestry and Fishery Labourers"
+    },
+    {
+      "id": "isco:9211",
+      "kod": "9211",
+      "ust_kod": "921",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bitkisel üretim yapan çiftliklerde nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Crop Farm Labourers"
+    },
+    {
+      "id": "isco:9212",
+      "kod": "9212",
+      "ust_kod": "921",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çiftlik hayvanları yetiştiriciliği yapan çiftliklerde nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Livestock Farm Labourers"
+    },
+    {
+      "id": "isco:9213",
+      "kod": "9213",
+      "ust_kod": "921",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Karma çiftçilik ile ilgili nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Mixed Crop and Livestock Farm Labourers"
+    },
+    {
+      "id": "isco:9214",
+      "kod": "9214",
+      "ust_kod": "921",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bahçe ve bahçe bitkileri işlerinde nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Garden and Horticultural Labourers"
+    },
+    {
+      "id": "isco:9215",
+      "kod": "9215",
+      "ust_kod": "921",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Ormancılık ile ilgili nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Forestry Labourers"
+    },
+    {
+      "id": "isco:9216",
+      "kod": "9216",
+      "ust_kod": "921",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Balıkçılık ve su ürünleri işlerinde nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Fishery and Aquaculture Labourers"
+    },
+    {
+      "id": "isco:93",
+      "kod": "93",
+      "ust_kod": "9",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Madencilik, inşaat, imalat ve ulaştırma sektörlerinde nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Labourers in Mining, Construction, Manufacturing and Transport"
+    },
+    {
+      "id": "isco:931",
+      "kod": "931",
+      "ust_kod": "93",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Madencilik ve inşaat sektörlerinde nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Mining and Construction Labourers"
+    },
+    {
+      "id": "isco:9311",
+      "kod": "9311",
+      "ust_kod": "931",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Madencilik ve taş ocakçılığı sektörlerinde nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Mining and Quarrying Labourers"
+    },
+    {
+      "id": "isco:9312",
+      "kod": "9312",
+      "ust_kod": "931",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bina dışı inşaat sektöründe nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Civil Engineering Labourers"
+    },
+    {
+      "id": "isco:9313",
+      "kod": "9313",
+      "ust_kod": "931",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Bina inşaatı sektöründe nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Building Construction Labourers"
+    },
+    {
+      "id": "isco:932",
+      "kod": "932",
+      "ust_kod": "93",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "İmalat sektöründe nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Manufacturing Labourers"
+    },
+    {
+      "id": "isco:9321",
+      "kod": "9321",
+      "ust_kod": "932",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Elle paketleme işlerinde çalışanlar",
+      "ad_en": "Hand Packers"
+    },
+    {
+      "id": "isco:9329",
+      "kod": "9329",
+      "ust_kod": "932",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış imalat sektöründe nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Manufacturing Labourers Not Elsewhere Classified"
+    },
+    {
+      "id": "isco:933",
+      "kod": "933",
+      "ust_kod": "93",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Ulaştırma ve depolama sektörlerinde nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Transport and Storage Labourers"
+    },
+    {
+      "id": "isco:9331",
+      "kod": "9331",
+      "ust_kod": "933",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "El ve pedal ile sürülen taşıtların sürücüleri",
+      "ad_en": "Hand and Pedal Vehicle Drivers"
+    },
+    {
+      "id": "isco:9332",
+      "kod": "9332",
+      "ust_kod": "933",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Hayvanlar tarafından çekilen taşıtların ve makinelerin sürücüleri",
+      "ad_en": "Drivers of Animal-drawn Vehicles and Machinery"
+    },
+    {
+      "id": "isco:9333",
+      "kod": "9333",
+      "ust_kod": "933",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Yükleme-boşaltma işlerinde nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Freight Handlers"
+    },
+    {
+      "id": "isco:9334",
+      "kod": "9334",
+      "ust_kod": "933",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Raf istifleme işlerinde nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Shelf Fillers"
+    },
+    {
+      "id": "isco:94",
+      "kod": "94",
+      "ust_kod": "9",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Yiyecek hazırlama yardımcıları",
+      "ad_en": "Food Preparation Assistants"
+    },
+    {
+      "id": "isco:941",
+      "kod": "941",
+      "ust_kod": "94",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Yiyecek hazırlama yardımcıları",
+      "ad_en": "Food Preparation Assistants"
+    },
+    {
+      "id": "isco:9411",
+      "kod": "9411",
+      "ust_kod": "941",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Fast food hazırlayıcıları",
+      "ad_en": "Fast Food Preparers"
+    },
+    {
+      "id": "isco:9412",
+      "kod": "9412",
+      "ust_kod": "941",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Mutfak yardımcıları",
+      "ad_en": "Kitchen Helpers"
+    },
+    {
+      "id": "isco:95",
+      "kod": "95",
+      "ust_kod": "9",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Cadde ve sokaklarda satış ve hizmet işlerinde çalışanlar",
+      "ad_en": "Street and Related Sales and Services Workers"
+    },
+    {
+      "id": "isco:951",
+      "kod": "951",
+      "ust_kod": "95",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Cadde ve sokaklarda  hizmet işlerinde çalışanlar",
+      "ad_en": "Street and Related Services Workers"
+    },
+    {
+      "id": "isco:9510",
+      "kod": "9510",
+      "ust_kod": "951",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Cadde ve sokaklarda hizmet işlerinde çalışanlar",
+      "ad_en": "Street and Related Services Workers"
+    },
+    {
+      "id": "isco:952",
+      "kod": "952",
+      "ust_kod": "95",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Sokak satıcıları (gıda hariç)",
+      "ad_en": "Street Vendors (excluding Food)"
+    },
+    {
+      "id": "isco:9520",
+      "kod": "9520",
+      "ust_kod": "952",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sokak satıcıları (gıda hariç)",
+      "ad_en": "Street Vendors (excluding Food)"
+    },
+    {
+      "id": "isco:96",
+      "kod": "96",
+      "ust_kod": "9",
+      "seviye": 2,
+      "yaprak": false,
+      "ad_tr": "Çöpçüler, atık toplayıcılar ve diğer nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Refuse Workers and Other Elementary Workers"
+    },
+    {
+      "id": "isco:961",
+      "kod": "961",
+      "ust_kod": "96",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Çöpçüler ve atık toplayıcılar",
+      "ad_en": "Refuse Workers"
+    },
+    {
+      "id": "isco:9611",
+      "kod": "9611",
+      "ust_kod": "961",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çöp ve geri dönüştürülebilir atık toplayıcıları",
+      "ad_en": "Garbage and Recycling Collectors"
+    },
+    {
+      "id": "isco:9612",
+      "kod": "9612",
+      "ust_kod": "961",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çöp tasnif ediciler",
+      "ad_en": "Refuse Sorters"
+    },
+    {
+      "id": "isco:9613",
+      "kod": "9613",
+      "ust_kod": "961",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sokak, park ve benzeri halka açık yerleri süpürenler ve ilgili işçiler",
+      "ad_en": "Sweepers and Related Labourers"
+    },
+    {
+      "id": "isco:962",
+      "kod": "962",
+      "ust_kod": "96",
+      "seviye": 3,
+      "yaprak": false,
+      "ad_tr": "Diğer nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Other Elementary Workers"
+    },
+    {
+      "id": "isco:9621",
+      "kod": "9621",
+      "ust_kod": "962",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Kuryeler, paket dağıtıcıları ve bavul taşıyıcıları",
+      "ad_en": "Messengers, Package Deliverers and Luggage Porters"
+    },
+    {
+      "id": "isco:9622",
+      "kod": "9622",
+      "ust_kod": "962",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Çeşitli küçük tamir ve bakım işleri yapan el becerisine sahip işçiler",
+      "ad_en": "Odd-job Persons"
+    },
+    {
+      "id": "isco:9623",
+      "kod": "9623",
+      "ust_kod": "962",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Sayaç okuyucular ve otomatik satış yapan makinelerden para toplayanlar",
+      "ad_en": "Meter Readers and Vending-machine Collectors"
+    },
+    {
+      "id": "isco:9624",
+      "kod": "9624",
+      "ust_kod": "962",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Su taşıyıcılar ve yakacak odun toplayıcılar",
+      "ad_en": "Water and Firewood Collectors"
+    },
+    {
+      "id": "isco:9629",
+      "kod": "9629",
+      "ust_kod": "962",
+      "seviye": 4,
+      "yaprak": true,
+      "ad_tr": "Başka yerde sınıflandırılmamış nitelik gerektirmeyen işlerde çalışanlar",
+      "ad_en": "Elementary Workers Not Elsewhere Classified"
+    }
+  ]
+}

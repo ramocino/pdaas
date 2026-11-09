@@ -4,7 +4,7 @@ const apiBase = new URL('api/v1/', siteBase);
 export const CONFIG = {
   API_BASE_URL: siteBase.origin,
   API_PREFIX: apiBase.pathname.replace(/\/$/, ''),
-  KATALOG_ENDPOINT: '/katalog.json',
+  KATALOG_ENDPOINT: 'meta/katalog.json',
   LANG_STORAGE_KEY: 'pdaas_dil',
   PAGE_SIZE: 100,
 };
