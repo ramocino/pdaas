@@ -192,7 +192,11 @@ export const UI = {
     // --- CATALOG / EMPTY ---
     catalog_title: "Data Catalog", catalog_search: "Search dataset...", catalog_loading: "Loading catalog...",
     empty_title: "Select a Dataset or Service",
+<<<<<<< HEAD
     empty_desc: "⚠️Choose a dataset from the catalog tree on the left to inspect its parametric API endpoints, data tables and ready-to-use code samples. ⚠️ This portal is a demo environment for an article. It is not an official data page.",
+=======
+    empty_desc: "Choose a dataset from the catalog tree on the left to inspect its parametric API endpoints, data tables and ready-to-use code samples. ⚠️ This portal is a demo environment for an article. It is not an official data page.",
+>>>>>>> 9b08eab4cfb1d5d5b2c03ccca911aca7d7bdb965
     empty_card1_t: "Data Preview", empty_card1_d: "Live data records in a table view.",
     empty_card2_t: "Ready-to-use Code", empty_card2_d: "cURL, Python, JS, Go & PHP integrations.",
 
