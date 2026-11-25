@@ -6,7 +6,7 @@
     "ad_tr": "Özel Tüketim Vergisi Verileri",
     "ad_en": "Sample Special Consumption Tax Data",
     "tarih": "2026-11-01",
-    "guncelleme": "2026-11-01",
+    "guncelleme": "2026-11-24",
     "durum": "demo",
     "katman": "ham",
     "kapsam": [],
@@ -20,9 +20,29 @@
       "baslangic": "2023-07-10",
       "bitis": null
     },
-    "checksum": "sha256:044fa539456730e8967da8e3aa2a2fb7f6251130d1e3015ab4bc0c001181b92b",
+    "checksum": "sha256:fdfc2754de172e922d16ad764c338d08d23aba9cf8b3d21184cfee719967445a",
     "kayit_sayisi": 15,
-    "detay": {}
+    "detay": {
+      "sunum_niteligi": "resmi_kaynaklardan_derlenmis_yazar_yapilandirmasi",
+      "resmi_api_degil": true,
+      "teknik_kayit_aciklamasi": "'otv-yok' hukuki sonuç yerine geçmeyen geriye uyumlu kayıt"
+    },
+    "yayim_durumu": "demo",
+    "karar_yetkisi_ref": null,
+    "son_kaynak_dogrulama": null,
+    "kapsam_tamlik": {
+      "durum": "beyan_yok",
+      "kapsam_turu": "ornek_kayitlar",
+      "pozitif_liste_tamligi": "bilinmiyor",
+      "beyan_sahibi": null,
+      "eslesme_yok_anlami": "hukuki_sonuc_cikarilamaz"
+    },
+    "lisans": null,
+    "meta_alan_aciklamalari": {
+      "guncelleme": "PDaaS tarafindan olusturulan temsilin son dosya guncellemesi; resmi kaynak son dogrulama tarihi degildir",
+      "son_kaynak_dogrulama": "Belgelendirilmis son kaynak mutabakati yoksa null",
+      "karar_yetkisi_ref": "Karari veren normatif yetki; kurum dogrulamasi olmadan atanmamis olabilir"
+    }
   },
   "sema": {
     "pk": "kod",
@@ -47,7 +67,9 @@
         "matrah_ust_dahil",
         "aciklama_tr",
         "aciklama_en",
-        "dipnotlar"
+        "dipnotlar",
+        "teknik_kayit",
+        "istisna_kosullari_kontrol_edilmeli"
       ]
     }
   },
@@ -55,17 +77,18 @@
     {
       "id": "otv:otv-yok",
       "kod": "otv-yok",
-      "ad_tr": "ÖTV'ye Tabi Değil",
-      "ad_en": "Not Subject to SCT",
-      "tur": "yok",
-      "oran": 0,
+      "ad_tr": "ÖTV Kural Eşleşmesi Bulunamadı (Teknik Durum)",
+      "ad_en": "No SCT Rule Match (Technical State)",
+      "tur": "teknik_durum",
+      "oran": null,
       "gecerlilik": {
         "baslangic": null,
         "bitis": null
       },
-      "aciklama_tr": "Bu ürün ÖTV'ye tabi değildir.",
-      "aciklama_en": "This product is not subject to SCT.",
-      "dipnotlar": []
+      "aciklama_tr": "Eski genel durum kaydıdır; eşleşme yokluğu hukuki kapsam dışılık veya oran sıfır anlamına gelmez.",
+      "aciklama_en": "Legacy placeholder; lack of a mapping does not establish legal exemption, exclusion or a zero rate.",
+      "dipnotlar": [],
+      "teknik_kayit": true
     },
     {
       "id": "otv:otv-istisna",
@@ -73,14 +96,15 @@
       "ad_tr": "İhracat Teslimlerinde ÖTV İstisnası",
       "ad_en": "SCT Exemption for Export Supplies",
       "tur": "istisna",
-      "oran": 0,
+      "oran": null,
       "gecerlilik": {
         "baslangic": null,
         "bitis": null
       },
       "aciklama_tr": "4760 sayılı ÖTV Kanunu'nun 5. maddesi uyarınca ihracat teslimleri ÖTV'den istisnadır.",
       "aciklama_en": "Export supplies are SCT-exempt under Article 5 of SCT Law No. 4760.",
-      "dipnotlar": []
+      "dipnotlar": [],
+      "istisna_kosullari_kontrol_edilmeli": true
     },
     {
       "id": "otv:otv-sigara",
