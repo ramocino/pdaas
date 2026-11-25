@@ -6,7 +6,7 @@
     "ad_tr": "Ortak Sözlük",
     "ad_en": "Shared Dictionary",
     "tarih": "2026-11-01",
-    "guncelleme": "2026-11-01",
+    "guncelleme": "2026-11-24",
     "durum": "demo",
     "katman": "sozlesme",
     "kapsam": [],
@@ -20,17 +20,23 @@
       "baslangic": "2026-01-01",
       "bitis": null
     },
-    "checksum": "sha256:6861b325cbbf2260b77c8265cf1707d60f697c6c48c624fe57f6299a79f32c9d",
-    "kayit_sayisi": 183,
-    "detay": {
-      "changelog": [
-        {
-          "surum": "1.0.0",
-          "tarih": "2026-11-07",
-          "aciklama_tr": "İlk sürüm — 4 sınıflandırma, 8 vergi, 7 SGK, 4 parametre, 3 damga vergisi kategorisi",
-          "aciklama_en": "Initial version — 4 classifications, 8 tax, 7 SGK, 4 parameter, 3 stamp tax categories"
-        }
-      ]
+    "checksum": "sha256:3b33dd0aaa492a83ed1d979d6900aade7103aa211a66788e44124dc2ed460384",
+    "kayit_sayisi": 189,
+    "detay": {},
+    "yayim_durumu": "demo",
+    "karar_yetkisi_ref": null,
+    "son_kaynak_dogrulama": null,
+    "kapsam_tamlik": {
+      "durum": "beyan_yok",
+      "kapsam_turu": "sinirlandirilmis_demo",
+      "pozitif_liste_tamligi": "bilinmiyor",
+      "beyan_sahibi": null
+    },
+    "lisans": null,
+    "meta_alan_aciklamalari": {
+      "guncelleme": "PDaaS tarafindan olusturulan temsilin son dosya guncellemesi; resmi kaynak son dogrulama tarihi degildir",
+      "son_kaynak_dogrulama": "Belgelendirilmis son kaynak mutabakati yoksa null",
+      "karar_yetkisi_ref": "Karari veren normatif yetki; kurum dogrulamasi olmadan atanmamis olabilir"
     }
   },
   "kategoriler": {
@@ -1359,6 +1365,45 @@
       "ornek": [
         "gumruk-vergisi:IHR-GV-GENEL"
       ]
+    },
+    "eslestirme_sonuc_durumu": {
+      "ad_tr": "Eşleştirme sonucu",
+      "ad_en": "Mapping outcome",
+      "kullanan": [
+        "konsolide"
+      ],
+      "degerler": {
+        "eslesme_bulunamadi": {
+          "ad_tr": "Kural eşleşmesi bulunamadı",
+          "ad_en": "No mapping found",
+          "sev": "bilgi"
+        },
+        "kosul_kontrolu_gerekli": {
+          "ad_tr": "Koşul kontrolü gerekli",
+          "ad_en": "Conditional; verification needed",
+          "sev": "uyari"
+        },
+        "varsayilan_parametre_kosul_kontrolu_gerekli": {
+          "ad_tr": "Varsayılan parametre, doğrulama gerekli",
+          "ad_en": "Fallback parameter; review required",
+          "sev": "uyari"
+        },
+        "veri_mevcut_degil": {
+          "ad_tr": "Parametre verisi mevcut değil",
+          "ad_en": "Source data not available",
+          "sev": "bilgi"
+        },
+        "kural_taniminda_zorunlu": {
+          "ad_tr": "Kural tanımında zorunlu",
+          "ad_en": "Mandatory in author-defined rule",
+          "sev": "uyari"
+        },
+        "kural_taniminda_opsiyonel": {
+          "ad_tr": "Kural tanımında opsiyonel",
+          "ad_en": "Optional in author-defined rule",
+          "sev": "bilgi"
+        }
+      }
     }
   }
 }
