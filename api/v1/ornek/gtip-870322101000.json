@@ -1,0 +1,781 @@
+{
+  "meta": {
+    "schema": "pdaas-akademik-ornek/v1",
+    "surum": "1.0.0",
+    "kod": "gtip-870322101000",
+    "ad_tr": "PDaaS izlenebilir ürün örneği: 870322101000",
+    "ad_en": "Traceable PDaaS product example: 870322101000",
+    "tarih": "2026-11-24",
+    "guncelleme": "2026-11-24",
+    "durum": "demo",
+    "katman": "gorunum",
+    "kapsam": [
+      "urun"
+    ],
+    "islem_turleri": [
+      "yurtici",
+      "ithalat",
+      "ihracat"
+    ],
+    "gecerlilik": {
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": "pdaas",
+    "sorumlu_kurum": "pdaas",
+    "karar_yetkisi_ref": null,
+    "yayim_durumu": "demo",
+    "son_kaynak_dogrulama": null,
+    "lisans": null,
+    "kapsam_tamlik": {
+      "durum": "beyan_yok",
+      "pozitif_liste_tamligi": "bilinmiyor",
+      "beyan_sahibi": null
+    },
+    "kaynaklar_ref": "meta/kaynaklar.json",
+    "mevzuat_ref": "meta/mevzuat.json",
+    "sozluk_ref": "meta/sozluk.json",
+    "manifest_ref": "meta/manifest.json",
+    "kayit_sayisi": 1,
+    "checksum": "sha256:ee8f3ef15dbd47ddf208f38fb02d798c2c460b5a9f330db28806d4c8a7f6f56b",
+    "detay": {
+      "olusturucu": "kural_motoru.py/ornek_uret",
+      "ornek_niteligi": "yazar_tarafindan_hazirlanmis_demo"
+    }
+  },
+  "kaynak_kayitlari": {
+    "gtip": {
+      "id": "gtip:870322101000",
+      "kod": "870322101000",
+      "ust_kod": "87032210",
+      "seviye": 6,
+      "yaprak": true,
+      "ad_tr": "Binek otomobilleri; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1000 cm3 < silindir hacmi <= 1500 cm3",
+      "ad_en": "Passenger cars; NEW, petrol only, carrying capacity < 10 people, 1000 cm3 < cylinder volume <= 1500 cm3",
+      "olcu_birimi": "Adet"
+    },
+    "kdv": [
+      {
+        "id": "kdv:kdv-20",
+        "kod": "kdv-20",
+        "ad_tr": "Genel KDV Oranı",
+        "ad_en": "Standard VAT Rate",
+        "tur": "oran",
+        "oran": 0.2,
+        "gecerlilik": {
+          "baslangic": "2023-07-10",
+          "bitis": null
+        },
+        "aciklama_tr": "7346 sayılı Cumhurbaşkanı Kararı ile 10.07.2023 tarihinden itibaren genel KDV oranı %20 olarak uygulanmaktadır.",
+        "aciklama_en": "Pursuant to Presidential Decision No. 7346, the standard VAT rate has been 20% since 10 July 2023.",
+        "dipnotlar": [],
+        "kaynak_ref": [
+          "gib-kdv-oranlari"
+        ],
+        "mevzuat_ref": [
+          "kdv-7346"
+        ]
+      },
+      {
+        "id": "kdv:kdv-ihracat",
+        "kod": "kdv-ihracat",
+        "ad_tr": "İhracat Teslimleri KDV İstisnası",
+        "ad_en": "VAT Exemption for Export Supplies",
+        "tur": "istisna",
+        "oran": null,
+        "gecerlilik": {
+          "baslangic": "1985-01-01",
+          "bitis": null
+        },
+        "aciklama_tr": "3065 sayılı KDV Kanunu'nun 11. maddesi uyarınca ihracat teslimleri KDV'den istisnadır.",
+        "aciklama_en": "Export supplies are VAT-exempt under Article 11 of VAT Law No. 3065.",
+        "dipnotlar": [],
+        "kaynak_ref": [
+          "gib-kdv-kanun"
+        ],
+        "mevzuat_ref": [
+          "kdv-3065"
+        ],
+        "istisna_kosullari_kontrol_edilmeli": true
+      }
+    ],
+    "otv": [
+      {
+        "id": "otv:otv-istisna",
+        "kod": "otv-istisna",
+        "ad_tr": "İhracat Teslimlerinde ÖTV İstisnası",
+        "ad_en": "SCT Exemption for Export Supplies",
+        "tur": "istisna",
+        "oran": null,
+        "gecerlilik": {
+          "baslangic": null,
+          "bitis": null
+        },
+        "aciklama_tr": "4760 sayılı ÖTV Kanunu'nun 5. maddesi uyarınca ihracat teslimleri ÖTV'den istisnadır.",
+        "aciklama_en": "Export supplies are SCT-exempt under Article 5 of SCT Law No. 4760.",
+        "dipnotlar": [],
+        "istisna_kosullari_kontrol_edilmeli": true
+      }
+    ],
+    "gumruk_vergisi": [
+      {
+        "id": "gumruk-vergisi:ithalat:870322101000:II-S",
+        "yon": "ithalat",
+        "kod": "870322101000",
+        "liste": "II-S",
+        "gv": [
+          "0(1) (2)",
+          "10(3)",
+          "10(3)",
+          "0(3)",
+          "0(3)",
+          "6,5(3)",
+          "10(3)"
+        ]
+      }
+    ],
+    "ilave_gumruk_vergisi": [
+      {
+        "id": "ilave-gumruk-vergisi:igv-otomotiv",
+        "kod": "igv-otomotiv",
+        "ad_tr": "Otomotiv Ürünleri İthalatında İlave Gümrük Vergisi",
+        "ad_en": "Additional Customs Duty on Automotive Imports",
+        "tur": "oran",
+        "oran": 0.2,
+        "mense_grubu": "AB_DISI",
+        "gtip_kapsami": {
+          "tip": "prefix",
+          "deger": "87"
+        },
+        "ek_mali_yukumluluk": true,
+        "gecerlilik": {
+          "baslangic": "2024-01-01",
+          "bitis": null
+        },
+        "aciklama_tr": "87. fasıl kapsamındaki otomotiv ürünlerinin AB dışı ülkelerden ithalatında ilave gümrük vergisi uygulanır. Oran, ürün alt grubuna göre %10 ile %30 arasında değişir; bu kayıt temsili bir üst sınırdır.",
+        "aciklama_en": "Additional customs duty applies to automotive products under Chapter 87 imported from non-EU countries. The rate ranges from 10% to 30% depending on the product sub-group; this record represents a representative upper bound.",
+        "dipnotlar": []
+      }
+    ],
+    "tevkifat": [],
+    "belgeler": [
+      {
+        "kod": "urun-belge-07",
+        "ad_tr": "Motorlu Araç Tip Onayı ve Araç Uygunluk Belgeleri",
+        "ad_en": "Motor Vehicle Type-Approval and Vehicle Conformity Documents",
+        "tur": "urun_tip_onayi_ve_uygunluk",
+        "belge_mi": true,
+        "kosul": "kosullu",
+        "kosul_detay_tr": "Araç kategorisi, tip onayı rejimi, tescil ve piyasaya arz koşullarına göre ilgili tip onayı ve araç uygunluk belgeleri aranır.",
+        "kosul_detay_en": "Applicable type-approval and vehicle conformity documents depend on vehicle category, approval regime, registration and market placement conditions.",
+        "sorumlu_kurum": "T.C. Sanayi ve Teknoloji Bakanlığı / ilgili tip onayı makamları ve üreticiler",
+        "aciklama_tr": "Tip Onayı Belgesi yetkili onay makamınca; araca ilişkin uygunluk belgesi ise ilgili mevzuat çerçevesinde üretici tarafından düzenlenir. Bunlar farklı belge türleridir ve gerekirse ileride ayrı kodlara ayrılmalıdır.",
+        "aciklama_en": "A type-approval certificate is issued by the competent authority, while a vehicle certificate of conformity is provided by the manufacturer under the applicable rules. They are distinct document types and may later be separated into individual identifiers."
+      }
+    ],
+    "cpc": [
+      {
+        "id": "cpc:49113",
+        "kod": "49113",
+        "ust_kod": "4911",
+        "seviye": 5,
+        "yaprak": true,
+        "ad_tr": "Yolcu taşımacılığı için esas olarak tasarlanmış otomobiller ve diğer motorlu araçlar (toplu taşıma türünde motorlu taşıtlar, kar üzerinde gezmek için özel tasarlanmış taşıtlar ve golf arabaları ve benzer taşıtlar hariç)",
+        "ad_en": "Motor cars and other motor vehicles principally designed for the transport of persons (except public-transport type vehicles, vehicles specially designed for travelling on snow, and golf cars and similar vehicles)"
+      }
+    ],
+    "nace": [
+      {
+        "id": "nace:29.10",
+        "kod": "29.10",
+        "ust_kod": "29.1",
+        "seviye": 4,
+        "yaprak": false,
+        "ad_tr": "Motorlu kara taşıtlarının imalatı",
+        "ad_en": "Manufacture of motor vehicles"
+      }
+    ],
+    "isco": [
+      {
+        "id": "isco:8211",
+        "kod": "8211",
+        "ust_kod": "821",
+        "seviye": 4,
+        "yaprak": true,
+        "ad_tr": "Mekanik makine montajcıları",
+        "ad_en": "Mechanical Machinery Assemblers"
+      }
+    ]
+  },
+  "kural_ozetleri": [
+    {
+      "dosya": "kurallar/vergi-kurallari.json",
+      "kod": "vergi-kural-otomotiv-igv",
+      "oncelik": 130,
+      "kural_turu": "urun",
+      "referanslar": {
+        "ilave-gumruk-vergisi": {
+          "ref": "igv-otomotiv",
+          "uygulanabilirlik": "opsiyonel",
+          "zorunlu": false,
+          "oran_kullanimi": "kapsam_kontrolu"
+        }
+      },
+      "kosullar": [
+        {
+          "kod": "mense_grubu",
+          "durum": "AB_DISI"
+        },
+        {
+          "kod": "igv_liste_kapsami",
+          "durum": "kontrol_gerekli"
+        }
+      ],
+      "ozetleme": "Kuralın tam GTİP kapsamı bu özet görünümde tekrarlanmaz."
+    },
+    {
+      "dosya": "kurallar/vergi-kurallari.json",
+      "kod": "vergi-kural-ihracat-otv-istisna",
+      "oncelik": 125,
+      "kural_turu": "urun",
+      "referanslar": {
+        "otv": {
+          "ref": "otv-istisna",
+          "uygulanabilirlik": "opsiyonel",
+          "zorunlu": false
+        }
+      },
+      "kosullar": [
+        {
+          "kod": "ihracat_istisnasi_sartlari",
+          "durum": "dogrulama_gerekli"
+        }
+      ],
+      "ozetleme": "Kuralın tam GTİP kapsamı bu özet görünümde tekrarlanmaz."
+    },
+    {
+      "dosya": "kurallar/vergi-kurallari.json",
+      "kod": "vergi-kural-otomobil-otv",
+      "oncelik": 120,
+      "kural_turu": "urun",
+      "referanslar": {
+        "kdv": {
+          "ref": "kdv-20",
+          "uygulanabilirlik": "opsiyonel",
+          "zorunlu": false,
+          "kosullar": {}
+        },
+        "otv": {
+          "parametrik": true,
+          "secim": "runtime",
+          "adaylar": [
+            {
+              "ref": "otv-otomobil-1600cc-alti",
+              "eslesmeler": {
+                "gtip": {
+                  "prefix": [
+                    "870321",
+                    "870322",
+                    "870323"
+                  ]
+                }
+              },
+              "oran_kullanimi": "kapsam_kontrolu",
+              "uygulanabilirlik": "secim_bekliyor",
+              "kosul": {
+                "motor_hacmi_ust_dahil_cm3": 1600,
+                "guncel_otv_tarifesi_ve_matrah_dilimi": "dogrulanmali"
+              }
+            },
+            {
+              "ref": "otv-otomobil-1600cc-ustu",
+              "eslesmeler": {
+                "gtip": {
+                  "prefix": [
+                    "870323",
+                    "870324"
+                  ]
+                }
+              },
+              "oran_kullanimi": "kapsam_kontrolu",
+              "uygulanabilirlik": "secim_bekliyor",
+              "kosul": {
+                "motor_hacmi_alt_haric_cm3": 1600,
+                "guncel_otv_tarifesi_ve_matrah_dilimi": "dogrulanmali"
+              }
+            }
+          ]
+        }
+      },
+      "kosullar": [
+        {
+          "kod": "otv_vergiyi_doguran_olay",
+          "durum": "dogrulama_gerekli"
+        },
+        {
+          "kod": "motor_hacmi",
+          "durum": "zorunlu"
+        }
+      ],
+      "ozetleme": "Kuralın tam GTİP kapsamı bu özet görünümde tekrarlanmaz."
+    },
+    {
+      "dosya": "kurallar/vergi-kurallari.json",
+      "kod": "vergi-kural-gumruk-ithalat-rejimi",
+      "oncelik": 90,
+      "kural_turu": "urun",
+      "referanslar": {
+        "gumruk-vergisi": {
+          "secim": "gtip_kodu",
+          "tablo": "ithalat.kayitlar",
+          "uygulanabilirlik": "mense_ve_rejim_dogrulamasi_bekliyor"
+        }
+      },
+      "kosullar": [
+        {
+          "kod": "mense_ulkesi_ve_ulke_grubu",
+          "durum": "dogrulama_gerekli"
+        },
+        {
+          "kod": "tercihli_ticaret_rejimi_ve_mense_ispati",
+          "durum": "dogrulama_gerekli"
+        },
+        {
+          "kod": "ithalat_rejimi_ve_tarife_tarihi",
+          "durum": "dogrulama_gerekli"
+        }
+      ],
+      "ozetleme": "Kuralın tam GTİP kapsamı bu özet görünümde tekrarlanmaz."
+    },
+    {
+      "dosya": "kurallar/belge-kurallari.json",
+      "kod": "belge-kural-0034",
+      "oncelik": 200,
+      "kural_turu": "urun",
+      "referanslar": null,
+      "kosullar": [],
+      "ozetleme": "Kuralın tam GTİP kapsamı bu özet görünümde tekrarlanmaz."
+    }
+  ],
+  "girdi_dosyalari": [
+    {
+      "dosya": "ham/gtip-kodlari.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:f68ce26f19a05d614ad6220702d8b0a9d5673cb6a600459bf8c065605a8ec01a"
+    },
+    {
+      "dosya": "ham/kdv.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:171f78cb7a024e64d9bbfcc1375c184a16d4864fe9a2d6e3f85fa95580c41162"
+    },
+    {
+      "dosya": "ham/otv.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:fdfc2754de172e922d16ad764c338d08d23aba9cf8b3d21184cfee719967445a"
+    },
+    {
+      "dosya": "ham/gumruk-vergisi.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:771286a49c646b9efa489cf201a091b75acd358f11d08f238eee539851f9c797"
+    },
+    {
+      "dosya": "ham/cpc-kodlari.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:f33a2accf6d4f95bbfada882f6983984f0f9221b8b487701e5abaa930f18cbf8"
+    },
+    {
+      "dosya": "ham/nace-kodlari.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:7391f9ec7a051cd9b865d4b0d1841c1ff47bdc59a7798bd3d3b96d79bd188ab7"
+    },
+    {
+      "dosya": "ham/isco-kodlari.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:250acea50a46075b50915fc2ecdbcf4114d4c46fc64eb375afec79364a059801"
+    },
+    {
+      "dosya": "belgeler/gtip-urun-belgeleri.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:760e4991511c29d4ac49a7a797efd97f82b1d2c1fd86936e8a120288883ec7e1"
+    },
+    {
+      "dosya": "belgeler/dis-ticaret-belgeleri.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:49dd2ab229b3d24f0e2455e55a944a5318bc89f270c72bee05c4bdad1f0c76b2"
+    },
+    {
+      "dosya": "kurallar/vergi-kurallari.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:1e6302d4261ef3d3df7faa59a52a5447d7aa38fe85feb4f83d69a97ab70b7090"
+    },
+    {
+      "dosya": "kurallar/belge-kurallari.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:763c73bf61670d60ddb54147056198bc4ac5d8d9cbcae95d20756c07b0ebfaad"
+    },
+    {
+      "dosya": "kurallar/kod-iliskileri.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:0a1d924be0d7a7c7dbc2e6cfa487bd8f7fea23a0120f401269eb98c7866ba50c"
+    }
+  ],
+  "konsolide": {
+    "kod": "870322101000",
+    "ust_kod": "87032210",
+    "seviye": 6,
+    "yaprak": true,
+    "ad_tr": "Binek otomobilleri; YENİ, sadece benzinli, taşıma kapasitesi < 10 kişi, 1000 cm3 < silindir hacmi <= 1500 cm3",
+    "ad_en": "Passenger cars; NEW, petrol only, carrying capacity < 10 people, 1000 cm3 < cylinder volume <= 1500 cm3",
+    "olcu_birimi": "Adet",
+    "vergi": {
+      "kdv": {
+        "yurtici": {
+          "ref": "kdv-20",
+          "kural": "vergi-kural-otomobil-otv",
+          "tip": "dogrudan",
+          "kaynak_tipi": "kural",
+          "oncelik": 120,
+          "tur": "oran",
+          "oran": 0.2,
+          "oran_birimi": "kesir",
+          "gecerlilik": {
+            "baslangic": "2023-07-10",
+            "bitis": null
+          },
+          "uygulanabilirlik_durumu": "kosul_kontrolu_gerekli",
+          "kosul_kodlari": [
+            "motor_hacmi",
+            "otv_vergiyi_doguran_olay"
+          ],
+          "veri_izi": {
+            "parametre_dosyasi": "ham/kdv.json",
+            "parametre_ref": "kdv-20",
+            "kural_dosyasi": "kurallar/vergi-kurallari.json",
+            "kural_ref": "vergi-kural-otomobil-otv",
+            "kaynak_ref": [
+              "gib-kdv-oranlari"
+            ],
+            "mevzuat_ref": [
+              "kdv-7346"
+            ]
+          }
+        },
+        "ithalat": {
+          "ref": "kdv-20",
+          "kural": "vergi-kural-otomobil-otv",
+          "tip": "dogrudan",
+          "kaynak_tipi": "kural",
+          "oncelik": 120,
+          "tur": "oran",
+          "oran": 0.2,
+          "oran_birimi": "kesir",
+          "gecerlilik": {
+            "baslangic": "2023-07-10",
+            "bitis": null
+          },
+          "uygulanabilirlik_durumu": "kosul_kontrolu_gerekli",
+          "kosul_kodlari": [
+            "motor_hacmi",
+            "otv_vergiyi_doguran_olay"
+          ],
+          "veri_izi": {
+            "parametre_dosyasi": "ham/kdv.json",
+            "parametre_ref": "kdv-20",
+            "kural_dosyasi": "kurallar/vergi-kurallari.json",
+            "kural_ref": "vergi-kural-otomobil-otv",
+            "kaynak_ref": [
+              "gib-kdv-oranlari"
+            ],
+            "mevzuat_ref": [
+              "kdv-7346"
+            ]
+          }
+        },
+        "ihracat": {
+          "ref": "kdv-ihracat",
+          "kural": null,
+          "tip": "istisna",
+          "kaynak_tipi": "fallback",
+          "oncelik": 0,
+          "tur": "istisna",
+          "oran": null,
+          "oran_birimi": "kesir",
+          "uygulanabilirlik_durumu": "varsayilan_parametre_kosul_kontrolu_gerekli",
+          "kosul_kodlari": [
+            "ihracat_teslimi",
+            "kdv_kanun_11_12_sartlari"
+          ],
+          "veri_izi": {
+            "parametre_dosyasi": "ham/kdv.json",
+            "parametre_ref": "kdv-ihracat",
+            "kural_dosyasi": null,
+            "kural_ref": null,
+            "kaynak_ref": [
+              "gib-kdv-kanun"
+            ],
+            "mevzuat_ref": [
+              "kdv-3065"
+            ]
+          }
+        }
+      },
+      "otv": {
+        "yurtici": {
+          "kural": "vergi-kural-otomobil-otv",
+          "tip": "secim_bekliyor",
+          "adaylar": [
+            {
+              "ref": "otv-otomobil-1600cc-alti",
+              "kosul": {
+                "motor_hacmi_ust_dahil_cm3": 1600,
+                "guncel_otv_tarifesi_ve_matrah_dilimi": "dogrulanmali"
+              },
+              "uygulanabilirlik": "secim_bekliyor"
+            }
+          ],
+          "uygulanabilirlik_durumu": "kosul_kontrolu_gerekli",
+          "kosul_kodlari": [
+            "motor_hacmi",
+            "otv_vergiyi_doguran_olay"
+          ],
+          "veri_izi": {
+            "parametre_dosyasi": "ham/otv.json",
+            "parametre_ref": null,
+            "kural_dosyasi": "kurallar/vergi-kurallari.json",
+            "kural_ref": "vergi-kural-otomobil-otv"
+          }
+        },
+        "ithalat": {
+          "kural": "vergi-kural-otomobil-otv",
+          "tip": "secim_bekliyor",
+          "adaylar": [
+            {
+              "ref": "otv-otomobil-1600cc-alti",
+              "kosul": {
+                "motor_hacmi_ust_dahil_cm3": 1600,
+                "guncel_otv_tarifesi_ve_matrah_dilimi": "dogrulanmali"
+              },
+              "uygulanabilirlik": "secim_bekliyor"
+            }
+          ],
+          "uygulanabilirlik_durumu": "kosul_kontrolu_gerekli",
+          "kosul_kodlari": [
+            "motor_hacmi",
+            "otv_vergiyi_doguran_olay"
+          ],
+          "veri_izi": {
+            "parametre_dosyasi": "ham/otv.json",
+            "parametre_ref": null,
+            "kural_dosyasi": "kurallar/vergi-kurallari.json",
+            "kural_ref": "vergi-kural-otomobil-otv"
+          }
+        },
+        "ihracat": {
+          "ref": "otv-istisna",
+          "kural": "vergi-kural-ihracat-otv-istisna",
+          "tip": "dogrudan",
+          "kaynak_tipi": "kural",
+          "tur": "istisna",
+          "oran": null,
+          "maktu": null,
+          "asgari_maktu": null,
+          "birim": null,
+          "uygulanabilirlik_durumu": "kosul_kontrolu_gerekli",
+          "kosul_kodlari": [
+            "ihracat_istisnasi_sartlari"
+          ],
+          "veri_izi": {
+            "parametre_dosyasi": "ham/otv.json",
+            "parametre_ref": "otv-istisna",
+            "kural_dosyasi": "kurallar/vergi-kurallari.json",
+            "kural_ref": "vergi-kural-ihracat-otv-istisna"
+          }
+        }
+      },
+      "gumruk_vergisi": {
+        "ithalat": {
+          "ref": "gumruk-vergisi",
+          "kural": "vergi-kural-gumruk-ithalat-rejimi",
+          "oran_birimi": "ondalik",
+          "uygulanabilirlik": "mense_ve_rejim_dogrulamasi_bekliyor",
+          "listeler": [
+            {
+              "liste": "II-S",
+              "oranlar": [
+                {
+                  "ulke_grubu": "1",
+                  "ulke_adi_tr": "AB, EFTA ve İthalat Rejimi II sayılı liste 1. sütunundaki STA ülkeleri",
+                  "ulke_adi_en": "EU, EFTA and FTA countries in column 1 of Import Regime List II",
+                  "oran": "0(1) (2)"
+                },
+                {
+                  "ulke_grubu": "2",
+                  "ulke_adi_tr": "Katar",
+                  "ulke_adi_en": "Qatar",
+                  "oran": "10(3)"
+                },
+                {
+                  "ulke_grubu": "3",
+                  "ulke_adi_tr": "Birleşik Arap Emirlikleri",
+                  "ulke_adi_en": "United Arab Emirates",
+                  "oran": "10(3)"
+                },
+                {
+                  "ulke_grubu": "4",
+                  "ulke_adi_tr": "En Az Gelişmiş Ülkeler",
+                  "ulke_adi_en": "Least Developed Countries",
+                  "oran": "0(3)"
+                },
+                {
+                  "ulke_grubu": "5",
+                  "ulke_adi_tr": "Özel Teşvik Düzenlemesi Ülkeleri",
+                  "ulke_adi_en": "Special Incentive Arrangement Countries",
+                  "oran": "0(3)"
+                },
+                {
+                  "ulke_grubu": "6",
+                  "ulke_adi_tr": "Gelişme Yolundaki Ülkeler",
+                  "ulke_adi_en": "Developing Countries",
+                  "oran": "6,5(3)"
+                },
+                {
+                  "ulke_grubu": "7",
+                  "ulke_adi_tr": "Diğer Ülkeler",
+                  "ulke_adi_en": "Other Countries",
+                  "oran": "10(3)"
+                }
+              ]
+            }
+          ],
+          "uygulanabilirlik_durumu": "kosul_kontrolu_gerekli",
+          "kosul_kodlari": [
+            "ithalat_rejimi_ve_tarife_tarihi",
+            "mense_ulkesi_ve_ulke_grubu",
+            "tercihli_ticaret_rejimi_ve_mense_ispati"
+          ],
+          "veri_izi": {
+            "parametre_dosyasi": "ham/gumruk-vergisi.json",
+            "parametre_ref": null,
+            "kural_dosyasi": "kurallar/vergi-kurallari.json",
+            "kural_ref": "vergi-kural-gumruk-ithalat-rejimi"
+          }
+        }
+      },
+      "ilave_gumruk_vergisi": {
+        "ithalat": {
+          "ref": "igv-otomotiv",
+          "kural": "vergi-kural-otomotiv-igv",
+          "mense_grubu": "AB_DISI",
+          "tur": "oran",
+          "oran": 0.2,
+          "oran_birimi": "kesir",
+          "uygulanabilirlik_durumu": "kosul_kontrolu_gerekli",
+          "kosul_kodlari": [
+            "igv_liste_kapsami",
+            "mense_grubu"
+          ],
+          "veri_izi": {
+            "parametre_dosyasi": "ham/ilave-gumruk-vergisi.json",
+            "parametre_ref": "igv-otomotiv",
+            "kural_dosyasi": "kurallar/vergi-kurallari.json",
+            "kural_ref": "vergi-kural-otomotiv-igv"
+          }
+        }
+      },
+      "tevkifat": {}
+    },
+    "belgeler": {
+      "yurtici": [
+        {
+          "kod": "urun-belge-07",
+          "ad_tr": "Motorlu Araç Tip Onayı ve Araç Uygunluk Belgeleri",
+          "ad_en": "Motor Vehicle Type-Approval and Vehicle Conformity Documents",
+          "durum": "kosullu",
+          "kural": "belge-kural-0034",
+          "oncelik": 200,
+          "yon": [
+            "yurtici",
+            "ithalat"
+          ],
+          "kosul": {
+            "tr": "yeni_arac_ve_tip_onayi_kapsaminda",
+            "en": "yeni_arac_ve_tip_onayi_kapsaminda"
+          },
+          "eslestirme_durumu": "kosul_kontrolu_gerekli",
+          "veri_izi": {
+            "belge_ref": "urun-belge-07",
+            "belge_dosyasi": "belgeler/gtip-urun-belgeleri.json",
+            "kural_dosyasi": "kurallar/belge-kurallari.json",
+            "kural_ref": "belge-kural-0034"
+          }
+        }
+      ],
+      "ithalat": [
+        {
+          "kod": "urun-belge-07",
+          "ad_tr": "Motorlu Araç Tip Onayı ve Araç Uygunluk Belgeleri",
+          "ad_en": "Motor Vehicle Type-Approval and Vehicle Conformity Documents",
+          "durum": "kosullu",
+          "kural": "belge-kural-0034",
+          "oncelik": 200,
+          "yon": [
+            "yurtici",
+            "ithalat"
+          ],
+          "kosul": {
+            "tr": "yeni_arac_ve_tip_onayi_kapsaminda",
+            "en": "yeni_arac_ve_tip_onayi_kapsaminda"
+          },
+          "eslestirme_durumu": "kosul_kontrolu_gerekli",
+          "veri_izi": {
+            "belge_ref": "urun-belge-07",
+            "belge_dosyasi": "belgeler/gtip-urun-belgeleri.json",
+            "kural_dosyasi": "kurallar/belge-kurallari.json",
+            "kural_ref": "belge-kural-0034"
+          }
+        }
+      ],
+      "ihracat": []
+    },
+    "cpc": [
+      {
+        "ref": "cpc:49113",
+        "kod": "49113",
+        "ad_tr": "Yolcu taşımacılığı için esas olarak tasarlanmış otomobiller ve diğer motorlu araçlar (toplu taşıma türünde motorlu taşıtlar, kar üzerinde gezmek için özel tasarlanmış taşıtlar ve golf arabaları ve benzer taşıtlar hariç)",
+        "ad_en": "Motor cars and other motor vehicles principally designed for the transport of persons (except public-transport type vehicles, vehicles specially designed for travelling on snow, and golf cars and similar vehicles)",
+        "iliski_turu": "birincil",
+        "iliski_yolu": "gtip_cpc",
+        "dogrudan_kesin_atama": null,
+        "iliski_dosyasi": "kurallar/kod-iliskileri.json"
+      }
+    ],
+    "nace": [
+      {
+        "ref": "nace:29.10",
+        "kod": "29.10",
+        "ad_tr": "Motorlu kara taşıtlarının imalatı",
+        "ad_en": "Manufacture of motor vehicles",
+        "iliski_turu": "olasi_faaliyet",
+        "iliski_yolu": "gtip_nace",
+        "dogrudan_kesin_atama": false,
+        "iliski_dosyasi": "kurallar/kod-iliskileri.json"
+      }
+    ],
+    "isco": [
+      {
+        "ref": "isco:8211",
+        "kod": "8211",
+        "ad_tr": "Mekanik makine montajcıları",
+        "ad_en": "Mechanical Machinery Assemblers",
+        "kaynak": "nace:29.10",
+        "kaynak_nace": "29.10",
+        "kural_ref": "pdaas-nace-isco-uzman-2026",
+        "iliski_turu": "olasi_faaliyet",
+        "iliski_yolu": "gtip_nace_isco",
+        "dogrudan_kesin_atama": false,
+        "iliski_dosyasi": "kurallar/kod-iliskileri.json"
+      }
+    ]
+  },
+  "yorumlama_siniri": "Bu görünüm resmî API değildir; parametre ile mevzuatın somut işlemde uygulanabilirliği ayrı değerlendirilmelidir."
+}

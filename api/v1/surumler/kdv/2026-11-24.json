@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "schema": "kdv/v1",
+    "surum": "1.3.0",
+    "kod": "kdv",
+    "ad_tr": "Katma Değer Vergisi Verileri",
+    "ad_en": "Sample Value Added Tax Data",
+    "tarih": "2026-11-01",
+    "guncelleme": "2026-11-24",
+    "durum": "demo",
+    "katman": "ham",
+    "kapsam": [],
+    "islem_turleri": [],
+    "yayinci": "pdaas",
+    "sorumlu_kurum": "gib",
+    "kaynaklar_ref": "meta/kaynaklar.json",
+    "mevzuat_ref": "meta/mevzuat.json",
+    "sozluk_ref": "meta/sozluk.json",
+    "gecerlilik": {
+      "baslangic": "1985-01-01",
+      "bitis": null
+    },
+    "checksum": "sha256:a5db7d59e452405c84d7f147c5c09a02e0a9099c28cd1d52b428abc2d7046c54",
+    "kayit_sayisi": 5,
+    "detay": {
+      "sunum_niteligi": "resmi_kaynaklardan_derlenmis_yazar_yapilandirmasi",
+      "resmi_api_degil": true
+    },
+    "yayim_durumu": "demo",
+    "karar_yetkisi_ref": null,
+    "son_kaynak_dogrulama": null,
+    "kapsam_tamlik": {
+      "durum": "beyan_yok",
+      "kapsam_turu": "sinirlandirilmis_demo",
+      "pozitif_liste_tamligi": "bilinmiyor",
+      "beyan_sahibi": null
+    },
+    "lisans": null,
+    "meta_alan_aciklamalari": {
+      "guncelleme": "PDaaS tarafindan olusturulan temsilin son dosya guncellemesi; resmi kaynak son dogrulama tarihi degildir",
+      "son_kaynak_dogrulama": "Belgelendirilmis son kaynak mutabakati yoksa null",
+      "karar_yetkisi_ref": "Karari veren normatif yetki; kurum dogrulamasi olmadan atanmamis olabilir"
+    },
+    "metadata_revizyonu": "2026-11-24",
+    "kaynak_dogrulama_ozeti": {
+      "son_kontrol_tarihi": "2026-11-24",
+      "kontrol_edilen_kayit": 3,
+      "toplam_kayit": 5,
+      "tam_dosya_dogrulandi": false,
+      "denetim_raporu": "evaluation/source_reconciliation.json"
+    }
+  },
+  "sema": {
+    "pk": "kod",
+    "siralama": "kod_artan",
+    "kolonlar": {
+      "zorunlu": [
+        "id",
+        "kod",
+        "ad_tr",
+        "ad_en",
+        "tur",
+        "gecerlilik"
+      ],
+      "opsiyonel": [
+        "oran",
+        "aciklama_tr",
+        "aciklama_en",
+        "dipnotlar",
+        "kaynak_ref",
+        "mevzuat_ref",
+        "istisna_kosullari_kontrol_edilmeli",
+        "gecerlilik_aciklamasi_tr",
+        "gecerlilik_aciklamasi_en",
+        "karar_yetkisi_ref",
+        "kaynak_dogrulama"
+      ]
+    }
+  },
+  "kayitlar": [
+    {
+      "id": "kdv:kdv-01",
+      "kod": "kdv-01",
+      "ad_tr": "I Sayılı Liste A Bölümü Gıda Maddeleri KDV Oranı",
+      "ad_en": "List I Section A Food Products VAT Rate",
+      "tur": "oran",
+      "oran": 0.01,
+      "gecerlilik": {
+        "baslangic": "2022-02-14",
+        "bitis": null
+      },
+      "aciklama_tr": "5189 sayılı Cumhurbaşkanı Kararı ile 14.02.2022 tarihinden itibaren I sayılı liste A bölümündeki gıda maddelerinde KDV oranı %1 olarak belirlenmiştir.",
+      "aciklama_en": "Under Presidential Decision No. 5189, a 1% VAT rate applies to food products in List I, Section A, effective from 14 February 2022.",
+      "dipnotlar": [],
+      "kaynak_ref": [
+        "gib-kdv-oranlari"
+      ],
+      "mevzuat_ref": [
+        "kdv-5189"
+      ],
+      "gecerlilik_aciklamasi_tr": "2022-02-14, ilgili 5189 sayili karar ile bu parametre icin belirtilen degisiklik yururluk tarihidir; parametrenin tum tarihsel surecinin baslangici oldugu iddia edilmez.",
+      "gecerlilik_aciklamasi_en": "February 14, 2022 is the effective date of the change cited in Decision No. 5189 for this parameter, not a verified start of the full historical lineage.",
+      "karar_yetkisi_ref": "cumhurbaskanligi",
+      "kaynak_dogrulama": {
+        "tarih": "2026-11-24",
+        "kapsam": "secili_kayit_degeri",
+        "kaynak_id": "gib-food-5189",
+        "yontem": "law_amendment",
+        "durum": "secili_deger_eslesti"
+      }
+    },
+    {
+      "id": "kdv:kdv-10",
+      "kod": "kdv-10",
+      "ad_tr": "İndirimli KDV Oranı",
+      "ad_en": "Reduced VAT Rate",
+      "tur": "oran",
+      "oran": 0.1,
+      "gecerlilik": {
+        "baslangic": "2023-07-10",
+        "bitis": null
+      },
+      "aciklama_tr": "7346 sayılı Cumhurbaşkanı Kararı ile 10.07.2023 tarihinden itibaren indirimli KDV oranı %10 olarak uygulanmaktadır.",
+      "aciklama_en": "The reduced VAT rate was raised to 10% by Presidential Decision No. 7346, effective 10 July 2023.",
+      "dipnotlar": [],
+      "kaynak_ref": [
+        "gib-kdv-oranlari"
+      ],
+      "mevzuat_ref": [
+        "kdv-7346"
+      ],
+      "kaynak_dogrulama": {
+        "tarih": "2026-11-24",
+        "kapsam": "secili_kayit_degeri",
+        "kaynak_id": "gib-vat-rates",
+        "yontem": "law_amendment",
+        "durum": "secili_deger_eslesti"
+      }
+    },
+    {
+      "id": "kdv:kdv-20",
+      "kod": "kdv-20",
+      "ad_tr": "Genel KDV Oranı",
+      "ad_en": "Standard VAT Rate",
+      "tur": "oran",
+      "oran": 0.2,
+      "gecerlilik": {
+        "baslangic": "2023-07-10",
+        "bitis": null
+      },
+      "aciklama_tr": "7346 sayılı Cumhurbaşkanı Kararı ile 10.07.2023 tarihinden itibaren genel KDV oranı %20 olarak uygulanmaktadır.",
+      "aciklama_en": "Pursuant to Presidential Decision No. 7346, the standard VAT rate has been 20% since 10 July 2023.",
+      "dipnotlar": [],
+      "kaynak_ref": [
+        "gib-kdv-oranlari"
+      ],
+      "mevzuat_ref": [
+        "kdv-7346"
+      ],
+      "kaynak_dogrulama": {
+        "tarih": "2026-11-24",
+        "kapsam": "secili_kayit_degeri",
+        "kaynak_id": "gib-vat-rates",
+        "yontem": "law_amendment",
+        "durum": "secili_deger_eslesti"
+      }
+    },
+    {
+      "id": "kdv:kdv-ihracat",
+      "kod": "kdv-ihracat",
+      "ad_tr": "İhracat Teslimleri KDV İstisnası",
+      "ad_en": "VAT Exemption for Export Supplies",
+      "tur": "istisna",
+      "oran": null,
+      "gecerlilik": {
+        "baslangic": "1985-01-01",
+        "bitis": null
+      },
+      "aciklama_tr": "3065 sayılı KDV Kanunu'nun 11. maddesi uyarınca ihracat teslimleri KDV'den istisnadır.",
+      "aciklama_en": "Export supplies are VAT-exempt under Article 11 of VAT Law No. 3065.",
+      "dipnotlar": [],
+      "kaynak_ref": [
+        "gib-kdv-kanun"
+      ],
+      "mevzuat_ref": [
+        "kdv-3065"
+      ],
+      "istisna_kosullari_kontrol_edilmeli": true
+    },
+    {
+      "id": "kdv:kdv-ithalat",
+      "kod": "kdv-ithalat",
+      "ad_tr": "İthalatta Kanunî KDV İstisnaları",
+      "ad_en": "Statutory VAT Exemptions on Importation",
+      "tur": "istisna",
+      "oran": null,
+      "gecerlilik": {
+        "baslangic": "2000-02-05",
+        "bitis": null
+      },
+      "aciklama_tr": "3065 sayılı Kanun'un 16. maddesindeki ithalat istisnaları, 4503 sayılı Kanun ile 05.02.2000 tarihinde yürürlüğe giren haliyle uygulanmaktadır.",
+      "aciklama_en": "Import exemptions under Article 16 of Law No. 3065 apply as amended by Law No. 4503.",
+      "dipnotlar": [],
+      "kaynak_ref": [
+        "gib-kdv-kanun"
+      ],
+      "mevzuat_ref": [
+        "kdv-3065"
+      ],
+      "istisna_kosullari_kontrol_edilmeli": true
+    }
+  ]
+}

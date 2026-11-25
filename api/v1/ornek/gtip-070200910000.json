@@ -1,0 +1,968 @@
+{
+  "meta": {
+    "schema": "pdaas-akademik-ornek/v1",
+    "surum": "1.0.0",
+    "kod": "gtip-070200910000",
+    "ad_tr": "PDaaS izlenebilir ürün örneği: 070200910000",
+    "ad_en": "Traceable PDaaS product example: 070200910000",
+    "tarih": "2026-11-24",
+    "guncelleme": "2026-11-24",
+    "durum": "demo",
+    "katman": "gorunum",
+    "kapsam": [
+      "urun"
+    ],
+    "islem_turleri": [
+      "yurtici",
+      "ithalat",
+      "ihracat"
+    ],
+    "gecerlilik": {
+      "baslangic": null,
+      "bitis": null
+    },
+    "yayinci": "pdaas",
+    "sorumlu_kurum": "pdaas",
+    "karar_yetkisi_ref": null,
+    "yayim_durumu": "demo",
+    "son_kaynak_dogrulama": null,
+    "lisans": null,
+    "kapsam_tamlik": {
+      "durum": "beyan_yok",
+      "pozitif_liste_tamligi": "bilinmiyor",
+      "beyan_sahibi": null
+    },
+    "kaynaklar_ref": "meta/kaynaklar.json",
+    "mevzuat_ref": "meta/mevzuat.json",
+    "sozluk_ref": "meta/sozluk.json",
+    "manifest_ref": "meta/manifest.json",
+    "kayit_sayisi": 1,
+    "checksum": "sha256:8ab45701cb281190d49b108d12e33d46be4fbb56d5708293c3ac306b10e85b3c",
+    "detay": {
+      "olusturucu": "kural_motoru.py/ornek_uret",
+      "ornek_niteligi": "yazar_tarafindan_hazirlanmis_demo"
+    }
+  },
+  "kaynak_kayitlari": {
+    "gtip": {
+      "id": "gtip:070200910000",
+      "kod": "070200910000",
+      "ust_kod": "07020091",
+      "seviye": 6,
+      "yaprak": true,
+      "ad_tr": "Domates (taze veya soğutulmuş); salkımlar halinde",
+      "ad_en": "Tomatoes (fresh or chilled); in bunches",
+      "olcu_birimi": null
+    },
+    "kdv": [
+      {
+        "id": "kdv:kdv-01",
+        "kod": "kdv-01",
+        "ad_tr": "I Sayılı Liste A Bölümü Gıda Maddeleri KDV Oranı",
+        "ad_en": "List I Section A Food Products VAT Rate",
+        "tur": "oran",
+        "oran": 0.01,
+        "gecerlilik": {
+          "baslangic": "2022-02-14",
+          "bitis": null
+        },
+        "aciklama_tr": "5189 sayılı Cumhurbaşkanı Kararı ile 14.02.2022 tarihinden itibaren I sayılı liste A bölümündeki gıda maddelerinde KDV oranı %1 olarak belirlenmiştir.",
+        "aciklama_en": "Under Presidential Decision No. 5189, a 1% VAT rate applies to food products in List I, Section A, effective from 14 February 2022.",
+        "dipnotlar": [],
+        "kaynak_ref": [
+          "gib-kdv-oranlari"
+        ],
+        "mevzuat_ref": [
+          "kdv-5189"
+        ],
+        "gecerlilik_aciklamasi_tr": "2022-02-14, ilgili 5189 sayili karar ile bu parametre icin belirtilen degisiklik yururluk tarihidir; parametrenin tum tarihsel surecinin baslangici oldugu iddia edilmez.",
+        "gecerlilik_aciklamasi_en": "February 14, 2022 is the effective date of the change cited in Decision No. 5189 for this parameter, not a verified start of the full historical lineage.",
+        "karar_yetkisi_ref": "cumhurbaskanligi"
+      },
+      {
+        "id": "kdv:kdv-ihracat",
+        "kod": "kdv-ihracat",
+        "ad_tr": "İhracat Teslimleri KDV İstisnası",
+        "ad_en": "VAT Exemption for Export Supplies",
+        "tur": "istisna",
+        "oran": null,
+        "gecerlilik": {
+          "baslangic": "1985-01-01",
+          "bitis": null
+        },
+        "aciklama_tr": "3065 sayılı KDV Kanunu'nun 11. maddesi uyarınca ihracat teslimleri KDV'den istisnadır.",
+        "aciklama_en": "Export supplies are VAT-exempt under Article 11 of VAT Law No. 3065.",
+        "dipnotlar": [],
+        "kaynak_ref": [
+          "gib-kdv-kanun"
+        ],
+        "mevzuat_ref": [
+          "kdv-3065"
+        ],
+        "istisna_kosullari_kontrol_edilmeli": true
+      }
+    ],
+    "otv": [],
+    "gumruk_vergisi": [
+      {
+        "id": "gumruk-vergisi:ithalat:070200910000:I",
+        "yon": "ithalat",
+        "kod": "070200910000",
+        "liste": "I",
+        "gv": [
+          0.486,
+          0.486,
+          0.0,
+          0.486,
+          0.486,
+          0.0,
+          0.0,
+          0.486,
+          0.486,
+          0.486,
+          0.486,
+          0.486
+        ],
+        "gv_ulke_gruplari": {
+          "ab_bk": 0.486,
+          "gur": 0.486,
+          "bher": 0.0,
+          "gkore": 0.486,
+          "mlz": 0.486,
+          "sng": 0.0,
+          "kos": 0.0,
+          "vnz": 0.486,
+          "bae": 0.486,
+          "tps_oic": 0.486,
+          "d8": 0.486,
+          "du": 0.486
+        }
+      }
+    ],
+    "ilave_gumruk_vergisi": [],
+    "tevkifat": [],
+    "belgeler": [
+      {
+        "kod": "belge-eur1",
+        "ad_tr": "EUR.1 Dolaşım Belgesi",
+        "ad_en": "EUR.1 Movement Certificate",
+        "tur": "dolasim_belgesi",
+        "sorumlu_kurum": "Ticaret Bakanlığı / Ticaret Odası",
+        "aciklama_tr": "İlgili tercihli ticaret anlaşmasının menşe kuralları karşılanıyorsa indirimli gümrük tarifesi talebinde kullanılan menşe ispat belgesi; her işlemde zorunlu değildir.",
+        "aciklama_en": "Proof of preferential origin used to claim reduced tariffs where the applicable trade agreement's origin rules are met; not required in every transaction."
+      },
+      {
+        "kod": "belge-fitosaniter",
+        "ad_tr": "Fitosaniter Sertifika",
+        "ad_en": "Phytosanitary Certificate",
+        "tur": "saglik_sertifikasi",
+        "sorumlu_kurum": "Tarım ve Orman Bakanlığı",
+        "aciklama_tr": "Bitki ve bitkisel ürünlerin ithalat veya ihracatında ilgili karantina ve alıcı ülke şartlarına göre bitki sağlığı gerekliliklerini karşıladığını gösteren sertifika.",
+        "aciklama_en": "Certificate demonstrating compliance with phytosanitary requirements for imports or exports of plants and plant products, subject to quarantine and destination-country rules."
+      },
+      {
+        "kod": "belge-mense",
+        "ad_tr": "Menşe Şahadetnamesi",
+        "ad_en": "Certificate of Origin",
+        "tur": "mense_belgesi",
+        "sorumlu_kurum": "Ticaret Odası / Ticaret Bakanlığı",
+        "aciklama_tr": "Eşyanın tercihli olmayan menşe statüsünü gösterir; ihracatta alıcı ülke istiyorsa, ithalatta ilgili menşe esaslı önlemler gerektiriyorsa kullanılır.",
+        "aciklama_en": "Proves non-preferential origin; used when required by the destination country for exports or relevant origin-based measures for imports."
+      },
+      {
+        "kod": "belge-saglik",
+        "ad_tr": "Sağlık Sertifikası",
+        "ad_en": "Health Certificate",
+        "tur": "saglik_sertifikasi",
+        "sorumlu_kurum": "Tarım ve Orman Bakanlığı",
+        "aciklama_tr": "Gıda ve tarım ürünlerinde ilgili mevzuat ve alıcı ülke şartlarına göre aranan sağlık uygunluk sertifikası; her ürün ve işlem için genel zorunluluk değildir.",
+        "aciklama_en": "Health certificate for food and agricultural goods where required by applicable rules or destination-country conditions; not universally mandatory."
+      },
+      {
+        "kod": "urun-belge-01",
+        "ad_tr": "Organik Tarım Ürün Sertifikası",
+        "ad_en": "Organic Agricultural Product Certificate",
+        "tur": "urun_sertifikasi",
+        "belge_mi": true,
+        "kosul": "kosullu",
+        "kosul_detay_tr": "Ürün organik olarak piyasaya sunulacaksa organik üretim ve sertifikasyon şartları karşılanmalıdır. Her tarım ürünü için koşulsuz bir belge yükümlülüğü değildir.",
+        "kosul_detay_en": "Organic production and certification requirements apply when a product is marketed as organic; this is not an unconditional requirement for all agricultural products.",
+        "sorumlu_kurum": "T.C. Tarım ve Orman Bakanlığı / yetkilendirilmiş kontrol ve sertifikasyon kuruluşları",
+        "aciklama_tr": "5262 sayılı Organik Tarım Kanunu ve ilgili yönetmelik kapsamında yürütülen kontrol ve sertifikasyon sürecini gösterir. Tek bir ürüne, örneğin yalnız domatese, özgülenmez.",
+        "aciklama_en": "Evidence of inspection and certification under Organic Farming Law No. 5262 and related rules. It is not limited to a single product such as tomatoes."
+      },
+      {
+        "kod": "urun-belge-02",
+        "ad_tr": "İyi Tarım Uygulamaları Sertifikası",
+        "ad_en": "Good Agricultural Practices Certificate",
+        "tur": "urun_sertifikasi",
+        "belge_mi": true,
+        "kosul": "kosullu",
+        "kosul_detay_tr": "Ürünün İyi Tarım Uygulamaları kapsamında sertifikalı olarak sunulması veya bu nitelikte bir iddiayla pazarlanması hâlinde uygulanır.",
+        "kosul_detay_en": "Applies when a product is supplied or marketed with a certified Good Agricultural Practices claim.",
+        "sorumlu_kurum": "T.C. Tarım ve Orman Bakanlığı / yetkilendirilmiş kontrol ve sertifikasyon kuruluşları",
+        "aciklama_tr": "İyi Tarım Uygulamaları Hakkında Yönetmelik çerçevesinde üretim uygulamalarının kontrol ve sertifikasyonuna ilişkindir; yalnız belirli bir sebzeye ait belge değildir.",
+        "aciklama_en": "Certification of production practices under the Regulation on Good Agricultural Practices; not a document exclusive to one vegetable."
+      }
+    ],
+    "cpc": [
+      {
+        "id": "cpc:01234",
+        "kod": "01234",
+        "ust_kod": "0123",
+        "seviye": 5,
+        "yaprak": true,
+        "ad_tr": "Domates",
+        "ad_en": "Tomatoes"
+      }
+    ],
+    "nace": [
+      {
+        "id": "nace:01.13",
+        "kod": "01.13",
+        "ust_kod": "01.1",
+        "seviye": 4,
+        "yaprak": false,
+        "ad_tr": "Sebze, kavun-karpuz, kök ve yumru sebzelerin yetiştirilmesi",
+        "ad_en": "Growing of vegetables and melons, roots and tubers"
+      }
+    ],
+    "isco": [
+      {
+        "id": "isco:6111",
+        "kod": "6111",
+        "ust_kod": "611",
+        "seviye": 4,
+        "yaprak": true,
+        "ad_tr": "Tarla ürünleri ve sebze yetiştiricileri",
+        "ad_en": "Field Crop and Vegetable Growers"
+      },
+      {
+        "id": "isco:6112",
+        "kod": "6112",
+        "ust_kod": "611",
+        "seviye": 4,
+        "yaprak": true,
+        "ad_tr": "Ağaç ve çalı ürünleri yetiştiricileri",
+        "ad_en": "Tree and Shrub Crop Growers"
+      },
+      {
+        "id": "isco:6113",
+        "kod": "6113",
+        "ust_kod": "611",
+        "seviye": 4,
+        "yaprak": true,
+        "ad_tr": "Bahçıvanlar, bahçe bitkileri ve fidan yetiştiricileri",
+        "ad_en": "Gardeners; Horticultural and Nursery Growers"
+      },
+      {
+        "id": "isco:6114",
+        "kod": "6114",
+        "ust_kod": "611",
+        "seviye": 4,
+        "yaprak": true,
+        "ad_tr": "Karma bitkisel ürün yetiştiricileri",
+        "ad_en": "Mixed Crop Growers"
+      }
+    ]
+  },
+  "kural_ozetleri": [
+    {
+      "dosya": "kurallar/vergi-kurallari.json",
+      "kod": "vergi-kural-gida-kdv",
+      "oncelik": 100,
+      "kural_turu": "urun",
+      "referanslar": {
+        "kdv": {
+          "ref": "kdv-01",
+          "uygulanabilirlik": "opsiyonel",
+          "zorunlu": false
+        }
+      },
+      "kosullar": [
+        {
+          "kod": "kdv_i_sayili_liste_a_kapsami",
+          "durum": "dogrulama_gerekli"
+        },
+        {
+          "kod": "otvye_tabi_gida_ise_kdv_10_kontrolu",
+          "durum": "kontrol_gerekli"
+        }
+      ],
+      "ozetleme": "Kuralın tam GTİP kapsamı bu özet görünümde tekrarlanmaz."
+    },
+    {
+      "dosya": "kurallar/vergi-kurallari.json",
+      "kod": "vergi-kural-gumruk-ithalat-rejimi",
+      "oncelik": 90,
+      "kural_turu": "urun",
+      "referanslar": {
+        "gumruk-vergisi": {
+          "secim": "gtip_kodu",
+          "tablo": "ithalat.kayitlar",
+          "uygulanabilirlik": "mense_ve_rejim_dogrulamasi_bekliyor"
+        }
+      },
+      "kosullar": [
+        {
+          "kod": "mense_ulkesi_ve_ulke_grubu",
+          "durum": "dogrulama_gerekli"
+        },
+        {
+          "kod": "tercihli_ticaret_rejimi_ve_mense_ispati",
+          "durum": "dogrulama_gerekli"
+        },
+        {
+          "kod": "ithalat_rejimi_ve_tarife_tarihi",
+          "durum": "dogrulama_gerekli"
+        }
+      ],
+      "ozetleme": "Kuralın tam GTİP kapsamı bu özet görünümde tekrarlanmaz."
+    },
+    {
+      "dosya": "kurallar/belge-kurallari.json",
+      "kod": "belge-kural-0029",
+      "oncelik": 200,
+      "kural_turu": "urun",
+      "referanslar": null,
+      "kosullar": [],
+      "ozetleme": "Kuralın tam GTİP kapsamı bu özet görünümde tekrarlanmaz."
+    },
+    {
+      "dosya": "kurallar/belge-kurallari.json",
+      "kod": "belge-kural-0030",
+      "oncelik": 200,
+      "kural_turu": "urun",
+      "referanslar": null,
+      "kosullar": [],
+      "ozetleme": "Kuralın tam GTİP kapsamı bu özet görünümde tekrarlanmaz."
+    },
+    {
+      "dosya": "kurallar/belge-kurallari.json",
+      "kod": "belge-kural-0001",
+      "oncelik": 100,
+      "kural_turu": "urun",
+      "referanslar": null,
+      "kosullar": [],
+      "ozetleme": "Kuralın tam GTİP kapsamı bu özet görünümde tekrarlanmaz."
+    }
+  ],
+  "girdi_dosyalari": [
+    {
+      "dosya": "ham/gtip-kodlari.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:f68ce26f19a05d614ad6220702d8b0a9d5673cb6a600459bf8c065605a8ec01a"
+    },
+    {
+      "dosya": "ham/kdv.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:171f78cb7a024e64d9bbfcc1375c184a16d4864fe9a2d6e3f85fa95580c41162"
+    },
+    {
+      "dosya": "ham/otv.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:fdfc2754de172e922d16ad764c338d08d23aba9cf8b3d21184cfee719967445a"
+    },
+    {
+      "dosya": "ham/gumruk-vergisi.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:771286a49c646b9efa489cf201a091b75acd358f11d08f238eee539851f9c797"
+    },
+    {
+      "dosya": "ham/cpc-kodlari.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:f33a2accf6d4f95bbfada882f6983984f0f9221b8b487701e5abaa930f18cbf8"
+    },
+    {
+      "dosya": "ham/nace-kodlari.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:7391f9ec7a051cd9b865d4b0d1841c1ff47bdc59a7798bd3d3b96d79bd188ab7"
+    },
+    {
+      "dosya": "ham/isco-kodlari.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:250acea50a46075b50915fc2ecdbcf4114d4c46fc64eb375afec79364a059801"
+    },
+    {
+      "dosya": "belgeler/gtip-urun-belgeleri.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:760e4991511c29d4ac49a7a797efd97f82b1d2c1fd86936e8a120288883ec7e1"
+    },
+    {
+      "dosya": "belgeler/dis-ticaret-belgeleri.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:49dd2ab229b3d24f0e2455e55a944a5318bc89f270c72bee05c4bdad1f0c76b2"
+    },
+    {
+      "dosya": "kurallar/vergi-kurallari.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:1e6302d4261ef3d3df7faa59a52a5447d7aa38fe85feb4f83d69a97ab70b7090"
+    },
+    {
+      "dosya": "kurallar/belge-kurallari.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:763c73bf61670d60ddb54147056198bc4ac5d8d9cbcae95d20756c07b0ebfaad"
+    },
+    {
+      "dosya": "kurallar/kod-iliskileri.json",
+      "surum": "1.0.0",
+      "checksum": "sha256:0a1d924be0d7a7c7dbc2e6cfa487bd8f7fea23a0120f401269eb98c7866ba50c"
+    }
+  ],
+  "konsolide": {
+    "kod": "070200910000",
+    "ust_kod": "07020091",
+    "seviye": 6,
+    "yaprak": true,
+    "ad_tr": "Domates (taze veya soğutulmuş); salkımlar halinde",
+    "ad_en": "Tomatoes (fresh or chilled); in bunches",
+    "olcu_birimi": null,
+    "vergi": {
+      "kdv": {
+        "yurtici": {
+          "ref": "kdv-01",
+          "kural": "vergi-kural-gida-kdv",
+          "tip": "dogrudan",
+          "kaynak_tipi": "kural",
+          "oncelik": 100,
+          "tur": "oran",
+          "oran": 0.01,
+          "oran_birimi": "kesir",
+          "gecerlilik": {
+            "baslangic": "2022-02-14",
+            "bitis": null
+          },
+          "uygulanabilirlik_durumu": "kosul_kontrolu_gerekli",
+          "kosul_kodlari": [
+            "kdv_i_sayili_liste_a_kapsami",
+            "otvye_tabi_gida_ise_kdv_10_kontrolu"
+          ],
+          "veri_izi": {
+            "parametre_dosyasi": "ham/kdv.json",
+            "parametre_ref": "kdv-01",
+            "kural_dosyasi": "kurallar/vergi-kurallari.json",
+            "kural_ref": "vergi-kural-gida-kdv",
+            "kaynak_ref": [
+              "gib-kdv-oranlari"
+            ],
+            "mevzuat_ref": [
+              "kdv-5189"
+            ]
+          }
+        },
+        "ithalat": {
+          "ref": "kdv-01",
+          "kural": "vergi-kural-gida-kdv",
+          "tip": "dogrudan",
+          "kaynak_tipi": "kural",
+          "oncelik": 100,
+          "tur": "oran",
+          "oran": 0.01,
+          "oran_birimi": "kesir",
+          "gecerlilik": {
+            "baslangic": "2022-02-14",
+            "bitis": null
+          },
+          "uygulanabilirlik_durumu": "kosul_kontrolu_gerekli",
+          "kosul_kodlari": [
+            "kdv_i_sayili_liste_a_kapsami",
+            "otvye_tabi_gida_ise_kdv_10_kontrolu"
+          ],
+          "veri_izi": {
+            "parametre_dosyasi": "ham/kdv.json",
+            "parametre_ref": "kdv-01",
+            "kural_dosyasi": "kurallar/vergi-kurallari.json",
+            "kural_ref": "vergi-kural-gida-kdv",
+            "kaynak_ref": [
+              "gib-kdv-oranlari"
+            ],
+            "mevzuat_ref": [
+              "kdv-5189"
+            ]
+          }
+        },
+        "ihracat": {
+          "ref": "kdv-ihracat",
+          "kural": null,
+          "tip": "istisna",
+          "kaynak_tipi": "fallback",
+          "oncelik": 0,
+          "tur": "istisna",
+          "oran": null,
+          "oran_birimi": "kesir",
+          "uygulanabilirlik_durumu": "varsayilan_parametre_kosul_kontrolu_gerekli",
+          "kosul_kodlari": [
+            "ihracat_teslimi",
+            "kdv_kanun_11_12_sartlari"
+          ],
+          "veri_izi": {
+            "parametre_dosyasi": "ham/kdv.json",
+            "parametre_ref": "kdv-ihracat",
+            "kural_dosyasi": null,
+            "kural_ref": null,
+            "kaynak_ref": [
+              "gib-kdv-kanun"
+            ],
+            "mevzuat_ref": [
+              "kdv-3065"
+            ]
+          }
+        }
+      },
+      "otv": {
+        "yurtici": {
+          "ref": null,
+          "kural": null,
+          "tip": "eslesme_yok",
+          "kaynak_tipi": "eslesme_yok",
+          "tur": null,
+          "oran": null,
+          "uygulanabilirlik_durumu": "eslesme_bulunamadi",
+          "aciklama_tr": "ÖTV kural eşleşmesi yoktur; hukuki kapsam dışılık veya sıfır oran sonucu değildir."
+        },
+        "ithalat": {
+          "ref": null,
+          "kural": null,
+          "tip": "eslesme_yok",
+          "kaynak_tipi": "eslesme_yok",
+          "tur": null,
+          "oran": null,
+          "uygulanabilirlik_durumu": "eslesme_bulunamadi",
+          "aciklama_tr": "ÖTV kural eşleşmesi yoktur; hukuki kapsam dışılık veya sıfır oran sonucu değildir."
+        },
+        "ihracat": {
+          "ref": null,
+          "kural": null,
+          "tip": "eslesme_yok",
+          "kaynak_tipi": "eslesme_yok",
+          "tur": null,
+          "oran": null,
+          "uygulanabilirlik_durumu": "eslesme_bulunamadi",
+          "aciklama_tr": "ÖTV kural eşleşmesi yoktur; hukuki kapsam dışılık veya sıfır oran sonucu değildir."
+        }
+      },
+      "gumruk_vergisi": {
+        "ithalat": {
+          "ref": "gumruk-vergisi",
+          "kural": "vergi-kural-gumruk-ithalat-rejimi",
+          "oran_birimi": "ondalik",
+          "uygulanabilirlik": "mense_ve_rejim_dogrulamasi_bekliyor",
+          "listeler": [
+            {
+              "liste": "I",
+              "oranlar": [
+                {
+                  "ulke_grubu": "ab_bk",
+                  "ulke_adi_tr": "Avrupa Birliği ve Birleşik Krallık",
+                  "ulke_adi_en": "European Union and United Kingdom",
+                  "oran": 0.486
+                },
+                {
+                  "ulke_grubu": "gur",
+                  "ulke_adi_tr": "Gürcistan",
+                  "ulke_adi_en": "Georgia",
+                  "oran": 0.486
+                },
+                {
+                  "ulke_grubu": "bher",
+                  "ulke_adi_tr": "Bosna-Hersek",
+                  "ulke_adi_en": "Bosnia and Herzegovina",
+                  "oran": 0.0
+                },
+                {
+                  "ulke_grubu": "gkore",
+                  "ulke_adi_tr": "Güney Kore",
+                  "ulke_adi_en": "South Korea",
+                  "oran": 0.486
+                },
+                {
+                  "ulke_grubu": "mlz",
+                  "ulke_adi_tr": "Malezya",
+                  "ulke_adi_en": "Malaysia",
+                  "oran": 0.486
+                },
+                {
+                  "ulke_grubu": "sng",
+                  "ulke_adi_tr": "Singapur",
+                  "ulke_adi_en": "Singapore",
+                  "oran": 0.0
+                },
+                {
+                  "ulke_grubu": "kos",
+                  "ulke_adi_tr": "Kosova",
+                  "ulke_adi_en": "Kosovo",
+                  "oran": 0.0
+                },
+                {
+                  "ulke_grubu": "vnz",
+                  "ulke_adi_tr": "Venezuela",
+                  "ulke_adi_en": "Venezuela",
+                  "oran": 0.486
+                },
+                {
+                  "ulke_grubu": "bae",
+                  "ulke_adi_tr": "Birleşik Arap Emirlikleri",
+                  "ulke_adi_en": "United Arab Emirates",
+                  "oran": 0.486
+                },
+                {
+                  "ulke_grubu": "tps_oic",
+                  "ulke_adi_tr": "TPS-OIC / PRETAS kapsamındaki ülkeler",
+                  "ulke_adi_en": "Countries participating in TPS-OIC / PRETAS",
+                  "oran": 0.486
+                },
+                {
+                  "ulke_grubu": "d8",
+                  "ulke_adi_tr": "D-8 tercihli tarife kapsamındaki ülkeler",
+                  "ulke_adi_en": "Countries under the D-8 preferential tariff scheme",
+                  "oran": 0.486
+                },
+                {
+                  "ulke_grubu": "du",
+                  "ulke_adi_tr": "Diğer Ülkeler",
+                  "ulke_adi_en": "Other Countries",
+                  "oran": 0.486
+                }
+              ]
+            }
+          ],
+          "uygulanabilirlik_durumu": "kosul_kontrolu_gerekli",
+          "kosul_kodlari": [
+            "ithalat_rejimi_ve_tarife_tarihi",
+            "mense_ulkesi_ve_ulke_grubu",
+            "tercihli_ticaret_rejimi_ve_mense_ispati"
+          ],
+          "veri_izi": {
+            "parametre_dosyasi": "ham/gumruk-vergisi.json",
+            "parametre_ref": null,
+            "kural_dosyasi": "kurallar/vergi-kurallari.json",
+            "kural_ref": "vergi-kural-gumruk-ithalat-rejimi"
+          }
+        }
+      },
+      "ilave_gumruk_vergisi": {},
+      "tevkifat": {}
+    },
+    "belgeler": {
+      "yurtici": [
+        {
+          "kod": "urun-belge-02",
+          "ad_tr": "İyi Tarım Uygulamaları Sertifikası",
+          "ad_en": "Good Agricultural Practices Certificate",
+          "durum": "kosullu",
+          "kural": "belge-kural-0029",
+          "oncelik": 200,
+          "yon": [
+            "yurtici",
+            "ihracat"
+          ],
+          "kosul": {
+            "tr": "iyi_tarim_uygulamalari_sertifikali_olarak_sunuluyorsa",
+            "en": "iyi_tarim_uygulamalari_sertifikali_olarak_sunuluyorsa"
+          },
+          "eslestirme_durumu": "kosul_kontrolu_gerekli",
+          "veri_izi": {
+            "belge_ref": "urun-belge-02",
+            "belge_dosyasi": "belgeler/gtip-urun-belgeleri.json",
+            "kural_dosyasi": "kurallar/belge-kurallari.json",
+            "kural_ref": "belge-kural-0029"
+          }
+        },
+        {
+          "kod": "urun-belge-01",
+          "ad_tr": "Organik Tarım Ürün Sertifikası",
+          "ad_en": "Organic Agricultural Product Certificate",
+          "durum": "kosullu",
+          "kural": "belge-kural-0030",
+          "oncelik": 200,
+          "yon": [
+            "yurtici",
+            "ihracat"
+          ],
+          "kosul": {
+            "tr": "organik_etiket_veya_iddiasiyla_piyasaya_arz",
+            "en": "organik_etiket_veya_iddiasiyla_piyasaya_arz"
+          },
+          "eslestirme_durumu": "kosul_kontrolu_gerekli",
+          "veri_izi": {
+            "belge_ref": "urun-belge-01",
+            "belge_dosyasi": "belgeler/gtip-urun-belgeleri.json",
+            "kural_dosyasi": "kurallar/belge-kurallari.json",
+            "kural_ref": "belge-kural-0030"
+          }
+        }
+      ],
+      "ithalat": [
+        {
+          "kod": "belge-saglik",
+          "ad_tr": "Sağlık Sertifikası",
+          "ad_en": "Health Certificate",
+          "durum": "kosullu",
+          "kural": "belge-kural-0001",
+          "oncelik": 100,
+          "yon": [
+            "ithalat"
+          ],
+          "kapsam": "dis_ticaret",
+          "kosul": {
+            "tr": "urun_ithalatta_saglik_denetimine_tabi_ise",
+            "en": "urun_ithalatta_saglik_denetimine_tabi_ise"
+          },
+          "eslestirme_durumu": "kosul_kontrolu_gerekli",
+          "veri_izi": {
+            "belge_ref": "belge-saglik",
+            "belge_dosyasi": "belgeler/dis-ticaret-belgeleri.json",
+            "kural_dosyasi": "kurallar/belge-kurallari.json",
+            "kural_ref": "belge-kural-0001"
+          }
+        },
+        {
+          "kod": "belge-fitosaniter",
+          "ad_tr": "Fitosaniter Sertifika",
+          "ad_en": "Phytosanitary Certificate",
+          "durum": "kosullu",
+          "kural": "belge-kural-0001",
+          "oncelik": 100,
+          "yon": [
+            "ithalat",
+            "ihracat"
+          ],
+          "kapsam": "dis_ticaret",
+          "kosul": {
+            "tr": "bitki_karantinasi_ve_hedef_ulke_bitki_sagligi_sartlari_kapsamindaysa",
+            "en": "bitki_karantinasi_ve_hedef_ulke_bitki_sagligi_sartlari_kapsamindaysa"
+          },
+          "eslestirme_durumu": "kosul_kontrolu_gerekli",
+          "veri_izi": {
+            "belge_ref": "belge-fitosaniter",
+            "belge_dosyasi": "belgeler/dis-ticaret-belgeleri.json",
+            "kural_dosyasi": "kurallar/belge-kurallari.json",
+            "kural_ref": "belge-kural-0001"
+          }
+        },
+        {
+          "kod": "belge-eur1",
+          "ad_tr": "EUR.1 Dolaşım Belgesi",
+          "ad_en": "EUR.1 Movement Certificate",
+          "durum": "kosullu",
+          "kural": "belge-kural-0001",
+          "oncelik": 100,
+          "yon": [
+            "ithalat",
+            "ihracat"
+          ],
+          "kapsam": "dis_ticaret",
+          "kosul": {
+            "tr": "tercihli_ticaret_anlasmasi_mense_ve_eur1_sartlari_saglanirsa",
+            "en": "tercihli_ticaret_anlasmasi_mense_ve_eur1_sartlari_saglanirsa"
+          },
+          "eslestirme_durumu": "kosul_kontrolu_gerekli",
+          "veri_izi": {
+            "belge_ref": "belge-eur1",
+            "belge_dosyasi": "belgeler/dis-ticaret-belgeleri.json",
+            "kural_dosyasi": "kurallar/belge-kurallari.json",
+            "kural_ref": "belge-kural-0001"
+          }
+        }
+      ],
+      "ihracat": [
+        {
+          "kod": "urun-belge-02",
+          "ad_tr": "İyi Tarım Uygulamaları Sertifikası",
+          "ad_en": "Good Agricultural Practices Certificate",
+          "durum": "kosullu",
+          "kural": "belge-kural-0029",
+          "oncelik": 200,
+          "yon": [
+            "yurtici",
+            "ihracat"
+          ],
+          "kosul": {
+            "tr": "iyi_tarim_uygulamalari_sertifikali_olarak_sunuluyorsa",
+            "en": "iyi_tarim_uygulamalari_sertifikali_olarak_sunuluyorsa"
+          },
+          "eslestirme_durumu": "kosul_kontrolu_gerekli",
+          "veri_izi": {
+            "belge_ref": "urun-belge-02",
+            "belge_dosyasi": "belgeler/gtip-urun-belgeleri.json",
+            "kural_dosyasi": "kurallar/belge-kurallari.json",
+            "kural_ref": "belge-kural-0029"
+          }
+        },
+        {
+          "kod": "urun-belge-01",
+          "ad_tr": "Organik Tarım Ürün Sertifikası",
+          "ad_en": "Organic Agricultural Product Certificate",
+          "durum": "kosullu",
+          "kural": "belge-kural-0030",
+          "oncelik": 200,
+          "yon": [
+            "yurtici",
+            "ihracat"
+          ],
+          "kosul": {
+            "tr": "organik_etiket_veya_iddiasiyla_piyasaya_arz",
+            "en": "organik_etiket_veya_iddiasiyla_piyasaya_arz"
+          },
+          "eslestirme_durumu": "kosul_kontrolu_gerekli",
+          "veri_izi": {
+            "belge_ref": "urun-belge-01",
+            "belge_dosyasi": "belgeler/gtip-urun-belgeleri.json",
+            "kural_dosyasi": "kurallar/belge-kurallari.json",
+            "kural_ref": "belge-kural-0030"
+          }
+        },
+        {
+          "kod": "belge-mense",
+          "ad_tr": "Menşe Şahadetnamesi",
+          "ad_en": "Certificate of Origin",
+          "durum": "kosullu",
+          "kural": "belge-kural-0001",
+          "oncelik": 100,
+          "yon": [
+            "ihracat"
+          ],
+          "kapsam": "dis_ticaret",
+          "kosul": {
+            "tr": "hedef_ulke_mense_sahadetnamesi_talep_ediyorsa",
+            "en": "hedef_ulke_mense_sahadetnamesi_talep_ediyorsa"
+          },
+          "eslestirme_durumu": "kosul_kontrolu_gerekli",
+          "veri_izi": {
+            "belge_ref": "belge-mense",
+            "belge_dosyasi": "belgeler/dis-ticaret-belgeleri.json",
+            "kural_dosyasi": "kurallar/belge-kurallari.json",
+            "kural_ref": "belge-kural-0001"
+          }
+        },
+        {
+          "kod": "belge-fitosaniter",
+          "ad_tr": "Fitosaniter Sertifika",
+          "ad_en": "Phytosanitary Certificate",
+          "durum": "kosullu",
+          "kural": "belge-kural-0001",
+          "oncelik": 100,
+          "yon": [
+            "ithalat",
+            "ihracat"
+          ],
+          "kapsam": "dis_ticaret",
+          "kosul": {
+            "tr": "bitki_karantinasi_ve_hedef_ulke_bitki_sagligi_sartlari_kapsamindaysa",
+            "en": "bitki_karantinasi_ve_hedef_ulke_bitki_sagligi_sartlari_kapsamindaysa"
+          },
+          "eslestirme_durumu": "kosul_kontrolu_gerekli",
+          "veri_izi": {
+            "belge_ref": "belge-fitosaniter",
+            "belge_dosyasi": "belgeler/dis-ticaret-belgeleri.json",
+            "kural_dosyasi": "kurallar/belge-kurallari.json",
+            "kural_ref": "belge-kural-0001"
+          }
+        },
+        {
+          "kod": "belge-eur1",
+          "ad_tr": "EUR.1 Dolaşım Belgesi",
+          "ad_en": "EUR.1 Movement Certificate",
+          "durum": "kosullu",
+          "kural": "belge-kural-0001",
+          "oncelik": 100,
+          "yon": [
+            "ithalat",
+            "ihracat"
+          ],
+          "kapsam": "dis_ticaret",
+          "kosul": {
+            "tr": "tercihli_ticaret_anlasmasi_mense_ve_eur1_sartlari_saglanirsa",
+            "en": "tercihli_ticaret_anlasmasi_mense_ve_eur1_sartlari_saglanirsa"
+          },
+          "eslestirme_durumu": "kosul_kontrolu_gerekli",
+          "veri_izi": {
+            "belge_ref": "belge-eur1",
+            "belge_dosyasi": "belgeler/dis-ticaret-belgeleri.json",
+            "kural_dosyasi": "kurallar/belge-kurallari.json",
+            "kural_ref": "belge-kural-0001"
+          }
+        }
+      ]
+    },
+    "cpc": [
+      {
+        "ref": "cpc:01234",
+        "kod": "01234",
+        "ad_tr": "Domates",
+        "ad_en": "Tomatoes",
+        "iliski_turu": "birincil",
+        "iliski_yolu": "gtip_cpc",
+        "dogrudan_kesin_atama": null,
+        "iliski_dosyasi": "kurallar/kod-iliskileri.json"
+      }
+    ],
+    "nace": [
+      {
+        "ref": "nace:01.13",
+        "kod": "01.13",
+        "ad_tr": "Sebze, kavun-karpuz, kök ve yumru sebzelerin yetiştirilmesi",
+        "ad_en": "Growing of vegetables and melons, roots and tubers",
+        "iliski_turu": "olasi_faaliyet",
+        "iliski_yolu": "gtip_nace",
+        "dogrudan_kesin_atama": false,
+        "iliski_dosyasi": "kurallar/kod-iliskileri.json"
+      }
+    ],
+    "isco": [
+      {
+        "ref": "isco:6111",
+        "kod": "6111",
+        "ad_tr": "Tarla ürünleri ve sebze yetiştiricileri",
+        "ad_en": "Field Crop and Vegetable Growers",
+        "kaynak": "nace:01.13",
+        "kaynak_nace": "01.13",
+        "kural_ref": "nace-isco-esco-kurallari",
+        "iliski_turu": "olasi_faaliyet",
+        "iliski_yolu": "gtip_nace_isco",
+        "dogrudan_kesin_atama": false,
+        "iliski_dosyasi": "kurallar/kod-iliskileri.json"
+      },
+      {
+        "ref": "isco:6112",
+        "kod": "6112",
+        "ad_tr": "Ağaç ve çalı ürünleri yetiştiricileri",
+        "ad_en": "Tree and Shrub Crop Growers",
+        "kaynak": "nace:01.13",
+        "kaynak_nace": "01.13",
+        "kural_ref": "nace-isco-esco-kurallari",
+        "iliski_turu": "olasi_faaliyet",
+        "iliski_yolu": "gtip_nace_isco",
+        "dogrudan_kesin_atama": false,
+        "iliski_dosyasi": "kurallar/kod-iliskileri.json"
+      },
+      {
+        "ref": "isco:6113",
+        "kod": "6113",
+        "ad_tr": "Bahçıvanlar, bahçe bitkileri ve fidan yetiştiricileri",
+        "ad_en": "Gardeners; Horticultural and Nursery Growers",
+        "kaynak": "nace:01.13",
+        "kaynak_nace": "01.13",
+        "kural_ref": "nace-isco-esco-kurallari",
+        "iliski_turu": "olasi_faaliyet",
+        "iliski_yolu": "gtip_nace_isco",
+        "dogrudan_kesin_atama": false,
+        "iliski_dosyasi": "kurallar/kod-iliskileri.json"
+      },
+      {
+        "ref": "isco:6114",
+        "kod": "6114",
+        "ad_tr": "Karma bitkisel ürün yetiştiricileri",
+        "ad_en": "Mixed Crop Growers",
+        "kaynak": "nace:01.13",
+        "kaynak_nace": "01.13",
+        "kural_ref": "nace-isco-esco-kurallari",
+        "iliski_turu": "olasi_faaliyet",
+        "iliski_yolu": "gtip_nace_isco",
+        "dogrudan_kesin_atama": false,
+        "iliski_dosyasi": "kurallar/kod-iliskileri.json"
+      }
+    ]
+  },
+  "yorumlama_siniri": "Bu görünüm resmî API değildir; parametre ile mevzuatın somut işlemde uygulanabilirliği ayrı değerlendirilmelidir."
+}
