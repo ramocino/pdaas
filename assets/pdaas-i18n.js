@@ -4,7 +4,14 @@ import { CONFIG } from './pdaas-config.js';
 export const UI = {
   tr: {
     // --- HEADER / NAV ---
-    portal_alt: "Parametrik Veri Servisi (Demo) Portalı",
+    service_disclaimer: "PDaaS, parametrik veri hizmetinin örnek sunumudur. Resmî kamu API’si değildir.",
+    muh_sources_title: "Parametrik veri kaynakları",
+    muh_sources_count: "8 veri kümesi",
+    muh_sources_desc: "Hesaplama parametreleri ve idari kod listeleri bağımsız veri kaynaklarından alınır.",
+    muh_calc_sources: "4 · Hesaplama parametresi",
+    muh_code_sources: "4 · İdari kod listesi",
+    muh_fallback_note: "Kaynak dosyalarına erişilemediğinde örnek yedek değerler kullanılabilir. Kaynak durumu ayrıca gösterilir.",
+    portal_alt: "Parametrik Veri Servisi",
     nav_portal: "Portal",
     nav_urunhizmetara: "Ürün & Hizmet Ara",
     nav_urunhizmetkarti: "Ürün & Hizmet Kartı",
@@ -38,7 +45,7 @@ export const UI = {
     // --- KATALOG / BOŞ DURUM ---
     catalog_title: "Veri Kataloğu", catalog_search: "Veri seti ara...", catalog_loading: "Katalog yükleniyor...",
     empty_title: "Veri Seti veya Servis Seçin",
-    empty_desc: "Sol taraftaki katalog ağacından bir veri seti seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz. ⚠️ Bu portal makale için demo bir ortamdır. Resmi veri sayfası değildir.",
+    empty_desc: "Sol taraftaki katalog ağacından bir veri seti seçerek, altındaki parametrik API servis uç noktalarını, veri tablolarını ve hazır kod örneklerini inceleyebilirsiniz.",
     empty_card1_t: "Veri Önizleme", empty_card1_d: "Tablo görünümü ile doğrudan canlı veri kayıtları.",
     empty_card2_t: "Hazır Kodlar", empty_card2_d: "cURL, Python, JS, Go & PHP entegrasyonu.",
 
@@ -135,7 +142,7 @@ export const UI = {
 
     // --- MUHTASAR (muhtasar.html) ---
     muh_baslik: "Muhtasar Beyanname Tablosu",
-    muh_aciklama: "Personel verilerini girin veya seçin. Tüm oranlar ve kodlar API üzerinden çekilir.",
+    muh_aciklama: "Personel verilerini girin veya seçin. Oranlar ve kodlar parametrik veri servisinden alınır.",
     muh_ref_baslik: "Referans Veriler",
     muh_kaynak_baslik: "Veri Kaynakları (API)",
     muh_tablo_baslik: "Beyanname Detayları (2026 / 10)",
@@ -158,7 +165,14 @@ export const UI = {
   },
   en: {
     // --- HEADER / NAV ---
-    portal_alt: "Parametric Data Service (Demo) Portal",
+    service_disclaimer: "PDaaS illustrates a parametric data service. It is not an official government API.",
+    muh_sources_title: "Parametric data sources",
+    muh_sources_count: "8 datasets",
+    muh_sources_desc: "Calculation inputs and administrative code lists are retrieved from independent data sources.",
+    muh_calc_sources: "4 · Calculation inputs",
+    muh_code_sources: "4 · Administrative code lists",
+    muh_fallback_note: "If source files cannot be accessed, illustrative fallback values may be used. Source status is displayed separately.",
+    portal_alt: "Parametric Data as a Service",
     nav_portal: "Portal",
     nav_urunhizmetara: "Products & Services Search",
     nav_urunhizmetkarti: "Products & Services Card",
@@ -192,7 +206,7 @@ export const UI = {
     // --- CATALOG / EMPTY ---
     catalog_title: "Data Catalog", catalog_search: "Search dataset...", catalog_loading: "Loading catalog...",
     empty_title: "Select a Dataset or Service",
-    empty_desc: "⚠️Choose a dataset from the catalog tree on the left to inspect its parametric API endpoints, data tables and ready-to-use code samples. ⚠️ This portal is a demo environment for an article. It is not an official data page.",
+    empty_desc: "Choose a dataset from the catalog tree on the left to inspect its parametric API endpoints, data tables and ready-to-use code samples.",
     empty_card1_t: "Data Preview", empty_card1_d: "Live data records in a table view.",
     empty_card2_t: "Ready-to-use Code", empty_card2_d: "cURL, Python, JS, Go & PHP integrations.",
 
@@ -290,7 +304,7 @@ export const UI = {
 
     // --- WITHHOLDING (muhtasar.html) ---
     muh_baslik: "Withholding Tax Return Table",
-    muh_aciklama: "Enter or select employee data. All rates and codes are fetched via API.",
+    muh_aciklama: "Enter or select employee data. Rates and codes are retrieved from the parametric data service.",
     muh_ref_baslik: "Reference Data",
     muh_kaynak_baslik: "Data Sources (API)",
     muh_tablo_baslik: "Return Details (2026 / 10)",
