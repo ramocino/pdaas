@@ -23,6 +23,7 @@
 
   <div class="flex-1 flex overflow-hidden relative min-h-0">
     <main id="main-content" class="flex-1 overflow-y-auto overscroll-contain bg-win-base flex flex-col min-h-0">
+
       <div class="max-w-[1400px] w-full mx-auto p-4 lg:p-8 space-y-6">
 
         <!-- Sayfa başlığı -->
@@ -36,6 +37,30 @@
 
         <!-- Durum -->
         <div id="durum-alani" class="hidden"></div>
+
+        <!-- Bağımsız parametrik veri kaynakları -->
+        <section class="bg-win-card border border-win-border rounded-xl p-5 shadow-sm" aria-labelledby="muh-veri-kaynaklari">
+          <div class="flex items-center justify-between gap-3 flex-wrap">
+            <h2 id="muh-veri-kaynaklari" class="text-sm font-bold text-white" data-i18n="muh_sources_title">Parametrik veri kaynakları</h2>
+            <span class="text-[10px] text-slate-400" data-i18n="muh_sources_count">8 veri kümesi</span>
+          </div>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed" data-i18n="muh_sources_desc">Hesaplama parametreleri ve idari kod listeleri bağımsız veri kaynaklarından alınır.</p>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-4">
+            <div class="rounded-lg border border-win-border p-3 bg-win-base">
+              <div class="text-xs font-semibold text-white mb-2" data-i18n="muh_calc_sources">4 · Hesaplama parametresi</div>
+              <div class="text-[11px] text-slate-300 space-y-1 font-mono">
+                <div>asgari-ucret.json</div><div>sgk-prim-oranlari.json</div><div>damga-vergisi.json</div><div>gelir-vergisi-dilimleri.json</div>
+              </div>
+            </div>
+            <div class="rounded-lg border border-win-border p-3 bg-win-base">
+              <div class="text-xs font-semibold text-white mb-2" data-i18n="muh_code_sources">4 · İdari kod listesi</div>
+              <div class="text-[11px] text-slate-300 space-y-1 font-mono">
+                <div>sgk-belge-turleri.json</div><div>sgk-isten-ayrilis-nedenleri.json</div><div>sgk-eksik-gun-nedenleri.json</div><div>sgk-meslek-kodlari.json</div>
+              </div>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-3" data-i18n="muh_fallback_note">Kaynak dosyalarına erişilemediğinde örnek yedek değerler kullanılabilir. Kaynak durumu ayrıca gösterilir.</p>
+        </section>
 
         <!-- Referans Veriler -->
         <section>
@@ -91,6 +116,7 @@
       </div>
     </main>
   </div>
+  <footer class="flex-none px-4 py-2 border-t border-win-border bg-win-dark text-[11px] text-slate-400 text-center" data-i18n="service_disclaimer">PDaaS, parametrik veri hizmetinin örnek sunumudur. Resmî kamu API’si değildir.</footer>
 
   <script type="module">
     import { CONFIG, apiUrl, apiFetch } from './assets/pdaas-config.js';

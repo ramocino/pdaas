@@ -21,6 +21,7 @@
 
   <div id="pdaas-header"></div>
 
+
   <div class="flex-1 flex overflow-hidden relative min-h-0">
     <aside id="sidebar"
       class="w-72 lg:w-80 flex-none bg-win-dark border-r border-win-border flex flex-col fixed lg:static top-16 bottom-0 left-0 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out min-h-0">
@@ -52,6 +53,7 @@
     <div id="mobile-overlay" class="fixed inset-0 bg-black/60 z-20 hidden lg:hidden mica-panel"></div>
 
     <main id="main-content" class="flex-1 overflow-y-auto overscroll-contain bg-win-base flex flex-col min-h-0">
+
       <div class="max-w-screen-2xl w-full mx-auto p-4 lg:p-8 space-y-6">
         <div>
           <h1 class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight" data-i18n="sayfa_baslik"></h1>
@@ -90,6 +92,7 @@
       </div>
     </main>
   </div>
+  <footer class="flex-none px-4 py-2 border-t border-win-border bg-win-dark text-[11px] text-slate-400 text-center" data-i18n="service_disclaimer">PDaaS, parametrik veri hizmetinin örnek sunumudur. Resmî kamu API’si değildir.</footer>
 
   <button id="btn-scroll-top" type="button" aria-label="Yukarı git"
     class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-xl bg-win-500 hover:bg-win-600 text-white shadow-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
@@ -662,6 +665,23 @@
       `;
     }
 
+    // PDaaS 1.1: Parametre eşleşmesi, hukuki uygulanabilirlik kararı değildir.
+    function pdaasDurumMetni(kayit) {
+      const kod = kayit?.uygulanabilirlik_durumu;
+      if (!kod) return '';
+      const en = dil() === 'en';
+      const sozluk = {
+        eslesme_bulunamadi: en ? 'No mapping (not a legal conclusion)' : 'Eşleşme yok (hukuki sonuç değil)',
+        kosul_kontrolu_gerekli: en ? 'Conditions require review' : 'Koşul kontrolü gerekli',
+        varsayilan_parametre_kosul_kontrolu_gerekli: en ? 'Fallback candidate; review required' : 'Varsayılan aday; kontrol gerekli',
+        veri_mevcut_degil: en ? 'Source record unavailable' : 'Kaynak kaydı mevcut değil'
+      };
+      return sozluk[kod] || kod;
+    }
+    function pdaasAltBilgi(kayit) {
+      return [kayit?.ref, pdaasDurumMetni(kayit)].filter(Boolean).join(' · ');
+    }
+
     function secVergiKaydi(deger) {
       if (!Array.isArray(deger)) return deger;
       if (!deger.length) return null;
@@ -808,6 +828,98 @@
       `;
     }
 
+    // PDaaS: A source-to-mapping-to-view explanation, derived ONLY from fields in the selected record.
+    // An absent mapping is not treated as proof of a legal exemption or zero tax rate.
+    function izlenebilirlikBolumu(secim) {
+      const { kaynak, kayit } = secim;
+      if (!kayit || !kayit.kod) return '';
+      const en = dil() === 'en';
+      const txt = (tr, eng) => en ? eng : tr;
+      const dosyalar = { gtip: 'ham/gtip-kodlari.json', cpc: 'ham/cpc-kodlari.json',
+        nace: 'ham/nace-kodlari.json', isco: 'ham/isco-kodlari.json' };
+      const link = (path, label) => {
+        if (!path || typeof path !== 'string' || !/^(ham|kurallar|belgeler|meta|ornek)\/[a-z0-9/_-]+\.json$/i.test(path)) {
+          return `<span>${kacis(label || path || '—')}</span>`;
+        }
+        return `<a class="text-win-100 underline break-all" href="${kacis(apiUrl(path))}" target="_blank" rel="noopener noreferrer">${kacis(label || path)}</a>`;
+      };
+      const line = (header, detail, item, status) => `<tr class="border-b border-win-border/40 align-top">
+        <td class="px-3 py-2 text-slate-200 font-medium">${kacis(header)}</td>
+        <td class="px-3 py-2 text-slate-300">${detail}</td>
+        <td class="px-3 py-2 text-slate-300">${item}</td>
+        <td class="px-3 py-2 text-amber-300">${kacis(status || '—')}</td></tr>`;
+      const base = dosyalar[kaynak];
+      const lines = [];
+      if (base) lines.push(line(txt('Esas kayıt','Primary record'),
+        `${link(base, base)}<div class="text-slate-500 font-mono mt-1">${kacis(kayit.kod)}</div>`,
+        txt('Doğrudan yapılandırılmış kaynak kaydı','Direct structured source record'),
+        txt('Kaynağa dayalı gösterim','Source representation')));
+      const adlar = { kdv:'KDV', otv:'ÖTV', tevkifat:txt('Tevkifat','Withholding'),
+        gumruk_vergisi:txt('Gümrük vergisi','Customs duty'),
+        ilave_gumruk_vergisi:txt('İlave gümrük','Additional customs') };
+      const vergi = kayit.vergi || {};
+      for (const [tur, ad] of Object.entries(adlar)) {
+        const model = vergi[tur];
+        if (!model || typeof model !== 'object') continue;
+        for (const yon of ['yurtici','ithalat','ihracat']) {
+          const secimler = Array.isArray(model[yon]) ? model[yon] : model[yon] ? [model[yon]] : [];
+          for (const v of secimler) {
+            if (!v || typeof v !== 'object') continue;
+            const iz = v.veri_izi || {};
+            const ref = v.ref || iz.parametre_ref;
+            const file = iz.parametre_dosyasi;
+            const kuralPath = iz.kural_dosyasi;
+            const kuralRef = v.kural || iz.kural_ref;
+            const refs = Array.isArray(iz.kaynak_ref) ? iz.kaynak_ref.join(', ') : '';
+            const mevzuat = Array.isArray(iz.mevzuat_ref) ? iz.mevzuat_ref.join(', ') : '';
+            const evidence = [file ? link(file, file) : '',ref ? `<span class="font-mono">${kacis(ref)}</span>` : '',
+              refs ? `${txt('Kaynak sicili','Source registry')}: ${kacis(refs)} (${link('meta/kaynaklar.json','JSON')})` : '',
+              mevzuat ? `${txt('Mevzuat','Legislation')}: ${kacis(mevzuat)} (${link('meta/mevzuat.json','JSON')})` : ''].filter(Boolean).join('<div class="mt-1"></div>');
+            const mapping = [kuralPath ? link(kuralPath,kuralPath) : '',
+              kuralRef ? `<span class="font-mono">${kacis(kuralRef)}</span>` : '',
+              v.kaynak_tipi === 'fallback' ? txt('Varsayılan eşleştirme','Fallback mapping') : ''].filter(Boolean).join('<div class="mt-1"></div>');
+            const status = pdaasDurumMetni(v) || (v.uygulanabilirlik || '—');
+            if (evidence || mapping || v.uygulanabilirlik_durumu) {
+              lines.push(line(`${ad} · ${yon}`,evidence || '—',mapping || '—',status));
+            }
+          }
+        }
+      }
+      const belge = kayit.belgeler;
+      const belgeItems = Array.isArray(belge) ? belge :
+        belge && typeof belge === 'object' ? Object.entries(belge).flatMap(([yon,list]) =>
+          Array.isArray(list) ? list.map(x => ({...x,_yon:yon})) : []) : [];
+      for (const b of belgeItems.slice(0,12)) {
+        const iz=b.veri_izi || {};
+        lines.push(line(`${txt('Belge','Document')} · ${b._yon || '—'}`,
+          [iz.belge_dosyasi ? link(iz.belge_dosyasi,iz.belge_dosyasi) : '',
+            `<span class="font-mono">${kacis(b.kod || iz.belge_ref || '—')}</span>`].filter(Boolean).join('<div class="mt-1"></div>'),
+          iz.kural_dosyasi ? `${link(iz.kural_dosyasi,iz.kural_dosyasi)}<div class="font-mono mt-1">${kacis(b.kural || iz.kural_ref || '')}</div>` : kacis(b.kural || '—'),
+          b.eslestirme_durumu || b.durum || '—'));
+      }
+      for (const tur of ['cpc','nace','isco']) {
+        const rel=Array.isArray(kayit[tur]) ? kayit[tur] : [];
+        if (!rel.length) continue;
+        const first=rel[0];
+        const relation=first.iliski_dosyasi || 'kurallar/kod-iliskileri.json';
+        const label=first.iliski_turu || first.iliski_yolu || txt('Sınıflama ilişkisi','Classification link');
+        lines.push(line(`${tur.toUpperCase()} (${rel.length})`,
+          link(dosyalar[tur],dosyalar[tur]),link(relation,relation),
+          label + (first.dogrudan_kesin_atama === false ? txt(' · kesin atama değil',' · not definitive') : '')));
+      }
+      const kod=String(kayit.kod);
+      const ornek = kaynak === 'gtip' && ['070200910000','870322101000'].includes(kod)
+        ? `<p class="mt-3 text-xs">${txt('Aynı kaydın açıklamalı örnek çıktısı','Detailed sample output')}: ${link('ornek/gtip-'+kod+'.json','ornek/gtip-'+kod+'.json')}</p>` : '';
+      return `<details class="border-b border-win-border bg-win-dark/20 p-5" open>
+        <summary class="cursor-pointer text-sm font-bold text-win-100">${txt('Veri izi: Kaynak → Eşleştirme → Konsolide görünüm','Data lineage: Source → Mapping → Consolidated view')}</summary>
+        <p class="text-[11px] text-slate-400 mt-2 mb-3">${txt('Bu bilgiler seçilen kaydın JSON alanlarından okunur; bağlantı bulunmaması hukuki kapsam dışılık anlamına gelmez. Eşleşme ve işlemde uygulanabilirlik farklıdır.','These fields come from the selected JSON record. A missing mapping is not a legal exclusion; mapping is distinct from transaction-specific applicability.')}</p>
+        <div class="overflow-x-auto"><table class="w-full text-left text-[11px]">
+        <thead class="bg-win-hover text-slate-300"><tr><th class="p-3">${txt('Parametre','Parameter')}</th><th class="p-3">${txt('Ham kaynak','Source')}</th><th class="p-3">${txt('Eşleştirme','Mapping')}</th><th class="p-3">${txt('Durum','Status')}</th></tr></thead>
+        <tbody>${lines.join('')}</tbody></table></div>${ornek}
+        <p class="mt-3 text-[10px] text-slate-500">${txt('Kaynak ve mevzuat kodları ortak sicillerde açıklanır. Bu ekran resmi işlem onayı veya mevzuat değerlendirmesi değildir.','Source and legislation codes are documented in shared registries. This screen is not an official transaction decision.')}</p>
+      </details>`;
+    }
+
     function kartUret(secim) {
       const { kaynak, kayit } = secim;
       const kod = normKod(kayit.kod);
@@ -815,6 +927,7 @@
 
       const temelSatirlar = kaynakBazliAlanlar(secim);
       const temelHtml = birlesikTabloCiz(temelSatirlar);
+      const izlenebilirlikHtml = izlenebilirlikBolumu(secim);
 
       let vergiHtml = '';
       const vergiModel = vergiModeliniAl(kayit.vergi);
@@ -828,19 +941,19 @@
           let kdvVal = secVergiKaydi(v.kdv);
           let kdvText = kdvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), kdvSub = '', kdvClass = 'text-amber-400';
           if (kdvVal) {
-            if (kdvVal.istisna || kdvVal.tur === 'istisna') { kdvText = t('istisna_var'); kdvSub = kdvVal.ref; }
-            else if (kdvVal.tur === 'yok') { kdvText = t('uygulanmaz'); kdvClass = 'text-slate-400'; kdvSub = kdvVal.ref; }
-            else if (kdvVal.oran != null) { kdvText = yuzde(kdvVal.oran); kdvClass = 'text-win-100'; kdvSub = kdvVal.ref; }
-            else kdvSub = kdvVal.ref;
+            if (kdvVal.istisna || kdvVal.tur === 'istisna') { kdvText = t('istisna_var'); kdvSub = pdaasAltBilgi(kdvVal); }
+            else if (kdvVal.tur === 'yok') { kdvText = t('uygulanmaz'); kdvClass = 'text-slate-400'; kdvSub = pdaasAltBilgi(kdvVal); }
+            else if (kdvVal.oran != null) { kdvText = yuzde(kdvVal.oran); kdvClass = 'text-win-100'; kdvSub = pdaasAltBilgi(kdvVal); }
+            else kdvSub = pdaasAltBilgi(kdvVal);
           }
 
           let otvVal = secVergiKaydi(v.otv);
-          let otvText = otvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), otvSub = '', otvClass = 'text-amber-400';
+          let otvText = otvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : (otvVal?.uygulanabilirlik_durumu === 'eslesme_bulunamadi' ? (dil() === 'en' ? 'No match' : 'Eşleşme yok') : t('oran_bilinmiyor')), otvSub = '', otvClass = 'text-amber-400';
           if (otvVal) {
-            if (otvVal.istisna || otvVal.tur === 'istisna') { otvText = t('istisna_var'); otvSub = otvVal.ref; }
-            else if (otvVal.tur === 'yok') { otvText = t('uygulanmaz'); otvClass = 'text-slate-400'; otvSub = otvVal.ref; }
-            else if (otvVal.oran != null) { otvText = yuzde(otvVal.oran); otvClass = 'text-rose-400'; otvSub = otvVal.ref; }
-            else otvSub = otvVal.ref;
+            if (otvVal.istisna || otvVal.tur === 'istisna') { otvText = t('istisna_var'); otvSub = pdaasAltBilgi(otvVal); }
+            else if (otvVal.tur === 'yok') { otvText = t('uygulanmaz'); otvClass = 'text-slate-400'; otvSub = pdaasAltBilgi(otvVal); }
+            else if (otvVal.oran != null) { otvText = yuzde(otvVal.oran); otvClass = 'text-rose-400'; otvSub = pdaasAltBilgi(otvVal); }
+            else otvSub = pdaasAltBilgi(otvVal);
           }
 
           let tevkVal = secVergiKaydi(v.tevkifat);
@@ -889,18 +1002,18 @@
           let kdvVal = secVergiKaydi(v.kdv);
           let kdvText = kdvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), kdvSub = '', kdvClass = 'text-amber-400';
           if (kdvVal) {
-            if (kdvVal.istisna || kdvVal.tur === 'istisna') { kdvText = t('istisna_var'); kdvSub = kdvVal.ref; }
-            else if (kdvVal.tur === 'yok') { kdvText = t('uygulanmaz'); kdvClass = 'text-slate-400'; kdvSub = kdvVal.ref; }
-            else if (kdvVal.oran != null) { kdvText = yuzde(kdvVal.oran); kdvClass = 'text-win-100'; kdvSub = kdvVal.ref; }
-            else kdvSub = kdvVal.ref;
+            if (kdvVal.istisna || kdvVal.tur === 'istisna') { kdvText = t('istisna_var'); kdvSub = pdaasAltBilgi(kdvVal); }
+            else if (kdvVal.tur === 'yok') { kdvText = t('uygulanmaz'); kdvClass = 'text-slate-400'; kdvSub = pdaasAltBilgi(kdvVal); }
+            else if (kdvVal.oran != null) { kdvText = yuzde(kdvVal.oran); kdvClass = 'text-win-100'; kdvSub = pdaasAltBilgi(kdvVal); }
+            else kdvSub = pdaasAltBilgi(kdvVal);
           }
           let otvVal = secVergiKaydi(v.otv);
-          let otvText = otvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), otvSub = '', otvClass = 'text-amber-400';
+          let otvText = otvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : (otvVal?.uygulanabilirlik_durumu === 'eslesme_bulunamadi' ? (dil() === 'en' ? 'No match' : 'Eşleşme yok') : t('oran_bilinmiyor')), otvSub = '', otvClass = 'text-amber-400';
           if (otvVal) {
-            if (otvVal.istisna || otvVal.tur === 'istisna') { otvText = t('istisna_var'); otvSub = otvVal.ref; }
-            else if (otvVal.tur === 'yok') { otvText = t('uygulanmaz'); otvClass = 'text-slate-400'; otvSub = otvVal.ref; }
-            else if (otvVal.oran != null) { otvText = yuzde(otvVal.oran); otvClass = 'text-rose-400'; otvSub = otvVal.ref; }
-            else otvSub = otvVal.ref;
+            if (otvVal.istisna || otvVal.tur === 'istisna') { otvText = t('istisna_var'); otvSub = pdaasAltBilgi(otvVal); }
+            else if (otvVal.tur === 'yok') { otvText = t('uygulanmaz'); otvClass = 'text-slate-400'; otvSub = pdaasAltBilgi(otvVal); }
+            else if (otvVal.oran != null) { otvText = yuzde(otvVal.oran); otvClass = 'text-rose-400'; otvSub = pdaasAltBilgi(otvVal); }
+            else otvSub = pdaasAltBilgi(otvVal);
           }
           const icerik = `
             ${gumrukVal ? `<div class="flex justify-between items-start gap-4"><span class="text-xs text-slate-400 font-medium">${t('gumruk_vergisi')}</span><div class="text-right"><div class="font-mono text-sm font-bold ${gumrukClass}">${gumrukText}</div><div class="text-[10px] text-slate-500">${kacis(gumrukSub)}</div></div></div>` : ''}
@@ -923,18 +1036,18 @@
           let kdvVal = secVergiKaydi(v.kdv);
           let kdvText = kdvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), kdvSub = '', kdvClass = 'text-amber-400';
           if (kdvVal) {
-            if (kdvVal.istisna || kdvVal.tur === 'istisna') { kdvText = t('istisna_var'); kdvSub = kdvVal.ref; }
-            else if (kdvVal.tur === 'yok') { kdvText = t('uygulanmaz'); kdvClass = 'text-slate-400'; kdvSub = kdvVal.ref; }
-            else if (kdvVal.oran != null) { kdvText = yuzde(kdvVal.oran); kdvClass = 'text-win-100'; kdvSub = kdvVal.ref; }
-            else kdvSub = kdvVal.ref;
+            if (kdvVal.istisna || kdvVal.tur === 'istisna') { kdvText = t('istisna_var'); kdvSub = pdaasAltBilgi(kdvVal); }
+            else if (kdvVal.tur === 'yok') { kdvText = t('uygulanmaz'); kdvClass = 'text-slate-400'; kdvSub = pdaasAltBilgi(kdvVal); }
+            else if (kdvVal.oran != null) { kdvText = yuzde(kdvVal.oran); kdvClass = 'text-win-100'; kdvSub = pdaasAltBilgi(kdvVal); }
+            else kdvSub = pdaasAltBilgi(kdvVal);
           }
           let otvVal = secVergiKaydi(v.otv);
-          let otvText = otvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : t('oran_bilinmiyor'), otvSub = '', otvClass = 'text-amber-400';
+          let otvText = otvVal?.durum === 'gtip_bazli' ? t('gtip_bazli') : (otvVal?.uygulanabilirlik_durumu === 'eslesme_bulunamadi' ? (dil() === 'en' ? 'No match' : 'Eşleşme yok') : t('oran_bilinmiyor')), otvSub = '', otvClass = 'text-amber-400';
           if (otvVal) {
-            if (otvVal.istisna || otvVal.tur === 'istisna') { otvText = t('istisna_var'); otvSub = otvVal.ref; }
-            else if (otvVal.tur === 'yok') { otvText = t('uygulanmaz'); otvClass = 'text-slate-400'; otvSub = otvVal.ref; }
-            else if (otvVal.oran != null) { otvText = yuzde(otvVal.oran); otvClass = 'text-rose-400'; otvSub = otvVal.ref; }
-            else otvSub = otvVal.ref;
+            if (otvVal.istisna || otvVal.tur === 'istisna') { otvText = t('istisna_var'); otvSub = pdaasAltBilgi(otvVal); }
+            else if (otvVal.tur === 'yok') { otvText = t('uygulanmaz'); otvClass = 'text-slate-400'; otvSub = pdaasAltBilgi(otvVal); }
+            else if (otvVal.oran != null) { otvText = yuzde(otvVal.oran); otvClass = 'text-rose-400'; otvSub = pdaasAltBilgi(otvVal); }
+            else otvSub = pdaasAltBilgi(otvVal);
           }
           const icerik = `
             ${kdvVal ? `<div class="flex justify-between items-start gap-4"><span class="text-xs text-slate-400 font-medium">${t('kdv_orani')}</span><div class="text-right"><div class="font-mono text-sm font-bold ${kdvClass}">${kdvText}</div><div class="text-[10px] text-slate-500">${kacis(kdvSub || '')}</div></div></div>` : ''}
@@ -955,6 +1068,7 @@
               <div class="grid grid-cols-1 md:grid-cols-2 ${gridClass} gap-4">
                 ${vergiBloklari.join('')}
               </div>
+              <p class="text-[11px] text-slate-400 px-1 pt-2">${dil() === 'en' ? 'Rates are candidate parameters; origin, statutory conditions and transaction facts must be checked.' : 'Oranlar aday parametrelerdir; mevzuat koşulları, menşe ve işlem bilgileri ayrıca kontrol edilmelidir.'}</p>
             </div>
           `;
         }
@@ -1307,6 +1421,7 @@
           ${meslekiBelgeHtml}
           ${tesvikHtml}
           ${referansWrapper}
+          ${izlenebilirlikHtml}
         </div>`;
     }
 
