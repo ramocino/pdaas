@@ -29,8 +29,8 @@ KATALOG_DOSYA    = META / "katalog.json"
 # ══════════════════════════════════════════════════════════════════
 RELEASE = {
     "surum":       "1.0.0",
-    "tarih":       "2026-11-01",
-    "guncelleme":  "2026-11-01",
+    "tarih":       "2026-11-24",
+    "guncelleme":  "2026-11-24",
     "durum":       "demo",
     "force_all":   True,
 }
@@ -57,6 +57,12 @@ def json_checksum(data: dict) -> str:
 def json_yaz(path: Path, data: dict) -> None:
     """Meta checksum'unu hesaplayıp JSON'u tek biçimde yazar."""
     if isinstance(data.get("meta"), dict):
+        m = data["meta"]
+        m.setdefault("yayim_durumu", "demo")
+        m.setdefault("karar_yetkisi_ref", None)
+        m.setdefault("son_kaynak_dogrulama", None)
+        m.setdefault("kapsam_tamlik", {"durum": "beyan_yok", "pozitif_liste_tamligi": "bilinmiyor", "beyan_sahibi": None})
+        m.setdefault("lisans", None)
         data["meta"]["checksum"] = None
         data["meta"]["checksum"] = json_checksum(data)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -257,6 +263,7 @@ class KuralMotoru:
         ]
 
         self.belge_master = {}
+        self.belge_dosyalari = {}
         if belge.exists():
             for p in belge.glob("*.json"):
                 if "kural" in p.name:
@@ -268,6 +275,7 @@ class KuralMotoru:
                 for r in bd.get("kayitlar", []):
                     if r.get("kod"):
                         self.belge_master[r["kod"]] = r
+                        self.belge_dosyalari[r["kod"]] = "belgeler/" + p.name
 
         iliski_d = self._json(kural / "kod-iliskileri.json")
         tablolar = iliski_d.get("iliski_tablolari", {})
@@ -713,8 +721,92 @@ class KuralMotoru:
             "isco": sorted(isco.values(), key=lambda x: (x["kod"], x["kaynak_nace"])),
         }
 
+    # ─── PDaaS yönetişim/izlenebilirlik gösterimi ───────────────
+    def _izlenebilirlik_ekle(self, vergi: dict, belge: dict, iliski: dict,
+                           ayrintili: bool = False) -> None:
+        """Kısa konsolide çıktıyı korur; ayrıntılı iz yalnız örnek/on-demand görünümde açılır."""
+        kaynak_dosyalari = {
+            "kdv": "ham/kdv.json",
+            "otv": "ham/otv.json",
+            "gumruk_vergisi": "ham/gumruk-vergisi.json",
+            "ilave_gumruk_vergisi": "ham/ilave-gumruk-vergisi.json",
+            "tevkifat": "ham/kdv-tevkifat.json",
+        }
+        for vergi_turu, yonler in vergi.items():
+            for yon, deger in yonler.items():
+                if not isinstance(deger, dict):
+                    continue
+                kaynak_tipi = deger.get("kaynak_tipi")
+                parametre_kodu = deger.get("ref")
+                kural_kodu = deger.get("kural")
+                tur = deger.get("tur")
+                if vergi_turu == "otv" and kaynak_tipi == "fallback":
+                    # Eşleşme yokluğundan hukuki 'ÖTV yok' sonucu üretilemez.
+                    deger.update({
+                        "ref": None, "kural": None, "tip": "eslesme_yok",
+                        "kaynak_tipi": "eslesme_yok", "tur": None, "oran": None,
+                        "uygulanabilirlik_durumu": "eslesme_bulunamadi",
+                    })
+                    if ayrintili:
+                        deger["aciklama_tr"] = ("ÖTV kural eşleşmesi yoktur; hukuki "
+                                                "kapsam dışılık veya sıfır oran sonucu değildir.")
+                    continue
+                if tur == "istisna":
+                    deger["oran"] = None
+                if kaynak_tipi == "fallback":
+                    durum = "varsayilan_parametre_kosul_kontrolu_gerekli"
+                elif vergi_turu == "gumruk_vergisi":
+                    durum = ("kosul_kontrolu_gerekli" if deger.get("listeler")
+                             else "veri_mevcut_degil")
+                else:
+                    durum = "kosul_kontrolu_gerekli"
+                deger["uygulanabilirlik_durumu"] = durum
+                if not ayrintili:
+                    continue
+                kural = next((r for r in self.vergi_kurallari
+                              if r.get("kod") == kural_kodu), None)
+                kosullar = [c.get("kod") for c in (kural or {}).get("kosullar", [])
+                           if isinstance(c, dict) and c.get("kod")]
+                if kaynak_tipi == "fallback" and vergi_turu == "kdv":
+                    fk = (self.vergi_meta.get("fallback_kosullari", {})
+                          .get("kdv", {}).get(yon, {}))
+                    kosullar.extend(fk.keys())
+                deger["kosul_kodlari"] = sorted(set(kosullar))
+                deger["veri_izi"] = {
+                    "parametre_dosyasi": kaynak_dosyalari[vergi_turu],
+                    "parametre_ref": parametre_kodu if parametre_kodu != "gumruk-vergisi" else None,
+                    "kural_dosyasi": "kurallar/vergi-kurallari.json" if kural_kodu else None,
+                    "kural_ref": kural_kodu,
+                }
+                if vergi_turu == "kdv" and parametre_kodu in self.kdv_idx:
+                    p = self.kdv_idx[parametre_kodu]
+                    if p.get("kaynak_ref"):
+                        deger["veri_izi"]["kaynak_ref"] = p["kaynak_ref"]
+                    if p.get("mevzuat_ref"):
+                        deger["veri_izi"]["mevzuat_ref"] = p["mevzuat_ref"]
+        for yon, belgeler in belge.items():
+            for b in belgeler:
+                b["eslestirme_durumu"] = (
+                    "kosul_kontrolu_gerekli" if b.get("durum") == "kosullu"
+                    else "kural_taniminda_" + str(b.get("durum") or "bilinmiyor")
+                )
+                if ayrintili:
+                    b["veri_izi"] = {
+                        "belge_ref": b["kod"],
+                        "belge_dosyasi": self.belge_dosyalari.get(b["kod"]),
+                        "kural_dosyasi": "kurallar/belge-kurallari.json",
+                        "kural_ref": b.get("kural"),
+                    }
+        if ayrintili:
+            for t in ("cpc", "nace", "isco"):
+                for e in iliski.get(t, []):
+                    e["iliski_yolu"] = e.get("iliski_yolu") or ("gtip_" + t)
+                    e["dogrudan_kesin_atama"] = False if t != "cpc" else None
+                    e["iliski_dosyasi"] = "kurallar/kod-iliskileri.json"
+
     # ─── GTİP konsolide (tek kayıt) ──────────────────────────────
-    def konsolide_et(self, kod: str, aday_secilen: Optional[str] = None) -> dict:
+    def konsolide_et(self, kod: str, aday_secilen: Optional[str] = None,
+                     akademik: bool = False) -> dict:
         gtip = self.gtip_idx.get(kod)
         if not gtip:
             raise ValueError(f"GTİP bulunamadı: {kod}")
@@ -724,6 +816,7 @@ class KuralMotoru:
         iliski = self.iliski_hesapla(kod)
         vergi  = self.vergi_hesapla(kod, aday_secilen)
         belge  = self.belge_hesapla(kod)
+        self._izlenebilirlik_ekle(vergi, belge, iliski, ayrintili=akademik)
 
         return {
             "kod":         kod,
@@ -1022,6 +1115,18 @@ def _meta_yaz(kayitlar: list, schema: str, servis: str, kapsam: str,
         "detay": {
             "yapi": yapi,
             "katalog_ref": {"dosya": "meta/katalog.json"},
+            "manifest_ref": "meta/manifest.json",
+            "turetme_sahibi": "pdaas",
+            "izlenebilirlik_dosyalari": {
+                "ham": ["ham/gtip-kodlari.json", "ham/kdv.json", "ham/otv.json",
+                        "ham/gumruk-vergisi.json", "ham/kdv-tevkifat.json",
+                        "ham/cpc-kodlari.json", "ham/nace-kodlari.json",
+                        "ham/isco-kodlari.json"],
+                "kural": ["kurallar/vergi-kurallari.json",
+                          "kurallar/belge-kurallari.json",
+                          "kurallar/kod-iliskileri.json"]
+            },
+            "uyari": "Konsolide sonuçlar PDaaS eşleştirmelerine dayanır; hukuki işlem kararı değildir."
         },
         "checksum": None,
     }
@@ -1062,6 +1167,113 @@ def isco_tek_dosya_yaz(kayitlar: list, limit: int = 0) -> Path:
 # ══════════════════════════════════════════════════════════════════
 # meta/katalog.json
 # ══════════════════════════════════════════════════════════════════
+def ornek_uret(motor: KuralMotoru) -> list:
+    """Akademik makale için dosyalardan türetilmiş küçük ve izlenebilir örnekler."""
+    ornekler = []
+    ornek_dizin = V1 / "ornek"
+    ornek_dizin.mkdir(parents=True, exist_ok=True)
+    for kod in ("070200910000", "870322101000"):
+        if kod not in motor.gtip_idx or not motor.gtip_idx[kod].get("yaprak"):
+            continue
+        c = motor.konsolide_et(kod, akademik=True)
+        vergi_refler = {
+            "kdv": {x.get("ref") for x in c["vergi"]["kdv"].values()
+                    if isinstance(x, dict) and x.get("ref")},
+            "otv": {x.get("ref") for x in c["vergi"]["otv"].values()
+                    if isinstance(x, dict) and x.get("ref")},
+            "ilave_gumruk_vergisi": {x.get("ref") for x in c["vergi"]["ilave_gumruk_vergisi"].values()
+                                      if isinstance(x, dict) and x.get("ref")},
+            "tevkifat": {x.get("ref") for x in c["vergi"]["tevkifat"].values()
+                          if isinstance(x, dict) and x.get("ref")},
+        }
+        kodlar_belge = {x["kod"] for records in c["belgeler"].values() for x in records}
+        eslesen_vergi_kural = {x.get("kural") for y in c["vergi"].values()
+                              for x in y.values() if isinstance(x, dict) and x.get("kural")}
+        eslesen_belge_kural = {x.get("kural") for y in c["belgeler"].values()
+                              for x in y if x.get("kural")}
+        kural_ozetleri = []
+        for tur, rules, selected in (
+            ("vergi", motor.vergi_kurallari, eslesen_vergi_kural),
+            ("belge", motor.belge_kurallari, eslesen_belge_kural),
+        ):
+            for rule in rules:
+                if rule.get("kod") in selected:
+                    kural_ozetleri.append({
+                        "dosya": "kurallar/" + ("vergi-kurallari" if tur == "vergi" else "belge-kurallari") + ".json",
+                        "kod": rule["kod"], "oncelik": rule.get("oncelik"),
+                        "kural_turu": rule.get("tur"),
+                        "referanslar": rule.get("referanslar") if tur == "vergi" else None,
+                        "kosullar": rule.get("kosullar", []),
+                        "ozetleme": "Kuralın tam GTİP kapsamı bu özet görünümde tekrarlanmaz."
+                    })
+        dataset_files = ["ham/gtip-kodlari.json", "ham/kdv.json", "ham/otv.json",
+                         "ham/gumruk-vergisi.json", "ham/cpc-kodlari.json",
+                         "ham/nace-kodlari.json", "ham/isco-kodlari.json",
+                         "belgeler/gtip-urun-belgeleri.json",
+                         "belgeler/dis-ticaret-belgeleri.json",
+                         "kurallar/vergi-kurallari.json", "kurallar/belge-kurallari.json",
+                         "kurallar/kod-iliskileri.json"]
+        kullanilan_dosyalar = []
+        for path in dataset_files:
+            file = V1 / path
+            if file.exists():
+                m = json.load(open(file, encoding="utf-8")).get("meta", {})
+                kullanilan_dosyalar.append({
+                    "dosya": path, "surum": m.get("surum"),
+                    "checksum": m.get("checksum"),
+                })
+        example = {
+            "meta": {
+                "schema": "pdaas-akademik-ornek/v1",
+                "surum": RELEASE["surum"], "kod": "gtip-" + kod,
+                "ad_tr": "PDaaS izlenebilir ürün örneği: " + kod,
+                "ad_en": "Traceable PDaaS product example: " + kod,
+                "tarih": RELEASE["tarih"], "guncelleme": RELEASE["guncelleme"],
+                "durum": "demo", "katman": "gorunum",
+                "kapsam": ["urun"],
+                "islem_turleri": ["yurtici", "ithalat", "ihracat"],
+                "gecerlilik": {"baslangic": None, "bitis": None},
+                "yayinci": "pdaas", "sorumlu_kurum": "pdaas",
+                "karar_yetkisi_ref": None, "yayim_durumu": "demo",
+                "son_kaynak_dogrulama": None, "lisans": None,
+                "kapsam_tamlik": {"durum": "beyan_yok", "pozitif_liste_tamligi": "bilinmiyor", "beyan_sahibi": None},
+                "kaynaklar_ref": "meta/kaynaklar.json",
+                "mevzuat_ref": "meta/mevzuat.json",
+                "sozluk_ref": "meta/sozluk.json", "manifest_ref": "meta/manifest.json",
+                "kayit_sayisi": 1, "checksum": None,
+                "detay": {"olusturucu": "kural_motoru.py/ornek_uret",
+                          "ornek_niteligi": "yazar_tarafindan_hazirlanmis_demo"}
+            },
+            "kaynak_kayitlari": {
+                "gtip": motor.gtip_idx[kod],
+                "kdv": [motor.kdv_idx[r] for r in sorted(vergi_refler["kdv"])
+                        if r in motor.kdv_idx],
+                "otv": [motor.otv_idx[r] for r in sorted(vergi_refler["otv"])
+                        if r in motor.otv_idx],
+                "gumruk_vergisi": motor.gumruk_by_kod.get(kod, []),
+                "ilave_gumruk_vergisi": [motor.igv_idx[r]
+                                        for r in sorted(vergi_refler["ilave_gumruk_vergisi"])
+                                        if r in motor.igv_idx],
+                "tevkifat": [motor.tevkifat_idx[r]
+                             for r in sorted(vergi_refler["tevkifat"]) if r in motor.tevkifat_idx],
+                "belgeler": [motor.belge_master[r] for r in sorted(kodlar_belge)
+                             if r in motor.belge_master],
+                "cpc": [motor.cpc_idx[e["kod"]] for e in c["cpc"] if e["kod"] in motor.cpc_idx],
+                "nace": [motor.nace_idx[e["kod"]] for e in c["nace"] if e["kod"] in motor.nace_idx],
+                "isco": [motor.isco_idx[e["kod"]] for e in c["isco"] if e["kod"] in motor.isco_idx],
+            },
+            "kural_ozetleri": kural_ozetleri,
+            "girdi_dosyalari": kullanilan_dosyalar,
+            "konsolide": c,
+            "yorumlama_siniri": ("Bu görünüm resmî API değildir; parametre ile mevzuatın somut "
+                                 "işlemde uygulanabilirliği ayrı değerlendirilmelidir.")
+        }
+        p = ornek_dizin / ("gtip-" + kod + ".json")
+        json_yaz(p, example)
+        ornekler.append(p.relative_to(V1).as_posix())
+    return ornekler
+
+
 def _varlik(p: Path, tip: str) -> dict:
     d = json.load(open(p, encoding="utf-8"))
     meta = d.get("meta", {})
@@ -1098,6 +1310,8 @@ def katalog_uret() -> dict:
     for hedef in (HEDEF_DOSYA, CPC_HEDEF_DOSYA, NACE_HEDEF_DOSYA, ISCO_HEDEF_DOSYA):
         if hedef.exists():
             varliklar["konsolide"].append(_varlik(hedef, "konsolide"))
+    for p in sorted((V1 / "ornek").glob("*.json")):
+        varliklar["ornek"].append(_varlik(p, "ornek"))
     for p in sorted(META.glob("*.json")):
         if p.name in {"katalog.json", "manifest.json"}:
             continue
@@ -1156,8 +1370,11 @@ def manifest_uret() -> dict:
                  if Path(x["dosya"]).name not in {"katalog.json", "manifest.json"}
                  and not Path(x["dosya"]).name.endswith("-meta-ornek.json")],
     }
-    kaynaklar["ornek"] = [x for group, folder in (("ham", HAM), ("kural", KURAL), ("sozlesme", META))
-                          for x in liste(folder, group) if x["dosya"].endswith("-meta-ornek.json")]
+    kaynaklar["ornek"] = (
+        liste(V1 / "ornek", "ornek") +
+        [x for group, folder in (("ham", HAM), ("kural", KURAL), ("sozlesme", META))
+         for x in liste(folder, group) if x["dosya"].endswith("-meta-ornek.json")]
+    )
     katalog = _varlik(KATALOG_DOSYA, "sozlesme") if KATALOG_DOSYA.exists() else None
     cikti = {"dosyalar": kaynaklar["konsolide"], "katalog": katalog}
     istatistikler = {
@@ -1177,7 +1394,14 @@ def manifest_uret() -> dict:
             "kaynaklar_ref": None, "mevzuat_ref": None, "sozluk_ref": "meta/sozluk.json",
             "gecerlilik": {"baslangic": "2026-01-01", "bitis": None},
             "checksum": None, "kayit_sayisi": sum(istatistikler.values()),
-            "detay": {"uretim": datetime.now(timezone.utc).isoformat()},
+            "detay": {
+                "uretim": datetime.now(timezone.utc).isoformat(),
+                "checksum_ayrimi": {
+                    "meta.checksum": "meta.checksum=null kabul edilerek kanonik JSON SHA-256",
+                    "manifest_kaynak_checksum": "meta.checksum değerinin kendisi; dosya bayt özeti değildir"
+                },
+                "not": "Derleme zamanı kaynak mevzuatın güncellendiği tarih değildir."
+            },
         },
         "kaynaklar": kaynaklar,
         "cikti": cikti,
@@ -1328,6 +1552,10 @@ def main():
     t0 = time.time()
     isco_tek_dosya_yaz(isco_kayitlar, limit)
     print(f"  ✓ {ISCO_HEDEF_DOSYA.stat().st_size/1e6:.1f} MB, {time.time()-t0:.1f}s")
+
+    # ─── 4.8. Makale için küçük izlenebilir örnekler ─────────────
+    print("\\n╔══ 4.8. Makale örnekleri üretiliyor ════════════════")
+    print("  " + ", ".join(ornek_uret(motor)))
 
     # ─── 5. Katalog ve manifest (çıktılar tamamlandıktan sonra) ─
     print("\n╔══ 5. katalog ve manifest güncelleniyor ═══════════════")
